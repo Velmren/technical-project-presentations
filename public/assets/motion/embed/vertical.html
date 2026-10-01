@@ -9,8 +9,8 @@ html,body{margin:0;height:100%;background:#111213;overflow:hidden}
 .stage img,.stage video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
 .stage video{background:#000}
 .stage video[hidden]{display:none}
-button{position:absolute;left:50%;top:50%;width:clamp(56px,14cqw,96px);height:clamp(56px,14cqw,96px);margin:calc(clamp(56px,14cqw,96px)/-2) 0 0 calc(clamp(56px,14cqw,96px)/-2);border:0;border-radius:50%;background:#f4f5f7;color:#111213;cursor:pointer;display:grid;place-items:center;transition:transform .2s ease}
-button:hover{transform:scale(1.06)}
+button{position:absolute;left:50%;bottom:6%;transform:translateX(-50%);width:clamp(48px,11cqw,84px);height:clamp(48px,11cqw,84px);border:0;border-radius:50%;background:#f4f5f7;color:#111213;box-shadow:0 0 0 2px rgba(17,18,19,.28),0 10px 28px rgba(0,0,0,.35);cursor:pointer;display:grid;place-items:center;transition:transform .2s ease}
+button:hover{filter:brightness(.92)}
 button:focus-visible{outline:3px solid #e4572e;outline-offset:4px}
 button svg{width:34%;height:34%;margin-left:6%}
 .stage{container-type:size}
