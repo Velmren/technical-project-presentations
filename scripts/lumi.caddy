@@ -1,0 +1,42 @@
+# Server config for lumi.velmren.com (LUMI, Godot web demo), installed as /etc/caddy/sites/lumi.caddy
+# (the main Caddyfile imports /etc/caddy/sites/*.caddy). Check with:
+#   sudo caddy validate --config /etc/caddy/Caddyfile --adapter caddyfile && sudo systemctl reload caddy
+# The export runs without threads, so no COOP/COEP headers are needed.
+lumi.velmren.com {
+	root * /srv/velmren/sites/lumi/current
+	# index.wasm and index.js ship with .br/.gz siblings; smaller text files are compressed on the fly.
+	encode {
+		zstd
+		gzip
+		minimum_length 1024
+		match {
+			header Content-Type text/*
+			header Content-Type application/javascript*
+			header Content-Type application/json*
+			header Content-Type application/wasm*
+			header Content-Type image/svg+xml*
+			header Content-Type image/x-icon*
+		}
+	}
+	header X-Content-Type-Options nosniff
+	# Godot keeps the same file names in every export: always revalidate them (ETag),
+	# so a new build is never mixed with a cached old one.
+	@build path / /index.html /index.js /index.wasm /index.pck /index.png /index.icon.png /index.apple-touch-icon.png /index.audio.worklet.js /index.audio.position.worklet.js
+	header @build Cache-Control "no-cache"
+	@images path *.png *.ico
+	header @images ?Cache-Control "public, max-age=86400"
+	@private path /.git/* /.env
+	respond @private 404
+	file_server {
+		precompressed br gzip
+	}
+	handle_errors {
+		respond "{err.status_code} {err.status_text}"
+	}
+	log {
+		output file /var/log/caddy/lumi-access.log {
+			roll_size 10MiB
+			roll_keep 3
+		}
+	}
+}
