@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="ru">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>vertical</title>
+<style>
+html,body{margin:0;height:100%;background:#111213;overflow:hidden}
+.stage{position:absolute;inset:0}
+.stage img,.stage video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.stage video{background:#000}
+.stage video[hidden]{display:none}
+button{position:absolute;left:50%;top:50%;width:clamp(56px,14cqw,96px);height:clamp(56px,14cqw,96px);margin:calc(clamp(56px,14cqw,96px)/-2) 0 0 calc(clamp(56px,14cqw,96px)/-2);border:0;border-radius:50%;background:#f4f5f7;color:#111213;cursor:pointer;display:grid;place-items:center;transition:transform .2s ease}
+button:hover{transform:scale(1.06)}
+button:focus-visible{outline:3px solid #e4572e;outline-offset:4px}
+button svg{width:34%;height:34%;margin-left:6%}
+.stage{container-type:size}
+.on img,.on button{display:none}
+</style>
+<div class="stage" id="s">
+<img id="p" src="../vertical-poster.webp" alt="">
+<video id="v" playsinline preload="none" controls hidden></video>
+<button id="b" type="button" aria-label="Смотреть ролик"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6 3.5v17l14-8.5z"/></svg></button>
+</div>
+<script>
+var en=new URLSearchParams(location.search).get('lang')==='en',b=document.getElementById('b'),v=document.getElementById('v'),s=document.getElementById('s');
+b.setAttribute('aria-label',en?"Play the clip":"Смотреть ролик");
+b.onclick=function(){v.src="../video/vertical.mp4";v.hidden=false;s.className='stage on';v.play().catch(function(){});};
+document.getElementById('p').addEventListener('load',function(){try{if(parent!==window)parent.postMessage({live:location.pathname},location.origin)}catch(e){}});
+if(document.getElementById('p').complete){try{if(parent!==window)parent.postMessage({live:location.pathname},location.origin)}catch(e){}}
+</script>

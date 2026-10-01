@@ -43,7 +43,7 @@
   var SPOTS = [[-38, -168, 9, 6, .4], [30, -146, 7, 5, -.5], [-22, -82, 10, 6, .2], [36, -52, 8, 5, .7], [-44, -34, 6, 4, -.3], [8, -196, 6, 4, 0], [48, -108, 5, 3.5, .3]];
 
   // whole egg, or its upper (cap) or lower (cup) part along the zigzag
-  function shell(ctx, part, tint) {
+  function shell(ctx, part, tint, rim) {
     ctx.save(); eggPath(ctx, 0, 0); ctx.clip();
     if (part) { zigPath(ctx, part === 'cap'); ctx.clip(); }
     ctx.fillStyle = C.shade; ctx.fillRect(-120, -260, 240, 280);
@@ -51,12 +51,12 @@
     ctx.fillStyle = C.spot;
     for (var i = 0; i < SPOTS.length; i++) { var s = SPOTS[i]; ctx.beginPath(); ctx.ellipse(s[0], s[1], s[2], s[3], s[4], 0, 7); ctx.fill(); }
     ctx.fillStyle = C.hi; ctx.beginPath(); ctx.ellipse(-34, -166, 11, 20, .5, 0, 7); ctx.fill();
-    if (tint > 0) { ctx.globalAlpha = tint; ctx.fillStyle = C.tint; ctx.fillRect(-120, -260, 240, 280); }
+    if (tint > 0) { ctx.globalAlpha *= tint; ctx.fillStyle = C.tint; ctx.fillRect(-120, -260, 240, 280); }
     ctx.restore();
     if (part) {
       ctx.save(); eggPath(ctx, 0, 0); ctx.clip(); ctx.beginPath();
       for (var j = 0; j < ZIG.length; j++) { if (j) ctx.lineTo(ZIG[j][0], ZIG[j][1]); else ctx.moveTo(ZIG[j][0], ZIG[j][1]); }
-      ctx.lineJoin = 'round'; ctx.strokeStyle = C.rim; ctx.lineWidth = 6; ctx.stroke(); ctx.restore();
+      ctx.lineJoin = 'round'; ctx.globalAlpha *= rim == null ? 1 : rim; ctx.strokeStyle = C.rim; ctx.lineWidth = 6; ctx.stroke(); ctx.restore();
     }
   }
 
@@ -99,10 +99,11 @@
     }
     ctx.globalAlpha *= .6; ctx.fillStyle = C.blush; ctx.beginPath(); ctx.ellipse(-47, 15, 12, 7, 0, 0, 7); ctx.ellipse(47, 15, 12, 7, 0, 0, 7); ctx.fill(); ctx.globalAlpha /= .6;
     ctx.fillStyle = C.ink; ctx.strokeStyle = C.ink; ctx.lineCap = 'round';
-    for (s = -1; s <= 1; s += 2) {                                                         // eyes: open with a highlight, or closed in joy
-      if (o.joy) { ctx.lineWidth = 5.5; ctx.beginPath(); ctx.arc(s * 28, 3, 11, 3.55, 5.87); ctx.stroke(); }
-      else {
-        var sy = 1 - o.blink * .92; ctx.save(); ctx.translate(s * 28, -4); ctx.scale(1, sy); ctx.beginPath(); ctx.arc(0, 0, 9.5, 0, 7); ctx.fill();
+    for (s = -1; s <= 1; s += 2) {                                                         // eyes: a disc that closes into a line, and the line that bends into a joyful arc
+      if (o.blink >= 1) {
+        ctx.lineWidth = 5; ctx.beginPath(); ctx.moveTo(s * 28 - 12, -2 + 5 * o.arc); ctx.quadraticCurveTo(s * 28, -2 - 16 * o.arc, s * 28 + 12, -2 + 5 * o.arc); ctx.stroke();
+      } else {
+        var sy = 1 - o.blink * .78; ctx.save(); ctx.translate(s * 28, -4); ctx.scale(1, sy); ctx.beginPath(); ctx.arc(0, 0, 9.5, 0, 7); ctx.fill();
         if (sy > .5) { ctx.fillStyle = '#fff'; ctx.beginPath(); ctx.arc(-3, -3.4, 3.2, 0, 7); ctx.fill(); } ctx.restore();
       }
     }
@@ -132,10 +133,13 @@
   function flight(p, u, k) { var e = 1 - Math.exp(-k * u); return [p.x + p.vx * e / k, p.y + GRAV * u / k + (p.vy - GRAV / k) * e / k]; }
   function confettiAt(p, t) {
     var u = t - p.t0; if (u < 0) return null;
-    var k = p.drag, pos = flight(p, u, k), landed = pos[1] >= p.floor;
-    if (landed) { var lo = 0, hi = u, i; for (i = 0; i < 18; i++) { var m = (lo + hi) / 2; if (flight(p, m, k)[1] >= p.floor) hi = m; else lo = m; } u = hi; pos = flight(p, u, k); pos[1] = p.floor; }
-    var live = Math.min(u, 2.4);
-    return { x: pos[0], y: pos[1], rot: p.rot + p.spin * live, flat: landed ? p.lie : Math.cos(p.flip + p.flipSpeed * live), landed: landed };
+    var k = p.drag, pos = flight(p, u, k), landed = pos[1] >= p.floor, flat, since = 0;
+    if (landed) {                                                                              // find the moment it touched down, keep the pose of that moment and settle flat
+      var lo = 0, hi = u, i; for (i = 0; i < 18; i++) { var m = (lo + hi) / 2; if (flight(p, m, k)[1] >= p.floor) hi = m; else lo = m; }
+      since = u - hi; u = hi; pos = flight(p, u, k); pos[1] = p.floor;
+      flat = Math.cos(p.flip + p.flipSpeed * u) * (1 - inOut(since / .16)) + p.lie * inOut(since / .16);
+    } else flat = Math.cos(p.flip + p.flipSpeed * u);
+    return { x: pos[0], y: pos[1], rot: p.rot + p.spin * u, flat: flat, landed: landed };
   }
   function drawPiece(ctx, p, c) {
     var s = 11 * p.size; ctx.save(); ctx.translate(c.x, c.y); ctx.rotate(c.rot); ctx.scale(1, Math.max(.12, Math.abs(c.flat))); ctx.fillStyle = p.color;
@@ -145,55 +149,63 @@
     ctx.restore();
   }
 
-  // ---- the pose of the scene at time t after the event ----
+  // ---- the pose of an event at time t after it started ----
+  function smooth(x) { return inOut(x); }
   function pose(mode, t) {
-    var s = { x: 0, y: 0, rot: 0, sx: 1, sy: 1, cr: [0, 0, 0], thin: false, tint: 0, cap: null, chick: null, dust: -1, shadow: 1, out: 0 }, u;
+    var s = { x: 0, y: 0, rot: 0, sx: 1, sy: 1, cr: [0, 0, 0], thin: false, tint: 0, cap: null, chick: null, dust: -1, shadow: 1, rim: 1 }, u;
     if (mode === 'idle') {
       var b = Math.sin(t * 2.6), ph = t % 3.4;
       s.sy = 1 + .011 * b; s.sx = 1 - .008 * b; s.rot = ph < .9 ? Math.exp(-ph * 4.2) * Math.sin(ph * 17) * .05 : 0;
     } else if (mode === 'drop') {
-      var fall = .52;
+      var fall = .5;
       if (t < fall) { var d = t / fall; s.y = -560 * (1 - d * d); s.sy = 1 + .05 * d; s.sx = 1 - .03 * d; s.shadow = .5 + .5 * d * d; }
       else {
-        u = t - fall; s.y = -66 * Math.abs(Math.sin(u * 8.5)) * Math.exp(-u * 5.2) * (u < .7 ? 1 : 0);
-        var sq = Math.exp(-u * 8) * Math.cos(u * 22); s.sy = 1 - .18 * Math.max(0, sq) + .06 * Math.min(0, sq); s.sx = 1 + .12 * Math.max(0, sq) - .04 * Math.min(0, sq);
-        s.shadow = 1 + s.y / 260; s.dust = u < .6 ? u * .8 : -1;
+        u = t - fall; var win = 1 - smooth(u / .5);                                          // every rebound dies out exactly when the egg settles
+        s.y = -62 * Math.abs(Math.sin(u * 8.5)) * Math.exp(-u * 4.2) * win;
+        var sq = Math.exp(-u * 8) * Math.cos(u * 22) * win; s.sy = 1 - .18 * Math.max(0, sq) + .06 * Math.min(0, sq); s.sx = 1 + .12 * Math.max(0, sq) - .04 * Math.min(0, sq);
+        s.shadow = 1 + s.y / 260; s.dust = u < .5 ? u / .5 : -1;
       }
     } else if (mode === 'success') {
+      var lean = Math.max(0, 1 - Math.max(0, t - .3) * 5);
       if (t < .3) { u = inOut(t / .3); s.sy = 1 - .1 * u; s.sx = 1 + .075 * u; s.rot = -.055 * u; }
       else if (t < 1.2) {
-        u = t - .3; var amp = .09 + .13 * (u / .9) * (u / .9), ang = Math.sin(u * 31) * amp * Math.min(1, u / .15), lean = Math.max(0, 1 - u * 5);
-        s.rot = ang - .055 * Math.max(0, 1 - u * 4); s.sx = 1 + .075 * lean - Math.abs(ang) * .09; s.sy = 1 - .1 * lean + Math.abs(ang) * .06;
+        u = t - .3; var amp = .09 + .13 * (u / .9) * (u / .9), ang = Math.sin(u * 31) * amp * Math.min(1, u / .15);
+        var charge = smooth((u - .72) / .18);                                                // the last wobble calms down while the shell swells for the pop
+        ang *= 1 - charge;
+        s.rot = ang - .055 * Math.max(0, 1 - u * 4); s.sx = (1 + .075 * lean - Math.abs(ang) * .09) * (1 - charge) + .95 * charge; s.sy = (1 - .1 * lean + Math.abs(ang) * .06) * (1 - charge) + 1.08 * charge;
         s.cr = [p01((t - .52) / .28), p01((t - .78) / .26), p01((t - .98) / .2)];
       } else {
-        u = t - 1.2; s.cr = [1, 1, 1];
+        u = t - 1.2; s.cr = [1, 1, 1]; s.rim = p01(u / .08); s.whole = u < .012;                  // the very first frame is still one unbroken egg: two clipped halves would leave a hairline seam
         var q = Math.exp(-u * 9) * Math.cos(u * 26); s.sy = 1 + .08 * q; s.sx = 1 - .05 * q;
+        s.shadow = 1 + .15 * smooth(u / .3);
         s.cap = capAt(u);
-        var rise = outBack(u / .5, 2.2), pop = Math.max(0, u - .5), wing = u > .3 ? Math.sin((u - .3) * 38) * Math.exp(-(u - .3) * .9) * .7 : -.2;
-        s.chick = { y: -84 - 62 * rise - (u < .62 ? Math.sin(3.1416 * u / .62) * 34 : 0) + (u > .9 ? Math.sin((u - .9) * 5.6) * 6 : 0),
-          scale: .6 + .4 * outBack(u / .34, 1.9), squash: Math.exp(-pop * 7) * Math.cos(pop * 24) * .1, joy: u > .12 && u < 1.9, blink: u > 1.9 ? blinkAt(u) : 0,
-          wing: wing, beak: u > .3 && u < 1.1 ? .5 + .5 * Math.sin(u * 30) : 0 };
-        if (t > 3.2) s.out = p01((t - 3.2) / .6);
+        var rise = outBack(u / .5, 2.2), pop = Math.max(0, u - .5), k = smooth((u - .28) / .1);
+        var flap = Math.sin((u - .3) * 38) * Math.exp(-Math.max(0, u - .3) * .9) * .7;
+        var beak = smooth((u - .3) / .08) * (1 - smooth((u - 1) / .1)) * (.5 + .5 * Math.sin(u * 30));
+        var blink = u < .14 ? smooth((u - .06) / .08) : u < 1.9 ? 1 : u < 1.98 ? 1 - smooth((u - 1.9) / .08) : blinkAt(u);
+        s.chick = { y: -84 - 58 * rise - (u < .62 ? Math.sin(3.1416 * u / .62) * 16 : 0) + (u > .9 ? Math.sin((u - .9) * 5.6) * 6 * smooth((u - .9) / .3) : 0),
+          scale: .6 + .4 * outBack(u / .34, 1.9), squash: Math.exp(-pop * 7) * Math.cos(pop * 24) * .1, arc: smooth((u - .14) / .1) * (1 - smooth((u - 1.78) / .1)), blink: blink,
+          wing: -.2 * (1 - k) + flap * k, beak: beak };
       }
     } else {
+      var pre = Math.max(0, 1 - Math.max(0, t - .25) * 4);
       if (t < .25) { u = inOut(t / .25); s.sy = 1 - .06 * u; s.sx = 1 + .05 * u; }
       else if (t < 1.35) {
-        u = t - .25; var env = Math.exp(-u * 1.35), pre = Math.max(0, 1 - u * 4);
+        u = t - .25; var env = Math.exp(-u * 1.35) * (1 - smooth((u - .78) / .32));         // the shake dies out before the egg droops
         s.x = Math.sin(u * 27) * 17 * env; s.rot = Math.sin(u * 27 + .4) * .08 * env; s.sy = 1 - .06 * pre; s.sx = 1 + .05 * pre;
         s.cr[0] = p01((t - .55) / .4); s.thin = true; s.tint = .34 * inOut((t - .35) / .8);
       } else {
         u = t - 1.35; s.cr[0] = 1; s.thin = true; s.tint = .34;
         var sag = spring(u, 1.6, 5); s.sy = 1 - .13 * sag + .02 * Math.sin(u * 3); s.sx = 1 + .085 * sag; s.rot = .03 * sag;
-        s.dust = u < 1.1 ? u : -1;
-        if (t > 2.65) s.out = p01((t - 2.65) / .55);
+        s.dust = u < 1.1 ? u / 1.1 : -1;
       }
     }
     return s;
   }
-  function blinkAt(u) { var ph = (u - 1.9) % 2.4; return ph < .16 ? Math.sin(ph / .16 * Math.PI) : 0; }
+  function blinkAt(u) { var ph = (u - 1.98) % 2.4; return ph > 1.2 && ph < 1.36 ? Math.sin((ph - 1.2) / .16 * Math.PI) : 0; }
   // the cap flies up, turns once and bounces on the floor; position and angle of its middle
   function capAt(u) {
-    var g = 2100, y = -159, vy = -430, left = u, hits = 0, floor = -40, rest = false;
+    var g = 2100, y = -159, vy = -390, left = u, hits = 0, floor = -40, rest = false;
     while (left > 0 && !rest) {
       var tHit = (-vy + Math.sqrt(Math.max(0, vy * vy + 2 * g * (floor - y)))) / g;
       if (left < tHit) { y += vy * left + .5 * g * left * left; vy += g * left; left = 0; }
@@ -202,45 +214,61 @@
     return { x: -205 * (1 - Math.exp(-u * 3.2)) - 12 * Math.min(1, u / .6), y: y, rot: -6.2832 * outCubic(u / .95) - .08 * (1 - Math.exp(-u * 4)) + .22 * Math.exp(-u * 3) * Math.sin(u * 14) };
   }
 
+  // dust puffs: they grow from the floor, fade in and out, and are gone when d reaches 1
   function dust(ctx, d) {
-    var r = rng(5), i;
+    var r = rng(5), i, k = p01(d), e = outCubic(k), a = Math.sin(Math.PI * Math.pow(k, .7)), base = ctx.globalAlpha;
     for (i = 0; i < 9; i++) {
-      var side = i % 2 ? 1 : -1, k = p01(d), e = outCubic(k);
-      ctx.globalAlpha = .55 * (1 - k) * (1 - k); ctx.fillStyle = C.dust; ctx.beginPath();
-      ctx.arc(side * (A * .55 + e * (50 + r() * 70)), -8 - e * (10 + r() * 36) - r() * 6, 8 + r() * 12 + e * 12, 0, 7); ctx.fill();
+      var side = i % 2 ? 1 : -1, dx = 50 + r() * 70, dy = 10 + r() * 36, dz = r() * 6, rad = 8 + r() * 12;
+      ctx.globalAlpha = base * .55 * a; ctx.fillStyle = C.dust; ctx.beginPath();
+      ctx.arc(side * (A * .55 + e * dx), -8 - e * dy - dz, (rad + e * 12) * Math.min(1, .25 + k * 4), 0, 7); ctx.fill();
     }
-    ctx.globalAlpha = 1;
+    ctx.globalAlpha = base;
   }
 
-  // straw nest the egg sits in: strokes behind the egg and a low front rim over its base
+  // straw nest the egg sits in: strokes behind the egg and a low front rim over its base. Drawn once for the whole
+  // canvas, so a leaving and an arriving egg never stack two nests.
   var NEST = (function () { var r = rng(3), back = [], front = [], i; for (i = 0; i < 46; i++) { var th = r() * 3.1416, rad = 86 + r() * 26; back.push([Math.cos(th) * rad, -Math.sin(th) * 22 * (rad / 100) + 2, (r() - .5) * 38, (r() - .5) * 10 - 4, r() < .5 ? '#d2b373' : '#b8935a']); }
     for (i = 0; i < 38; i++) { var t2 = r() * 3.1416, rad2 = 82 + r() * 30; front.push([Math.cos(t2) * rad2, Math.sin(t2) * 20 * (rad2 / 100) + 2, (r() - .5) * 42, (r() - .5) * 8, r() < .5 ? '#dcc084' : '#bf9a5c']); } return { back: back, front: front }; })();
   function straw(ctx, list, lw) {
     ctx.lineCap = 'round'; ctx.lineWidth = lw;
     for (var i = 0; i < list.length; i++) { var p = list[i]; ctx.strokeStyle = p[4]; ctx.beginPath(); ctx.moveTo(p[0] - p[2] / 2, p[1] - p[3] / 2); ctx.quadraticCurveTo(p[0], p[1] + 5, p[0] + p[2] / 2, p[1] + p[3] / 2); ctx.stroke(); }
   }
-  function scene(ctx, mode, t, alpha, still) {
-    var s = pose(mode, still ? (mode === 'success' ? 3.0 : mode === 'fail' ? 2.2 : 0) : t), a = alpha * (1 - s.out), i, back = [], front = [];
-    if (a <= 0) return;
+  function nestBack(ctx) { ctx.save(); ctx.translate(0, FLOOR); ctx.fillStyle = '#a8864b'; ctx.beginPath(); ctx.ellipse(0, 0, 108, 21, 0, 0, 7); ctx.fill(); straw(ctx, NEST.back, 5); ctx.restore(); }
+  function nestFront(ctx) { ctx.save(); ctx.translate(0, FLOOR); straw(ctx, NEST.front, 6); ctx.restore(); }
+
+  // One scene is an egg and everything it throws. ev = { mode, t0, leave, leaveDur, from } where leave is the event
+  // time at which it starts to fade, and from is the idle pose it grows out of. stage 1: shadow, back confetti, egg,
+  // cap. stage 2 (after the nest rim): dust and the confetti that lies on the floor.
+  function sceneState(ev, t, still) {
+    var u = still ? (ev.mode === 'success' ? 3.0 : ev.mode === 'fail' ? 2.2 : 0) : t - ev.t0, s = pose(ev.mode, u);
+    var g = ev.from && !still ? 1 - smooth(u / .22) : 0;
+    if (g > 0) { s.sx += (ev.from.sx - s.sx) * g; s.sy += (ev.from.sy - s.sy) * g; s.rot += (ev.from.rot - s.rot) * g; }
+    s.u = u; s.alpha = ev.leave == null || still ? 1 : 1 - smooth((u - ev.leave) / ev.leaveDur);
+    return s;
+  }
+  function sceneBack(ctx, ev, s, still) {
+    var a = s.alpha, i, list = [], t = s.u; if (a <= 0) return;
     ctx.save(); ctx.globalAlpha = a;
-    ctx.save(); ctx.globalAlpha = a * .18 * s.shadow; ctx.fillStyle = C.shadow; ctx.beginPath(); ctx.ellipse(s.x * .6, FLOOR + 5, 92 * s.shadow * (s.cap ? 1.15 : 1), 15 * s.shadow, 0, 0, 7); ctx.fill(); ctx.restore();
-    ctx.save(); ctx.translate(0, FLOOR); ctx.fillStyle = '#a8864b'; ctx.beginPath(); ctx.ellipse(0, 0, 108, 21, 0, 0, 7); ctx.fill(); straw(ctx, NEST.back, 5); ctx.restore();
-    if (s.chick) for (i = 0; i < CONF.length; i++) { var c = confettiAt(CONF[i], still ? 9 : t); if (c) (c.landed ? front : back).push([CONF[i], c]); }
-    for (i = 0; i < back.length; i++) drawPiece(ctx, back[i][0], back[i][1]);
+    ctx.save(); ctx.globalAlpha = a * .18 * s.shadow; ctx.fillStyle = C.shadow; ctx.beginPath(); ctx.ellipse(s.x * .6, FLOOR + 5, 92 * s.shadow, 15 * s.shadow, 0, 0, 7); ctx.fill(); ctx.restore();
+    if (s.chick) for (i = 0; i < CONF.length; i++) { var c = confettiAt(CONF[i], still ? 9 : t); if (c && c.y < -4) { drawPiece(ctx, CONF[i], c); } }
     ctx.save(); ctx.translate(s.x, FLOOR + s.y - 10); ctx.rotate(s.rot); ctx.scale(s.sx, s.sy);
-    if (s.chick) {
+    if (s.chick && !s.whole) {
       var ch = s.chick; ctx.save(); ctx.translate(0, ch.y); ctx.scale(ch.scale * (1 - ch.squash), ch.scale * (1 + ch.squash)); chick(ctx, ch); ctx.restore();
-      shell(ctx, 'cup', 0);
-      ctx.save(); zigPath(ctx, false); ctx.clip(); crack(ctx, CRACKS[1], s.cr[1], false); ctx.restore();
+      shell(ctx, 'cup', 0, s.rim);
+      ctx.save(); zigPath(ctx, false); ctx.clip(); for (i = 0; i < 3; i++) crack(ctx, CRACKS[i], s.cr[i], false); ctx.restore();
     } else { shell(ctx, null, s.tint); for (i = 0; i < 3; i++) crack(ctx, CRACKS[i], s.cr[i], i === 0 && s.thin); }
     ctx.restore();
-    if (s.cap) {
-      ctx.save(); ctx.translate(s.cap.x, FLOOR + s.cap.y); ctx.rotate(s.cap.rot); ctx.translate(0, 159); shell(ctx, 'cap', 0);
+    if (s.cap && !s.whole) {
+      ctx.save(); ctx.translate(s.x + s.cap.x, FLOOR + s.cap.y - 10); ctx.rotate(s.cap.rot); ctx.translate(0, 159); shell(ctx, 'cap', 0, s.rim);
       ctx.save(); zigPath(ctx, true); ctx.clip(); for (i = 0; i < 3; i++) crack(ctx, CRACKS[i], 1, false); ctx.restore(); ctx.restore();
     }
-    ctx.save(); ctx.translate(0, FLOOR); straw(ctx, NEST.front, 6); ctx.restore();
+    ctx.restore();
+  }
+  function sceneFront(ctx, ev, s, still) {
+    var a = s.alpha, i, t = s.u; if (a <= 0) return;
+    ctx.save(); ctx.globalAlpha = a;
     if (s.dust >= 0) dust(ctx, s.dust);
-    for (i = 0; i < front.length; i++) drawPiece(ctx, front[i][0], front[i][1]);
+    if (s.chick) for (i = 0; i < CONF.length; i++) { var c = confettiAt(CONF[i], still ? 9 : t); if (c && c.y >= -4) drawPiece(ctx, CONF[i], c); }
     ctx.restore();
   }
 
@@ -251,8 +279,10 @@
     host.appendChild(canvas);
     var ctx = canvas.getContext('2d', { alpha: false });
     var still = !opts.manual && global.matchMedia && global.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    var epoch = performance.now() / 1000, cur = { mode: 'idle', t0: 0 }, prev = null, visible = true, raf = 0, timer = 0, painted = false, cw = 0, ch = 0, seq = 0;
-    function now() { return performance.now() / 1000 - epoch; }
+    var epoch = performance.now() / 1000, mt = 0, queue = [], visible = true, raf = 0, timer = 0, painted = false, cw = 0, ch = 0, seq = 0, pending = null;
+    var cur = { mode: 'idle', t0: 0 }, leaving = [];
+    function now() { return opts.manual ? mt : performance.now() / 1000 - epoch; }
+    function later(sec, fn) { if (opts.manual) queue.push({ at: mt + sec, fn: fn }); else timer = setTimeout(fn, sec * 1000); }
     function size() {
       var r = host.getBoundingClientRect(), dpr = Math.min(global.devicePixelRatio || 1, 2), w = Math.max(2, Math.round(r.width * dpr)), h = Math.max(2, Math.round(r.height * dpr));
       if (w !== cw || h !== ch) { cw = canvas.width = w; ch = canvas.height = h; }
@@ -265,17 +295,34 @@
       drawScenes();
     }
     function draw(t) {
+      var all = leaving.concat([cur]), states = [], i;
+      for (i = 0; i < all.length; i++) states.push(sceneState(all[i], t, still));
+      leaving = leaving.filter(function (ev, k) { return states[k].alpha > 0; });
       frame(function () {
-        if (prev) { var k = (t - prev.at) / T.leave; if (k < 1) scene(ctx, prev.mode, prev.base + (t - prev.at), 1 - inOut(k), still); else prev = null; }
-        scene(ctx, cur.mode, t - cur.t0, 1, still);
+        nestBack(ctx);
+        for (i = 0; i < all.length; i++) sceneBack(ctx, all[i], states[i], still);
+        nestFront(ctx);
+        for (i = 0; i < all.length; i++) sceneFront(ctx, all[i], states[i], still);
       });
       if (!painted) { painted = true; try { if (parent !== window) parent.postMessage({ live: location.pathname }, location.origin); } catch (e) { /* cross-origin parent */ } }
     }
-    function trigger(mode) {
-      var t = now(); prev = { mode: cur.mode, base: t - cur.t0, at: t }; cur = { mode: mode, t0: t }; clearTimeout(timer);
-      if (mode === 'success' || mode === 'fail') timer = setTimeout(function () { trigger('drop'); }, T[mode] * 1000);
-      else if (mode === 'drop') timer = setTimeout(function () { trigger('idle'); }, T.drop * 1000);
-      else if (opts.autoplay) timer = setTimeout(function () { trigger(seq++ % 2 ? 'fail' : 'success'); }, 2000);
+    // An event ends by fading while the next egg already falls in. A request that arrives while something is
+    // running makes the running scene leave first, then plays after the new egg has settled.
+    function begin(mode) {
+      var t = now(), from = cur.mode === 'idle' ? pose('idle', t - cur.t0) : null;
+      queue = []; clearTimeout(timer);
+      cur = { mode: mode, t0: t, from: from, leave: mode === 'success' ? 3.2 : mode === 'fail' ? 2.65 : null, leaveDur: mode === 'success' ? .6 : .55 };
+      if (mode === 'success' || mode === 'fail') later(mode === 'success' ? 3.45 : 2.9, restore);
+      else if (mode === 'drop') later(T.drop, settle);
+      else if (opts.autoplay) later(2, function () { request(seq++ % 2 ? 'fail' : 'success'); });
+    }
+    function restore() { leave(cur, now() - cur.t0, null); begin('drop'); }
+    function leave(ev, u, dur) { ev.leave = ev.leave == null ? u : Math.min(ev.leave, u); ev.leaveDur = dur || ev.leaveDur; leaving.push(ev); }
+    function settle() { if (pending) { var m = pending; pending = null; begin(m); } else begin('idle'); }
+    function request(mode) {
+      if (cur.mode === 'idle') { begin(mode); return; }
+      pending = mode;
+      if (cur.mode === 'success' || cur.mode === 'fail') { clearTimeout(timer); queue = []; leave(cur, now() - cur.t0, .35); begin('drop'); }
     }
     function loop() { raf = 0; if (visible && !document.hidden) { draw(now()); raf = requestAnimationFrame(loop); } }
     function run() { if (!raf && visible && !document.hidden) raf = requestAnimationFrame(loop); }
@@ -284,11 +331,12 @@
       new IntersectionObserver(function (e) { visible = e[0].isIntersecting; run(); }, { threshold: .05 }).observe(host);
       document.addEventListener('visibilitychange', run);
       if (global.ResizeObserver) new ResizeObserver(function () { if (!raf) draw(now()); }).observe(host);
-      run(); if (opts.autoplay) timer = setTimeout(function () { trigger(seq++ % 2 ? 'fail' : 'success'); }, 1000);
+      run(); if (opts.autoplay) later(1, function () { request(seq++ % 2 ? 'fail' : 'success'); });
     }
     return {
-      success: function () { trigger('success'); }, fail: function () { trigger('fail'); }, reset: function () { trigger('drop'); },
-      renderAt: function (mode, t) { frame(function () { scene(ctx, mode, t, 1, false); }); },
+      success: function () { request('success'); }, fail: function () { request('fail'); }, reset: function () { if (cur.mode !== 'idle') request('drop'); },
+      seek: function (t) { mt = t; for (var i = 0; i < queue.length; i++) { if (queue[i].at <= mt) { var q = queue.splice(i, 1)[0], keep = mt; mt = Math.max(mt - 1e-9, q.at); q.fn(); mt = keep; i = -1; } } draw(mt); },
+      renderAt: function (mode, t) { frame(function () { var ev = { mode: mode, t0: 0 }, s = sceneState(ev, t, false); nestBack(ctx); sceneBack(ctx, ev, s, false); nestFront(ctx); sceneFront(ctx, ev, s, false); }); },
       destroy: function () { cancelAnimationFrame(raf); clearTimeout(timer); canvas.remove(); }
     };
   }

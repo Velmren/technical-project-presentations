@@ -35,6 +35,7 @@ dl div{display:flex;justify-content:space-between;gap:20px;padding:11px 0;border
 dt{color:var(--dim)}dd{margin:0;text-align:right}
 .demo{display:flex;justify-content:center}
 .screen{width:100%;max-width:960px;aspect-ratio:16/10;border:0;border-radius:12px;background:#222;box-shadow:inset 0 0 0 1px rgba(236,237,239,.12);display:block}
+.screen.vid{aspect-ratio:16/9;background:#000;object-fit:cover}
 .tall{height:min(78vh,760px);width:auto;aspect-ratio:768/1280;max-width:100%;object-fit:cover;border-radius:14px;background:#222;box-shadow:0 0 0 1px rgba(236,237,239,.14),0 24px 48px rgba(0,0,0,.5);display:block}
 footer{display:flex;justify-content:space-between;gap:20px;align-items:center;flex-wrap:wrap;padding-block:30px 40px;border-top:1px solid var(--line);margin-top:clamp(20px,3vw,40px);font-size:14px;color:var(--dim)}
 footer a.logo{color:var(--text)}
@@ -52,7 +53,13 @@ footer a.logo{color:var(--text)}
 <div class="demo"><iframe class="screen" src="/assets/motion/embed/lottie.html?lang=en" title="Live Lottie cycle with a choice of states" loading="lazy"></iframe></div></section>
 <section class="item"><div class="copy"><h2>Animation in one file</h2><p>An egg in a nest: success, failure and back to the start. The script draws on a canvas and needs no libraries.</p><dl><div><dt>File</dt><dd>hatch.js</dd></div><div><dt>Size</dt><dd>7 KB gzipped</dd></div><div><dt>Connection</dt><dd>one script and one call</dd></div><div><dt>Motion</dt><dd>computed from time, not from frames</dd></div></dl></div>
 <div class="demo"><iframe class="screen" src="/assets/motion/embed/hatch.html?lang=en" title="Live example: success and failure on a canvas" loading="lazy"></iframe></div></section>
+<section class="item"><div class="copy"><h2>A showreel with music</h2><p>Eight works in the rhythm of a track: the cuts land on the beat, the opening and the titles are built in motion. The footage was recorded frame by frame from the working sites and games.</p><dl><div><dt>Format</dt><dd>MP4 H.264, 1920×1080, 60 fps</dd></div><div><dt>Length</dt><dd>54.5 s</dd></div><div><dt>Size</dt><dd>8.6 MB</dd></div><div><dt>Sound</dt><dd>music Ethereal Pulse, CC BY 4.0</dd></div></dl></div>
+<div class="demo"><video class="screen vid" src="/assets/motion/video/reel.mp4" poster="/assets/motion/reel-poster.webp" width="1920" height="1080" controls playsinline preload="none" aria-label="Showreel"></video></div></section>
+<section class="item"><div class="copy"><h2>A product promo</h2><p>The SONO speaker: kinetic type, dimensions drawn as lines, numbers that count up and a colour that changes with the background.</p><dl><div><dt>Format</dt><dd>MP4 H.264, 1920×1080, 60 fps</dd></div><div><dt>Length</dt><dd>19 s</dd></div><div><dt>Size</dt><dd>3.7 MB</dd></div><div><dt>Sound</dt><dd>music Ethereal Pulse, CC BY 4.0</dd></div></dl></div>
+<div class="demo"><video class="screen vid" src="/assets/motion/video/sono-promo.mp4" poster="/assets/motion/sono-promo-poster.webp" width="1920" height="1080" controls playsinline preload="none" aria-label="SONO promo"></video></div></section>
+<section class="item"><div class="copy"><h2>A vertical clip</h2><p>A different character of movement: springy letters, jumps and confetti. The character is Khrum, with Lottie cycles.</p><dl><div><dt>Format</dt><dd>MP4 H.264, 1080×1920, 60 fps</dd></div><div><dt>Length</dt><dd>12 s</dd></div><div><dt>Size</dt><dd>2.0 MB</dd></div><div><dt>Sound</dt><dd>music Island Breeze, CC BY 4.0</dd></div></dl></div>
+<div class="demo"><video class="tall" src="/assets/motion/video/vertical.mp4" poster="/assets/motion/vertical-poster.webp" width="1080" height="1920" controls playsinline preload="none" aria-label="Vertical Khrum clip"></video></div></section>
 </main>
-<footer><a class="logo" href="/en/">VELMREN</a><span>Lottie player: lottie-web, MIT licence.</span></footer>
+<footer><a class="logo" href="/en/">VELMREN</a><span>Lottie player: lottie-web, MIT. Music: Ethereal Pulse and Island Breeze by Surf House Productions, CC BY 4.0, free-stock-music.com.</span></footer>
 </body>
 </html>
