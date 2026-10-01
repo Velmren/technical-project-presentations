@@ -1,0 +1,884 @@
+[
+  {
+    "local": "/products/iphone-13-pro-1.webp",
+    "source": "https://cdn.dummyjson.com/product-images/smartphones/iphone-13-pro/1.webp",
+    "sourcePage": "https://dummyjson.com/products/123",
+    "author": "DummyJSON — Muhammad Ovi (Owais); manufacturer imagery embedded in demo dataset",
+    "license": "DummyJSON project MIT; separate rights in product photography and trademarks not independently established",
+    "licenseUrl": "https://github.com/Ovi/DummyJSON/blob/master/LICENSE"
+  },
+  {
+    "local": "/products/iphone-13-pro-2.webp",
+    "source": "https://cdn.dummyjson.com/product-images/smartphones/iphone-13-pro/2.webp",
+    "sourcePage": "https://dummyjson.com/products/123",
+    "author": "DummyJSON — Muhammad Ovi (Owais); manufacturer imagery embedded in demo dataset",
+    "license": "DummyJSON project MIT; separate rights in product photography and trademarks not independently established",
+    "licenseUrl": "https://github.com/Ovi/DummyJSON/blob/master/LICENSE"
+  },
+  {
+    "local": "/products/iphone-13-pro-3.webp",
+    "source": "https://cdn.dummyjson.com/product-images/smartphones/iphone-13-pro/3.webp",
+    "sourcePage": "https://dummyjson.com/products/123",
+    "author": "DummyJSON — Muhammad Ovi (Owais); manufacturer imagery embedded in demo dataset",
+    "license": "DummyJSON project MIT; separate rights in product photography and trademarks not independently established",
+    "licenseUrl": "https://github.com/Ovi/DummyJSON/blob/master/LICENSE"
+  },
+  {
+    "local": "/products/iphone-x-1.webp",
+    "source": "https://cdn.dummyjson.com/product-images/smartphones/iphone-x/1.webp",
+    "sourcePage": "https://dummyjson.com/products/124",
+    "author": "DummyJSON — Muhammad Ovi (Owais); manufacturer imagery embedded in demo dataset",
+    "license": "DummyJSON project MIT; separate rights in product photography and trademarks not independently established",
+    "licenseUrl": "https://github.com/Ovi/DummyJSON/blob/master/LICENSE"
+  },
+  {
+    "local": "/products/iphone-x-2.webp",
+    "source": "https://cdn.dummyjson.com/product-images/smartphones/iphone-x/2.webp",
+    "sourcePage": "https://dummyjson.com/products/124",
+    "author": "DummyJSON — Muhammad Ovi (Owais); manufacturer imagery embedded in demo dataset",
+    "license": "DummyJSON project MIT; separate rights in product photography and trademarks not independently established",
+    "licenseUrl": "https://github.com/Ovi/DummyJSON/blob/master/LICENSE"
+  },
+  {
+    "local": "/products/iphone-x-3.webp",
+    "source": "https://cdn.dummyjson.com/product-images/smartphones/iphone-x/3.webp",
+    "sourcePage": "https://dummyjson.com/products/124",
+    "author": "DummyJSON — Muhammad Ovi (Owais); manufacturer imagery embedded in demo dataset",
+    "license": "DummyJSON project MIT; separate rights in product photography and trademarks not independently established",
+    "licenseUrl": "https://github.com/Ovi/DummyJSON/blob/master/LICENSE"
+  },
+  {
+    "local": "/products/oppo-a57-1.webp",
+    "source": "https://cdn.dummyjson.com/product-images/smartphones/oppo-a57/1.webp",
+    "sourcePage": "https://dummyjson.com/products/125",
+    "author": "DummyJSON — Muhammad Ovi (Owais); manufacturer imagery embedded in demo dataset",
+    "license": "DummyJSON project MIT; separate rights in product photography and trademarks not independently established",
+    "licenseUrl": "https://github.com/Ovi/DummyJSON/blob/master/LICENSE"
+  },
+  {
+    "local": "/products/oppo-a57-2.webp",
+    "source": "https://cdn.dummyjson.com/product-images/smartphones/oppo-a57/2.webp",
+    "sourcePage": "https://dummyjson.com/products/125",
+    "author": "DummyJSON — Muhammad Ovi (Owais); manufacturer imagery embedded in demo dataset",
+    "license": "DummyJSON project MIT; separate rights in product photography and trademarks not independently established",
+    "licenseUrl": "https://github.com/Ovi/DummyJSON/blob/master/LICENSE"
+  },
+  {
+    "local": "/products/oppo-a57-3.webp",
+    "source": "https://cdn.dummyjson.com/product-images/smartphones/oppo-a57/3.webp",
+    "sourcePage": "https://dummyjson.com/products/125",
+    "author": "DummyJSON — Muhammad Ovi (Owais); manufacturer imagery embedded in demo dataset",
+    "license": "DummyJSON project MIT; separate rights in product photography and trademarks not independently established",
+    "licenseUrl": "https://github.com/Ovi/DummyJSON/blob/master/LICENSE"
+  },
+  {
+    "local": "/products/oppo-f19-pro-plus-1.webp",
+    "source": "https://cdn.dummyjson.com/product-images/smartphones/oppo-f19-pro-plus/1.webp",
+    "sourcePage": "https://dummyjson.com/products/126",
+    "author": "DummyJSON — Muhammad Ovi (Owais); manufacturer imagery embedded in demo dataset",
+    "license": "DummyJSON project MIT; separate rights in product photography and trademarks not independently established",
+    "licenseUrl": "https://github.com/Ovi/DummyJSON/blob/master/LICENSE"
+  },
+  {
+    "local": "/products/oppo-f19-pro-plus-2.webp",
+    "source": "https://cdn.dummyjson.com/product-images/smartphones/oppo-f19-pro-plus/2.webp",
+    "sourcePage": "https://dummyjson.com/products/126",
+    "author": "DummyJSON — Muhammad Ovi (Owais); manufacturer imagery embedded in demo dataset",
+    "license": "DummyJSON project MIT; separate rights in product photography and trademarks not independently established",
+    "licenseUrl": "https://github.com/Ovi/DummyJSON/blob/master/LICENSE"
+  },
+  {
+    "local": "/products/oppo-f19-pro-plus-3.webp",
+    "source": "https://cdn.dummyjson.com/product-images/smartphones/oppo-f19-pro-plus/3.webp",
+    "sourcePage": "https://dummyjson.com/products/126",
+    "author": "DummyJSON — Muhammad Ovi (Owais); manufacturer imagery embedded in demo dataset",
+    "license": "DummyJSON project MIT; separate rights in product photography and trademarks not independently established",
+    "licenseUrl": "https://github.com/Ovi/DummyJSON/blob/master/LICENSE"
+  },
+  {
+    "local": "/products/oppo-k1-1.webp",
+    "source": "https://cdn.dummyjson.com/product-images/smartphones/oppo-k1/1.webp",
+    "sourcePage": "https://dummyjson.com/products/127",
+    "author": "DummyJSON — Muhammad Ovi (Owais); manufacturer imagery embedded in demo dataset",
+    "license": "DummyJSON project MIT; separate rights in product photography and trademarks not independently established",
+    "licenseUrl": "https://github.com/Ovi/DummyJSON/blob/master/LICENSE"
+  },
+  {
+    "local": "/products/oppo-k1-2.webp",
+    "source": "https://cdn.dummyjson.com/product-images/smartphones/oppo-k1/2.webp",
+    "sourcePage": "https://dummyjson.com/products/127",
+    "author": "DummyJSON — Muhammad Ovi (Owais); manufacturer imagery embedded in demo dataset",
+    "license": "DummyJSON project MIT; separate rights in product photography and trademarks not independently established",
+    "licenseUrl": "https://github.com/Ovi/DummyJSON/blob/master/LICENSE"
+  },
+  {
+    "local": "/products/oppo-k1-3.webp",
+    "source": "https://cdn.dummyjson.com/product-images/smartphones/oppo-k1/3.webp",
+    "sourcePage": "https://dummyjson.com/products/127",
+    "author": "DummyJSON — Muhammad Ovi (Owais); manufacturer imagery embedded in demo dataset",
+    "license": "DummyJSON project MIT; separate rights in product photography and trademarks not independently established",
+    "licenseUrl": "https://github.com/Ovi/DummyJSON/blob/master/LICENSE"
+  },
+  {
+    "local": "/products/realme-c35-1.webp",
+    "source": "https://cdn.dummyjson.com/product-images/smartphones/realme-c35/1.webp",
+    "sourcePage": "https://dummyjson.com/products/128",
+    "author": "DummyJSON — Muhammad Ovi (Owais); manufacturer imagery embedded in demo dataset",
+    "license": "DummyJSON project MIT; separate rights in product photography and trademarks not independently established",
+    "licenseUrl": "https://github.com/Ovi/DummyJSON/blob/master/LICENSE"
+  },
+  {
+    "local": "/products/realme-c35-2.webp",
+    "source": "https://cdn.dummyjson.com/product-images/smartphones/realme-c35/2.webp",
+    "sourcePage": "https://dummyjson.com/products/128",
+    "author": "DummyJSON — Muhammad Ovi (Owais); manufacturer imagery embedded in demo dataset",
+    "license": "DummyJSON project MIT; separate rights in product photography and trademarks not independently established",
+    "licenseUrl": "https://github.com/Ovi/DummyJSON/blob/master/LICENSE"
+  },
+  {
+    "local": "/products/realme-c35-3.webp",
+    "source": "https://cdn.dummyjson.com/product-images/smartphones/realme-c35/3.webp",
+    "sourcePage": "https://dummyjson.com/products/128",
+    "author": "DummyJSON — Muhammad Ovi (Owais); manufacturer imagery embedded in demo dataset",
+    "license": "DummyJSON project MIT; separate rights in product photography and trademarks not independently established",
+    "licenseUrl": "https://github.com/Ovi/DummyJSON/blob/master/LICENSE"
+  },
+  {
+    "local": "/products/realme-x-1.webp",
+    "source": "https://cdn.dummyjson.com/product-images/smartphones/realme-x/1.webp",
+    "sourcePage": "https://dummyjson.com/products/129",
+    "author": "DummyJSON — Muhammad Ovi (Owais); manufacturer imagery embedded in demo dataset",
+    "license": "DummyJSON project MIT; separate rights in product photography and trademarks not independently established",
+    "licenseUrl": "https://github.com/Ovi/DummyJSON/blob/master/LICENSE"
+  },
+  {
+    "local": "/products/realme-x-2.webp",
+    "source": "https://cdn.dummyjson.com/product-images/smartphones/realme-x/2.webp",
+    "sourcePage": "https://dummyjson.com/products/129",
+    "author": "DummyJSON — Muhammad Ovi (Owais); manufacturer imagery embedded in demo dataset",
+    "license": "DummyJSON project MIT; separate rights in product photography and trademarks not independently established",
+    "licenseUrl": "https://github.com/Ovi/DummyJSON/blob/master/LICENSE"
+  },
+  {
+    "local": "/products/realme-x-3.webp",
+    "source": "https://cdn.dummyjson.com/product-images/smartphones/realme-x/3.webp",
+    "sourcePage": "https://dummyjson.com/products/129",
+    "author": "DummyJSON — Muhammad Ovi (Owais); manufacturer imagery embedded in demo dataset",
+    "license": "DummyJSON project MIT; separate rights in product photography and trademarks not independently established",
+    "licenseUrl": "https://github.com/Ovi/DummyJSON/blob/master/LICENSE"
+  },
+  {
+    "local": "/products/realme-xt-1.webp",
+    "source": "https://cdn.dummyjson.com/product-images/smartphones/realme-xt/1.webp",
+    "sourcePage": "https://dummyjson.com/products/130",
+    "author": "DummyJSON — Muhammad Ovi (Owais); manufacturer imagery embedded in demo dataset",
+    "license": "DummyJSON project MIT; separate rights in product photography and trademarks not independently established",
+    "licenseUrl": "https://github.com/Ovi/DummyJSON/blob/master/LICENSE"
+  },
+  {
+    "local": "/products/realme-xt-2.webp",
+    "source": "https://cdn.dummyjson.com/product-images/smartphones/realme-xt/2.webp",
+    "sourcePage": "https://dummyjson.com/products/130",
+    "author": "DummyJSON — Muhammad Ovi (Owais); manufacturer imagery embedded in demo dataset",
+    "license": "DummyJSON project MIT; separate rights in product photography and trademarks not independently established",
+    "licenseUrl": "https://github.com/Ovi/DummyJSON/blob/master/LICENSE"
+  },
+  {
+    "local": "/products/realme-xt-3.webp",
+    "source": "https://cdn.dummyjson.com/product-images/smartphones/realme-xt/3.webp",
+    "sourcePage": "https://dummyjson.com/products/130",
+    "author": "DummyJSON — Muhammad Ovi (Owais); manufacturer imagery embedded in demo dataset",
+    "license": "DummyJSON project MIT; separate rights in product photography and trademarks not independently established",
+    "licenseUrl": "https://github.com/Ovi/DummyJSON/blob/master/LICENSE"
+  },
+  {
+    "local": "/products/samsung-galaxy-s7-1.webp",
+    "source": "https://cdn.dummyjson.com/product-images/smartphones/samsung-galaxy-s7/1.webp",
+    "sourcePage": "https://dummyjson.com/products/131",
+    "author": "DummyJSON — Muhammad Ovi (Owais); manufacturer imagery embedded in demo dataset",
+    "license": "DummyJSON project MIT; separate rights in product photography and trademarks not independently established",
+    "licenseUrl": "https://github.com/Ovi/DummyJSON/blob/master/LICENSE"
+  },
+  {
+    "local": "/products/samsung-galaxy-s7-2.webp",
+    "source": "https://cdn.dummyjson.com/product-images/smartphones/samsung-galaxy-s7/2.webp",
+    "sourcePage": "https://dummyjson.com/products/131",
+    "author": "DummyJSON — Muhammad Ovi (Owais); manufacturer imagery embedded in demo dataset",
+    "license": "DummyJSON project MIT; separate rights in product photography and trademarks not independently established",
+    "licenseUrl": "https://github.com/Ovi/DummyJSON/blob/master/LICENSE"
+  },
+  {
+    "local": "/products/samsung-galaxy-s7-3.webp",
+    "source": "https://cdn.dummyjson.com/product-images/smartphones/samsung-galaxy-s7/3.webp",
+    "sourcePage": "https://dummyjson.com/products/131",
+    "author": "DummyJSON — Muhammad Ovi (Owais); manufacturer imagery embedded in demo dataset",
+    "license": "DummyJSON project MIT; separate rights in product photography and trademarks not independently established",
+    "licenseUrl": "https://github.com/Ovi/DummyJSON/blob/master/LICENSE"
+  },
+  {
+    "local": "/products/samsung-galaxy-s8-1.webp",
+    "source": "https://cdn.dummyjson.com/product-images/smartphones/samsung-galaxy-s8/1.webp",
+    "sourcePage": "https://dummyjson.com/products/132",
+    "author": "DummyJSON — Muhammad Ovi (Owais); manufacturer imagery embedded in demo dataset",
+    "license": "DummyJSON project MIT; separate rights in product photography and trademarks not independently established",
+    "licenseUrl": "https://github.com/Ovi/DummyJSON/blob/master/LICENSE"
+  },
+  {
+    "local": "/products/samsung-galaxy-s8-2.webp",
+    "source": "https://cdn.dummyjson.com/product-images/smartphones/samsung-galaxy-s8/2.webp",
+    "sourcePage": "https://dummyjson.com/products/132",
+    "author": "DummyJSON — Muhammad Ovi (Owais); manufacturer imagery embedded in demo dataset",
+    "license": "DummyJSON project MIT; separate rights in product photography and trademarks not independently established",
+    "licenseUrl": "https://github.com/Ovi/DummyJSON/blob/master/LICENSE"
+  },
+  {
+    "local": "/products/samsung-galaxy-s8-3.webp",
+    "source": "https://cdn.dummyjson.com/product-images/smartphones/samsung-galaxy-s8/3.webp",
+    "sourcePage": "https://dummyjson.com/products/132",
+    "author": "DummyJSON — Muhammad Ovi (Owais); manufacturer imagery embedded in demo dataset",
+    "license": "DummyJSON project MIT; separate rights in product photography and trademarks not independently established",
+    "licenseUrl": "https://github.com/Ovi/DummyJSON/blob/master/LICENSE"
+  },
+  {
+    "local": "/products/samsung-galaxy-s10-1.webp",
+    "source": "https://cdn.dummyjson.com/product-images/smartphones/samsung-galaxy-s10/1.webp",
+    "sourcePage": "https://dummyjson.com/products/133",
+    "author": "DummyJSON — Muhammad Ovi (Owais); manufacturer imagery embedded in demo dataset",
+    "license": "DummyJSON project MIT; separate rights in product photography and trademarks not independently established",
+    "licenseUrl": "https://github.com/Ovi/DummyJSON/blob/master/LICENSE"
+  },
+  {
+    "local": "/products/samsung-galaxy-s10-2.webp",
+    "source": "https://cdn.dummyjson.com/product-images/smartphones/samsung-galaxy-s10/2.webp",
+    "sourcePage": "https://dummyjson.com/products/133",
+    "author": "DummyJSON — Muhammad Ovi (Owais); manufacturer imagery embedded in demo dataset",
+    "license": "DummyJSON project MIT; separate rights in product photography and trademarks not independently established",
+    "licenseUrl": "https://github.com/Ovi/DummyJSON/blob/master/LICENSE"
+  },
+  {
+    "local": "/products/samsung-galaxy-s10-3.webp",
+    "source": "https://cdn.dummyjson.com/product-images/smartphones/samsung-galaxy-s10/3.webp",
+    "sourcePage": "https://dummyjson.com/products/133",
+    "author": "DummyJSON — Muhammad Ovi (Owais); manufacturer imagery embedded in demo dataset",
+    "license": "DummyJSON project MIT; separate rights in product photography and trademarks not independently established",
+    "licenseUrl": "https://github.com/Ovi/DummyJSON/blob/master/LICENSE"
+  },
+  {
+    "local": "/products/vivo-s1-1.webp",
+    "source": "https://cdn.dummyjson.com/product-images/smartphones/vivo-s1/1.webp",
+    "sourcePage": "https://dummyjson.com/products/134",
+    "author": "DummyJSON — Muhammad Ovi (Owais); manufacturer imagery embedded in demo dataset",
+    "license": "DummyJSON project MIT; separate rights in product photography and trademarks not independently established",
+    "licenseUrl": "https://github.com/Ovi/DummyJSON/blob/master/LICENSE"
+  },
+  {
+    "local": "/products/vivo-s1-2.webp",
+    "source": "https://cdn.dummyjson.com/product-images/smartphones/vivo-s1/2.webp",
+    "sourcePage": "https://dummyjson.com/products/134",
+    "author": "DummyJSON — Muhammad Ovi (Owais); manufacturer imagery embedded in demo dataset",
+    "license": "DummyJSON project MIT; separate rights in product photography and trademarks not independently established",
+    "licenseUrl": "https://github.com/Ovi/DummyJSON/blob/master/LICENSE"
+  },
+  {
+    "local": "/products/vivo-s1-3.webp",
+    "source": "https://cdn.dummyjson.com/product-images/smartphones/vivo-s1/3.webp",
+    "sourcePage": "https://dummyjson.com/products/134",
+    "author": "DummyJSON — Muhammad Ovi (Owais); manufacturer imagery embedded in demo dataset",
+    "license": "DummyJSON project MIT; separate rights in product photography and trademarks not independently established",
+    "licenseUrl": "https://github.com/Ovi/DummyJSON/blob/master/LICENSE"
+  },
+  {
+    "local": "/products/vivo-v9-1.webp",
+    "source": "https://cdn.dummyjson.com/product-images/smartphones/vivo-v9/1.webp",
+    "sourcePage": "https://dummyjson.com/products/135",
+    "author": "DummyJSON — Muhammad Ovi (Owais); manufacturer imagery embedded in demo dataset",
+    "license": "DummyJSON project MIT; separate rights in product photography and trademarks not independently established",
+    "licenseUrl": "https://github.com/Ovi/DummyJSON/blob/master/LICENSE"
+  },
+  {
+    "local": "/products/vivo-v9-2.webp",
+    "source": "https://cdn.dummyjson.com/product-images/smartphones/vivo-v9/2.webp",
+    "sourcePage": "https://dummyjson.com/products/135",
+    "author": "DummyJSON — Muhammad Ovi (Owais); manufacturer imagery embedded in demo dataset",
+    "license": "DummyJSON project MIT; separate rights in product photography and trademarks not independently established",
+    "licenseUrl": "https://github.com/Ovi/DummyJSON/blob/master/LICENSE"
+  },
+  {
+    "local": "/products/vivo-v9-3.webp",
+    "source": "https://cdn.dummyjson.com/product-images/smartphones/vivo-v9/3.webp",
+    "sourcePage": "https://dummyjson.com/products/135",
+    "author": "DummyJSON — Muhammad Ovi (Owais); manufacturer imagery embedded in demo dataset",
+    "license": "DummyJSON project MIT; separate rights in product photography and trademarks not independently established",
+    "licenseUrl": "https://github.com/Ovi/DummyJSON/blob/master/LICENSE"
+  },
+  {
+    "local": "/products/vivo-x21-1.webp",
+    "source": "https://cdn.dummyjson.com/product-images/smartphones/vivo-x21/1.webp",
+    "sourcePage": "https://dummyjson.com/products/136",
+    "author": "DummyJSON — Muhammad Ovi (Owais); manufacturer imagery embedded in demo dataset",
+    "license": "DummyJSON project MIT; separate rights in product photography and trademarks not independently established",
+    "licenseUrl": "https://github.com/Ovi/DummyJSON/blob/master/LICENSE"
+  },
+  {
+    "local": "/products/vivo-x21-2.webp",
+    "source": "https://cdn.dummyjson.com/product-images/smartphones/vivo-x21/2.webp",
+    "sourcePage": "https://dummyjson.com/products/136",
+    "author": "DummyJSON — Muhammad Ovi (Owais); manufacturer imagery embedded in demo dataset",
+    "license": "DummyJSON project MIT; separate rights in product photography and trademarks not independently established",
+    "licenseUrl": "https://github.com/Ovi/DummyJSON/blob/master/LICENSE"
+  },
+  {
+    "local": "/products/vivo-x21-3.webp",
+    "source": "https://cdn.dummyjson.com/product-images/smartphones/vivo-x21/3.webp",
+    "sourcePage": "https://dummyjson.com/products/136",
+    "author": "DummyJSON — Muhammad Ovi (Owais); manufacturer imagery embedded in demo dataset",
+    "license": "DummyJSON project MIT; separate rights in product photography and trademarks not independently established",
+    "licenseUrl": "https://github.com/Ovi/DummyJSON/blob/master/LICENSE"
+  },
+  {
+    "local": "/products/apple-macbook-pro-14-inch-space-grey-1.webp",
+    "source": "https://cdn.dummyjson.com/product-images/laptops/apple-macbook-pro-14-inch-space-grey/1.webp",
+    "sourcePage": "https://dummyjson.com/products/78",
+    "author": "DummyJSON — Muhammad Ovi (Owais); manufacturer imagery embedded in demo dataset",
+    "license": "DummyJSON project MIT; separate rights in product photography and trademarks not independently established",
+    "licenseUrl": "https://github.com/Ovi/DummyJSON/blob/master/LICENSE"
+  },
+  {
+    "local": "/products/apple-macbook-pro-14-inch-space-grey-2.webp",
+    "source": "https://cdn.dummyjson.com/product-images/laptops/apple-macbook-pro-14-inch-space-grey/2.webp",
+    "sourcePage": "https://dummyjson.com/products/78",
+    "author": "DummyJSON — Muhammad Ovi (Owais); manufacturer imagery embedded in demo dataset",
+    "license": "DummyJSON project MIT; separate rights in product photography and trademarks not independently established",
+    "licenseUrl": "https://github.com/Ovi/DummyJSON/blob/master/LICENSE"
+  },
+  {
+    "local": "/products/apple-macbook-pro-14-inch-space-grey-3.webp",
+    "source": "https://cdn.dummyjson.com/product-images/laptops/apple-macbook-pro-14-inch-space-grey/3.webp",
+    "sourcePage": "https://dummyjson.com/products/78",
+    "author": "DummyJSON — Muhammad Ovi (Owais); manufacturer imagery embedded in demo dataset",
+    "license": "DummyJSON project MIT; separate rights in product photography and trademarks not independently established",
+    "licenseUrl": "https://github.com/Ovi/DummyJSON/blob/master/LICENSE"
+  },
+  {
+    "local": "/products/asus-zenbook-pro-dual-screen-laptop-1.webp",
+    "source": "https://cdn.dummyjson.com/product-images/laptops/asus-zenbook-pro-dual-screen-laptop/1.webp",
+    "sourcePage": "https://dummyjson.com/products/79",
+    "author": "DummyJSON — Muhammad Ovi (Owais); manufacturer imagery embedded in demo dataset",
+    "license": "DummyJSON project MIT; separate rights in product photography and trademarks not independently established",
+    "licenseUrl": "https://github.com/Ovi/DummyJSON/blob/master/LICENSE"
+  },
+  {
+    "local": "/products/asus-zenbook-pro-dual-screen-laptop-2.webp",
+    "source": "https://cdn.dummyjson.com/product-images/laptops/asus-zenbook-pro-dual-screen-laptop/2.webp",
+    "sourcePage": "https://dummyjson.com/products/79",
+    "author": "DummyJSON — Muhammad Ovi (Owais); manufacturer imagery embedded in demo dataset",
+    "license": "DummyJSON project MIT; separate rights in product photography and trademarks not independently established",
+    "licenseUrl": "https://github.com/Ovi/DummyJSON/blob/master/LICENSE"
+  },
+  {
+    "local": "/products/asus-zenbook-pro-dual-screen-laptop-3.webp",
+    "source": "https://cdn.dummyjson.com/product-images/laptops/asus-zenbook-pro-dual-screen-laptop/3.webp",
+    "sourcePage": "https://dummyjson.com/products/79",
+    "author": "DummyJSON — Muhammad Ovi (Owais); manufacturer imagery embedded in demo dataset",
+    "license": "DummyJSON project MIT; separate rights in product photography and trademarks not independently established",
+    "licenseUrl": "https://github.com/Ovi/DummyJSON/blob/master/LICENSE"
+  },
+  {
+    "local": "/products/huawei-matebook-x-pro-1.webp",
+    "source": "https://cdn.dummyjson.com/product-images/laptops/huawei-matebook-x-pro/1.webp",
+    "sourcePage": "https://dummyjson.com/products/80",
+    "author": "DummyJSON — Muhammad Ovi (Owais); manufacturer imagery embedded in demo dataset",
+    "license": "DummyJSON project MIT; separate rights in product photography and trademarks not independently established",
+    "licenseUrl": "https://github.com/Ovi/DummyJSON/blob/master/LICENSE"
+  },
+  {
+    "local": "/products/huawei-matebook-x-pro-2.webp",
+    "source": "https://cdn.dummyjson.com/product-images/laptops/huawei-matebook-x-pro/2.webp",
+    "sourcePage": "https://dummyjson.com/products/80",
+    "author": "DummyJSON — Muhammad Ovi (Owais); manufacturer imagery embedded in demo dataset",
+    "license": "DummyJSON project MIT; separate rights in product photography and trademarks not independently established",
+    "licenseUrl": "https://github.com/Ovi/DummyJSON/blob/master/LICENSE"
+  },
+  {
+    "local": "/products/huawei-matebook-x-pro-3.webp",
+    "source": "https://cdn.dummyjson.com/product-images/laptops/huawei-matebook-x-pro/3.webp",
+    "sourcePage": "https://dummyjson.com/products/80",
+    "author": "DummyJSON — Muhammad Ovi (Owais); manufacturer imagery embedded in demo dataset",
+    "license": "DummyJSON project MIT; separate rights in product photography and trademarks not independently established",
+    "licenseUrl": "https://github.com/Ovi/DummyJSON/blob/master/LICENSE"
+  },
+  {
+    "local": "/products/lenovo-yoga-920-1.webp",
+    "source": "https://cdn.dummyjson.com/product-images/laptops/lenovo-yoga-920/1.webp",
+    "sourcePage": "https://dummyjson.com/products/81",
+    "author": "DummyJSON — Muhammad Ovi (Owais); manufacturer imagery embedded in demo dataset",
+    "license": "DummyJSON project MIT; separate rights in product photography and trademarks not independently established",
+    "licenseUrl": "https://github.com/Ovi/DummyJSON/blob/master/LICENSE"
+  },
+  {
+    "local": "/products/lenovo-yoga-920-2.webp",
+    "source": "https://cdn.dummyjson.com/product-images/laptops/lenovo-yoga-920/2.webp",
+    "sourcePage": "https://dummyjson.com/products/81",
+    "author": "DummyJSON — Muhammad Ovi (Owais); manufacturer imagery embedded in demo dataset",
+    "license": "DummyJSON project MIT; separate rights in product photography and trademarks not independently established",
+    "licenseUrl": "https://github.com/Ovi/DummyJSON/blob/master/LICENSE"
+  },
+  {
+    "local": "/products/lenovo-yoga-920-3.webp",
+    "source": "https://cdn.dummyjson.com/product-images/laptops/lenovo-yoga-920/3.webp",
+    "sourcePage": "https://dummyjson.com/products/81",
+    "author": "DummyJSON — Muhammad Ovi (Owais); manufacturer imagery embedded in demo dataset",
+    "license": "DummyJSON project MIT; separate rights in product photography and trademarks not independently established",
+    "licenseUrl": "https://github.com/Ovi/DummyJSON/blob/master/LICENSE"
+  },
+  {
+    "local": "/products/new-dell-xps-13-9300-laptop-1.webp",
+    "source": "https://cdn.dummyjson.com/product-images/laptops/new-dell-xps-13-9300-laptop/1.webp",
+    "sourcePage": "https://dummyjson.com/products/82",
+    "author": "DummyJSON — Muhammad Ovi (Owais); manufacturer imagery embedded in demo dataset",
+    "license": "DummyJSON project MIT; separate rights in product photography and trademarks not independently established",
+    "licenseUrl": "https://github.com/Ovi/DummyJSON/blob/master/LICENSE"
+  },
+  {
+    "local": "/products/new-dell-xps-13-9300-laptop-2.webp",
+    "source": "https://cdn.dummyjson.com/product-images/laptops/new-dell-xps-13-9300-laptop/2.webp",
+    "sourcePage": "https://dummyjson.com/products/82",
+    "author": "DummyJSON — Muhammad Ovi (Owais); manufacturer imagery embedded in demo dataset",
+    "license": "DummyJSON project MIT; separate rights in product photography and trademarks not independently established",
+    "licenseUrl": "https://github.com/Ovi/DummyJSON/blob/master/LICENSE"
+  },
+  {
+    "local": "/products/new-dell-xps-13-9300-laptop-3.webp",
+    "source": "https://cdn.dummyjson.com/product-images/laptops/new-dell-xps-13-9300-laptop/3.webp",
+    "sourcePage": "https://dummyjson.com/products/82",
+    "author": "DummyJSON — Muhammad Ovi (Owais); manufacturer imagery embedded in demo dataset",
+    "license": "DummyJSON project MIT; separate rights in product photography and trademarks not independently established",
+    "licenseUrl": "https://github.com/Ovi/DummyJSON/blob/master/LICENSE"
+  },
+  {
+    "local": "/products/ipad-mini-2021-starlight-1.webp",
+    "source": "https://cdn.dummyjson.com/product-images/tablets/ipad-mini-2021-starlight/1.webp",
+    "sourcePage": "https://dummyjson.com/products/159",
+    "author": "DummyJSON — Muhammad Ovi (Owais); manufacturer imagery embedded in demo dataset",
+    "license": "DummyJSON project MIT; separate rights in product photography and trademarks not independently established",
+    "licenseUrl": "https://github.com/Ovi/DummyJSON/blob/master/LICENSE"
+  },
+  {
+    "local": "/products/ipad-mini-2021-starlight-2.webp",
+    "source": "https://cdn.dummyjson.com/product-images/tablets/ipad-mini-2021-starlight/2.webp",
+    "sourcePage": "https://dummyjson.com/products/159",
+    "author": "DummyJSON — Muhammad Ovi (Owais); manufacturer imagery embedded in demo dataset",
+    "license": "DummyJSON project MIT; separate rights in product photography and trademarks not independently established",
+    "licenseUrl": "https://github.com/Ovi/DummyJSON/blob/master/LICENSE"
+  },
+  {
+    "local": "/products/ipad-mini-2021-starlight-3.webp",
+    "source": "https://cdn.dummyjson.com/product-images/tablets/ipad-mini-2021-starlight/3.webp",
+    "sourcePage": "https://dummyjson.com/products/159",
+    "author": "DummyJSON — Muhammad Ovi (Owais); manufacturer imagery embedded in demo dataset",
+    "license": "DummyJSON project MIT; separate rights in product photography and trademarks not independently established",
+    "licenseUrl": "https://github.com/Ovi/DummyJSON/blob/master/LICENSE"
+  },
+  {
+    "local": "/products/samsung-galaxy-tab-s8-plus-grey-1.webp",
+    "source": "https://cdn.dummyjson.com/product-images/tablets/samsung-galaxy-tab-s8-plus-grey/1.webp",
+    "sourcePage": "https://dummyjson.com/products/160",
+    "author": "DummyJSON — Muhammad Ovi (Owais); manufacturer imagery embedded in demo dataset",
+    "license": "DummyJSON project MIT; separate rights in product photography and trademarks not independently established",
+    "licenseUrl": "https://github.com/Ovi/DummyJSON/blob/master/LICENSE"
+  },
+  {
+    "local": "/products/samsung-galaxy-tab-s8-plus-grey-2.webp",
+    "source": "https://cdn.dummyjson.com/product-images/tablets/samsung-galaxy-tab-s8-plus-grey/2.webp",
+    "sourcePage": "https://dummyjson.com/products/160",
+    "author": "DummyJSON — Muhammad Ovi (Owais); manufacturer imagery embedded in demo dataset",
+    "license": "DummyJSON project MIT; separate rights in product photography and trademarks not independently established",
+    "licenseUrl": "https://github.com/Ovi/DummyJSON/blob/master/LICENSE"
+  },
+  {
+    "local": "/products/samsung-galaxy-tab-s8-plus-grey-3.webp",
+    "source": "https://cdn.dummyjson.com/product-images/tablets/samsung-galaxy-tab-s8-plus-grey/3.webp",
+    "sourcePage": "https://dummyjson.com/products/160",
+    "author": "DummyJSON — Muhammad Ovi (Owais); manufacturer imagery embedded in demo dataset",
+    "license": "DummyJSON project MIT; separate rights in product photography and trademarks not independently established",
+    "licenseUrl": "https://github.com/Ovi/DummyJSON/blob/master/LICENSE"
+  },
+  {
+    "local": "/products/apple-airpods-1.webp",
+    "source": "https://cdn.dummyjson.com/product-images/mobile-accessories/apple-airpods/1.webp",
+    "sourcePage": "https://dummyjson.com/products/100",
+    "author": "DummyJSON — Muhammad Ovi (Owais); manufacturer imagery embedded in demo dataset",
+    "license": "DummyJSON project MIT; separate rights in product photography and trademarks not independently established",
+    "licenseUrl": "https://github.com/Ovi/DummyJSON/blob/master/LICENSE"
+  },
+  {
+    "local": "/products/apple-airpods-2.webp",
+    "source": "https://cdn.dummyjson.com/product-images/mobile-accessories/apple-airpods/2.webp",
+    "sourcePage": "https://dummyjson.com/products/100",
+    "author": "DummyJSON — Muhammad Ovi (Owais); manufacturer imagery embedded in demo dataset",
+    "license": "DummyJSON project MIT; separate rights in product photography and trademarks not independently established",
+    "licenseUrl": "https://github.com/Ovi/DummyJSON/blob/master/LICENSE"
+  },
+  {
+    "local": "/products/apple-airpods-3.webp",
+    "source": "https://cdn.dummyjson.com/product-images/mobile-accessories/apple-airpods/3.webp",
+    "sourcePage": "https://dummyjson.com/products/100",
+    "author": "DummyJSON — Muhammad Ovi (Owais); manufacturer imagery embedded in demo dataset",
+    "license": "DummyJSON project MIT; separate rights in product photography and trademarks not independently established",
+    "licenseUrl": "https://github.com/Ovi/DummyJSON/blob/master/LICENSE"
+  },
+  {
+    "local": "/products/apple-airpods-max-silver-1.webp",
+    "source": "https://cdn.dummyjson.com/product-images/mobile-accessories/apple-airpods-max-silver/1.webp",
+    "sourcePage": "https://dummyjson.com/products/101",
+    "author": "DummyJSON — Muhammad Ovi (Owais); manufacturer imagery embedded in demo dataset",
+    "license": "DummyJSON project MIT; separate rights in product photography and trademarks not independently established",
+    "licenseUrl": "https://github.com/Ovi/DummyJSON/blob/master/LICENSE"
+  },
+  {
+    "local": "/products/beats-flex-wireless-earphones-1.webp",
+    "source": "https://cdn.dummyjson.com/product-images/mobile-accessories/beats-flex-wireless-earphones/1.webp",
+    "sourcePage": "https://dummyjson.com/products/107",
+    "author": "DummyJSON — Muhammad Ovi (Owais); manufacturer imagery embedded in demo dataset",
+    "license": "DummyJSON project MIT; separate rights in product photography and trademarks not independently established",
+    "licenseUrl": "https://github.com/Ovi/DummyJSON/blob/master/LICENSE"
+  },
+  {
+    "local": "/products/apple-watch-series-4-gold-1.webp",
+    "source": "https://cdn.dummyjson.com/product-images/mobile-accessories/apple-watch-series-4-gold/1.webp",
+    "sourcePage": "https://dummyjson.com/products/106",
+    "author": "DummyJSON — Muhammad Ovi (Owais); manufacturer imagery embedded in demo dataset",
+    "license": "DummyJSON project MIT; separate rights in product photography and trademarks not independently established",
+    "licenseUrl": "https://github.com/Ovi/DummyJSON/blob/master/LICENSE"
+  },
+  {
+    "local": "/products/apple-watch-series-4-gold-2.webp",
+    "source": "https://cdn.dummyjson.com/product-images/mobile-accessories/apple-watch-series-4-gold/2.webp",
+    "sourcePage": "https://dummyjson.com/products/106",
+    "author": "DummyJSON — Muhammad Ovi (Owais); manufacturer imagery embedded in demo dataset",
+    "license": "DummyJSON project MIT; separate rights in product photography and trademarks not independently established",
+    "licenseUrl": "https://github.com/Ovi/DummyJSON/blob/master/LICENSE"
+  },
+  {
+    "local": "/products/apple-watch-series-4-gold-3.webp",
+    "source": "https://cdn.dummyjson.com/product-images/mobile-accessories/apple-watch-series-4-gold/3.webp",
+    "sourcePage": "https://dummyjson.com/products/106",
+    "author": "DummyJSON — Muhammad Ovi (Owais); manufacturer imagery embedded in demo dataset",
+    "license": "DummyJSON project MIT; separate rights in product photography and trademarks not independently established",
+    "licenseUrl": "https://github.com/Ovi/DummyJSON/blob/master/LICENSE"
+  },
+  {
+    "local": "/products/amazon-echo-plus-1.webp",
+    "source": "https://cdn.dummyjson.com/product-images/mobile-accessories/amazon-echo-plus/1.webp",
+    "sourcePage": "https://dummyjson.com/products/99",
+    "author": "DummyJSON — Muhammad Ovi (Owais); manufacturer imagery embedded in demo dataset",
+    "license": "DummyJSON project MIT; separate rights in product photography and trademarks not independently established",
+    "licenseUrl": "https://github.com/Ovi/DummyJSON/blob/master/LICENSE"
+  },
+  {
+    "local": "/products/amazon-echo-plus-2.webp",
+    "source": "https://cdn.dummyjson.com/product-images/mobile-accessories/amazon-echo-plus/2.webp",
+    "sourcePage": "https://dummyjson.com/products/99",
+    "author": "DummyJSON — Muhammad Ovi (Owais); manufacturer imagery embedded in demo dataset",
+    "license": "DummyJSON project MIT; separate rights in product photography and trademarks not independently established",
+    "licenseUrl": "https://github.com/Ovi/DummyJSON/blob/master/LICENSE"
+  },
+  {
+    "local": "/products/apple-homepod-mini-cosmic-grey-1.webp",
+    "source": "https://cdn.dummyjson.com/product-images/mobile-accessories/apple-homepod-mini-cosmic-grey/1.webp",
+    "sourcePage": "https://dummyjson.com/products/103",
+    "author": "DummyJSON — Muhammad Ovi (Owais); manufacturer imagery embedded in demo dataset",
+    "license": "DummyJSON project MIT; separate rights in product photography and trademarks not independently established",
+    "licenseUrl": "https://github.com/Ovi/DummyJSON/blob/master/LICENSE"
+  },
+  {
+    "local": "/products/apple-iphone-charger-1.webp",
+    "source": "https://cdn.dummyjson.com/product-images/mobile-accessories/apple-iphone-charger/1.webp",
+    "sourcePage": "https://dummyjson.com/products/104",
+    "author": "DummyJSON — Muhammad Ovi (Owais); manufacturer imagery embedded in demo dataset",
+    "license": "DummyJSON project MIT; separate rights in product photography and trademarks not independently established",
+    "licenseUrl": "https://github.com/Ovi/DummyJSON/blob/master/LICENSE"
+  },
+  {
+    "local": "/products/apple-iphone-charger-2.webp",
+    "source": "https://cdn.dummyjson.com/product-images/mobile-accessories/apple-iphone-charger/2.webp",
+    "sourcePage": "https://dummyjson.com/products/104",
+    "author": "DummyJSON — Muhammad Ovi (Owais); manufacturer imagery embedded in demo dataset",
+    "license": "DummyJSON project MIT; separate rights in product photography and trademarks not independently established",
+    "licenseUrl": "https://github.com/Ovi/DummyJSON/blob/master/LICENSE"
+  },
+  {
+    "local": "/products/apple-magsafe-battery-pack-1.webp",
+    "source": "https://cdn.dummyjson.com/product-images/mobile-accessories/apple-magsafe-battery-pack/1.webp",
+    "sourcePage": "https://dummyjson.com/products/105",
+    "author": "DummyJSON — Muhammad Ovi (Owais); manufacturer imagery embedded in demo dataset",
+    "license": "DummyJSON project MIT; separate rights in product photography and trademarks not independently established",
+    "licenseUrl": "https://github.com/Ovi/DummyJSON/blob/master/LICENSE"
+  },
+  {
+    "local": "/products/apple-magsafe-battery-pack-2.webp",
+    "source": "https://cdn.dummyjson.com/product-images/mobile-accessories/apple-magsafe-battery-pack/2.webp",
+    "sourcePage": "https://dummyjson.com/products/105",
+    "author": "DummyJSON — Muhammad Ovi (Owais); manufacturer imagery embedded in demo dataset",
+    "license": "DummyJSON project MIT; separate rights in product photography and trademarks not independently established",
+    "licenseUrl": "https://github.com/Ovi/DummyJSON/blob/master/LICENSE"
+  },
+  {
+    "local": "/products/iphone-12-silicone-case-with-magsafe-plum-1.webp",
+    "source": "https://cdn.dummyjson.com/product-images/mobile-accessories/iphone-12-silicone-case-with-magsafe-plum/1.webp",
+    "sourcePage": "https://dummyjson.com/products/108",
+    "author": "DummyJSON — Muhammad Ovi (Owais); manufacturer imagery embedded in demo dataset",
+    "license": "DummyJSON project MIT; separate rights in product photography and trademarks not independently established",
+    "licenseUrl": "https://github.com/Ovi/DummyJSON/blob/master/LICENSE"
+  },
+  {
+    "local": "/products/iphone-12-silicone-case-with-magsafe-plum-2.webp",
+    "source": "https://cdn.dummyjson.com/product-images/mobile-accessories/iphone-12-silicone-case-with-magsafe-plum/2.webp",
+    "sourcePage": "https://dummyjson.com/products/108",
+    "author": "DummyJSON — Muhammad Ovi (Owais); manufacturer imagery embedded in demo dataset",
+    "license": "DummyJSON project MIT; separate rights in product photography and trademarks not independently established",
+    "licenseUrl": "https://github.com/Ovi/DummyJSON/blob/master/LICENSE"
+  },
+  {
+    "local": "/products/iphone-12-silicone-case-with-magsafe-plum-3.webp",
+    "source": "https://cdn.dummyjson.com/product-images/mobile-accessories/iphone-12-silicone-case-with-magsafe-plum/3.webp",
+    "sourcePage": "https://dummyjson.com/products/108",
+    "author": "DummyJSON — Muhammad Ovi (Owais); manufacturer imagery embedded in demo dataset",
+    "license": "DummyJSON project MIT; separate rights in product photography and trademarks not independently established",
+    "licenseUrl": "https://github.com/Ovi/DummyJSON/blob/master/LICENSE"
+  },
+  {
+    "local": "/products/nintendo-switch-1.webp",
+    "source": "https://upload.wikimedia.org/wikipedia/commons/b/bc/Nintendo-Switch-wJoyCons-BlRd-Standing-FL.png",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:Nintendo-Switch-wJoyCons-BlRd-Standing-FL.png",
+    "author": "Evan-Amos, modified by Gunnar.offel",
+    "license": "Public domain",
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "changes": "Resized to maximum 1000 px and encoded WebP; no generative alteration"
+  },
+  {
+    "local": "/products/playstation-5-1.webp",
+    "source": "https://upload.wikimedia.org/wikipedia/commons/0/00/PlayStation_5_and_DualSense.jpg",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:PlayStation_5_and_DualSense.jpg",
+    "author": "Osh33m",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "changes": "Resized to maximum 1000 px and encoded WebP; no generative alteration"
+  },
+  {
+    "local": "/products/xbox-series-s-1.webp",
+    "source": "https://upload.wikimedia.org/wikipedia/commons/5/54/Xbox_Series_S_with_controller.jpg",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:Xbox_Series_S_with_controller.jpg",
+    "author": "AsmodeanUnderscore",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "changes": "Resized to maximum 1000 px and encoded WebP; no generative alteration"
+  },
+  {
+    "local": "/products/sony-alpha-7-iii-1.webp",
+    "source": "https://upload.wikimedia.org/wikipedia/commons/2/2c/Sony_Alpha7_III_20_apr_2018f.jpg",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:Sony_Alpha7_III_20_apr_2018f.jpg",
+    "author": "昼落ち",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "changes": "Resized to maximum 1000 px and encoded WebP; no generative alteration"
+  },
+  {
+    "local": "/products/canon-eos-r6-1.webp",
+    "source": "https://upload.wikimedia.org/wikipedia/commons/e/ea/Canon_EOS_R6_16.jpg",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:Canon_EOS_R6_16.jpg",
+    "author": "FBenjr123",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "changes": "Resized to maximum 1000 px and encoded WebP; no generative alteration"
+  },
+  {
+    "local": "/products/dyson-v8-1.webp",
+    "source": "https://upload.wikimedia.org/wikipedia/commons/4/45/Dyson_V8_handstick_vacuum.jpg",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:Dyson_V8_handstick_vacuum.jpg",
+    "author": "\"Your Best Digs\"",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "changes": "Resized to maximum 1000 px and encoded WebP; no generative alteration"
+  },
+  {
+    "local": "/products/irobot-roomba-980-1.webp",
+    "source": "https://upload.wikimedia.org/wikipedia/commons/1/1e/IRobot_Roomba_980_22_%2821460963853%29.jpg",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:IRobot_Roomba_980_22_(21460963853).jpg",
+    "author": "TAKA@P.P.R.S",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "changes": "Resized to maximum 1000 px and encoded WebP; no generative alteration"
+  },
+  {
+    "local": "/products/apple-magic-keyboard-1.webp",
+    "source": "https://upload.wikimedia.org/wikipedia/commons/c/c0/Apple_Magic_Keyboard_-_US_remix_transparent.png",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:Apple_Magic_Keyboard_-_US_remix_transparent.png",
+    "author": "File:Apple_Magic_Keyboard_-_US.jpg by Fletcher\nDerivative work: AGreuet (talk · contribs)",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "changes": "Resized to maximum 1000 px and encoded WebP; no generative alteration"
+  },
+  {
+    "local": "/products/iphone-15-pro-max-1.webp",
+    "source": "https://cdsassets.apple.com/live/7WUAS350/images/tech-specs/iphone-15-pro-max.png",
+    "sourcePage": "https://support.apple.com/en-us/111828",
+    "author": "Apple Inc.",
+    "license": "Copyright Apple Inc. Not an open license. Portfolio study only; pending commercial clearance.",
+    "licenseUrl": "https://www.apple.com/legal/internet-services/terms/site.html"
+  },
+  {
+    "local": "/products/iphone-15-pro-max-2.webp",
+    "source": "https://cdsassets.apple.com/live/7WUAS350/images/tech-specs/111828-iphone-15-pro-max-portimage-1.png",
+    "sourcePage": "https://support.apple.com/en-us/111828",
+    "author": "Apple Inc.",
+    "license": "Copyright Apple Inc. Not an open license. Portfolio study only; pending commercial clearance.",
+    "licenseUrl": "https://www.apple.com/legal/internet-services/terms/site.html"
+  },
+  {
+    "local": "/products/iphone-15-pro-max-3.webp",
+    "source": "https://cdsassets.apple.com/live/7WUAS350/images/tech-specs/111828-iphone-15-pro-max-portimage-2.png",
+    "sourcePage": "https://support.apple.com/en-us/111828",
+    "author": "Apple Inc.",
+    "license": "Copyright Apple Inc. Not an open license. Portfolio study only; pending commercial clearance.",
+    "licenseUrl": "https://www.apple.com/legal/internet-services/terms/site.html"
+  },
+  {
+    "local": "/media/iphone-15-pro-max.glb",
+    "source": "https://raw.githubusercontent.com/ibuhs/Pane/main/Pane/Models/iphone-15-pro-max.glb",
+    "sourcePage": "https://github.com/ibuhs/Pane#credits",
+    "author": "MpPower / MG990 (embedded GLB metadata); MajdyModels (Pane README credit)",
+    "license": "CC BY 4.0, declared both in embedded model metadata and mirror README",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+    "changes": "Unmodified model copied from Pane; the model has its own CC BY license, separate from application GPL",
+    "originalSource": "https://sketchfab.com/3d-models/iphone-15-pro-max-5b7b35513a154ac69619dc2b2fe15686",
+    "note": "Original Sketchfab landing page returned HTTP 403 during verification. Preserve both embedded and mirror attributions; do not infer additional authorship."
+  },
+  {
+    "local": "/products/steam-deck-1.webp",
+    "source": "https://upload.wikimedia.org/wikipedia/commons/5/5d/Steam_Deck_%28front%29.png",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:Steam_Deck_(front).png",
+    "author": "Liam Dawe/GamingOnLinux, PNG version by VulcanSphere",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "changes": "Resized to maximum 1000 px and encoded WebP; no generative alteration"
+  },
+  {
+    "local": "/products/iphone-15-1.webp",
+    "source": "https://cdsassets.apple.com/live/7WUAS350/images/tech-specs/iphone_15_hero.png",
+    "sourcePage": "https://support.apple.com/en-us/111831",
+    "author": "Apple Inc.",
+    "license": "Copyright Apple Inc. Portfolio study only; pending commercial clearance. Not open licensed.",
+    "licenseUrl": "https://www.apple.com/legal/internet-services/terms/site.html"
+  },
+  {
+    "local": "/products/iphone-15-pro-1.webp",
+    "source": "https://cdsassets.apple.com/live/7WUAS350/images/tech-specs/iphone_15_pro.png",
+    "sourcePage": "https://support.apple.com/en-us/111829",
+    "author": "Apple Inc.",
+    "license": "Copyright Apple Inc. Portfolio study only; pending commercial clearance. Not open licensed.",
+    "licenseUrl": "https://www.apple.com/legal/internet-services/terms/site.html"
+  },
+  {
+    "local": "/products/iphone-16-1.webp",
+    "source": "https://cdsassets.apple.com/live/7WUAS350/images/tech-specs/iphone-16.png",
+    "sourcePage": "https://support.apple.com/en-us/121029",
+    "author": "Apple Inc.",
+    "license": "Copyright Apple Inc. Portfolio study only; pending commercial clearance. Not open licensed.",
+    "licenseUrl": "https://www.apple.com/legal/internet-services/terms/site.html"
+  },
+  {
+    "local": "/products/sony-alpha-7-iii-clean.webp",
+    "source": "https://upload.wikimedia.org/wikipedia/commons/2/2c/Sony_Alpha7_III_20_apr_2018f.jpg",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:Sony_Alpha7_III_20_apr_2018f.jpg",
+    "author": "昼落ち",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "changes": "Background removed; product silhouette retained, resampled WebP. Derivative remains under the source license.",
+    "originalLocal": "/products/sony-alpha-7-iii-1.webp"
+  },
+  {
+    "local": "/products/playstation-5-clean.webp",
+    "source": "https://upload.wikimedia.org/wikipedia/commons/0/00/PlayStation_5_and_DualSense.jpg",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:PlayStation_5_and_DualSense.jpg",
+    "author": "Osh33m",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "changes": "Background removed; product silhouette retained, resampled WebP. Derivative remains under the source license.",
+    "originalLocal": "/products/playstation-5-1.webp"
+  },
+  {
+    "local": "/products/xbox-series-s-clean.webp",
+    "source": "https://upload.wikimedia.org/wikipedia/commons/5/54/Xbox_Series_S_with_controller.jpg",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:Xbox_Series_S_with_controller.jpg",
+    "author": "AsmodeanUnderscore",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "changes": "Background removed; product silhouette retained, resampled WebP. Derivative remains under the source license.",
+    "originalLocal": "/products/xbox-series-s-1.webp"
+  },
+  {
+    "local": "/products/dyson-v8-clean.webp",
+    "source": "https://upload.wikimedia.org/wikipedia/commons/4/45/Dyson_V8_handstick_vacuum.jpg",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:Dyson_V8_handstick_vacuum.jpg",
+    "author": "\"Your Best Digs\"",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "changes": "Background removed; product silhouette retained, resampled WebP. Derivative remains under the source license.",
+    "originalLocal": "/products/dyson-v8-1.webp"
+  },
+  {
+    "local": "/products/irobot-roomba-980-clean.webp",
+    "source": "https://upload.wikimedia.org/wikipedia/commons/1/1e/IRobot_Roomba_980_22_%2821460963853%29.jpg",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:IRobot_Roomba_980_22_(21460963853).jpg",
+    "author": "TAKA@P.P.R.S",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "changes": "Background removed; product silhouette retained, resampled WebP. Derivative remains under the source license.",
+    "originalLocal": "/products/irobot-roomba-980-1.webp"
+  },
+  {
+    "local": "/products/canon-eos-r6-reference.webp",
+    "source": "https://upload.wikimedia.org/wikipedia/commons/c/c9/Canon_R6_und_RF_85_2%2C0-8065.jpg",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:Canon_R6_und_RF_85_2,0-8065.jpg",
+    "author": "GodeNehler",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+  },
+  {
+    "local": "/products/canon-eos-r6-clean.webp",
+    "source": "https://upload.wikimedia.org/wikipedia/commons/c/c9/Canon_R6_und_RF_85_2%2C0-8065.jpg",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:Canon_R6_und_RF_85_2,0-8065.jpg",
+    "author": "GodeNehler",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "changes": "Background removed; product silhouette retained, resampled WebP. Derivative remains under the source license.",
+    "originalLocal": "/products/canon-eos-r6-reference.webp"
+  },
+  {
+    "local": "/media/hero-electronics.webp",
+    "source": "Local project composition",
+    "sourcePage": "https://dummyjson.com/docs/products",
+    "author": "Portfolio project, composited from cited DummyJSON product images",
+    "license": "Original arrangement; underlying product-photography and trademark limitations remain. Portfolio study only; pending commercial clearance.",
+    "inputs": [
+      "/products/apple-macbook-pro-14-inch-space-grey-1.webp",
+      "/products/iphone-13-pro-2.webp",
+      "/products/apple-airpods-1.webp"
+    ],
+    "changes": "Original light-blue studio composition; no reference webpage pixels reused."
+  },
+  {
+    "local": "/media/iphone-13-pro-angles.webm",
+    "source": "Locally authored slideshow",
+    "sourcePage": "https://dummyjson.com/products/123",
+    "author": "Portfolio project; source photography from DummyJSON",
+    "license": "Underlying source-image limitations remain; portfolio study only, pending commercial clearance.",
+    "inputs": [
+      "/products/iphone-13-pro-2.webp",
+      "/products/iphone-13-pro-1.webp",
+      "/products/iphone-13-pro-3.webp"
+    ],
+    "changes": "12-second silent 1280×720 VP9 slideshow, three real source views, simple crossfades, original Russian captions; not a manufacturer video or a hands-on review."
+  }
+]

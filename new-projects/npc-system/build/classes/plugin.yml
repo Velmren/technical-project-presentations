@@ -1,0 +1,13 @@
+name: NorthHarbor
+version: 2.0.0
+main: dev.velmren.guide.BeaconGuidePlugin
+api-version: '1.21.11'
+description: Three NPC roles and a persistent harbor quest by VELMREN
+commands:
+  harbor:
+    description: Северная гавань — диалог и задание
+    usage: /harbor [status|talk mara/lev/nika|accept|offer|inspect|claim|setup|remove|reset]
+permissions:
+  northharbor.admin:
+    description: Place/remove NPCs and reset own quest
+    default: op

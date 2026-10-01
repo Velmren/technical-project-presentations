@@ -1,0 +1,131 @@
+dialogs:
+  elder:
+    start: start
+    nodes:
+      start:
+        text: 'Добро пожаловать, {player}. Гавани нужны умелые руки. С чего начнёшь?'
+        choices:
+          - text: Расскажи о деревне
+            next: history
+          - text: Я познакомлюсь с кузнецом
+            conditions: [{type: active, quest: welcome, not: true}, {type: completed, quest: welcome, not: true}]
+            actions: [{type: quest, quest: welcome}]
+          - text: Получить награду за знакомство
+            conditions: [{type: active, quest: welcome}]
+            actions: [{type: complete, quest: welcome}]
+          - text: Кому сейчас нужна помощь?
+            conditions: [{type: completed, quest: welcome}]
+            next: work
+      history:
+        text: 'Мельница остановилась, а маяк погас. Олег, Мара и Ника ждут помощи — но сперва заслужи их доверие.'
+        choices:
+          - {text: Предпочитаю полезную работу, next: start, actions: [{type: variable, key: approach, value: practical}]}
+          - {text: Сперва хочу осмотреться, next: start, actions: [{type: variable, key: approach, value: explorer}]}
+      work:
+        text: 'Олегу нужна древесина, Павлу — урожай. Илья охраняет северные ворота, а Анна составляет карту побережья. Твой путь: {var:approach}.'
+        choices:
+          - {text: Спасибо}
+  lumberjack:
+    start: start
+    nodes:
+      start:
+        text: 'Колесо западной мельницы сломано. Принеси восемь обычных дубовых брёвен — и я его починю.'
+        choices:
+          - text: Взяться за доставку древесины
+            conditions: [{type: completed, quest: welcome}, {type: active, quest: mill, not: true}, {type: completed, quest: mill, not: true}]
+            actions: [{type: quest, quest: mill}]
+          - text: Завершить ремонт колеса
+            conditions: [{type: active, quest: mill}]
+            actions: [{type: complete, quest: mill}]
+          - text: Где взять брёвна?
+            next: forest
+      forest:
+        text: 'На западе растут дубы. Руби их брёвна. Предметы с особыми именами и зачарованиями для заказа не подходят.'
+        choices: [{text: Понятно, next: start}]
+  smith:
+    start: start
+    nodes:
+      start:
+        text: 'Добро пожаловать в кузницу. Железная рама удержит линзу маяка.'
+        choices:
+          - text: Получить награду за знакомство
+            conditions: [{type: active, quest: welcome}]
+            actions: [{type: complete, quest: welcome}]
+          - text: Доставить железо для маяка
+            conditions: [{type: completed, quest: mill}, {type: active, quest: forge, not: true}, {type: completed, quest: forge, not: true}]
+            actions: [{type: quest, quest: forge}]
+          - text: Получить награду кузнеца
+            conditions: [{type: active, quest: forge}]
+            actions: [{type: complete, quest: forge}]
+          - {text: Расскажи о Нике, next: lens}
+      lens:
+        text: 'Ника живёт у маяка к востоку от рынка. Выполни мой заказ — и она доверит тебе линзу.'
+        choices: [{text: Назад, next: start}]
+  merchant:
+    start: start
+    nodes:
+      start:
+        text: 'На рынке обычные припасы обменивают на изумруды. Купи хлеб, продай пшеницу или запасись материалами для маяка.'
+        choices:
+          - {text: Открыть рынок, open-shop: true}
+          - text: Взять рыночный заказ
+            conditions: [{type: completed, quest: welcome}, {type: active, quest: market, not: true}]
+            actions: [{type: quest, quest: market}]
+          - text: Получить награду за заказ
+            conditions: [{type: active, quest: market}]
+            actions: [{type: complete, quest: market}]
+  keeper:
+    start: start
+    nodes:
+      start:
+        text: 'Линза наверху погасла. Поднимись в башню, принеси четыре стекла, а затем настрой механизм.'
+        choices:
+          - text: Восстановить маяк
+            conditions: [{type: completed, quest: forge}, {type: active, quest: lighthouse, not: true}, {type: completed, quest: lighthouse, not: true}]
+            actions: [{type: quest, quest: lighthouse}]
+          - text: Настроить механизм линзы
+            conditions: [{type: active, quest: lighthouse}]
+            actions: [{type: event, event: lens_align}]
+          - text: Завершить восстановление маяка
+            conditions: [{type: active, quest: lighthouse}]
+            actions: [{type: complete, quest: lighthouse}]
+          - text: Как красиво светит маяк
+            conditions: [{type: completed, quest: lighthouse}]
+            actions: [{type: message, text: 'Ты изменил гавань. Фонарь вновь ведёт корабли домой.'}]
+  farmer:
+    start: start
+    nodes:
+      start:
+        text: 'Собери шесть кустов пшеницы на моих полях, затем принеси шесть пшеницы. Через минуту заказ можно повторить.'
+        choices:
+          - text: Помочь с урожаем
+            conditions: [{type: completed, quest: welcome}, {type: active, quest: harvest, not: true}]
+            actions: [{type: quest, quest: harvest}]
+          - text: Получить плату за урожай
+            conditions: [{type: active, quest: harvest}]
+            actions: [{type: complete, quest: harvest}]
+  guard:
+    start: start
+    nodes:
+      start:
+        text: 'Помоги защитить северную дорогу. Победи двух зомби в этой гавани и вернись ко мне.'
+        choices:
+          - text: Выйти в патруль
+            conditions: [{type: completed, quest: welcome}, {type: active, quest: patrol, not: true}, {type: completed, quest: patrol, not: true}]
+            actions: [{type: quest, quest: patrol}]
+          - text: Получить награду за патруль
+            conditions: [{type: active, quest: patrol}]
+            actions: [{type: complete, quest: patrol}]
+  cartographer:
+    start: start
+    nodes:
+      start:
+        text: 'Осмотри мельницу, вход в маяк и северные ворота. Я отмечу каждое место, когда ты туда придёшь.'
+        choices:
+          - text: Исследовать гавань
+            conditions: [{type: completed, quest: welcome}, {type: active, quest: survey, not: true}, {type: completed, quest: survey, not: true}]
+            actions: [{type: quest, quest: survey}]
+          - text: Получить награду за исследование
+            conditions: [{type: active, quest: survey}]
+            actions: [{type: complete, quest: survey}]
+

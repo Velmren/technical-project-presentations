@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#173e37">
+  <link rel="icon" href="./assets/lumi.png">
+  <meta name="description" content="Люми: остров ветров — уютное приключение о маленькой кунице, дружбе и потерянном ветре. Исследуйте пять областей острова, сражайтесь и находите секреты. Играйте в браузере или скачайте игру для Windows.">
+  <title>Люми: остров ветров — маленький герой, большое приключение</title>
+  <link rel="preload" href="./assets/hero.webp" as="image">
+  <link rel="stylesheet" href="./style.css">
+  <script src="./site.js" defer></script>
+</head>
+<body>
+<svg class="svg-library" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><defs>
+  <symbol id="i-leaf" viewBox="0 0 48 48"><path d="M10 36C-1 16 20 5 39 5c4 23-5 38-23 32" fill="#8eb661"/><path d="M9 42 33 13m-17 20-2-12m9 3 12-1m-5-7-1-9" fill="none"/></symbol>
+  <symbol id="i-sword" viewBox="0 0 48 48"><path d="m17 28 20-23 7-1-1 8-22 20" fill="#c5dde1"/><path d="m8 30 9-9 14 14-9 8z" fill="#d1a450"/><path d="m7 42 11-11 6 6-11 10z" fill="#9a673e"/></symbol>
+  <symbol id="i-heart" viewBox="0 0 48 48"><path d="M24 41C15 34 3 26 4 16 5 4 18 4 24 13 30 4 43 4 44 16c1 10-11 18-20 25Z" fill="#d88370"/><path d="M12 15c1-3 4-4 7-2" fill="none" stroke="#fff4dc"/></symbol>
+  <symbol id="i-chest" viewBox="0 0 48 48"><path d="M5 23v-9C5 2 42 2 42 14v9z" fill="#cda154"/><path d="M5 21h37v21H5z" fill="#986c3e"/><path d="M11 9v33m25-33v33M5 25h37" fill="none" stroke="#e6be68"/><path d="M20 21h8v12h-8z" fill="#f9cd72"/></symbol>
+  <symbol id="i-wind" viewBox="0 0 48 48"><path d="M5 17h28c10 0 10-13 2-13-4 0-6 3-6 5M5 25h34c8 0 8 12 0 12-3 0-5-2-5-5M8 33h14c8 0 8 11 1 11" fill="none"/></symbol>
+  <symbol id="i-star" viewBox="0 0 48 48"><path d="m24 3 6 13 15 2-11 11 3 16-13-8-13 8 3-16L3 18l15-2z" fill="#e9ba55"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M4 12h15m-6-6 6 6-6 6" fill="none"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24"><path d="m6 6 12 12M6 18 18 6" fill="none"/></symbol>
+  <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 3v12m-5-5 5 5 5-5M4 16v5h16v-5" fill="none"/></symbol>
+  <symbol id="i-compass" viewBox="0 0 48 48"><circle cx="24" cy="24" r="18" fill="#f3e6c3"/><path d="m33 14-5 15-15 5 7-15z" fill="#44776b"/><path d="M24 1v7m0 32v7M1 24h7m32 0h7" fill="none"/></symbol>
+</defs></svg>
+<a class="skip-link" href="#about">Перейти к содержанию</a>
+<header class="header">
+  <a class="brand" href="#home" aria-label="Люми: остров ветров — главная"><svg><use href="#i-leaf"/></svg><span>люми<small>остров ветров</small></span></a>
+  <nav aria-label="Основная навигация"><a href="#about">Об игре</a><a href="#island">Остров</a><a href="#media">Медиа</a></nav>
+  <button class="button button-small" data-open-download>Скачать <svg><use href="#i-download"/></svg></button>
+</header>
+<main>
+  <section class="hero" id="home" aria-labelledby="hero-title">
+    <img class="hero-art" src="./assets/hero.webp" width="1920" height="1080" alt="Зелёный остров, залитые солнцем деревья и тропинка навстречу приключению" fetchpriority="high">
+    <div class="hero-shade"></div>
+    <div class="hero-copy">
+      <p class="eyebrow light"><span></span> Уютное приключение с характером</p>
+      <h1 id="hero-title"><span class="title-main">Люми</span><span class="title-sub">остров ветров</span></h1>
+      <p class="hero-tagline">Маленький герой.<br>Большие открытия.</p>
+      <p class="hero-description">Ветер исчез, а острову нужна помощь.<br class="desktop-break"> Надень плащ, позови друзей —<br class="desktop-break"> и отправляйся за первой тайной.</p>
+      <div class="hero-actions"><a class="button" href="./play/">Играть в браузере <svg><use href="#i-arrow"/></svg></a><button class="text-button light-text" data-open-download>Скачать для Windows <svg><use href="#i-download"/></svg></button></div>
+      <p class="hero-note">Без регистрации · Прогресс сохраняется на устройстве</p>
+    </div>
+    <div class="hero-friends"><div class="friend-note">В дорогу?<span>Плюм уже ждёт!</span><svg viewBox="0 0 80 50" aria-hidden="true"><path d="M3 4Q20 50 73 30m-17-4 17 4-9 14"/></svg></div></div>
+    <a class="hero-scroll" href="#about"><span>Остров зовёт</span><span aria-hidden="true">↓</span></a>
+  </section>
+
+  <section class="verbs parchment" id="about" aria-label="Что вас ждёт в игре">
+    <div class="verb"><svg><use href="#i-leaf"/></svg><h2>Исследуй</h2><p>Сворачивай с тропы.<br>Остров хранит секреты.</p></div>
+    <div class="verb"><svg><use href="#i-sword"/></svg><h2>Сражайся</h2><p>Лови нужный момент.<br>Дай отпор лесным врагам.</p></div>
+    <div class="verb"><svg><use href="#i-heart"/></svg><h2>Дружи</h2><p>Выслушай жителей.<br>Помоги их маленькому миру.</p></div>
+    <div class="verb"><svg><use href="#i-chest"/></svg><h2>Собирай</h2><p>Ищи редкие находки.<br>Наполни свой рюкзак.</p></div>
+  </section>
+
+  <section class="section intro-section wrap" aria-labelledby="intro-title">
+    <div class="intro-copy"><p class="eyebrow">Приключение начинается с любопытства</p><h2 id="intro-title">За каждым поворотом —<br><em>маленькая история.</em></h2><p>Люми — куница, которая однажды проснулась на слишком тихом острове. На море сбиваются с пути корабли, а большой маяк погас. Вместе с совой Плюм тебе предстоит вернуть ветер домой.</p><p>Гуляй по связанным областям острова, выполняй задания жителей и собирай снаряжение. Здесь путь к следующему открытию начинается с простого «а что там?».</p>
+      <ol class="loop"><li><svg><use href="#i-compass"/></svg><span>Исследуй</span></li><li><svg><use href="#i-sword"/></svg><span>Сражайся</span></li><li><svg><use href="#i-star"/></svg><span>Развивайся</span></li><li><svg><use href="#i-chest"/></svg><span>Открывай</span></li></ol>
+    </div>
+    <figure class="scene scene-forest"><img src="./assets/gameplay-forest.webp" width="1280" height="720" alt="Настоящий игровой кадр: Люми исследует тропы Северного леса" loading="lazy"><figcaption><span class="scene-dot"></span>Шепчущий лес · кадр из игры</figcaption><span class="scene-stamp"><svg><use href="#i-leaf"/></svg>Начни с тропинки</span></figure>
+  </section>
+
+  <section class="combat-section section" id="combat" aria-labelledby="combat-title"><div class="wrap">
+    <div class="section-head"><div><p class="eyebrow">Храбрость — тоже часть путешествия</p><h2 id="combat-title">Мягкий мир.<br><em>Настоящие сражения.</em></h2></div><p>У врагов свои повадки. Подойди ближе, дождись атаки и используй ветер, чтобы изменить ход боя.</p></div>
+    <div class="combat-layout"><figure class="scene combat-scene"><img src="./assets/gameplay-combat.webp" width="1280" height="720" alt="Настоящий игровой кадр сражения Люми с лесными противниками" loading="lazy"><button class="battle-marker marker-dodge" aria-expanded="false" aria-controls="tip-dodge"><span>1</span><span class="marker-label">Уклонение</span></button><button class="battle-marker marker-wind" aria-expanded="false" aria-controls="tip-wind"><span>2</span><span class="marker-label">Сила ветра</span></button><figcaption>Кадр из игры · нажми на метку, чтобы узнать приём</figcaption></figure>
+    <div class="combat-guide"><div class="guide-item"><span class="guide-number">01</span><div><h3>Двигайся, чтобы выжить</h3><p>Атака и уклонение помогают держать дистанцию. Зелье вернёт здоровье, когда бой пойдёт не по плану.</p></div></div><div class="guide-item"><span class="guide-number">02</span><div><h3>Позови ветер</h3><p>Особое умение Люми отталкивает противников. Используй его, когда враги подступают со всех сторон.</p></div></div><div class="guide-item"><span class="guide-number">03</span><div><h3>Изучи противника</h3><p>Четыре варианта поведения: преследование, рывок, стрельба и охрана территории. Привычная тактика сработает не всегда.</p></div></div>
+    <div class="combat-tip" id="tip-dodge" hidden><strong>Уклонение</strong><p>Короткий рывок помогает выйти из зоны атаки. На клавиатуре — <kbd>Space</kbd> или <kbd>Shift</kbd>, на сенсорном экране — отдельная кнопка.</p></div><div class="combat-tip" id="tip-wind" hidden><strong>Сила ветра</strong><p>Сдержи группу врагов порывом ветра. На клавиатуре — <kbd>K</kbd> или <kbd>F</kbd>, на сенсорном экране — кнопка умения.</p></div>
+    </div></div>
+  </div></section>
+
+  <section class="section island-section wrap" id="island" aria-labelledby="island-title">
+    <div class="section-head"><div><p class="eyebrow">Один остров. Пять разных настроений.</p><h2 id="island-title">Выбери свою <em>тропу.</em></h2></div><p>Лесные дорожки ведут в деревню, горы, руины и к морю. Всё связано — и в каждой области есть повод задержаться.</p></div>
+    <div class="island-layout"><div class="map-paper"><img src="./assets/island-map.webp" width="1280" height="900" alt="Карта острова с пятью связанными областями: лес, деревня, горы, руины и побережье" loading="lazy"><svg class="map-compass"><use href="#i-compass"/></svg><span class="map-handwriting">Куда отправимся?</span>
+      <button class="map-pin pin-forest active" data-zone="forest" aria-pressed="true"><span>1</span><span>Шепчущий лес</span></button><button class="map-pin pin-village" data-zone="village" aria-pressed="false"><span>2</span><span>Деревня Тёплый берег</span></button><button class="map-pin pin-mountain" data-zone="mountain" aria-pressed="false"><span>3</span><span>Горы Трёх огней</span></button><button class="map-pin pin-ruins" data-zone="ruins" aria-pressed="false"><span>4</span><span>Руины Памяти</span></button><button class="map-pin pin-coast" data-zone="coast" aria-pressed="false"><span>5</span><span>Берег Возвращения</span></button></div>
+    <article class="zone-panel" aria-live="polite" aria-atomic="true"><p class="eyebrow" id="zone-number">Первая тропа / 01</p><h3 id="zone-title">Шепчущий лес</h3><img id="zone-image" src="./assets/gameplay-forest.webp" width="1280" height="720" alt="Игровой кадр Северного леса" loading="lazy"><p id="zone-description">Шелест травы, деревянные мостики и дорожки под кронами. Здесь Люми знакомится с островом и находит первые следы исчезнувшего ветра.</p><p class="zone-detail" id="zone-detail">Загляни за деревья: рядом с основной тропой прячутся находки.</p><a href="#media" class="text-button">Посмотреть кадры <svg><use href="#i-arrow"/></svg></a></article></div>
+  </section>
+
+  <section class="friends-section section" aria-labelledby="friends-title"><div class="wrap friends-layout"><div class="friends-copy"><p class="eyebrow">У каждого своя история</p><h2 id="friends-title">Мир становится ближе,<br><em>когда у тебя есть друзья.</em></h2><p>Поговори с жителями, возьми задание и возвращайся с хорошими новостями. Выбирай ответы в диалогах — иногда знакомство начинается с самого простого вопроса.</p><div class="friend-quote"><svg><use href="#i-heart"/></svg><p>Плюм знает дорогу.<br>Но самое интересное ты найдёшь сам.</p></div><p class="small-note">В игре есть задания, ветки ответов и журнал целей. История разворачивается на одном острове.</p></div><figure class="scene dialogue-scene"><img src="./assets/gameplay-dialogue.webp" width="1280" height="720" alt="Настоящий кадр диалога Люми с жителем острова и варианты ответов" loading="lazy"><figcaption>Разговор с хранительницей леса · кадр из игры</figcaption></figure></div></section>
+
+  <section class="section progression-section wrap" aria-labelledby="progression-title"><div class="section-head"><div><p class="eyebrow">С каждой находкой — чуть смелее</p><h2 id="progression-title">В рюкзаке — вещи.<br><em>Впереди — возможности.</em></h2></div><p>Опыт повышает уровень Люми, а приобретённое снаряжение помогает в новых боях. Собери запас зелий перед дальней дорогой.</p></div><div class="progression-layout"><figure class="scene inventory-scene"><img src="./assets/gameplay-inventory.webp" width="1280" height="720" alt="Настоящий кадр: инвентарь Люми, найденные предметы и снаряжение" loading="lazy"><figcaption>Снаряжение и запас припасов · кадр из игры</figcaption></figure><div class="equipment-list"><div><svg><use href="#i-star"/></svg><div><h3>Расти вместе с Люми</h3><p>Получай опыт за бои и задания. Новый уровень делает героя сильнее.</p></div></div><div><svg><use href="#i-sword"/></svg><div><h3>Подбирай снаряжение</h3><p>Меняй снаряжение в инвентаре и готовься к следующему маршруту.</p></div></div><div><svg><use href="#i-wind"/></svg><div><h3>Освой свой ритм</h3><p>Соединяй обычную атаку, рывок и порыв ветра. Возможности героя работают вместе.</p></div></div></div></div>
+    <div class="collection-strip"><div class="collection-icon"><svg><use href="#i-chest"/></svg></div><div><p class="eyebrow">Для тех, кто заглядывает за каждый камень</p><h3>Каждая находка — новая история.</h3><p>Коллекционные предметы разбросаны по пяти областям. Ищи тайники, возвращайся в знакомые места и сохраняй находки в сумке и открытия в дневнике.</p></div><a class="text-button" href="./play/">Начать поиски <svg><use href="#i-arrow"/></svg></a></div>
+  </section>
+
+  <section class="controls-section section" aria-labelledby="controls-title"><div class="wrap controls-layout"><div><p class="eyebrow">Приключение под рукой</p><h2 id="controls-title">Бежать. Уклоняться.<br><em>Ловить ветер.</em></h2><p>Управляй с клавиатуры или используй сенсорные элементы в Web-версии. Слева — движение, справа — действия. Для телефона удобнее горизонтальный экран.</p><dl class="key-list"><div><dt><kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd><span> / стрелки</span></dt><dd>Движение</dd></div><div><dt><kbd>J</kbd><kbd>Space</kbd><kbd>K</kbd></dt><dd>Атака · уклонение · ветер</dd></div><div><dt><kbd>E</kbd><kbd>I</kbd><kbd>Q</kbd><kbd>Esc</kbd></dt><dd>Диалог · инвентарь · зелье · пауза</dd></div><div><dt><kbd>L</kbd><kbd>M</kbd></dt><dd>Журнал заданий · карта</dd></div></dl><p class="small-note">Альтернативы: левая кнопка мыши — атака, Shift — уклонение, F — ветер. Сенсорное управление доступно в браузере. Нативные версии для Android и iOS не опубликованы.</p></div><figure class="phone-frame"><div class="phone-screen"><img src="./assets/gameplay-mobile.webp" width="1280" height="720" alt="Настоящий кадр игры с сенсорными кнопками движения, атаки, уклонения и ветра" loading="lazy"></div><figcaption>Web-версия · сенсорное управление</figcaption></figure></div></section>
+
+  <section class="section media-section wrap" id="media" aria-labelledby="media-title"><div class="section-head"><div><p class="eyebrow">Остановись. Оглянись.</p><h2 id="media-title">Остров в <em>пяти кадрах.</em></h2></div><p>Настоящие снимки из игры.<br>Выбери кадр, чтобы рассмотреть его ближе.</p></div><div class="gallery">
+    <button class="gallery-item gallery-large" data-image="./assets/gameplay-forest.webp" data-caption="Шепчущий лес — начало путешествия"><img src="./assets/gameplay-forest.webp" width="1280" height="720" alt="Увеличить кадр Северного леса" loading="lazy"><span><small>01 / Исследуй</small>Шепчущий лес <b aria-hidden="true">↗</b></span></button>
+    <button class="gallery-item" data-image="./assets/gameplay-village.webp" data-caption="Деревня Тёплый берег — жители и новые задания"><img src="./assets/gameplay-village.webp" width="1280" height="720" alt="Увеличить кадр Тёплой деревни" loading="lazy"><span><small>02 / Дружи</small>Деревня Тёплый берег <b aria-hidden="true">↗</b></span></button>
+    <button class="gallery-item" data-image="./assets/gameplay-mountain.webp" data-caption="Горы Трёх огней — путь к вершинам"><img src="./assets/gameplay-mountain.webp" width="1280" height="720" alt="Увеличить кадр Горной тропы" loading="lazy"><span><small>03 / Сражайся</small>Горы Трёх огней <b aria-hidden="true">↗</b></span></button>
+    <button class="gallery-item" data-image="./assets/gameplay-ruins.webp" data-caption="Руины Памяти — следы исчезнувшего ветра"><img src="./assets/gameplay-ruins.webp" width="1280" height="720" alt="Увеличить кадр Древних руин" loading="lazy"><span><small>04 / Открывай</small>Руины Памяти <b aria-hidden="true">↗</b></span></button>
+    <button class="gallery-item" data-image="./assets/gameplay-coast.webp" data-caption="Берег Возвращения — тропа вдоль моря"><img src="./assets/gameplay-coast.webp" width="1280" height="720" alt="Увеличить кадр Солнечного берега" loading="lazy"><span><small>05 / Собирай</small>Берег Возвращения <b aria-hidden="true">↗</b></span></button>
+  </div></section>
+
+  <section class="section wrap" aria-label="Запись игрового процесса"><figure class="gameplay-video"><video controls preload="metadata" poster="./assets/gameplay-combat.webp" width="1280" height="720"><source src="./assets/lumi-gameplay.webm" type="video/webm">Ваш браузер не поддерживает видео.</video><figcaption>Godot · запись управления и интерфейсов на состояниях, заработанных прохождением</figcaption></figure></section>
+
+  <section class="final-section" aria-labelledby="final-title"><div class="final-art"></div><div class="wrap final-copy"><svg class="final-compass"><use href="#i-compass"/></svg><p class="eyebrow light">Первый шаг — самый интересный</p><h2 id="final-title">Твой остров<br><em>уже ждёт.</em></h2><p>Возьми рюкзак. Остальное найдётся по дороге.</p><div class="final-actions"><a href="./play/" class="button">Начать приключение <svg><use href="#i-arrow"/></svg></a><button class="text-button light-text" data-open-download>Скачать игру <svg><use href="#i-download"/></svg></button></div><p class="small-note">Windows + Web · Одиночная игра · Локальное сохранение</p></div></section>
+</main>
+<footer class="footer wrap"><a class="footer-brand" href="#home">Люми <span>остров ветров</span></a><p>Маленькие герои делают большие дела.</p><span class="maker">VELMREN <small>создано с любопытством</small></span></footer>
+
+<dialog class="download-dialog" id="downloads" aria-labelledby="download-title"><button class="dialog-close" data-close-dialog aria-label="Закрыть окно загрузки"><svg><use href="#i-close"/></svg></button><p class="eyebrow">Возьми остров с собой</p><h2 id="download-title">В путь, <em>Люми.</em></h2><p>Windows + Web готовы. Android и iOS не опубликованы.</p><div class="download-options"><a class="download-option" href="./downloads/lumi-windows.zip" download><svg><use href="#i-download"/></svg><span><strong>Windows</strong><small>Скачай ZIP, распакуй и запусти игру</small></span><span aria-hidden="true">↗</span></a><a class="download-option" href="./downloads/lumi-web.zip" download><svg><use href="#i-download"/></svg><span><strong>Web-сборка</strong><small>ZIP с игрой для размещения на веб-сервере</small></span><span aria-hidden="true">↗</span></a><a class="download-option" href="./downloads/lumi-source.zip" download><svg><use href="#i-leaf"/></svg><span><strong>Проект Godot</strong><small>Исходный код и редактируемые сцены острова</small></span><span aria-hidden="true">↗</span></a></div><p class="download-footnote">Исходный проект открывается в редакторе Godot: области собраны из отдельных слоёв, объектов и зон взаимодействия. Хочешь сразу начать? Web-версия открывается прямо здесь.</p><a class="button" href="./play/">Играть в браузере <svg><use href="#i-arrow"/></svg></a></dialog>
+<dialog class="lightbox" id="lightbox" aria-labelledby="lightbox-caption"><button class="dialog-close" data-close-dialog aria-label="Закрыть просмотр"><svg><use href="#i-close"/></svg></button><figure><img id="lightbox-image" alt=""><figcaption id="lightbox-caption"></figcaption></figure><div class="lightbox-controls"><button data-gallery-step="-1" aria-label="Предыдущий кадр">←</button><span id="lightbox-count"></span><button data-gallery-step="1" aria-label="Следующий кадр">→</button></div></dialog>
+</body>
+</html>
+

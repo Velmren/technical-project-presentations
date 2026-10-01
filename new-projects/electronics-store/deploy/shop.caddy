@@ -1,0 +1,30 @@
+# Installed as /etc/caddy/sites/shop.caddy; the main Caddyfile imports /etc/caddy/sites/*.caddy.
+shop.velmren.com {
+	header {
+		X-Content-Type-Options nosniff
+		Referrer-Policy strict-origin-when-cross-origin
+	}
+	request_body {
+		max_size 8MB
+	}
+	# Staff uploads: read-only access to the public bucket objects.
+	@media {
+		method GET HEAD
+		path /electronics-media/products/*
+	}
+	handle @media {
+		reverse_proxy 127.0.0.1:3102
+	}
+	handle {
+		reverse_proxy 127.0.0.1:3101 {
+			# Ports 80/443 accept only Cloudflare, so its client IP header is trusted.
+			header_up X-Forwarded-For {http.request.header.CF-Connecting-IP}
+		}
+	}
+	log {
+		output file /var/log/caddy/shop-access.log {
+			roll_size 10MiB
+			roll_keep 3
+		}
+	}
+}

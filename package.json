@@ -1,0 +1,28 @@
+{
+  "name": "velmren-portfolio",
+  "version": "2.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "next dev --hostname 127.0.0.1",
+    "typecheck": "tsc --noEmit",
+    "build": "next build && node scripts/prepare-export.mjs",
+    "test": "node --experimental-strip-types --test tests/model.test.ts tests/home.test.ts tests/i18n.test.ts",
+    "package:release": "node scripts/package-release.mjs"
+  },
+  "dependencies": {
+    "@radix-ui/react-select": "^2.3.7",
+    "motion": "^13.4.4",
+    "next": "16.3.6",
+    "react": "19.3.0",
+    "react-dom": "19.3.0",
+    "zod": "4.3.6"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "dejavu-fonts-ttf": "^2.37.3",
+    "typescript": "7.0.2"
+  }
+}

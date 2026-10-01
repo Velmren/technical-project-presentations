@@ -1,0 +1,177 @@
+Starting org.bukkit.craftbukkit.Main
+[18:53:24 INFO]: [bootstrap] Running Java 25 (OpenJDK 64-Bit Server VM 25.0.2+10-LTS; Eclipse Adoptium Temurin-25.0.2+10) on Windows 11 10.0 (amd64)
+[18:53:24 INFO]: [bootstrap] Loading Paper 1.21.11-132-ver/1.21.11@c5eb079 (2026-05-11T11:43:09Z) for Minecraft 1.21.11
+[18:53:25 INFO]: [PluginInitializerManager] Initializing plugins...
+[18:53:25 INFO]: [PluginInitializerManager] Initialized 2 plugins
+[18:53:25 INFO]: [PluginInitializerManager] Bukkit plugins (2):
+ - HarborVerifier (1.0.0), NorthHarbor (2.0.0)
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.joml.MemUtil$MemUtilUnsafe (file:/E:/Astra/work/portfolio/technical-project-presentations-20260925/new-projects/npc-system/.server/libraries/org/joml/joml/1.10.8/joml-1.10.8.jar)
+WARNING: Please consider reporting this to the maintainers of class org.joml.MemUtil$MemUtilUnsafe
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+[18:53:31 INFO]: Environment: Environment[sessionHost=https://sessionserver.mojang.com, servicesHost=https://api.minecraftservices.com, profilesHost=https://api.mojang.com, name=PROD]
+[31;1m[18:53:31 ERROR]: Failed to request yggdrasil public key
+com.mojang.authlib.exceptions.MinecraftClientException: Failed to read from https://api.minecraftservices.com/publickeys due to Permission denied: getsockopt
+	at com.mojang.authlib.minecraft.client.MinecraftClient.readInputStream(MinecraftClient.java:111) ~[authlib-7.0.61.jar:?]
+	at com.mojang.authlib.minecraft.client.MinecraftClient.get(MinecraftClient.java:56) ~[authlib-7.0.61.jar:?]
+	at com.mojang.authlib.yggdrasil.YggdrasilServicesKeyInfo.fetch(YggdrasilServicesKeyInfo.java:114) ~[authlib-7.0.61.jar:?]
+	at com.mojang.authlib.yggdrasil.YggdrasilServicesKeyInfo$1.run(YggdrasilServicesKeyInfo.java:89) ~[authlib-7.0.61.jar:?]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:545) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328) ~[?:?]
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:309) ~[?:?]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090) ~[?:?]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614) ~[?:?]
+	at java.base/java.lang.Thread.run(Thread.java:1474) ~[?:?]
+Caused by: java.net.SocketException: Permission denied: getsockopt
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method) ~[?:?]
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:639) ~[?:?]
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:543) ~[?:?]
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:594) ~[?:?]
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:284) ~[?:?]
+	at java.base/java.net.Socket.connect(Socket.java:659) ~[?:?]
+	at java.base/sun.security.ssl.SSLSocketImpl.connect(SSLSocketImpl.java:304) ~[?:?]
+	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:161) ~[?:?]
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:516) ~[?:?]
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:604) ~[?:?]
+	at java.base/sun.net.www.protocol.https.HttpsClient.<init>(HttpsClient.java:206) ~[?:?]
+	at java.base/sun.net.www.protocol.https.HttpsClient.New(HttpsClient.java:288) ~[?:?]
+	at java.base/sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.getNewHttpClient(AbstractDelegateHttpsURLConnection.java:193) ~[?:?]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1008) ~[?:?]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:899) ~[?:?]
+	at java.base/sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.connect(AbstractDelegateHttpsURLConnection.java:179) ~[?:?]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1377) ~[?:?]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1302) ~[?:?]
+	at java.base/java.net.HttpURLConnection.getResponseCode(HttpURLConnection.java:493) ~[?:?]
+	at java.base/sun.net.www.protocol.https.HttpsURLConnectionImpl.getResponseCode(HttpsURLConnectionImpl.java:307) ~[?:?]
+	at com.mojang.authlib.minecraft.client.MinecraftClient.readInputStream(MinecraftClient.java:82) ~[authlib-7.0.61.jar:?]
+	... 9 more
+[m[18:53:32 INFO]: Loaded 1470 recipes
+[18:53:32 INFO]: Loaded 1584 advancements
+[18:53:33 INFO]: [ca.spottedleaf.dataconverter.minecraft.datatypes.MCTypeRegistry] Initialising converters for DataConverter...
+[18:53:33 INFO]: [ca.spottedleaf.dataconverter.minecraft.datatypes.MCTypeRegistry] Finished initialising converters for DataConverter in 468,6ms
+[18:53:33 INFO]: Starting minecraft server version 1.21.11
+[18:53:33 INFO]: Loading properties
+[18:53:33 INFO]: This server is running Paper version 1.21.11-132-ver/1.21.11@c5eb079 (2026-05-11T11:43:09Z) (Implementing API version 1.21.11-R0.1-SNAPSHOT)
+[18:53:33 INFO]: [spark] This server bundles the spark profiler. For more information please visit https://docs.papermc.io/paper/profiling
+[18:53:33 INFO]: Using 4 threads for Netty based IO
+[18:53:33 INFO]: Server Ping Player Sample Count: 12
+[18:53:34 INFO]: [MoonriseCommon] Paper is using 4 worker threads, 1 I/O threads
+[18:53:34 INFO]: Default game type: SURVIVAL
+[18:53:34 INFO]: Generating keypair
+>   [18:53:34 INFO]: Starting Minecraft server on 127.0.0.1:25579
+>   [18:53:34 INFO]: Paper: Using Java compression from Velocity.
+>   [18:53:34 INFO]: Paper: Using Java cipher from Velocity.
+>   [18:53:35 INFO]: [NorthHarbor] Loading server plugin NorthHarbor v2.0.0
+>   [18:53:35 INFO]: [HarborVerifier] Loading server plugin HarborVerifier v1.0.0
+>   [18:53:35 INFO]: Server permissions file permissions.yml is empty, ignoring it
+>   [33;1m[18:53:35 WARN]: **** SERVER IS RUNNING IN OFFLINE/INSECURE MODE!
+[m>   [33;1m[18:53:35 WARN]: The server will make no attempt to authenticate usernames. Beware.
+[m>   [33;1m[18:53:35 WARN]: While this makes the game possible to play without internet access, it also opens up the ability for hackers to connect with any username they choose.
+[m>   [33;1m[18:53:35 WARN]: To change this, set "online-mode" to "true" in the server.properties file.
+[m>   [18:53:35 INFO]: Preparing level "beacon-grove"
+>   [18:53:35 INFO]: Loading 0 persistent chunks for world 'minecraft:overworld'...
+>   [18:53:35 INFO]: Prepared spawn area in 3 ms
+>   [18:53:35 INFO]: Loading 0 persistent chunks for world 'minecraft:the_nether'...
+>   [18:53:35 INFO]: Prepared spawn area in 1 ms
+>   [18:53:35 INFO]: Loading 0 persistent chunks for world 'minecraft:the_end'...
+>   [18:53:35 INFO]: Prepared spawn area in 1 ms
+>   [18:53:35 INFO]: Done preparing level "beacon-grove" (0.421s)
+>   [18:53:35 INFO]: [NorthHarbor] Enabling NorthHarbor v2.0.0
+>   [18:53:35 INFO]: [NorthHarbor] North Harbor ready; persistent progress; /harbor setup
+>   [18:53:35 INFO]: [HarborVerifier] Enabling HarborVerifier v1.0.0
+>   [18:53:35 INFO]: [spark] Starting background profiler...
+>   [18:53:35 INFO]: [spark] The async-profiler engine is not supported for your os/arch (windows11/amd64), so the built-in Java engine will be used instead.
+>   [18:53:35 INFO]: Running delayed init tasks
+>   [18:53:35 INFO]: Done (12.417s)! For help, type "help"
+>   [31;1m[18:53:36 ERROR]: [PaperVersionFetcher] Error while parsing version list
+java.net.SocketException: Permission denied: getsockopt
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method) ~[?:?]
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:639) ~[?:?]
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:543) ~[?:?]
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:594) ~[?:?]
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:284) ~[?:?]
+	at java.base/java.net.Socket.connect(Socket.java:659) ~[?:?]
+	at java.base/sun.security.ssl.SSLSocketImpl.connect(SSLSocketImpl.java:304) ~[?:?]
+	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:161) ~[?:?]
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:516) ~[?:?]
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:604) ~[?:?]
+	at java.base/sun.net.www.protocol.https.HttpsClient.<init>(HttpsClient.java:206) ~[?:?]
+	at java.base/sun.net.www.protocol.https.HttpsClient.New(HttpsClient.java:288) ~[?:?]
+	at java.base/sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.getNewHttpClient(AbstractDelegateHttpsURLConnection.java:193) ~[?:?]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:963) ~[?:?]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:899) ~[?:?]
+	at java.base/sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.connect(AbstractDelegateHttpsURLConnection.java:179) ~[?:?]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1377) ~[?:?]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1302) ~[?:?]
+	at java.base/sun.net.www.protocol.https.HttpsURLConnectionImpl.getInputStream(HttpsURLConnectionImpl.java:223) ~[?:?]
+	at com.destroystokyo.paper.PaperVersionFetcher.fetchMinecraftVersionList(PaperVersionFetcher.java:149) ~[paper-1.21.11.jar:?]
+	at com.destroystokyo.paper.PaperVersionFetcher.getUpdateStatusStartupMessage(PaperVersionFetcher.java:74) ~[paper-1.21.11.jar:?]
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1825) ~[?:?]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090) ~[?:?]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614) ~[?:?]
+	at java.base/java.lang.Thread.run(Thread.java:1474) ~[?:?]
+[m>   [31;1m[18:53:36 ERROR]: [PaperVersionFetcher] Error while parsing version
+java.net.SocketException: Permission denied: getsockopt
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method) ~[?:?]
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:639) ~[?:?]
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:543) ~[?:?]
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:594) ~[?:?]
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:284) ~[?:?]
+	at java.base/java.net.Socket.connect(Socket.java:659) ~[?:?]
+	at java.base/sun.security.ssl.SSLSocketImpl.connect(SSLSocketImpl.java:304) ~[?:?]
+	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:161) ~[?:?]
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:516) ~[?:?]
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:604) ~[?:?]
+	at java.base/sun.net.www.protocol.https.HttpsClient.<init>(HttpsClient.java:206) ~[?:?]
+	at java.base/sun.net.www.protocol.https.HttpsClient.New(HttpsClient.java:288) ~[?:?]
+	at java.base/sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.getNewHttpClient(AbstractDelegateHttpsURLConnection.java:193) ~[?:?]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:963) ~[?:?]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:899) ~[?:?]
+	at java.base/sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.connect(AbstractDelegateHttpsURLConnection.java:179) ~[?:?]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1377) ~[?:?]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1302) ~[?:?]
+	at java.base/sun.net.www.protocol.https.HttpsURLConnectionImpl.getInputStream(HttpsURLConnectionImpl.java:223) ~[?:?]
+	at com.destroystokyo.paper.PaperVersionFetcher.fetchDistanceFromSiteApi(PaperVersionFetcher.java:203) ~[paper-1.21.11.jar:?]
+	at com.destroystokyo.paper.PaperVersionFetcher.getUpdateStatusStartupMessage(PaperVersionFetcher.java:76) ~[paper-1.21.11.jar:?]
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1825) ~[?:?]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090) ~[?:?]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614) ~[?:?]
+	at java.base/java.lang.Thread.run(Thread.java:1474) ~[?:?]
+[m>   [31;1m[18:53:36 ERROR]: *** Error obtaining version information! Cannot fetch version info ***
+[m>   [18:53:39 INFO]: [HarborVerifier] HARBOR_VERIFY_PASS_PHASE2 checks=11; Paper world/entities/events, controlled Player proxy
+> >   [18:53:39 INFO]: Stopping the server
+>   [18:53:39 INFO]: Stopping server
+>   [18:53:39 INFO]: [HarborVerifier] Disabling HarborVerifier v1.0.0
+>   [18:53:39 INFO]: [NorthHarbor] Disabling NorthHarbor v2.0.0
+>   [18:53:39 INFO]: Saving players
+>   [18:53:39 INFO]: Saving worlds
+>   [18:53:39 INFO]: Saving chunks for level 'ServerLevel[beacon-grove]'/minecraft:overworld
+>   [18:53:39 INFO]: [ChunkHolderManager] Waiting 60s for chunk system to halt for world 'beacon-grove'
+>   [18:53:39 INFO]: [ChunkHolderManager] Halted chunk system for world 'beacon-grove'
+>   [18:53:39 INFO]: [ChunkHolderManager] Saving all chunkholders for world 'beacon-grove'
+>   [18:53:39 INFO]: [ChunkHolderManager] Saved 284 block chunks, 1 entity chunks, 0 poi chunks in world 'beacon-grove' in 0,24s
+>   [18:53:39 INFO]: [ChunkHolderManager] Waiting 60s for chunk I/O to halt for world 'beacon-grove'
+>   [18:53:39 INFO]: [ChunkHolderManager] Halted I/O scheduler for world 'beacon-grove'
+>   [18:53:39 INFO]: Saving chunks for level 'ServerLevel[beacon-grove_nether]'/minecraft:the_nether
+>   [18:53:39 INFO]: [ChunkHolderManager] Waiting 60s for chunk system to halt for world 'beacon-grove_nether'
+>   [18:53:39 INFO]: [ChunkHolderManager] Halted chunk system for world 'beacon-grove_nether'
+>   [18:53:39 INFO]: [ChunkHolderManager] Saving all chunkholders for world 'beacon-grove_nether'
+>   [18:53:39 INFO]: [ChunkHolderManager] Saved 0 block chunks, 0 entity chunks, 0 poi chunks in world 'beacon-grove_nether' in 0,00s
+>   [18:53:39 INFO]: [ChunkHolderManager] Waiting 60s for chunk I/O to halt for world 'beacon-grove_nether'
+>   [18:53:39 INFO]: [ChunkHolderManager] Halted I/O scheduler for world 'beacon-grove_nether'
+>   [18:53:39 INFO]: Saving chunks for level 'ServerLevel[beacon-grove_the_end]'/minecraft:the_end
+>   [18:53:39 INFO]: [ChunkHolderManager] Waiting 60s for chunk system to halt for world 'beacon-grove_the_end'
+>   [18:53:39 INFO]: [ChunkHolderManager] Halted chunk system for world 'beacon-grove_the_end'
+>   [18:53:39 INFO]: [ChunkHolderManager] Saving all chunkholders for world 'beacon-grove_the_end'
+>   [18:53:39 INFO]: [ChunkHolderManager] Saved 0 block chunks, 0 entity chunks, 0 poi chunks in world 'beacon-grove_the_end' in 0,00s
+>   [18:53:39 INFO]: [ChunkHolderManager] Waiting 60s for chunk I/O to halt for world 'beacon-grove_the_end'
+>   [18:53:39 INFO]: [ChunkHolderManager] Halted I/O scheduler for world 'beacon-grove_the_end'
+>   [18:53:39 INFO]: ThreadedAnvilChunkStorage (beacon-grove): All chunks are saved
+>   [18:53:39 INFO]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
+>   [18:53:39 INFO]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
+>   [18:53:39 INFO]: ThreadedAnvilChunkStorage: All dimensions are saved
+>   [18:53:39 INFO]: Waiting for all RegionFile I/O tasks to complete...
+>   [18:53:39 INFO]: All RegionFile I/O tasks to complete
+>   [18:53:39 INFO]: [MoonriseCommon] Awaiting termination of worker pool for up to 60s...
+>   [18:53:39 INFO]: [MoonriseCommon] Awaiting termination of I/O pool for up to 60s...
+> 

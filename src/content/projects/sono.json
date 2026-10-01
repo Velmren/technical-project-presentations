@@ -1,0 +1,271 @@
+{
+  "slug": "sono",
+  "title": "SONO",
+  "status": "published",
+  "presentation": "case",
+  "year": 2026,
+  "eyebrow": "Лендинг",
+  "lead": "Лендинг, который ведёт от первого экрана к готовой заявке",
+  "summary": "Концепт беспроводной колонки: две модели, сравнение, конфигуратор, корзина и заявка. На русском и английском.",
+  "note": "Демо-лендинг",
+  "closing": "Соберите свой комплект на лендинге",
+  "accent": "#244bd8",
+  "category": "Веб-сайты",
+  "technologies": [
+    "React",
+    "TypeScript",
+    "Vite"
+  ],
+  "order": 70,
+  "tone": "cool",
+  "cover": {
+    "kind": "image",
+    "image": {
+      "src": "/assets/sono/hero-desktop.webp",
+      "alt": "Первый экран лендинга SONO: заголовок «Компактная форма. Объёмный звук.», кнопка выбора конфигурации и две синие колонки",
+      "width": 1440,
+      "height": 900
+    }
+  },
+  "actions": [
+    {
+      "label": "Открыть лендинг",
+      "href": "/projects/electronics/"
+    }
+  ],
+  "showcase": {
+    "image": {
+      "src": "/assets/sono/case/hero-ru.webp",
+      "alt": "Первый экран лендинга SONO: заголовок, кнопка выбора конфигурации и две синие колонки",
+      "width": 2400,
+      "height": 1500
+    },
+    "url": "velmren.com/projects/electronics/",
+    "phone": {
+      "src": "/assets/sono/case/m-hero-ru.webp",
+      "alt": "Первый экран SONO на телефоне",
+      "width": 780,
+      "height": 1688
+    }
+  },
+  "sections": [
+    {
+      "kind": "benefit",
+      "title": "Разница между моделями видна сразу",
+      "text": "На карточке мощность, автономность и вес. Подробная таблица раскрывается по кнопке.",
+      "layers": [
+        {
+          "image": {
+            "src": "/assets/sono/case/models-ru.webp",
+            "alt": "Две модели SONO и раскрытая таблица сравнения",
+            "width": 2400,
+            "height": 1900
+          },
+          "x": 0,
+          "y": 0,
+          "w": 0.6,
+          "url": "velmren.com/projects/electronics/#models"
+        },
+        {
+          "image": {
+            "src": "/assets/sono/case/model-plus-ru.webp",
+            "alt": "Карточка SONO One Plus: 229 €, 40 Вт, 32 часа, 980 г",
+            "width": 1248,
+            "height": 1058
+          },
+          "x": 0.65,
+          "y": 0.1,
+          "w": 0.35,
+          "front": true
+        }
+      ]
+    },
+    {
+      "kind": "benefit",
+      "title": "Покупатель собирает свой комплект",
+      "text": "Цвет, число колонок и итог меняются вместе. Выбор сохраняется на устройстве.",
+      "layers": [
+        {
+          "image": {
+            "src": "/assets/sono/case/setup-ru.webp",
+            "alt": "Конфигуратор SONO One цвета «Графит»",
+            "width": 2400,
+            "height": 1440
+          },
+          "x": 0,
+          "y": 0.02,
+          "w": 0.6,
+          "url": "velmren.com/projects/electronics/#setup"
+        },
+        {
+          "image": {
+            "src": "/assets/sono/case/config-options-ru.webp",
+            "alt": "Цвет «Графит», две колонки и итог 298 €",
+            "width": 1056,
+            "height": 742
+          },
+          "x": 0.65,
+          "y": 0.1,
+          "w": 0.35,
+          "front": true
+        }
+      ]
+    },
+    {
+      "kind": "benefit",
+      "title": "Заявка уже знает, что выбрано",
+      "text": "Корзина объединяет одинаковые позиции, а в заявку подставляется собранный комплект.",
+      "layers": [
+        {
+          "image": {
+            "src": "/assets/sono/case/bag-ru.webp",
+            "alt": "Открытая корзина с двумя колонками SONO One",
+            "width": 2400,
+            "height": 1500
+          },
+          "x": 0,
+          "y": 0.04,
+          "w": 0.6,
+          "url": "velmren.com/projects/electronics/"
+        },
+        {
+          "image": {
+            "src": "/assets/sono/case/enquiry-form-ru.webp",
+            "alt": "Заполненная форма и готовое обращение с выбранным комплектом",
+            "width": 1196,
+            "height": 1028
+          },
+          "x": 0.65,
+          "y": 0,
+          "w": 0.35,
+          "front": true
+        }
+      ]
+    },
+    {
+      "kind": "benefit",
+      "title": "На телефоне тот же путь",
+      "text": "Таблица прокручивается внутри блока, конфигуратор помещается в экран.",
+      "layers": [
+        {
+          "image": {
+            "src": "/assets/sono/case/m-compare-ru.webp",
+            "alt": "Таблица сравнения на телефоне",
+            "width": 780,
+            "height": 1688
+          },
+          "x": 0.17,
+          "y": 0.08,
+          "w": 0.3,
+          "phone": true
+        },
+        {
+          "image": {
+            "src": "/assets/sono/case/m-setup-ru.webp",
+            "alt": "Конфигуратор на телефоне",
+            "width": 780,
+            "height": 1688
+          },
+          "x": 0.53,
+          "y": 0,
+          "w": 0.3,
+          "phone": true,
+          "front": true
+        }
+      ]
+    },
+    {
+      "kind": "features",
+      "title": "Как устроено",
+      "text": "Статический сайт на React, TypeScript и Vite.",
+      "items": [
+        "Языки",
+        "Выбор",
+        "Цвета",
+        "Корзина"
+      ],
+      "descriptions": [
+        "Русский и английский, выбор запоминается.",
+        "Хранится в браузере и не теряется при перезагрузке.",
+        "Мел и графит получены фильтрами из одного снимка колонки.",
+        "Открывается диалогом, Escape закрывает её и возвращает фокус."
+      ]
+    }
+  ],
+  "en": {
+    "eyebrow": "Landing page",
+    "lead": "A landing page that takes visitors from the first screen to a ready enquiry",
+    "summary": "A wireless speaker concept: two models, a comparison, a configurator, a bag and an enquiry form. In Russian and English.",
+    "note": "Demo landing page",
+    "closing": "Build your own set on the landing page",
+    "actions": [
+      "Open the landing page"
+    ],
+    "showcase": [
+      "SONO landing page first screen: headline, configure button and two blue speakers",
+      "SONO first screen on a phone"
+    ],
+    "media": {
+      "/assets/sono/case/hero-ru.webp": "/assets/sono/case/hero-en.webp",
+      "/assets/sono/case/m-hero-ru.webp": "/assets/sono/case/m-hero-en.webp",
+      "/assets/sono/case/models-ru.webp": "/assets/sono/case/models-en.webp",
+      "/assets/sono/case/model-plus-ru.webp": "/assets/sono/case/model-plus-en.webp",
+      "/assets/sono/case/setup-ru.webp": "/assets/sono/case/setup-en.webp",
+      "/assets/sono/case/config-options-ru.webp": "/assets/sono/case/config-options-en.webp",
+      "/assets/sono/case/bag-ru.webp": "/assets/sono/case/bag-en.webp",
+      "/assets/sono/case/enquiry-form-ru.webp": "/assets/sono/case/enquiry-form-en.webp",
+      "/assets/sono/case/m-compare-ru.webp": "/assets/sono/case/m-compare-en.webp",
+      "/assets/sono/case/m-setup-ru.webp": "/assets/sono/case/m-setup-en.webp"
+    },
+    "sections": [
+      {
+        "title": "The difference between models is clear at once",
+        "text": "Each card shows output, battery life and weight. The full table opens on request.",
+        "alts": [
+          "Two SONO models and the open comparison table",
+          "SONO One Plus card: €229, 40 W, 32 hours, 980 g"
+        ]
+      },
+      {
+        "title": "Buyers put together their own set",
+        "text": "Finish, number of speakers and total change together. The choice is kept on the device.",
+        "alts": [
+          "SONO One configurator in Graphite",
+          "Graphite finish, two speakers and a €298 total"
+        ]
+      },
+      {
+        "title": "The enquiry already knows the choice",
+        "text": "The bag merges identical items, and the enquiry picks up the chosen set.",
+        "alts": [
+          "Open bag with two SONO One speakers",
+          "Filled form and the prepared enquiry with the chosen set"
+        ]
+      },
+      {
+        "title": "The same path on a phone",
+        "text": "The table scrolls inside its block, and the configurator fits the screen.",
+        "alts": [
+          "Comparison table on a phone",
+          "Configurator on a phone"
+        ]
+      },
+      {
+        "title": "How it is built",
+        "text": "A static site on React, TypeScript and Vite.",
+        "items": [
+          "Languages",
+          "Choice",
+          "Finishes",
+          "Bag"
+        ],
+        "descriptions": [
+          "Russian and English, the choice is remembered.",
+          "Stored in the browser and kept after a reload.",
+          "Chalk and Graphite come from one photo of the speaker through filters.",
+          "Opens as a dialog; Escape closes it and returns focus."
+        ]
+      }
+    ]
+  }
+}

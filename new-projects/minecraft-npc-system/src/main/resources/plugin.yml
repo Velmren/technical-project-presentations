@@ -1,0 +1,16 @@
+name: MinecraftNPCSystem
+version: 1.0.0
+main: dev.velmren.npc.MinecraftNpcPlugin
+api-version: '1.16'
+description: Declarative NPCs, branching dialogue, staged quests and shops
+author: Velmren
+softdepend: [Vault, PlaceholderAPI, WorldGuard, Citizens]
+commands:
+  npcs:
+    description: NPC system and administrator tools
+    usage: /npcs help
+permissions:
+  npcs.use:
+    default: true
+  npcs.admin:
+    default: op

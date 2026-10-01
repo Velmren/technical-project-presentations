@@ -1,0 +1,72 @@
+quests:
+  welcome:
+    name: Первые шаги в гавани
+    stages:
+      - {type: VISIT, world: npc_demo, x: 20, y: 65, z: -10, radius: 4}
+      - {type: TALK, npc: smith}
+    rewards:
+      - {type: money, amount: 5}
+      - {type: variable, key: resident, value: true}
+  mill:
+    name: Мельничное колесо
+    requires: [welcome]
+    stages:
+      - {type: COLLECT, material: OAK_LOG, amount: 8}
+      - {type: DELIVER, npc: lumberjack, material: OAK_LOG, amount: 8}
+    rewards:
+      - {type: money, amount: 8}
+      - {type: block, world: npc_demo, x: -35, y: 66, z: -10, material: OAK_PLANKS}
+      - {type: message, text: 'Недостающая ступица мельничного колеса восстановлена.'}
+  forge:
+    name: Железо для маяка
+    requires: [mill]
+    stages:
+      - {type: COLLECT, material: IRON_INGOT, amount: 4}
+      - {type: DELIVER, npc: smith, material: IRON_INGOT, amount: 4}
+      - {type: TALK, npc: keeper}
+    rewards: [{type: money, amount: 6}, {type: item, material: BREAD, amount: 3}]
+  lighthouse:
+    name: Возвращение света
+    requires: [forge]
+    stages:
+      - {type: VISIT, world: npc_demo, x: 42, y: 78, z: 10, radius: 5}
+      - {type: DELIVER, npc: keeper, material: GLASS, amount: 4}
+      - {type: EVENT, event: lens_align}
+    rewards:
+      - {type: money, amount: 12}
+      - {type: block, world: npc_demo, x: 42, y: 79, z: 10, material: SEA_LANTERN}
+      - {type: variable, key: lighthouse_restored, value: true}
+  harvest:
+    name: Урожай гавани
+    requires: [welcome]
+    max-completions: 0
+    cooldown-seconds: 60
+    stages:
+      - {type: BREAK, material: WHEAT, amount: 6, world: npc_demo, x: -20, y: 65, z: 18, radius: 15}
+      - {type: DELIVER, npc: farmer, material: WHEAT, amount: 6}
+    rewards: [{type: money, amount: 4}, {type: item, material: BREAD, amount: 2}]
+  market:
+    name: Припасы для рынка
+    requires: [welcome]
+    max-completions: 3
+    cooldown-seconds: 30
+    stages:
+      - {type: DELIVER, npc: merchant, material: WHEAT, amount: 4}
+    rewards: [{type: money, amount: 3}]
+  patrol:
+    name: Патруль северной дороги
+    requires: [welcome]
+    stages:
+      - {type: KILL, entity: ZOMBIE, amount: 2, world: npc_demo}
+      - {type: TALK, npc: guard}
+    rewards: [{type: money, amount: 6}, {type: item, material: IRON_SWORD, amount: 1}]
+  survey:
+    name: Карта гавани
+    requires: [welcome]
+    stages:
+      - {type: VISIT, world: npc_demo, x: -35, y: 65, z: -10, radius: 6}
+      - {type: VISIT, world: npc_demo, x: 42, y: 65, z: 10, radius: 5}
+      - {type: VISIT, world: npc_demo, x: 0, y: 65, z: -26, radius: 5}
+      - {type: TALK, npc: cartographer}
+    rewards: [{type: money, amount: 5}, {type: item, material: MAP, amount: 1}]
+

@@ -1,0 +1,51 @@
+# Server config for velmren.com, installed as /etc/caddy/sites/portfolio.caddy
+# (the main Caddyfile imports /etc/caddy/sites/*.caddy). Check with:
+#   sudo caddy validate --config /etc/caddy/Caddyfile --adapter caddyfile && sudo systemctl reload caddy
+velmren.com {
+	root * /srv/velmren/sites/portfolio/current
+	# Text, scripts, data and wasm are compressed on the fly; large files ship
+	# with .br/.gz siblings from scripts/package-release.mjs and are served as they are.
+	encode {
+		zstd
+		gzip
+		minimum_length 1024
+		match {
+			header Content-Type text/*
+			header Content-Type application/javascript*
+			header Content-Type application/json*
+			header Content-Type application/wasm*
+			header Content-Type application/xml*
+			header Content-Type application/manifest+json*
+			header Content-Type image/svg+xml*
+			header Content-Type image/x-icon*
+		}
+	}
+	header X-Content-Type-Options nosniff
+	# Hashed build output never changes under the same name: Next.js chunks and Vite assets.
+	@immutable path_regexp ^/(_next/static/|(projects/[^/]+|forma/live)/assets/[^/]+-[A-Za-z0-9_-]{8}\.(js|css|woff2?|png|jpe?g|webp|svg|avif)$)
+	header @immutable Cache-Control "public, max-age=31536000, immutable"
+	# Pages and their data payloads are revalidated so a new release shows up at once.
+	@pages path / */ *.html *.txt
+	header @pages Cache-Control "no-cache"
+	# Other static files keep their names between releases: cache for an hour only.
+	@static path *.js *.css *.json *.wasm *.pck *.webp *.png *.jpg *.jpeg *.svg *.ico *.woff *.woff2 *.mp4 *.webm *.zip *.jar
+	header @static ?Cache-Control "public, max-age=3600"
+	@private path /.git/* /.env /AGENTS.md
+	respond @private 404
+	file_server {
+		precompressed br gzip
+	}
+	handle_errors {
+		rewrite * /404.html
+		file_server
+	}
+	log {
+		output file /var/log/caddy/velmren-access.log {
+			roll_size 10MiB
+			roll_keep 3
+		}
+	}
+}
+www.velmren.com {
+	redir https://velmren.com{uri} permanent
+}

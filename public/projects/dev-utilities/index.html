@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <meta name="theme-color" content="#efefec" />
+    <meta
+      name="description"
+      content="Local developer tools by VELMREN: JSON editor with JSONPath queries, diff and schema validation, color studio, checksums and Base64. Everything runs in the browser."
+    />
+    <link rel="icon" href="./favicon.svg" />
+    <title>Dev Utilities, VELMREN</title>
+    <script>
+      // Apply the saved or system theme and language before first paint.
+      (function () {
+        var root = document.documentElement;
+        var prefs = {};
+        try {
+          prefs =
+            JSON.parse(localStorage.getItem("velmren.du.v3.prefs") || "{}") ||
+            {};
+        } catch (e) {}
+        var dark = matchMedia("(prefers-color-scheme: dark)").matches;
+        root.dataset.theme =
+          prefs.theme === "light" || prefs.theme === "dark"
+            ? prefs.theme
+            : dark
+              ? "dark"
+              : "light";
+        var browser = (
+          (navigator.languages && navigator.languages[0]) ||
+          navigator.language ||
+          ""
+        ).toLowerCase();
+        root.lang =
+          prefs.lang === "ru" || prefs.lang === "en"
+            ? prefs.lang
+            : browser.indexOf("ru") === 0
+              ? "ru"
+              : "en";
+      })();
+    </script>
+    <link rel="stylesheet" href="./app.css" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>

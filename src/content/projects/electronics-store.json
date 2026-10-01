@@ -1,0 +1,309 @@
+{
+  "slug": "electronics-store",
+  "presentation": "case",
+  "title": "VELMREN tech",
+  "eyebrow": "Интернет-магазин",
+  "year": 2026,
+  "lead": "Интернет-магазин электроники, который работает целиком",
+  "summary": "От поиска модели до заказа и управления каталогом. Магазин развёрнут, его можно открыть и пройти.",
+  "note": "Демо-режим",
+  "category": "Веб-приложения",
+  "technologies": [
+    "Next.js",
+    "TypeScript",
+    "PostgreSQL",
+    "Prisma",
+    "MinIO"
+  ],
+  "order": 60,
+  "tone": "cool",
+  "cover": {
+    "kind": "image",
+    "image": {
+      "src": "/assets/electronics-store/hero-desktop.webp",
+      "alt": "Главная магазина VELMREN tech: шапка с каталогом и поиском, баннер с iPhone, MacBook и AirPods, ряд категорий",
+      "width": 1440,
+      "height": 900
+    }
+  },
+  "actions": [
+    {
+      "label": "Открыть магазин",
+      "href": "https://shop.velmren.com"
+    }
+  ],
+  "showcase": {
+    "image": {
+      "src": "/assets/electronics-store/site-first-screen.webp",
+      "alt": "Первый экран магазина VELMREN tech",
+      "width": 2880,
+      "height": 1436
+    },
+    "url": "shop.velmren.com",
+    "phone": {
+      "src": "/assets/electronics-store/site-mobile-category.webp",
+      "alt": "Каталог смартфонов на телефоне",
+      "width": 780,
+      "height": 1688
+    }
+  },
+  "sections": [
+    {
+      "kind": "benefit",
+      "title": "Покупатель быстро находит нужную модель",
+      "text": "Фильтры сочетаются между собой, а подборку можно отправить ссылкой.",
+      "layers": [
+        {
+          "image": {
+            "src": "/assets/electronics-store/proof-catalog.webp",
+            "alt": "Категория «Смартфоны» с фильтрами и карточками",
+            "width": 2624,
+            "height": 2440
+          },
+          "x": 0,
+          "y": 0.05,
+          "w": 0.63,
+          "url": "shop.velmren.com/category/smartphones"
+        },
+        {
+          "image": {
+            "src": "/assets/electronics-store/detail-filters.webp",
+            "alt": "Фильтры по цене и бренду",
+            "width": 460,
+            "height": 724
+          },
+          "x": 0.68,
+          "y": 0,
+          "w": 0.32,
+          "fade": true,
+          "front": true
+        }
+      ]
+    },
+    {
+      "kind": "benefit",
+      "title": "Точная цена и наличие для каждого варианта",
+      "text": "У каждого цвета и объёма памяти своя цена, остаток и фото.",
+      "figure": {
+        "value": "261",
+        "label": "вариант у 60 моделей"
+      },
+      "layers": [
+        {
+          "image": {
+            "src": "/assets/electronics-store/proof-product.webp",
+            "alt": "Карточка Apple iPhone 15",
+            "width": 2624,
+            "height": 1404
+          },
+          "x": 0,
+          "y": 0.1,
+          "w": 0.6,
+          "url": "shop.velmren.com/product/iphone-15"
+        },
+        {
+          "image": {
+            "src": "/assets/electronics-store/detail-variant.webp",
+            "alt": "Выбор цвета и памяти: цена 59 990 ₽, в наличии 9 штук",
+            "width": 1246,
+            "height": 908
+          },
+          "x": 0.64,
+          "y": 0,
+          "w": 0.36,
+          "front": true
+        }
+      ]
+    },
+    {
+      "kind": "benefit",
+      "title": "Заказ без регистрации и без ошибок в сумме",
+      "text": "Итог и скидку считает сервер, а товар резервируется при оформлении.",
+      "layers": [
+        {
+          "image": {
+            "src": "/assets/electronics-store/proof-cart-page.webp",
+            "alt": "Корзина с одним товаром",
+            "width": 2624,
+            "height": 1534
+          },
+          "x": 0,
+          "y": 0.07,
+          "w": 0.6,
+          "url": "shop.velmren.com/cart"
+        },
+        {
+          "image": {
+            "src": "/assets/electronics-store/proof-cart.webp",
+            "alt": "Итог корзины: промокод применён, скидка 5 000 ₽",
+            "width": 994,
+            "height": 1330
+          },
+          "x": 0.65,
+          "y": 0,
+          "w": 0.35,
+          "front": true
+        }
+      ]
+    },
+    {
+      "kind": "benefit",
+      "title": "Команда ведёт магазин без программиста",
+      "text": "Товары, цены, остатки и заказы меняются в панели управления.",
+      "layers": [
+        {
+          "image": {
+            "src": "/assets/electronics-store/proof-admin.webp",
+            "alt": "Панель управления, раздел «Варианты и остатки»",
+            "width": 2624,
+            "height": 1382
+          },
+          "x": 0.27,
+          "y": 0.08,
+          "w": 0.73,
+          "url": "shop.velmren.com/admin/variants",
+          "fade": true
+        },
+        {
+          "image": {
+            "src": "/assets/electronics-store/detail-admin-nav.webp",
+            "alt": "Разделы панели управления: товары, варианты, заказы, отзывы и другие",
+            "width": 454,
+            "height": 1302
+          },
+          "x": 0,
+          "y": 0,
+          "w": 0.22,
+          "front": true
+        }
+      ]
+    },
+    {
+      "kind": "benefit",
+      "title": "Удобно покупать с телефона",
+      "text": "Каталог, карточка и корзина рассчитаны на небольшой экран.",
+      "layers": [
+        {
+          "image": {
+            "src": "/assets/electronics-store/proof-phone-catalog.webp",
+            "alt": "Каталог смартфонов на телефоне",
+            "width": 780,
+            "height": 1688
+          },
+          "x": 0.17,
+          "y": 0.08,
+          "w": 0.3,
+          "phone": true
+        },
+        {
+          "image": {
+            "src": "/assets/electronics-store/proof-phone.webp",
+            "alt": "Карточка товара на телефоне",
+            "width": 780,
+            "height": 1688
+          },
+          "x": 0.53,
+          "y": 0,
+          "w": 0.3,
+          "front": true,
+          "phone": true
+        }
+      ]
+    },
+    {
+      "kind": "features",
+      "title": "Как устроено",
+      "text": "Одно приложение: витрина, кабинет, панель управления и API.",
+      "items": [
+        "Стек",
+        "Заказ",
+        "Доступ",
+        "Оплата и доставка"
+      ],
+      "descriptions": [
+        "Next.js, TypeScript, PostgreSQL, Prisma, MinIO.",
+        "Одна транзакция: цены перечитываются, остаток резервируется, повтор не создаёт второй заказ.",
+        "Роли покупателя, сотрудника и администратора, права проверяет сервер.",
+        "Тестовые провайдеры."
+      ]
+    }
+  ],
+  "closing": "Посмотрите магазин в работе",
+  "accent": "#0a65fa",
+  "en": {
+    "eyebrow": "Online store",
+    "lead": "An electronics store that works end to end",
+    "summary": "From finding a model to checkout and catalogue management. The store is live, so you can open it and try it.",
+    "note": "Demo mode",
+    "closing": "See the store in action",
+    "actions": [
+      "Open the store"
+    ],
+    "showcase": [
+      "VELMREN tech store home page",
+      "Smartphone catalogue on a phone"
+    ],
+    "sections": [
+      {
+        "title": "Shoppers find the right model fast",
+        "text": "Filters combine freely, and any selection can be shared as a link.",
+        "alts": [
+          "Smartphones category with filters and product cards",
+          "Price and brand filters"
+        ]
+      },
+      {
+        "title": "Exact price and stock for every variant",
+        "text": "Each colour and storage option has its own price, stock and photos.",
+        "figure": {
+          "value": "261",
+          "label": "variants across 60 models"
+        },
+        "alts": [
+          "Apple iPhone 15 product page",
+          "Colour and storage choice: 59,990 ₽, 9 in stock"
+        ]
+      },
+      {
+        "title": "Checkout without sign-up or pricing errors",
+        "text": "The server calculates totals and discounts, and reserves stock when an order is placed.",
+        "alts": [
+          "Cart with one item",
+          "Cart total with a promo code applied, 5,000 ₽ off"
+        ]
+      },
+      {
+        "title": "The team runs the store without a developer",
+        "text": "Products, prices, stock and orders are managed in the admin panel.",
+        "alts": [
+          "Admin panel, variants and stock",
+          "Admin sections: products, variants, orders, reviews and more"
+        ]
+      },
+      {
+        "title": "Easy to shop on a phone",
+        "text": "The catalogue, product page and cart are built for small screens.",
+        "alts": [
+          "Smartphone catalogue on a phone",
+          "Product page on a phone"
+        ]
+      },
+      {
+        "title": "How it is built",
+        "text": "One app: storefront, account, admin panel and API.",
+        "items": [
+          "Stack",
+          "Orders",
+          "Access",
+          "Payments and delivery"
+        ],
+        "descriptions": [
+          "Next.js, TypeScript, PostgreSQL, Prisma, MinIO.",
+          "One transaction: prices are re-read, stock is reserved, and a resubmission never creates a second order.",
+          "Customer, staff and admin roles, checked on the server.",
+          "Test providers."
+        ]
+      }
+    ]
+  }
+}

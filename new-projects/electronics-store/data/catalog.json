@@ -1,0 +1,6457 @@
+[
+  {
+    "id": "iphone-15-pro-max",
+    "slug": "iphone-15-pro-max",
+    "name": "Apple iPhone 15 Pro Max",
+    "brand": "Apple",
+    "category": "smartphones",
+    "description": "Титан. Сила. Новый взгляд. Apple A17 Pro помогает работать с фото, видео и приложениями. Выберите подходящий цвет и объём памяти.",
+    "tagline": "Титан. Сила. Новый взгляд.",
+    "images": [
+      "/products/iphone-15-pro-max-naturaltitanium-1.webp",
+      "/products/iphone-15-pro-max-naturaltitanium-2.webp"
+    ],
+    "specs": {
+      "Экран": "6,7″ Super Retina XDR, ProMotion до 120 Гц",
+      "Процессор": "Apple A17 Pro",
+      "Камеры": "48 + 12 + 12 Мп, телефото 5×",
+      "Корпус": "Титан, защита IP68",
+      "Разъём": "USB-C, USB 3",
+      "Вес": "221 г",
+      "Доступная память": "256 ГБ / 512 ГБ / 1 ТБ",
+      "Аутентификация": "Face ID",
+      "Беспроводная зарядка": "MagSafe и Qi"
+    },
+    "features": [
+      "6,7″ Super Retina XDR, ProMotion до 120 Гц",
+      "Apple A17 Pro",
+      "48 + 12 + 12 Мп, телефото 5×"
+    ],
+    "inBox": [
+      "Apple iPhone 15 Pro Max",
+      "Документация",
+      "Кабель для зарядки"
+    ],
+    "rating": 0,
+    "reviewCount": 0,
+    "featured": true,
+    "variants": [
+      {
+        "id": "iphone-15-pro-max-v1",
+        "sku": "EL-IPHONE-15-PRO-MAX-01",
+        "color": "Натуральный титан",
+        "colorHex": "#b5aea3",
+        "storage": "256 ГБ",
+        "price": 109990,
+        "oldPrice": 124990,
+        "stock": 26,
+        "images": [
+          "/products/iphone-15-pro-max-naturaltitanium-1.webp",
+          "/products/iphone-15-pro-max-naturaltitanium-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "iphone-15-pro-max-v2",
+        "sku": "EL-IPHONE-15-PRO-MAX-02",
+        "color": "Натуральный титан",
+        "colorHex": "#b5aea3",
+        "storage": "512 ГБ",
+        "price": 121990,
+        "oldPrice": 137990,
+        "stock": 10,
+        "images": [
+          "/products/iphone-15-pro-max-naturaltitanium-1.webp",
+          "/products/iphone-15-pro-max-naturaltitanium-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "iphone-15-pro-max-v3",
+        "sku": "EL-IPHONE-15-PRO-MAX-03",
+        "color": "Натуральный титан",
+        "colorHex": "#b5aea3",
+        "storage": "1 ТБ",
+        "price": 133990,
+        "oldPrice": 151990,
+        "stock": 17,
+        "images": [
+          "/products/iphone-15-pro-max-naturaltitanium-1.webp",
+          "/products/iphone-15-pro-max-naturaltitanium-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "iphone-15-pro-max-v4",
+        "sku": "EL-IPHONE-15-PRO-MAX-04",
+        "color": "Синий титан",
+        "colorHex": "#465361",
+        "storage": "256 ГБ",
+        "price": 109990,
+        "oldPrice": 124990,
+        "stock": 24,
+        "images": [
+          "/products/iphone-15-pro-max-bluetitanium-1.webp",
+          "/products/iphone-15-pro-max-bluetitanium-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "iphone-15-pro-max-v5",
+        "sku": "EL-IPHONE-15-PRO-MAX-05",
+        "color": "Синий титан",
+        "colorHex": "#465361",
+        "storage": "512 ГБ",
+        "price": 121990,
+        "oldPrice": 137990,
+        "stock": 8,
+        "images": [
+          "/products/iphone-15-pro-max-bluetitanium-1.webp",
+          "/products/iphone-15-pro-max-bluetitanium-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "iphone-15-pro-max-v6",
+        "sku": "EL-IPHONE-15-PRO-MAX-06",
+        "color": "Синий титан",
+        "colorHex": "#465361",
+        "storage": "1 ТБ",
+        "price": 133990,
+        "oldPrice": 151990,
+        "stock": 15,
+        "images": [
+          "/products/iphone-15-pro-max-bluetitanium-1.webp",
+          "/products/iphone-15-pro-max-bluetitanium-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "iphone-15-pro-max-v7",
+        "sku": "EL-IPHONE-15-PRO-MAX-07",
+        "color": "Чёрный титан",
+        "colorHex": "#3d3e40",
+        "storage": "256 ГБ",
+        "price": 109990,
+        "oldPrice": 124990,
+        "stock": 22,
+        "images": [
+          "/products/iphone-15-pro-max-blacktitanium-1.webp",
+          "/products/iphone-15-pro-max-blacktitanium-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "iphone-15-pro-max-v8",
+        "sku": "EL-IPHONE-15-PRO-MAX-08",
+        "color": "Чёрный титан",
+        "colorHex": "#3d3e40",
+        "storage": "512 ГБ",
+        "price": 121990,
+        "oldPrice": 137990,
+        "stock": 6,
+        "images": [
+          "/products/iphone-15-pro-max-blacktitanium-1.webp",
+          "/products/iphone-15-pro-max-blacktitanium-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "iphone-15-pro-max-v9",
+        "sku": "EL-IPHONE-15-PRO-MAX-09",
+        "color": "Чёрный титан",
+        "colorHex": "#3d3e40",
+        "storage": "1 ТБ",
+        "price": 133990,
+        "oldPrice": 151990,
+        "stock": 13,
+        "images": [
+          "/products/iphone-15-pro-max-blacktitanium-1.webp",
+          "/products/iphone-15-pro-max-blacktitanium-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "iphone-15-pro-max-whitetitanium-256gb",
+        "sku": "EL-IPHONE-15-PRO-MAX-WHITETITANIUM-256ГБ",
+        "price": 109990,
+        "oldPrice": 124990,
+        "stock": 12,
+        "color": "Белый титан",
+        "colorHex": "#dedbd4",
+        "storage": "256 ГБ",
+        "images": [
+          "/products/iphone-15-pro-max-whitetitanium-1.webp",
+          "/products/iphone-15-pro-max-whitetitanium-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "iphone-15-pro-max-whitetitanium-512gb",
+        "sku": "EL-IPHONE-15-PRO-MAX-WHITETITANIUM-512ГБ",
+        "price": 121990,
+        "oldPrice": 136990,
+        "stock": 15,
+        "color": "Белый титан",
+        "colorHex": "#dedbd4",
+        "storage": "512 ГБ",
+        "images": [
+          "/products/iphone-15-pro-max-whitetitanium-1.webp",
+          "/products/iphone-15-pro-max-whitetitanium-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "iphone-15-pro-max-whitetitanium-1tb",
+        "sku": "EL-IPHONE-15-PRO-MAX-WHITETITANIUM-1ТБ",
+        "price": 133990,
+        "oldPrice": 148990,
+        "stock": 18,
+        "color": "Белый титан",
+        "colorHex": "#dedbd4",
+        "storage": "1 ТБ",
+        "images": [
+          "/products/iphone-15-pro-max-whitetitanium-1.webp",
+          "/products/iphone-15-pro-max-whitetitanium-2.webp"
+        ],
+        "active": true
+      }
+    ],
+    "badge": "Выбор редакции",
+    "modelUrl": "/media/iphone-15-pro-max.glb",
+    "subcategory": "iPhone"
+  },
+  {
+    "id": "iphone-15",
+    "slug": "iphone-15",
+    "name": "Apple iPhone 15",
+    "brand": "Apple",
+    "category": "smartphones",
+    "description": "Больше цвета. Больше возможностей. Apple A16 Bionic помогает работать с фото, видео и приложениями. Выберите подходящий цвет и объём памяти.",
+    "tagline": "Больше цвета. Больше возможностей.",
+    "images": [
+      "/products/iphone-15-blue-1.webp",
+      "/products/iphone-15-blue-2.webp"
+    ],
+    "specs": {
+      "Экран": "6,1″ Super Retina XDR OLED",
+      "Процессор": "Apple A16 Bionic",
+      "Камеры": "48 + 12 Мп",
+      "Разъём": "USB-C",
+      "Вес": "171 г",
+      "Доступная память": "128 ГБ / 256 ГБ / 512 ГБ",
+      "Аутентификация": "Face ID",
+      "Беспроводная зарядка": "MagSafe и Qi"
+    },
+    "features": [
+      "6,1″ Super Retina XDR OLED",
+      "Apple A16 Bionic",
+      "48 + 12 Мп"
+    ],
+    "inBox": [
+      "Apple iPhone 15",
+      "Документация",
+      "Кабель для зарядки"
+    ],
+    "rating": 0,
+    "reviewCount": 0,
+    "featured": true,
+    "variants": [
+      {
+        "id": "iphone-15-v1",
+        "sku": "EL-IPHONE-15-01",
+        "color": "Голубой",
+        "colorHex": "#b6ceda",
+        "storage": "128 ГБ",
+        "price": 59990,
+        "oldPrice": 67990,
+        "stock": 9,
+        "images": [
+          "/products/iphone-15-blue-1.webp",
+          "/products/iphone-15-blue-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "iphone-15-v2",
+        "sku": "EL-IPHONE-15-02",
+        "color": "Голубой",
+        "colorHex": "#b6ceda",
+        "storage": "256 ГБ",
+        "price": 71990,
+        "oldPrice": 81990,
+        "stock": 16,
+        "images": [
+          "/products/iphone-15-blue-1.webp",
+          "/products/iphone-15-blue-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "iphone-15-v3",
+        "sku": "EL-IPHONE-15-03",
+        "color": "Голубой",
+        "colorHex": "#b6ceda",
+        "storage": "512 ГБ",
+        "price": 83990,
+        "oldPrice": 94990,
+        "stock": 23,
+        "images": [
+          "/products/iphone-15-blue-1.webp",
+          "/products/iphone-15-blue-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "iphone-15-v4",
+        "sku": "EL-IPHONE-15-04",
+        "color": "Розовый",
+        "colorHex": "#eac1ca",
+        "storage": "128 ГБ",
+        "price": 59990,
+        "oldPrice": 67990,
+        "stock": 7,
+        "images": [
+          "/products/iphone-15-pink-1.webp",
+          "/products/iphone-15-pink-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "iphone-15-v5",
+        "sku": "EL-IPHONE-15-05",
+        "color": "Розовый",
+        "colorHex": "#eac1ca",
+        "storage": "256 ГБ",
+        "price": 71990,
+        "oldPrice": 81990,
+        "stock": 14,
+        "images": [
+          "/products/iphone-15-pink-1.webp",
+          "/products/iphone-15-pink-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "iphone-15-v6",
+        "sku": "EL-IPHONE-15-06",
+        "color": "Розовый",
+        "colorHex": "#eac1ca",
+        "storage": "512 ГБ",
+        "price": 83990,
+        "oldPrice": 94990,
+        "stock": 21,
+        "images": [
+          "/products/iphone-15-pink-1.webp",
+          "/products/iphone-15-pink-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "iphone-15-v7",
+        "sku": "EL-IPHONE-15-07",
+        "color": "Чёрный",
+        "colorHex": "#3f4344",
+        "storage": "128 ГБ",
+        "price": 59990,
+        "oldPrice": 67990,
+        "stock": 5,
+        "images": [
+          "/products/iphone-15-black-1.webp",
+          "/products/iphone-15-black-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "iphone-15-v8",
+        "sku": "EL-IPHONE-15-08",
+        "color": "Чёрный",
+        "colorHex": "#3f4344",
+        "storage": "256 ГБ",
+        "price": 71990,
+        "oldPrice": 81990,
+        "stock": 12,
+        "images": [
+          "/products/iphone-15-black-1.webp",
+          "/products/iphone-15-black-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "iphone-15-v9",
+        "sku": "EL-IPHONE-15-09",
+        "color": "Чёрный",
+        "colorHex": "#3f4344",
+        "storage": "512 ГБ",
+        "price": 83990,
+        "oldPrice": 94990,
+        "stock": 0,
+        "images": [
+          "/products/iphone-15-black-1.webp",
+          "/products/iphone-15-black-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "iphone-15-green-128gb",
+        "sku": "EL-IPHONE-15-GREEN-128ГБ",
+        "price": 69990,
+        "oldPrice": 84990,
+        "stock": 12,
+        "color": "Зелёный",
+        "colorHex": "#c8d6bf",
+        "storage": "128 ГБ",
+        "images": [
+          "/products/iphone-15-green-1.webp",
+          "/products/iphone-15-green-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "iphone-15-green-256gb",
+        "sku": "EL-IPHONE-15-GREEN-256ГБ",
+        "price": 81990,
+        "oldPrice": 96990,
+        "stock": 15,
+        "color": "Зелёный",
+        "colorHex": "#c8d6bf",
+        "storage": "256 ГБ",
+        "images": [
+          "/products/iphone-15-green-1.webp",
+          "/products/iphone-15-green-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "iphone-15-green-512gb",
+        "sku": "EL-IPHONE-15-GREEN-512ГБ",
+        "price": 93990,
+        "oldPrice": 108990,
+        "stock": 18,
+        "color": "Зелёный",
+        "colorHex": "#c8d6bf",
+        "storage": "512 ГБ",
+        "images": [
+          "/products/iphone-15-green-1.webp",
+          "/products/iphone-15-green-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "iphone-15-yellow-128gb",
+        "sku": "EL-IPHONE-15-YELLOW-128ГБ",
+        "price": 69990,
+        "oldPrice": 84990,
+        "stock": 12,
+        "color": "Жёлтый",
+        "colorHex": "#eadfa7",
+        "storage": "128 ГБ",
+        "images": [
+          "/products/iphone-15-yellow-1.webp",
+          "/products/iphone-15-yellow-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "iphone-15-yellow-256gb",
+        "sku": "EL-IPHONE-15-YELLOW-256ГБ",
+        "price": 81990,
+        "oldPrice": 96990,
+        "stock": 15,
+        "color": "Жёлтый",
+        "colorHex": "#eadfa7",
+        "storage": "256 ГБ",
+        "images": [
+          "/products/iphone-15-yellow-1.webp",
+          "/products/iphone-15-yellow-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "iphone-15-yellow-512gb",
+        "sku": "EL-IPHONE-15-YELLOW-512ГБ",
+        "price": 93990,
+        "oldPrice": 108990,
+        "stock": 18,
+        "color": "Жёлтый",
+        "colorHex": "#eadfa7",
+        "storage": "512 ГБ",
+        "images": [
+          "/products/iphone-15-yellow-1.webp",
+          "/products/iphone-15-yellow-2.webp"
+        ],
+        "active": true
+      }
+    ],
+    "badge": "Выбор редакции",
+    "subcategory": "iPhone"
+  },
+  {
+    "id": "iphone-15-pro",
+    "slug": "iphone-15-pro",
+    "name": "Apple iPhone 15 Pro",
+    "brand": "Apple",
+    "category": "smartphones",
+    "description": "Мощность Pro. Лёгкость титана. Apple A17 Pro помогает работать с фото, видео и приложениями. Выберите подходящий цвет и объём памяти.",
+    "tagline": "Мощность Pro. Лёгкость титана.",
+    "images": [
+      "/products/iphone-15-pro-naturaltitanium-1.webp",
+      "/products/iphone-15-pro-naturaltitanium-2.webp"
+    ],
+    "specs": {
+      "Экран": "6,1″ Super Retina XDR, ProMotion до 120 Гц",
+      "Процессор": "Apple A17 Pro",
+      "Камеры": "48 + 12 + 12 Мп, телефото 3×",
+      "Разъём": "USB-C, USB 3",
+      "Корпус": "Титан",
+      "Доступная память": "128 ГБ / 256 ГБ / 512 ГБ / 1 ТБ",
+      "Аутентификация": "Face ID",
+      "Беспроводная зарядка": "MagSafe и Qi"
+    },
+    "features": [
+      "6,1″ Super Retina XDR, ProMotion до 120 Гц",
+      "Apple A17 Pro",
+      "48 + 12 + 12 Мп, телефото 3×"
+    ],
+    "inBox": [
+      "Apple iPhone 15 Pro",
+      "Документация",
+      "Кабель для зарядки"
+    ],
+    "rating": 0,
+    "reviewCount": 0,
+    "featured": true,
+    "variants": [
+      {
+        "id": "iphone-15-pro-v1",
+        "sku": "EL-IPHONE-15-PRO-01",
+        "color": "Натуральный титан",
+        "colorHex": "#b5aea3",
+        "storage": "128 ГБ",
+        "price": 94990,
+        "oldPrice": 107990,
+        "stock": 12,
+        "images": [
+          "/products/iphone-15-pro-naturaltitanium-1.webp",
+          "/products/iphone-15-pro-naturaltitanium-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "iphone-15-pro-v2",
+        "sku": "EL-IPHONE-15-PRO-02",
+        "color": "Натуральный титан",
+        "colorHex": "#b5aea3",
+        "storage": "256 ГБ",
+        "price": 106990,
+        "oldPrice": 120990,
+        "stock": 19,
+        "images": [
+          "/products/iphone-15-pro-naturaltitanium-1.webp",
+          "/products/iphone-15-pro-naturaltitanium-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "iphone-15-pro-v3",
+        "sku": "EL-IPHONE-15-PRO-03",
+        "color": "Натуральный титан",
+        "colorHex": "#b5aea3",
+        "storage": "512 ГБ",
+        "price": 118990,
+        "oldPrice": 134990,
+        "stock": 26,
+        "images": [
+          "/products/iphone-15-pro-naturaltitanium-1.webp",
+          "/products/iphone-15-pro-naturaltitanium-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "iphone-15-pro-naturaltitanium-1tb",
+        "sku": "EL-IPHONE-15-PRO-NATURALTITANIUM-1ТБ",
+        "price": 130990,
+        "oldPrice": 145990,
+        "stock": 21,
+        "color": "Натуральный титан",
+        "colorHex": "#b5aea3",
+        "storage": "1 ТБ",
+        "images": [
+          "/products/iphone-15-pro-naturaltitanium-1.webp",
+          "/products/iphone-15-pro-naturaltitanium-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "iphone-15-pro-v4",
+        "sku": "EL-IPHONE-15-PRO-04",
+        "color": "Синий титан",
+        "colorHex": "#465361",
+        "storage": "128 ГБ",
+        "price": 94990,
+        "oldPrice": 107990,
+        "stock": 10,
+        "images": [
+          "/products/iphone-15-pro-bluetitanium-1.webp",
+          "/products/iphone-15-pro-bluetitanium-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "iphone-15-pro-v5",
+        "sku": "EL-IPHONE-15-PRO-05",
+        "color": "Синий титан",
+        "colorHex": "#465361",
+        "storage": "256 ГБ",
+        "price": 106990,
+        "oldPrice": 120990,
+        "stock": 17,
+        "images": [
+          "/products/iphone-15-pro-bluetitanium-1.webp",
+          "/products/iphone-15-pro-bluetitanium-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "iphone-15-pro-v6",
+        "sku": "EL-IPHONE-15-PRO-06",
+        "color": "Синий титан",
+        "colorHex": "#465361",
+        "storage": "512 ГБ",
+        "price": 118990,
+        "oldPrice": 134990,
+        "stock": 24,
+        "images": [
+          "/products/iphone-15-pro-bluetitanium-1.webp",
+          "/products/iphone-15-pro-bluetitanium-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "iphone-15-pro-bluetitanium-1tb",
+        "sku": "EL-IPHONE-15-PRO-BLUETITANIUM-1ТБ",
+        "price": 130990,
+        "oldPrice": 145990,
+        "stock": 21,
+        "color": "Синий титан",
+        "colorHex": "#465361",
+        "storage": "1 ТБ",
+        "images": [
+          "/products/iphone-15-pro-bluetitanium-1.webp",
+          "/products/iphone-15-pro-bluetitanium-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "iphone-15-pro-blacktitanium-128gb",
+        "sku": "EL-IPHONE-15-PRO-BLACKTITANIUM-128ГБ",
+        "price": 94990,
+        "oldPrice": 109990,
+        "stock": 12,
+        "color": "Чёрный титан",
+        "colorHex": "#3d3e40",
+        "storage": "128 ГБ",
+        "images": [
+          "/products/iphone-15-pro-blacktitanium-1.webp",
+          "/products/iphone-15-pro-blacktitanium-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "iphone-15-pro-blacktitanium-256gb",
+        "sku": "EL-IPHONE-15-PRO-BLACKTITANIUM-256ГБ",
+        "price": 106990,
+        "oldPrice": 121990,
+        "stock": 15,
+        "color": "Чёрный титан",
+        "colorHex": "#3d3e40",
+        "storage": "256 ГБ",
+        "images": [
+          "/products/iphone-15-pro-blacktitanium-1.webp",
+          "/products/iphone-15-pro-blacktitanium-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "iphone-15-pro-blacktitanium-512gb",
+        "sku": "EL-IPHONE-15-PRO-BLACKTITANIUM-512ГБ",
+        "price": 118990,
+        "oldPrice": 133990,
+        "stock": 18,
+        "color": "Чёрный титан",
+        "colorHex": "#3d3e40",
+        "storage": "512 ГБ",
+        "images": [
+          "/products/iphone-15-pro-blacktitanium-1.webp",
+          "/products/iphone-15-pro-blacktitanium-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "iphone-15-pro-blacktitanium-1tb",
+        "sku": "EL-IPHONE-15-PRO-BLACKTITANIUM-1ТБ",
+        "price": 130990,
+        "oldPrice": 145990,
+        "stock": 21,
+        "color": "Чёрный титан",
+        "colorHex": "#3d3e40",
+        "storage": "1 ТБ",
+        "images": [
+          "/products/iphone-15-pro-blacktitanium-1.webp",
+          "/products/iphone-15-pro-blacktitanium-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "iphone-15-pro-whitetitanium-128gb",
+        "sku": "EL-IPHONE-15-PRO-WHITETITANIUM-128ГБ",
+        "price": 94990,
+        "oldPrice": 109990,
+        "stock": 12,
+        "color": "Белый титан",
+        "colorHex": "#dedbd4",
+        "storage": "128 ГБ",
+        "images": [
+          "/products/iphone-15-pro-whitetitanium-1.webp",
+          "/products/iphone-15-pro-whitetitanium-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "iphone-15-pro-whitetitanium-256gb",
+        "sku": "EL-IPHONE-15-PRO-WHITETITANIUM-256ГБ",
+        "price": 106990,
+        "oldPrice": 121990,
+        "stock": 15,
+        "color": "Белый титан",
+        "colorHex": "#dedbd4",
+        "storage": "256 ГБ",
+        "images": [
+          "/products/iphone-15-pro-whitetitanium-1.webp",
+          "/products/iphone-15-pro-whitetitanium-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "iphone-15-pro-whitetitanium-512gb",
+        "sku": "EL-IPHONE-15-PRO-WHITETITANIUM-512ГБ",
+        "price": 118990,
+        "oldPrice": 133990,
+        "stock": 18,
+        "color": "Белый титан",
+        "colorHex": "#dedbd4",
+        "storage": "512 ГБ",
+        "images": [
+          "/products/iphone-15-pro-whitetitanium-1.webp",
+          "/products/iphone-15-pro-whitetitanium-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "iphone-15-pro-whitetitanium-1tb",
+        "sku": "EL-IPHONE-15-PRO-WHITETITANIUM-1ТБ",
+        "price": 130990,
+        "oldPrice": 145990,
+        "stock": 21,
+        "color": "Белый титан",
+        "colorHex": "#dedbd4",
+        "storage": "1 ТБ",
+        "images": [
+          "/products/iphone-15-pro-whitetitanium-1.webp",
+          "/products/iphone-15-pro-whitetitanium-2.webp"
+        ],
+        "active": true
+      }
+    ],
+    "badge": "Выбор редакции",
+    "subcategory": "iPhone"
+  },
+  {
+    "id": "iphone-16",
+    "slug": "iphone-16",
+    "name": "Apple iPhone 16",
+    "brand": "Apple",
+    "category": "smartphones",
+    "description": "Смотрите на привычное по-новому. Apple A18 помогает работать с фото, видео и приложениями. Выберите подходящий цвет и объём памяти.",
+    "tagline": "Смотрите на привычное по-новому.",
+    "images": [
+      "/products/iphone-16-ultramarine-1.webp",
+      "/products/iphone-16-ultramarine-2.webp"
+    ],
+    "specs": {
+      "Экран": "6,1″ Super Retina XDR OLED",
+      "Процессор": "Apple A18",
+      "Основная камера": "48 Мп Fusion",
+      "Управление": "Camera Control и кнопка действия",
+      "Разъём": "USB-C",
+      "Доступная память": "128 ГБ / 256 ГБ / 512 ГБ",
+      "Аутентификация": "Face ID",
+      "Беспроводная зарядка": "MagSafe и Qi"
+    },
+    "features": [
+      "6,1″ Super Retina XDR OLED",
+      "Apple A18",
+      "48 Мп Fusion"
+    ],
+    "inBox": [
+      "Apple iPhone 16",
+      "Документация",
+      "Кабель для зарядки"
+    ],
+    "rating": 0,
+    "reviewCount": 0,
+    "featured": true,
+    "variants": [
+      {
+        "id": "iphone-16-v1",
+        "sku": "EL-IPHONE-16-01",
+        "color": "Ультрамарин",
+        "colorHex": "#8993d8",
+        "storage": "128 ГБ",
+        "price": 79990,
+        "oldPrice": 90990,
+        "stock": 15,
+        "images": [
+          "/products/iphone-16-ultramarine-1.webp",
+          "/products/iphone-16-ultramarine-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "iphone-16-v2",
+        "sku": "EL-IPHONE-16-02",
+        "color": "Ультрамарин",
+        "colorHex": "#8993d8",
+        "storage": "256 ГБ",
+        "price": 91990,
+        "oldPrice": 103990,
+        "stock": 22,
+        "images": [
+          "/products/iphone-16-ultramarine-1.webp",
+          "/products/iphone-16-ultramarine-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "iphone-16-v3",
+        "sku": "EL-IPHONE-16-03",
+        "color": "Ультрамарин",
+        "colorHex": "#8993d8",
+        "storage": "512 ГБ",
+        "price": 103990,
+        "oldPrice": 117990,
+        "stock": 6,
+        "images": [
+          "/products/iphone-16-ultramarine-1.webp",
+          "/products/iphone-16-ultramarine-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "iphone-16-v4",
+        "sku": "EL-IPHONE-16-04",
+        "color": "Бирюзовый",
+        "colorHex": "#9cbeb5",
+        "storage": "128 ГБ",
+        "price": 79990,
+        "oldPrice": 90990,
+        "stock": 13,
+        "images": [
+          "/products/iphone-16-teal-1.webp",
+          "/products/iphone-16-teal-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "iphone-16-v5",
+        "sku": "EL-IPHONE-16-05",
+        "color": "Бирюзовый",
+        "colorHex": "#9cbeb5",
+        "storage": "256 ГБ",
+        "price": 91990,
+        "oldPrice": 103990,
+        "stock": 20,
+        "images": [
+          "/products/iphone-16-teal-1.webp",
+          "/products/iphone-16-teal-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "iphone-16-v6",
+        "sku": "EL-IPHONE-16-06",
+        "color": "Бирюзовый",
+        "colorHex": "#9cbeb5",
+        "storage": "512 ГБ",
+        "price": 103990,
+        "oldPrice": 117990,
+        "stock": 4,
+        "images": [
+          "/products/iphone-16-teal-1.webp",
+          "/products/iphone-16-teal-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "iphone-16-v7",
+        "sku": "EL-IPHONE-16-07",
+        "color": "Чёрный",
+        "colorHex": "#353638",
+        "storage": "128 ГБ",
+        "price": 79990,
+        "oldPrice": 90990,
+        "stock": 11,
+        "images": [
+          "/products/iphone-16-black-1.webp",
+          "/products/iphone-16-black-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "iphone-16-v8",
+        "sku": "EL-IPHONE-16-08",
+        "color": "Чёрный",
+        "colorHex": "#353638",
+        "storage": "256 ГБ",
+        "price": 91990,
+        "oldPrice": 103990,
+        "stock": 18,
+        "images": [
+          "/products/iphone-16-black-1.webp",
+          "/products/iphone-16-black-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "iphone-16-v9",
+        "sku": "EL-IPHONE-16-09",
+        "color": "Чёрный",
+        "colorHex": "#353638",
+        "storage": "512 ГБ",
+        "price": 103990,
+        "oldPrice": 117990,
+        "stock": 25,
+        "images": [
+          "/products/iphone-16-black-1.webp",
+          "/products/iphone-16-black-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "iphone-16-pink-128gb",
+        "sku": "EL-IPHONE-16-PINK-128ГБ",
+        "price": 84990,
+        "oldPrice": 99990,
+        "stock": 12,
+        "color": "Розовый",
+        "colorHex": "#eda8d0",
+        "storage": "128 ГБ",
+        "images": [
+          "/products/iphone-16-pink-1.webp",
+          "/products/iphone-16-pink-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "iphone-16-pink-256gb",
+        "sku": "EL-IPHONE-16-PINK-256ГБ",
+        "price": 96990,
+        "oldPrice": 111990,
+        "stock": 15,
+        "color": "Розовый",
+        "colorHex": "#eda8d0",
+        "storage": "256 ГБ",
+        "images": [
+          "/products/iphone-16-pink-1.webp",
+          "/products/iphone-16-pink-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "iphone-16-pink-512gb",
+        "sku": "EL-IPHONE-16-PINK-512ГБ",
+        "price": 108990,
+        "oldPrice": 123990,
+        "stock": 18,
+        "color": "Розовый",
+        "colorHex": "#eda8d0",
+        "storage": "512 ГБ",
+        "images": [
+          "/products/iphone-16-pink-1.webp",
+          "/products/iphone-16-pink-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "iphone-16-white-128gb",
+        "sku": "EL-IPHONE-16-WHITE-128ГБ",
+        "price": 84990,
+        "oldPrice": 99990,
+        "stock": 12,
+        "color": "Белый",
+        "colorHex": "#eae9e5",
+        "storage": "128 ГБ",
+        "images": [
+          "/products/iphone-16-white-1.webp",
+          "/products/iphone-16-white-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "iphone-16-white-256gb",
+        "sku": "EL-IPHONE-16-WHITE-256ГБ",
+        "price": 96990,
+        "oldPrice": 111990,
+        "stock": 15,
+        "color": "Белый",
+        "colorHex": "#eae9e5",
+        "storage": "256 ГБ",
+        "images": [
+          "/products/iphone-16-white-1.webp",
+          "/products/iphone-16-white-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "iphone-16-white-512gb",
+        "sku": "EL-IPHONE-16-WHITE-512ГБ",
+        "price": 108990,
+        "oldPrice": 123990,
+        "stock": 18,
+        "color": "Белый",
+        "colorHex": "#eae9e5",
+        "storage": "512 ГБ",
+        "images": [
+          "/products/iphone-16-white-1.webp",
+          "/products/iphone-16-white-2.webp"
+        ],
+        "active": true
+      }
+    ],
+    "badge": "Выбор редакции",
+    "subcategory": "iPhone"
+  },
+  {
+    "id": "iphone-13-pro",
+    "slug": "iphone-13-pro",
+    "name": "Apple iPhone 13 Pro",
+    "brand": "Apple",
+    "category": "smartphones",
+    "description": "Профессиональная камера в компактном корпусе. Для общения, фотографий и привычных приложений. Выберите цвет и объём памяти, которые подходят именно вам.",
+    "tagline": "Профессиональная камера в компактном корпусе",
+    "images": [
+      "/products/iphone-13-pro-blue-1.webp",
+      "/products/iphone-13-pro-blue-2.webp"
+    ],
+    "specs": {
+      "Экран": "6,1″ OLED, ProMotion до 120 Гц",
+      "Процессор": "Apple A15 Bionic",
+      "Камеры": "12 + 12 + 12 Мп",
+      "Разъём": "Lightning",
+      "Доступная память": "128 ГБ / 256 ГБ / 512 ГБ / 1 ТБ",
+      "Аутентификация": "Face ID",
+      "Беспроводная зарядка": "MagSafe и Qi"
+    },
+    "features": [
+      "6,1″ OLED, ProMotion до 120 Гц",
+      "Apple A15 Bionic",
+      "12 + 12 + 12 Мп"
+    ],
+    "inBox": [
+      "Apple iPhone 13 Pro",
+      "Документация",
+      "Кабель для зарядки"
+    ],
+    "rating": 0,
+    "reviewCount": 0,
+    "featured": true,
+    "variants": [
+      {
+        "id": "iphone-13-pro-v1",
+        "sku": "EL-IPHONE-13-PRO-01",
+        "color": "Небесно-голубой",
+        "colorHex": "#adc5da",
+        "storage": "128 ГБ",
+        "price": 65990,
+        "oldPrice": 74990,
+        "stock": 4,
+        "images": [
+          "/products/iphone-13-pro-blue-1.webp",
+          "/products/iphone-13-pro-blue-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "iphone-13-pro-v2",
+        "sku": "EL-IPHONE-13-PRO-02",
+        "color": "Небесно-голубой",
+        "colorHex": "#adc5da",
+        "storage": "256 ГБ",
+        "price": 77990,
+        "oldPrice": 88990,
+        "stock": 11,
+        "images": [
+          "/products/iphone-13-pro-blue-1.webp",
+          "/products/iphone-13-pro-blue-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "iphone-13-pro-blue-512gb",
+        "sku": "EL-IPHONE-13-PRO-BLUE-512ГБ",
+        "price": 93990,
+        "oldPrice": 108990,
+        "stock": 18,
+        "color": "Небесно-голубой",
+        "colorHex": "#adc5da",
+        "storage": "512 ГБ",
+        "images": [
+          "/products/iphone-13-pro-blue-1.webp",
+          "/products/iphone-13-pro-blue-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "iphone-13-pro-blue-1tb",
+        "sku": "EL-IPHONE-13-PRO-BLUE-1ТБ",
+        "price": 105990,
+        "oldPrice": 120990,
+        "stock": 21,
+        "color": "Небесно-голубой",
+        "colorHex": "#adc5da",
+        "storage": "1 ТБ",
+        "images": [
+          "/products/iphone-13-pro-blue-1.webp",
+          "/products/iphone-13-pro-blue-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "iphone-13-pro-v3",
+        "sku": "EL-IPHONE-13-PRO-03",
+        "color": "Графитовый",
+        "colorHex": "#535450",
+        "storage": "128 ГБ",
+        "price": 65990,
+        "oldPrice": 74990,
+        "stock": 18,
+        "images": [
+          "/products/iphone-13-pro-graphite-1.webp",
+          "/products/iphone-13-pro-graphite-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "iphone-13-pro-v4",
+        "sku": "EL-IPHONE-13-PRO-04",
+        "color": "Графитовый",
+        "colorHex": "#535450",
+        "storage": "256 ГБ",
+        "price": 77990,
+        "oldPrice": 88990,
+        "stock": 25,
+        "images": [
+          "/products/iphone-13-pro-graphite-1.webp",
+          "/products/iphone-13-pro-graphite-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "iphone-13-pro-graphite-512gb",
+        "sku": "EL-IPHONE-13-PRO-GRAPHITE-512ГБ",
+        "price": 93990,
+        "oldPrice": 108990,
+        "stock": 18,
+        "color": "Графитовый",
+        "colorHex": "#535450",
+        "storage": "512 ГБ",
+        "images": [
+          "/products/iphone-13-pro-graphite-1.webp",
+          "/products/iphone-13-pro-graphite-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "iphone-13-pro-graphite-1tb",
+        "sku": "EL-IPHONE-13-PRO-GRAPHITE-1ТБ",
+        "price": 105990,
+        "oldPrice": 120990,
+        "stock": 21,
+        "color": "Графитовый",
+        "colorHex": "#535450",
+        "storage": "1 ТБ",
+        "images": [
+          "/products/iphone-13-pro-graphite-1.webp",
+          "/products/iphone-13-pro-graphite-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "iphone-13-pro-silver-128gb",
+        "sku": "EL-IPHONE-13-PRO-SILVER-128ГБ",
+        "price": 69990,
+        "oldPrice": 84990,
+        "stock": 12,
+        "color": "Серебристый",
+        "colorHex": "#ecebe7",
+        "storage": "128 ГБ",
+        "images": [
+          "/products/iphone-13-pro-silver-1.webp",
+          "/products/iphone-13-pro-silver-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "iphone-13-pro-silver-256gb",
+        "sku": "EL-IPHONE-13-PRO-SILVER-256ГБ",
+        "price": 81990,
+        "oldPrice": 96990,
+        "stock": 15,
+        "color": "Серебристый",
+        "colorHex": "#ecebe7",
+        "storage": "256 ГБ",
+        "images": [
+          "/products/iphone-13-pro-silver-1.webp",
+          "/products/iphone-13-pro-silver-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "iphone-13-pro-silver-512gb",
+        "sku": "EL-IPHONE-13-PRO-SILVER-512ГБ",
+        "price": 93990,
+        "oldPrice": 108990,
+        "stock": 18,
+        "color": "Серебристый",
+        "colorHex": "#ecebe7",
+        "storage": "512 ГБ",
+        "images": [
+          "/products/iphone-13-pro-silver-1.webp",
+          "/products/iphone-13-pro-silver-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "iphone-13-pro-silver-1tb",
+        "sku": "EL-IPHONE-13-PRO-SILVER-1ТБ",
+        "price": 105990,
+        "oldPrice": 120990,
+        "stock": 21,
+        "color": "Серебристый",
+        "colorHex": "#ecebe7",
+        "storage": "1 ТБ",
+        "images": [
+          "/products/iphone-13-pro-silver-1.webp",
+          "/products/iphone-13-pro-silver-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "iphone-13-pro-gold-128gb",
+        "sku": "EL-IPHONE-13-PRO-GOLD-128ГБ",
+        "price": 69990,
+        "oldPrice": 84990,
+        "stock": 12,
+        "color": "Золотой",
+        "colorHex": "#e8d9be",
+        "storage": "128 ГБ",
+        "images": [
+          "/products/iphone-13-pro-gold-1.webp",
+          "/products/iphone-13-pro-gold-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "iphone-13-pro-gold-256gb",
+        "sku": "EL-IPHONE-13-PRO-GOLD-256ГБ",
+        "price": 81990,
+        "oldPrice": 96990,
+        "stock": 15,
+        "color": "Золотой",
+        "colorHex": "#e8d9be",
+        "storage": "256 ГБ",
+        "images": [
+          "/products/iphone-13-pro-gold-1.webp",
+          "/products/iphone-13-pro-gold-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "iphone-13-pro-gold-512gb",
+        "sku": "EL-IPHONE-13-PRO-GOLD-512ГБ",
+        "price": 93990,
+        "oldPrice": 108990,
+        "stock": 18,
+        "color": "Золотой",
+        "colorHex": "#e8d9be",
+        "storage": "512 ГБ",
+        "images": [
+          "/products/iphone-13-pro-gold-1.webp",
+          "/products/iphone-13-pro-gold-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "iphone-13-pro-gold-1tb",
+        "sku": "EL-IPHONE-13-PRO-GOLD-1ТБ",
+        "price": 105990,
+        "oldPrice": 120990,
+        "stock": 21,
+        "color": "Золотой",
+        "colorHex": "#e8d9be",
+        "storage": "1 ТБ",
+        "images": [
+          "/products/iphone-13-pro-gold-1.webp",
+          "/products/iphone-13-pro-gold-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "iphone-13-pro-green-128gb",
+        "sku": "EL-IPHONE-13-PRO-GREEN-128ГБ",
+        "price": 69990,
+        "oldPrice": 84990,
+        "stock": 12,
+        "color": "Альпийский зелёный",
+        "colorHex": "#5b6e5f",
+        "storage": "128 ГБ",
+        "images": [
+          "/products/iphone-13-pro-green-1.webp",
+          "/products/iphone-13-pro-green-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "iphone-13-pro-green-256gb",
+        "sku": "EL-IPHONE-13-PRO-GREEN-256ГБ",
+        "price": 81990,
+        "oldPrice": 96990,
+        "stock": 15,
+        "color": "Альпийский зелёный",
+        "colorHex": "#5b6e5f",
+        "storage": "256 ГБ",
+        "images": [
+          "/products/iphone-13-pro-green-1.webp",
+          "/products/iphone-13-pro-green-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "iphone-13-pro-green-512gb",
+        "sku": "EL-IPHONE-13-PRO-GREEN-512ГБ",
+        "price": 93990,
+        "oldPrice": 108990,
+        "stock": 18,
+        "color": "Альпийский зелёный",
+        "colorHex": "#5b6e5f",
+        "storage": "512 ГБ",
+        "images": [
+          "/products/iphone-13-pro-green-1.webp",
+          "/products/iphone-13-pro-green-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "iphone-13-pro-green-1tb",
+        "sku": "EL-IPHONE-13-PRO-GREEN-1ТБ",
+        "price": 105990,
+        "oldPrice": 120990,
+        "stock": 21,
+        "color": "Альпийский зелёный",
+        "colorHex": "#5b6e5f",
+        "storage": "1 ТБ",
+        "images": [
+          "/products/iphone-13-pro-green-1.webp",
+          "/products/iphone-13-pro-green-2.webp"
+        ],
+        "active": true
+      }
+    ],
+    "badge": "Выгодно",
+    "videoUrl": "/media/iphone-13-pro-angles.webm",
+    "subcategory": "iPhone"
+  },
+  {
+    "id": "apple-macbook-pro-14-inch-space-grey",
+    "slug": "apple-macbook-pro-14-inch-space-grey",
+    "name": "Apple MacBook Pro 14″ M1 Pro",
+    "brand": "Apple",
+    "category": "laptops",
+    "description": "Большие идеи. Профессиональные возможности. Для работы, творчества и повседневных задач. Продуманная конструкция помогает сосредоточиться на главном.",
+    "tagline": "Большие идеи. Профессиональные возможности",
+    "images": [
+      "/products/apple-macbook-pro-14-inch-space-grey-verified-spacegray-1.webp"
+    ],
+    "specs": {
+      "Экран": "14,2″ Liquid Retina XDR",
+      "Процессор": "Apple M1 Pro",
+      "Оперативная память": "16 ГБ",
+      "Разъёмы": "MagSafe 3, HDMI, SDXC, Thunderbolt 4"
+    },
+    "features": [
+      "14,2″ Liquid Retina XDR",
+      "Apple M1 Pro",
+      "16 ГБ"
+    ],
+    "inBox": [
+      "Apple MacBook Pro 14″ M1 Pro",
+      "Документация",
+      "Адаптер питания"
+    ],
+    "rating": 0,
+    "reviewCount": 0,
+    "featured": true,
+    "variants": [
+      {
+        "id": "apple-macbook-pro-14-inch-space-grey-v1",
+        "sku": "EL-APPLE-MACBOOK-PRO-14-INCH-SPACE-GREY-01",
+        "color": "Серый космос",
+        "colorHex": "#7f8187",
+        "storage": "512 ГБ",
+        "price": 129990,
+        "oldPrice": 146990,
+        "stock": 23,
+        "images": [
+          "/products/apple-macbook-pro-14-inch-space-grey-verified-spacegray-1.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "apple-macbook-pro-14-inch-space-grey-v2",
+        "sku": "EL-APPLE-MACBOOK-PRO-14-INCH-SPACE-GREY-02",
+        "color": "Серый космос",
+        "colorHex": "#7f8187",
+        "storage": "1 ТБ",
+        "price": 141990,
+        "oldPrice": 160990,
+        "stock": 7,
+        "images": [
+          "/products/apple-macbook-pro-14-inch-space-grey-verified-spacegray-1.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "apple-macbook-pro-14-inch-space-grey-v3",
+        "sku": "EL-APPLE-MACBOOK-PRO-14-INCH-SPACE-GREY-03",
+        "color": "Серебристый",
+        "colorHex": "#d9dadd",
+        "storage": "512 ГБ",
+        "price": 129990,
+        "oldPrice": 146990,
+        "stock": 14,
+        "images": [
+          "/products/apple-macbook-pro-14-inch-space-grey-verified-silver-1.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "apple-macbook-pro-14-inch-space-grey-v4",
+        "sku": "EL-APPLE-MACBOOK-PRO-14-INCH-SPACE-GREY-04",
+        "color": "Серебристый",
+        "colorHex": "#d9dadd",
+        "storage": "1 ТБ",
+        "price": 141990,
+        "oldPrice": 160990,
+        "stock": 21,
+        "images": [
+          "/products/apple-macbook-pro-14-inch-space-grey-verified-silver-1.webp"
+        ],
+        "active": true
+      }
+    ],
+    "subcategory": "MacBook"
+  },
+  {
+    "id": "ipad-mini-2021-starlight",
+    "slug": "ipad-mini-2021-starlight",
+    "name": "Apple iPad mini 6",
+    "brand": "Apple",
+    "category": "tablets",
+    "description": "Удобно взять с собой. Легко увлечься. Читайте, смотрите и воплощайте идеи на большом сенсорном экране. Компактный формат удобно брать с собой.",
+    "tagline": "Удобно взять с собой. Легко увлечься",
+    "images": [
+      "/products/ipad-mini-2021-starlight-verified-starlight-1.webp"
+    ],
+    "specs": {
+      "Экран": "8,3″ Liquid Retina",
+      "Процессор": "Apple A15 Bionic",
+      "Основная камера": "12 Мп",
+      "Разъём": "USB-C"
+    },
+    "features": [
+      "8,3″ Liquid Retina",
+      "Apple A15 Bionic",
+      "12 Мп"
+    ],
+    "inBox": [
+      "Apple iPad mini 6",
+      "Документация",
+      "Кабель для зарядки"
+    ],
+    "rating": 0,
+    "reviewCount": 0,
+    "featured": true,
+    "variants": [
+      {
+        "id": "ipad-mini-2021-starlight-v1",
+        "sku": "EL-IPAD-MINI-2021-STARLIGHT-01",
+        "color": "Сияющая звезда",
+        "colorHex": "#e4dcca",
+        "storage": "64 ГБ",
+        "price": 45990,
+        "oldPrice": 51990,
+        "stock": 15,
+        "images": [
+          "/products/ipad-mini-2021-starlight-verified-starlight-1.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "ipad-mini-2021-starlight-v2",
+        "sku": "EL-IPAD-MINI-2021-STARLIGHT-02",
+        "color": "Сияющая звезда",
+        "colorHex": "#e4dcca",
+        "storage": "256 ГБ",
+        "price": 57990,
+        "oldPrice": 65990,
+        "stock": 22,
+        "images": [
+          "/products/ipad-mini-2021-starlight-verified-starlight-1.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "ipad-mini-2021-starlight-v3",
+        "sku": "EL-IPAD-MINI-2021-STARLIGHT-03",
+        "color": "Серый космос",
+        "colorHex": "#797c85",
+        "storage": "64 ГБ",
+        "price": 45990,
+        "oldPrice": 51990,
+        "stock": 6,
+        "images": [
+          "/products/ipad-mini-2021-starlight-verified-spacegray-1.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "ipad-mini-2021-starlight-v4",
+        "sku": "EL-IPAD-MINI-2021-STARLIGHT-04",
+        "color": "Серый космос",
+        "colorHex": "#797c85",
+        "storage": "256 ГБ",
+        "price": 57990,
+        "oldPrice": 65990,
+        "stock": 13,
+        "images": [
+          "/products/ipad-mini-2021-starlight-verified-spacegray-1.webp"
+        ],
+        "active": true
+      }
+    ],
+    "subcategory": "iPad"
+  },
+  {
+    "id": "apple-airpods-max-silver",
+    "slug": "apple-airpods-max-silver",
+    "name": "Apple AirPods Max",
+    "brand": "Apple",
+    "category": "audio",
+    "description": "Погрузитесь в любимую музыку. Любимые треки, подкасты и разговоры в удобном формате на каждый день.",
+    "tagline": "Погрузитесь в любимую музыку",
+    "images": [
+      "/products/apple-airpods-max-silver-verified-silver-1.webp"
+    ],
+    "specs": {
+      "Конструкция": "Полноразмерные наушники",
+      "Шумоподавление": "Активное, режим прозрачности",
+      "Автономность": "До 20 часов",
+      "Разъём": "Lightning"
+    },
+    "features": [
+      "Полноразмерные наушники",
+      "Активное, режим прозрачности",
+      "До 20 часов"
+    ],
+    "inBox": [
+      "Apple AirPods Max",
+      "Документация"
+    ],
+    "rating": 0,
+    "reviewCount": 0,
+    "featured": true,
+    "variants": [
+      {
+        "id": "apple-airpods-max-silver-v1",
+        "sku": "EL-APPLE-AIRPODS-MAX-SILVER-01",
+        "color": "Серебристый",
+        "colorHex": "#e0e2e4",
+        "storage": "Стандарт",
+        "price": 49990,
+        "oldPrice": 56990,
+        "stock": 24,
+        "images": [
+          "/products/apple-airpods-max-silver-verified-silver-1.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "apple-airpods-max-silver-v2",
+        "sku": "EL-APPLE-AIRPODS-MAX-SILVER-02",
+        "color": "Серый космос",
+        "colorHex": "#535558",
+        "storage": "Стандарт",
+        "price": 49990,
+        "oldPrice": 56990,
+        "stock": 0,
+        "images": [
+          "/products/apple-airpods-max-silver-verified-spacegray-1.webp"
+        ],
+        "active": true
+      }
+    ],
+    "subcategory": "Наушники"
+  },
+  {
+    "id": "apple-watch-series-4-gold",
+    "slug": "apple-watch-series-4-gold",
+    "name": "Apple Watch Series 4 40 мм",
+    "brand": "Apple",
+    "category": "watches",
+    "description": "Время двигаться и быть на связи. Полезная информация на запястье и удобные инструменты для активного дня.",
+    "tagline": "Время двигаться и быть на связи",
+    "images": [
+      "/products/apple-watch-series-4-gold-1.webp",
+      "/products/apple-watch-series-4-gold-2.webp",
+      "/products/apple-watch-series-4-gold-3.webp"
+    ],
+    "specs": {
+      "Экран": "LTPO OLED Retina",
+      "Чип": "Apple S4",
+      "Водозащита": "До 50 м",
+      "Связь": "GPS, Bluetooth 5.0"
+    },
+    "features": [
+      "LTPO OLED Retina",
+      "Apple S4",
+      "До 50 м"
+    ],
+    "inBox": [
+      "Apple Watch Series 4 40 мм",
+      "Документация"
+    ],
+    "rating": 0,
+    "reviewCount": 0,
+    "featured": true,
+    "variants": [
+      {
+        "id": "apple-watch-series-4-gold-v1",
+        "sku": "EL-APPLE-WATCH-SERIES-4-GOLD-01",
+        "color": "Золотой",
+        "colorHex": "#c7a990",
+        "storage": "40 мм",
+        "price": 19990,
+        "oldPrice": 22990,
+        "stock": 7,
+        "images": [
+          "/products/apple-watch-series-4-gold-1.webp",
+          "/products/apple-watch-series-4-gold-2.webp",
+          "/products/apple-watch-series-4-gold-3.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "apple-watch-series-4-gold-v2",
+        "sku": "EL-APPLE-WATCH-SERIES-4-GOLD-02",
+        "color": "Серый космос",
+        "colorHex": "#494c51",
+        "storage": "40 мм",
+        "price": 19990,
+        "oldPrice": 22990,
+        "stock": 14,
+        "images": [],
+        "active": false
+      }
+    ],
+    "badge": "Выгодно",
+    "subcategory": "Смарт-часы"
+  },
+  {
+    "id": "apple-homepod-mini-cosmic-grey",
+    "slug": "apple-homepod-mini-cosmic-grey",
+    "name": "Apple HomePod mini",
+    "brand": "Apple",
+    "category": "smart-home",
+    "description": "Большое звучание в маленьком корпусе. Удобное управление музыкой и совместимыми устройствами дома. Доступность сервисов зависит от региона.",
+    "tagline": "Большое звучание в маленьком корпусе",
+    "images": [
+      "/products/apple-homepod-mini-cosmic-grey-verified-spacegray-1.webp"
+    ],
+    "specs": {
+      "Голосовой помощник": "Siri",
+      "Подключение": "Wi-Fi, Bluetooth 5.0, Thread",
+      "Экосистема": "Apple Home / AirPlay 2",
+      "Высота": "84,3 мм"
+    },
+    "features": [
+      "Siri",
+      "Wi-Fi, Bluetooth 5.0, Thread",
+      "Apple Home / AirPlay 2"
+    ],
+    "inBox": [
+      "Apple HomePod mini",
+      "Документация"
+    ],
+    "rating": 0,
+    "reviewCount": 0,
+    "featured": true,
+    "variants": [
+      {
+        "id": "apple-homepod-mini-cosmic-grey-v1",
+        "sku": "EL-APPLE-HOMEPOD-MINI-COSMIC-GREY-01",
+        "color": "Серый космос",
+        "colorHex": "#55565b",
+        "storage": "Стандарт",
+        "price": 11990,
+        "oldPrice": 13990,
+        "stock": 13,
+        "images": [
+          "/products/apple-homepod-mini-cosmic-grey-verified-spacegray-1.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "apple-homepod-mini-cosmic-grey-v2",
+        "sku": "EL-APPLE-HOMEPOD-MINI-COSMIC-GREY-02",
+        "color": "Белый",
+        "colorHex": "#e9e9e7",
+        "storage": "Стандарт",
+        "price": 11990,
+        "oldPrice": 13990,
+        "stock": 20,
+        "images": [
+          "/products/apple-homepod-mini-cosmic-grey-verified-white-1.webp"
+        ],
+        "active": true
+      }
+    ],
+    "subcategory": "Умные колонки"
+  },
+  {
+    "id": "nintendo-switch",
+    "slug": "nintendo-switch",
+    "name": "Nintendo Switch",
+    "brand": "Nintendo",
+    "category": "gaming",
+    "description": "Играйте дома и берите игру с собой. Откройте новые игровые миры и проводите время за любимыми играми. Игры и подписки приобретаются отдельно.",
+    "tagline": "Играйте дома и берите игру с собой",
+    "images": [
+      "/products/nintendo-switch-1.webp"
+    ],
+    "specs": {
+      "Экран": "6,2″ LCD, 1280 × 720",
+      "Режимы": "ТВ, настольный, портативный",
+      "Накопитель": "32 ГБ, поддержка microSD",
+      "Контроллеры": "Съёмные Joy-Con"
+    },
+    "features": [
+      "6,2″ LCD, 1280 × 720",
+      "ТВ, настольный, портативный",
+      "32 ГБ, поддержка microSD"
+    ],
+    "inBox": [
+      "Nintendo Switch",
+      "Документация",
+      "Контроллер",
+      "Кабель питания",
+      "Кабель HDMI"
+    ],
+    "rating": 0,
+    "reviewCount": 0,
+    "featured": true,
+    "variants": [
+      {
+        "id": "nintendo-switch-v1",
+        "sku": "EL-NINTENDO-SWITCH-01",
+        "color": "Неоновый красный и синий",
+        "colorHex": "#3da9da",
+        "storage": "32 ГБ",
+        "price": 26990,
+        "oldPrice": 30990,
+        "stock": 25,
+        "images": [
+          "/products/nintendo-switch-1.webp"
+        ],
+        "active": true
+      }
+    ],
+    "subcategory": "Игровые консоли"
+  },
+  {
+    "id": "canon-eos-r6",
+    "slug": "canon-eos-r6",
+    "name": "Canon EOS R6 + RF 85mm F2 Macro IS STM",
+    "brand": "Canon",
+    "category": "cameras",
+    "description": "Уверенность в каждом кадре. Инструмент для тех, кто ценит качество изображения и хочет управлять результатом съёмки.",
+    "tagline": "Уверенность в каждом кадре",
+    "images": [
+      "/products/canon-eos-r6-clean.webp",
+      "/products/canon-eos-r6-reference.webp"
+    ],
+    "specs": {
+      "Матрица": "Полнокадровая CMOS, 20,1 Мп",
+      "Байонет": "Canon RF",
+      "Видео": "4K до 60 кадров/с",
+      "Стабилизация": "Встроенная стабилизация матрицы",
+      "Объектив": "RF 85mm F2 Macro IS STM"
+    },
+    "features": [
+      "Полнокадровая CMOS, 20,1 Мп",
+      "Canon RF",
+      "4K до 60 кадров/с"
+    ],
+    "inBox": [
+      "Canon EOS R6",
+      "Объектив RF 85mm F2 Macro IS STM",
+      "Аккумулятор LP-E6NH",
+      "Зарядное устройство",
+      "Ремень",
+      "Документация"
+    ],
+    "rating": 0,
+    "reviewCount": 0,
+    "featured": true,
+    "variants": [
+      {
+        "id": "canon-eos-r6-v1",
+        "sku": "EL-CANON-EOS-R6-01",
+        "color": "Чёрный",
+        "colorHex": "#272829",
+        "storage": "Kit 85 мм f/2",
+        "price": 199990,
+        "oldPrice": 219990,
+        "stock": 14,
+        "images": [
+          "/products/canon-eos-r6-clean.webp",
+          "/products/canon-eos-r6-reference.webp"
+        ],
+        "active": true
+      }
+    ],
+    "subcategory": "Беззеркальные камеры"
+  },
+  {
+    "id": "apple-airpods",
+    "slug": "apple-airpods",
+    "name": "Apple AirPods 3",
+    "brand": "Apple",
+    "category": "audio",
+    "description": "Музыка рядом. Подключение в одно касание. Любимые треки, подкасты и разговоры в удобном формате на каждый день.",
+    "tagline": "Музыка рядом. Подключение в одно касание",
+    "images": [
+      "/products/apple-airpods-1.webp",
+      "/products/apple-airpods-2.webp",
+      "/products/apple-airpods-3.webp"
+    ],
+    "specs": {
+      "Конструкция": "Беспроводные вкладыши",
+      "Чип": "Apple H1",
+      "Подключение": "Bluetooth 5.0",
+      "Автономность": "До 6 часов прослушивания"
+    },
+    "features": [
+      "Беспроводные вкладыши",
+      "Apple H1",
+      "Bluetooth 5.0"
+    ],
+    "inBox": [
+      "Apple AirPods 3",
+      "Зарядный футляр",
+      "Кабель Lightning / USB-C",
+      "Документация"
+    ],
+    "rating": 0,
+    "reviewCount": 0,
+    "featured": true,
+    "variants": [
+      {
+        "id": "apple-airpods-v1",
+        "sku": "EL-APPLE-AIRPODS-01",
+        "color": "Белый",
+        "colorHex": "#f6f6f7",
+        "storage": "Стандарт",
+        "price": 10990,
+        "oldPrice": 12990,
+        "stock": 21,
+        "images": [
+          "/products/apple-airpods-1.webp",
+          "/products/apple-airpods-2.webp",
+          "/products/apple-airpods-3.webp"
+        ],
+        "active": true
+      }
+    ],
+    "subcategory": "Наушники"
+  },
+  {
+    "id": "iphone-x",
+    "slug": "iphone-x",
+    "name": "Apple iPhone X",
+    "brand": "Apple",
+    "category": "smartphones",
+    "description": "Классический дизайн с экраном от края до края. Для общения, фотографий и привычных приложений. Выберите цвет и объём памяти, которые подходят именно вам.",
+    "tagline": "Классический дизайн с экраном от края до края",
+    "images": [
+      "/products/iphone-x-gray-1.webp",
+      "/products/iphone-x-gray-2.webp"
+    ],
+    "specs": {
+      "Экран": "5,8″ Super Retina OLED",
+      "Процессор": "Apple A11 Bionic",
+      "Камеры": "12 + 12 Мп",
+      "Разъём": "Lightning",
+      "Доступная память": "64 ГБ / 256 ГБ",
+      "Аутентификация": "Face ID",
+      "Беспроводная зарядка": "Qi"
+    },
+    "features": [
+      "5,8″ Super Retina OLED",
+      "Apple A11 Bionic",
+      "12 + 12 Мп"
+    ],
+    "inBox": [
+      "Apple iPhone X",
+      "Документация",
+      "Кабель для зарядки"
+    ],
+    "rating": 0,
+    "reviewCount": 0,
+    "featured": false,
+    "variants": [
+      {
+        "id": "iphone-x-v1",
+        "sku": "EL-IPHONE-X-01",
+        "color": "Серый космос",
+        "colorHex": "#53545a",
+        "storage": "64 ГБ",
+        "price": 19990,
+        "oldPrice": 22990,
+        "stock": 7,
+        "images": [
+          "/products/iphone-x-gray-1.webp",
+          "/products/iphone-x-gray-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "iphone-x-v2",
+        "sku": "EL-IPHONE-X-02",
+        "color": "Серый космос",
+        "colorHex": "#53545a",
+        "storage": "256 ГБ",
+        "price": 31990,
+        "oldPrice": 36990,
+        "stock": 14,
+        "images": [
+          "/products/iphone-x-gray-1.webp",
+          "/products/iphone-x-gray-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "iphone-x-v3",
+        "sku": "EL-IPHONE-X-03",
+        "color": "Серебристый",
+        "colorHex": "#e9e9e6",
+        "storage": "64 ГБ",
+        "price": 19990,
+        "oldPrice": 22990,
+        "stock": 21,
+        "images": [
+          "/products/iphone-x-silver-1.webp",
+          "/products/iphone-x-silver-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "iphone-x-v4",
+        "sku": "EL-IPHONE-X-04",
+        "color": "Серебристый",
+        "colorHex": "#e9e9e6",
+        "storage": "256 ГБ",
+        "price": 31990,
+        "oldPrice": 36990,
+        "stock": 5,
+        "images": [
+          "/products/iphone-x-silver-1.webp",
+          "/products/iphone-x-silver-2.webp"
+        ],
+        "active": true
+      }
+    ],
+    "subcategory": "iPhone"
+  },
+  {
+    "id": "oppo-a57",
+    "slug": "oppo-a57",
+    "name": "OPPO A57 (2016)",
+    "brand": "OPPO",
+    "category": "smartphones",
+    "description": "Большой экран для повседневных задач. Для общения, фотографий и привычных приложений. Выберите цвет и объём памяти, которые подходят именно вам.",
+    "tagline": "Большой экран для повседневных задач",
+    "images": [
+      "/products/oppo-a57-3.webp",
+      "/products/oppo-a57-2.webp",
+      "/products/oppo-a57-1.webp"
+    ],
+    "specs": {
+      "Экран": "5,2″ IPS, HD",
+      "Процессор": "Qualcomm Snapdragon 435",
+      "Фронтальная камера": "16 Мп",
+      "Аккумулятор": "2900 мА·ч"
+    },
+    "features": [
+      "5,2″ IPS, HD",
+      "Qualcomm Snapdragon 435",
+      "16 Мп"
+    ],
+    "inBox": [
+      "OPPO A57",
+      "Кабель micro-USB",
+      "Адаптер питания",
+      "Документация"
+    ],
+    "rating": 0,
+    "reviewCount": 0,
+    "featured": false,
+    "variants": [
+      {
+        "id": "oppo-a57-v1",
+        "sku": "EL-OPPO-A57-01",
+        "color": "Золотистый",
+        "colorHex": "#d9c093",
+        "storage": "32 ГБ",
+        "price": 8990,
+        "oldPrice": 10990,
+        "stock": 10,
+        "images": [
+          "/products/oppo-a57-3.webp",
+          "/products/oppo-a57-2.webp",
+          "/products/oppo-a57-1.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "oppo-a57-v2",
+        "sku": "EL-OPPO-A57-02",
+        "color": "Светящийся чёрный",
+        "colorHex": "#262c30",
+        "storage": "64 ГБ",
+        "price": 12990,
+        "oldPrice": 14990,
+        "stock": 17,
+        "active": false,
+        "images": []
+      }
+    ],
+    "subcategory": "Android"
+  },
+  {
+    "id": "oppo-f19-pro-plus",
+    "slug": "oppo-f19-pro-plus",
+    "name": "OPPO F19 Pro+ 5G",
+    "brand": "OPPO",
+    "category": "smartphones",
+    "description": "Портреты с характером и быстрая зарядка. Для общения, фотографий и привычных приложений. Выберите цвет и объём памяти, которые подходят именно вам.",
+    "tagline": "Портреты с характером и быстрая зарядка",
+    "images": [
+      "/products/oppo-f19-pro-plus-3.webp",
+      "/products/oppo-f19-pro-plus-2.webp",
+      "/products/oppo-f19-pro-plus-1.webp"
+    ],
+    "specs": {
+      "Экран": "6,43″ AMOLED",
+      "Процессор": "MediaTek Dimensity 800U",
+      "Камеры": "48 + 8 + 2 + 2 Мп",
+      "Зарядка": "50 Вт"
+    },
+    "features": [
+      "6,43″ AMOLED",
+      "MediaTek Dimensity 800U",
+      "48 + 8 + 2 + 2 Мп"
+    ],
+    "inBox": [
+      "OPPO F19 Pro+ 5G",
+      "Документация",
+      "Кабель для зарядки"
+    ],
+    "rating": 0,
+    "reviewCount": 0,
+    "featured": false,
+    "variants": [
+      {
+        "id": "oppo-f19-pro-plus-v1",
+        "sku": "EL-OPPO-F19-PRO-PLUS-01",
+        "color": "Чёрный",
+        "colorHex": "#2d3036",
+        "storage": "128 ГБ",
+        "price": 24990,
+        "oldPrice": 28990,
+        "stock": 13,
+        "images": [
+          "/products/oppo-f19-pro-plus-3.webp",
+          "/products/oppo-f19-pro-plus-2.webp",
+          "/products/oppo-f19-pro-plus-1.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "oppo-f19-pro-plus-v2",
+        "sku": "EL-OPPO-F19-PRO-PLUS-02",
+        "color": "Серебристый",
+        "colorHex": "#c9cbcf",
+        "storage": "128 ГБ",
+        "price": 24990,
+        "oldPrice": 28990,
+        "stock": 20,
+        "images": [],
+        "active": false
+      }
+    ],
+    "subcategory": "Android"
+  },
+  {
+    "id": "oppo-k1",
+    "slug": "oppo-k1",
+    "name": "OPPO K1",
+    "brand": "OPPO",
+    "category": "smartphones",
+    "description": "AMOLED-экран и тонкий силуэт. Для общения, фотографий и привычных приложений. Выберите цвет и объём памяти, которые подходят именно вам.",
+    "tagline": "AMOLED-экран и тонкий силуэт",
+    "images": [
+      "/products/oppo-k1-3.webp",
+      "/products/oppo-k1-2.webp",
+      "/products/oppo-k1-1.webp"
+    ],
+    "specs": {
+      "Экран": "6,4″ AMOLED",
+      "Процессор": "Qualcomm Snapdragon 660",
+      "Камеры": "16 + 2 Мп",
+      "Аккумулятор": "3600 мА·ч"
+    },
+    "features": [
+      "6,4″ AMOLED",
+      "Qualcomm Snapdragon 660",
+      "16 + 2 Мп"
+    ],
+    "inBox": [
+      "OPPO K1",
+      "Документация",
+      "Кабель для зарядки"
+    ],
+    "rating": 0,
+    "reviewCount": 0,
+    "featured": false,
+    "variants": [
+      {
+        "id": "oppo-k1-v1",
+        "sku": "EL-OPPO-K1-01",
+        "color": "Астральный синий",
+        "colorHex": "#345497",
+        "storage": "64 ГБ",
+        "price": 14990,
+        "oldPrice": 16990,
+        "stock": 16,
+        "images": [
+          "/products/oppo-k1-3.webp",
+          "/products/oppo-k1-2.webp",
+          "/products/oppo-k1-1.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "oppo-k1-v2",
+        "sku": "EL-OPPO-K1-02",
+        "color": "Чёрный",
+        "colorHex": "#252831",
+        "storage": "64 ГБ",
+        "price": 14990,
+        "oldPrice": 16990,
+        "stock": 0,
+        "images": [],
+        "active": false
+      }
+    ],
+    "badge": "Выгодно",
+    "subcategory": "Android"
+  },
+  {
+    "id": "realme-c35",
+    "slug": "realme-c35",
+    "name": "realme C35",
+    "brand": "realme",
+    "category": "smartphones",
+    "description": "Всё необходимое на каждый день. Для общения, фотографий и привычных приложений. Выберите цвет и объём памяти, которые подходят именно вам.",
+    "tagline": "Всё необходимое на каждый день",
+    "images": [
+      "/products/realme-c35-3.webp",
+      "/products/realme-c35-2.webp",
+      "/products/realme-c35-1.webp"
+    ],
+    "specs": {
+      "Экран": "6,6″ IPS, 2408 × 1080",
+      "Процессор": "Unisoc T616",
+      "Основная камера": "50 Мп",
+      "Аккумулятор": "5000 мА·ч"
+    },
+    "features": [
+      "6,6″ IPS, 2408 × 1080",
+      "Unisoc T616",
+      "50 Мп"
+    ],
+    "inBox": [
+      "realme C35",
+      "Документация",
+      "Кабель для зарядки"
+    ],
+    "rating": 0,
+    "reviewCount": 0,
+    "featured": false,
+    "variants": [
+      {
+        "id": "realme-c35-v1",
+        "sku": "EL-REALME-C35-01",
+        "color": "Светящийся зелёный",
+        "colorHex": "#c4dec7",
+        "storage": "64 ГБ",
+        "price": 13990,
+        "oldPrice": 15990,
+        "stock": 19,
+        "images": [
+          "/products/realme-c35-3.webp",
+          "/products/realme-c35-2.webp",
+          "/products/realme-c35-1.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "realme-c35-v2",
+        "sku": "EL-REALME-C35-02",
+        "color": "Светящийся зелёный",
+        "colorHex": "#c4dec7",
+        "storage": "128 ГБ",
+        "price": 25990,
+        "oldPrice": 29990,
+        "stock": 26,
+        "images": [
+          "/products/realme-c35-3.webp",
+          "/products/realme-c35-2.webp",
+          "/products/realme-c35-1.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "realme-c35-v3",
+        "sku": "EL-REALME-C35-03",
+        "color": "Светящийся чёрный",
+        "colorHex": "#262d2d",
+        "storage": "64 ГБ",
+        "price": 13990,
+        "oldPrice": 15990,
+        "stock": 10,
+        "images": [],
+        "active": false
+      },
+      {
+        "id": "realme-c35-v4",
+        "sku": "EL-REALME-C35-04",
+        "color": "Светящийся чёрный",
+        "colorHex": "#262d2d",
+        "storage": "128 ГБ",
+        "price": 25990,
+        "oldPrice": 29990,
+        "stock": 17,
+        "images": [],
+        "active": false
+      }
+    ],
+    "subcategory": "Android"
+  },
+  {
+    "id": "realme-x",
+    "slug": "realme-x",
+    "name": "realme X",
+    "brand": "realme",
+    "category": "smartphones",
+    "description": "Экран без вырезов для полного погружения. Для общения, фотографий и привычных приложений. Выберите цвет и объём памяти, которые подходят именно вам.",
+    "tagline": "Экран без вырезов для полного погружения",
+    "images": [
+      "/products/realme-x-3.webp",
+      "/products/realme-x-2.webp",
+      "/products/realme-x-1.webp"
+    ],
+    "specs": {
+      "Экран": "6,53″ AMOLED",
+      "Процессор": "Qualcomm Snapdragon 710",
+      "Основная камера": "48 Мп",
+      "Фронтальная камера": "16 Мп, выдвижная"
+    },
+    "features": [
+      "6,53″ AMOLED",
+      "Qualcomm Snapdragon 710",
+      "48 Мп"
+    ],
+    "inBox": [
+      "realme X",
+      "Документация",
+      "Кабель для зарядки"
+    ],
+    "rating": 0,
+    "reviewCount": 0,
+    "featured": false,
+    "variants": [
+      {
+        "id": "realme-x-v1",
+        "sku": "EL-REALME-X-01",
+        "color": "Полярный белый",
+        "colorHex": "#edecec",
+        "storage": "128 ГБ",
+        "price": 17990,
+        "oldPrice": 20990,
+        "stock": 22,
+        "images": [],
+        "active": false
+      },
+      {
+        "id": "realme-x-v2",
+        "sku": "EL-REALME-X-02",
+        "color": "Синий",
+        "colorHex": "#475db2",
+        "storage": "128 ГБ",
+        "price": 17990,
+        "oldPrice": 20990,
+        "stock": 6,
+        "images": [
+          "/products/realme-x-3.webp",
+          "/products/realme-x-2.webp",
+          "/products/realme-x-1.webp"
+        ],
+        "active": true
+      }
+    ],
+    "subcategory": "Android"
+  },
+  {
+    "id": "realme-xt",
+    "slug": "realme-xt",
+    "name": "realme XT",
+    "brand": "realme",
+    "category": "smartphones",
+    "description": "Детали, которые хочется сохранить. Для общения, фотографий и привычных приложений. Выберите цвет и объём памяти, которые подходят именно вам.",
+    "tagline": "Детали, которые хочется сохранить",
+    "images": [
+      "/products/realme-xt-3.webp",
+      "/products/realme-xt-2.webp",
+      "/products/realme-xt-1.webp"
+    ],
+    "specs": {
+      "Экран": "6,4″ Super AMOLED",
+      "Процессор": "Qualcomm Snapdragon 712",
+      "Основная камера": "64 Мп",
+      "Аккумулятор": "4000 мА·ч"
+    },
+    "features": [
+      "6,4″ Super AMOLED",
+      "Qualcomm Snapdragon 712",
+      "64 Мп"
+    ],
+    "inBox": [
+      "realme XT",
+      "Документация",
+      "Кабель для зарядки"
+    ],
+    "rating": 0,
+    "reviewCount": 0,
+    "featured": false,
+    "variants": [
+      {
+        "id": "realme-xt-v1",
+        "sku": "EL-REALME-XT-01",
+        "color": "Жемчужно-белый",
+        "colorHex": "#e5e4ec",
+        "storage": "64 ГБ",
+        "price": 19990,
+        "oldPrice": 22990,
+        "stock": 25,
+        "images": [],
+        "active": false
+      },
+      {
+        "id": "realme-xt-v2",
+        "sku": "EL-REALME-XT-02",
+        "color": "Жемчужно-белый",
+        "colorHex": "#e5e4ec",
+        "storage": "128 ГБ",
+        "price": 31990,
+        "oldPrice": 36990,
+        "stock": 9,
+        "images": [],
+        "active": false
+      },
+      {
+        "id": "realme-xt-v3",
+        "sku": "EL-REALME-XT-03",
+        "color": "Жемчужно-синий",
+        "colorHex": "#41569c",
+        "storage": "64 ГБ",
+        "price": 19990,
+        "oldPrice": 22990,
+        "stock": 16,
+        "images": [
+          "/products/realme-xt-3.webp",
+          "/products/realme-xt-2.webp",
+          "/products/realme-xt-1.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "realme-xt-v4",
+        "sku": "EL-REALME-XT-04",
+        "color": "Жемчужно-синий",
+        "colorHex": "#41569c",
+        "storage": "128 ГБ",
+        "price": 31990,
+        "oldPrice": 36990,
+        "stock": 23,
+        "images": [
+          "/products/realme-xt-3.webp",
+          "/products/realme-xt-2.webp",
+          "/products/realme-xt-1.webp"
+        ],
+        "active": true
+      }
+    ],
+    "subcategory": "Android"
+  },
+  {
+    "id": "samsung-galaxy-s7",
+    "slug": "samsung-galaxy-s7",
+    "name": "Samsung Galaxy S7",
+    "brand": "Samsung",
+    "category": "smartphones",
+    "description": "Компактный формат и выразительный экран. Для общения, фотографий и привычных приложений. Выберите цвет и объём памяти, которые подходят именно вам.",
+    "tagline": "Компактный формат и выразительный экран",
+    "images": [
+      "/products/samsung-galaxy-s7-3.webp",
+      "/products/samsung-galaxy-s7-2.webp",
+      "/products/samsung-galaxy-s7-1.webp"
+    ],
+    "specs": {
+      "Экран": "5,1″ Super AMOLED",
+      "Защита": "IP68",
+      "Основная камера": "12 Мп, Dual Pixel",
+      "Аккумулятор": "3000 мА·ч"
+    },
+    "features": [
+      "5,1″ Super AMOLED",
+      "IP68",
+      "12 Мп, Dual Pixel"
+    ],
+    "inBox": [
+      "Samsung Galaxy S7",
+      "Документация",
+      "Кабель для зарядки"
+    ],
+    "rating": 0,
+    "reviewCount": 0,
+    "featured": false,
+    "variants": [
+      {
+        "id": "samsung-galaxy-s7-v1",
+        "sku": "EL-SAMSUNG-GALAXY-S7-01",
+        "color": "Чёрный оникс",
+        "colorHex": "#25282b",
+        "storage": "32 ГБ",
+        "price": 14990,
+        "oldPrice": 16990,
+        "stock": 5,
+        "images": [
+          "/products/samsung-galaxy-s7-3.webp",
+          "/products/samsung-galaxy-s7-2.webp",
+          "/products/samsung-galaxy-s7-1.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "samsung-galaxy-s7-v2",
+        "sku": "EL-SAMSUNG-GALAXY-S7-02",
+        "color": "Золотистый",
+        "colorHex": "#d6c59e",
+        "storage": "32 ГБ",
+        "price": 14990,
+        "oldPrice": 16990,
+        "stock": 12,
+        "images": [],
+        "active": false
+      }
+    ],
+    "badge": "Выгодно",
+    "subcategory": "Android"
+  },
+  {
+    "id": "samsung-galaxy-s8",
+    "slug": "samsung-galaxy-s8",
+    "name": "Samsung Galaxy S8",
+    "brand": "Samsung",
+    "category": "smartphones",
+    "description": "Плавные линии экрана Infinity Display. Для общения, фотографий и привычных приложений. Выберите цвет и объём памяти, которые подходят именно вам.",
+    "tagline": "Плавные линии экрана Infinity Display",
+    "images": [
+      "/products/samsung-galaxy-s8-3.webp",
+      "/products/samsung-galaxy-s8-2.webp",
+      "/products/samsung-galaxy-s8-1.webp"
+    ],
+    "specs": {
+      "Экран": "5,8″ Super AMOLED",
+      "Разрешение": "2960 × 1440",
+      "Основная камера": "12 Мп",
+      "Аккумулятор": "3000 мА·ч"
+    },
+    "features": [
+      "5,8″ Super AMOLED",
+      "2960 × 1440",
+      "12 Мп"
+    ],
+    "inBox": [
+      "Samsung Galaxy S8",
+      "Документация",
+      "Кабель для зарядки"
+    ],
+    "rating": 0,
+    "reviewCount": 0,
+    "featured": false,
+    "variants": [
+      {
+        "id": "samsung-galaxy-s8-v1",
+        "sku": "EL-SAMSUNG-GALAXY-S8-01",
+        "color": "Чёрный бриллиант",
+        "colorHex": "#25262a",
+        "storage": "64 ГБ",
+        "price": 18990,
+        "oldPrice": 21990,
+        "stock": 8,
+        "images": [
+          "/products/samsung-galaxy-s8-3.webp",
+          "/products/samsung-galaxy-s8-2.webp",
+          "/products/samsung-galaxy-s8-1.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "samsung-galaxy-s8-v2",
+        "sku": "EL-SAMSUNG-GALAXY-S8-02",
+        "color": "Серый орхидея",
+        "colorHex": "#a09ba9",
+        "storage": "64 ГБ",
+        "price": 18990,
+        "oldPrice": 21990,
+        "stock": 15,
+        "images": [],
+        "active": false
+      }
+    ],
+    "subcategory": "Android"
+  },
+  {
+    "id": "samsung-galaxy-s10",
+    "slug": "samsung-galaxy-s10",
+    "name": "Samsung Galaxy S10+",
+    "brand": "Samsung",
+    "category": "smartphones",
+    "description": "Три камеры для вашего взгляда на мир. Для общения, фотографий и привычных приложений. Выберите цвет и объём памяти, которые подходят именно вам.",
+    "tagline": "Три камеры для вашего взгляда на мир",
+    "images": [
+      "/products/samsung-galaxy-s10-3.webp",
+      "/products/samsung-galaxy-s10-2.webp",
+      "/products/samsung-galaxy-s10-1.webp"
+    ],
+    "specs": {
+      "Экран": "6,4″ Dynamic AMOLED",
+      "Камеры": "12 + 12 + 16 Мп",
+      "Аккумулятор": "4100 мА·ч",
+      "Защита": "IP68"
+    },
+    "features": [
+      "6,4″ Dynamic AMOLED",
+      "12 + 12 + 16 Мп",
+      "4100 мА·ч"
+    ],
+    "inBox": [
+      "Samsung Galaxy S10+",
+      "Кабель USB-C",
+      "Документация"
+    ],
+    "rating": 0,
+    "reviewCount": 0,
+    "featured": false,
+    "variants": [
+      {
+        "id": "samsung-galaxy-s10-v1",
+        "sku": "EL-SAMSUNG-GALAXY-S10-01",
+        "color": "Перламутр",
+        "colorHex": "#e0e5e7",
+        "storage": "128 ГБ",
+        "price": 27990,
+        "oldPrice": 31990,
+        "stock": 11,
+        "images": [],
+        "active": false
+      },
+      {
+        "id": "samsung-galaxy-s10-v2",
+        "sku": "EL-SAMSUNG-GALAXY-S10-02",
+        "color": "Перламутр",
+        "colorHex": "#e0e5e7",
+        "storage": "512 ГБ",
+        "price": 39990,
+        "oldPrice": 45990,
+        "stock": 18,
+        "images": [],
+        "active": false
+      },
+      {
+        "id": "samsung-galaxy-s10-v3",
+        "sku": "EL-SAMSUNG-GALAXY-S10-03",
+        "color": "Оникс",
+        "colorHex": "#272c32",
+        "storage": "128 ГБ",
+        "price": 27990,
+        "oldPrice": 31990,
+        "stock": 25,
+        "images": [
+          "/products/samsung-galaxy-s10-3.webp",
+          "/products/samsung-galaxy-s10-2.webp",
+          "/products/samsung-galaxy-s10-1.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "samsung-galaxy-s10-v4",
+        "sku": "EL-SAMSUNG-GALAXY-S10-04",
+        "color": "Оникс",
+        "colorHex": "#272c32",
+        "storage": "512 ГБ",
+        "price": 39990,
+        "oldPrice": 45990,
+        "stock": 9,
+        "images": [],
+        "active": false
+      }
+    ],
+    "subcategory": "Android"
+  },
+  {
+    "id": "vivo-s1",
+    "slug": "vivo-s1",
+    "name": "vivo S1",
+    "brand": "vivo",
+    "category": "smartphones",
+    "description": "Яркие селфи и запас энергии. Для общения, фотографий и привычных приложений. Выберите цвет и объём памяти, которые подходят именно вам.",
+    "tagline": "Яркие селфи и запас энергии",
+    "images": [
+      "/products/vivo-s1-3.webp",
+      "/products/vivo-s1-2.webp",
+      "/products/vivo-s1-1.webp"
+    ],
+    "specs": {
+      "Экран": "6,38″ Super AMOLED",
+      "Процессор": "MediaTek Helio P65",
+      "Фронтальная камера": "32 Мп",
+      "Аккумулятор": "4500 мА·ч"
+    },
+    "features": [
+      "6,38″ Super AMOLED",
+      "MediaTek Helio P65",
+      "32 Мп"
+    ],
+    "inBox": [
+      "vivo S1",
+      "Документация",
+      "Кабель для зарядки"
+    ],
+    "rating": 0,
+    "reviewCount": 0,
+    "featured": false,
+    "variants": [
+      {
+        "id": "vivo-s1-v1",
+        "sku": "EL-VIVO-S1-01",
+        "color": "Алмазный чёрный",
+        "colorHex": "#282c35",
+        "storage": "128 ГБ",
+        "price": 15990,
+        "oldPrice": 18990,
+        "stock": 14,
+        "images": [],
+        "active": false
+      },
+      {
+        "id": "vivo-s1-v2",
+        "sku": "EL-VIVO-S1-02",
+        "color": "Небесно-голубой",
+        "colorHex": "#8cbec9",
+        "storage": "128 ГБ",
+        "price": 15990,
+        "oldPrice": 18990,
+        "stock": 21,
+        "images": [
+          "/products/vivo-s1-3.webp",
+          "/products/vivo-s1-2.webp",
+          "/products/vivo-s1-1.webp"
+        ],
+        "active": true
+      }
+    ],
+    "subcategory": "Android"
+  },
+  {
+    "id": "vivo-v9",
+    "slug": "vivo-v9",
+    "name": "vivo V9",
+    "brand": "vivo",
+    "category": "smartphones",
+    "description": "Большой экран в лёгком корпусе. Для общения, фотографий и привычных приложений. Выберите цвет и объём памяти, которые подходят именно вам.",
+    "tagline": "Большой экран в лёгком корпусе",
+    "images": [
+      "/products/vivo-v9-3.webp",
+      "/products/vivo-v9-2.webp",
+      "/products/vivo-v9-1.webp"
+    ],
+    "specs": {
+      "Экран": "6,3″ IPS",
+      "Процессор": "Qualcomm Snapdragon 626",
+      "Фронтальная камера": "24 Мп",
+      "Основные камеры": "16 + 5 Мп"
+    },
+    "features": [
+      "6,3″ IPS",
+      "Qualcomm Snapdragon 626",
+      "24 Мп"
+    ],
+    "inBox": [
+      "vivo V9",
+      "Документация",
+      "Кабель для зарядки"
+    ],
+    "rating": 0,
+    "reviewCount": 0,
+    "featured": false,
+    "variants": [
+      {
+        "id": "vivo-v9-v1",
+        "sku": "EL-VIVO-V9-01",
+        "color": "Чёрный",
+        "colorHex": "#282828",
+        "storage": "64 ГБ",
+        "price": 12990,
+        "oldPrice": 14990,
+        "stock": 17,
+        "images": [],
+        "active": false
+      },
+      {
+        "id": "vivo-v9-v2",
+        "sku": "EL-VIVO-V9-02",
+        "color": "Золотистый",
+        "colorHex": "#d7bf97",
+        "storage": "64 ГБ",
+        "price": 12990,
+        "oldPrice": 14990,
+        "stock": 24,
+        "images": [
+          "/products/vivo-v9-3.webp",
+          "/products/vivo-v9-2.webp",
+          "/products/vivo-v9-1.webp"
+        ],
+        "active": true
+      }
+    ],
+    "badge": "Выгодно",
+    "subcategory": "Android"
+  },
+  {
+    "id": "vivo-x21",
+    "slug": "vivo-x21",
+    "name": "vivo X21",
+    "brand": "vivo",
+    "category": "smartphones",
+    "description": "AMOLED для фото, видео и общения. Для общения, фотографий и привычных приложений. Выберите цвет и объём памяти, которые подходят именно вам.",
+    "tagline": "AMOLED для фото, видео и общения",
+    "images": [
+      "/products/vivo-x21-3.webp",
+      "/products/vivo-x21-2.webp",
+      "/products/vivo-x21-1.webp"
+    ],
+    "specs": {
+      "Экран": "6,28″ Super AMOLED",
+      "Процессор": "Qualcomm Snapdragon 660",
+      "Камеры": "12 + 5 Мп",
+      "Аккумулятор": "3200 мА·ч"
+    },
+    "features": [
+      "6,28″ Super AMOLED",
+      "Qualcomm Snapdragon 660",
+      "12 + 5 Мп"
+    ],
+    "inBox": [
+      "vivo X21",
+      "Документация",
+      "Кабель для зарядки"
+    ],
+    "rating": 0,
+    "reviewCount": 0,
+    "featured": false,
+    "variants": [
+      {
+        "id": "vivo-x21-v1",
+        "sku": "EL-VIVO-X21-01",
+        "color": "Чёрный",
+        "colorHex": "#252529",
+        "storage": "128 ГБ",
+        "price": 18990,
+        "oldPrice": 21990,
+        "stock": 20,
+        "images": [],
+        "active": false
+      },
+      {
+        "id": "vivo-x21-v2",
+        "sku": "EL-VIVO-X21-02",
+        "color": "Красный",
+        "colorHex": "#a93844",
+        "storage": "128 ГБ",
+        "price": 18990,
+        "oldPrice": 21990,
+        "stock": 0,
+        "images": [
+          "/products/vivo-x21-3.webp",
+          "/products/vivo-x21-2.webp",
+          "/products/vivo-x21-1.webp"
+        ],
+        "active": true
+      }
+    ],
+    "subcategory": "Android"
+  },
+  {
+    "id": "asus-zenbook-pro-dual-screen-laptop",
+    "slug": "asus-zenbook-pro-dual-screen-laptop",
+    "name": "ASUS Zenbook Pro Duo UX581",
+    "brand": "ASUS",
+    "category": "laptops",
+    "description": "Два экрана для одного большого замысла. Для работы, творчества и повседневных задач. Продуманная конструкция помогает сосредоточиться на главном.",
+    "tagline": "Два экрана для одного большого замысла",
+    "images": [
+      "/products/asus-zenbook-pro-dual-screen-laptop-1.webp",
+      "/products/asus-zenbook-pro-dual-screen-laptop-2.webp",
+      "/products/asus-zenbook-pro-dual-screen-laptop-3.webp"
+    ],
+    "specs": {
+      "Основной экран": "15,6″ OLED, 4K",
+      "Второй экран": "ScreenPad Plus, 14″",
+      "Формат": "Ноутбук с двумя дисплеями",
+      "Линейка": "Zenbook Pro Duo UX581"
+    },
+    "features": [
+      "15,6″ OLED, 4K",
+      "ScreenPad Plus, 14″",
+      "Ноутбук с двумя дисплеями"
+    ],
+    "inBox": [
+      "ASUS Zenbook Pro Duo UX581",
+      "Документация",
+      "Адаптер питания"
+    ],
+    "rating": 0,
+    "reviewCount": 0,
+    "featured": false,
+    "variants": [
+      {
+        "id": "asus-zenbook-pro-dual-screen-laptop-v1",
+        "sku": "EL-ASUS-ZENBOOK-PRO-DUAL-SCREEN-LAPTOP-01",
+        "color": "Небесно-голубой",
+        "colorHex": "#778b98",
+        "storage": "1 ТБ",
+        "price": 149990,
+        "oldPrice": 169990,
+        "stock": 26,
+        "images": [
+          "/products/asus-zenbook-pro-dual-screen-laptop-1.webp",
+          "/products/asus-zenbook-pro-dual-screen-laptop-2.webp",
+          "/products/asus-zenbook-pro-dual-screen-laptop-3.webp"
+        ],
+        "active": true
+      }
+    ],
+    "subcategory": "Ультрабуки"
+  },
+  {
+    "id": "huawei-matebook-x-pro",
+    "slug": "huawei-matebook-x-pro",
+    "name": "Huawei MateBook X Pro (2020)",
+    "brand": "Huawei",
+    "category": "laptops",
+    "description": "Больше пространства для работы. Для работы, творчества и повседневных задач. Продуманная конструкция помогает сосредоточиться на главном.",
+    "tagline": "Больше пространства для работы",
+    "images": [
+      "/products/huawei-matebook-x-pro-1.webp",
+      "/products/huawei-matebook-x-pro-2.webp",
+      "/products/huawei-matebook-x-pro-3.webp"
+    ],
+    "specs": {
+      "Экран": "13,9″, 3000 × 2000, сенсорный",
+      "Соотношение сторон": "3:2",
+      "Оперативная память": "16 ГБ",
+      "Материал": "Металлический корпус"
+    },
+    "features": [
+      "13,9″, 3000 × 2000, сенсорный",
+      "3:2",
+      "16 ГБ"
+    ],
+    "inBox": [
+      "Huawei MateBook X Pro (2020)",
+      "Документация",
+      "Адаптер питания"
+    ],
+    "rating": 0,
+    "reviewCount": 0,
+    "featured": false,
+    "variants": [
+      {
+        "id": "huawei-matebook-x-pro-v1",
+        "sku": "EL-HUAWEI-MATEBOOK-X-PRO-01",
+        "color": "Серый космос",
+        "colorHex": "#858a91",
+        "storage": "512 ГБ",
+        "price": 79990,
+        "oldPrice": 90990,
+        "stock": 6,
+        "images": [
+          "/products/huawei-matebook-x-pro-1.webp",
+          "/products/huawei-matebook-x-pro-2.webp",
+          "/products/huawei-matebook-x-pro-3.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "huawei-matebook-x-pro-v2",
+        "sku": "EL-HUAWEI-MATEBOOK-X-PRO-02",
+        "color": "Серый космос",
+        "colorHex": "#858a91",
+        "storage": "1 ТБ",
+        "price": 91990,
+        "oldPrice": 103990,
+        "stock": 13,
+        "images": [
+          "/products/huawei-matebook-x-pro-1.webp",
+          "/products/huawei-matebook-x-pro-2.webp",
+          "/products/huawei-matebook-x-pro-3.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "huawei-matebook-x-pro-v3",
+        "sku": "EL-HUAWEI-MATEBOOK-X-PRO-03",
+        "color": "Изумрудный",
+        "colorHex": "#365953",
+        "storage": "512 ГБ",
+        "price": 79990,
+        "oldPrice": 90990,
+        "stock": 20,
+        "images": [],
+        "active": false
+      },
+      {
+        "id": "huawei-matebook-x-pro-v4",
+        "sku": "EL-HUAWEI-MATEBOOK-X-PRO-04",
+        "color": "Изумрудный",
+        "colorHex": "#365953",
+        "storage": "1 ТБ",
+        "price": 91990,
+        "oldPrice": 103990,
+        "stock": 4,
+        "images": [],
+        "active": false
+      }
+    ],
+    "badge": "Выгодно",
+    "subcategory": "Ультрабуки"
+  },
+  {
+    "id": "lenovo-yoga-920",
+    "slug": "lenovo-yoga-920",
+    "name": "Lenovo Yoga 920",
+    "brand": "Lenovo",
+    "category": "laptops",
+    "description": "Работайте в удобном для вас режиме. Для работы, творчества и повседневных задач. Продуманная конструкция помогает сосредоточиться на главном.",
+    "tagline": "Работайте в удобном для вас режиме",
+    "images": [
+      "/products/lenovo-yoga-920-1.webp",
+      "/products/lenovo-yoga-920-2.webp",
+      "/products/lenovo-yoga-920-3.webp"
+    ],
+    "specs": {
+      "Экран": "13,9″, сенсорный",
+      "Формат": "Трансформер, раскрытие 360°",
+      "Процессор": "Intel Core, 8-е поколение",
+      "Разъёмы": "USB-C / Thunderbolt 3"
+    },
+    "features": [
+      "13,9″, сенсорный",
+      "Трансформер, раскрытие 360°",
+      "Intel Core, 8-е поколение"
+    ],
+    "inBox": [
+      "Lenovo Yoga 920",
+      "Документация",
+      "Адаптер питания"
+    ],
+    "rating": 0,
+    "reviewCount": 0,
+    "featured": false,
+    "variants": [
+      {
+        "id": "lenovo-yoga-920-v1",
+        "sku": "EL-LENOVO-YOGA-920-01",
+        "color": "Бронзовый",
+        "colorHex": "#a38c73",
+        "storage": "512 ГБ",
+        "price": 69990,
+        "oldPrice": 79990,
+        "stock": 9,
+        "images": [],
+        "active": false
+      },
+      {
+        "id": "lenovo-yoga-920-v2",
+        "sku": "EL-LENOVO-YOGA-920-02",
+        "color": "Серебристый",
+        "colorHex": "#c6c9ca",
+        "storage": "512 ГБ",
+        "price": 69990,
+        "oldPrice": 79990,
+        "stock": 16,
+        "images": [
+          "/products/lenovo-yoga-920-1.webp",
+          "/products/lenovo-yoga-920-2.webp",
+          "/products/lenovo-yoga-920-3.webp"
+        ],
+        "active": true
+      }
+    ],
+    "subcategory": "Ультрабуки"
+  },
+  {
+    "id": "new-dell-xps-13-9300-laptop",
+    "slug": "new-dell-xps-13-9300-laptop",
+    "name": "Dell XPS 13 9300",
+    "brand": "Dell",
+    "category": "laptops",
+    "description": "Компактный ноутбук с большим характером. Для работы, творчества и повседневных задач. Продуманная конструкция помогает сосредоточиться на главном.",
+    "tagline": "Компактный ноутбук с большим характером",
+    "images": [
+      "/products/new-dell-xps-13-9300-laptop-1.webp",
+      "/products/new-dell-xps-13-9300-laptop-2.webp",
+      "/products/new-dell-xps-13-9300-laptop-3.webp"
+    ],
+    "specs": {
+      "Экран": "13,4″ InfinityEdge",
+      "Соотношение сторон": "16:10",
+      "Процессор": "Intel Core, 10-е поколение",
+      "Разъёмы": "Thunderbolt 3, microSD"
+    },
+    "features": [
+      "13,4″ InfinityEdge",
+      "16:10",
+      "Intel Core, 10-е поколение"
+    ],
+    "inBox": [
+      "Dell XPS 13 9300",
+      "Документация",
+      "Адаптер питания"
+    ],
+    "rating": 0,
+    "reviewCount": 0,
+    "featured": false,
+    "variants": [
+      {
+        "id": "new-dell-xps-13-9300-laptop-v1",
+        "sku": "EL-NEW-DELL-XPS-13-9300-LAPTOP-01",
+        "color": "Серебристый",
+        "colorHex": "#b8bdc4",
+        "storage": "512 ГБ",
+        "price": 89990,
+        "oldPrice": 101990,
+        "stock": 12,
+        "images": [
+          "/products/new-dell-xps-13-9300-laptop-1.webp",
+          "/products/new-dell-xps-13-9300-laptop-2.webp",
+          "/products/new-dell-xps-13-9300-laptop-3.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "new-dell-xps-13-9300-laptop-v2",
+        "sku": "EL-NEW-DELL-XPS-13-9300-LAPTOP-02",
+        "color": "Серебристый",
+        "colorHex": "#b8bdc4",
+        "storage": "1 ТБ",
+        "price": 101990,
+        "oldPrice": 115990,
+        "stock": 19,
+        "images": [
+          "/products/new-dell-xps-13-9300-laptop-1.webp",
+          "/products/new-dell-xps-13-9300-laptop-2.webp",
+          "/products/new-dell-xps-13-9300-laptop-3.webp"
+        ],
+        "active": true
+      }
+    ],
+    "subcategory": "Ультрабуки"
+  },
+  {
+    "id": "samsung-galaxy-tab-s8-plus-grey",
+    "slug": "samsung-galaxy-tab-s8-plus-grey",
+    "name": "Samsung Galaxy Tab S8+",
+    "brand": "Samsung",
+    "category": "tablets",
+    "description": "Холст для идей и экран для впечатлений. Читайте, смотрите и воплощайте идеи на большом сенсорном экране. Компактный формат удобно брать с собой.",
+    "tagline": "Холст для идей и экран для впечатлений",
+    "images": [
+      "/products/samsung-galaxy-tab-s8-plus-grey-verified-graphite-1.webp",
+      "/products/samsung-galaxy-tab-s8-plus-grey-verified-graphite-2.webp"
+    ],
+    "specs": {
+      "Экран": "12,4″ Super AMOLED, 120 Гц",
+      "Процессор": "Snapdragon 8 Gen 1",
+      "Аккумулятор": "10090 мА·ч",
+      "Перо": "S Pen в комплекте"
+    },
+    "features": [
+      "12,4″ Super AMOLED, 120 Гц",
+      "Snapdragon 8 Gen 1",
+      "10090 мА·ч"
+    ],
+    "inBox": [
+      "Samsung Galaxy Tab S8+",
+      "Документация",
+      "Кабель для зарядки",
+      "Перо S Pen"
+    ],
+    "rating": 0,
+    "reviewCount": 0,
+    "featured": false,
+    "variants": [
+      {
+        "id": "samsung-galaxy-tab-s8-plus-grey-v1",
+        "sku": "EL-SAMSUNG-GALAXY-TAB-S8-PLUS-GREY-01",
+        "color": "Графитовый",
+        "colorHex": "#50535a",
+        "storage": "128 ГБ",
+        "price": 64990,
+        "oldPrice": 73990,
+        "stock": 18,
+        "images": [
+          "/products/samsung-galaxy-tab-s8-plus-grey-verified-graphite-1.webp",
+          "/products/samsung-galaxy-tab-s8-plus-grey-verified-graphite-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "samsung-galaxy-tab-s8-plus-grey-v2",
+        "sku": "EL-SAMSUNG-GALAXY-TAB-S8-PLUS-GREY-02",
+        "color": "Графитовый",
+        "colorHex": "#50535a",
+        "storage": "256 ГБ",
+        "price": 76990,
+        "oldPrice": 86990,
+        "stock": 25,
+        "images": [
+          "/products/samsung-galaxy-tab-s8-plus-grey-verified-graphite-1.webp",
+          "/products/samsung-galaxy-tab-s8-plus-grey-verified-graphite-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "samsung-galaxy-tab-s8-plus-grey-v3",
+        "sku": "EL-SAMSUNG-GALAXY-TAB-S8-PLUS-GREY-03",
+        "color": "Серебристый",
+        "colorHex": "#d9dbe1",
+        "storage": "128 ГБ",
+        "price": 64990,
+        "oldPrice": 73990,
+        "stock": 9,
+        "images": [],
+        "active": false
+      },
+      {
+        "id": "samsung-galaxy-tab-s8-plus-grey-v4",
+        "sku": "EL-SAMSUNG-GALAXY-TAB-S8-PLUS-GREY-04",
+        "color": "Серебристый",
+        "colorHex": "#d9dbe1",
+        "storage": "256 ГБ",
+        "price": 76990,
+        "oldPrice": 86990,
+        "stock": 16,
+        "images": [],
+        "active": false
+      }
+    ],
+    "badge": "Выгодно",
+    "subcategory": "Android-планшеты"
+  },
+  {
+    "id": "beats-flex-wireless-earphones",
+    "slug": "beats-flex-wireless-earphones",
+    "name": "Beats Flex",
+    "brand": "Beats",
+    "category": "audio",
+    "description": "Лёгкий ритм вашего дня. Любимые треки, подкасты и разговоры в удобном формате на каждый день.",
+    "tagline": "Лёгкий ритм вашего дня",
+    "images": [
+      "/products/beats-flex-wireless-earphones-verified-yellow-1.webp",
+      "/products/beats-flex-wireless-earphones-verified-yellow-2.webp"
+    ],
+    "specs": {
+      "Конструкция": "Внутриканальные, шейный кабель",
+      "Чип": "Apple W1",
+      "Автономность": "До 12 часов",
+      "Зарядка": "USB-C"
+    },
+    "features": [
+      "Внутриканальные, шейный кабель",
+      "Apple W1",
+      "До 12 часов"
+    ],
+    "inBox": [
+      "Beats Flex",
+      "Документация"
+    ],
+    "rating": 0,
+    "reviewCount": 0,
+    "featured": false,
+    "variants": [
+      {
+        "id": "beats-flex-wireless-earphones-v1",
+        "sku": "EL-BEATS-FLEX-WIRELESS-EARPHONES-01",
+        "color": "Жёлтый",
+        "colorHex": "#dbe853",
+        "storage": "Стандарт",
+        "price": 5990,
+        "oldPrice": 6990,
+        "stock": 4,
+        "images": [
+          "/products/beats-flex-wireless-earphones-verified-yellow-1.webp",
+          "/products/beats-flex-wireless-earphones-verified-yellow-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "beats-flex-wireless-earphones-v2",
+        "sku": "EL-BEATS-FLEX-WIRELESS-EARPHONES-02",
+        "color": "Чёрный",
+        "colorHex": "#292929",
+        "storage": "Стандарт",
+        "price": 5990,
+        "oldPrice": 6990,
+        "stock": 11,
+        "images": [
+          "/products/beats-flex-wireless-earphones-verified-black-1.webp",
+          "/products/beats-flex-wireless-earphones-verified-black-2.webp"
+        ],
+        "active": true
+      }
+    ],
+    "subcategory": "Наушники"
+  },
+  {
+    "id": "amazon-echo-plus",
+    "slug": "amazon-echo-plus",
+    "name": "Amazon Echo Plus 2",
+    "brand": "Amazon",
+    "category": "smart-home",
+    "description": "Дом, который слышит вас. Удобное управление музыкой и совместимыми устройствами дома. Доступность сервисов зависит от региона.",
+    "tagline": "Дом, который слышит вас",
+    "images": [
+      "/products/amazon-echo-plus-1.webp",
+      "/products/amazon-echo-plus-2.webp"
+    ],
+    "specs": {
+      "Голосовой помощник": "Amazon Alexa",
+      "Хаб": "Встроенный Zigbee",
+      "Подключение": "Wi-Fi, Bluetooth",
+      "Назначение": "Умная колонка и управление домом"
+    },
+    "features": [
+      "Amazon Alexa",
+      "Встроенный Zigbee",
+      "Wi-Fi, Bluetooth"
+    ],
+    "inBox": [
+      "Amazon Echo Plus 2",
+      "Документация"
+    ],
+    "rating": 0,
+    "reviewCount": 0,
+    "featured": false,
+    "variants": [
+      {
+        "id": "amazon-echo-plus-v1",
+        "sku": "EL-AMAZON-ECHO-PLUS-01",
+        "color": "Серый",
+        "colorHex": "#a7a8aa",
+        "storage": "Стандарт",
+        "price": 12990,
+        "oldPrice": 14990,
+        "stock": 10,
+        "images": [
+          "/products/amazon-echo-plus-1.webp",
+          "/products/amazon-echo-plus-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "amazon-echo-plus-v2",
+        "sku": "EL-AMAZON-ECHO-PLUS-02",
+        "color": "Антрацит",
+        "colorHex": "#424448",
+        "storage": "Стандарт",
+        "price": 12990,
+        "oldPrice": 14990,
+        "stock": 17,
+        "images": [],
+        "active": false
+      }
+    ],
+    "subcategory": "Умные колонки"
+  },
+  {
+    "id": "apple-iphone-charger",
+    "slug": "apple-iphone-charger",
+    "name": "Apple USB Power Adapter 5W + Lightning",
+    "brand": "Apple",
+    "category": "accessories",
+    "description": "Энергия для нового дня. Практичное дополнение к вашим устройствам. Перед покупкой проверьте совместимость.",
+    "tagline": "Энергия для нового дня",
+    "images": [
+      "/products/apple-iphone-charger-1.webp",
+      "/products/apple-iphone-charger-2.webp"
+    ],
+    "specs": {
+      "Мощность": "5 Вт (5 В / 1 А)",
+      "Выход адаптера": "USB-A",
+      "Кабель": "USB-A / Lightning",
+      "Назначение": "Комплект для зарядки iPhone"
+    },
+    "features": [
+      "5 Вт (5 В / 1 А)",
+      "USB-A",
+      "USB-A / Lightning"
+    ],
+    "inBox": [
+      "Адаптер Apple USB Power Adapter 5W",
+      "Кабель USB-A / Lightning",
+      "Документация"
+    ],
+    "rating": 0,
+    "reviewCount": 0,
+    "featured": false,
+    "variants": [
+      {
+        "id": "apple-iphone-charger-v1",
+        "sku": "EL-APPLE-IPHONE-CHARGER-01",
+        "color": "Белый",
+        "colorHex": "#f5f5f4",
+        "storage": "5 Вт",
+        "price": 1990,
+        "oldPrice": 2490,
+        "stock": 16,
+        "images": [
+          "/products/apple-iphone-charger-1.webp",
+          "/products/apple-iphone-charger-2.webp"
+        ],
+        "active": true
+      }
+    ],
+    "subcategory": "Зарядные устройства"
+  },
+  {
+    "id": "apple-magsafe-battery-pack",
+    "slug": "apple-magsafe-battery-pack",
+    "name": "Apple MagSafe Battery Pack",
+    "brand": "Apple",
+    "category": "accessories",
+    "description": "Дополнительная энергия без лишних проводов. Практичное дополнение к вашим устройствам. Перед покупкой проверьте совместимость.",
+    "tagline": "Дополнительная энергия без лишних проводов",
+    "images": [
+      "/products/apple-magsafe-battery-pack-1.webp",
+      "/products/apple-magsafe-battery-pack-2.webp"
+    ],
+    "specs": {
+      "Крепление": "Магнитное MagSafe",
+      "Разъём зарядки": "Lightning",
+      "Совместимость": "Совместимые iPhone с MagSafe",
+      "Назначение": "Внешний аккумулятор"
+    },
+    "features": [
+      "Магнитное MagSafe",
+      "Lightning",
+      "Совместимые iPhone с MagSafe"
+    ],
+    "inBox": [
+      "Apple MagSafe Battery Pack",
+      "Документация"
+    ],
+    "rating": 0,
+    "reviewCount": 0,
+    "featured": false,
+    "variants": [
+      {
+        "id": "apple-magsafe-battery-pack-v1",
+        "sku": "EL-APPLE-MAGSAFE-BATTERY-PACK-01",
+        "color": "Белый",
+        "colorHex": "#f3f3f2",
+        "storage": "Стандарт",
+        "price": 9990,
+        "oldPrice": 11990,
+        "stock": 19,
+        "images": [
+          "/products/apple-magsafe-battery-pack-1.webp",
+          "/products/apple-magsafe-battery-pack-2.webp"
+        ],
+        "active": true
+      }
+    ],
+    "badge": "Выгодно",
+    "subcategory": "Зарядные устройства"
+  },
+  {
+    "id": "iphone-12-silicone-case-with-magsafe-plum",
+    "slug": "iphone-12-silicone-case-with-magsafe-plum",
+    "name": "Apple Silicone Case MagSafe для iPhone 12",
+    "brand": "Apple",
+    "category": "accessories",
+    "description": "Мягкое прикосновение. Точная посадка. Практичное дополнение к вашим устройствам. Перед покупкой проверьте совместимость.",
+    "tagline": "Мягкое прикосновение. Точная посадка",
+    "images": [
+      "/products/iphone-12-silicone-case-with-magsafe-plum-1.webp",
+      "/products/iphone-12-silicone-case-with-magsafe-plum-2.webp",
+      "/products/iphone-12-silicone-case-with-magsafe-plum-3.webp"
+    ],
+    "specs": {
+      "Материал": "Силикон",
+      "Подкладка": "Микрофибра",
+      "Совместимость": "iPhone 12 / iPhone 12 Pro",
+      "Крепление": "Встроенные магниты MagSafe"
+    },
+    "features": [
+      "Силикон",
+      "Микрофибра",
+      "iPhone 12 / iPhone 12 Pro"
+    ],
+    "inBox": [
+      "Apple Silicone Case MagSafe для iPhone 12",
+      "Документация"
+    ],
+    "rating": 0,
+    "reviewCount": 0,
+    "featured": false,
+    "variants": [
+      {
+        "id": "iphone-12-silicone-case-with-magsafe-plum-v1",
+        "sku": "EL-IPHONE-12-SILICONE-CASE-WITH-MAGSAFE-PLUM-01",
+        "color": "Сливовый",
+        "colorHex": "#59455b",
+        "storage": "iPhone 12 / 12 Pro",
+        "price": 3990,
+        "oldPrice": 4990,
+        "stock": 22,
+        "images": [
+          "/products/iphone-12-silicone-case-with-magsafe-plum-1.webp",
+          "/products/iphone-12-silicone-case-with-magsafe-plum-2.webp",
+          "/products/iphone-12-silicone-case-with-magsafe-plum-3.webp"
+        ],
+        "active": true
+      }
+    ],
+    "subcategory": "Чехлы"
+  },
+  {
+    "id": "playstation-5",
+    "slug": "playstation-5",
+    "name": "Sony PlayStation 5",
+    "brand": "Sony",
+    "category": "gaming",
+    "description": "Новый уровень погружения. Откройте новые игровые миры и проводите время за любимыми играми. Игры и подписки приобретаются отдельно.",
+    "tagline": "Новый уровень погружения",
+    "images": [
+      "/products/playstation-5-clean.webp",
+      "/products/playstation-5-1.webp"
+    ],
+    "specs": {
+      "Накопитель": "SSD 825 ГБ",
+      "Привод": "Ultra HD Blu-ray",
+      "Геймпад": "DualSense",
+      "Аудио": "Tempest 3D AudioTech"
+    },
+    "features": [
+      "SSD 825 ГБ",
+      "Ultra HD Blu-ray",
+      "DualSense"
+    ],
+    "inBox": [
+      "Sony PlayStation 5",
+      "Документация",
+      "Контроллер",
+      "Кабель питания",
+      "Кабель HDMI"
+    ],
+    "rating": 0,
+    "reviewCount": 0,
+    "featured": false,
+    "variants": [
+      {
+        "id": "playstation-5-v1",
+        "sku": "EL-PLAYSTATION-5-01",
+        "color": "Белый",
+        "colorHex": "#ececf0",
+        "storage": "825 ГБ",
+        "price": 59990,
+        "oldPrice": 67990,
+        "stock": 0,
+        "images": [
+          "/products/playstation-5-clean.webp",
+          "/products/playstation-5-1.webp"
+        ],
+        "active": true
+      }
+    ],
+    "subcategory": "Игровые консоли"
+  },
+  {
+    "id": "xbox-series-s",
+    "slug": "xbox-series-s",
+    "name": "Microsoft Xbox Series S",
+    "brand": "Microsoft",
+    "category": "gaming",
+    "description": "Большие игры в компактном корпусе. Откройте новые игровые миры и проводите время за любимыми играми. Игры и подписки приобретаются отдельно.",
+    "tagline": "Большие игры в компактном корпусе",
+    "images": [
+      "/products/xbox-series-s-clean.webp",
+      "/products/xbox-series-s-1.webp"
+    ],
+    "specs": {
+      "Накопитель": "SSD 512 ГБ",
+      "Разрешение игр": "До 1440p",
+      "Привод": "Цифровая консоль, без дисковода",
+      "Частота кадров": "До 120 кадров/с в поддерживаемых играх"
+    },
+    "features": [
+      "SSD 512 ГБ",
+      "До 1440p",
+      "Цифровая консоль, без дисковода"
+    ],
+    "inBox": [
+      "Microsoft Xbox Series S",
+      "Документация",
+      "Контроллер",
+      "Кабель питания",
+      "Кабель HDMI"
+    ],
+    "rating": 0,
+    "reviewCount": 0,
+    "featured": false,
+    "variants": [
+      {
+        "id": "xbox-series-s-v1",
+        "sku": "EL-XBOX-SERIES-S-01",
+        "color": "Белый",
+        "colorHex": "#efefef",
+        "storage": "512 ГБ",
+        "price": 34990,
+        "oldPrice": 39990,
+        "stock": 8,
+        "images": [
+          "/products/xbox-series-s-clean.webp",
+          "/products/xbox-series-s-1.webp"
+        ],
+        "active": true
+      }
+    ],
+    "badge": "Выгодно",
+    "subcategory": "Игровые консоли"
+  },
+  {
+    "id": "sony-alpha-7-iii",
+    "slug": "sony-alpha-7-iii",
+    "name": "Sony Alpha 7 III",
+    "brand": "Sony",
+    "category": "cameras",
+    "description": "Сохраните свет и настроение момента. Инструмент для тех, кто ценит качество изображения и хочет управлять результатом съёмки.",
+    "tagline": "Сохраните свет и настроение момента",
+    "images": [
+      "/products/sony-alpha-7-iii-clean.webp",
+      "/products/sony-alpha-7-iii-1.webp"
+    ],
+    "specs": {
+      "Матрица": "Полнокадровая CMOS, 24,2 Мп",
+      "Байонет": "Sony E",
+      "Видео": "4K",
+      "Стабилизация": "5-осевая, в корпусе"
+    },
+    "features": [
+      "Полнокадровая CMOS, 24,2 Мп",
+      "Sony E",
+      "4K"
+    ],
+    "inBox": [
+      "Sony Alpha 7 III",
+      "Аккумулятор NP-FZ100",
+      "Ремень",
+      "Документация"
+    ],
+    "rating": 0,
+    "reviewCount": 0,
+    "featured": false,
+    "variants": [
+      {
+        "id": "sony-alpha-7-iii-v1",
+        "sku": "EL-SONY-ALPHA-7-III-01",
+        "color": "Чёрный",
+        "colorHex": "#2b2b2c",
+        "storage": "Body",
+        "price": 149990,
+        "oldPrice": 169990,
+        "stock": 11,
+        "images": [
+          "/products/sony-alpha-7-iii-clean.webp",
+          "/products/sony-alpha-7-iii-1.webp"
+        ],
+        "active": true
+      }
+    ],
+    "subcategory": "Беззеркальные камеры"
+  },
+  {
+    "id": "dyson-v8",
+    "slug": "dyson-v8",
+    "name": "Dyson V8",
+    "brand": "Dyson",
+    "category": "home",
+    "description": "Чистота без лишних усилий. Продуманная техника для ежедневного ухода за домом.",
+    "tagline": "Чистота без лишних усилий",
+    "images": [
+      "/products/dyson-v8-clean.webp",
+      "/products/dyson-v8-1.webp"
+    ],
+    "specs": {
+      "Тип": "Беспроводной вертикальный пылесос",
+      "Автономность": "До 40 минут в стандартном режиме",
+      "Контейнер": "0,54 л",
+      "Фильтрация": "Герметичная система фильтрации"
+    },
+    "features": [
+      "Беспроводной вертикальный пылесос",
+      "До 40 минут в стандартном режиме",
+      "0,54 л"
+    ],
+    "inBox": [
+      "Dyson V8",
+      "Документация"
+    ],
+    "rating": 0,
+    "reviewCount": 0,
+    "featured": false,
+    "variants": [
+      {
+        "id": "dyson-v8-v1",
+        "sku": "EL-DYSON-V8-01",
+        "color": "Серебристый / жёлтый",
+        "colorHex": "#c6a745",
+        "storage": "Стандарт",
+        "price": 34990,
+        "oldPrice": 39990,
+        "stock": 17,
+        "images": [
+          "/products/dyson-v8-clean.webp",
+          "/products/dyson-v8-1.webp"
+        ],
+        "active": true
+      }
+    ],
+    "subcategory": "Пылесосы"
+  },
+  {
+    "id": "irobot-roomba-980",
+    "slug": "irobot-roomba-980",
+    "name": "iRobot Roomba 980",
+    "brand": "iRobot",
+    "category": "home",
+    "description": "Уборка по вашему расписанию. Продуманная техника для ежедневного ухода за домом.",
+    "tagline": "Уборка по вашему расписанию",
+    "images": [
+      "/products/irobot-roomba-980-clean.webp",
+      "/products/irobot-roomba-980-1.webp"
+    ],
+    "specs": {
+      "Тип": "Робот-пылесос",
+      "Навигация": "iAdapt 2.0, визуальная локализация",
+      "Подключение": "Wi-Fi",
+      "Автономность": "До 120 минут"
+    },
+    "features": [
+      "Робот-пылесос",
+      "iAdapt 2.0, визуальная локализация",
+      "Wi-Fi"
+    ],
+    "inBox": [
+      "iRobot Roomba 980",
+      "Документация"
+    ],
+    "rating": 0,
+    "reviewCount": 0,
+    "featured": false,
+    "variants": [
+      {
+        "id": "irobot-roomba-980-v1",
+        "sku": "EL-IROBOT-ROOMBA-980-01",
+        "color": "Тёмно-коричневый",
+        "colorHex": "#5e534b",
+        "storage": "Стандарт",
+        "price": 39990,
+        "oldPrice": 45990,
+        "stock": 20,
+        "images": [
+          "/products/irobot-roomba-980-clean.webp",
+          "/products/irobot-roomba-980-1.webp"
+        ],
+        "active": true
+      }
+    ],
+    "badge": "Выгодно",
+    "subcategory": "Роботы-пылесосы"
+  },
+  {
+    "id": "apple-magic-keyboard",
+    "slug": "apple-magic-keyboard",
+    "name": "Apple Magic Keyboard",
+    "brand": "Apple",
+    "category": "accessories",
+    "description": "Точность в каждом нажатии. Практичное дополнение к вашим устройствам. Перед покупкой проверьте совместимость.",
+    "tagline": "Точность в каждом нажатии",
+    "images": [
+      "/products/apple-magic-keyboard-1.webp"
+    ],
+    "specs": {
+      "Подключение": "Bluetooth",
+      "Клавиши": "Ножничный механизм",
+      "Раскладка": "Английская, US",
+      "Питание": "Встроенный аккумулятор"
+    },
+    "features": [
+      "Bluetooth",
+      "Ножничный механизм",
+      "Английская, US"
+    ],
+    "inBox": [
+      "Apple Magic Keyboard",
+      "Документация"
+    ],
+    "rating": 0,
+    "reviewCount": 0,
+    "featured": false,
+    "variants": [
+      {
+        "id": "apple-magic-keyboard-v1",
+        "sku": "EL-APPLE-MAGIC-KEYBOARD-01",
+        "color": "Белый / серебристый",
+        "colorHex": "#e1e2e4",
+        "storage": "US",
+        "price": 10990,
+        "oldPrice": 12990,
+        "stock": 23,
+        "images": [
+          "/products/apple-magic-keyboard-1.webp"
+        ],
+        "active": true
+      }
+    ],
+    "subcategory": "Клавиатуры"
+  },
+  {
+    "id": "steam-deck",
+    "slug": "steam-deck",
+    "name": "Valve Steam Deck LCD",
+    "brand": "Valve",
+    "category": "gaming",
+    "description": "Ваша библиотека игр всегда с вами. Откройте новые игровые миры и проводите время за любимыми играми. Игры и подписки приобретаются отдельно.",
+    "tagline": "Ваша библиотека игр всегда с вами",
+    "images": [
+      "/products/steam-deck-1.webp"
+    ],
+    "specs": {
+      "Экран": "7″ IPS, 1280 × 800, 60 Гц",
+      "Платформа": "SteamOS",
+      "Процессор": "AMD APU, Zen 2 + RDNA 2",
+      "Накопитель": "SSD NVMe, слот microSD"
+    },
+    "features": [
+      "7″ IPS, 1280 × 800, 60 Гц",
+      "SteamOS",
+      "AMD APU, Zen 2 + RDNA 2"
+    ],
+    "inBox": [
+      "Valve Steam Deck LCD",
+      "Документация",
+      "Контроллер",
+      "Кабель питания",
+      "Кабель HDMI"
+    ],
+    "rating": 0,
+    "reviewCount": 0,
+    "featured": false,
+    "variants": [
+      {
+        "id": "steam-deck-v1",
+        "sku": "EL-STEAM-DECK-01",
+        "color": "Чёрный",
+        "colorHex": "#303337",
+        "storage": "256 ГБ",
+        "price": 44990,
+        "oldPrice": 50990,
+        "stock": 6,
+        "images": [
+          "/products/steam-deck-1.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "steam-deck-v2",
+        "sku": "EL-STEAM-DECK-02",
+        "color": "Чёрный",
+        "colorHex": "#303337",
+        "storage": "512 ГБ",
+        "price": 45990,
+        "oldPrice": 51990,
+        "stock": 13,
+        "images": [
+          "/products/steam-deck-1.webp"
+        ],
+        "active": true
+      }
+    ],
+    "subcategory": "Портативные консоли"
+  },
+  {
+    "id": "iphone-15-plus",
+    "slug": "iphone-15-plus",
+    "name": "Apple iPhone 15 Plus",
+    "brand": "Apple",
+    "category": "smartphones",
+    "description": "iPhone 15 Plus сочетает OLED-экран 6,7″ с чипом Apple A16 Bionic. Снимайте фото и видео, пользуйтесь бесконтактной оплатой и храните медиатеку в выбранном объёме памяти. Face ID защищает доступ к устройству.",
+    "tagline": "6,7″. Apple A16 Bionic.",
+    "images": [
+      "/products/iphone-15-plus-blue-1.webp",
+      "/products/iphone-15-plus-blue-2.webp"
+    ],
+    "specs": {
+      "Экран": "6,7″ Super Retina XDR",
+      "Процессор": "Apple A16 Bionic",
+      "Камеры": "48 + 12 Мп, оптический диапазон 0,5× / 1× / 2×",
+      "Фронтальная камера": "12 Мп TrueDepth",
+      "Разъём": "USB-C, USB 2",
+      "Связь": "5G, Wi-Fi, Bluetooth, NFC",
+      "Защита": "IP68",
+      "Автономность": "До 26 ч воспроизведения видео",
+      "Вес": "201 г",
+      "Доступная память": "128 ГБ / 256 ГБ / 512 ГБ",
+      "Аутентификация": "Face ID",
+      "Беспроводная зарядка": "MagSafe и Qi"
+    },
+    "features": [
+      "6,7″ Super Retina XDR",
+      "Apple A16 Bionic",
+      "48 + 12 Мп, оптический диапазон 0,5× / 1× / 2×",
+      "12 Мп TrueDepth"
+    ],
+    "inBox": [
+      "iPhone 15 Plus",
+      "Кабель USB-C",
+      "Документация"
+    ],
+    "rating": 0,
+    "reviewCount": 0,
+    "featured": false,
+    "variants": [
+      {
+        "id": "iphone-15-plus-blue-128gb",
+        "sku": "EL-IPHONE-15-PLUS-BLUE-128ГБ",
+        "price": 79990,
+        "oldPrice": 94990,
+        "stock": 12,
+        "color": "Голубой",
+        "colorHex": "#b6ceda",
+        "storage": "128 ГБ",
+        "images": [
+          "/products/iphone-15-plus-blue-1.webp",
+          "/products/iphone-15-plus-blue-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "iphone-15-plus-blue-256gb",
+        "sku": "EL-IPHONE-15-PLUS-BLUE-256ГБ",
+        "price": 91990,
+        "oldPrice": 106990,
+        "stock": 15,
+        "color": "Голубой",
+        "colorHex": "#b6ceda",
+        "storage": "256 ГБ",
+        "images": [
+          "/products/iphone-15-plus-blue-1.webp",
+          "/products/iphone-15-plus-blue-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "iphone-15-plus-blue-512gb",
+        "sku": "EL-IPHONE-15-PLUS-BLUE-512ГБ",
+        "price": 103990,
+        "oldPrice": 118990,
+        "stock": 18,
+        "color": "Голубой",
+        "colorHex": "#b6ceda",
+        "storage": "512 ГБ",
+        "images": [
+          "/products/iphone-15-plus-blue-1.webp",
+          "/products/iphone-15-plus-blue-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "iphone-15-plus-pink-128gb",
+        "sku": "EL-IPHONE-15-PLUS-PINK-128ГБ",
+        "price": 79990,
+        "oldPrice": 94990,
+        "stock": 12,
+        "color": "Розовый",
+        "colorHex": "#eac1ca",
+        "storage": "128 ГБ",
+        "images": [
+          "/products/iphone-15-plus-pink-1.webp",
+          "/products/iphone-15-plus-pink-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "iphone-15-plus-pink-256gb",
+        "sku": "EL-IPHONE-15-PLUS-PINK-256ГБ",
+        "price": 91990,
+        "oldPrice": 106990,
+        "stock": 15,
+        "color": "Розовый",
+        "colorHex": "#eac1ca",
+        "storage": "256 ГБ",
+        "images": [
+          "/products/iphone-15-plus-pink-1.webp",
+          "/products/iphone-15-plus-pink-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "iphone-15-plus-pink-512gb",
+        "sku": "EL-IPHONE-15-PLUS-PINK-512ГБ",
+        "price": 103990,
+        "oldPrice": 118990,
+        "stock": 18,
+        "color": "Розовый",
+        "colorHex": "#eac1ca",
+        "storage": "512 ГБ",
+        "images": [
+          "/products/iphone-15-plus-pink-1.webp",
+          "/products/iphone-15-plus-pink-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "iphone-15-plus-black-128gb",
+        "sku": "EL-IPHONE-15-PLUS-BLACK-128ГБ",
+        "price": 79990,
+        "oldPrice": 94990,
+        "stock": 12,
+        "color": "Чёрный",
+        "colorHex": "#3f4344",
+        "storage": "128 ГБ",
+        "images": [
+          "/products/iphone-15-plus-black-1.webp",
+          "/products/iphone-15-plus-black-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "iphone-15-plus-black-256gb",
+        "sku": "EL-IPHONE-15-PLUS-BLACK-256ГБ",
+        "price": 91990,
+        "oldPrice": 106990,
+        "stock": 15,
+        "color": "Чёрный",
+        "colorHex": "#3f4344",
+        "storage": "256 ГБ",
+        "images": [
+          "/products/iphone-15-plus-black-1.webp",
+          "/products/iphone-15-plus-black-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "iphone-15-plus-black-512gb",
+        "sku": "EL-IPHONE-15-PLUS-BLACK-512ГБ",
+        "price": 103990,
+        "oldPrice": 118990,
+        "stock": 18,
+        "color": "Чёрный",
+        "colorHex": "#3f4344",
+        "storage": "512 ГБ",
+        "images": [
+          "/products/iphone-15-plus-black-1.webp",
+          "/products/iphone-15-plus-black-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "iphone-15-plus-green-128gb",
+        "sku": "EL-IPHONE-15-PLUS-GREEN-128ГБ",
+        "price": 79990,
+        "oldPrice": 94990,
+        "stock": 12,
+        "color": "Зелёный",
+        "colorHex": "#c8d6bf",
+        "storage": "128 ГБ",
+        "images": [
+          "/products/iphone-15-plus-green-1.webp",
+          "/products/iphone-15-plus-green-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "iphone-15-plus-green-256gb",
+        "sku": "EL-IPHONE-15-PLUS-GREEN-256ГБ",
+        "price": 91990,
+        "oldPrice": 106990,
+        "stock": 15,
+        "color": "Зелёный",
+        "colorHex": "#c8d6bf",
+        "storage": "256 ГБ",
+        "images": [
+          "/products/iphone-15-plus-green-1.webp",
+          "/products/iphone-15-plus-green-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "iphone-15-plus-green-512gb",
+        "sku": "EL-IPHONE-15-PLUS-GREEN-512ГБ",
+        "price": 103990,
+        "oldPrice": 118990,
+        "stock": 18,
+        "color": "Зелёный",
+        "colorHex": "#c8d6bf",
+        "storage": "512 ГБ",
+        "images": [
+          "/products/iphone-15-plus-green-1.webp",
+          "/products/iphone-15-plus-green-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "iphone-15-plus-yellow-128gb",
+        "sku": "EL-IPHONE-15-PLUS-YELLOW-128ГБ",
+        "price": 79990,
+        "oldPrice": 94990,
+        "stock": 12,
+        "color": "Жёлтый",
+        "colorHex": "#eadfa7",
+        "storage": "128 ГБ",
+        "images": [
+          "/products/iphone-15-plus-yellow-1.webp",
+          "/products/iphone-15-plus-yellow-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "iphone-15-plus-yellow-256gb",
+        "sku": "EL-IPHONE-15-PLUS-YELLOW-256ГБ",
+        "price": 91990,
+        "oldPrice": 106990,
+        "stock": 15,
+        "color": "Жёлтый",
+        "colorHex": "#eadfa7",
+        "storage": "256 ГБ",
+        "images": [
+          "/products/iphone-15-plus-yellow-1.webp",
+          "/products/iphone-15-plus-yellow-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "iphone-15-plus-yellow-512gb",
+        "sku": "EL-IPHONE-15-PLUS-YELLOW-512ГБ",
+        "price": 103990,
+        "oldPrice": 118990,
+        "stock": 18,
+        "color": "Жёлтый",
+        "colorHex": "#eadfa7",
+        "storage": "512 ГБ",
+        "images": [
+          "/products/iphone-15-plus-yellow-1.webp",
+          "/products/iphone-15-plus-yellow-2.webp"
+        ],
+        "active": true
+      }
+    ],
+    "subcategory": "iPhone"
+  },
+  {
+    "id": "iphone-16-plus",
+    "slug": "iphone-16-plus",
+    "name": "Apple iPhone 16 Plus",
+    "brand": "Apple",
+    "category": "smartphones",
+    "description": "iPhone 16 Plus сочетает OLED-экран 6,7″ с чипом Apple A18. Снимайте фото и видео, пользуйтесь бесконтактной оплатой и храните медиатеку в выбранном объёме памяти. Face ID защищает доступ к устройству.",
+    "tagline": "6,7″. Apple A18.",
+    "images": [
+      "/products/iphone-16-plus-ultramarine-1.webp",
+      "/products/iphone-16-plus-ultramarine-2.webp"
+    ],
+    "specs": {
+      "Экран": "6,7″ Super Retina XDR",
+      "Процессор": "Apple A18",
+      "Камеры": "48 Мп Fusion + 12 Мп, макросъёмка",
+      "Фронтальная камера": "12 Мп TrueDepth",
+      "Разъём": "USB-C, USB 2",
+      "Связь": "5G, Wi-Fi, Bluetooth, NFC",
+      "Защита": "IP68",
+      "Автономность": "До 27 ч воспроизведения видео",
+      "Вес": "199 г",
+      "Доступная память": "128 ГБ / 256 ГБ / 512 ГБ",
+      "Аутентификация": "Face ID",
+      "Беспроводная зарядка": "MagSafe и Qi"
+    },
+    "features": [
+      "6,7″ Super Retina XDR",
+      "Apple A18",
+      "48 Мп Fusion + 12 Мп, макросъёмка",
+      "12 Мп TrueDepth"
+    ],
+    "inBox": [
+      "iPhone 16 Plus",
+      "Кабель USB-C",
+      "Документация"
+    ],
+    "rating": 0,
+    "reviewCount": 0,
+    "featured": false,
+    "variants": [
+      {
+        "id": "iphone-16-plus-ultramarine-128gb",
+        "sku": "EL-IPHONE-16-PLUS-ULTRAMARINE-128ГБ",
+        "price": 94990,
+        "oldPrice": 109990,
+        "stock": 12,
+        "color": "Ультрамарин",
+        "colorHex": "#8993d8",
+        "storage": "128 ГБ",
+        "images": [
+          "/products/iphone-16-plus-ultramarine-1.webp",
+          "/products/iphone-16-plus-ultramarine-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "iphone-16-plus-ultramarine-256gb",
+        "sku": "EL-IPHONE-16-PLUS-ULTRAMARINE-256ГБ",
+        "price": 106990,
+        "oldPrice": 121990,
+        "stock": 15,
+        "color": "Ультрамарин",
+        "colorHex": "#8993d8",
+        "storage": "256 ГБ",
+        "images": [
+          "/products/iphone-16-plus-ultramarine-1.webp",
+          "/products/iphone-16-plus-ultramarine-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "iphone-16-plus-ultramarine-512gb",
+        "sku": "EL-IPHONE-16-PLUS-ULTRAMARINE-512ГБ",
+        "price": 118990,
+        "oldPrice": 133990,
+        "stock": 18,
+        "color": "Ультрамарин",
+        "colorHex": "#8993d8",
+        "storage": "512 ГБ",
+        "images": [
+          "/products/iphone-16-plus-ultramarine-1.webp",
+          "/products/iphone-16-plus-ultramarine-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "iphone-16-plus-teal-128gb",
+        "sku": "EL-IPHONE-16-PLUS-TEAL-128ГБ",
+        "price": 94990,
+        "oldPrice": 109990,
+        "stock": 12,
+        "color": "Бирюзовый",
+        "colorHex": "#9cbeb5",
+        "storage": "128 ГБ",
+        "images": [
+          "/products/iphone-16-plus-teal-1.webp",
+          "/products/iphone-16-plus-teal-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "iphone-16-plus-teal-256gb",
+        "sku": "EL-IPHONE-16-PLUS-TEAL-256ГБ",
+        "price": 106990,
+        "oldPrice": 121990,
+        "stock": 15,
+        "color": "Бирюзовый",
+        "colorHex": "#9cbeb5",
+        "storage": "256 ГБ",
+        "images": [
+          "/products/iphone-16-plus-teal-1.webp",
+          "/products/iphone-16-plus-teal-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "iphone-16-plus-teal-512gb",
+        "sku": "EL-IPHONE-16-PLUS-TEAL-512ГБ",
+        "price": 118990,
+        "oldPrice": 133990,
+        "stock": 18,
+        "color": "Бирюзовый",
+        "colorHex": "#9cbeb5",
+        "storage": "512 ГБ",
+        "images": [
+          "/products/iphone-16-plus-teal-1.webp",
+          "/products/iphone-16-plus-teal-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "iphone-16-plus-black-128gb",
+        "sku": "EL-IPHONE-16-PLUS-BLACK-128ГБ",
+        "price": 94990,
+        "oldPrice": 109990,
+        "stock": 12,
+        "color": "Чёрный",
+        "colorHex": "#353638",
+        "storage": "128 ГБ",
+        "images": [
+          "/products/iphone-16-plus-black-1.webp",
+          "/products/iphone-16-plus-black-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "iphone-16-plus-black-256gb",
+        "sku": "EL-IPHONE-16-PLUS-BLACK-256ГБ",
+        "price": 106990,
+        "oldPrice": 121990,
+        "stock": 15,
+        "color": "Чёрный",
+        "colorHex": "#353638",
+        "storage": "256 ГБ",
+        "images": [
+          "/products/iphone-16-plus-black-1.webp",
+          "/products/iphone-16-plus-black-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "iphone-16-plus-black-512gb",
+        "sku": "EL-IPHONE-16-PLUS-BLACK-512ГБ",
+        "price": 118990,
+        "oldPrice": 133990,
+        "stock": 18,
+        "color": "Чёрный",
+        "colorHex": "#353638",
+        "storage": "512 ГБ",
+        "images": [
+          "/products/iphone-16-plus-black-1.webp",
+          "/products/iphone-16-plus-black-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "iphone-16-plus-pink-128gb",
+        "sku": "EL-IPHONE-16-PLUS-PINK-128ГБ",
+        "price": 94990,
+        "oldPrice": 109990,
+        "stock": 12,
+        "color": "Розовый",
+        "colorHex": "#eda8d0",
+        "storage": "128 ГБ",
+        "images": [
+          "/products/iphone-16-plus-pink-1.webp",
+          "/products/iphone-16-plus-pink-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "iphone-16-plus-pink-256gb",
+        "sku": "EL-IPHONE-16-PLUS-PINK-256ГБ",
+        "price": 106990,
+        "oldPrice": 121990,
+        "stock": 15,
+        "color": "Розовый",
+        "colorHex": "#eda8d0",
+        "storage": "256 ГБ",
+        "images": [
+          "/products/iphone-16-plus-pink-1.webp",
+          "/products/iphone-16-plus-pink-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "iphone-16-plus-pink-512gb",
+        "sku": "EL-IPHONE-16-PLUS-PINK-512ГБ",
+        "price": 118990,
+        "oldPrice": 133990,
+        "stock": 18,
+        "color": "Розовый",
+        "colorHex": "#eda8d0",
+        "storage": "512 ГБ",
+        "images": [
+          "/products/iphone-16-plus-pink-1.webp",
+          "/products/iphone-16-plus-pink-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "iphone-16-plus-white-128gb",
+        "sku": "EL-IPHONE-16-PLUS-WHITE-128ГБ",
+        "price": 94990,
+        "oldPrice": 109990,
+        "stock": 12,
+        "color": "Белый",
+        "colorHex": "#eae9e5",
+        "storage": "128 ГБ",
+        "images": [
+          "/products/iphone-16-plus-white-1.webp",
+          "/products/iphone-16-plus-white-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "iphone-16-plus-white-256gb",
+        "sku": "EL-IPHONE-16-PLUS-WHITE-256ГБ",
+        "price": 106990,
+        "oldPrice": 121990,
+        "stock": 15,
+        "color": "Белый",
+        "colorHex": "#eae9e5",
+        "storage": "256 ГБ",
+        "images": [
+          "/products/iphone-16-plus-white-1.webp",
+          "/products/iphone-16-plus-white-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "iphone-16-plus-white-512gb",
+        "sku": "EL-IPHONE-16-PLUS-WHITE-512ГБ",
+        "price": 118990,
+        "oldPrice": 133990,
+        "stock": 18,
+        "color": "Белый",
+        "colorHex": "#eae9e5",
+        "storage": "512 ГБ",
+        "images": [
+          "/products/iphone-16-plus-white-1.webp",
+          "/products/iphone-16-plus-white-2.webp"
+        ],
+        "active": true
+      }
+    ],
+    "subcategory": "iPhone"
+  },
+  {
+    "id": "iphone-16-pro",
+    "slug": "iphone-16-pro",
+    "name": "Apple iPhone 16 Pro",
+    "brand": "Apple",
+    "category": "smartphones",
+    "description": "iPhone 16 Pro сочетает OLED-экран 6,3″, ProMotion до 120 Гц с чипом Apple A18 Pro. Снимайте фото и видео, пользуйтесь бесконтактной оплатой и храните медиатеку в выбранном объёме памяти. Face ID защищает доступ к устройству.",
+    "tagline": "6,3″, ProMotion до 120 Гц. Apple A18 Pro.",
+    "images": [
+      "/products/iphone-16-pro-naturaltitanium-1.webp",
+      "/products/iphone-16-pro-naturaltitanium-2.webp"
+    ],
+    "specs": {
+      "Экран": "6,3″, ProMotion до 120 Гц Super Retina XDR",
+      "Процессор": "Apple A18 Pro",
+      "Камеры": "48 Мп Fusion + 48 Мп сверхширокоугольная + 12 Мп телефото 5×",
+      "Фронтальная камера": "12 Мп TrueDepth",
+      "Разъём": "USB-C, USB 3 до 10 Гбит/с",
+      "Связь": "5G, Wi-Fi, Bluetooth, NFC",
+      "Защита": "IP68",
+      "Автономность": "До 27 ч воспроизведения видео",
+      "Вес": "199 г",
+      "Доступная память": "128 ГБ / 256 ГБ / 512 ГБ / 1 ТБ",
+      "Аутентификация": "Face ID",
+      "Беспроводная зарядка": "MagSafe и Qi"
+    },
+    "features": [
+      "6,3″, ProMotion до 120 Гц Super Retina XDR",
+      "Apple A18 Pro",
+      "48 Мп Fusion + 48 Мп сверхширокоугольная + 12 Мп телефото 5×",
+      "12 Мп TrueDepth"
+    ],
+    "inBox": [
+      "iPhone 16 Pro",
+      "Кабель USB-C",
+      "Документация"
+    ],
+    "rating": 0,
+    "reviewCount": 0,
+    "featured": false,
+    "variants": [
+      {
+        "id": "iphone-16-pro-naturaltitanium-128gb",
+        "sku": "EL-IPHONE-16-PRO-NATURALTITANIUM-128ГБ",
+        "price": 114990,
+        "oldPrice": 129990,
+        "stock": 12,
+        "color": "Натуральный титан",
+        "colorHex": "#b5aea3",
+        "storage": "128 ГБ",
+        "images": [
+          "/products/iphone-16-pro-naturaltitanium-1.webp",
+          "/products/iphone-16-pro-naturaltitanium-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "iphone-16-pro-naturaltitanium-256gb",
+        "sku": "EL-IPHONE-16-PRO-NATURALTITANIUM-256ГБ",
+        "price": 126990,
+        "oldPrice": 141990,
+        "stock": 15,
+        "color": "Натуральный титан",
+        "colorHex": "#b5aea3",
+        "storage": "256 ГБ",
+        "images": [
+          "/products/iphone-16-pro-naturaltitanium-1.webp",
+          "/products/iphone-16-pro-naturaltitanium-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "iphone-16-pro-naturaltitanium-512gb",
+        "sku": "EL-IPHONE-16-PRO-NATURALTITANIUM-512ГБ",
+        "price": 138990,
+        "oldPrice": 153990,
+        "stock": 18,
+        "color": "Натуральный титан",
+        "colorHex": "#b5aea3",
+        "storage": "512 ГБ",
+        "images": [
+          "/products/iphone-16-pro-naturaltitanium-1.webp",
+          "/products/iphone-16-pro-naturaltitanium-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "iphone-16-pro-naturaltitanium-1tb",
+        "sku": "EL-IPHONE-16-PRO-NATURALTITANIUM-1ТБ",
+        "price": 150990,
+        "oldPrice": 165990,
+        "stock": 21,
+        "color": "Натуральный титан",
+        "colorHex": "#b5aea3",
+        "storage": "1 ТБ",
+        "images": [
+          "/products/iphone-16-pro-naturaltitanium-1.webp",
+          "/products/iphone-16-pro-naturaltitanium-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "iphone-16-pro-deserttitanium-128gb",
+        "sku": "EL-IPHONE-16-PRO-DESERTTITANIUM-128ГБ",
+        "price": 114990,
+        "oldPrice": 129990,
+        "stock": 12,
+        "color": "Пустынный титан",
+        "colorHex": "#c4a992",
+        "storage": "128 ГБ",
+        "images": [
+          "/products/iphone-16-pro-deserttitanium-1.webp",
+          "/products/iphone-16-pro-deserttitanium-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "iphone-16-pro-deserttitanium-256gb",
+        "sku": "EL-IPHONE-16-PRO-DESERTTITANIUM-256ГБ",
+        "price": 126990,
+        "oldPrice": 141990,
+        "stock": 15,
+        "color": "Пустынный титан",
+        "colorHex": "#c4a992",
+        "storage": "256 ГБ",
+        "images": [
+          "/products/iphone-16-pro-deserttitanium-1.webp",
+          "/products/iphone-16-pro-deserttitanium-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "iphone-16-pro-deserttitanium-512gb",
+        "sku": "EL-IPHONE-16-PRO-DESERTTITANIUM-512ГБ",
+        "price": 138990,
+        "oldPrice": 153990,
+        "stock": 18,
+        "color": "Пустынный титан",
+        "colorHex": "#c4a992",
+        "storage": "512 ГБ",
+        "images": [
+          "/products/iphone-16-pro-deserttitanium-1.webp",
+          "/products/iphone-16-pro-deserttitanium-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "iphone-16-pro-deserttitanium-1tb",
+        "sku": "EL-IPHONE-16-PRO-DESERTTITANIUM-1ТБ",
+        "price": 150990,
+        "oldPrice": 165990,
+        "stock": 21,
+        "color": "Пустынный титан",
+        "colorHex": "#c4a992",
+        "storage": "1 ТБ",
+        "images": [
+          "/products/iphone-16-pro-deserttitanium-1.webp",
+          "/products/iphone-16-pro-deserttitanium-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "iphone-16-pro-blacktitanium-128gb",
+        "sku": "EL-IPHONE-16-PRO-BLACKTITANIUM-128ГБ",
+        "price": 114990,
+        "oldPrice": 129990,
+        "stock": 12,
+        "color": "Чёрный титан",
+        "colorHex": "#3d3e40",
+        "storage": "128 ГБ",
+        "images": [
+          "/products/iphone-16-pro-blacktitanium-1.webp",
+          "/products/iphone-16-pro-blacktitanium-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "iphone-16-pro-blacktitanium-256gb",
+        "sku": "EL-IPHONE-16-PRO-BLACKTITANIUM-256ГБ",
+        "price": 126990,
+        "oldPrice": 141990,
+        "stock": 15,
+        "color": "Чёрный титан",
+        "colorHex": "#3d3e40",
+        "storage": "256 ГБ",
+        "images": [
+          "/products/iphone-16-pro-blacktitanium-1.webp",
+          "/products/iphone-16-pro-blacktitanium-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "iphone-16-pro-blacktitanium-512gb",
+        "sku": "EL-IPHONE-16-PRO-BLACKTITANIUM-512ГБ",
+        "price": 138990,
+        "oldPrice": 153990,
+        "stock": 18,
+        "color": "Чёрный титан",
+        "colorHex": "#3d3e40",
+        "storage": "512 ГБ",
+        "images": [
+          "/products/iphone-16-pro-blacktitanium-1.webp",
+          "/products/iphone-16-pro-blacktitanium-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "iphone-16-pro-blacktitanium-1tb",
+        "sku": "EL-IPHONE-16-PRO-BLACKTITANIUM-1ТБ",
+        "price": 150990,
+        "oldPrice": 165990,
+        "stock": 21,
+        "color": "Чёрный титан",
+        "colorHex": "#3d3e40",
+        "storage": "1 ТБ",
+        "images": [
+          "/products/iphone-16-pro-blacktitanium-1.webp",
+          "/products/iphone-16-pro-blacktitanium-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "iphone-16-pro-whitetitanium-128gb",
+        "sku": "EL-IPHONE-16-PRO-WHITETITANIUM-128ГБ",
+        "price": 114990,
+        "oldPrice": 129990,
+        "stock": 12,
+        "color": "Белый титан",
+        "colorHex": "#dedbd4",
+        "storage": "128 ГБ",
+        "images": [
+          "/products/iphone-16-pro-whitetitanium-1.webp",
+          "/products/iphone-16-pro-whitetitanium-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "iphone-16-pro-whitetitanium-256gb",
+        "sku": "EL-IPHONE-16-PRO-WHITETITANIUM-256ГБ",
+        "price": 126990,
+        "oldPrice": 141990,
+        "stock": 15,
+        "color": "Белый титан",
+        "colorHex": "#dedbd4",
+        "storage": "256 ГБ",
+        "images": [
+          "/products/iphone-16-pro-whitetitanium-1.webp",
+          "/products/iphone-16-pro-whitetitanium-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "iphone-16-pro-whitetitanium-512gb",
+        "sku": "EL-IPHONE-16-PRO-WHITETITANIUM-512ГБ",
+        "price": 138990,
+        "oldPrice": 153990,
+        "stock": 18,
+        "color": "Белый титан",
+        "colorHex": "#dedbd4",
+        "storage": "512 ГБ",
+        "images": [
+          "/products/iphone-16-pro-whitetitanium-1.webp",
+          "/products/iphone-16-pro-whitetitanium-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "iphone-16-pro-whitetitanium-1tb",
+        "sku": "EL-IPHONE-16-PRO-WHITETITANIUM-1ТБ",
+        "price": 150990,
+        "oldPrice": 165990,
+        "stock": 21,
+        "color": "Белый титан",
+        "colorHex": "#dedbd4",
+        "storage": "1 ТБ",
+        "images": [
+          "/products/iphone-16-pro-whitetitanium-1.webp",
+          "/products/iphone-16-pro-whitetitanium-2.webp"
+        ],
+        "active": true
+      }
+    ],
+    "subcategory": "iPhone"
+  },
+  {
+    "id": "iphone-16-pro-max",
+    "slug": "iphone-16-pro-max",
+    "name": "Apple iPhone 16 Pro Max",
+    "brand": "Apple",
+    "category": "smartphones",
+    "description": "iPhone 16 Pro Max сочетает OLED-экран 6,9″, ProMotion до 120 Гц с чипом Apple A18 Pro. Снимайте фото и видео, пользуйтесь бесконтактной оплатой и храните медиатеку в выбранном объёме памяти. Face ID защищает доступ к устройству.",
+    "tagline": "6,9″, ProMotion до 120 Гц. Apple A18 Pro.",
+    "images": [
+      "/products/iphone-16-pro-max-naturaltitanium-1.webp",
+      "/products/iphone-16-pro-max-naturaltitanium-2.webp"
+    ],
+    "specs": {
+      "Экран": "6,9″, ProMotion до 120 Гц Super Retina XDR",
+      "Процессор": "Apple A18 Pro",
+      "Камеры": "48 Мп Fusion + 48 Мп сверхширокоугольная + 12 Мп телефото 5×",
+      "Фронтальная камера": "12 Мп TrueDepth",
+      "Разъём": "USB-C, USB 3 до 10 Гбит/с",
+      "Связь": "5G, Wi-Fi, Bluetooth, NFC",
+      "Защита": "IP68",
+      "Автономность": "До 33 ч воспроизведения видео",
+      "Вес": "227 г",
+      "Доступная память": "256 ГБ / 512 ГБ / 1 ТБ",
+      "Аутентификация": "Face ID",
+      "Беспроводная зарядка": "MagSafe и Qi"
+    },
+    "features": [
+      "6,9″, ProMotion до 120 Гц Super Retina XDR",
+      "Apple A18 Pro",
+      "48 Мп Fusion + 48 Мп сверхширокоугольная + 12 Мп телефото 5×",
+      "12 Мп TrueDepth"
+    ],
+    "inBox": [
+      "iPhone 16 Pro Max",
+      "Кабель USB-C",
+      "Документация"
+    ],
+    "rating": 0,
+    "reviewCount": 0,
+    "featured": false,
+    "variants": [
+      {
+        "id": "iphone-16-pro-max-naturaltitanium-256gb",
+        "sku": "EL-IPHONE-16-PRO-MAX-NATURALTITANIUM-256ГБ",
+        "price": 129990,
+        "oldPrice": 144990,
+        "stock": 12,
+        "color": "Натуральный титан",
+        "colorHex": "#b5aea3",
+        "storage": "256 ГБ",
+        "images": [
+          "/products/iphone-16-pro-max-naturaltitanium-1.webp",
+          "/products/iphone-16-pro-max-naturaltitanium-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "iphone-16-pro-max-naturaltitanium-512gb",
+        "sku": "EL-IPHONE-16-PRO-MAX-NATURALTITANIUM-512ГБ",
+        "price": 141990,
+        "oldPrice": 156990,
+        "stock": 15,
+        "color": "Натуральный титан",
+        "colorHex": "#b5aea3",
+        "storage": "512 ГБ",
+        "images": [
+          "/products/iphone-16-pro-max-naturaltitanium-1.webp",
+          "/products/iphone-16-pro-max-naturaltitanium-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "iphone-16-pro-max-naturaltitanium-1tb",
+        "sku": "EL-IPHONE-16-PRO-MAX-NATURALTITANIUM-1ТБ",
+        "price": 153990,
+        "oldPrice": 168990,
+        "stock": 18,
+        "color": "Натуральный титан",
+        "colorHex": "#b5aea3",
+        "storage": "1 ТБ",
+        "images": [
+          "/products/iphone-16-pro-max-naturaltitanium-1.webp",
+          "/products/iphone-16-pro-max-naturaltitanium-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "iphone-16-pro-max-deserttitanium-256gb",
+        "sku": "EL-IPHONE-16-PRO-MAX-DESERTTITANIUM-256ГБ",
+        "price": 129990,
+        "oldPrice": 144990,
+        "stock": 12,
+        "color": "Пустынный титан",
+        "colorHex": "#c4a992",
+        "storage": "256 ГБ",
+        "images": [
+          "/products/iphone-16-pro-max-deserttitanium-1.webp",
+          "/products/iphone-16-pro-max-deserttitanium-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "iphone-16-pro-max-deserttitanium-512gb",
+        "sku": "EL-IPHONE-16-PRO-MAX-DESERTTITANIUM-512ГБ",
+        "price": 141990,
+        "oldPrice": 156990,
+        "stock": 15,
+        "color": "Пустынный титан",
+        "colorHex": "#c4a992",
+        "storage": "512 ГБ",
+        "images": [
+          "/products/iphone-16-pro-max-deserttitanium-1.webp",
+          "/products/iphone-16-pro-max-deserttitanium-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "iphone-16-pro-max-deserttitanium-1tb",
+        "sku": "EL-IPHONE-16-PRO-MAX-DESERTTITANIUM-1ТБ",
+        "price": 153990,
+        "oldPrice": 168990,
+        "stock": 18,
+        "color": "Пустынный титан",
+        "colorHex": "#c4a992",
+        "storage": "1 ТБ",
+        "images": [
+          "/products/iphone-16-pro-max-deserttitanium-1.webp",
+          "/products/iphone-16-pro-max-deserttitanium-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "iphone-16-pro-max-blacktitanium-256gb",
+        "sku": "EL-IPHONE-16-PRO-MAX-BLACKTITANIUM-256ГБ",
+        "price": 129990,
+        "oldPrice": 144990,
+        "stock": 12,
+        "color": "Чёрный титан",
+        "colorHex": "#3d3e40",
+        "storage": "256 ГБ",
+        "images": [
+          "/products/iphone-16-pro-max-blacktitanium-1.webp",
+          "/products/iphone-16-pro-max-blacktitanium-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "iphone-16-pro-max-blacktitanium-512gb",
+        "sku": "EL-IPHONE-16-PRO-MAX-BLACKTITANIUM-512ГБ",
+        "price": 141990,
+        "oldPrice": 156990,
+        "stock": 15,
+        "color": "Чёрный титан",
+        "colorHex": "#3d3e40",
+        "storage": "512 ГБ",
+        "images": [
+          "/products/iphone-16-pro-max-blacktitanium-1.webp",
+          "/products/iphone-16-pro-max-blacktitanium-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "iphone-16-pro-max-blacktitanium-1tb",
+        "sku": "EL-IPHONE-16-PRO-MAX-BLACKTITANIUM-1ТБ",
+        "price": 153990,
+        "oldPrice": 168990,
+        "stock": 18,
+        "color": "Чёрный титан",
+        "colorHex": "#3d3e40",
+        "storage": "1 ТБ",
+        "images": [
+          "/products/iphone-16-pro-max-blacktitanium-1.webp",
+          "/products/iphone-16-pro-max-blacktitanium-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "iphone-16-pro-max-whitetitanium-256gb",
+        "sku": "EL-IPHONE-16-PRO-MAX-WHITETITANIUM-256ГБ",
+        "price": 129990,
+        "oldPrice": 144990,
+        "stock": 12,
+        "color": "Белый титан",
+        "colorHex": "#dedbd4",
+        "storage": "256 ГБ",
+        "images": [
+          "/products/iphone-16-pro-max-whitetitanium-1.webp",
+          "/products/iphone-16-pro-max-whitetitanium-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "iphone-16-pro-max-whitetitanium-512gb",
+        "sku": "EL-IPHONE-16-PRO-MAX-WHITETITANIUM-512ГБ",
+        "price": 141990,
+        "oldPrice": 156990,
+        "stock": 15,
+        "color": "Белый титан",
+        "colorHex": "#dedbd4",
+        "storage": "512 ГБ",
+        "images": [
+          "/products/iphone-16-pro-max-whitetitanium-1.webp",
+          "/products/iphone-16-pro-max-whitetitanium-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "iphone-16-pro-max-whitetitanium-1tb",
+        "sku": "EL-IPHONE-16-PRO-MAX-WHITETITANIUM-1ТБ",
+        "price": 153990,
+        "oldPrice": 168990,
+        "stock": 18,
+        "color": "Белый титан",
+        "colorHex": "#dedbd4",
+        "storage": "1 ТБ",
+        "images": [
+          "/products/iphone-16-pro-max-whitetitanium-1.webp",
+          "/products/iphone-16-pro-max-whitetitanium-2.webp"
+        ],
+        "active": true
+      }
+    ],
+    "subcategory": "iPhone"
+  },
+  {
+    "id": "iphone-14",
+    "slug": "iphone-14",
+    "name": "Apple iPhone 14",
+    "brand": "Apple",
+    "category": "smartphones",
+    "description": "iPhone 14 сочетает OLED-экран 6,1″ с чипом Apple A15 Bionic. Снимайте фото и видео, пользуйтесь бесконтактной оплатой и храните медиатеку в выбранном объёме памяти. Face ID защищает доступ к устройству.",
+    "tagline": "6,1″. Apple A15 Bionic.",
+    "images": [
+      "/products/iphone-14-blue-1.webp",
+      "/products/iphone-14-blue-2.webp"
+    ],
+    "specs": {
+      "Экран": "6,1″ Super Retina XDR",
+      "Процессор": "Apple A15 Bionic",
+      "Камеры": "12 + 12 Мп, стабилизация сдвигом матрицы",
+      "Фронтальная камера": "12 Мп TrueDepth",
+      "Разъём": "Lightning",
+      "Связь": "5G, Wi-Fi, Bluetooth, NFC",
+      "Защита": "IP68",
+      "Автономность": "До 20 ч воспроизведения видео",
+      "Вес": "172 г",
+      "Доступная память": "128 ГБ / 256 ГБ / 512 ГБ",
+      "Аутентификация": "Face ID",
+      "Беспроводная зарядка": "MagSafe и Qi"
+    },
+    "features": [
+      "6,1″ Super Retina XDR",
+      "Apple A15 Bionic",
+      "12 + 12 Мп, стабилизация сдвигом матрицы",
+      "12 Мп TrueDepth"
+    ],
+    "inBox": [
+      "iPhone 14",
+      "Кабель USB-C — Lightning",
+      "Документация"
+    ],
+    "rating": 0,
+    "reviewCount": 0,
+    "featured": false,
+    "variants": [
+      {
+        "id": "iphone-14-blue-128gb",
+        "sku": "EL-IPHONE-14-BLUE-128ГБ",
+        "price": 54990,
+        "oldPrice": 69990,
+        "stock": 12,
+        "color": "Голубой",
+        "colorHex": "#a2b4c7",
+        "storage": "128 ГБ",
+        "images": [
+          "/products/iphone-14-blue-1.webp",
+          "/products/iphone-14-blue-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "iphone-14-blue-256gb",
+        "sku": "EL-IPHONE-14-BLUE-256ГБ",
+        "price": 66990,
+        "oldPrice": 81990,
+        "stock": 15,
+        "color": "Голубой",
+        "colorHex": "#a2b4c7",
+        "storage": "256 ГБ",
+        "images": [
+          "/products/iphone-14-blue-1.webp",
+          "/products/iphone-14-blue-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "iphone-14-blue-512gb",
+        "sku": "EL-IPHONE-14-BLUE-512ГБ",
+        "price": 78990,
+        "oldPrice": 93990,
+        "stock": 18,
+        "color": "Голубой",
+        "colorHex": "#a2b4c7",
+        "storage": "512 ГБ",
+        "images": [
+          "/products/iphone-14-blue-1.webp",
+          "/products/iphone-14-blue-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "iphone-14-purple-128gb",
+        "sku": "EL-IPHONE-14-PURPLE-128ГБ",
+        "price": 54990,
+        "oldPrice": 69990,
+        "stock": 12,
+        "color": "Фиолетовый",
+        "colorHex": "#d5cddb",
+        "storage": "128 ГБ",
+        "images": [
+          "/products/iphone-14-purple-1.webp",
+          "/products/iphone-14-purple-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "iphone-14-purple-256gb",
+        "sku": "EL-IPHONE-14-PURPLE-256ГБ",
+        "price": 66990,
+        "oldPrice": 81990,
+        "stock": 15,
+        "color": "Фиолетовый",
+        "colorHex": "#d5cddb",
+        "storage": "256 ГБ",
+        "images": [
+          "/products/iphone-14-purple-1.webp",
+          "/products/iphone-14-purple-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "iphone-14-purple-512gb",
+        "sku": "EL-IPHONE-14-PURPLE-512ГБ",
+        "price": 78990,
+        "oldPrice": 93990,
+        "stock": 18,
+        "color": "Фиолетовый",
+        "colorHex": "#d5cddb",
+        "storage": "512 ГБ",
+        "images": [
+          "/products/iphone-14-purple-1.webp",
+          "/products/iphone-14-purple-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "iphone-14-midnight-128gb",
+        "sku": "EL-IPHONE-14-MIDNIGHT-128ГБ",
+        "price": 54990,
+        "oldPrice": 69990,
+        "stock": 12,
+        "color": "Тёмная ночь",
+        "colorHex": "#343c43",
+        "storage": "128 ГБ",
+        "images": [
+          "/products/iphone-14-midnight-1.webp",
+          "/products/iphone-14-midnight-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "iphone-14-midnight-256gb",
+        "sku": "EL-IPHONE-14-MIDNIGHT-256ГБ",
+        "price": 66990,
+        "oldPrice": 81990,
+        "stock": 15,
+        "color": "Тёмная ночь",
+        "colorHex": "#343c43",
+        "storage": "256 ГБ",
+        "images": [
+          "/products/iphone-14-midnight-1.webp",
+          "/products/iphone-14-midnight-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "iphone-14-midnight-512gb",
+        "sku": "EL-IPHONE-14-MIDNIGHT-512ГБ",
+        "price": 78990,
+        "oldPrice": 93990,
+        "stock": 18,
+        "color": "Тёмная ночь",
+        "colorHex": "#343c43",
+        "storage": "512 ГБ",
+        "images": [
+          "/products/iphone-14-midnight-1.webp",
+          "/products/iphone-14-midnight-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "iphone-14-starlight-128gb",
+        "sku": "EL-IPHONE-14-STARLIGHT-128ГБ",
+        "price": 54990,
+        "oldPrice": 69990,
+        "stock": 12,
+        "color": "Сияющая звезда",
+        "colorHex": "#f0ece7",
+        "storage": "128 ГБ",
+        "images": [
+          "/products/iphone-14-starlight-1.webp",
+          "/products/iphone-14-starlight-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "iphone-14-starlight-256gb",
+        "sku": "EL-IPHONE-14-STARLIGHT-256ГБ",
+        "price": 66990,
+        "oldPrice": 81990,
+        "stock": 15,
+        "color": "Сияющая звезда",
+        "colorHex": "#f0ece7",
+        "storage": "256 ГБ",
+        "images": [
+          "/products/iphone-14-starlight-1.webp",
+          "/products/iphone-14-starlight-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "iphone-14-starlight-512gb",
+        "sku": "EL-IPHONE-14-STARLIGHT-512ГБ",
+        "price": 78990,
+        "oldPrice": 93990,
+        "stock": 18,
+        "color": "Сияющая звезда",
+        "colorHex": "#f0ece7",
+        "storage": "512 ГБ",
+        "images": [
+          "/products/iphone-14-starlight-1.webp",
+          "/products/iphone-14-starlight-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "iphone-14-red-128gb",
+        "sku": "EL-IPHONE-14-RED-128ГБ",
+        "price": 54990,
+        "oldPrice": 69990,
+        "stock": 12,
+        "color": "Красный",
+        "colorHex": "#e6444d",
+        "storage": "128 ГБ",
+        "images": [
+          "/products/iphone-14-red-1.webp",
+          "/products/iphone-14-red-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "iphone-14-red-256gb",
+        "sku": "EL-IPHONE-14-RED-256ГБ",
+        "price": 66990,
+        "oldPrice": 81990,
+        "stock": 15,
+        "color": "Красный",
+        "colorHex": "#e6444d",
+        "storage": "256 ГБ",
+        "images": [
+          "/products/iphone-14-red-1.webp",
+          "/products/iphone-14-red-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "iphone-14-red-512gb",
+        "sku": "EL-IPHONE-14-RED-512ГБ",
+        "price": 78990,
+        "oldPrice": 93990,
+        "stock": 18,
+        "color": "Красный",
+        "colorHex": "#e6444d",
+        "storage": "512 ГБ",
+        "images": [
+          "/products/iphone-14-red-1.webp",
+          "/products/iphone-14-red-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "iphone-14-yellow-128gb",
+        "sku": "EL-IPHONE-14-YELLOW-128ГБ",
+        "price": 54990,
+        "oldPrice": 69990,
+        "stock": 12,
+        "color": "Жёлтый",
+        "colorHex": "#f4df91",
+        "storage": "128 ГБ",
+        "images": [
+          "/products/iphone-14-yellow-1.webp",
+          "/products/iphone-14-yellow-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "iphone-14-yellow-256gb",
+        "sku": "EL-IPHONE-14-YELLOW-256ГБ",
+        "price": 66990,
+        "oldPrice": 81990,
+        "stock": 15,
+        "color": "Жёлтый",
+        "colorHex": "#f4df91",
+        "storage": "256 ГБ",
+        "images": [
+          "/products/iphone-14-yellow-1.webp",
+          "/products/iphone-14-yellow-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "iphone-14-yellow-512gb",
+        "sku": "EL-IPHONE-14-YELLOW-512ГБ",
+        "price": 78990,
+        "oldPrice": 93990,
+        "stock": 18,
+        "color": "Жёлтый",
+        "colorHex": "#f4df91",
+        "storage": "512 ГБ",
+        "images": [
+          "/products/iphone-14-yellow-1.webp",
+          "/products/iphone-14-yellow-2.webp"
+        ],
+        "active": true
+      }
+    ],
+    "subcategory": "iPhone"
+  },
+  {
+    "id": "iphone-14-pro",
+    "slug": "iphone-14-pro",
+    "name": "Apple iPhone 14 Pro",
+    "brand": "Apple",
+    "category": "smartphones",
+    "description": "iPhone 14 Pro сочетает OLED-экран 6,1″, ProMotion до 120 Гц с чипом Apple A16 Bionic. Снимайте фото и видео, пользуйтесь бесконтактной оплатой и храните медиатеку в выбранном объёме памяти. Face ID защищает доступ к устройству.",
+    "tagline": "6,1″, ProMotion до 120 Гц. Apple A16 Bionic.",
+    "images": [
+      "/products/iphone-14-pro-deeppurple-1.webp",
+      "/products/iphone-14-pro-deeppurple-2.webp"
+    ],
+    "specs": {
+      "Экран": "6,1″, ProMotion до 120 Гц Super Retina XDR",
+      "Процессор": "Apple A16 Bionic",
+      "Камеры": "48 + 12 + 12 Мп, телефото 3×",
+      "Фронтальная камера": "12 Мп TrueDepth",
+      "Разъём": "Lightning",
+      "Связь": "5G, Wi-Fi, Bluetooth, NFC",
+      "Защита": "IP68",
+      "Автономность": "До 23 ч воспроизведения видео",
+      "Вес": "206 г",
+      "Доступная память": "128 ГБ / 256 ГБ / 512 ГБ / 1 ТБ",
+      "Аутентификация": "Face ID",
+      "Беспроводная зарядка": "MagSafe и Qi"
+    },
+    "features": [
+      "6,1″, ProMotion до 120 Гц Super Retina XDR",
+      "Apple A16 Bionic",
+      "48 + 12 + 12 Мп, телефото 3×",
+      "12 Мп TrueDepth"
+    ],
+    "inBox": [
+      "iPhone 14 Pro",
+      "Кабель USB-C — Lightning",
+      "Документация"
+    ],
+    "rating": 0,
+    "reviewCount": 0,
+    "featured": false,
+    "variants": [
+      {
+        "id": "iphone-14-pro-deeppurple-128gb",
+        "sku": "EL-IPHONE-14-PRO-DEEPPURPLE-128ГБ",
+        "price": 79990,
+        "oldPrice": 94990,
+        "stock": 12,
+        "color": "Тёмно-фиолетовый",
+        "colorHex": "#675f72",
+        "storage": "128 ГБ",
+        "images": [
+          "/products/iphone-14-pro-deeppurple-1.webp",
+          "/products/iphone-14-pro-deeppurple-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "iphone-14-pro-deeppurple-256gb",
+        "sku": "EL-IPHONE-14-PRO-DEEPPURPLE-256ГБ",
+        "price": 91990,
+        "oldPrice": 106990,
+        "stock": 15,
+        "color": "Тёмно-фиолетовый",
+        "colorHex": "#675f72",
+        "storage": "256 ГБ",
+        "images": [
+          "/products/iphone-14-pro-deeppurple-1.webp",
+          "/products/iphone-14-pro-deeppurple-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "iphone-14-pro-deeppurple-512gb",
+        "sku": "EL-IPHONE-14-PRO-DEEPPURPLE-512ГБ",
+        "price": 103990,
+        "oldPrice": 118990,
+        "stock": 18,
+        "color": "Тёмно-фиолетовый",
+        "colorHex": "#675f72",
+        "storage": "512 ГБ",
+        "images": [
+          "/products/iphone-14-pro-deeppurple-1.webp",
+          "/products/iphone-14-pro-deeppurple-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "iphone-14-pro-deeppurple-1tb",
+        "sku": "EL-IPHONE-14-PRO-DEEPPURPLE-1ТБ",
+        "price": 115990,
+        "oldPrice": 130990,
+        "stock": 21,
+        "color": "Тёмно-фиолетовый",
+        "colorHex": "#675f72",
+        "storage": "1 ТБ",
+        "images": [
+          "/products/iphone-14-pro-deeppurple-1.webp",
+          "/products/iphone-14-pro-deeppurple-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "iphone-14-pro-spaceblack-128gb",
+        "sku": "EL-IPHONE-14-PRO-SPACEBLACK-128ГБ",
+        "price": 79990,
+        "oldPrice": 94990,
+        "stock": 12,
+        "color": "Чёрный космос",
+        "colorHex": "#494845",
+        "storage": "128 ГБ",
+        "images": [
+          "/products/iphone-14-pro-spaceblack-1.webp",
+          "/products/iphone-14-pro-spaceblack-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "iphone-14-pro-spaceblack-256gb",
+        "sku": "EL-IPHONE-14-PRO-SPACEBLACK-256ГБ",
+        "price": 91990,
+        "oldPrice": 106990,
+        "stock": 15,
+        "color": "Чёрный космос",
+        "colorHex": "#494845",
+        "storage": "256 ГБ",
+        "images": [
+          "/products/iphone-14-pro-spaceblack-1.webp",
+          "/products/iphone-14-pro-spaceblack-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "iphone-14-pro-spaceblack-512gb",
+        "sku": "EL-IPHONE-14-PRO-SPACEBLACK-512ГБ",
+        "price": 103990,
+        "oldPrice": 118990,
+        "stock": 18,
+        "color": "Чёрный космос",
+        "colorHex": "#494845",
+        "storage": "512 ГБ",
+        "images": [
+          "/products/iphone-14-pro-spaceblack-1.webp",
+          "/products/iphone-14-pro-spaceblack-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "iphone-14-pro-spaceblack-1tb",
+        "sku": "EL-IPHONE-14-PRO-SPACEBLACK-1ТБ",
+        "price": 115990,
+        "oldPrice": 130990,
+        "stock": 21,
+        "color": "Чёрный космос",
+        "colorHex": "#494845",
+        "storage": "1 ТБ",
+        "images": [
+          "/products/iphone-14-pro-spaceblack-1.webp",
+          "/products/iphone-14-pro-spaceblack-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "iphone-14-pro-silver-128gb",
+        "sku": "EL-IPHONE-14-PRO-SILVER-128ГБ",
+        "price": 79990,
+        "oldPrice": 94990,
+        "stock": 12,
+        "color": "Серебристый",
+        "colorHex": "#e9e8e3",
+        "storage": "128 ГБ",
+        "images": [
+          "/products/iphone-14-pro-silver-1.webp",
+          "/products/iphone-14-pro-silver-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "iphone-14-pro-silver-256gb",
+        "sku": "EL-IPHONE-14-PRO-SILVER-256ГБ",
+        "price": 91990,
+        "oldPrice": 106990,
+        "stock": 15,
+        "color": "Серебристый",
+        "colorHex": "#e9e8e3",
+        "storage": "256 ГБ",
+        "images": [
+          "/products/iphone-14-pro-silver-1.webp",
+          "/products/iphone-14-pro-silver-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "iphone-14-pro-silver-512gb",
+        "sku": "EL-IPHONE-14-PRO-SILVER-512ГБ",
+        "price": 103990,
+        "oldPrice": 118990,
+        "stock": 18,
+        "color": "Серебристый",
+        "colorHex": "#e9e8e3",
+        "storage": "512 ГБ",
+        "images": [
+          "/products/iphone-14-pro-silver-1.webp",
+          "/products/iphone-14-pro-silver-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "iphone-14-pro-silver-1tb",
+        "sku": "EL-IPHONE-14-PRO-SILVER-1ТБ",
+        "price": 115990,
+        "oldPrice": 130990,
+        "stock": 21,
+        "color": "Серебристый",
+        "colorHex": "#e9e8e3",
+        "storage": "1 ТБ",
+        "images": [
+          "/products/iphone-14-pro-silver-1.webp",
+          "/products/iphone-14-pro-silver-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "iphone-14-pro-gold-128gb",
+        "sku": "EL-IPHONE-14-PRO-GOLD-128ГБ",
+        "price": 79990,
+        "oldPrice": 94990,
+        "stock": 12,
+        "color": "Золотой",
+        "colorHex": "#e8dabd",
+        "storage": "128 ГБ",
+        "images": [
+          "/products/iphone-14-pro-gold-1.webp",
+          "/products/iphone-14-pro-gold-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "iphone-14-pro-gold-256gb",
+        "sku": "EL-IPHONE-14-PRO-GOLD-256ГБ",
+        "price": 91990,
+        "oldPrice": 106990,
+        "stock": 15,
+        "color": "Золотой",
+        "colorHex": "#e8dabd",
+        "storage": "256 ГБ",
+        "images": [
+          "/products/iphone-14-pro-gold-1.webp",
+          "/products/iphone-14-pro-gold-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "iphone-14-pro-gold-512gb",
+        "sku": "EL-IPHONE-14-PRO-GOLD-512ГБ",
+        "price": 103990,
+        "oldPrice": 118990,
+        "stock": 18,
+        "color": "Золотой",
+        "colorHex": "#e8dabd",
+        "storage": "512 ГБ",
+        "images": [
+          "/products/iphone-14-pro-gold-1.webp",
+          "/products/iphone-14-pro-gold-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "iphone-14-pro-gold-1tb",
+        "sku": "EL-IPHONE-14-PRO-GOLD-1ТБ",
+        "price": 115990,
+        "oldPrice": 130990,
+        "stock": 21,
+        "color": "Золотой",
+        "colorHex": "#e8dabd",
+        "storage": "1 ТБ",
+        "images": [
+          "/products/iphone-14-pro-gold-1.webp",
+          "/products/iphone-14-pro-gold-2.webp"
+        ],
+        "active": true
+      }
+    ],
+    "subcategory": "iPhone"
+  },
+  {
+    "id": "iphone-13",
+    "slug": "iphone-13",
+    "name": "Apple iPhone 13",
+    "brand": "Apple",
+    "category": "smartphones",
+    "description": "iPhone 13 сочетает OLED-экран 6,1″ с чипом Apple A15 Bionic. Снимайте фото и видео, пользуйтесь бесконтактной оплатой и храните медиатеку в выбранном объёме памяти. Face ID защищает доступ к устройству.",
+    "tagline": "6,1″. Apple A15 Bionic.",
+    "images": [
+      "/products/iphone-13-blue-1.webp",
+      "/products/iphone-13-blue-2.webp"
+    ],
+    "specs": {
+      "Экран": "6,1″ Super Retina XDR",
+      "Процессор": "Apple A15 Bionic",
+      "Камеры": "12 + 12 Мп, стабилизация сдвигом матрицы",
+      "Фронтальная камера": "12 Мп TrueDepth",
+      "Разъём": "Lightning",
+      "Связь": "5G, Wi-Fi, Bluetooth, NFC",
+      "Защита": "IP68",
+      "Автономность": "До 19 ч воспроизведения видео",
+      "Вес": "174 г",
+      "Доступная память": "128 ГБ / 256 ГБ / 512 ГБ",
+      "Аутентификация": "Face ID",
+      "Беспроводная зарядка": "MagSafe и Qi"
+    },
+    "features": [
+      "6,1″ Super Retina XDR",
+      "Apple A15 Bionic",
+      "12 + 12 Мп, стабилизация сдвигом матрицы",
+      "12 Мп TrueDepth"
+    ],
+    "inBox": [
+      "iPhone 13",
+      "Кабель USB-C — Lightning",
+      "Документация"
+    ],
+    "rating": 0,
+    "reviewCount": 0,
+    "featured": false,
+    "variants": [
+      {
+        "id": "iphone-13-blue-128gb",
+        "sku": "EL-IPHONE-13-BLUE-128ГБ",
+        "price": 44990,
+        "oldPrice": 59990,
+        "stock": 12,
+        "color": "Синий",
+        "colorHex": "#7b9cad",
+        "storage": "128 ГБ",
+        "images": [
+          "/products/iphone-13-blue-1.webp",
+          "/products/iphone-13-blue-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "iphone-13-blue-256gb",
+        "sku": "EL-IPHONE-13-BLUE-256ГБ",
+        "price": 56990,
+        "oldPrice": 71990,
+        "stock": 15,
+        "color": "Синий",
+        "colorHex": "#7b9cad",
+        "storage": "256 ГБ",
+        "images": [
+          "/products/iphone-13-blue-1.webp",
+          "/products/iphone-13-blue-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "iphone-13-blue-512gb",
+        "sku": "EL-IPHONE-13-BLUE-512ГБ",
+        "price": 68990,
+        "oldPrice": 83990,
+        "stock": 18,
+        "color": "Синий",
+        "colorHex": "#7b9cad",
+        "storage": "512 ГБ",
+        "images": [
+          "/products/iphone-13-blue-1.webp",
+          "/products/iphone-13-blue-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "iphone-13-pink-128gb",
+        "sku": "EL-IPHONE-13-PINK-128ГБ",
+        "price": 44990,
+        "oldPrice": 59990,
+        "stock": 12,
+        "color": "Розовый",
+        "colorHex": "#ead3d0",
+        "storage": "128 ГБ",
+        "images": [
+          "/products/iphone-13-pink-1.webp",
+          "/products/iphone-13-pink-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "iphone-13-pink-256gb",
+        "sku": "EL-IPHONE-13-PINK-256ГБ",
+        "price": 56990,
+        "oldPrice": 71990,
+        "stock": 15,
+        "color": "Розовый",
+        "colorHex": "#ead3d0",
+        "storage": "256 ГБ",
+        "images": [
+          "/products/iphone-13-pink-1.webp",
+          "/products/iphone-13-pink-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "iphone-13-pink-512gb",
+        "sku": "EL-IPHONE-13-PINK-512ГБ",
+        "price": 68990,
+        "oldPrice": 83990,
+        "stock": 18,
+        "color": "Розовый",
+        "colorHex": "#ead3d0",
+        "storage": "512 ГБ",
+        "images": [
+          "/products/iphone-13-pink-1.webp",
+          "/products/iphone-13-pink-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "iphone-13-midnight-128gb",
+        "sku": "EL-IPHONE-13-MIDNIGHT-128ГБ",
+        "price": 44990,
+        "oldPrice": 59990,
+        "stock": 12,
+        "color": "Тёмная ночь",
+        "colorHex": "#414a50",
+        "storage": "128 ГБ",
+        "images": [
+          "/products/iphone-13-midnight-1.webp",
+          "/products/iphone-13-midnight-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "iphone-13-midnight-256gb",
+        "sku": "EL-IPHONE-13-MIDNIGHT-256ГБ",
+        "price": 56990,
+        "oldPrice": 71990,
+        "stock": 15,
+        "color": "Тёмная ночь",
+        "colorHex": "#414a50",
+        "storage": "256 ГБ",
+        "images": [
+          "/products/iphone-13-midnight-1.webp",
+          "/products/iphone-13-midnight-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "iphone-13-midnight-512gb",
+        "sku": "EL-IPHONE-13-MIDNIGHT-512ГБ",
+        "price": 68990,
+        "oldPrice": 83990,
+        "stock": 18,
+        "color": "Тёмная ночь",
+        "colorHex": "#414a50",
+        "storage": "512 ГБ",
+        "images": [
+          "/products/iphone-13-midnight-1.webp",
+          "/products/iphone-13-midnight-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "iphone-13-starlight-128gb",
+        "sku": "EL-IPHONE-13-STARLIGHT-128ГБ",
+        "price": 44990,
+        "oldPrice": 59990,
+        "stock": 12,
+        "color": "Сияющая звезда",
+        "colorHex": "#f1ece6",
+        "storage": "128 ГБ",
+        "images": [
+          "/products/iphone-13-starlight-1.webp",
+          "/products/iphone-13-starlight-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "iphone-13-starlight-256gb",
+        "sku": "EL-IPHONE-13-STARLIGHT-256ГБ",
+        "price": 56990,
+        "oldPrice": 71990,
+        "stock": 15,
+        "color": "Сияющая звезда",
+        "colorHex": "#f1ece6",
+        "storage": "256 ГБ",
+        "images": [
+          "/products/iphone-13-starlight-1.webp",
+          "/products/iphone-13-starlight-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "iphone-13-starlight-512gb",
+        "sku": "EL-IPHONE-13-STARLIGHT-512ГБ",
+        "price": 68990,
+        "oldPrice": 83990,
+        "stock": 18,
+        "color": "Сияющая звезда",
+        "colorHex": "#f1ece6",
+        "storage": "512 ГБ",
+        "images": [
+          "/products/iphone-13-starlight-1.webp",
+          "/products/iphone-13-starlight-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "iphone-13-red-128gb",
+        "sku": "EL-IPHONE-13-RED-128ГБ",
+        "price": 44990,
+        "oldPrice": 59990,
+        "stock": 12,
+        "color": "Красный",
+        "colorHex": "#bd2531",
+        "storage": "128 ГБ",
+        "images": [
+          "/products/iphone-13-red-1.webp",
+          "/products/iphone-13-red-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "iphone-13-red-256gb",
+        "sku": "EL-IPHONE-13-RED-256ГБ",
+        "price": 56990,
+        "oldPrice": 71990,
+        "stock": 15,
+        "color": "Красный",
+        "colorHex": "#bd2531",
+        "storage": "256 ГБ",
+        "images": [
+          "/products/iphone-13-red-1.webp",
+          "/products/iphone-13-red-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "iphone-13-red-512gb",
+        "sku": "EL-IPHONE-13-RED-512ГБ",
+        "price": 68990,
+        "oldPrice": 83990,
+        "stock": 18,
+        "color": "Красный",
+        "colorHex": "#bd2531",
+        "storage": "512 ГБ",
+        "images": [
+          "/products/iphone-13-red-1.webp",
+          "/products/iphone-13-red-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "iphone-13-green-128gb",
+        "sku": "EL-IPHONE-13-GREEN-128ГБ",
+        "price": 44990,
+        "oldPrice": 59990,
+        "stock": 12,
+        "color": "Зелёный",
+        "colorHex": "#57695b",
+        "storage": "128 ГБ",
+        "images": [
+          "/products/iphone-13-green-1.webp",
+          "/products/iphone-13-green-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "iphone-13-green-256gb",
+        "sku": "EL-IPHONE-13-GREEN-256ГБ",
+        "price": 56990,
+        "oldPrice": 71990,
+        "stock": 15,
+        "color": "Зелёный",
+        "colorHex": "#57695b",
+        "storage": "256 ГБ",
+        "images": [
+          "/products/iphone-13-green-1.webp",
+          "/products/iphone-13-green-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "iphone-13-green-512gb",
+        "sku": "EL-IPHONE-13-GREEN-512ГБ",
+        "price": 68990,
+        "oldPrice": 83990,
+        "stock": 18,
+        "color": "Зелёный",
+        "colorHex": "#57695b",
+        "storage": "512 ГБ",
+        "images": [
+          "/products/iphone-13-green-1.webp",
+          "/products/iphone-13-green-2.webp"
+        ],
+        "active": true
+      }
+    ],
+    "subcategory": "iPhone"
+  },
+  {
+    "id": "macbook-air-m2",
+    "slug": "macbook-air-m2",
+    "name": "Apple MacBook Air 13″ M2",
+    "brand": "Apple",
+    "category": "laptops",
+    "description": "Ноутбук без вентилятора с экраном Liquid Retina и зарядкой MagSafe 3. Конфигурация с 8-ядерными CPU и GPU и 16 ГБ объединённой памяти подходит для учёбы, офисных задач и обработки фотографий.",
+    "tagline": "Тонкий корпус. Бесшумная работа.",
+    "images": [
+      "/products/macbook-air-m2-midnight-1.webp"
+    ],
+    "specs": {
+      "Экран": "13,6″ Liquid Retina, 2560 × 1664, 500 нит",
+      "Процессор": "Apple M2, CPU 8 ядер / GPU 8 ядер",
+      "Оперативная память": "16 ГБ",
+      "Разъёмы": "2 × Thunderbolt / USB 4, MagSafe 3, 3,5 мм",
+      "Связь": "Wi-Fi 6, Bluetooth 5.3",
+      "Камера": "FaceTime HD 1080p",
+      "Автономность": "До 18 ч воспроизведения видео",
+      "Вес": "1,24 кг"
+    },
+    "features": [
+      "13,6″ Liquid Retina, 2560 × 1664, 500 нит",
+      "Apple M2, CPU 8 ядер / GPU 8 ядер",
+      "16 ГБ",
+      "2 × Thunderbolt / USB 4, MagSafe 3, 3,5 мм"
+    ],
+    "inBox": [
+      "MacBook Air",
+      "Адаптер USB-C 30 Вт",
+      "Кабель USB-C — MagSafe 3"
+    ],
+    "rating": 0,
+    "reviewCount": 0,
+    "featured": false,
+    "variants": [
+      {
+        "id": "macbook-air-m2-midnight-256gb",
+        "sku": "EL-MACBOOK-AIR-M2-MIDNIGHT-256ГБ",
+        "price": 89990,
+        "oldPrice": 104990,
+        "stock": 12,
+        "color": "Тёмная ночь",
+        "colorHex": "#303c46",
+        "storage": "256 ГБ",
+        "images": [
+          "/products/macbook-air-m2-midnight-1.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "macbook-air-m2-midnight-512gb",
+        "sku": "EL-MACBOOK-AIR-M2-MIDNIGHT-512ГБ",
+        "price": 101990,
+        "oldPrice": 116990,
+        "stock": 15,
+        "color": "Тёмная ночь",
+        "colorHex": "#303c46",
+        "storage": "512 ГБ",
+        "images": [
+          "/products/macbook-air-m2-midnight-1.webp"
+        ],
+        "active": true
+      }
+    ],
+    "subcategory": "MacBook"
+  },
+  {
+    "id": "macbook-air-m3",
+    "slug": "macbook-air-m3",
+    "name": "Apple MacBook Air 13″ M3",
+    "brand": "Apple",
+    "category": "laptops",
+    "description": "MacBook Air на M3 сохраняет бесшумную конструкцию и лёгкий алюминиевый корпус. Wi-Fi 6E ускоряет подключение в совместимых сетях, а при закрытой крышке можно использовать два внешних дисплея.",
+    "tagline": "Мобильная работа на M3.",
+    "images": [
+      "/products/macbook-air-m3-midnight-1.webp"
+    ],
+    "specs": {
+      "Экран": "13,6″ Liquid Retina, 2560 × 1664, 500 нит",
+      "Процессор": "Apple M3, CPU 8 ядер / GPU 8 ядер",
+      "Оперативная память": "16 ГБ",
+      "Разъёмы": "2 × Thunderbolt / USB 4, MagSafe 3, 3,5 мм",
+      "Связь": "Wi-Fi 6E, Bluetooth 5.3",
+      "Камера": "FaceTime HD 1080p",
+      "Автономность": "До 18 ч воспроизведения видео",
+      "Вес": "1,24 кг"
+    },
+    "features": [
+      "13,6″ Liquid Retina, 2560 × 1664, 500 нит",
+      "Apple M3, CPU 8 ядер / GPU 8 ядер",
+      "16 ГБ",
+      "2 × Thunderbolt / USB 4, MagSafe 3, 3,5 мм"
+    ],
+    "inBox": [
+      "MacBook Air",
+      "Адаптер USB-C 30 Вт",
+      "Кабель USB-C — MagSafe 3"
+    ],
+    "rating": 0,
+    "reviewCount": 0,
+    "featured": false,
+    "variants": [
+      {
+        "id": "macbook-air-m3-midnight-256gb",
+        "sku": "EL-MACBOOK-AIR-M3-MIDNIGHT-256ГБ",
+        "price": 104990,
+        "oldPrice": 119990,
+        "stock": 12,
+        "color": "Тёмная ночь",
+        "colorHex": "#303c46",
+        "storage": "256 ГБ",
+        "images": [
+          "/products/macbook-air-m3-midnight-1.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "macbook-air-m3-midnight-512gb",
+        "sku": "EL-MACBOOK-AIR-M3-MIDNIGHT-512ГБ",
+        "price": 116990,
+        "oldPrice": 131990,
+        "stock": 15,
+        "color": "Тёмная ночь",
+        "colorHex": "#303c46",
+        "storage": "512 ГБ",
+        "images": [
+          "/products/macbook-air-m3-midnight-1.webp"
+        ],
+        "active": true
+      }
+    ],
+    "subcategory": "MacBook"
+  },
+  {
+    "id": "ipad-10",
+    "slug": "ipad-10",
+    "name": "Apple iPad 10,9″ (10-го поколения)",
+    "brand": "Apple",
+    "category": "tablets",
+    "description": "iPad с A14 Bionic, USB-C и фронтальной камерой на длинной стороне корпуса удобен для видеосвязи, заметок и чтения. Версия Wi-Fi поддерживает Apple Pencil первого поколения через адаптер и Apple Pencil USB-C.",
+    "tagline": "Большой экран для каждого дня.",
+    "images": [
+      "/products/ipad-10-blue-1.webp",
+      "/products/ipad-10-blue-2.webp"
+    ],
+    "specs": {
+      "Экран": "10,9″ Liquid Retina, 2360 × 1640",
+      "Процессор": "Apple A14 Bionic",
+      "Камеры": "12 Мп основная / 12 Мп сверхширокоугольная фронтальная",
+      "Связь": "Wi-Fi 6, Bluetooth 5.2",
+      "Разъём": "USB-C, USB 2",
+      "Аутентификация": "Touch ID в верхней кнопке",
+      "Автономность": "До 10 ч веб-сёрфинга по Wi-Fi",
+      "Вес": "477 г (Wi-Fi)"
+    },
+    "features": [
+      "10,9″ Liquid Retina, 2360 × 1640",
+      "Apple A14 Bionic",
+      "12 Мп основная / 12 Мп сверхширокоугольная фронтальная",
+      "Wi-Fi 6, Bluetooth 5.2"
+    ],
+    "inBox": [
+      "iPad",
+      "Кабель USB-C",
+      "Адаптер USB-C 20 Вт"
+    ],
+    "rating": 0,
+    "reviewCount": 0,
+    "featured": false,
+    "variants": [
+      {
+        "id": "ipad-10-blue-64gb",
+        "sku": "EL-IPAD-10-BLUE-64ГБ",
+        "price": 34990,
+        "oldPrice": 49990,
+        "stock": 12,
+        "color": "Голубой",
+        "colorHex": "#83b5d9",
+        "storage": "64 ГБ",
+        "images": [
+          "/products/ipad-10-blue-1.webp",
+          "/products/ipad-10-blue-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "ipad-10-blue-256gb",
+        "sku": "EL-IPAD-10-BLUE-256ГБ",
+        "price": 46990,
+        "oldPrice": 61990,
+        "stock": 15,
+        "color": "Голубой",
+        "colorHex": "#83b5d9",
+        "storage": "256 ГБ",
+        "images": [
+          "/products/ipad-10-blue-1.webp",
+          "/products/ipad-10-blue-2.webp"
+        ],
+        "active": true
+      }
+    ],
+    "subcategory": "iPad"
+  },
+  {
+    "id": "ipad-air-11-m2",
+    "slug": "ipad-air-11-m2",
+    "name": "Apple iPad Air 11″ M2",
+    "brand": "Apple",
+    "category": "tablets",
+    "description": "iPad Air с чипом M2 и ламинированным экраном Liquid Retina. Поддерживает Apple Pencil Pro, а горизонтальная фронтальная камера с функцией «В центре внимания» помогает во время видеозвонков. Версия Wi-Fi.",
+    "tagline": "M2 для заметок, графики и творчества.",
+    "images": [
+      "/products/ipad-air-11-m2-blue-1.webp",
+      "/products/ipad-air-11-m2-blue-2.webp"
+    ],
+    "specs": {
+      "Экран": "11″ Liquid Retina, 2360 × 1640, 500 нит",
+      "Процессор": "Apple M2, CPU 8 ядер / GPU 9 ядер",
+      "Оперативная память": "8 ГБ",
+      "Камеры": "12 Мп основная / 12 Мп фронтальная",
+      "Связь": "Wi-Fi 6E, Bluetooth 5.3",
+      "Разъём": "USB-C, USB 3 до 10 Гбит/с",
+      "Аутентификация": "Touch ID",
+      "Вес": "462 г (Wi-Fi)"
+    },
+    "features": [
+      "11″ Liquid Retina, 2360 × 1640, 500 нит",
+      "Apple M2, CPU 8 ядер / GPU 9 ядер",
+      "8 ГБ",
+      "12 Мп основная / 12 Мп фронтальная"
+    ],
+    "inBox": [
+      "iPad Air",
+      "Кабель USB-C",
+      "Адаптер USB-C 20 Вт"
+    ],
+    "rating": 0,
+    "reviewCount": 0,
+    "featured": false,
+    "variants": [
+      {
+        "id": "ipad-air-11-m2-blue-128gb",
+        "sku": "EL-IPAD-AIR-11-M2-BLUE-128ГБ",
+        "price": 59990,
+        "oldPrice": 74990,
+        "stock": 12,
+        "color": "Голубой",
+        "colorHex": "#bdcbd5",
+        "storage": "128 ГБ",
+        "images": [
+          "/products/ipad-air-11-m2-blue-1.webp",
+          "/products/ipad-air-11-m2-blue-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "ipad-air-11-m2-blue-256gb",
+        "sku": "EL-IPAD-AIR-11-M2-BLUE-256ГБ",
+        "price": 71990,
+        "oldPrice": 86990,
+        "stock": 15,
+        "color": "Голубой",
+        "colorHex": "#bdcbd5",
+        "storage": "256 ГБ",
+        "images": [
+          "/products/ipad-air-11-m2-blue-1.webp",
+          "/products/ipad-air-11-m2-blue-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "ipad-air-11-m2-blue-512gb",
+        "sku": "EL-IPAD-AIR-11-M2-BLUE-512ГБ",
+        "price": 83990,
+        "oldPrice": 98990,
+        "stock": 18,
+        "color": "Голубой",
+        "colorHex": "#bdcbd5",
+        "storage": "512 ГБ",
+        "images": [
+          "/products/ipad-air-11-m2-blue-1.webp",
+          "/products/ipad-air-11-m2-blue-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "ipad-air-11-m2-blue-1tb",
+        "sku": "EL-IPAD-AIR-11-M2-BLUE-1ТБ",
+        "price": 95990,
+        "oldPrice": 110990,
+        "stock": 21,
+        "color": "Голубой",
+        "colorHex": "#bdcbd5",
+        "storage": "1 ТБ",
+        "images": [
+          "/products/ipad-air-11-m2-blue-1.webp",
+          "/products/ipad-air-11-m2-blue-2.webp"
+        ],
+        "active": true
+      }
+    ],
+    "subcategory": "iPad"
+  },
+  {
+    "id": "ipad-pro-11-m4",
+    "slug": "ipad-pro-11-m4",
+    "name": "Apple iPad Pro 11″ M4",
+    "brand": "Apple",
+    "category": "tablets",
+    "description": "iPad Pro с экраном Ultra Retina XDR на двух OLED-панелях, тонким корпусом и Face ID. Конфигурации 256 и 512 ГБ оснащены M4 с 9-ядерным CPU, 10-ядерным GPU и 8 ГБ памяти. Версия Wi-Fi со стандартным стеклом.",
+    "tagline": "Tandem OLED и производительность M4.",
+    "images": [
+      "/products/ipad-pro-11-m4-spaceblack-1.webp",
+      "/products/ipad-pro-11-m4-spaceblack-2.webp"
+    ],
+    "specs": {
+      "Экран": "11″ Ultra Retina XDR, Tandem OLED, ProMotion 10–120 Гц",
+      "Процессор": "Apple M4, CPU 9 ядер / GPU 10 ядер",
+      "Оперативная память": "8 ГБ",
+      "Камеры": "12 Мп основная, LiDAR / 12 Мп фронтальная",
+      "Связь": "Wi-Fi 6E, Bluetooth 5.3",
+      "Разъём": "Thunderbolt / USB 4",
+      "Аутентификация": "Face ID",
+      "Вес": "444 г (Wi-Fi)"
+    },
+    "features": [
+      "11″ Ultra Retina XDR, Tandem OLED, ProMotion 10–120 Гц",
+      "Apple M4, CPU 9 ядер / GPU 10 ядер",
+      "8 ГБ",
+      "12 Мп основная, LiDAR / 12 Мп фронтальная"
+    ],
+    "inBox": [
+      "iPad Pro",
+      "Кабель USB-C",
+      "Адаптер USB-C 20 Вт"
+    ],
+    "rating": 0,
+    "reviewCount": 0,
+    "featured": false,
+    "variants": [
+      {
+        "id": "ipad-pro-11-m4-spaceblack-256gb",
+        "sku": "EL-IPAD-PRO-11-M4-SPACEBLACK-256ГБ",
+        "price": 99990,
+        "oldPrice": 114990,
+        "stock": 12,
+        "color": "Чёрный космос",
+        "colorHex": "#424449",
+        "storage": "256 ГБ",
+        "images": [
+          "/products/ipad-pro-11-m4-spaceblack-1.webp",
+          "/products/ipad-pro-11-m4-spaceblack-2.webp"
+        ],
+        "active": true
+      },
+      {
+        "id": "ipad-pro-11-m4-spaceblack-512gb",
+        "sku": "EL-IPAD-PRO-11-M4-SPACEBLACK-512ГБ",
+        "price": 111990,
+        "oldPrice": 126990,
+        "stock": 15,
+        "color": "Чёрный космос",
+        "colorHex": "#424449",
+        "storage": "512 ГБ",
+        "images": [
+          "/products/ipad-pro-11-m4-spaceblack-1.webp",
+          "/products/ipad-pro-11-m4-spaceblack-2.webp"
+        ],
+        "active": true
+      }
+    ],
+    "subcategory": "iPad"
+  },
+  {
+    "id": "airpods-pro-2",
+    "slug": "airpods-pro-2",
+    "name": "Apple AirPods Pro 2 (USB-C)",
+    "brand": "Apple",
+    "category": "audio",
+    "description": "Внутриканальные наушники с чипом H2, активным шумоподавлением и режимом прозрачности. Кейс MagSafe заряжается через USB-C, Qi или зарядное устройство Apple Watch. Четыре размера силиконовых вкладышей помогают подобрать посадку.",
+    "tagline": "Тишина по вашему желанию.",
+    "images": [
+      "/products/airpods-pro-2-white-1.webp"
+    ],
+    "specs": {
+      "Тип": "Внутриканальные, беспроводные",
+      "Процессор": "Apple H2",
+      "Шумоподавление": "Активное, адаптивное аудио, прозрачный режим",
+      "Автономность": "До 6 ч; до 30 ч с кейсом (ANC)",
+      "Связь": "Bluetooth 5.3",
+      "Защита": "IP54 наушники и кейс USB-C",
+      "Зарядка": "USB-C, MagSafe, Qi, зарядка Apple Watch",
+      "Управление": "Нажатия и свайпы громкости"
+    },
+    "features": [
+      "Внутриканальные, беспроводные",
+      "Apple H2",
+      "Активное, адаптивное аудио, прозрачный режим",
+      "До 6 ч; до 30 ч с кейсом (ANC)"
+    ],
+    "inBox": [
+      "AirPods Pro 2",
+      "Кейс MagSafe USB-C",
+      "Вкладыши XS, S, M, L",
+      "Кабель USB-C"
+    ],
+    "rating": 0,
+    "reviewCount": 0,
+    "featured": false,
+    "variants": [
+      {
+        "id": "airpods-pro-2-white-USB-C",
+        "sku": "EL-AIRPODS-PRO-2-WHITE-USB-C",
+        "price": 23990,
+        "oldPrice": 38990,
+        "stock": 12,
+        "color": "Белый",
+        "colorHex": "#f0f0f0",
+        "storage": "USB-C",
+        "images": [
+          "/products/airpods-pro-2-white-1.webp"
+        ],
+        "active": true
+      }
+    ],
+    "subcategory": "Наушники"
+  },
+  {
+    "id": "airpods-4",
+    "slug": "airpods-4",
+    "name": "Apple AirPods 4",
+    "brand": "Apple",
+    "category": "audio",
+    "description": "AirPods 4 с открытой посадкой, чипом H2 и персонализированным пространственным аудио. Эта конфигурация без активного шумоподавления поставляется с компактным кейсом USB-C.",
+    "tagline": "Открытая посадка. Простое подключение.",
+    "images": [
+      "/products/airpods-4-white-1.webp"
+    ],
+    "specs": {
+      "Тип": "Вкладыши, беспроводные",
+      "Процессор": "Apple H2",
+      "Шумоподавление": "Нет активного шумоподавления",
+      "Автономность": "До 5 ч; до 30 ч с кейсом",
+      "Связь": "Bluetooth 5.3",
+      "Защита": "IP54 наушники и кейс",
+      "Зарядка": "USB-C",
+      "Вес наушника": "4,3 г"
+    },
+    "features": [
+      "Вкладыши, беспроводные",
+      "Apple H2",
+      "Нет активного шумоподавления",
+      "До 5 ч; до 30 ч с кейсом"
+    ],
+    "inBox": [
+      "AirPods 4",
+      "Зарядный кейс USB-C",
+      "Документация"
+    ],
+    "rating": 0,
+    "reviewCount": 0,
+    "featured": false,
+    "variants": [
+      {
+        "id": "airpods-4-white-БезANC",
+        "sku": "EL-AIRPODS-4-WHITE-БЕЗANC",
+        "price": 14990,
+        "oldPrice": 29990,
+        "stock": 12,
+        "color": "Белый",
+        "colorHex": "#f0f0f0",
+        "storage": "Без ANC",
+        "images": [
+          "/products/airpods-4-white-1.webp"
+        ],
+        "active": true
+      }
+    ],
+    "subcategory": "Наушники"
+  },
+  {
+    "id": "homepod-2",
+    "slug": "homepod-2",
+    "name": "Apple HomePod (2-го поколения)",
+    "brand": "Apple",
+    "category": "smart-home",
+    "description": "Домашняя колонка с автоматической настройкой звучания, пространственным аудио Dolby Atmos и поддержкой AirPlay. Датчики температуры и влажности и поддержка Thread помогают связать устройства умного дома.",
+    "tagline": "Звук, который учитывает комнату.",
+    "images": [
+      "/products/homepod-2-midnight-1.webp"
+    ],
+    "specs": {
+      "Акустика": "Низкочастотный динамик 4″ и 5 высокочастотных",
+      "Звук": "Dolby Atmos, автоматическая настройка под комнату",
+      "Связь": "Wi-Fi 802.11n, Bluetooth 5.0, Thread, UWB",
+      "Экосистема": "AirPlay, Siri, HomeKit, Matter",
+      "Датчики": "Температура и влажность",
+      "Питание": "От электросети",
+      "Размеры": "168 × 142 мм",
+      "Вес": "2,3 кг"
+    },
+    "features": [
+      "Низкочастотный динамик 4″ и 5 высокочастотных",
+      "Dolby Atmos, автоматическая настройка под комнату",
+      "Wi-Fi 802.11n, Bluetooth 5.0, Thread, UWB",
+      "AirPlay, Siri, HomeKit, Matter"
+    ],
+    "inBox": [
+      "HomePod",
+      "Кабель питания",
+      "Документация"
+    ],
+    "rating": 0,
+    "reviewCount": 0,
+    "featured": false,
+    "variants": [
+      {
+        "id": "homepod-2-midnight-Стандарт",
+        "sku": "EL-HOMEPOD-2-MIDNIGHT-СТАНДАРТ",
+        "price": 34990,
+        "oldPrice": 49990,
+        "stock": 12,
+        "color": "Тёмная ночь",
+        "colorHex": "#33383d",
+        "storage": "Стандарт",
+        "images": [
+          "/products/homepod-2-midnight-1.webp"
+        ],
+        "active": true
+      }
+    ],
+    "subcategory": "Умные колонки"
+  },
+  {
+    "id": "apple-tv-4k-3",
+    "slug": "apple-tv-4k-3",
+    "name": "Apple Apple TV 4K (3-го поколения)",
+    "brand": "Apple",
+    "category": "smart-home",
+    "description": "Медиаплеер с A15 Bionic, Dolby Vision и HDR10+ для совместимого телевизора. Версия 128 ГБ оснащена Gigabit Ethernet и Thread. В комплекте Siri Remote с зарядкой USB-C; кабель HDMI приобретается отдельно.",
+    "tagline": "Кино в 4K. Управление одним пультом.",
+    "images": [
+      "/products/apple-tv-4k-3-black-1.webp"
+    ],
+    "specs": {
+      "Процессор": "Apple A15 Bionic",
+      "Видео": "До 4K 60 кадров/с, Dolby Vision, HDR10+",
+      "Аудио": "Dolby Atmos",
+      "Разъёмы": "HDMI 2.1, Gigabit Ethernet",
+      "Связь": "Wi-Fi 6, Bluetooth 5.0, Thread",
+      "Накопитель": "128 ГБ",
+      "Пульт": "Siri Remote (3-го поколения), USB-C",
+      "Размеры": "93 × 93 × 31 мм"
+    },
+    "features": [
+      "Apple A15 Bionic",
+      "До 4K 60 кадров/с, Dolby Vision, HDR10+",
+      "Dolby Atmos",
+      "HDMI 2.1, Gigabit Ethernet"
+    ],
+    "inBox": [
+      "Apple TV 4K",
+      "Siri Remote",
+      "Кабель питания",
+      "Документация"
+    ],
+    "rating": 0,
+    "reviewCount": 0,
+    "featured": false,
+    "variants": [
+      {
+        "id": "apple-tv-4k-3-black-128gb/Ethernet",
+        "sku": "EL-APPLE-TV-4K-3-BLACK-128ГБ/ETHERNET",
+        "price": 20990,
+        "oldPrice": 35990,
+        "stock": 12,
+        "color": "Чёрный",
+        "colorHex": "#242424",
+        "storage": "128 ГБ / Ethernet",
+        "images": [
+          "/products/apple-tv-4k-3-black-1.webp"
+        ],
+        "active": true
+      }
+    ],
+    "subcategory": "Медиаплееры"
+  },
+  {
+    "id": "apple-magic-mouse",
+    "slug": "apple-magic-mouse",
+    "name": "Apple Magic Mouse (USB-C)",
+    "brand": "Apple",
+    "category": "accessories",
+    "description": "Беспроводная мышь Apple с сенсорной поверхностью Multi-Touch для прокрутки и жестов в macOS. Встроенный аккумулятор заряжается через USB-C; симметричная форма подходит для левой и правой руки.",
+    "tagline": "Жесты на поверхности Multi-Touch.",
+    "images": [
+      "/products/apple-magic-mouse-white-1.webp",
+      "/products/apple-magic-mouse-white-2.webp"
+    ],
+    "specs": {
+      "Тип": "Беспроводная мышь",
+      "Поверхность": "Multi-Touch",
+      "Подключение": "Bluetooth",
+      "Зарядка": "USB-C",
+      "Питание": "Встроенный аккумулятор",
+      "Совместимость": "Mac с macOS 15.1 или новее; iPadOS 18.1 или новее",
+      "Размеры": "113,5 × 57,1 × 21,6 мм",
+      "Вес": "99 г"
+    },
+    "features": [
+      "Беспроводная мышь",
+      "Multi-Touch",
+      "Bluetooth",
+      "USB-C"
+    ],
+    "inBox": [
+      "Magic Mouse",
+      "Кабель USB-C"
+    ],
+    "rating": 0,
+    "reviewCount": 0,
+    "featured": false,
+    "variants": [
+      {
+        "id": "apple-magic-mouse-white-USB-C",
+        "sku": "EL-APPLE-MAGIC-MOUSE-WHITE-USB-C",
+        "price": 9990,
+        "oldPrice": 24990,
+        "stock": 12,
+        "color": "Белый",
+        "colorHex": "#f0f0f0",
+        "storage": "USB-C",
+        "images": [
+          "/products/apple-magic-mouse-white-1.webp",
+          "/products/apple-magic-mouse-white-2.webp"
+        ],
+        "active": true
+      }
+    ],
+    "subcategory": "Мыши"
+  }
+]

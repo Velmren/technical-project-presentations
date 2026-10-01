@@ -1,0 +1,28 @@
+{
+  "slug": "npc-system",
+  "title": "Minecraft NPC System",
+  "subtitle": "Северная гавань",
+  "description": "Три NPC с отдельными ролями, русские диалоги и задание с сохранением прогресса. Java/Paper plugin и самостоятельная браузерная демонстрация.",
+  "author": "VELMREN",
+  "version": "2.0.0",
+  "date": "2026-09-27",
+  "category": "Minecraft",
+  "stack": ["Java 21", "Paper 1.21.11", "JavaScript", "CSS", "SVG"],
+  "status": "verified-local",
+  "url": "/projects/npc-system/",
+  "thumbnail": "/projects/npc-system/thumbnail.png",
+  "download": "/projects/npc-system/north-harbor-2.0.0.jar",
+  "source": "/projects/npc-system/source.zip",
+  "readme": "/projects/npc-system/README.md",
+  "verification": {
+    "modelAssertions": 29,
+    "paperAssertions": 29,
+    "paperBoots": 3,
+    "browserAssertions": 39,
+    "playerHarness": "controlled Java Player proxy; real Paper entities/events/inventory",
+    "browserWidths": [1440, 1024, 850, 768, 560, 390],
+    "minecraftGuiTested": false,
+    "published": false
+  }
+}
+

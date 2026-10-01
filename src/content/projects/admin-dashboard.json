@@ -1,0 +1,322 @@
+{
+  "status": "published",
+  "presentation": "case",
+  "year": 2026,
+  "slug": "admin-dashboard",
+  "title": "ORBIT",
+  "eyebrow": "Панель управления",
+  "lead": "Панель, в которой весь день интернет-магазина на одном экране",
+  "summary": "Заказы, оплаты, склад, задачи и переписка с клиентами связаны между собой. Демо на вымышленном магазине, на русском и английском.",
+  "note": "Демо-панель",
+  "closing": "Откройте панель и пройдите один заказ",
+  "accent": "#1eaefc",
+  "category": "Веб-приложения",
+  "technologies": [
+    "React",
+    "TypeScript",
+    "Vite",
+    "Motion",
+    "dnd-kit"
+  ],
+  "order": 15,
+  "tone": "night",
+  "cover": {
+    "kind": "image",
+    "image": {
+      "src": "/assets/orbit/overview-ru.webp",
+      "alt": "ORBIT: обзор дня магазина",
+      "width": 2400,
+      "height": 1500
+    }
+  },
+  "actions": [
+    {
+      "label": "Открыть панель",
+      "href": "/projects/admin-dashboard/"
+    }
+  ],
+  "showcase": {
+    "image": {
+      "src": "/assets/orbit/overview-ru.webp",
+      "alt": "ORBIT: обзор дня магазина с выручкой, заказами и задачами",
+      "width": 2400,
+      "height": 1500
+    },
+    "url": "velmren.com/projects/admin-dashboard/#/overview",
+    "phone": {
+      "src": "/assets/orbit/m-overview-ru.webp",
+      "alt": "Обзор ORBIT на телефоне",
+      "width": 780,
+      "height": 1688
+    }
+  },
+  "sections": [
+    {
+      "kind": "benefit",
+      "title": "Весь день магазина на одном экране",
+      "text": "Выручка, заказы и то, что требует внимания сейчас: к упаковке, непрошедшие оплаты, вопросы без ответа.",
+      "layers": [
+        {
+          "image": {
+            "src": "/assets/orbit/overview-ru.webp",
+            "alt": "Обзор: показатели, график выручки и последние события",
+            "width": 2400,
+            "height": 1500
+          },
+          "x": 0,
+          "y": 0.02,
+          "w": 0.58,
+          "url": "velmren.com/projects/admin-dashboard/#/overview"
+        },
+        {
+          "image": {
+            "src": "/assets/orbit/overview-detail-ru.webp",
+            "alt": "Выручка 175 351 € и 1 144 заказа за 30 дней",
+            "width": 1160,
+            "height": 364
+          },
+          "x": 0.62,
+          "y": 0.12,
+          "w": 0.38,
+          "front": true
+        }
+      ]
+    },
+    {
+      "kind": "benefit",
+      "title": "Заказ виден от оплаты до двери",
+      "text": "В карточке заказа следующий шаг, ход доставки, клиент и товары. Ссылка ведёт прямо на открытый заказ.",
+      "figure": {
+        "value": "14 000",
+        "label": "заказов в демо-магазине"
+      },
+      "layers": [
+        {
+          "image": {
+            "src": "/assets/orbit/orders-ru.webp",
+            "alt": "Список заказов и открытая карточка заказа",
+            "width": 2400,
+            "height": 1500
+          },
+          "x": 0,
+          "y": 0.02,
+          "w": 0.58,
+          "url": "velmren.com/projects/admin-dashboard/#/orders/NL-23786"
+        },
+        {
+          "image": {
+            "src": "/assets/orbit/order-detail-ru.webp",
+            "alt": "Ход заказа: оформлен, оплачен, ждёт упаковки и курьера",
+            "width": 600,
+            "height": 598
+          },
+          "x": 0.64,
+          "y": 0.08,
+          "w": 0.36,
+          "front": true
+        }
+      ]
+    },
+    {
+      "kind": "benefit",
+      "title": "Задачи команды привязаны к заказам",
+      "text": "Доска с перетаскиванием, у каждой задачи свой заказ, срок и исполнитель.",
+      "layers": [
+        {
+          "image": {
+            "src": "/assets/orbit/tasks-ru.webp",
+            "alt": "Доска задач: к работе, в работе, готово",
+            "width": 2400,
+            "height": 1500
+          },
+          "x": 0,
+          "y": 0.02,
+          "w": 0.58,
+          "url": "velmren.com/projects/admin-dashboard/#/tasks"
+        },
+        {
+          "image": {
+            "src": "/assets/orbit/tasks-detail-ru.webp",
+            "alt": "Задачи по непрошедшим оплатам с номерами заказов",
+            "width": 780,
+            "height": 880
+          },
+          "x": 0.66,
+          "y": 0,
+          "w": 0.3,
+          "front": true,
+          "fade": true
+        }
+      ]
+    },
+    {
+      "kind": "benefit",
+      "title": "Каждый видит только то, что ему нужно",
+      "text": "Права ролей настраиваются таблицей, а владелец может открыть панель от имени любой роли и проверить сам.",
+      "layers": [
+        {
+          "image": {
+            "src": "/assets/orbit/team-ru.webp",
+            "alt": "Команда: роли и доступы 14 человек",
+            "width": 2400,
+            "height": 1500
+          },
+          "x": 0,
+          "y": 0.02,
+          "w": 0.58,
+          "url": "velmren.com/projects/admin-dashboard/#/settings?tab=team"
+        },
+        {
+          "image": {
+            "src": "/assets/orbit/roles-detail-ru.webp",
+            "alt": "Права владельца и менеджера на заказы и платежи",
+            "width": 958,
+            "height": 708
+          },
+          "x": 0.62,
+          "y": 0.06,
+          "w": 0.38,
+          "front": true,
+          "fade": true
+        }
+      ]
+    },
+    {
+      "kind": "benefit",
+      "title": "С телефона тоже",
+      "text": "Обзор и карточка заказа рассчитаны на небольшой экран.",
+      "layers": [
+        {
+          "image": {
+            "src": "/assets/orbit/m-overview-ru.webp",
+            "alt": "Обзор на телефоне",
+            "width": 780,
+            "height": 1688
+          },
+          "x": 0.17,
+          "y": 0.08,
+          "w": 0.3,
+          "phone": true
+        },
+        {
+          "image": {
+            "src": "/assets/orbit/m-order-ru.webp",
+            "alt": "Карточка заказа на телефоне",
+            "width": 780,
+            "height": 1688
+          },
+          "x": 0.53,
+          "y": 0,
+          "w": 0.3,
+          "phone": true,
+          "front": true
+        }
+      ]
+    },
+    {
+      "kind": "features",
+      "title": "Как устроено",
+      "text": "React и TypeScript, без сервера.",
+      "items": [
+        "Данные",
+        "Изменения",
+        "Ссылки",
+        "Клавиатура"
+      ],
+      "descriptions": [
+        "Магазин генерируется из одного зерна в Web Worker, интерфейс не замирает при запуске.",
+        "Хранятся в браузере журналом действий поверх данных.",
+        "Фильтры и открытая запись сохраняются в адресе.",
+        "Командное меню по Ctrl+K находит заказ, клиента или раздел."
+      ]
+    }
+  ],
+  "en": {
+    "eyebrow": "Admin panel",
+    "lead": "A panel that puts an online store's whole day on one screen",
+    "summary": "Orders, payments, stock, tasks and customer messages are linked together. A demo on a fictional store, in Russian and English.",
+    "note": "Demo panel",
+    "closing": "Open the panel and follow one order",
+    "actions": [
+      "Open the panel"
+    ],
+    "showcase": [
+      "ORBIT: a store's day at a glance with revenue, orders and tasks",
+      "ORBIT overview on a phone"
+    ],
+    "media": {
+      "/assets/orbit/overview-ru.webp": "/assets/orbit/overview-en.webp",
+      "/assets/orbit/m-overview-ru.webp": "/assets/orbit/m-overview-en.webp",
+      "/assets/orbit/overview-detail-ru.webp": "/assets/orbit/overview-detail-en.webp",
+      "/assets/orbit/orders-ru.webp": "/assets/orbit/orders-en.webp",
+      "/assets/orbit/order-detail-ru.webp": "/assets/orbit/order-detail-en.webp",
+      "/assets/orbit/tasks-ru.webp": "/assets/orbit/tasks-en.webp",
+      "/assets/orbit/tasks-detail-ru.webp": "/assets/orbit/tasks-detail-en.webp",
+      "/assets/orbit/team-ru.webp": "/assets/orbit/team-en.webp",
+      "/assets/orbit/roles-detail-ru.webp": "/assets/orbit/roles-detail-en.webp",
+      "/assets/orbit/m-order-ru.webp": "/assets/orbit/m-order-en.webp"
+    },
+    "sections": [
+      {
+        "title": "The store's whole day on one screen",
+        "text": "Revenue, orders and what needs attention now: orders to pack, failed payments, unanswered questions.",
+        "alts": [
+          "Overview: figures, revenue chart and latest events",
+          "Revenue of 175,351 euros and 1,144 orders over 30 days"
+        ]
+      },
+      {
+        "title": "Every order from payment to the door",
+        "text": "The order shows the next step, delivery progress, the customer and the items. A link opens that exact order.",
+        "figure": {
+          "value": "14,000",
+          "label": "orders in the demo store"
+        },
+        "alts": [
+          "The order list with an order open",
+          "Order progress: placed, paid, waiting to be packed and handed to the courier"
+        ]
+      },
+      {
+        "title": "Team tasks are tied to orders",
+        "text": "A drag-and-drop board where every task has its order, due date and owner.",
+        "alts": [
+          "Task board: to do, in progress, done",
+          "Tasks about failed payments with their order numbers"
+        ]
+      },
+      {
+        "title": "Everyone sees only what they need",
+        "text": "Role access is set in one table, and the owner can open the panel as any role to check it.",
+        "alts": [
+          "Team: roles and access for 14 people",
+          "Owner and manager access to orders and payments"
+        ]
+      },
+      {
+        "title": "On a phone too",
+        "text": "The overview and the order page are built for a small screen.",
+        "alts": [
+          "Overview on a phone",
+          "An order on a phone"
+        ]
+      },
+      {
+        "title": "How it is built",
+        "text": "React and TypeScript, no server.",
+        "items": [
+          "Data",
+          "Changes",
+          "Links",
+          "Keyboard"
+        ],
+        "descriptions": [
+          "The store is generated from one seed in a Web Worker, so the interface never freezes on start.",
+          "Kept in the browser as an action log over the data.",
+          "Filters and the open record live in the address.",
+          "The Ctrl+K command menu finds an order, a customer or a section."
+        ]
+      }
+    ]
+  }
+}

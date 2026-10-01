@@ -1,0 +1,2 @@
+import {defineConfig} from 'vite';
+export default defineConfig({base:'./',publicDir:'static',build:{outDir:'../../public/projects/admin-dashboard',emptyOutDir:true,rollupOptions:{output:{manualChunks:{'vendor-react':['react','react-dom'],'vendor-motion':['motion/react']}},onwarn(warning,defaultHandler){if(warning.code==='MODULE_LEVEL_DIRECTIVE'&&warning.message.includes('use client'))return;defaultHandler(warning)}}}});

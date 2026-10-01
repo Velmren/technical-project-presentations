@@ -1,0 +1,7 @@
+import {z} from 'zod';
+export class ApiError extends Error { constructor(message:string,public status=400){super(message);} }
+export const addressSchema=z.object({name:z.string().min(2).max(100),phone:z.string().min(7).max(30),city:z.string().min(2).max(100),street:z.string().min(3).max(250),postalCode:z.string().max(20).optional().default(''),isDefault:z.boolean().optional()});
+export const checkoutSchema=z.object({idempotencyKey:z.string().min(8).max(100),deliveryMethod:z.enum(['courier','pickup']),paymentMethod:z.enum(['card','sbp','cash']),address:addressSchema.optional(),contact:z.object({name:z.string().min(2).max(100),email:z.string().email(),phone:z.string().min(7).max(30)}).optional(),recipient:z.object({name:z.string().min(2).max(100),phone:z.string().min(7).max(30)}).optional(),pickupPoint:z.string().max(200).optional(),addressId:z.string().optional(),saveAddress:z.boolean().optional().default(false),promoCode:z.string().max(40).optional(),comment:z.string().max(1000).optional(),useBonuses:z.number().int().min(0).max(1000000).optional().default(0)});
+export type CheckoutInput=z.input<typeof checkoutSchema> & {saveAddress?:boolean};
+export function assertOwner(user:{id:string;role:string},ownerId:string){if(user.id!==ownerId&&!['ADMIN','STAFF'].includes(user.role))throw new ApiError('Нет доступа',403);}
+export function assertStaff(user:{role:string}){if(!['ADMIN','STAFF'].includes(user.role))throw new ApiError('Доступ только сотрудникам',403);}

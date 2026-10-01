@@ -1,0 +1,8 @@
+'use client';
+import Link from 'next/link';
+import {useParams} from 'next/navigation';
+import {ShieldCheck,ArrowUpRight} from 'lucide-react';
+import {useResource} from '@/lib/client';
+import {type Profile,PageHead,Loading,AuthGate,Empty} from '@/components/commerce/common';
+import {resources,Dashboard,AdminResource} from '@/components/commerce/admin';
+export default function AdminPage(){const profile=useResource<Profile>('/api/profile');const params=useParams<{section?:string[]}>();const section=params.section?.[0]||'dashboard';return <div className="container page"><PageHead title="Управление магазином" subtitle="Товары, заказы и коммуникация с покупателями." action={<Link className="button secondary" href="/">Открыть магазин <ArrowUpRight size={17}/></Link>}/>{profile.loading?<Loading/>:!profile.data?<AuthGate next={`/admin/${section}`}/>:!['ADMIN','STAFF'].includes(profile.data.role)?<Empty title="Доступ только для сотрудников" text="У вашего аккаунта нет прав управления магазином." href="/account" link="В личный кабинет"/>:<div className="commerce-admin-layout"><aside className="commerce-admin-nav"><div><ShieldCheck/><strong>{profile.data.role==='ADMIN'?'Администратор':'Сотрудник'}</strong><small>{profile.data.email}</small></div><nav aria-label="Управление магазином">{resources.map(([id,label])=><Link href={`/admin/${id}`} className={id===section?'active':''} key={id}>{label}</Link>)}</nav></aside><div className="commerce-admin-content">{section==='dashboard'?<Dashboard/>:resources.some(([id])=>id===section)?<AdminResource key={section} resource={section} role={profile.data.role}/>:<Empty title="Раздел не найден" text="Выберите раздел в меню управления." href="/admin" link="К обзору магазина"/>}</div></div>}</div>}

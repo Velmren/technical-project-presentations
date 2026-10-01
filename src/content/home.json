@@ -1,0 +1,544 @@
+{
+  "moreThreshold": 4,
+  "works": [
+    {
+      "slug": "electronics-store",
+      "status": "accepted",
+      "placement": "main",
+      "title": "VELMREN tech",
+      "type": "Интернет-магазин",
+      "description": "Магазин электроники, который работает целиком: от каталога до заказа и панели управления.",
+      "category": "Веб",
+      "tags": [
+        "Веб"
+      ],
+      "stack": "Next.js / PostgreSQL",
+      "year": 2026,
+      "preview": {
+        "src": "/assets/home/card-store.webp",
+        "alt": "Главная страница магазина VELMREN tech",
+        "light": true,
+        "overlay": {
+          "src": "/assets/home/card-store-mobile.webp",
+          "alt": "Карточка товара на телефоне"
+        }
+      },
+      "action": {
+        "label": "Открыть магазин",
+        "href": "https://shop.velmren.com"
+      },
+      "details": "/electronics-store/",
+      "live": {
+        "scroll": "/assets/electronics-store/home-full-desktop.webp",
+        "slides": [
+          "/assets/electronics-store/hero-desktop.webp",
+          "/assets/electronics-store/category-filters-desktop.webp",
+          "/assets/electronics-store/product-variants-desktop.webp",
+          "/assets/electronics-store/cart-promo-desktop.webp"
+        ]
+      },
+      "facts": [
+        {
+          "value": "60",
+          "label": "моделей в каталоге",
+          "name": "Модели в каталоге"
+        },
+        {
+          "value": "10",
+          "label": "категорий",
+          "name": "Категории"
+        },
+        {
+          "value": "261",
+          "label": "вариант по цвету и памяти",
+          "name": "Варианты цвета и памяти"
+        }
+      ],
+      "en": {
+        "type": "Online store",
+        "description": "An electronics store that works end to end, from catalogue to checkout and admin panel.",
+        "action": "Open the store",
+        "details": "/en/electronics-store/",
+        "alt": "VELMREN tech store home page",
+        "overlayAlt": "Product page on a phone",
+        "facts": [
+          {
+            "name": "Models in catalogue",
+            "label": "models in the catalogue"
+          },
+          {
+            "name": "Categories",
+            "label": "categories"
+          },
+          {
+            "name": "Colour and storage variants",
+            "label": "colour and storage variants"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "forma",
+      "status": "accepted",
+      "placement": "main",
+      "title": "FORMA",
+      "type": "Каталог для дома",
+      "description": "Каталог предметов для дома: фильтры по материалам, сравнение в одном масштабе и подборка.",
+      "category": "Веб",
+      "tags": [
+        "Веб"
+      ],
+      "stack": "React / TypeScript",
+      "year": 2026,
+      "preview": {
+        "src": "/assets/home/card-forma.webp",
+        "alt": "Каталог FORMA: фильтры и первые предметы с ценами",
+        "light": true,
+        "overlay": {
+          "src": "/assets/home/card-forma-mobile.webp",
+          "alt": "Подборка FORMA: кресло «Гавань» и два графина «Тишь», итого 1 616 €"
+        }
+      },
+      "action": {
+        "label": "Открыть каталог",
+        "href": "/forma/live/"
+      },
+      "details": "/forma/",
+      "live": {
+        "slides": [
+          "/assets/forma/case/catalogue-ru.webp",
+          "/assets/forma/case/product-ru.webp",
+          "/assets/forma/case/compare-ru.webp",
+          "/assets/forma/case/selection-ru.webp"
+        ]
+      },
+      "en": {
+        "type": "Home catalogue",
+        "description": "A catalogue of home objects: material filters, comparison at one scale and a selection.",
+        "action": "Open the catalogue",
+        "alt": "FORMA catalogue: filters and the first objects with prices",
+        "overlayAlt": "FORMA selection: the Harbour chair and two Still carafes, total 1,616 euros",
+        "details": "/en/forma/",
+        "slides": [
+          "/assets/forma/case/catalogue-en.webp",
+          "/assets/forma/case/product-en.webp",
+          "/assets/forma/case/compare-en.webp",
+          "/assets/forma/case/selection-en.webp"
+        ],
+        "overlay": "/assets/home/card-forma-mobile-en.webp"
+      }
+    },
+    {
+      "slug": "admin-dashboard",
+      "status": "accepted",
+      "placement": "main",
+      "title": "ORBIT",
+      "type": "Панель управления",
+      "description": "Панель интернет-магазина: заказы, оплаты, склад, задачи и переписка с клиентами в одном месте.",
+      "category": "Веб",
+      "tags": [
+        "Веб"
+      ],
+      "stack": "React / TypeScript",
+      "year": 2026,
+      "preview": {
+        "src": "/assets/home/card-orbit.webp",
+        "alt": "ORBIT: обзор дня магазина",
+        "overlay": {
+          "src": "/assets/home/card-orbit-mobile.webp",
+          "alt": "Карточка заказа NL-23786 на телефоне"
+        }
+      },
+      "live": {
+        "slides": [
+          "/assets/orbit/overview-ru.webp",
+          "/assets/orbit/orders-ru.webp",
+          "/assets/orbit/tasks-ru.webp",
+          "/assets/orbit/team-ru.webp"
+        ]
+      },
+      "facts": [
+        {
+          "value": "14 000",
+          "label": "заказов в демо-магазине",
+          "name": "Заказы в демо"
+        }
+      ],
+      "action": {
+        "label": "Открыть панель",
+        "href": "/projects/admin-dashboard/"
+      },
+      "details": "/admin-dashboard/",
+      "en": {
+        "type": "Admin panel",
+        "description": "An online store panel: orders, payments, stock, tasks and customer messages in one place.",
+        "action": "Open the panel",
+        "alt": "ORBIT: a store's day at a glance",
+        "overlayAlt": "Order NL-23786 on a phone",
+        "facts": [
+          {
+            "label": "orders in the demo store",
+            "name": "Demo orders",
+            "value": "14,000"
+          }
+        ],
+        "details": "/en/admin-dashboard/",
+        "slides": [
+          "/assets/orbit/overview-en.webp",
+          "/assets/orbit/orders-en.webp",
+          "/assets/orbit/tasks-en.webp",
+          "/assets/orbit/team-en.webp"
+        ],
+        "overlay": "/assets/home/card-orbit-mobile-en.webp"
+      }
+    },
+    {
+      "slug": "sono",
+      "status": "accepted",
+      "placement": "main",
+      "title": "SONO",
+      "type": "Лендинг",
+      "description": "Лендинг колонки: две модели, сравнение и выбор цвета.",
+      "category": "Веб",
+      "tags": [
+        "Веб",
+        "Дизайн"
+      ],
+      "stack": "React / TypeScript",
+      "year": 2026,
+      "preview": {
+        "src": "/assets/home/card-sono.webp",
+        "alt": "Колонки SONO One в синей отделке",
+        "light": true
+      },
+      "action": {
+        "label": "Открыть лендинг",
+        "href": "/projects/electronics/"
+      },
+      "details": "/sono/",
+      "live": {
+        "scroll": "/assets/sono/landing-full-desktop.webp",
+        "slides": [
+          "/assets/sono/hero-desktop.webp",
+          "/assets/sono/models-comparison-desktop.webp",
+          "/assets/sono/configurator-desktop.webp",
+          "/assets/sono/bag-desktop.webp"
+        ]
+      },
+      "en": {
+        "type": "Landing page",
+        "description": "A landing page for a speaker: two models, a comparison and colour options.",
+        "action": "Open the landing page",
+        "alt": "SONO speaker landing page",
+        "details": "/en/sono/"
+      }
+    },
+    {
+      "slug": "godot",
+      "status": "accepted",
+      "placement": "main",
+      "title": "Category Spark",
+      "type": "Игра-викторина",
+      "description": "Викторина с понятной обратной связью и счётом. Играется в браузере.",
+      "category": "Игра",
+      "tags": [
+        "Игры"
+      ],
+      "stack": "Godot",
+      "year": 2026,
+      "preview": {
+        "src": "/assets/home/card-spark.webp",
+        "alt": "Category Spark: вопрос о единице частоты, выбран верный ответ",
+        "frame": true
+      },
+      "action": {
+        "label": "Играть в браузере",
+        "href": "/assets/godot/web/"
+      },
+      "details": "/godot/",
+      "live": {
+        "video": {
+          "src": "/assets/godot/category-spark-playthrough.mp4",
+          "poster": "/assets/home/live-spark-poster.webp"
+        }
+      },
+      "en": {
+        "type": "Quiz game",
+        "description": "A quiz with clear feedback and scoring, playable in the browser.",
+        "action": "Play in browser",
+        "alt": "Category Spark: a question about frequency units with the right answer chosen",
+        "details": "/en/godot/"
+      }
+    },
+    {
+      "slug": "game-concept",
+      "status": "accepted",
+      "placement": "main",
+      "title": "LACUNA",
+      "type": "Интерфейс игры",
+      "description": "Интерфейс игры об орбитальном спасательном промысле: контракты, подготовка корабля, операция и трюм.",
+      "category": "Игра",
+      "tags": [
+        "Игры"
+      ],
+      "stack": "JavaScript / Three.js",
+      "year": 2026,
+      "preview": {
+        "src": "/assets/home/card-lacuna.webp",
+        "alt": "LACUNA: карта сектора с контрактами",
+        "overlay": {
+          "src": "/assets/home/card-lacuna-mobile.webp",
+          "alt": "Контракт на телефоне"
+        }
+      },
+      "live": {
+        "slides": [
+          "/assets/lacuna/title-ru.webp",
+          "/assets/lacuna/sector-ru.webp",
+          "/assets/lacuna/bench-ru.webp",
+          "/assets/lacuna/operation-ru.webp"
+        ]
+      },
+      "facts": [
+        {
+          "value": "50 000",
+          "label": "кредитов на выкуп корабля",
+          "name": "Цель игры"
+        }
+      ],
+      "action": {
+        "label": "Открыть игру",
+        "href": "/projects/game-concept/"
+      },
+      "details": "/game-concept/",
+      "en": {
+        "type": "Game interface",
+        "description": "An interface for a game about orbital salvage: contracts, fitting the vessel, operations and the hold.",
+        "action": "Open the game",
+        "alt": "LACUNA: the sector map with contracts",
+        "overlayAlt": "A contract on a phone",
+        "facts": [
+          {
+            "value": "50,000",
+            "label": "credits to buy out the vessel",
+            "name": "Goal"
+          }
+        ],
+        "details": "/en/game-concept/",
+        "slides": [
+          "/assets/lacuna/title-en.webp",
+          "/assets/lacuna/sector-en.webp",
+          "/assets/lacuna/bench-en.webp",
+          "/assets/lacuna/operation-en.webp"
+        ],
+        "overlay": "/assets/home/card-lacuna-mobile-en.webp"
+      }
+    },
+    {
+      "slug": "encounter",
+      "status": "accepted",
+      "placement": "main",
+      "title": "Encounter State",
+      "type": "Плагин для Minecraft",
+      "description": "Сцена Minecraft с двумя целями: реле и стражи открывают следующую фазу.",
+      "category": "Игра",
+      "tags": [
+        "Игры",
+        "Minecraft"
+      ],
+      "stack": "Java / Paper",
+      "year": 2026,
+      "preview": {
+        "src": "/assets/home/live-encounter-01.webp",
+        "alt": "Encounter State: арена с реле и стражами"
+      },
+      "action": {
+        "label": "Исходный код",
+        "href": "https://github.com/Velmren/minecraft-encounter-state-demo"
+      },
+      "details": "/encounter/",
+      "live": {
+        "slides": [
+          "/assets/home/live-encounter-01.webp",
+          "/assets/home/live-encounter-02.webp",
+          "/assets/home/live-encounter-03.webp",
+          "/assets/home/live-encounter-04.webp"
+        ]
+      },
+      "en": {
+        "type": "Minecraft plugin",
+        "description": "A Minecraft scene with two goals: relays and guardians unlock the next phase.",
+        "action": "Source code",
+        "alt": "Encounter State arena with relays and guardians",
+        "details": "/en/encounter/"
+      }
+    },
+    {
+      "slug": "tilda-interior",
+      "status": "accepted",
+      "placement": "main",
+      "title": "Вариант света",
+      "type": "Сайт студии",
+      "description": "Сайт интерьерной студии: галерея, услуги и заявка.",
+      "category": "Веб",
+      "tags": [
+        "Веб",
+        "Дизайн"
+      ],
+      "stack": "Tilda",
+      "year": 2026,
+      "preview": {
+        "src": "/assets/studio-concepts/concept-38-hero.webp",
+        "alt": "Интерьерная визуализация концепции студии"
+      },
+      "action": {
+        "label": "Открыть сайт",
+        "href": "https://politely-able-rhino.tilda.ws/"
+      },
+      "details": "/tilda-interior/",
+      "live": {
+        "scroll": "/assets/home/live-tilda-full.webp"
+      },
+      "en": {
+        "type": "Studio website",
+        "description": "A website for an interior studio: gallery, services and enquiry form.",
+        "action": "Open the site",
+        "alt": "Interior visualisation from the studio concept",
+        "title": "Light Variant",
+        "details": "/en/tilda-interior/"
+      }
+    },
+    {
+      "slug": "khrum",
+      "status": "accepted",
+      "placement": "main",
+      "title": "Хрум",
+      "type": "2D-персонаж",
+      "description": "Кабанчик на собственном SVG-риге: состояния, мимика, реакции на курсор и экспорт в Lottie.",
+      "category": "Анимация",
+      "tags": [
+        "Анимация",
+        "Дизайн"
+      ],
+      "stack": "TypeScript / Lottie",
+      "year": 2026,
+      "preview": {
+        "src": "/assets/home/card-khrum.webp",
+        "alt": "Хрум на первом экране своего сайта",
+        "overlay": {
+          "src": "/assets/home/card-khrum-mobile.webp",
+          "alt": "Хрум на сцене на телефоне"
+        }
+      },
+      "live": {
+        "slides": [
+          "/assets/khrum/hero.webp",
+          "/assets/khrum/play-screen.webp",
+          "/assets/khrum/rig.webp",
+          "/assets/khrum/usage.webp"
+        ]
+      },
+      "facts": [
+        {
+          "value": "49",
+          "label": "чисел описывают позу",
+          "name": "Параметры позы"
+        }
+      ],
+      "action": {
+        "label": "Открыть сайт",
+        "href": "/projects/khrum/"
+      },
+      "details": "/khrum/",
+      "en": {
+        "slides": [
+          "/assets/khrum/hero-en.webp",
+          "/assets/khrum/play-screen-en.webp",
+          "/assets/khrum/rig-en.webp",
+          "/assets/khrum/usage-en.webp"
+        ],
+        "overlay": "/assets/home/card-khrum-mobile-en.webp",
+        "title": "Khrum",
+        "type": "2D character",
+        "description": "A boar on his own SVG rig: states, expressions, reactions to the pointer and Lottie export.",
+        "action": "Open the site",
+        "alt": "Khrum on the first screen of his site",
+        "overlayAlt": "Khrum on the stage on a phone",
+        "facts": [
+          {
+            "value": "49",
+            "label": "numbers describe a pose",
+            "name": "Pose parameters"
+          }
+        ],
+        "details": "/en/khrum/"
+      }
+    },
+    {
+      "slug": "dev-utilities",
+      "status": "accepted",
+      "placement": "main",
+      "title": "Dev Utilities",
+      "type": "Инструменты разработчика",
+      "description": "Четыре инструмента разработчика в браузере: JSON, цвет, хеши и Base64.",
+      "category": "Инструменты",
+      "tags": [
+        "Инструменты"
+      ],
+      "stack": "React / TypeScript",
+      "year": 2026,
+      "preview": {
+        "src": "/assets/home/live-devutil-01.webp",
+        "alt": "Dev Utilities: инструмент цвета с палитрой, тональной шкалой и проверкой контраста"
+      },
+      "live": {
+        "slides": [
+          "/assets/home/live-devutil-01.webp",
+          "/assets/home/live-devutil-02.webp",
+          "/assets/home/live-devutil-03.webp",
+          "/assets/home/live-devutil-04.webp"
+        ]
+      },
+      "action": {
+        "label": "Открыть приложение",
+        "href": "/projects/dev-utilities/"
+      },
+      "en": {
+        "type": "Developer tools",
+        "description": "Four developer tools in the browser: JSON, colour, hashes and Base64.",
+        "action": "Open the app",
+        "alt": "Dev Utilities colour tool with a palette, tonal scale and contrast check",
+        "details": "/en/dev-utilities/"
+      },
+      "details": "/dev-utilities/"
+    },
+    {
+      "slug": "npc-system",
+      "status": "rework",
+      "placement": "more",
+      "title": "Minecraft NPC System",
+      "description": "Диалоги и задания персонажей.",
+      "category": "Minecraft",
+      "tags": [
+        "Игры",
+        "Minecraft"
+      ],
+      "stack": "Java / Paper",
+      "year": 2026
+    },
+    {
+      "slug": "mobile-game",
+      "status": "rework",
+      "placement": "more",
+      "title": "Mobile Game Prototype",
+      "description": "Мобильный игровой прототип.",
+      "category": "Игра",
+      "tags": [
+        "Игры",
+        "Прототипы"
+      ],
+      "stack": "Godot / GDScript",
+      "year": 2026
+    }
+  ]
+}

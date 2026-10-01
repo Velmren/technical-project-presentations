@@ -1,0 +1,59 @@
+{
+  "slug": "dev-utilities",
+  "title": "Dev Utilities",
+  "version": "3.0",
+  "author": "VELMREN",
+  "category": "Tools",
+  "placement": "main-project-card-5",
+  "stack": [
+    "React 19",
+    "TypeScript",
+    "CodeMirror 6",
+    "Ajv",
+    "json-p3",
+    "culori",
+    "hash-wasm",
+    "Web Workers",
+    "CSS"
+  ],
+  "status": "verified-static-browser-app",
+  "url": "/projects/dev-utilities/",
+  "thumbnail": "/projects/dev-utilities/thumbnail.png",
+  "annotation": "Четыре локальных инструмента разработчика на русском и английском, в светлой и тёмной теме. JSON: запросы JSONPath (RFC 9535), конвертация в YAML, CSV, TypeScript и JSON Schema, сравнение, JSON Patch и проверка схемой без потери точности чисел. Цвет: OKLCH, перцептивные шкалы, контраст WCAG, симуляция нарушений цветового зрения. Хеши: SHA, CRC32, HMAC, сверка по спискам sha256sum. Base64: файлы, Data URI, hex-просмотр, JWT. Всё обрабатывается в браузере.",
+  "features": [
+    "JSON editor / virtualized tree / live JSONPath with exact values / YAML, CSV, TypeScript, Schema export / diff and JSON Patch / Ajv 2020-12",
+    "Color HEX, RGB, HSL, OKLCH, OKLab / gamut marks / perceptual scales / WCAG contrast samples / vision simulation / CSS, Tailwind, W3C tokens",
+    "SHA-256 / SHA-512 / SHA-1 / CRC32 / HMAC / streaming file queue / checksum list verification and report",
+    "Unicode and binary Base64 / URL-safe / Data URI / hex view with file signatures / JWT decoding without signature verification"
+  ],
+  "limits": {
+    "jsonTextCodeUnits": 5242880,
+    "jsonImportBytes": 5242880,
+    "jsonNesting": 256,
+    "jsonValues": 100000,
+    "jsonDiffChanges": 5000,
+    "jsonTimeoutSeconds": 20,
+    "hashTextBytes": 16777216,
+    "hashFileBytes": 1073741824,
+    "hashQueueFiles": 20,
+    "base64Bytes": 33554432,
+    "base64TimeoutSeconds": 60
+  },
+  "dataPersistence": "Session by default; explicit opt-in saves text, options and palettes; language, theme and pane sizes remembered; files and HMAC keys never saved",
+  "backend": "None",
+  "published": false,
+  "verification": {
+    "browser": "Installed Chrome / Playwright",
+    "widths": [390, 768, 1024, 1440],
+    "touch": true,
+    "keyboard": true,
+    "reducedMotion": true
+  },
+  "notes": [
+    "Interface in Russian and English; light and dark themes.",
+    "JSONPath passes all 706 tests of the official RFC 9535 compliance suite through the app's pipeline.",
+    "Schema 2020-12 with local references; unsafe numbers and duplicate keys block only ambiguous operations.",
+    "SHA-1 is legacy compatibility; CRC32 is integrity only; JWT signatures are not verified.",
+    "Independent portfolio project; synthetic examples; no publication."
+  ]
+}

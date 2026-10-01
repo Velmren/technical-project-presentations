@@ -1,0 +1,36 @@
+{
+  "slug": "electronics",
+  "title": "SONO — Sound for your space",
+  "category": "Landing — Electronics",
+  "stack": [
+    "React 19",
+    "TypeScript",
+    "Vite 7",
+    "CSS",
+    "Lucide"
+  ],
+  "status": "verified local static demo",
+  "url": "/projects/electronics/",
+  "thumbnail": "/projects/electronics/thumbnail.png",
+  "demo": true,
+  "backend": false,
+  "scope": [
+    "two concept models",
+    "spec comparison",
+    "three simulated finishes",
+    "quantity and price configuration",
+    "local demo bag",
+    "validated enquiry preview"
+  ],
+  "limitations": [
+    "fictional products, prices and specifications",
+    "colour previews use CSS finish simulations",
+    "no actual audio, message sending, checkout or payment",
+    "bag resets on reload; only configuration is persisted"
+  ],
+  "languages": [
+    "ru",
+    "en"
+  ],
+  "languagePersistence": "localStorage: sono.language.v1"
+}

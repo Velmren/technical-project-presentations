@@ -1,0 +1,82 @@
+npcs:
+  elder:
+    name: '&6Староста Лев'
+    role: Староста деревни
+    world: npc_demo
+    x: 0
+    y: 65
+    z: 0
+    type: VILLAGER
+    profession: LIBRARIAN
+    dialogue: elder
+  lumberjack:
+    name: '&2Лесоруб Олег'
+    role: Ремонт мельницы
+    world: npc_demo
+    x: -22
+    y: 65
+    z: -12
+    profession: FLETCHER
+    dialogue: lumberjack
+  smith:
+    name: '&7Кузнец Мара'
+    role: Инструменты и ремонт
+    world: npc_demo
+    x: 20
+    y: 65
+    z: -10
+    profession: TOOLSMITH
+    dialogue: smith
+  merchant:
+    name: '&eТорговка Дарья'
+    role: Рынок гавани
+    world: npc_demo
+    x: 12
+    y: 65
+    z: 12
+    profession: BUTCHER
+    dialogue: merchant
+    shop: market
+  keeper:
+    name: '&bСмотрительница Ника'
+    role: Восстановление маяка
+    world: npc_demo
+    x: 42
+    y: 65
+    z: 10
+    profession: CARTOGRAPHER
+    dialogue: keeper
+  farmer:
+    name: '&aФермер Павел'
+    role: Пшеничные поля
+    world: npc_demo
+    x: -20
+    y: 65
+    z: 18
+    profession: FARMER
+    dialogue: farmer
+  guard:
+    name: '&cСтраж Илья'
+    role: Патруль северных ворот
+    world: npc_demo
+    x: 0
+    y: 65
+    z: -26
+    profession: ARMORER
+    dialogue: guard
+    interval: 10
+    speed: 0.2
+    route:
+      - {x: 0, y: 65, z: -26}
+      - {x: 5, y: 65, z: -26}
+      - {x: -5, y: 65, z: -26}
+  cartographer:
+    name: '&dКартограф Анна'
+    role: Исследование гавани
+    world: npc_demo
+    x: -12
+    y: 65
+    z: 8
+    profession: CARTOGRAPHER
+    dialogue: cartographer
+

@@ -1,0 +1,5 @@
+name: HarborVerifier
+version: 1.0.0
+main: dev.velmren.guide.PaperVerifier
+api-version: '1.21.11'
+depend: [NorthHarbor]

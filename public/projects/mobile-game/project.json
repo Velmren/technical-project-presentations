@@ -1,0 +1,16 @@
+{
+  "slug": "mobile-game",
+  "title": "Люми: остров ветров",
+  "stack": "Godot 4.7.2 / GDScript / WebGL 2 / Windows x64",
+  "status": "Playable adventure · Web and Windows builds",
+  "url": "/projects/mobile-game/",
+  "thumbnail": "/projects/mobile-game/thumbnail.png",
+  "description": "A golden marten courier and an owl restore a lighthouse across five connected regions. Native Godot scenes, combat, NPC quests, equipment, save/load, touch controls.",
+  "assets": "Original storybook artwork; original synthesized audio; genuine Godot screenshots",
+  "backend": false,
+  "engine": "Godot 4.7.2",
+  "zones": 5,
+  "mainQuests": 5,
+  "optionalQuests": 3,
+  "nativeMobilePublished": false
+}

@@ -1,0 +1,4 @@
+# NPC System schema v1. Coordinates are feet positions; demo install is explicit.
+economy: emerald
+interaction-distance: 6
+session-seconds: 90

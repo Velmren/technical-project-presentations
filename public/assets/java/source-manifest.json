@@ -1,0 +1,128 @@
+{
+  "repository": "https://github.com/Velmren/minecraft-encounter-state-demo",
+  "commit": null,
+  "version": "0.2.0",
+  "archive": "encounter-state-demo-0.2.0-source.zip",
+  "files": [
+    {
+      "path": ".gitignore",
+      "bytes": 155,
+      "sha256": "de40608dee093e930ee5d88de5fba02988a8ec1ee9db4047f7c1155f1112cbea"
+    },
+    {
+      "path": "build-and-test.ps1",
+      "bytes": 789,
+      "sha256": "2f2061bd640c7a5a5dd521ab9934c0c1e2621c53b2c63ea8811990279685b39b"
+    },
+    {
+      "path": "build-paper.ps1",
+      "bytes": 1501,
+      "sha256": "691ad5c434ad564f7a087496fc561350918c5de1318105b82604591aa5a5b4c6"
+    },
+    {
+      "path": "dependencies.json",
+      "bytes": 2350,
+      "sha256": "8a8d442fc22f5e136630c6c99a59961870ebf5e87c9538924233358e44e87cb3"
+    },
+    {
+      "path": "dev-client/build.gradle",
+      "bytes": 406,
+      "sha256": "510a1ca9a430ae40b423de94b4b36aec3c7644b0557760341e5bbf904763bb3f"
+    },
+    {
+      "path": "dev-client/gradle.properties",
+      "bytes": 50,
+      "sha256": "613a08ff4c1a550ca53c2c58f038dfa6e5422fb3e3750b280a4d813c64961b6b"
+    },
+    {
+      "path": "dev-client/settings.gradle",
+      "bytes": 339,
+      "sha256": "aff0fea35c47b1066966a0670ee70c29491cbe300deec6d2d043c612219cda4d"
+    },
+    {
+      "path": "LICENSE",
+      "bytes": 1064,
+      "sha256": "a3037f9dad6f9c14822cb47c67d8b5827e3c391f3dd254fadd1ef213ecbc1376"
+    },
+    {
+      "path": "pom.xml",
+      "bytes": 1309,
+      "sha256": "bec9d5a974080efa1920ff3ecb62aae0a3e4f516e838cb0c962dd05fc5913312"
+    },
+    {
+      "path": "README.md",
+      "bytes": 5568,
+      "sha256": "a1889171ad2b037a72f2b9f5fc58148c632a0887064876a4b43235a7a0a75df8"
+    },
+    {
+      "path": "src/main/java/dev/velmren/encounter/core/EncounterDefinition.java",
+      "bytes": 1203,
+      "sha256": "e6bebfb84b2d8f5038c9ed50b3c760d45a27e1990e67e9b064c3f5b376f80aa7"
+    },
+    {
+      "path": "src/main/java/dev/velmren/encounter/core/EncounterEngine.java",
+      "bytes": 4095,
+      "sha256": "b5b582293000f3ba4361c7e27242c01e9446698ea316c2809ccbf0a5a5a13373"
+    },
+    {
+      "path": "src/main/java/dev/velmren/encounter/core/EncounterEvent.java",
+      "bytes": 653,
+      "sha256": "90e195452e0fac28a02f075a7ac38815d55901dd6ff99200df319710f5c72db5"
+    },
+    {
+      "path": "src/main/java/dev/velmren/encounter/core/EncounterSnapshot.java",
+      "bytes": 390,
+      "sha256": "0398883655775b851cd9cf24c59a62b0ff3a7e4435f9a57e73cf1a6e818bb8b6"
+    },
+    {
+      "path": "src/main/java/dev/velmren/encounter/core/EncounterStatus.java",
+      "bytes": 105,
+      "sha256": "dc8b10fd9bd841f7c1aa7fad98c75b475c47f56c32678d4c069f0872d837908e"
+    },
+    {
+      "path": "src/main/java/dev/velmren/encounter/core/ObjectiveDefinition.java",
+      "bytes": 469,
+      "sha256": "26a3a2f61288c8350d7bb58b4f511815bf840a1556a79259f0cf98edeb3efd98"
+    },
+    {
+      "path": "src/main/java/dev/velmren/encounter/core/PhaseDefinition.java",
+      "bytes": 920,
+      "sha256": "c576d0780cfa373ff33caeea7e2a4c3e74336abab360c30f661b677895a8b26f"
+    },
+    {
+      "path": "src/main/java/dev/velmren/encounter/core/TransitionResult.java",
+      "bytes": 508,
+      "sha256": "33e4ac3e5687928133678db3e85289a84bd28e4ed3694e41b2044b1582926588"
+    },
+    {
+      "path": "src/main/java/dev/velmren/encounter/paper/ObservatoryArena.java",
+      "bytes": 19268,
+      "sha256": "c325dfbffd96421ec7093ed27a061dc2000f54b0d8f80f1c3b6411690522393b"
+    },
+    {
+      "path": "src/main/java/dev/velmren/encounter/paper/PaperEncounterPlugin.java",
+      "bytes": 6712,
+      "sha256": "d91c4745dabd681122f3e7b91ed20ee15377c938e10467b37b3c03e68e56bb1e"
+    },
+    {
+      "path": "src/main/resources/config.yml",
+      "bytes": 383,
+      "sha256": "dcca8077a5fe86aea09e289cf63cb03e3ea978a0a6da252623a5456929c23b77"
+    },
+    {
+      "path": "src/main/resources/plugin.yml",
+      "bytes": 431,
+      "sha256": "89e29141e8477231f8d99d3d1e8772a9463769366560fdd13f4adb7755a8d453"
+    },
+    {
+      "path": "src/test/java/dev/velmren/encounter/core/EncounterEngineTest.java",
+      "bytes": 4961,
+      "sha256": "853177c989f2cfef062fee4a45760c1bac8cc3820fb24261750b39b631ba6825"
+    },
+    {
+      "path": "start-dev-server.ps1",
+      "bytes": 2513,
+      "sha256": "5a518b6a2c35b08a236d34f8a2a4542b0c4db0d27e55a07b0035ec3a4c683d37"
+    }
+  ]
+}

@@ -1,0 +1,150 @@
+{
+  "capturedAt": "2026-09-27T17:41:28.163Z",
+  "startedAt": "2026-09-27T16:51:18.912959443Z",
+  "hash": "ff6e2ed02fea0313e42aa5feffdda861510444034e802b0cf2dd5b5d201b2f69",
+  "data": {
+    "order": {
+      "id": "cmuk3rjts000kh4i0ebnz65m8",
+      "number": "VE-MUK3RJT9-2C0E",
+      "userId": "5ha9P2hBNhW7vMa5ApuDZEDzdcfEzKsa",
+      "idempotencyKey": "de614b6c-6b63-48c8-a5c5-89364e5cd5e9",
+      "status": "DELIVERED",
+      "paymentStatus": "PAID",
+      "paymentMethod": "card",
+      "deliveryMethod": "courier",
+      "subtotal": 121990,
+      "discount": 5000,
+      "shipping": 0,
+      "total": 116990,
+      "bonusesSpent": 0,
+      "bonusesEarned": 3509,
+      "address": {
+        "city": "Москва",
+        "name": "Тестовый Получатель",
+        "phone": "+7 999 555-22-11",
+        "street": "Тестовая улица, дом 15, квартира 8",
+        "contact": {
+          "name": "Александр Волков",
+          "email": "buyer@velmren.local",
+          "phone": "+7 999 123-45-67"
+        },
+        "recipient": {
+          "name": "Тестовый Получатель",
+          "phone": "+7 999 555-22-11"
+        },
+        "postalCode": "125009"
+      },
+      "comment": "E2E: позвонить перед тестовой доставкой.",
+      "promoCode": "WELCOME10",
+      "trackingNumber": "TEST-VE-MUK3RJT9-2C0E",
+      "testMode": true,
+      "stockReturned": false,
+      "createdAt": "2026-09-27T17:38:47.968Z",
+      "updatedAt": "2026-09-27T17:38:58.561Z",
+      "items": [
+        {
+          "id": "cmuk3rjtv000lh4i0oyixtfji",
+          "orderId": "cmuk3rjts000kh4i0ebnz65m8",
+          "productId": "iphone-15-pro-max",
+          "variantId": "iphone-15-pro-max-v2",
+          "name": "Apple iPhone 15 Pro Max",
+          "slug": "iphone-15-pro-max",
+          "image": "/products/iphone-15-pro-max-1.webp",
+          "color": "Натуральный титан",
+          "storage": "512 ГБ",
+          "price": 121990,
+          "quantity": 1
+        }
+      ],
+      "events": [
+        {
+          "id": "cmuk3rjty000mh4i03n8j8jjg",
+          "orderId": "cmuk3rjts000kh4i0ebnz65m8",
+          "status": "PENDING_PAYMENT",
+          "message": "Заказ создан. Ожидает тестовой оплаты.",
+          "createdAt": "2026-09-27T17:38:47.968Z"
+        },
+        {
+          "id": "cmuk3rl70000oh4i0o4r27lvf",
+          "orderId": "cmuk3rjts000kh4i0ebnz65m8",
+          "status": "PENDING_PAYMENT",
+          "message": "Тестовая оплата отклонена. Можно повторить.",
+          "createdAt": "2026-09-27T17:38:49.736Z"
+        },
+        {
+          "id": "cmuk3rljk000qh4i0qzp8f22v",
+          "orderId": "cmuk3rjts000kh4i0ebnz65m8",
+          "status": "PROCESSING",
+          "message": "Тестовая оплата успешна. Реальные деньги не списаны.",
+          "createdAt": "2026-09-27T17:38:50.191Z"
+        },
+        {
+          "id": "cmuk3rqzi000uh4i0yl3qfcs0",
+          "orderId": "cmuk3rjts000kh4i0ebnz65m8",
+          "status": "SHIPPED",
+          "message": "Тестовая доставка: заказ передан курьеру.",
+          "createdAt": "2026-09-27T17:38:57.243Z"
+        },
+        {
+          "id": "cmuk3rs06000vh4i0svn9vkma",
+          "orderId": "cmuk3rjts000kh4i0ebnz65m8",
+          "status": "DELIVERED",
+          "message": "Тестовая доставка: заказ получен, бонусы начислены.",
+          "createdAt": "2026-09-27T17:38:58.561Z"
+        }
+      ],
+      "paymentEvents": [
+        {
+          "id": "cmuk3rl6p000nh4i09nxmlowi",
+          "eventId": "9a03f87d-cca7-491d-92c0-249e6c82f5b3",
+          "orderId": "cmuk3rjts000kh4i0ebnz65m8",
+          "result": "failure",
+          "createdAt": "2026-09-27T17:38:49.730Z"
+        },
+        {
+          "id": "cmuk3rljg000ph4i0gk3651gs",
+          "eventId": "30b3ea1a-dc51-40ec-bf79-0651812896f8",
+          "orderId": "cmuk3rjts000kh4i0ebnz65m8",
+          "result": "success",
+          "createdAt": "2026-09-27T17:38:50.188Z"
+        }
+      ]
+    },
+    "profile": {
+      "id": "5ha9P2hBNhW7vMa5ApuDZEDzdcfEzKsa",
+      "name": "Александр Волков",
+      "email": "buyer@velmren.local",
+      "phone": "+7 999 123-45-67",
+      "bonuses": 6009,
+      "settings": {},
+      "addresses": [
+        {
+          "id": "cmuk26or1000rzki03wxqhrp2",
+          "userId": "5ha9P2hBNhW7vMa5ApuDZEDzdcfEzKsa",
+          "name": "Александр Волков",
+          "phone": "+7 999 123-45-67",
+          "city": "Москва",
+          "street": "ул. Тверская, д. 12, кв. 24",
+          "postalCode": "125009",
+          "isDefault": true
+        },
+        {
+          "id": "cmuk3rjt7000jh4i08m5stmhv",
+          "userId": "5ha9P2hBNhW7vMa5ApuDZEDzdcfEzKsa",
+          "name": "Тестовый Получатель",
+          "phone": "+7 999 555-22-11",
+          "city": "Москва",
+          "street": "Тестовая улица, дом 15, квартира 8",
+          "postalCode": "125009",
+          "isDefault": false
+        }
+      ]
+    },
+    "counts": {
+      "products": 43,
+      "variants": 116,
+      "orders": 4,
+      "users": 2
+    }
+  }
+}

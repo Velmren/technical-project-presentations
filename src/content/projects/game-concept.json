@@ -1,0 +1,321 @@
+{
+  "status": "published",
+  "presentation": "case",
+  "year": 2026,
+  "slug": "game-concept",
+  "title": "LACUNA",
+  "eyebrow": "Интерфейс игры",
+  "lead": "Игровой интерфейс орбитального спасательного промысла",
+  "summary": "Пилот буксира берёт контракты в разрушенном кольце, готовит корабль и выкупает его у верфи. Полный цикл от контракта до трюма, на русском и английском.",
+  "note": "Версия 6.2, в разработке",
+  "closing": "Возьмите первый контракт",
+  "accent": "#ffb44f",
+  "category": "Игра",
+  "technologies": [
+    "JavaScript",
+    "Three.js",
+    "WebGL",
+    "CSS"
+  ],
+  "order": 25,
+  "tone": "night",
+  "cover": {
+    "kind": "image",
+    "image": {
+      "src": "/assets/lacuna/title-ru.webp",
+      "alt": "Титульный экран LACUNA с буксиром MULE–06",
+      "width": 2400,
+      "height": 1500
+    }
+  },
+  "actions": [
+    {
+      "label": "Открыть игру",
+      "href": "/projects/game-concept/"
+    }
+  ],
+  "showcase": {
+    "image": {
+      "src": "/assets/lacuna/title-ru.webp",
+      "alt": "Титульный экран LACUNA: кто вы, цель и буксир в доке",
+      "width": 2400,
+      "height": 1500
+    },
+    "url": "velmren.com/projects/game-concept/",
+    "phone": {
+      "src": "/assets/lacuna/m-sector-ru.webp",
+      "alt": "Контракт на телефоне",
+      "width": 780,
+      "height": 1688
+    }
+  },
+  "sections": [
+    {
+      "kind": "benefit",
+      "title": "С первого экрана понятно, что делать",
+      "text": "Титульный экран объясняет, кто вы, какая цель и как идёт работа. Дальше шкала выкупа остаётся наверху, а строка «Сейчас» называет следующий шаг.",
+      "layers": [
+        {
+          "image": {
+            "src": "/assets/lacuna/dock-ru.webp",
+            "alt": "Док: строка «Сейчас», шкала выкупа и что нужно для контракта",
+            "width": 2400,
+            "height": 1500
+          },
+          "x": 0,
+          "y": 0.04,
+          "w": 0.58,
+          "url": "velmren.com/projects/game-concept/#/vessel"
+        },
+        {
+          "image": {
+            "src": "/assets/lacuna/title-detail-ru.webp",
+            "alt": "Кто вы, цель, как идёт работа и шкала выкупа",
+            "width": 1184,
+            "height": 1324
+          },
+          "x": 0.64,
+          "y": 0,
+          "w": 0.33,
+          "front": true
+        }
+      ]
+    },
+    {
+      "kind": "benefit",
+      "title": "Карта сектора и есть список контрактов",
+      "text": "Каждая метка показывает оплату, а карточка сразу говорит, готов ли корабль и чего ему не хватает.",
+      "layers": [
+        {
+          "image": {
+            "src": "/assets/lacuna/sector-ru.webp",
+            "alt": "Кольцо вокруг газового гиганта с метками контрактов",
+            "width": 2400,
+            "height": 1500
+          },
+          "x": 0,
+          "y": 0.02,
+          "w": 0.58,
+          "url": "velmren.com/projects/game-concept/#/sector"
+        },
+        {
+          "image": {
+            "src": "/assets/lacuna/sector-detail-ru.webp",
+            "alt": "Контракт NACRE–9: оплата, премия и нужный модуль",
+            "width": 872,
+            "height": 1118
+          },
+          "x": 0.65,
+          "y": 0,
+          "w": 0.32,
+          "front": true
+        }
+      ]
+    },
+    {
+      "kind": "benefit",
+      "title": "Корабль готовят на стенде с живой моделью",
+      "text": "Модуль поднимается на поворотный стол, а таблица заранее показывает, как он изменит корабль.",
+      "layers": [
+        {
+          "image": {
+            "src": "/assets/lacuna/bench-ru.webp",
+            "alt": "Стенд: захват на поворотном столе и выбор модулей",
+            "width": 2400,
+            "height": 1500
+          },
+          "x": 0,
+          "y": 0.02,
+          "w": 0.58,
+          "url": "velmren.com/projects/game-concept/#/vessel/bench"
+        },
+        {
+          "image": {
+            "src": "/assets/lacuna/bench-detail-ru.webp",
+            "alt": "Влияние на MULE–06: мощность, масса и нагрузка радиаторов",
+            "width": 796,
+            "height": 422
+          },
+          "x": 0.62,
+          "y": 0.12,
+          "w": 0.38,
+          "front": true
+        }
+      ]
+    },
+    {
+      "kind": "benefit",
+      "title": "У каждого решения цена видна до выбора",
+      "text": "На каждом шаге операции два варианта, у каждого время, топливо, износ корпуса и сохранность груза.",
+      "layers": [
+        {
+          "image": {
+            "src": "/assets/lacuna/operation-ru.webp",
+            "alt": "Операция: сближение с обломком и два варианта",
+            "width": 2400,
+            "height": 1500
+          },
+          "x": 0,
+          "y": 0.02,
+          "w": 0.58,
+          "url": "velmren.com/projects/game-concept/#/operation"
+        },
+        {
+          "image": {
+            "src": "/assets/lacuna/m-operation-ru.webp",
+            "alt": "Два варианта на телефоне: время, топливо и износ корпуса",
+            "width": 780,
+            "height": 1688
+          },
+          "x": 0.66,
+          "y": 0,
+          "w": 0.28,
+          "phone": true,
+          "front": true
+        }
+      ]
+    },
+    {
+      "kind": "benefit",
+      "title": "Итог считается честно, добыча идёт в трюм",
+      "text": "Оплата с премией за целый груз, состояние корабля до и после, вещи в трюме можно продать или разобрать.",
+      "figure": {
+        "value": "50 000",
+        "label": "кредитов нужно на выкуп корабля"
+      },
+      "layers": [
+        {
+          "image": {
+            "src": "/assets/lacuna/results-ru.webp",
+            "alt": "Итоги контракта: оплата, корабль и трюм",
+            "width": 2400,
+            "height": 1500
+          },
+          "x": 0,
+          "y": 0.02,
+          "w": 0.58,
+          "url": "velmren.com/projects/game-concept/#/results"
+        },
+        {
+          "image": {
+            "src": "/assets/lacuna/results-detail-ru.webp",
+            "alt": "Оплата 14 500 и премия 2 000 за целый груз",
+            "width": 976,
+            "height": 812
+          },
+          "x": 0.63,
+          "y": 0.06,
+          "w": 0.37,
+          "front": true
+        }
+      ]
+    },
+    {
+      "kind": "features",
+      "title": "Как устроено",
+      "text": "JavaScript-модули и Three.js, без сборки.",
+      "items": [
+        "3D",
+        "Языки",
+        "Телефон",
+        "Клавиатура"
+      ],
+      "descriptions": [
+        "Корабль, модули, док и сцены операций собраны в коде, без растровых текстур.",
+        "Русский и английский переключаются без потери экрана и состояния.",
+        "Нижняя панель, листы вместо колонок, кнопка решения закреплена.",
+        "Быстрые клавиши для разделов, модулей и вариантов операции."
+      ]
+    }
+  ],
+  "en": {
+    "eyebrow": "Game interface",
+    "lead": "A game interface for orbital salvage work",
+    "summary": "A tug pilot takes contracts in a broken ring, fits the vessel and buys it from the yard. The whole loop from contract to hold, in Russian and English.",
+    "note": "Version 6.2, in development",
+    "closing": "Take the first contract",
+    "actions": [
+      "Open the game"
+    ],
+    "showcase": [
+      "LACUNA title screen: who you are, the goal and the tug in the dock",
+      "A contract on a phone"
+    ],
+    "media": {
+      "/assets/lacuna/title-ru.webp": "/assets/lacuna/title-en.webp",
+      "/assets/lacuna/m-sector-ru.webp": "/assets/lacuna/m-sector-en.webp",
+      "/assets/lacuna/dock-ru.webp": "/assets/lacuna/dock-en.webp",
+      "/assets/lacuna/title-detail-ru.webp": "/assets/lacuna/title-detail-en.webp",
+      "/assets/lacuna/sector-ru.webp": "/assets/lacuna/sector-en.webp",
+      "/assets/lacuna/sector-detail-ru.webp": "/assets/lacuna/sector-detail-en.webp",
+      "/assets/lacuna/bench-ru.webp": "/assets/lacuna/bench-en.webp",
+      "/assets/lacuna/bench-detail-ru.webp": "/assets/lacuna/bench-detail-en.webp",
+      "/assets/lacuna/operation-ru.webp": "/assets/lacuna/operation-en.webp",
+      "/assets/lacuna/m-operation-ru.webp": "/assets/lacuna/m-operation-en.webp",
+      "/assets/lacuna/results-ru.webp": "/assets/lacuna/results-en.webp",
+      "/assets/lacuna/results-detail-ru.webp": "/assets/lacuna/results-detail-en.webp"
+    },
+    "sections": [
+      {
+        "title": "The first screen says what to do",
+        "text": "The title screen explains who you are, the goal and how the work goes. After that the buyout meter stays at the top, and a \"Now\" line names the next step.",
+        "alts": [
+          "Drydock: the \"Now\" line, the buyout meter and what the contract needs",
+          "Who you are, the goal, how the work goes and the buyout meter"
+        ]
+      },
+      {
+        "title": "The sector map is the contract list",
+        "text": "Each marker shows the pay, and the card tells at once whether the vessel is ready and what it lacks.",
+        "alts": [
+          "The ring around the gas giant with contract markers",
+          "Contract NACRE–9: pay, bonus and the module it needs"
+        ]
+      },
+      {
+        "title": "The vessel is fitted on a bench with a live model",
+        "text": "The module rises onto the turntable, and a table shows in advance how it will change the vessel.",
+        "alts": [
+          "Bench: the grapple on the turntable and the module choice",
+          "Impact on MULE–06: power, mass and radiator load"
+        ]
+      },
+      {
+        "title": "Every decision shows its cost before the choice",
+        "text": "Each step of an operation offers two options, each with time, fuel, hull wear and cargo integrity.",
+        "alts": [
+          "Operation: closing in on the wreck with two options",
+          "Two options on a phone: time, fuel and hull wear"
+        ]
+      },
+      {
+        "title": "A fair settlement, and the salvage goes to the hold",
+        "text": "Pay with a bonus for intact cargo, the vessel before and after, and items in the hold to sell or strip.",
+        "figure": {
+          "value": "50,000",
+          "label": "credits to buy out the vessel"
+        },
+        "alts": [
+          "Contract results: pay, vessel and hold",
+          "Fee of 14,500 and a 2,000 bonus for intact cargo"
+        ]
+      },
+      {
+        "title": "How it is built",
+        "text": "JavaScript modules and Three.js, no build step.",
+        "items": [
+          "3D",
+          "Languages",
+          "Phone",
+          "Keyboard"
+        ],
+        "descriptions": [
+          "The vessel, modules, dock and operation scenes are built in code, with no bitmap textures.",
+          "Russian and English switch without losing the screen or the state.",
+          "A bottom tab bar, sheets instead of columns and a pinned decision button.",
+          "Shortcuts for sections, modules and operation options."
+        ]
+      }
+    ]
+  }
+}

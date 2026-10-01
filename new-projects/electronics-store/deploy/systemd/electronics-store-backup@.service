@@ -1,0 +1,8 @@
+[Unit]
+Description=Electronics store backup (%i)
+Requires=docker.service
+After=docker.service
+
+[Service]
+Type=oneshot
+ExecStart=/srv/velmren/apps/electronics-store/backup.sh %i

@@ -1,0 +1,30 @@
+{
+  "title": "LACUNA",
+  "subtitle": {
+    "en": "Orbital salvage game interface",
+    "ru": "Интерфейс игры об орбитальном спасательном промысле"
+  },
+  "version": "6.2",
+  "status": "in development",
+  "screens": [
+    "Title screen",
+    "Sector map (contract list)",
+    "Drydock",
+    "Hardpoint bench",
+    "Recovery operation",
+    "Results",
+    "Comms",
+    "Cargo hold",
+    "Log",
+    "Settings"
+  ],
+  "languages": [
+    "ru",
+    "en"
+  ],
+  "entry": "index.html",
+  "localPreview": "http://127.0.0.1:4353/",
+  "runtime": "Vanilla ES modules, locally vendored Three.js 0.180.0, no build step",
+  "art": "Procedural 3D models, materials, environment and operation scenes authored in code; no bitmap artwork or texture sets",
+  "fonts": "Tektur and IBM Plex Sans (as Lacuna Text), SIL Open Font License 1.1"
+}

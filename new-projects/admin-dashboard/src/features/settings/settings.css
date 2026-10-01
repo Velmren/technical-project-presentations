@@ -1,0 +1,484 @@
+.settings {
+  display: grid;
+  grid-template-columns: 250px minmax(0, 1fr);
+  gap: 18px;
+  align-items: start;
+}
+.settings__nav {
+  position: sticky;
+  top: 72px;
+  display: grid;
+  gap: 2px;
+  padding: 6px;
+  border: 1px solid var(--o-border);
+  border-radius: var(--o-radius-lg);
+  background: var(--o-panel);
+  box-shadow: var(--o-shadow-1);
+}
+.settings-tab {
+  --icon: 18px;
+  position: relative;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  gap: 11px;
+  align-items: center;
+  padding: 10px 12px;
+  border: 0;
+  border-radius: var(--o-radius);
+  background: transparent;
+  color: var(--o-fg-3);
+  text-align: left;
+  outline: none;
+  transition: background-color var(--o-fast), color var(--o-fast);
+}
+.settings-tab:hover {
+  background: var(--o-surface-hover);
+  color: var(--o-fg-2);
+}
+.settings-tab.is-active:hover {
+  background: transparent;
+}
+.settings-tab:focus-visible {
+  box-shadow: inset 0 0 0 2px var(--o-focus);
+}
+.settings-tab__bg {
+  position: absolute;
+  inset: 0;
+  border: 1px solid var(--o-accent-line);
+  border-radius: inherit;
+  background: var(--o-accent-soft);
+}
+.settings-tab > :not(.settings-tab__bg) {
+  position: relative;
+}
+.settings-tab.is-active > svg {
+  color: var(--o-accent-2);
+}
+.settings-tab__text {
+  min-width: 0;
+}
+.settings-tab__text strong {
+  display: block;
+  color: var(--o-fg);
+  font-size: var(--o-text-md);
+  font-weight: 560;
+}
+.settings-tab__text small {
+  display: block;
+  overflow: hidden;
+  color: var(--o-fg-3);
+  font-size: var(--o-text-xs);
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.settings-tab__dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--o-warning);
+}
+.settings__panel {
+  min-width: 0;
+}
+.settings__stack {
+  display: grid;
+  gap: 14px;
+}
+
+.settings-body {
+  display: grid;
+  gap: 16px;
+  margin: 0;
+  padding: 4px var(--o-pad) var(--o-pad);
+  list-style: none;
+}
+.settings-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px 16px;
+}
+.settings-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding-top: 16px;
+  border-top: 1px solid var(--o-border);
+}
+.settings-list > .settings-row:first-child,
+.settings-body > .settings-row:first-child {
+  padding-top: 0;
+  border-top: 0;
+}
+.settings-row__text {
+  min-width: 0;
+}
+.settings-row__label {
+  margin: 0;
+  color: var(--o-fg);
+  font-size: var(--o-text-md);
+  font-weight: 560;
+}
+.settings-row__hint {
+  max-width: 56ch;
+  margin: 2px 0 0;
+  color: var(--o-fg-3);
+  font-size: var(--o-text-sm);
+  line-height: 1.45;
+}
+.settings-row__hint--icon {
+  --icon: 16px;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin: 0;
+  color: var(--o-fg-2);
+}
+.settings-row__count {
+  margin: 6px 0 0;
+  color: var(--o-fg-2);
+  font-size: var(--o-text-xs);
+}
+.settings-row__value {
+  flex: none;
+  color: var(--o-fg);
+  font-weight: 560;
+}
+.settings-row .ui-seg {
+  flex: none;
+}
+.settings-lock {
+  --icon: 15px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+  padding: 9px 12px;
+  border-radius: var(--o-radius);
+  background: var(--o-warning-soft);
+  color: #f7c774;
+  font-size: var(--o-text-sm);
+}
+.settings-lock--inset {
+  margin: 0 var(--o-pad) 12px;
+}
+
+.settings-profile__card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 14px 16px;
+  border: 1px solid var(--o-border-2);
+  border-radius: var(--o-radius);
+  background: var(--o-surface-2);
+}
+.settings-profile__card strong {
+  display: block;
+  color: var(--o-fg);
+  font-size: var(--o-text-lg);
+  font-weight: 620;
+}
+.settings-profile__card > div > span {
+  display: block;
+  color: var(--o-fg-3);
+  font-size: var(--o-text-sm);
+}
+.settings-profile__card .settings-profile__meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px 10px;
+  margin-top: 8px;
+}
+.settings-profile__meta small {
+  color: var(--o-fg-3);
+  font-size: var(--o-text-xs);
+}
+
+.team-list {
+  margin: 0;
+  padding: 0 8px 8px;
+  list-style: none;
+}
+.team-row {
+  display: grid;
+  grid-template-columns: 36px minmax(0, 1.1fr) minmax(0, 1fr) 150px 180px;
+  grid-template-areas: "avatar who email role action";
+  gap: 12px;
+  align-items: center;
+  padding: 10px;
+  border-top: 1px solid var(--o-border);
+}
+.team-row:first-child {
+  border-top: 0;
+}
+.team-row > .ui-avatar {
+  grid-area: avatar;
+}
+.team-row__who {
+  grid-area: who;
+  min-width: 0;
+}
+/* The name keeps its full width; a status badge that does not fit moves to its own line instead of squeezing it. */
+.team-row__line {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2px 8px;
+  min-width: 0;
+}
+.team-row__who strong {
+  display: block;
+  min-width: 0;
+  overflow: hidden;
+  color: var(--o-fg);
+  font-size: var(--o-text-md);
+  font-weight: 560;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.team-row__who small {
+  display: block;
+  overflow: hidden;
+  color: var(--o-fg-3);
+  font-size: var(--o-text-xs);
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.team-row__you {
+  flex: none;
+  color: var(--o-accent-2);
+  font-size: var(--o-text-sm);
+}
+.team-row__email {
+  grid-area: email;
+  overflow: hidden;
+  color: var(--o-fg-2);
+  font-size: var(--o-text-sm);
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.team-row__role {
+  grid-area: role;
+}
+.team-row__role .ui-input {
+  width: 100%;
+  height: 32px;
+}
+.team-row__fixed {
+  padding-left: 11px;
+  color: var(--o-fg-2);
+  font-size: var(--o-text-sm);
+}
+.team-row__status {
+  display: inline-flex;
+  flex: none;
+  align-items: center;
+  gap: 6px;
+}
+.team-row__status small {
+  color: var(--o-fg-3);
+  font-size: var(--o-text-xs);
+  font-weight: 400;
+}
+.team-row__action {
+  grid-area: action;
+  justify-self: end;
+}
+/* Pausing someone is rare, so the button waits until the row is pointed at or focused. */
+.team-row__action .is-quiet {
+  opacity: 0;
+  transition: opacity var(--o-fast);
+}
+.team-row:hover .team-row__action .is-quiet,
+.team-row:focus-within .team-row__action .is-quiet {
+  opacity: 1;
+}
+@media (hover: none) {
+  .team-row__action .is-quiet {
+    opacity: 1;
+  }
+}
+.team-row.is-paused .team-row__who,
+.team-row.is-paused .team-row__email,
+.team-row.is-paused > .ui-avatar {
+  opacity: 0.5;
+}
+
+.matrix-scroll {
+  overflow-x: auto;
+  padding: 0 var(--o-pad) var(--o-pad);
+}
+.matrix {
+  width: 100%;
+  table-layout: fixed;
+  min-width: 660px;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: var(--o-text-sm);
+}
+.matrix th,
+.matrix td {
+  padding: 9px 10px;
+  border-bottom: 1px solid var(--o-border);
+  text-align: center;
+}
+.matrix thead th {
+  position: relative;
+  padding: 12px 6px;
+  vertical-align: bottom;
+  font-weight: 400;
+}
+.matrix thead th > :not(.matrix__highlight) {
+  position: relative;
+}
+.matrix__corner {
+  width: 28%;
+}
+.matrix__highlight {
+  position: absolute;
+  inset: 0 3px;
+  border-radius: 10px 10px 0 0;
+  background: var(--o-accent-soft);
+}
+.matrix__role {
+  display: block;
+  color: var(--o-fg);
+  font-size: var(--o-text-md);
+  font-weight: 620;
+}
+.matrix__people {
+  display: block;
+  margin: 2px 0 8px;
+  color: var(--o-fg-3);
+  font-size: var(--o-text-xs);
+}
+.matrix__now {
+  display: inline-flex;
+  align-items: center;
+  height: 30px;
+  color: var(--o-accent-2);
+  font-size: var(--o-text-xs);
+  font-weight: 600;
+}
+.matrix tbody th[scope="row"] {
+  color: var(--o-fg-2);
+  font-weight: 500;
+  text-align: left;
+}
+.matrix td {
+  --icon: 16px;
+}
+.matrix td.is-current {
+  background: rgba(30, 174, 252, 0.05);
+}
+.matrix td.is-yes svg {
+  color: var(--o-positive);
+}
+.matrix td.is-no svg {
+  color: var(--o-fg-3);
+  opacity: 0.45;
+}
+.matrix__group th {
+  padding-top: 16px;
+  color: var(--o-fg-3);
+  font-size: var(--o-text-xs);
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.save-bar__text {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding-right: 6px;
+  color: var(--o-fg);
+  font-size: var(--o-text-sm);
+  white-space: nowrap;
+}
+.save-bar__kbd {
+  margin: 0 4px 0 2px;
+}
+.invite-form {
+  display: grid;
+  gap: 12px;
+}
+.invite-form__text {
+  margin: 0;
+  color: var(--o-fg-2);
+}
+
+@media (max-width: 1320px) {
+  .team-row {
+    grid-template-columns: 36px minmax(0, 1fr) 150px 170px;
+    grid-template-areas: "avatar who role action";
+  }
+  .team-row__email {
+    display: none;
+  }
+}
+@media (max-width: 1100px) {
+  .settings {
+    grid-template-columns: 210px minmax(0, 1fr);
+  }
+  .settings-tab__text small {
+    display: none;
+  }
+  .team-row {
+    grid-template-columns: 36px minmax(0, 1fr) 140px 150px;
+    grid-template-areas: "avatar who role action";
+  }
+  .settings-row {
+    flex-wrap: wrap;
+  }
+}
+@media (max-width: 900px) {
+  .settings {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .settings__nav {
+    position: static;
+    display: flex;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+  .settings-tab {
+    flex: none;
+    padding: 8px 12px;
+  }
+}
+@media (max-width: 720px) {
+  .settings-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .settings-row .ui-seg {
+    max-width: 100%;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+  .team-list {
+    padding: 0 4px 4px;
+  }
+  .team-row {
+    grid-template-columns: 36px minmax(0, 1fr) auto;
+    grid-template-areas:
+      "avatar who who"
+      "avatar role action";
+    row-gap: 8px;
+    padding: 12px 8px;
+  }
+  .team-row__line {
+    flex-wrap: wrap;
+  }
+  .team-row__role {
+    min-width: 0;
+  }
+  .save-bar__kbd {
+    display: none;
+  }
+  .matrix-scroll {
+    padding: 0 12px 12px;
+  }
+}

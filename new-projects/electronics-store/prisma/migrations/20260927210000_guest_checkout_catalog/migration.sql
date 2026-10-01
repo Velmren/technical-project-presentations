@@ -1,0 +1,10 @@
+ALTER TABLE "Product" ADD COLUMN "subcategory" TEXT NOT NULL DEFAULT '';
+ALTER TABLE "Variant" ADD COLUMN "images" TEXT[] NOT NULL DEFAULT ARRAY[]::TEXT[];
+ALTER TABLE "Order" ALTER COLUMN "userId" DROP NOT NULL;
+ALTER TABLE "Order" ADD COLUMN "guestAccessHash" TEXT;
+ALTER TABLE "Order" ADD COLUMN "checkoutScope" TEXT;
+UPDATE "Order" SET "checkoutScope" = 'user:' || "userId";
+ALTER TABLE "Order" ALTER COLUMN "checkoutScope" SET NOT NULL;
+DROP INDEX "Order_userId_idempotencyKey_key";
+CREATE UNIQUE INDEX "Order_checkoutScope_idempotencyKey_key" ON "Order"("checkoutScope", "idempotencyKey");
+CREATE INDEX "Order_guestAccessHash_idx" ON "Order"("guestAccessHash");

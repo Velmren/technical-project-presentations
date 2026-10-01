@@ -1,0 +1,6 @@
+# Relative offsets from the admin at /harbor setup.
+# Place on level terrain. No world blocks are changed.
+npc:
+  mara: {x: 2, z: 0}
+  lev: {x: 5, z: 0}
+  nika: {x: 8, z: 0}

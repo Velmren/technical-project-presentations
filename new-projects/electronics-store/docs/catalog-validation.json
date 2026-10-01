@@ -1,0 +1,22 @@
+{
+  "products": 60,
+  "variants": 284,
+  "activeVariants": 261,
+  "retiredVariants": 23,
+  "categories": {
+    "smartphones": 25,
+    "laptops": 7,
+    "tablets": 5,
+    "audio": 5,
+    "watches": 1,
+    "smart-home": 4,
+    "gaming": 4,
+    "cameras": 2,
+    "accessories": 5,
+    "home": 2
+  },
+  "images": 224,
+  "iphoneColors": 59,
+  "iphoneColorsWithMultipleViews": 59,
+  "distinctPhotosForAllActiveColors": true
+}

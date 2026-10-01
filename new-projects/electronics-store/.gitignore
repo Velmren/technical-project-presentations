@@ -1,0 +1,15 @@
+node_modules/
+.next/
+.env
+playwright-report/
+test-results/
+*.tsbuildinfo
+src/generated/
+
+src/server/generated/
+references/
+docs/catalog-previews/
+*.log
+
+# Report written by tests/server/persistence-check.ts
+docs/PERSISTENCE-QA.md

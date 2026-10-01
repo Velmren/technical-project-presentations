@@ -1,0 +1,295 @@
+{
+  "format": "MinecraftNPCSystem block blueprint manifest v1",
+  "source": "src/main/java/dev/velmren/npc/DemoWorld.java",
+  "name": "Tidehaven",
+  "world": "npc_demo",
+  "seedDependent": false,
+  "generatorRequirement": "Empty/flat world recommended; the build replaces only its bounded volume.",
+  "bounds": {
+    "x": [
+      -88,
+      88
+    ],
+    "y": [
+      59,
+      106
+    ],
+    "z": [
+      -78,
+      82
+    ]
+  },
+  "walkingGroundY": 64,
+  "waterSurfaceY": 63,
+  "spawn": {
+    "x": 0.5,
+    "y": 65,
+    "z": 7.5,
+    "yaw": 180,
+    "pitch": 0
+  },
+  "npcFeet": {
+    "elder": [
+      0,
+      65,
+      0
+    ],
+    "lumberjack": [
+      -22,
+      65,
+      -12
+    ],
+    "smith": [
+      20,
+      65,
+      -10
+    ],
+    "merchant": [
+      12,
+      65,
+      12
+    ],
+    "keeper": [
+      42,
+      65,
+      10
+    ],
+    "farmer": [
+      -20,
+      65,
+      18
+    ],
+    "guard": [
+      0,
+      65,
+      -26
+    ],
+    "cartographer": [
+      -12,
+      65,
+      8
+    ]
+  },
+  "repairs": {
+    "lighthouse": {
+      "block": [
+        42,
+        79,
+        10
+      ],
+      "broken": "AIR",
+      "restored": "SEA_LANTERN",
+      "access": "scaffolding at x42,z8 inside tower"
+    },
+    "mill": {
+      "block": [
+        -35,
+        66,
+        -10
+      ],
+      "broken": "AIR",
+      "restored": "OAK_PLANKS",
+      "access": "east side of mill on village avenue"
+    }
+  },
+  "structures": [
+    {
+      "id": "square",
+      "boundsXZ": [
+        -10,
+        -8,
+        10,
+        9
+      ]
+    },
+    {
+      "id": "woodcutter",
+      "boundsXZ": [
+        -29,
+        -25,
+        -19,
+        -16
+      ]
+    },
+    {
+      "id": "forge",
+      "boundsXZ": [
+        15,
+        -26,
+        32,
+        -15
+      ]
+    },
+    {
+      "id": "chart-house",
+      "boundsXZ": [
+        -17,
+        13,
+        -8,
+        21
+      ]
+    },
+    {
+      "id": "farmstead",
+      "boundsXZ": [
+        -34,
+        24,
+        -24,
+        32
+      ]
+    },
+    {
+      "id": "crop-field",
+      "boundsXZ": [
+        -43,
+        12,
+        -24,
+        22
+      ]
+    },
+    {
+      "id": "market",
+      "boundsXZ": [
+        7,
+        14,
+        29,
+        30
+      ]
+    },
+    {
+      "id": "mill",
+      "boundsXZ": [
+        -46,
+        -19,
+        -32,
+        -4
+      ]
+    },
+    {
+      "id": "lighthouse",
+      "boundsXZ": [
+        38,
+        6,
+        46,
+        14
+      ]
+    },
+    {
+      "id": "harbor-quay",
+      "boundsXZ": [
+        -35,
+        31,
+        31,
+        34
+      ]
+    },
+    {
+      "id": "central-pier",
+      "boundsXZ": [
+        -7,
+        34,
+        7,
+        58
+      ]
+    },
+    {
+      "id": "ship-east",
+      "center": [
+        14,
+        65,
+        55
+      ]
+    },
+    {
+      "id": "ship-west",
+      "center": [
+        -25,
+        65,
+        61
+      ]
+    },
+    {
+      "id": "north-gate",
+      "boundsXZ": [
+        -10,
+        -36,
+        10,
+        -32
+      ]
+    },
+    {
+      "id": "castle",
+      "boundsXZ": [
+        20,
+        -69,
+        55,
+        -48
+      ]
+    },
+    {
+      "id": "harbor-warehouse",
+      "boundsXZ": [
+        -24,
+        33,
+        -15,
+        40
+      ]
+    }
+  ],
+  "captureLocations": {
+    "harborOverview": {
+      "position": [
+        -45,
+        89,
+        56
+      ],
+      "lookAt": [
+        3,
+        67,
+        0
+      ]
+    },
+    "squareStreet": {
+      "position": [
+        5,
+        69,
+        22
+      ],
+      "lookAt": [
+        0,
+        67,
+        -8
+      ]
+    },
+    "lighthouseDetail": {
+      "position": [
+        54,
+        72,
+        25
+      ],
+      "lookAt": [
+        42,
+        73,
+        10
+      ]
+    },
+    "millDetail": {
+      "position": [
+        -27,
+        70,
+        -3
+      ],
+      "lookAt": [
+        -39,
+        69,
+        -12
+      ]
+    }
+  },
+  "dependencies": "Bukkit only; no WorldEdit, schematic importer, resource pack, NMS or asset downloads",
+  "warnings": [
+    "Explicit build clears bounded demo volume.",
+    "Reinstallation resets repairs.",
+    "Compile verification is not a graphical client verification."
+  ]
+}

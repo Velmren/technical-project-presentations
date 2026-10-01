@@ -1,0 +1,21 @@
+/* Shared pieces of the home concept prototypes. */
+.live { position: relative; overflow: hidden; background: #e9e7e1; }
+.live img, .live video { display: block; width: 100%; height: 100%; object-fit: cover; object-position: top center; }
+
+/* A tall page scrolls slowly inside its frame while active and eases back when left. */
+.live-scroll img { height: auto; transform: translateY(0); transition: transform 1.2s cubic-bezier(.3, .7, .2, 1); }
+.live-scroll[data-playing='true'] img { animation: live-scroll 16s cubic-bezier(.45, 0, .55, 1) 1.2s infinite alternate; }
+@keyframes live-scroll { from { transform: translateY(0); } to { transform: translateY(calc(-100% + var(--live-frame-h, 300px))); } }
+
+.live-slides img { position: absolute; inset: 0; opacity: 0; transform: scale(1.02); transition: opacity .7s ease, transform 2.8s ease; }
+.live-slides img[data-active='true'] { position: relative; opacity: 1; transform: scale(1); }
+.live-progress { position: absolute; left: 12px; right: 12px; bottom: 10px; display: flex; gap: 4px; z-index: 2; }
+.live-progress span { flex: 1; height: 2px; border-radius: 1px; background: rgba(20, 22, 26, .18); overflow: hidden; position: relative; }
+.live-progress span::after { content: ''; position: absolute; inset: 0; background: rgba(20, 22, 26, .7); transform-origin: left; transform: scaleX(0); }
+.live-progress span[data-state='done']::after { transform: scaleX(1); }
+.live-slides[data-playing='true'] .live-progress span[data-state='now']::after { animation: live-progress var(--live-interval, 2400ms) linear forwards; }
+@keyframes live-progress { to { transform: scaleX(1); } }
+
+@media (prefers-reduced-motion: reduce) {
+  .live-scroll img, .live-slides img { transition: none; animation: none !important; }
+}

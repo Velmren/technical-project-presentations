@@ -1,0 +1,12 @@
+import {spawn} from 'node:child_process';
+import {readFileSync,mkdirSync,writeFileSync,openSync} from 'node:fs';
+import {resolve} from 'node:path';
+const root=resolve(import.meta.dirname,'..','.client-latest'),name=process.argv[2]??'NPCAlpha';
+if(!['NPCAlpha','NPCBeta'].includes(name))throw Error('Local test player required');
+const game=root+'/game-'+name;mkdirSync(game,{recursive:true});
+writeFileSync(game+'/options.txt','renderDistance:2\nsimulationDistance:2\nguiScale:2\nmaxFps:10\nfullscreen:false\n');
+const args=JSON.parse(readFileSync(root+'/args.json','utf8'));
+args[0]='-Xmx512M';args[args.indexOf('--username')+1]=name;args[args.indexOf('--gameDir')+1]=game;
+args.push('--quickPlayMultiplayer','127.0.0.1:25583');
+const log=openSync(root+'/'+name+'-console.log','w');
+const client=spawn('C:/Program Files/Eclipse Adoptium/jdk-25.0.2.10-hotspot/bin/javaw.exe',args,{cwd:root,windowsHide:true,detached:true,stdio:['ignore',log,log]});client.unref();console.log('OFFICIAL_LOCAL_CLIENT',name,client.pid);

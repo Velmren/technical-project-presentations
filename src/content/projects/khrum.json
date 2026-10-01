@@ -1,0 +1,330 @@
+{
+  "status": "published",
+  "presentation": "case",
+  "year": 2026,
+  "slug": "khrum",
+  "title": "Хрум",
+  "eyebrow": "2D-персонаж",
+  "lead": "Кабанчик на собственном риге, который живёт на сайте и в Lottie",
+  "summary": "Персонаж на SVG-риге: состояния, действия, мимика и реакции на курсор. Циклы запекаются в Lottie для приложений и интерфейсов.",
+  "note": "На русском и английском",
+  "closing": "Познакомьтесь с Хрумом",
+  "accent": "#6a47c2",
+  "category": "Анимация",
+  "technologies": [
+    "TypeScript",
+    "SVG",
+    "Canvas",
+    "Lottie",
+    "Vite"
+  ],
+  "order": 75,
+  "tone": "warm",
+  "cover": {
+    "kind": "image",
+    "image": {
+      "src": "/assets/khrum/hero.webp",
+      "alt": "Хрум на первом экране своего сайта",
+      "width": 2400,
+      "height": 1500
+    }
+  },
+  "actions": [
+    {
+      "label": "Открыть сайт",
+      "href": "/projects/khrum/"
+    }
+  ],
+  "showcase": {
+    "image": {
+      "src": "/assets/khrum/hero.webp",
+      "alt": "Первый экран сайта: Хрум в лесу и название",
+      "width": 2400,
+      "height": 1500
+    },
+    "url": "velmren.com/projects/khrum/",
+    "phone": {
+      "src": "/assets/khrum/m-hero.webp",
+      "alt": "Первый экран на телефоне",
+      "width": 780,
+      "height": 1688
+    }
+  },
+  "sections": [
+    {
+      "kind": "benefit",
+      "title": "Персонаж отвечает человеку",
+      "text": "Следит за курсором глазами и головой, на поглаживание и касание пятачка отвечает своей реакцией.",
+      "layers": [
+        {
+          "image": {
+            "src": "/assets/khrum/play-screen.webp",
+            "alt": "Интерактивная сцена с пультом состояний",
+            "width": 2400,
+            "height": 1500
+          },
+          "x": 0,
+          "y": 0.02,
+          "w": 0.58,
+          "url": "velmren.com/projects/khrum/#play"
+        },
+        {
+          "image": {
+            "src": "/assets/khrum/look-detail.webp",
+            "alt": "Хрум поднимает взгляд за курсором",
+            "width": 560,
+            "height": 420
+          },
+          "x": 0.64,
+          "y": 0.1,
+          "w": 0.36,
+          "front": true
+        }
+      ]
+    },
+    {
+      "kind": "benefit",
+      "title": "Восемь состояний без рывков",
+      "text": "Ожидание, шаг, галоп, прыжок, любопытство, радость, сон и удивление. Переходы сглажены, копыта не скользят по земле.",
+      "layers": [
+        {
+          "image": {
+            "src": "/assets/khrum/transitions-poster.webp",
+            "alt": "Запись: Хрум переходит от шага к бегу, удивлению и радости",
+            "width": 960,
+            "height": 540
+          },
+          "video": "/assets/khrum/transitions.mp4",
+          "x": 0,
+          "y": 0.04,
+          "w": 0.58
+        },
+        {
+          "image": {
+            "src": "/assets/khrum/states-detail.webp",
+            "alt": "Ходьба и бег: четырёхтактный шаг и галоп с фазой полёта",
+            "width": 1444,
+            "height": 724
+          },
+          "x": 0.62,
+          "y": 0.1,
+          "w": 0.38,
+          "front": true
+        }
+      ]
+    },
+    {
+      "kind": "benefit",
+      "title": "Позу можно поправить, а не перерисовать",
+      "text": "Рисунок лежит в одном SVG-файле, риг собирает его в иерархию узлов, ноги работают на обратной кинематике.",
+      "figure": {
+        "value": "49",
+        "label": "чисел описывают позу"
+      },
+      "layers": [
+        {
+          "image": {
+            "src": "/assets/khrum/rig.webp",
+            "alt": "Скелет Хрума поверх рисунка и группы узлов",
+            "width": 2400,
+            "height": 1500
+          },
+          "x": 0,
+          "y": 0.02,
+          "w": 0.58,
+          "url": "velmren.com/projects/khrum/#rig"
+        },
+        {
+          "image": {
+            "src": "/assets/khrum/rig-detail.webp",
+            "alt": "42 узла, 132 фигуры, 49 параметров позы",
+            "width": 990,
+            "height": 358
+          },
+          "x": 0.62,
+          "y": 0.14,
+          "w": 0.38,
+          "front": true
+        }
+      ]
+    },
+    {
+      "kind": "benefit",
+      "title": "Те же циклы работают в Lottie",
+      "text": "Скрипт запекает циклы рига в стандартный Lottie JSON, его проигрывает обычный плеер lottie-web.",
+      "figure": {
+        "value": "41 КБ",
+        "label": "цикл ожидания в gzip"
+      },
+      "layers": [
+        {
+          "image": {
+            "src": "/assets/khrum/lottie.webp",
+            "alt": "Lottie-файл в обычном плеере рядом с описанием экспорта",
+            "width": 2400,
+            "height": 1500
+          },
+          "x": 0,
+          "y": 0.02,
+          "w": 0.58,
+          "url": "velmren.com/projects/khrum/#rig"
+        },
+        {
+          "image": {
+            "src": "/assets/khrum/lottie-detail.webp",
+            "alt": "Цикл ожидания в обычном плеере lottie-web, без рига",
+            "width": 1116,
+            "height": 766
+          },
+          "x": 0.63,
+          "y": 0.06,
+          "w": 0.37,
+          "front": true
+        }
+      ]
+    },
+    {
+      "kind": "benefit",
+      "title": "Готов к работе в продукте",
+      "text": "Загрузка, уведомление, пустой экран, помощник и страница ошибки уже показаны с Хрумом.",
+      "layers": [
+        {
+          "image": {
+            "src": "/assets/khrum/usage.webp",
+            "alt": "Хрум в интерфейсах: загрузка, уведомление, пустой экран, помощник",
+            "width": 2400,
+            "height": 1500
+          },
+          "x": 0,
+          "y": 0.02,
+          "w": 0.58,
+          "url": "velmren.com/projects/khrum/#usage"
+        },
+        {
+          "image": {
+            "src": "/assets/khrum/usage-detail.webp",
+            "alt": "Страница ошибки 404 с Хрумом",
+            "width": 816,
+            "height": 774
+          },
+          "x": 0.65,
+          "y": 0,
+          "w": 0.31,
+          "front": true,
+          "fade": true
+        }
+      ]
+    },
+    {
+      "kind": "features",
+      "title": "Как устроено",
+      "text": "TypeScript и Canvas, без внешних запросов.",
+      "items": [
+        "Рисунок",
+        "Движение",
+        "Скорость",
+        "Проверки"
+      ],
+      "descriptions": [
+        "Один редактируемый SVG со слоями, градиентами и точками вращения.",
+        "Пружины ушей, хвоста и головы, моргание и взгляд поверх основной позы.",
+        "Лес рисуется в фоновом потоке, разделы вне экрана не рисуются.",
+        "Числовые проверки скольжения копыт и резких скачков позы."
+      ]
+    }
+  ],
+  "en": {
+    "title": "Khrum",
+    "eyebrow": "2D character",
+    "lead": "A boar on his own rig who lives on a website and in Lottie",
+    "summary": "A character on an SVG rig: states, actions, facial expressions and reactions to the pointer. Loops are baked into Lottie for apps and interfaces.",
+    "note": "In Russian and English",
+    "closing": "Meet Khrum",
+    "actions": [
+      "Open the site"
+    ],
+    "showcase": [
+      "The first screen of the site: Khrum in the forest and the title",
+      "The first screen on a phone"
+    ],
+    "sections": [
+      {
+        "title": "The character responds to people",
+        "text": "He follows the pointer with his eyes and head, and reacts in his own way to petting and a tap on the snout.",
+        "alts": [
+          "The interactive scene with the state controls",
+          "Khrum looks up after the pointer"
+        ]
+      },
+      {
+        "title": "Eight states, no jerks",
+        "text": "Idle, walk, gallop, jump, curiosity, joy, sleep and surprise. Transitions are smoothed, and the hooves never slide on the ground.",
+        "alts": [
+          "Recording: Khrum moves from walking to running, surprise and joy",
+          "Walk and run: a four-beat walk and a gallop with a flight phase"
+        ]
+      },
+      {
+        "title": "A pose is adjusted, not redrawn",
+        "text": "The drawing is one SVG file, the rig builds it into a hierarchy of nodes, and the legs use inverse kinematics.",
+        "figure": {
+          "value": "49",
+          "label": "numbers describe a pose"
+        },
+        "alts": [
+          "Khrum's skeleton over the drawing and the node groups",
+          "42 nodes, 132 shapes, 49 pose parameters"
+        ]
+      },
+      {
+        "title": "The same loops work in Lottie",
+        "text": "A script bakes the rig's loops into standard Lottie JSON, which the ordinary lottie-web player plays.",
+        "figure": {
+          "value": "41 KB",
+          "label": "idle loop, gzipped"
+        },
+        "alts": [
+          "A Lottie file in the ordinary player next to the export notes",
+          "The idle loop in the ordinary lottie-web player, without the rig"
+        ]
+      },
+      {
+        "title": "Ready for a product",
+        "text": "Loading, a notification, an empty state, an assistant and an error page are already shown with Khrum.",
+        "alts": [
+          "Khrum in interfaces: loading, notification, empty state, assistant",
+          "A 404 page with Khrum"
+        ]
+      },
+      {
+        "title": "How it is built",
+        "text": "TypeScript and Canvas, no external requests.",
+        "items": [
+          "Drawing",
+          "Motion",
+          "Speed",
+          "Checks"
+        ],
+        "descriptions": [
+          "One editable SVG with layers, gradients and pivot points.",
+          "Springs for ears, tail and head, blinking and gaze on top of the main pose.",
+          "The forest is drawn in a background thread, and off-screen sections are not drawn.",
+          "Numeric checks for hoof sliding and sudden jumps in the pose."
+        ]
+      }
+    ],
+    "media": {
+      "/assets/khrum/hero.webp": "/assets/khrum/hero-en.webp",
+      "/assets/khrum/m-hero.webp": "/assets/khrum/m-hero-en.webp",
+      "/assets/khrum/play-screen.webp": "/assets/khrum/play-screen-en.webp",
+      "/assets/khrum/look-detail.webp": "/assets/khrum/look-detail-en.webp",
+      "/assets/khrum/states-detail.webp": "/assets/khrum/states-detail-en.webp",
+      "/assets/khrum/rig.webp": "/assets/khrum/rig-en.webp",
+      "/assets/khrum/rig-detail.webp": "/assets/khrum/rig-detail-en.webp",
+      "/assets/khrum/lottie.webp": "/assets/khrum/lottie-en.webp",
+      "/assets/khrum/lottie-detail.webp": "/assets/khrum/lottie-detail-en.webp",
+      "/assets/khrum/usage.webp": "/assets/khrum/usage-en.webp",
+      "/assets/khrum/usage-detail.webp": "/assets/khrum/usage-detail-en.webp"
+    }
+  }
+}

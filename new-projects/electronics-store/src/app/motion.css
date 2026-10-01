@@ -1,0 +1,24 @@
+/* Motion stays on leaf surfaces, never on a parent of fixed-position UI. */
+@media(prefers-reduced-motion:no-preference){
+  .button,.catalog-toggle,.card-buy,.promo-cta,.promo-code{transition:background-color .18s,color .18s,border-color .18s,box-shadow .2s,transform .2s cubic-bezier(.22,1,.36,1)}
+  .button:active,.catalog-toggle:active,.promo-cta:active,.promo-code:active{transform:scale(.975)}
+  .button>svg,.text-link>svg,.promo-cta>svg{transition:transform .22s cubic-bezier(.22,1,.36,1)}
+  .button:hover>svg,.text-link:hover>svg,.promo-cta:hover>svg{transform:translateX(2px)}
+  .product-card{transition:box-shadow .24s,border-color .24s,transform .28s cubic-bezier(.22,1,.36,1)}
+  .product-visual img,.category-tile img,.category-directory img{transition:transform .4s cubic-bezier(.22,1,.36,1)}
+  .product-card:hover .product-visual img{transform:scale(1.025)}
+  .category-tile:hover img,.category-directory a:hover img{transform:translateY(-3px)}
+  .category-tile,.tabs button,.tabs a,.pagination a,.header-actions a,.card-tools button{transition:background-color .2s,color .2s,border-color .2s,opacity .2s,box-shadow .2s}
+  .search-suggestions,.mega-menu{animation:store-dropdown .2s cubic-bezier(.22,1,.36,1) both;transform-origin:top center}
+  .notice,.empty-state{animation:store-fade .24s ease-out both}
+  .toast{animation:store-toast .27s cubic-bezier(.22,1,.36,1) both}
+  .product-card-body,.service-strip>div,.benefit{animation:store-fade .35s ease-out both}
+  @keyframes store-dropdown{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:translateY(0)}}
+  @keyframes store-fade{from{opacity:0}to{opacity:1}}
+  @keyframes store-toast{from{opacity:0;transform:translate(-50%,8px)}to{opacity:1;transform:translate(-50%,0)}}
+}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}
+  .product-card:hover,.product-card:hover .product-visual img,.category-tile:hover img,.category-directory a:hover img,.button:active,.catalog-toggle:active,.promo-cta:active,.promo-code:active{transform:none}
+}

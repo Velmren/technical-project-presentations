@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Хрум — кабанчик, который оживает в каждом кадре</title>
+  <meta name="description" content="Живой 2D-персонаж на SVG-риге: состояния, переходы, мимика, реакции на курсор и касание, экспорт циклов в Lottie." />
+  <meta name="theme-color" content="#cbb4ea" />
+  <link rel="icon" href="/projects/khrum/favicon.svg" type="image/svg+xml" />
+  <style>html{background:#f7f1fb}body{margin:0}html.lang-pending body{visibility:hidden}</style>
+  <script>try{var l=localStorage.getItem("khrum-lang");if(!l){var n=navigator.languages&&navigator.languages.length?navigator.languages:[navigator.language||"en"];l=n.some(function(x){return x.toLowerCase().indexOf("ru")===0})?"ru":"en"}if(l==="en"){document.documentElement.lang="en";document.documentElement.className+=" lang-pending"}}catch(e){}</script>
+  <script type="module" crossorigin src="/projects/khrum/assets/index-3u9WvAXJ.js"></script>
+  <link rel="stylesheet" crossorigin href="/projects/khrum/assets/index-CvrFfoCT.css">
+</head>
+<body>
+  <a class="skip" href="#play" data-i18n="skip">К интерактивной сцене</a>
+
+  <header class="topbar" id="top">
+    <a class="brand" href="#top" aria-label="Хрум, в начало страницы" data-i18n-attr="aria-label:brandLabel">
+      <span class="brand-mark" id="brand-mark" aria-hidden="true"></span>
+      <span class="brand-name" data-i18n="brand">Хрум</span>
+    </a>
+    <nav class="nav" aria-label="Разделы" data-i18n-attr="aria-label:sections">
+      <a href="#play" data-i18n="navPlay">Знакомство</a>
+      <a href="#states" data-i18n="navStates">Состояния</a>
+      <a href="#story" data-i18n="navStory">Сториборд</a>
+      <a href="#emotions" data-i18n="navEmotions">Мимика</a>
+      <a href="#rig" data-i18n="navRig">Устройство</a>
+      <a href="#usage" data-i18n="navUsage">Применение</a>
+    </nav>
+    <div class="lang-switch" role="group" aria-label="Язык" data-i18n-attr="aria-label:language">
+      <button type="button" data-lang="ru" lang="ru">RU</button><button type="button" data-lang="en" lang="en">EN</button>
+    </div>
+    <button class="motion-toggle" id="motion-toggle" type="button" aria-pressed="true">
+      <span class="motion-dot" aria-hidden="true"></span><span class="motion-label" data-i18n="motion">Движение</span>
+    </button>
+  </header>
+
+  <main>
+    <!-- ============================================================ hero -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-stage" id="hero-stage"></div>
+      <p class="hero-note hand" aria-hidden="true" data-i18n="heroNote">Маленький кабан<br />с большим характером ♥</p>
+      <div class="hero-copy">
+        <p class="kicker" data-i18n="kicker">2D-персонаж · SVG-риг · Lottie</p>
+        <h1 id="hero-title" class="wordmark"><span class="sr-only" data-i18n="brand">Хрум</span><svg viewBox="-26 36 744 236" aria-hidden="true" focusable="false"><defs><linearGradient id="wmFill" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#a584f2"/><stop offset="0.55" stop-color="#6a47c2"/><stop offset="1" stop-color="#452a82"/></linearGradient><linearGradient id="wmShine" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity="0.55"/><stop offset="0.4" stop-color="#fff" stop-opacity="0"/></linearGradient></defs><g font-family="Unbounded, Nunito, sans-serif" font-weight="900" font-size="180" text-anchor="middle" stroke-linejoin="round"><g class="wm-halo"><text transform="translate(86 203) rotate(-3)" fill="#fff" stroke="#fff" stroke-width="24">Х</text><text transform="translate(256 199) rotate(2)" fill="#fff" stroke="#fff" stroke-width="24">р</text><text transform="translate(414 206) rotate(-2)" fill="#fff" stroke="#fff" stroke-width="24">у</text><text transform="translate(594 200) rotate(3)" fill="#fff" stroke="#fff" stroke-width="24">м</text></g><g class="wm-depth"><text transform="translate(86 208) rotate(-3)" fill="#2b1a4d" stroke="#2b1a4d" stroke-width="11">Х</text><text transform="translate(256 204) rotate(2)" fill="#2b1a4d" stroke="#2b1a4d" stroke-width="11">р</text><text transform="translate(414 211) rotate(-2)" fill="#2b1a4d" stroke="#2b1a4d" stroke-width="11">у</text><text transform="translate(594 205) rotate(3)" fill="#2b1a4d" stroke="#2b1a4d" stroke-width="11">м</text></g><g class="wm-face"><text transform="translate(86 198) rotate(-3)" fill="url(#wmFill)" stroke="#2b1a4d" stroke-width="11" paint-order="stroke">Х</text><text transform="translate(256 194) rotate(2)" fill="url(#wmFill)" stroke="#2b1a4d" stroke-width="11" paint-order="stroke">р</text><text transform="translate(414 201) rotate(-2)" fill="url(#wmFill)" stroke="#2b1a4d" stroke-width="11" paint-order="stroke">у</text><text transform="translate(594 195) rotate(3)" fill="url(#wmFill)" stroke="#2b1a4d" stroke-width="11" paint-order="stroke">м</text></g><g class="wm-shine"><text transform="translate(86 198) rotate(-3)" fill="url(#wmShine)">Х</text><text transform="translate(256 194) rotate(2)" fill="url(#wmShine)">р</text><text transform="translate(414 201) rotate(-2)" fill="url(#wmShine)">у</text><text transform="translate(594 195) rotate(3)" fill="url(#wmShine)">м</text></g></g></svg></h1>
+        <p class="hero-sub" data-i18n="heroSub">Кабанчик, который оживает в&nbsp;каждом кадре</p>
+        <p class="hero-text" data-i18n="heroText">Дышит, топает, мчится галопом, удивляется и радуется. Следит за курсором, любит, когда его гладят, и никогда не откажется от жёлудя.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#play" data-i18n="heroPlay">Поиграть с Хрумом</a>
+          <a class="btn btn-ghost" href="#states" data-i18n="heroStates">Все состояния</a>
+        </div>
+      </div>
+      <div class="hero-sign" id="hero-sign" aria-hidden="true"></div>
+    </section>
+
+    <!-- ============================================================ play -->
+    <section class="section play" id="play" aria-labelledby="play-title">
+      <div class="section-head">
+        <h2 id="play-title" data-i18n="playTitle">Познакомьтесь с Хрумом</h2>
+        <p data-i18n="playText">Хрум на сцене, пульт — рядом с ним. Выберите состояние или просто пообщайтесь: наведите курсор, проведите по спинке, нажмите на пятачок.</p>
+      </div>
+      <div class="play-grid">
+        <div class="play-stage-wrap">
+          <div class="play-stage" id="play-stage"></div>
+          <p class="play-status"><span class="status-face" id="status-face" aria-hidden="true"></span><span class="status-text"><small data-i18n="statusNow">Хрум сейчас</small><span id="play-status" aria-live="polite" data-i18n="statusIdle">ждёт и оглядывается</span></span></p>
+        </div>
+        <div class="panel" id="panel" role="group" aria-label="Управление персонажем" data-i18n-attr="aria-label:controls">
+          <fieldset class="panel-block">
+            <legend data-i18n="state">Состояние</legend>
+            <div class="state-grid" id="state-buttons"></div>
+          </fieldset>
+          <fieldset class="panel-block">
+            <legend data-i18n="talk">Общение</legend>
+            <div class="talk-grid" id="talk-buttons"></div>
+          </fieldset>
+          <div class="panel-row">
+            <fieldset class="panel-block tempo">
+              <legend data-i18n="tempo">Темп</legend>
+              <div class="seg" id="tempo" role="radiogroup" aria-label="Скорость анимации" data-i18n-attr="aria-label:tempoLabel"></div>
+            </fieldset>
+            <label class="switch">
+              <input type="checkbox" id="skeleton-toggle" />
+              <span class="switch-track" aria-hidden="true"></span>
+              <span data-i18n="skeleton">Скелет</span>
+            </label>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================ states -->
+    <section class="section states" id="states" aria-labelledby="states-title">
+      <div class="section-head">
+        <h2 id="states-title" data-i18n="statesTitle">Восемь состояний — один характер</h2>
+        <p data-i18n="statesText">Каждое состояние — отдельный живой цикл. Переходы между ними сглажены, поэтому Хрум не переключается, а меняет настроение.</p>
+      </div>
+      <div class="panorama" id="panorama" tabindex="0" aria-label="Состояния персонажа, прокручивается по горизонтали" data-i18n-attr="aria-label:panorama"></div>
+    </section>
+
+    <!-- ============================================================ story -->
+    <section class="section story" id="story" aria-labelledby="story-title">
+      <div class="section-head">
+        <h2 id="story-title" data-i18n="storyTitle">Сториборд: история одного жёлудя</h2>
+        <p data-i18n="storyText">Пять ключевых кадров раскадровки и аниматик по ним. Нажмите на кадр, чтобы перейти к нему в сцене.</p>
+      </div>
+      <div class="story-player">
+        <div class="story-stage" id="story-stage"></div>
+        <div class="story-controls">
+          <button class="icon-btn" id="story-play" type="button" aria-label="Пауза" data-i18n-attr="aria-label:pause"></button>
+          <input type="range" id="story-scrub" min="0" max="1000" value="0" aria-label="Время в аниматике" data-i18n-attr="aria-label:storyTime" />
+          <span class="story-time" id="story-time" data-i18n="storyZero">0,0 с</span>
+        </div>
+      </div>
+      <ol class="storyboard" id="storyboard"></ol>
+
+      <div class="phases">
+        <div class="phases-copy">
+          <h3 data-i18n="phasesTitle">Прыжок по фазам</h3>
+          <p data-i18n="phasesText">Прозрачные слепки показывают, как тело готовится, сжимается и тянется. Ползунок проводит прыжок кадр за кадром.</p>
+          <ul class="phase-list" id="phase-list"></ul>
+        </div>
+        <div class="phases-view">
+          <div class="onion" id="onion"></div>
+          <input type="range" id="onion-scrub" min="0" max="1000" value="360" aria-label="Кадр прыжка" data-i18n-attr="aria-label:phaseFrame" />
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================ emotions -->
+    <section class="section emotions" id="emotions" aria-labelledby="emotions-title">
+      <div class="section-head">
+        <h2 id="emotions-title" data-i18n="emotionsTitle">Эмоции и мимика</h2>
+        <p data-i18n="emotionsText">Лицо собрано из управляемых деталей: веки, брови, зрачки, рот, румянец. Эмоция — это просто сочетание их значений, и между любыми двумя можно плавно перейти.</p>
+      </div>
+      <div class="emo-grid">
+        <div class="emo-face-wrap">
+          <div class="emo-face" id="emo-face"></div>
+          <p class="emo-name hand" id="emo-name" data-i18n="emoFirst">Радость</p>
+        </div>
+        <div class="emo-side">
+          <div class="emo-chips" id="emo-chips" role="radiogroup" aria-label="Эмоции" data-i18n-attr="aria-label:emotions"></div>
+          <details class="emo-mixer" id="emo-mixer">
+            <summary data-i18n="mixer">Собрать свою эмоцию</summary>
+            <div class="sliders" id="emo-sliders"></div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================ rig -->
+    <section class="section rig" id="rig" aria-labelledby="rig-title">
+      <div class="section-head">
+        <h2 id="rig-title" data-i18n="rigTitle">Как устроен Хрум</h2>
+        <p data-i18n="rigText">Персонаж нарисован в одном SVG-файле и собран в иерархию узлов с опорными точками. Ноги работают на обратной кинематике: потяните за копыто.</p>
+      </div>
+      <div class="rig-grid">
+        <div class="rig-view">
+          <div class="rig-stage" id="rig-stage"></div>
+          <p class="rig-hint hand" data-i18n="rigHint">Тяни за кружок у копыта</p>
+        </div>
+        <div class="rig-side">
+          <ul class="parts" id="parts" aria-label="Части персонажа" data-i18n-attr="aria-label:parts"></ul>
+          <dl class="stats" id="rig-stats"></dl>
+        </div>
+      </div>
+      <div class="pipeline" id="pipeline"></div>
+
+      <div class="lottie-block">
+        <div class="lottie-copy">
+          <h3 data-i18n="lottieTitle">Тот же риг — в Lottie</h3>
+          <p data-i18n="lottieText">Скрипт запекает циклы рига в стандартный Lottie JSON: узлы становятся слоями с родителями, фигуры — векторными слоями, моргание и сужение хвоста — ключами форм. Справа файл проигрывает обычный плеер <code>lottie-web</code>, без нашего рига.</p>
+          <div class="seg" id="lottie-clips" role="radiogroup" aria-label="Цикл Lottie" data-i18n-attr="aria-label:lottieClips"></div>
+          <p class="lottie-meta" id="lottie-meta"></p>
+          <a class="btn btn-ghost small" id="lottie-download" href="#" download data-i18n="lottieDownload">Скачать JSON</a>
+        </div>
+        <div class="lottie-view">
+          <div class="lottie-frame" id="lottie-player" aria-label="Проигрывание Lottie-файла" data-i18n-attr="aria-label:lottiePlayer"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================ usage -->
+    <section class="section usage" id="usage" aria-labelledby="usage-title">
+      <div class="section-head">
+        <h2 id="usage-title" data-i18n="usageTitle">Где пригодится Хрум</h2>
+        <p data-i18n="usageText">Персонаж готов к работе в продукте: загрузка, пустые экраны, уведомления, помощник, страница ошибки.</p>
+      </div>
+      <div class="bento" id="bento"></div>
+    </section>
+  </main>
+
+  <footer class="footer" aria-labelledby="footer-title">
+    <div class="footer-stage" id="footer-stage"></div>
+    <div class="footer-copy">
+      <p class="hand footer-title" id="footer-title" data-i18n="footerTitle">Хрум набегался и уснул.<br />Спасибо, что заглянули в гости!</p>
+      <nav class="footer-nav" aria-label="Разделы" data-i18n-attr="aria-label:sections">
+        <a href="#play" data-i18n="navPlay">Знакомство</a><a href="#states" data-i18n="navStates">Состояния</a><a href="#story" data-i18n="navStory">Сториборд</a><a href="#emotions" data-i18n="navEmotions">Мимика</a><a href="#rig" data-i18n="navRig">Устройство</a><a href="#usage" data-i18n="navUsage">Применение</a>
+      </nav>
+      <a class="footer-site" href="https://velmren.com/">VELMREN</a>
+    </div>
+  </footer>
+
+</body>
+</html>

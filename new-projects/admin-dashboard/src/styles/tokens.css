@@ -1,0 +1,87 @@
+/* Design tokens. Names are prefixed so they never collide with older stylesheets. */
+:root {
+  --o-font: "Inter Variable", "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
+
+  /* Surfaces, from the page to raised panels */
+  --o-bg: #061019;
+  --o-bg-2: #08131d;
+  --o-sidebar: linear-gradient(170deg, #0c1a26 0%, #08131c 70%);
+  --o-surface: #0c1923;
+  --o-surface-2: #10202c;
+  --o-surface-3: #152836;
+  --o-surface-hover: #122433;
+  --o-panel: linear-gradient(160deg, #0e1c28 0%, #0a1620 85%);
+  --o-overlay: rgba(2, 8, 14, 0.6);
+
+  /* Lines */
+  --o-border: #1a2b38;
+  --o-border-2: #243848;
+  --o-border-strong: #33506a;
+
+  /* Text */
+  --o-fg: #e9f1f8;
+  --o-fg-2: #a4b5c5;
+  --o-fg-3: #7d91a4;
+  --o-fg-inverse: #03141f;
+
+  /* Accent and states */
+  --o-accent: #1eaefc;
+  --o-accent-2: #52c3ff;
+  --o-accent-deep: #0b6fb8;
+  --o-accent-soft: rgba(30, 174, 252, 0.12);
+  --o-accent-line: rgba(30, 174, 252, 0.35);
+  --o-positive: #2dd4a7;
+  --o-positive-soft: rgba(45, 212, 167, 0.12);
+  --o-warning: #f3b64d;
+  --o-warning-soft: rgba(243, 182, 77, 0.13);
+  --o-danger: #f27a86;
+  --o-danger-soft: rgba(242, 122, 134, 0.13);
+  --o-violet: #9d8cf6;
+  --o-violet-soft: rgba(157, 140, 246, 0.13);
+  --o-focus: #6fd0ff;
+
+  /* Chart series, checked for contrast against the panel */
+  --o-series-1: #1eaefc;
+  --o-series-2: #2dd4b8;
+  --o-series-3: #5b7cfa;
+  --o-series-4: #a48cf7;
+  --o-series-5: #f3b64d;
+
+  /* Shape */
+  --o-radius-sm: 6px;
+  --o-radius: 8px;
+  --o-radius-lg: 12px;
+  --o-radius-xl: 16px;
+  --o-shadow-1: 0 1px 0 rgba(255, 255, 255, 0.02) inset, 0 1px 2px rgba(0, 0, 0, 0.25);
+  --o-shadow-2: 0 12px 32px rgba(0, 0, 0, 0.38), 0 2px 6px rgba(0, 0, 0, 0.3);
+  --o-shadow-3: 0 24px 64px rgba(0, 0, 0, 0.5), 0 6px 16px rgba(0, 0, 0, 0.35);
+
+  /* Type scale */
+  --o-text-xs: 11px;
+  --o-text-sm: 12px;
+  --o-text-md: 13px;
+  --o-text-lg: 14px;
+  --o-text-xl: 16px;
+  --o-title: 22px;
+  --o-display: 28px;
+
+  /* Rhythm */
+  --o-row: 52px;
+  --o-control: 36px;
+  --o-gap: 16px;
+  --o-pad: 20px;
+
+  /* Motion, mirrored from src/motion/tokens.ts for CSS transitions */
+  --o-ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --o-ease-in: cubic-bezier(0.4, 0, 1, 1);
+  --o-ease-standard: cubic-bezier(0.2, 0, 0, 1);
+  --o-fast: 160ms;
+  --o-base: 240ms;
+}
+
+[data-density="compact"] {
+  --o-row: 42px;
+  --o-control: 32px;
+  --o-gap: 12px;
+  --o-pad: 16px;
+}

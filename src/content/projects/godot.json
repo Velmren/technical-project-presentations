@@ -1,0 +1,259 @@
+{
+  "slug": "godot",
+  "title": "Category Spark",
+  "status": "published",
+  "presentation": "case",
+  "year": 2026,
+  "eyebrow": "Игра на Godot",
+  "lead": "Короткая викторина, которая объясняет каждую ошибку",
+  "summary": "Шесть вопросов из трёх категорий, счёт и новый раунд. Играется в браузере и в Windows.",
+  "note": "Игра на английском",
+  "closing": "Сыграйте раунд в браузере",
+  "accent": "#37dfff",
+  "category": "Игры",
+  "technologies": [
+    "Godot",
+    "GDScript"
+  ],
+  "order": 20,
+  "tone": "night",
+  "cover": {
+    "kind": "image",
+    "image": {
+      "src": "/assets/godot/1280x720/correct.png",
+      "alt": "Category Spark: правильный ответ, зелёная отметка и счёт 1 из 6",
+      "width": 1280,
+      "height": 720
+    }
+  },
+  "actions": [
+    {
+      "label": "Играть в браузере",
+      "href": "/assets/godot/web/"
+    },
+    {
+      "label": "Исходный код",
+      "href": "https://github.com/Velmren/category-spark-godot"
+    },
+    {
+      "label": "Скачать для Windows",
+      "href": "/assets/godot/CategorySpark-Windows-x64.zip"
+    }
+  ],
+  "showcase": {
+    "image": {
+      "src": "/assets/godot/case/start.webp",
+      "alt": "Category Spark в браузере: первый вопрос и четыре варианта ответа",
+      "width": 2000,
+      "height": 1320
+    },
+    "url": "velmren.com/assets/godot/web/"
+  },
+  "sections": [
+    {
+      "kind": "benefit",
+      "title": "Игрок сразу понимает, прав ли он",
+      "text": "Верный ответ загорается зелёным, ошибка розовым, и игра тут же называет правильный вариант.",
+      "layers": [
+        {
+          "image": {
+            "src": "/assets/godot/case/round-poster.webp",
+            "alt": "Запись раунда: ответы, подсказки и итог",
+            "width": 900,
+            "height": 620
+          },
+          "video": "/assets/godot/category-spark-playthrough.mp4",
+          "x": 0,
+          "y": 0.04,
+          "w": 0.58
+        },
+        {
+          "image": {
+            "src": "/assets/godot/case/wrong-detail.webp",
+            "alt": "Ошибка: Vertex отмечен розовым, верный ответ Pulse зелёным",
+            "width": 1360,
+            "height": 700
+          },
+          "x": 0.63,
+          "y": 0.1,
+          "w": 0.37,
+          "front": true
+        }
+      ]
+    },
+    {
+      "kind": "benefit",
+      "title": "Счёт честный, итог понятный",
+      "text": "Ответ засчитывается один раз. В конце раунда счёт и кнопка новой попытки.",
+      "layers": [
+        {
+          "image": {
+            "src": "/assets/godot/case/result.webp",
+            "alt": "Итог раунда: 5 из 6",
+            "width": 2000,
+            "height": 1320
+          },
+          "x": 0,
+          "y": 0.04,
+          "w": 0.58,
+          "url": "velmren.com/assets/godot/web/"
+        },
+        {
+          "image": {
+            "src": "/assets/godot/case/right-detail.webp",
+            "alt": "Верный ответ и +1 очко, счёт 1",
+            "width": 1360,
+            "height": 870
+          },
+          "x": 0.63,
+          "y": 0,
+          "w": 0.37,
+          "front": true
+        }
+      ]
+    },
+    {
+      "kind": "benefit",
+      "title": "Игра подстраивается под окно",
+      "text": "В низком окне ответы встают в две колонки, в узком остаются списком.",
+      "layers": [
+        {
+          "image": {
+            "src": "/assets/godot/case/wrong-844x390.webp",
+            "alt": "Окно 844 на 390: ответы в две колонки",
+            "width": 1688,
+            "height": 780
+          },
+          "x": 0,
+          "y": 0.12,
+          "w": 0.62
+        },
+        {
+          "image": {
+            "src": "/assets/godot/case/wrong-390x844.webp",
+            "alt": "Окно 390 на 844: ответы списком",
+            "width": 780,
+            "height": 1688
+          },
+          "x": 0.7,
+          "y": 0,
+          "w": 0.24,
+          "front": true
+        }
+      ]
+    },
+    {
+      "kind": "benefit",
+      "title": "Вопросы меняются без программиста",
+      "text": "Вопросы лежат в отдельном JSON. Игра проверяет файл при запуске и не падает, если он испорчен.",
+      "layers": [
+        {
+          "image": {
+            "src": "/assets/godot/case/github-questions.webp",
+            "alt": "Файл вопросов на GitHub",
+            "width": 2400,
+            "height": 1500
+          },
+          "x": 0,
+          "y": 0,
+          "w": 0.58,
+          "url": "github.com/Velmren/category-spark-godot/blob/main/data/questions.json"
+        },
+        {
+          "image": {
+            "src": "/assets/godot/case/questions-detail.webp",
+            "alt": "Вопрос в JSON: текст, варианты и номер верного ответа",
+            "width": 960,
+            "height": 440
+          },
+          "x": 0.63,
+          "y": 0.12,
+          "w": 0.37,
+          "front": true
+        }
+      ]
+    },
+    {
+      "kind": "features",
+      "title": "Как устроено",
+      "text": "Godot 4.7 и GDScript, интерфейс на стандартных элементах движка.",
+      "items": [
+        "Управление",
+        "Проверки",
+        "Движение",
+        "Сборки"
+      ],
+      "descriptions": [
+        "Мышь или клавиши от 1 до 4, Tab и Enter.",
+        "Тесты счёта, завершения раунда, перезапуска и импорта вопросов.",
+        "Анимацию вопросов можно выключить.",
+        "Windows без установки движка и веб-версия."
+      ]
+    }
+  ],
+  "en": {
+    "eyebrow": "Godot game",
+    "lead": "A short quiz that explains every mistake",
+    "summary": "Six questions in three categories, a score and a new round. Plays in the browser and on Windows.",
+    "note": "",
+    "closing": "Play a round in the browser",
+    "actions": [
+      "Play in the browser",
+      "Source code",
+      "Download for Windows"
+    ],
+    "showcase": [
+      "Category Spark in the browser: the first question and four answers"
+    ],
+    "sections": [
+      {
+        "title": "Players know at once whether they were right",
+        "text": "A correct answer lights up green, a mistake pink, and the game names the right option straight away.",
+        "alts": [
+          "Recording of a round: answers, hints and result",
+          "A mistake: Vertex marked pink, the right answer Pulse green"
+        ]
+      },
+      {
+        "title": "A fair score and a clear result",
+        "text": "Each answer counts once. The round ends with a score and a button to try again.",
+        "alts": [
+          "End of the round: 5 out of 6",
+          "A correct answer and +1 point, score 1"
+        ]
+      },
+      {
+        "title": "The game fits the window",
+        "text": "In a low window the answers form two columns; in a narrow one they stay a list.",
+        "alts": [
+          "An 844 by 390 window: answers in two columns",
+          "A 390 by 844 window: answers as a list"
+        ]
+      },
+      {
+        "title": "Questions change without a programmer",
+        "text": "Questions live in a separate JSON file. The game checks it on launch and does not crash if it is broken.",
+        "alts": [
+          "The question file on GitHub",
+          "A question in JSON: text, options and the index of the right answer"
+        ]
+      },
+      {
+        "title": "How it is built",
+        "text": "Godot 4.7 and GDScript, with the interface made of the engine's own controls.",
+        "items": [
+          "Controls",
+          "Checks",
+          "Motion",
+          "Builds"
+        ],
+        "descriptions": [
+          "Mouse or keys 1 to 4, Tab and Enter.",
+          "Tests for scoring, round completion, restart and question import.",
+          "Question animations can be turned off.",
+          "Windows without installing the engine, plus a web version."
+        ]
+      }
+    ]
+  }
+}

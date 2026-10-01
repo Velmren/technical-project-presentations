@@ -1,0 +1,9 @@
+shops:
+  market:
+    goods:
+      - {material: BREAD, amount: 3, buy: 2, sell: 1}
+      - {material: WHEAT, amount: 4, buy: 3, sell: 1}
+      - {material: OAK_LOG, amount: 8, buy: 6, sell: 2}
+      - {material: IRON_INGOT, amount: 4, buy: 8, sell: 3}
+      - {material: GLASS, amount: 4, buy: 4, sell: 1}
+      - {material: STONE_AXE, amount: 1, buy: 3}

@@ -1,0 +1,15 @@
+{
+  "name": "lacuna",
+  "version": "6.2.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node serve.mjs",
+    "check": "node tools/check-syntax.mjs",
+    "vendor": "node tools/vendor-three.mjs",
+    "verify": "node tools/verify.mjs",
+    "audit": "node tools/audit-geometry.mjs",
+    "record": "node tools/record.mjs",
+    "build": "node tools/build.mjs"
+  }
+}

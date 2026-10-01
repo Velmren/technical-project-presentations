@@ -1,0 +1,12 @@
+[Unit]
+Description=Nightly PostgreSQL dump of the electronics store
+
+[Timer]
+# Before the 03:00 UTC disk snapshot, so the snapshot also holds the fresh dump.
+OnCalendar=*-*-* 02:30:00 UTC
+RandomizedDelaySec=5min
+Persistent=true
+Unit=electronics-store-backup@db.service
+
+[Install]
+WantedBy=timers.target

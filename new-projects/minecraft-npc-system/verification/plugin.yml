@@ -1,0 +1,11 @@
+name: NpcRuntimeVerifier
+version: 1.0.0
+main: dev.velmren.npc.verify.NpcRuntimeVerifier
+api-version: '1.16'
+depend: [MinecraftNPCSystem]
+commands:
+  npcverify:
+    permission: npcverify.admin
+permissions:
+  npcverify.admin:
+    default: op

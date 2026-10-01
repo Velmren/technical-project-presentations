@@ -1,0 +1,21 @@
+*.avi
+.playwright-cli/
+output/
+node_modules/
+.next/
+out/
+*.tsbuildinfo
+.env*
+
+# Heavy exported builds and review recordings
+public/projects/mobile-game/downloads/
+public/projects/mobile-game/play/
+public/projects/character-motion/review-motion*/*.webm
+# Category Spark browser build, produced by scripts/build-category-spark-web.mjs
+public/assets/godot/web/
+
+# npc-system release packages, produced by its scripts/package.ps1
+new-projects/npc-system/build/release/
+
+# Lumi source lives in its own private repository
+new-projects/mobile-game/

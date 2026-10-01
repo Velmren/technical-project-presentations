@@ -1,0 +1,37 @@
+{
+  "slug": "admin-dashboard",
+  "title": "ORBIT",
+  "creator": "VELMREN",
+  "description": "Operations workspace for an online store: linked orders, payments, stock, tasks and customer messages, with a command menu, notifications, bulk actions, a drag-and-drop task board, team roles with a view-as preview and motion throughout. Russian and English.",
+  "stack": [
+    "React",
+    "TypeScript",
+    "Vite",
+    "Motion",
+    "dnd-kit",
+    "CSS",
+    "Lucide"
+  ],
+  "status": "ready-for-final-visual-review",
+  "url": "/projects/admin-dashboard/",
+  "thumbnail": "/projects/admin-dashboard/thumbnail.png",
+  "data": "Fictional store Northline Objects: about 14,000 orders and 10,000 customers over eighteen months, generated deterministically; reporting date 29 September 2026",
+  "persistence": "Changes are kept in the browser as an action log replayed over the generated data; no server",
+  "sections": [
+    "Overview",
+    "Orders",
+    "Customers",
+    "Products",
+    "Payments",
+    "Tasks",
+    "Messages",
+    "Analytics",
+    "Settings"
+  ],
+  "version": 5,
+  "languages": [
+    "ru",
+    "en"
+  ],
+  "release": "5.0.0"
+}

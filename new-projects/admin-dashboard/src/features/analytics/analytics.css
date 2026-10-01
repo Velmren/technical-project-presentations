@@ -1,0 +1,207 @@
+.panel-pad {
+  padding: 4px var(--o-pad) 20px;
+}
+.analytics__pair {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+.an-tile--repeat .kpi__icon {
+  background: var(--o-positive-soft);
+  color: #5fe3bd;
+  box-shadow: 0 0 0 1px rgba(45, 212, 167, 0.25) inset;
+}
+.an-tile--refunds .kpi__icon {
+  background: var(--o-warning-soft);
+  color: #f7c774;
+  box-shadow: 0 0 0 1px rgba(243, 182, 77, 0.25) inset;
+}
+
+/* Ranked bars */
+.barlist {
+  display: grid;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.barlist li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.barlist__lead {
+  flex-shrink: 0;
+}
+.barlist__main {
+  display: grid;
+  flex: 1;
+  gap: 5px;
+  min-width: 0;
+}
+.barlist__row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 10px;
+}
+.barlist__label {
+  overflow: hidden;
+  color: var(--o-fg);
+  font-size: var(--o-text-md);
+  font-weight: 560;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.barlist__value {
+  color: var(--o-fg);
+  font-size: var(--o-text-md);
+  font-weight: 640;
+}
+.barlist__track {
+  display: block;
+  height: 6px;
+  overflow: hidden;
+  border-radius: 6px;
+  background: #132434;
+}
+.barlist__fill {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: var(--o-accent);
+  transform-origin: left center;
+}
+.barlist__sub {
+  color: var(--o-fg-3);
+  font-size: var(--o-text-xs);
+}
+.country-code {
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 9px;
+  background: var(--o-surface-3);
+  color: var(--o-fg-2);
+  font-size: var(--o-text-xs);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+/* Weekday x hour heatmap */
+.heat {
+  display: grid;
+  gap: 12px;
+  overflow-x: auto;
+}
+.heat__grid {
+  display: grid;
+  grid-template-columns: 40px repeat(24, minmax(16px, 1fr));
+  gap: 4px;
+  min-width: 560px;
+}
+.heat__row {
+  display: contents;
+}
+.heat__hour {
+  color: var(--o-fg-3);
+  font-size: 10.5px;
+  text-align: left;
+}
+.heat__day {
+  align-self: center;
+  color: var(--o-fg-3);
+  font-size: var(--o-text-xs);
+  text-transform: capitalize;
+}
+.heat__cell {
+  aspect-ratio: 1.6;
+  border-radius: 4px;
+  background: rgba(30, 174, 252, calc(0.06 + var(--v) * 0.9));
+  box-shadow: 0 0 0 1px rgba(30, 174, 252, calc(var(--v) * 0.3)) inset;
+  transition: background-color 500ms var(--o-ease-standard);
+  cursor: default;
+}
+.heat__cell:hover {
+  outline: 1px solid var(--o-accent-2);
+  outline-offset: 1px;
+}
+.heat__legend {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--o-fg-3);
+  font-size: var(--o-text-xs);
+}
+.heat__scale {
+  width: 120px;
+  height: 8px;
+  border-radius: 4px;
+  background: linear-gradient(90deg, rgba(30, 174, 252, 0.08), rgba(30, 174, 252, 0.95));
+}
+.heat__readout {
+  margin-left: auto;
+  color: var(--o-fg-2);
+}
+
+@media (max-width: 1180px) {
+  .analytics__pair {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 720px) {
+  .heat__readout {
+    display: none;
+  }
+}
+
+/* First orders vs repeat orders */
+.split {
+  display: grid;
+  gap: 10px;
+  padding: 0 var(--o-pad) 20px;
+}
+.split .od-label {
+  margin: 0;
+}
+.split__bar {
+  height: 10px;
+  overflow: hidden;
+  border-radius: 6px;
+  background: var(--o-series-2);
+}
+.split__new {
+  display: block;
+  height: 100%;
+  background: var(--o-series-1);
+  transform-origin: left center;
+}
+.split__legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 16px;
+  color: var(--o-fg-2);
+  font-size: var(--o-text-sm);
+}
+.split__legend span {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+}
+.split__legend i {
+  width: 10px;
+  height: 10px;
+  border-radius: 3px;
+  background: var(--o-series-1);
+}
+.split__legend i.is-repeat {
+  background: var(--o-series-2);
+}
+.an-channels {
+  display: flex;
+  flex-direction: column;
+}
+.an-channels .categories__body {
+  flex: 1;
+}

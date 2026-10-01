@@ -1,0 +1,115 @@
+/* Project pages in the concept C system. Tokens, header, footer and buttons come from concept-c.css.
+   One main idea on top, each advantage beside its proof, details small and last. All content shares one
+   centred container so text and proof stay together on wide screens. */
+.cs-main { padding: 0 var(--gutter); }
+.cs-main > * { max-width: 1360px; margin-inline: auto; }
+
+/* First screen */
+.cs-intro {
+  display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: clamp(32px, 4vw, 64px); align-items: center;
+  min-height: min(calc(100svh - 76px), 640px); padding: 24px 0 48px;
+}
+.cs-name { display: flex; align-items: baseline; flex-wrap: wrap; gap: 4px 14px; }
+.cs-name b { font-family: var(--cc-display), sans-serif; font-weight: 600; font-size: 20px; }
+.cs-name span { font-family: var(--cc-figures), sans-serif; font-size: 17px; color: var(--muted); }
+.cs-intro h1 {
+  margin-top: 20px; font-family: var(--cc-display), sans-serif; font-weight: 500; font-variation-settings: 'wdth' 96;
+  font-size: clamp(38px, 3.6vw, 56px); line-height: 1.02; letter-spacing: -.01em;
+}
+.cs-lead { margin-top: 20px; max-width: 32em; font-size: 18px; line-height: 1.6; color: var(--muted); }
+.cs-intro .cc-actions { margin-top: 28px; }
+.cs-note { margin-top: 14px; max-width: 34em; font-size: 14px; line-height: 1.5; color: var(--dim); }
+/* The site in a window with the phone beside it, bottoms aligned. */
+.cs-hero-shot { display: flex; align-items: flex-end; gap: 3%; margin: 0; }
+.cs-hero-screen { flex: 1 1 0; min-width: 0; }
+.cs-hero-phone { flex: 0 0 18%; }
+.cs-hero-screen, .cs-hero-phone { display: block; filter: drop-shadow(0 18px 28px rgba(0, 0, 0, .45)); }
+
+/* Screenshot frames. One treatment for the whole page: a soft radius, a thin light edge and a quiet shadow.
+   Screens sit in a browser window with their address, fragments are plain cut-outs, phones get a device. */
+.cs-shot { display: block; position: relative; overflow: hidden; border-radius: 10px; background: #1b1c1f; }
+.cs-shot img, .cs-shot video { display: block; width: 100%; height: auto; }
+.cs-shot-browser { container-type: inline-size; }
+.cs-shot-bar {
+  display: flex; align-items: center; justify-content: center; height: clamp(18px, 5.6cqi, 30px); padding: 0 12%;
+  border-bottom: 1px solid rgba(236, 237, 239, .07);
+}
+.cs-shot-bar span {
+  max-width: 100%; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;
+  padding: .2em .9em; border-radius: 5px; background: rgba(236, 237, 239, .06);
+  font-size: clamp(8.5px, 2.1cqi, 12px); line-height: 1.4; color: var(--dim);
+}
+/* The frame edge is drawn over the picture, so light screenshots keep a crisp rounded border too. */
+.cs-shot::after { content: ''; position: absolute; inset: 0; border-radius: inherit; box-shadow: inset 0 0 0 1px rgba(236, 237, 239, .12); pointer-events: none; }
+.cs-shot-phone { border-radius: 26px; padding: 6px; background: #1d1e21; }
+.cs-shot-phone img, .cs-shot-phone video { border-radius: 20px; }
+.cs-shot-fade { -webkit-mask-image: linear-gradient(180deg, #000 70%, transparent); mask-image: linear-gradient(180deg, #000 70%, transparent); }
+
+/* Advantages: the heading leads, a short text follows, the proof is a composition of comparable size. */
+.cs-benefit {
+  display: grid; grid-template-columns: minmax(0, 440px) minmax(0, 720px); justify-content: center;
+  gap: clamp(40px, 5.4vw, 96px); align-items: center;
+  padding: clamp(44px, 4.6vw, 72px) 0; border-top: 1px solid var(--line);
+}
+.cs-benefit-flip { grid-template-columns: minmax(0, 720px) minmax(0, 440px); }
+.cs-benefit-flip .cs-benefit-copy { order: 2; }
+.cs-benefit h2 { font-family: var(--cc-display), sans-serif; font-weight: 500; font-size: clamp(30px, 2.8vw, 42px); line-height: 1.06; }
+.cs-benefit-copy > p { margin-top: 18px; max-width: 24em; font-size: 19px; line-height: 1.55; color: var(--muted); }
+.cs-benefit-copy > .cs-figure { margin-top: 24px; font-family: var(--cc-figures), sans-serif; font-size: 19px; line-height: 1.35; color: var(--text); }
+.cs-figure b { font-family: var(--cc-display), sans-serif; font-weight: 500; font-size: 44px; line-height: 1; margin-right: 6px; }
+
+/* Proof composition: the whole screen and the detail side by side. They drift apart a little with scroll
+   (--depth comes from Depth.tsx) and the detail settles in once. Only transform and opacity change. */
+.cs-stage { --shift: 1; display: flex; align-items: flex-start; width: 100%; }
+.cs-layer { flex: none; display: block; }
+.cs-layer-inner { display: block; will-change: transform; filter: drop-shadow(0 18px 28px rgba(0, 0, 0, .45)); }
+.cs-layer-back .cs-layer-inner { transform: translate3d(0, calc(var(--depth, 0) * 16px * var(--shift)), 0); }
+.cs-layer-front .cs-layer-inner { transform: translate3d(0, calc(var(--depth, 0) * -34px * var(--shift)), 0); }
+@media (scripting: enabled) and (prefers-reduced-motion: no-preference) {
+  .cs-layer { transition: opacity .8s ease, transform 1s cubic-bezier(.2, .7, .2, 1); }
+  .cs-stage:not([data-shown]) .cs-layer-back { opacity: 0; }
+  .cs-stage:not([data-shown]) .cs-layer-front { opacity: 0; transform: translate3d(0, 32px, 0) scale(.96); }
+}
+
+/* Technical details: small, for those who want them. */
+.cs-details {
+  display: grid; grid-template-columns: minmax(0, 420px) minmax(0, 1fr); gap: clamp(36px, 4.4vw, 72px);
+  padding: 52px 0; border-top: 1px solid var(--line);
+}
+.cs-details h2 { font-family: var(--cc-display), sans-serif; font-weight: 500; font-size: 24px; line-height: 1.15; }
+.cs-details > div > p { margin-top: 12px; font-size: 15px; line-height: 1.6; color: var(--muted); }
+.cs-details dl { margin: 0; display: grid; grid-template-columns: 1fr 1fr; column-gap: clamp(24px, 3vw, 48px); }
+.cs-details dl > div { padding: 14px 0 16px; border-top: 1px solid var(--line); }
+.cs-details dt { font-size: 15px; font-weight: 500; color: var(--text); }
+.cs-details dd { margin: 6px 0 0; font-size: 15px; line-height: 1.55; color: var(--muted); }
+
+.cs-closing { padding: 60px 0 64px; border-top: 1px solid var(--line); }
+.cs-closing p { font-family: var(--cc-display), sans-serif; font-weight: 500; font-size: clamp(32px, 3vw, 44px); line-height: 1.05; }
+.cs-closing .cc-actions { margin-top: 26px; }
+
+@media (max-width: 1100px) {
+  .cs-intro { grid-template-columns: minmax(0, 1fr); min-height: 0; padding-top: 28px; }
+  .cs-hero-shot { max-width: 820px; }
+  .cs-benefit, .cs-benefit-flip, .cs-details { grid-template-columns: minmax(0, 1fr); justify-content: stretch; gap: 32px; }
+  .cs-stage { max-width: 720px; }
+  .cs-benefit-flip .cs-benefit-copy { order: 0; }
+  .cs-benefit-copy > p { max-width: 36em; }
+}
+
+@media (max-width: 860px) {
+  .cs-intro { gap: 32px; padding: 20px 0 40px; }
+  .cs-intro h1 { font-size: 34px; line-height: 1.06; }
+  .cs-lead { font-size: 16.5px; }
+  .cs-shot { border-radius: 7px; }
+  .cs-shot-phone { border-radius: 16px; padding: 3px; }
+  .cs-shot-phone img, .cs-shot-phone video { border-radius: 13px; }
+  .cs-hero-phone { flex-basis: 20%; }
+  .cs-benefit { padding: 40px 0; gap: 26px; }
+  .cs-benefit h2 { font-size: 27px; }
+  .cs-benefit-copy > p { font-size: 17px; }
+  .cs-figure b { font-size: 34px; }
+  .cs-stage { --shift: .5; }
+  .cs-details { padding: 40px 0; }
+  .cs-details dl { grid-template-columns: minmax(0, 1fr); }
+  .cs-closing { padding: 44px 0 48px; }
+}

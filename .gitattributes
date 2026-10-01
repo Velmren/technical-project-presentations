@@ -1,0 +1,3 @@
+# Preserve accepted build/media bytes across checkouts on Windows and other hosts.
+demos/forma/** -text
+public/assets/** -text

@@ -1,0 +1,303 @@
+{
+  "slug": "dev-utilities",
+  "title": "Dev Utilities",
+  "status": "published",
+  "presentation": "case",
+  "year": 2026,
+  "eyebrow": "Инструменты разработчика",
+  "lead": "Инструменты разработчика, которые не отправляют данные в сеть",
+  "summary": "JSON, цвет, хеши и Base64 в одном браузерном приложении. Работает без сервера, на русском и английском, в светлой и тёмной теме.",
+  "closing": "Попробуйте на своих данных",
+  "accent": "#0c6f69",
+  "category": "Веб-приложения",
+  "technologies": [
+    "React",
+    "TypeScript",
+    "CodeMirror",
+    "Web Workers"
+  ],
+  "order": 45,
+  "tone": "cool",
+  "cover": {
+    "kind": "image",
+    "image": {
+      "src": "/assets/dev-utilities/hero-ru.webp",
+      "alt": "Dev Utilities: JSON-документ в редакторе и его дерево",
+      "width": 2400,
+      "height": 1500
+    }
+  },
+  "actions": [
+    {
+      "label": "Открыть приложение",
+      "href": "/projects/dev-utilities/"
+    }
+  ],
+  "showcase": {
+    "image": {
+      "src": "/assets/dev-utilities/hero-ru.webp",
+      "alt": "Dev Utilities: JSON-документ в редакторе и его дерево",
+      "width": 2400,
+      "height": 1500
+    },
+    "url": "velmren.com/projects/dev-utilities/"
+  },
+  "sections": [
+    {
+      "kind": "benefit",
+      "title": "Нужное значение находится одним запросом",
+      "text": "JSONPath по стандарту RFC 9535 показывает путь, тип и точное значение каждого совпадения.",
+      "layers": [
+        {
+          "image": {
+            "src": "/assets/dev-utilities/jsonpath-ru.webp",
+            "alt": "Запрос JSONPath к документу и два совпадения",
+            "width": 2400,
+            "height": 1500
+          },
+          "x": 0,
+          "y": 0,
+          "w": 0.56,
+          "url": "velmren.com/projects/dev-utilities/"
+        },
+        {
+          "image": {
+            "src": "/assets/dev-utilities/jsonpath-query-ru.webp",
+            "alt": "Запрос $.endpoints[?@.p95Ms > 200].path и найденные пути",
+            "width": 940,
+            "height": 344
+          },
+          "x": 0.6,
+          "y": 0.12,
+          "w": 0.4,
+          "front": true
+        }
+      ]
+    },
+    {
+      "kind": "benefit",
+      "title": "Из JSON сразу получаются типы",
+      "text": "TypeScript, JSON Schema, YAML и CSV собираются из того же документа.",
+      "layers": [
+        {
+          "image": {
+            "src": "/assets/dev-utilities/convert-ru.webp",
+            "alt": "Конвертация JSON в TypeScript",
+            "width": 2400,
+            "height": 1500
+          },
+          "x": 0,
+          "y": 0.02,
+          "w": 0.56,
+          "url": "velmren.com/projects/dev-utilities/"
+        },
+        {
+          "image": {
+            "src": "/assets/dev-utilities/convert-ts-ru.webp",
+            "alt": "Интерфейсы TypeScript, выведенные из документа",
+            "width": 800,
+            "height": 720
+          },
+          "x": 0.62,
+          "y": 0,
+          "w": 0.38,
+          "front": true,
+          "fade": true
+        }
+      ]
+    },
+    {
+      "kind": "benefit",
+      "title": "Разница между версиями становится патчем",
+      "text": "Сравнение находит каждое изменение и сохраняет его как JSON Patch.",
+      "layers": [
+        {
+          "image": {
+            "src": "/assets/dev-utilities/diff-ru.webp",
+            "alt": "Сравнение двух версий: шесть изменений",
+            "width": 2400,
+            "height": 1500
+          },
+          "x": 0,
+          "y": 0.04,
+          "w": 0.56,
+          "url": "velmren.com/projects/dev-utilities/"
+        },
+        {
+          "image": {
+            "src": "/assets/dev-utilities/patch-ru.webp",
+            "alt": "JSON Patch из найденных изменений",
+            "width": 800,
+            "height": 800
+          },
+          "x": 0.63,
+          "y": 0,
+          "w": 0.37,
+          "front": true,
+          "fade": true
+        }
+      ]
+    },
+    {
+      "kind": "benefit",
+      "title": "Палитра сразу проверяется на читаемость",
+      "text": "Контраст по WCAG считается для каждой пары цветов, шкалы строятся в OKLCH.",
+      "layers": [
+        {
+          "image": {
+            "src": "/assets/dev-utilities/color-ru.webp",
+            "alt": "Палитра, тональная шкала и проверка контраста",
+            "width": 2400,
+            "height": 1500
+          },
+          "x": 0,
+          "y": 0.08,
+          "w": 0.56,
+          "url": "velmren.com/projects/dev-utilities/"
+        },
+        {
+          "image": {
+            "src": "/assets/dev-utilities/contrast-ru.webp",
+            "alt": "Контраст 5,35:1 и отметки AA и AAA для текста",
+            "width": 778,
+            "height": 920
+          },
+          "x": 0.62,
+          "y": 0,
+          "w": 0.38,
+          "front": true
+        }
+      ]
+    },
+    {
+      "kind": "benefit",
+      "title": "Скачанный файл сверяется с опубликованной суммой",
+      "text": "Список sha256sum проверяется целиком, несовпадение видно сразу.",
+      "layers": [
+        {
+          "image": {
+            "src": "/assets/dev-utilities/hashes-ru.webp",
+            "alt": "Три файла, их суммы SHA-256 и сверка со списком",
+            "width": 2400,
+            "height": 1500
+          },
+          "x": 0,
+          "y": 0,
+          "w": 0.56,
+          "url": "velmren.com/projects/dev-utilities/"
+        },
+        {
+          "image": {
+            "src": "/assets/dev-utilities/hash-check-ru.webp",
+            "alt": "Две суммы совпадают, одна нет",
+            "width": 948,
+            "height": 436
+          },
+          "x": 0.6,
+          "y": 0.1,
+          "w": 0.4,
+          "front": true
+        }
+      ]
+    },
+    {
+      "kind": "features",
+      "title": "Как устроено",
+      "text": "React 19 и TypeScript, без сервера.",
+      "items": [
+        "Потоки",
+        "Точность",
+        "Лимиты",
+        "Base64"
+      ],
+      "descriptions": [
+        "Разбор, хеши и кодирование идут в Web Workers, интерфейс не замирает.",
+        "Большие числа и дроби не округляются.",
+        "JSON до 5 МБ, файлы для хешей до 1 ГБ.",
+        "Файлы, Data URI, hex-просмотр и разбор JWT."
+      ]
+    }
+  ],
+  "en": {
+    "eyebrow": "Developer tools",
+    "lead": "Developer tools that never send your data anywhere",
+    "summary": "JSON, colour, hashes and Base64 in one browser app. No server, in Russian and English, light and dark.",
+    "closing": "Try it on your own data",
+    "actions": [
+      "Open the app"
+    ],
+    "showcase": [
+      "Dev Utilities: a JSON document in the editor and its tree"
+    ],
+    "media": {
+      "/assets/dev-utilities/hero-ru.webp": "/assets/dev-utilities/hero-en.webp",
+      "/assets/dev-utilities/jsonpath-ru.webp": "/assets/dev-utilities/jsonpath-en.webp",
+      "/assets/dev-utilities/jsonpath-query-ru.webp": "/assets/dev-utilities/jsonpath-query-en.webp",
+      "/assets/dev-utilities/convert-ru.webp": "/assets/dev-utilities/convert-en.webp",
+      "/assets/dev-utilities/convert-ts-ru.webp": "/assets/dev-utilities/convert-ts-en.webp",
+      "/assets/dev-utilities/diff-ru.webp": "/assets/dev-utilities/diff-en.webp",
+      "/assets/dev-utilities/color-ru.webp": "/assets/dev-utilities/color-en.webp",
+      "/assets/dev-utilities/contrast-ru.webp": "/assets/dev-utilities/contrast-en.webp",
+      "/assets/dev-utilities/hashes-ru.webp": "/assets/dev-utilities/hashes-en.webp",
+      "/assets/dev-utilities/hash-check-ru.webp": "/assets/dev-utilities/hash-check-en.webp"
+    },
+    "sections": [
+      {
+        "title": "The value you need is one query away",
+        "text": "JSONPath under RFC 9535 shows the path, type and exact value of every match.",
+        "alts": [
+          "A JSONPath query and two matches",
+          "The query $.endpoints[?@.p95Ms > 200].path and the paths it found"
+        ]
+      },
+      {
+        "title": "Types come straight from JSON",
+        "text": "TypeScript, JSON Schema, YAML and CSV are built from the same document.",
+        "alts": [
+          "Converting JSON to TypeScript",
+          "TypeScript interfaces inferred from the document"
+        ]
+      },
+      {
+        "title": "The difference between versions becomes a patch",
+        "text": "The comparison finds every change and saves it as a JSON Patch.",
+        "alts": [
+          "Comparing two versions: six changes",
+          "A JSON Patch built from the changes"
+        ]
+      },
+      {
+        "title": "A palette is checked for readability at once",
+        "text": "WCAG contrast is calculated for every colour pair, and scales are built in OKLCH.",
+        "alts": [
+          "Palette, tonal scale and contrast check",
+          "Contrast of 5.35:1 with AA and AAA marks for text"
+        ]
+      },
+      {
+        "title": "A downloaded file is checked against its published sum",
+        "text": "A whole sha256sum list is verified at once, and a mismatch stands out.",
+        "alts": [
+          "Three files, their SHA-256 sums and the list check",
+          "Two sums match, one does not"
+        ]
+      },
+      {
+        "title": "How it is built",
+        "text": "React 19 and TypeScript, no server.",
+        "items": [
+          "Threads",
+          "Precision",
+          "Limits",
+          "Base64"
+        ],
+        "descriptions": [
+          "Parsing, hashing and encoding run in Web Workers, so the interface never freezes.",
+          "Large numbers and decimals are never rounded.",
+          "JSON up to 5 MB, files for hashing up to 1 GB.",
+          "Files, Data URIs, hex view and JWT decoding."
+        ]
+      }
+    ]
+  }
+}
