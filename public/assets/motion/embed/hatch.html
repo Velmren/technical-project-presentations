@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="ru">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Hatch</title>
+<style>
+html,body{margin:0;height:100%;background:#ece2d0;overflow:hidden}
+#slot{position:absolute;inset:0}
+.pad{position:absolute;left:0;right:0;bottom:3.2%;display:flex;gap:10px;justify-content:center}
+.pad button{font:500 clamp(11px,2.6cqw,15px)/1 system-ui,sans-serif;padding:.7em 1.3em;border-radius:99px;border:1.5px solid #3a2d27;background:#f5e9d3;color:#3a2d27;cursor:pointer}
+.pad button:hover{background:#3a2d27;color:#f5e9d3}
+.pad button:focus-visible{outline:2px solid #3d4ba8;outline-offset:2px}
+</style>
+<div id="slot"></div>
+<div class="pad"><button id="ok" type="button">Успех</button><button id="no" type="button">Неудача</button></div>
+<script src="hatch.js"></script>
+<script>
+var q=new URLSearchParams(location.search);
+if(q.get('lang')==='en'){ok.textContent='Success';no.textContent='Fail'}
+var egg=Hatch.mount('#slot',{autoplay:q.get('auto')!=='0'&&!matchMedia('(prefers-reduced-motion: reduce)').matches});
+ok.onclick=function(){egg.success()};no.onclick=function(){egg.fail()};
+document.querySelector('.pad').style.display=q.get('pad')==='0'?'none':'flex';
+</script>

@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Motion graphics, live | VELMREN</title>
+<meta name="description" content="Three examples built for this work. The buttons inside the examples work.">
+<style>
+@font-face{font-family:Golos;font-weight:400;font-display:swap;src:url(../fonts/golos-cyr-400.woff2) format("woff2");unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
+@font-face{font-family:Golos;font-weight:400;font-display:swap;src:url(../fonts/golos-lat-400.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:Golos;font-weight:500;font-display:swap;src:url(../fonts/golos-cyr-500.woff2) format("woff2");unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
+@font-face{font-family:Golos;font-weight:500;font-display:swap;src:url(../fonts/golos-lat-500.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:Tektur;font-weight:500;font-display:swap;src:url(../fonts/tektur-cyr-500.woff2) format("woff2");unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
+@font-face{font-family:Tektur;font-weight:500;font-display:swap;src:url(../fonts/tektur-lat-500.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+:root{--ground:#111213;--line:rgba(236,237,239,.09);--text:#ecedef;--muted:#a4a9af;--dim:#71767d;--accent:#e4572e;--gutter:clamp(18px,4.4vw,64px)}
+*{box-sizing:border-box}
+html{background:var(--ground);color-scheme:dark}
+body{margin:0;background:var(--ground);color:var(--text);font:400 17px/1.6 Golos,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+header,main,footer{max-width:1360px;margin-inline:auto;padding-inline:var(--gutter)}
+header{display:flex;align-items:center;justify-content:space-between;gap:16px;height:76px}
+.logo{font:500 17px/1 Tektur,sans-serif;letter-spacing:.04em;text-decoration:none}
+nav{display:flex;gap:22px;align-items:center;font-size:15px;color:var(--muted)}
+nav a{text-decoration:none}nav a:hover{color:var(--text)}
+nav b{font-weight:500;color:var(--text)}
+h1{margin:36px 0 0;font:500 clamp(36px,4vw,60px)/1.02 Tektur,sans-serif;letter-spacing:-.01em}
+.intro{margin:18px 0 0;max-width:34em;color:var(--muted);font-size:18px}
+.item{display:grid;grid-template-columns:minmax(0,420px) minmax(0,1fr);gap:clamp(32px,5vw,88px);align-items:center;padding:clamp(40px,5vw,72px) 0;border-top:1px solid var(--line);margin-top:clamp(36px,4vw,56px)}
+.item:nth-of-type(even){grid-template-columns:minmax(0,1fr) minmax(0,420px)}
+.item:nth-of-type(even) .copy{order:2}
+h2{margin:0;font:500 clamp(26px,2.4vw,36px)/1.1 Tektur,sans-serif}
+.copy p{margin:14px 0 0;color:var(--muted)}
+dl{margin:26px 0 0}
+dl div{display:flex;justify-content:space-between;gap:20px;padding:11px 0;border-top:1px solid var(--line);font-size:15px}
+dt{color:var(--dim)}dd{margin:0;text-align:right}
+.demo{display:flex;justify-content:center}
+.screen{width:100%;max-width:960px;aspect-ratio:16/10;border:0;border-radius:12px;background:#222;box-shadow:inset 0 0 0 1px rgba(236,237,239,.12);display:block}
+.tall{height:min(78vh,760px);width:auto;aspect-ratio:768/1280;max-width:100%;object-fit:cover;border-radius:14px;background:#222;box-shadow:0 0 0 1px rgba(236,237,239,.14),0 24px 48px rgba(0,0,0,.5);display:block}
+footer{display:flex;justify-content:space-between;gap:20px;align-items:center;flex-wrap:wrap;padding-block:30px 40px;border-top:1px solid var(--line);margin-top:clamp(20px,3vw,40px);font-size:14px;color:var(--dim)}
+footer a.logo{color:var(--text)}
+@media(max-width:900px){.item,.item:nth-of-type(even){grid-template-columns:minmax(0,1fr);gap:28px}.item:nth-of-type(even) .copy{order:0}.tall{height:auto;width:min(100%,360px)}}
+</style>
+</head>
+<body>
+<header><a class="logo" href="/en/">VELMREN</a><nav aria-label="Navigation"><a href="/en/motion/">Motion graphics</a><span><b>EN</b> / <a href="/projects/motion/">RU</a></span></nav></header>
+<main>
+<h1>Motion graphics, live</h1>
+<p class="intro">Three examples built for this work. The buttons inside the examples work.</p>
+<section class="item"><div class="copy"><h2>Marks on a vertical screen</h2><p>Six marks in a row on a 768×1280 screen. Each has its own exit, hold and caption, and the background moves under them.</p><dl><div><dt>Format</dt><dd>MP4 H.264, 768×1280</dd></div><div><dt>Frame rate</dt><dd>60 fps</dd></div><div><dt>Length</dt><dd>24 s</dd></div><div><dt>Size</dt><dd>1.3 MB</dd></div></dl></div>
+<div class="demo"><video class="tall" src="/assets/motion/logos.mp4" poster="/assets/motion/logos-poster.webp" width="768" height="1280" muted loop playsinline autoplay controls aria-label="Video of marks on a vertical screen"></video></div></section>
+<section class="item"><div class="copy"><h2>A character in Lottie</h2><p>Khrum in five states. Each state is a separate Lottie cycle, the page draws the background.</p><dl><div><dt>Format</dt><dd>Lottie JSON</dd></div><div><dt>Run cycle</dt><dd>36 frames, 30 fps, 640×440</dd></div><div><dt>Cycle size</dt><dd>28 KB gzipped</dd></div><div><dt>Player</dt><dd>lottie-web, canvas</dd></div></dl></div>
+<div class="demo"><iframe class="screen" src="/assets/motion/embed/lottie.html?lang=en" title="Live Lottie cycle with a choice of states" loading="lazy"></iframe></div></section>
+<section class="item"><div class="copy"><h2>Animation in one file</h2><p>An egg in a nest: success, failure and back to the start. The script draws on a canvas and needs no libraries.</p><dl><div><dt>File</dt><dd>hatch.js</dd></div><div><dt>Size</dt><dd>7 KB gzipped</dd></div><div><dt>Connection</dt><dd>one script and one call</dd></div><div><dt>Motion</dt><dd>computed from time, not from frames</dd></div></dl></div>
+<div class="demo"><iframe class="screen" src="/assets/motion/embed/hatch.html?lang=en" title="Live example: success and failure on a canvas" loading="lazy"></iframe></div></section>
+</main>
+<footer><a class="logo" href="/en/">VELMREN</a><span>Lottie player: lottie-web, MIT licence.</span></footer>
+</body>
+</html>

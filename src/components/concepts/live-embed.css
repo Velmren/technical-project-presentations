@@ -1,0 +1,5 @@
+/* Live frame of a work over its poster: same size as the poster, shown when the page has drawn. */
+.cs-live { position: absolute; inset: 0; display: block; }
+.cs-live iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; background: transparent; opacity: 0; transition: opacity .5s ease; }
+.cs-live-ready iframe { opacity: 1; }
+@media (prefers-reduced-motion: reduce) { .cs-live iframe { transition: none; } }
