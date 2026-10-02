@@ -1,0 +1,18 @@
+{
+  "version": "1.0.0",
+  "built": "2026-10-02T21:16:14.652Z",
+  "files": [
+    "index.html",
+    "metadata.json",
+    "src/i18n.js",
+    "src/main.js",
+    "styles/main.css",
+    "fonts/NotoSerifDisplay-cyrillic.woff2",
+    "fonts/NotoSerifDisplay-latin.woff2",
+    "fonts/NotoSerifDisplay-OFL.txt",
+    "fonts/Onest-cyrillic.woff2",
+    "fonts/Onest-latin.woff2",
+    "fonts/Onest-OFL.txt",
+    "build-manifest.json"
+  ]
+}

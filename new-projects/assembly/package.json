@@ -1,0 +1,14 @@
+{
+  "name": "veresta",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node serve.mjs",
+    "build": "node tools/build.mjs",
+    "fonts": "node tools/fetch-fonts.mjs",
+    "frames": "node tools/encode-frames.mjs",
+    "verify": "node tools/verify.mjs",
+    "capture": "node tools/capture.mjs"
+  }
+}

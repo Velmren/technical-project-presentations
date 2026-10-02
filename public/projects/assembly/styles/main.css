@@ -1,0 +1,153 @@
+@font-face { font-family: "Onest"; src: url("../fonts/Onest-cyrillic.woff2") format("woff2"); font-weight: 300 700; font-display: swap; unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116; }
+@font-face { font-family: "Onest"; src: url("../fonts/Onest-latin.woff2") format("woff2"); font-weight: 300 700; font-display: swap; unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+20AC, U+2122, U+2212, U+2215; }
+@font-face { font-family: "Noto Serif Display"; src: url("../fonts/NotoSerifDisplay-cyrillic.woff2") format("woff2"); font-weight: 300 600; font-stretch: 62.5% 100%; font-display: swap; unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116; }
+@font-face { font-family: "Noto Serif Display"; src: url("../fonts/NotoSerifDisplay-latin.woff2") format("woff2"); font-weight: 300 600; font-stretch: 62.5% 100%; font-display: swap; unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+20AC, U+2122, U+2212, U+2215; }
+
+:root {
+  --bg: #12151a;
+  --bg-2: #171b21;
+  --ink: #f1ece4;
+  --muted: #a9a59d;
+  --accent: #d7a569;
+  --line: rgba(241, 236, 228, .18);
+  --btn-ink: #14110d;
+  --pad: clamp(20px, 5vw, 96px);
+  --serif: "Noto Serif Display", "Times New Roman", serif;
+  --sans: "Onest", "Segoe UI", Arial, sans-serif;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--sans); font-size: 17px; line-height: 1.5; -webkit-font-smoothing: antialiased; }
+a { color: inherit; text-decoration: none; }
+img { display: block; max-width: 100%; height: auto; }
+h1, h2, h3, p, dl, dd { margin: 0; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+
+/* Шапка */
+.top { position: fixed; z-index: 10; left: 0; right: 0; top: 0; display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 26px var(--pad); transition: background-color .3s, padding .3s; }
+.top.solid { background: rgba(18, 21, 26, .94); padding-top: 16px; padding-bottom: 16px; }
+.mark { font-family: var(--serif); font-weight: 500; font-size: 28px; letter-spacing: .26em; line-height: 1; }
+.nav { display: flex; gap: clamp(18px, 2.6vw, 44px); font-size: 16px; color: var(--muted); }
+.nav a:hover, .link:hover { color: var(--ink); }
+.top-side { display: flex; align-items: center; gap: 18px; }
+.lang { font: inherit; font-size: 14px; letter-spacing: .08em; color: var(--muted); background: none; border: 0; padding: 8px 4px; cursor: pointer; }
+.lang:hover { color: var(--ink); }
+.call { font-size: 16px; padding: 11px 22px; border: 1px solid var(--line); border-radius: 2px; white-space: nowrap; }
+.call:hover { border-color: var(--accent); }
+
+/* Первый экран: высота секции задаёт длину прокрутки, внутри закреплённая сцена */
+.hero { position: relative; height: 420vh; }
+.hero-pin { position: sticky; top: 0; height: 100vh; height: 100svh; overflow: hidden; }
+.stage { position: absolute; inset: 0; }
+.stage .poster, .stage canvas, .stage .fallback { position: absolute; inset: 0; width: 100%; height: 100%; }
+.stage .poster, .stage .fallback { object-fit: cover; object-position: 78% 50%; }
+.stage canvas { opacity: 0; transition: opacity .35s; }
+.stage.live canvas { opacity: 1; }
+.stage.live .poster { visibility: hidden; }
+
+.copy { position: absolute; left: var(--pad); top: clamp(150px, 22vh, 236px); width: min(860px, 46vw); }
+.over { font-size: 15px; letter-spacing: .14em; text-transform: uppercase; color: var(--accent); }
+h1 { font-family: var(--serif); font-stretch: 88%; font-weight: 400; font-size: clamp(54px, 6.15vw, 118px); line-height: .98; letter-spacing: -.012em; margin: 24px 0 28px; }
+.lead { font-size: clamp(17px, 1.1vw, 21px); line-height: 1.5; color: var(--muted); max-width: 520px; margin-bottom: 40px; }
+.actions { display: flex; align-items: center; gap: 34px; flex-wrap: wrap; }
+.btn { display: inline-block; background: var(--accent); color: var(--btn-ink); font: inherit; font-weight: 500; padding: 18px 34px; border: 0; border-radius: 2px; cursor: pointer; transition: background-color .2s; }
+.btn:hover { background: #e3b77f; }
+.link { border-bottom: 1px solid var(--line); padding-bottom: 4px; }
+
+.facts { position: absolute; left: var(--pad); bottom: clamp(28px, 6vh, 64px); display: flex; gap: clamp(28px, 3.3vw, 64px); }
+.facts div { border-top: 1px solid var(--line); padding-top: 16px; width: 170px; }
+.facts dt { font-family: var(--serif); font-stretch: 88%; font-size: 40px; line-height: 1; margin-bottom: 8px; }
+.facts dd { font-size: 14px; color: var(--muted); }
+
+.progress { position: absolute; right: var(--pad); bottom: clamp(28px, 6vh, 64px); width: 300px; text-align: right; }
+.stage-name { font-size: 15px; min-height: 1.5em; margin-bottom: 10px; }
+.bar { height: 1px; background: var(--line); }
+.bar span { display: block; height: 1px; width: 100%; background: var(--accent); transform-origin: 100% 50%; transform: scaleX(0); }
+.note { font-size: 14px; color: var(--muted); letter-spacing: .02em; margin-top: 10px; }
+
+/* Блоки под первым экраном */
+.block { padding: clamp(72px, 9vw, 150px) 0; border-top: 1px solid var(--line); }
+.wrap { padding: 0 var(--pad); max-width: 1920px; margin: 0 auto; }
+.two { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: clamp(32px, 6vw, 120px); align-items: start; }
+h2 { font-family: var(--serif); font-stretch: 88%; font-weight: 400; font-size: clamp(36px, 3.6vw, 68px); line-height: 1.04; margin-top: 20px; }
+.text p { color: var(--muted); font-size: clamp(17px, 1.1vw, 20px); max-width: 640px; }
+.text p + p { margin-top: 18px; }
+.numbers { display: flex; gap: clamp(28px, 4vw, 72px); margin-top: 48px; flex-wrap: wrap; }
+.numbers dt { font-family: var(--serif); font-stretch: 88%; font-size: clamp(40px, 3.4vw, 60px); line-height: 1; }
+.numbers dd { font-size: 14px; color: var(--muted); margin-top: 8px; }
+
+.cards { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(20px, 2.4vw, 44px); margin-top: clamp(40px, 4vw, 72px); }
+.card img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; background: var(--bg-2); }
+.card h3 { font-family: var(--serif); font-stretch: 88%; font-weight: 400; font-size: clamp(28px, 2.1vw, 38px); margin: 22px 0 8px; }
+.card p { color: var(--muted); max-width: 460px; }
+.card .meta { color: var(--ink); font-size: 15px; margin-top: 14px; padding-top: 14px; border-top: 1px solid var(--line); }
+
+.quay { padding-top: 0; border-top: 0; }
+.quay .wide { width: 100%; aspect-ratio: 32 / 15; object-fit: cover; background: var(--bg-2); margin-bottom: clamp(56px, 6vw, 110px); }
+
+.form { display: grid; gap: 22px; max-width: 520px; }
+.form label { display: grid; gap: 8px; font-size: 14px; color: var(--muted); }
+.form input { font: inherit; color: var(--ink); background: none; border: 0; border-bottom: 1px solid var(--line); padding: 10px 0; border-radius: 0; }
+.form input:focus { outline: 0; border-bottom-color: var(--accent); }
+.form .btn { justify-self: start; margin-top: 8px; }
+.form-note { font-size: 15px; color: var(--muted); min-height: 1.5em; }
+
+.foot { border-top: 1px solid var(--line); padding: 44px 0 56px; }
+.foot .wrap { display: flex; justify-content: space-between; align-items: baseline; gap: 32px; flex-wrap: wrap; }
+.foot p:last-child { color: var(--muted); font-size: 14px; max-width: 620px; }
+
+@media (max-width: 1180px) {
+  .nav { display: none; }
+  .copy { width: min(640px, 56vw); }
+  /* Объект занимает низ кадра: цифры убраны, подпись этапа уходит влево, где свободно */
+  .facts { display: none; }
+  .progress { left: var(--pad); right: auto; width: 240px; text-align: left; }
+  .bar span { transform-origin: 0 50%; }
+}
+
+/* Экраны выше 16:9 (16:10, 4:3): кадр во всю ширину и прижат к низу, как рисует canvas */
+@media (max-aspect-ratio: 16/9) {
+  .stage .poster { top: auto; bottom: 0; height: auto; aspect-ratio: 16 / 9; object-fit: cover; object-position: 50% 50%;
+    -webkit-mask-image: linear-gradient(to bottom, transparent 0, #000 14%); mask-image: linear-gradient(to bottom, transparent 0, #000 14%); }
+  .stage .fallback { object-fit: contain; object-position: 50% 100%; }
+}
+
+/* Низкие широкие экраны: цифры уступают место тексту */
+@media (max-height: 700px) and (min-width: 761px) {
+  .copy { top: 110px; }
+  h1 { font-size: clamp(48px, 5.2vw, 96px); margin: 18px 0 20px; }
+  .lead { margin-bottom: 28px; }
+  .facts { display: none; }
+}
+
+/* Телефон и вертикальные экраны: текст сверху, объект снизу по центру */
+@media (max-width: 760px), (max-aspect-ratio: 1/1) {
+  body { font-size: 16px; }
+  .top { padding: 16px 20px; }
+  .mark { font-size: 19px; }
+  .call { display: none; }
+  .hero { height: 380vh; }
+  /* Same placement as the canvas draws: full width, lower frame margin pushed below the progress line. */
+  .stage .poster, .stage .fallback { top: auto; bottom: calc(8.5% - min(125vw, 70%) * 0.14); height: min(125vw, 70%); aspect-ratio: auto; object-fit: contain; object-position: 50% 100%;
+    -webkit-mask-image: none; mask-image: none; }
+  .copy { left: 20px; right: 20px; top: 76px; width: auto; }
+  .over { font-size: 11px; }
+  h1 { font-size: clamp(44px, 12.8vw, 72px); margin: 12px 0 14px; }
+  .lead { font-size: 15px; margin-bottom: 18px; max-width: 440px; }
+  .actions .link { display: none; }
+  .btn { padding: 14px 24px; }
+  .facts { display: none; }
+  .progress { left: 20px; right: 20px; bottom: 18px; width: auto; text-align: left; }
+  .bar span { transform-origin: 0 50%; }
+  .note { font-size: 12px; }
+  .two { grid-template-columns: 1fr; }
+  .cards { grid-template-columns: 1fr; }
+  .quay .wide { aspect-ratio: 4 / 3; }
+  .foot .wrap { flex-direction: column; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .stage canvas { transition: none; }
+}

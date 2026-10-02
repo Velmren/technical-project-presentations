@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Вереста: квартал на набережной</title>
+<meta name="description" content="Три кирпичных дома у воды: башня, дом с балконами и клубный дом. Двор без машин и собственный спуск к воде.">
+<meta name="theme-color" content="#12151a">
+<link rel="preload" href="fonts/Onest-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/NotoSerifDisplay-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+<header class="top">
+  <a class="mark" href="#top">ВЕРЕСТА</a>
+  <nav class="nav" aria-label="Разделы">
+    <a href="#about" data-i18n="nav.about">О квартале</a>
+    <a href="#homes" data-i18n="nav.homes">Дома</a>
+    <a href="#quay" data-i18n="nav.quay">Набережная</a>
+    <a href="#visit" data-i18n="nav.visit">Показ</a>
+  </nav>
+  <div class="top-side">
+    <button class="lang" type="button" data-lang-switch aria-label="Switch to English">EN</button>
+    <a class="call" href="#visit" data-i18n="nav.sales">Отдел продаж</a>
+  </div>
+</header>
+
+<main>
+  <section class="hero" id="top" data-hero>
+    <div class="hero-pin">
+      <div class="stage">
+        <picture>
+          <source media="(max-width: 760px), (max-aspect-ratio: 1/1)" srcset="../../assets/assembly/poster-mobile.webp">
+          <img class="poster" src="../../assets/assembly/poster-desktop.webp" alt="" fetchpriority="high" data-poster>
+        </picture>
+        <canvas data-canvas aria-hidden="true"></canvas>
+        <video class="fallback" data-fallback muted loop playsinline preload="none" hidden></video>
+      </div>
+      <div class="copy">
+        <p class="over" data-i18n="hero.over">Квартал на набережной</p>
+        <h1 data-i18n-html="hero.title">Три дома<br>у тихой воды</h1>
+        <p class="lead" data-i18n="hero.lead">Башня, дом с балконами и клубный дом из кирпича трёх оттенков. Двор без машин и собственный спуск к воде.</p>
+        <div class="actions">
+          <a class="btn" href="#homes" data-i18n="hero.choose">Выбрать квартиру</a>
+          <a class="link" href="#about" data-i18n="hero.more">О квартале</a>
+        </div>
+      </div>
+      <dl class="facts">
+        <div><dt>312</dt><dd data-i18n="facts.flats">квартир в трёх домах</dd></div>
+        <div><dt data-i18n="facts.areaValue">от 38 м²</dt><dd data-i18n="facts.area">до 164 м², 14 планировок</dd></div>
+        <div><dt data-i18n="facts.ceilValue">3,1 м</dt><dd data-i18n="facts.ceil">высота потолков</dd></div>
+      </dl>
+      <div class="progress" data-progress>
+        <p class="stage-name" data-stage aria-live="polite"></p>
+        <div class="bar"><span data-bar></span></div>
+        <p class="note" data-note data-i18n="hero.note">Прокрутите страницу: квартал соберётся из частей</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="block about" id="about">
+    <div class="wrap two">
+      <div>
+        <p class="over" data-i18n="about.over">О квартале</p>
+        <h2 data-i18n="about.title">Кирпич, бронза и вода под окнами</h2>
+      </div>
+      <div class="text">
+        <p data-i18n="about.p1">Вереста стоит на первой линии: между домами и водой только набережная с аллеей и спуском к настилу. Двор закрыт для машин, парковка под землёй.</p>
+        <p data-i18n="about.p2">Три дома разные по характеру. Башня в светлом кирпиче с бронзовыми рамами и венцом, дом с балконами в тёмном клинкере, клубный дом в красном кирпиче с террасой на кровле.</p>
+        <dl class="numbers">
+          <div><dt>21</dt><dd data-i18n="about.n1">этаж в башне</dd></div>
+          <div><dt>120 м</dt><dd data-i18n="about.n2">своей набережной</dd></div>
+          <div><dt>2028</dt><dd data-i18n="about.n3">год сдачи</dd></div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <section class="block homes" id="homes">
+    <div class="wrap">
+      <p class="over" data-i18n="homes.over">Дома</p>
+      <h2 data-i18n="homes.title">Три дома, три характера</h2>
+      <div class="cards">
+        <article class="card">
+          <img src="../../assets/assembly/home-tower.webp" alt="" loading="lazy" width="900" height="1125" data-i18n-alt="homes.towerAlt">
+          <h3 data-i18n="homes.tower">Башня</h3>
+          <p data-i18n="homes.towerText">21 этаж, угловые лоджии, терраса и двухэтажные квартиры в венце.</p>
+          <p class="meta" data-i18n="homes.towerMeta">144 квартиры, от 46 до 164 м²</p>
+        </article>
+        <article class="card">
+          <img src="../../assets/assembly/home-slab.webp" alt="" loading="lazy" width="900" height="1125" data-i18n-alt="homes.slabAlt">
+          <h3 data-i18n="homes.slab">Дом с балконами</h3>
+          <p data-i18n="homes.slabText">9 этажей вдоль двора. Балкон у каждой второй квартиры, окна на две стороны.</p>
+          <p class="meta" data-i18n="homes.slabMeta">128 квартир, от 38 до 96 м²</p>
+        </article>
+        <article class="card">
+          <img src="../../assets/assembly/home-club.webp" alt="" loading="lazy" width="900" height="1125" data-i18n-alt="homes.clubAlt">
+          <h3 data-i18n="homes.club">Клубный дом</h3>
+          <p data-i18n="homes.clubText">6 этажей у самой воды. Французские балконы, кафе на первом этаже, терраса на кровле.</p>
+          <p class="meta" data-i18n="homes.clubMeta">40 квартир, от 62 до 138 м²</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="block quay" id="quay">
+    <img class="wide" src="../../assets/assembly/quay.webp" alt="" loading="lazy" width="1920" height="900" data-i18n-alt="quay.alt">
+    <div class="wrap two">
+      <div>
+        <p class="over" data-i18n="quay.over">Набережная</p>
+        <h2 data-i18n="quay.title">Вечером двор светится сам</h2>
+      </div>
+      <div class="text">
+        <p data-i18n="quay.p1">Аллея вдоль воды, ступени к настилу с шезлонгами, кафе под зонтами у клубного дома. Во дворе газоны, зеркальный водоём и взрослые деревья.</p>
+        <p data-i18n="quay.p2">Фонари и подсветка рассчитаны так, чтобы дорожки были видны, а в окна не светило.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="block visit" id="visit">
+    <div class="wrap two">
+      <div>
+        <p class="over" data-i18n="visit.over">Показ</p>
+        <h2 data-i18n="visit.title">Приезжайте посмотреть макет и квартиры</h2>
+      </div>
+      <form class="form" data-form novalidate>
+        <label><span data-i18n="visit.name">Как к вам обращаться</span><input name="name" autocomplete="name" required></label>
+        <label><span data-i18n="visit.phone">Телефон</span><input name="phone" type="tel" autocomplete="tel" inputmode="tel" required></label>
+        <button class="btn" type="submit" data-i18n="visit.send">Записаться на показ</button>
+        <p class="form-note" data-form-note role="status"></p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <p class="mark">ВЕРЕСТА</p>
+    <p data-i18n="foot.note">Вереста: вымышленный квартал. Модель собрана и отрисована в Blender, первый экран листает 180 кадров по прокрутке.</p>
+  </div>
+</footer>
+<script type="module" src="src/main.js"></script>
+</body>
+</html>

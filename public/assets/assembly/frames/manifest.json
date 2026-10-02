@@ -1,0 +1,15 @@
+{
+  "background": "#12151a",
+  "desktop": {
+    "count": 180,
+    "width": 1920,
+    "height": 1080,
+    "bytes": 18233474
+  },
+  "mobile": {
+    "count": 90,
+    "width": 720,
+    "height": 900,
+    "bytes": 3167342
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "title": "Veresta",
+  "subtitle": {
+    "en": "First screen of a residential quarter that assembles as you scroll",
+    "ru": "Первый экран жилого квартала, который собирается при прокрутке"
+  },
+  "version": "1.0",
+  "languages": [
+    "ru",
+    "en"
+  ],
+  "entry": "index.html",
+  "localPreview": "http://127.0.0.1:4361/projects/assembly/",
+  "runtime": "Vanilla ES modules, canvas, no dependencies and no build step",
+  "art": "Model, materials and animation built in Blender 5.2 with Python; rendered in Cycles as an image sequence",
+  "fonts": "Onest and Noto Serif Display, SIL Open Font License 1.1"
+}
