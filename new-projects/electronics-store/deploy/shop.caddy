@@ -1,5 +1,9 @@
 # Installed as /etc/caddy/sites/shop.caddy; the main Caddyfile imports /etc/caddy/sites/*.caddy.
+# velmren_security_headers comes from 00-velmren-snippets.caddy (scripts/ of this repository).
+# Uploaded images are served by Cloudflare R2 at https://shop-media.velmren.com, not by this site.
 shop.velmren.com {
+	import velmren_security_headers
+	header Content-Security-Policy-Report-Only "default-src 'self'; script-src 'self' 'unsafe-inline' https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https://shop-media.velmren.com; font-src 'self' data:; connect-src 'self' https://cloudflareinsights.com; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self'"
 	header {
 		X-Content-Type-Options nosniff
 		Referrer-Policy strict-origin-when-cross-origin
@@ -7,19 +11,9 @@ shop.velmren.com {
 	request_body {
 		max_size 8MB
 	}
-	# Staff uploads: read-only access to the public bucket objects.
-	@media {
-		method GET HEAD
-		path /electronics-media/products/*
-	}
-	handle @media {
-		reverse_proxy 127.0.0.1:3102
-	}
-	handle {
-		reverse_proxy 127.0.0.1:3101 {
-			# Ports 80/443 accept only Cloudflare, so its client IP header is trusted.
-			header_up X-Forwarded-For {http.request.header.CF-Connecting-IP}
-		}
+	reverse_proxy 127.0.0.1:3101 {
+		# Ports 80/443 accept only Cloudflare, so its client IP header is trusted.
+		header_up X-Forwarded-For {http.request.header.CF-Connecting-IP}
 	}
 	log {
 		output file /var/log/caddy/shop-access.log {

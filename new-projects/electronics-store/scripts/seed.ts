@@ -37,7 +37,7 @@ async function seed(){
   await db.user.update({where:{id:buyer.id},data:{bonuses:2500}});
  }
  await seedShowcaseReviews();
- await ensureBucket();
- console.log(`Seed complete: ${products.length} products, demo buyer/admin, PostgreSQL + MinIO.`);
+ if(process.env.S3_CREATE_BUCKET==='true')await ensureBucket();
+ console.log(`Seed complete: ${products.length} products, demo buyer/admin.`);
 }
 seed().finally(()=>db.$disconnect());

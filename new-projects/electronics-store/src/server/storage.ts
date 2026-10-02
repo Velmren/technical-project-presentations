@@ -2,6 +2,9 @@ import {S3Client,CreateBucketCommand,PutBucketPolicyCommand,PutObjectCommand} fr
 import {randomUUID} from 'node:crypto';
 import {ApiError} from './validation';
 export const s3=new S3Client({region:process.env.S3_REGION??'us-east-1',endpoint:process.env.S3_ENDPOINT,forcePathStyle:true,credentials:{accessKeyId:process.env.S3_ACCESS_KEY!,secretAccessKey:process.env.S3_SECRET_KEY!}});
+// S3_PUBLIC_URL is the public base of the bucket: objects are served at <S3_PUBLIC_URL>/<key>.
+export const publicUrl=(key:string)=>`${process.env.S3_PUBLIC_URL!.replace(/\/+$/,'')}/${key}`;
+// Local MinIO only: the production bucket (Cloudflare R2) and its public domain are set up outside the app.
 export async function ensureBucket(){
  const Bucket=process.env.S3_BUCKET!;
  try{await s3.send(new CreateBucketCommand({Bucket}));}catch(e:any){if(!['BucketAlreadyOwnedByYou','BucketAlreadyExists'].includes(e.name))throw e;}
@@ -17,5 +20,5 @@ export async function upload(file:File){
  if(!type||file.type!==type)throw new ApiError('Допустимы только PNG, JPEG и WebP');
  const key=`products/${randomUUID()}.${png?'png':jpeg?'jpg':'webp'}`;
  await s3.send(new PutObjectCommand({Bucket:process.env.S3_BUCKET,Key:key,Body:buffer,ContentType:type,CacheControl:'public,max-age=31536000,immutable'}));
- return {url:`${process.env.S3_PUBLIC_URL}/${process.env.S3_BUCKET}/${key}`};
+ return {url:publicUrl(key)};
 }

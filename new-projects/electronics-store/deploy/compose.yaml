@@ -1,5 +1,7 @@
 # Server stack for https://shop.velmren.com, installed as /srv/velmren/apps/electronics-store/compose.yaml.
-# Secrets live in the neighbouring .env (mode 600), created by gen-env.sh.
+# Env files (mode 600, created by gen-env.sh): .env feeds postgres below; the app gets only app.env
+# with the DML-only role shop_app; migrate.env holds the owner role for migrations and admin scripts.
+# Uploaded images go to Cloudflare R2 (S3_* in app.env); there is no storage container.
 name: electronics-store
 services:
   postgres:
@@ -15,41 +17,46 @@ services:
       interval: 5s
       timeout: 3s
       retries: 20
+    # The entrypoint only needs to chown the data directory and switch to the postgres user.
+    security_opt: ["no-new-privileges:true"]
+    cap_drop: [ALL]
+    cap_add: [CHOWN, SETUID, SETGID, DAC_OVERRIDE, FOWNER]
+    pids_limit: 256
+    cpus: 1.0
     mem_limit: 384m
-  minio:
-    # minio/minio images are no longer published; this is the same MinIO release
-    # (2025-04-22) packaged by Bitnami, pinned by digest. It runs as uid 1001,
-    # so the data directory must be owned by 1001.
-    image: bitnamilegacy/minio:2025.4.22-debian-12-r2@sha256:50cec18ac4184af4671a78aedd5554942c8ae105d51a465fa82037949046da01
-    restart: unless-stopped
-    environment:
-      MINIO_ROOT_USER: ${S3_ACCESS_KEY:?}
-      MINIO_ROOT_PASSWORD: ${S3_SECRET_KEY:?}
-      MINIO_BROWSER: "off"
-      MINIO_SKIP_CLIENT: "yes"
-    volumes: ["/srv/velmren/data/electronics-store/minio:/bitnami/minio/data"]
-    ports: ["127.0.0.1:3102:9000"]
-    healthcheck:
-      # The image has neither mc nor curl.
-      test: ["CMD", "bash", "-c", "exec 3<>/dev/tcp/127.0.0.1/9000 && printf 'GET /minio/health/live HTTP/1.1\\r\\nHost: localhost\\r\\nConnection: close\\r\\n\\r\\n' >&3 && grep -q '200 OK' <&3"]
-      interval: 5s
-      timeout: 3s
-      retries: 20
-    mem_limit: 512m
   app:
     image: electronics-store:current
     pull_policy: never
     restart: unless-stopped
-    env_file: .env
+    # Only the variables the app reads; DATABASE_URL uses shop_app (DML only).
+    env_file: app.env
     environment:
       NODE_OPTIONS: --max-old-space-size=512
     depends_on:
       postgres: {condition: service_healthy}
-      minio: {condition: service_healthy}
     ports: ["127.0.0.1:3101:3210"]
     healthcheck:
       test: ["CMD", "node", "-e", "fetch('http://127.0.0.1:3210/').then(r=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))"]
       interval: 15s
       timeout: 5s
       retries: 5
+    security_opt: ["no-new-privileges:true"]
+    cap_drop: [ALL]
+    pids_limit: 256
+    cpus: 1.5
+    mem_limit: 768m
+  # Schema migrations and admin scripts under the owner role velmren:
+  #   docker compose run --rm -T migrate                      (prisma migrate deploy)
+  #   docker compose run --rm -T migrate <command...>         (other scripts that need the owner role)
+  migrate:
+    image: electronics-store:current
+    pull_policy: never
+    profiles: [tools]
+    env_file: migrate.env
+    depends_on:
+      postgres: {condition: service_healthy}
+    command: ["node_modules/.bin/prisma", "migrate", "deploy"]
+    security_opt: ["no-new-privileges:true"]
+    cap_drop: [ALL]
+    pids_limit: 256
     mem_limit: 768m
