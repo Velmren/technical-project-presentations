@@ -1,0 +1,40 @@
+# Shared snippets for the Velmren sites (security audit 02.10.2026, steps 4 and 6).
+# This file only defines snippets. It sorts first among /etc/caddy/sites/*.caddy,
+# so the site files imported after it can use them.
+
+# Security headers for HTML sites. HSTS without includeSubDomains/preload;
+# frame-ancestors is enforced, the full CSP of each site is sent as Report-Only.
+(velmren_security_headers) {
+	header {
+		Strict-Transport-Security "max-age=31536000"
+		X-Frame-Options SAMEORIGIN
+		Content-Security-Policy "frame-ancestors 'self'"
+		Referrer-Policy strict-origin-when-cross-origin
+		Permissions-Policy "camera=(), microphone=(), geolocation=(), usb=(), payment=()"
+	}
+}
+
+# Server health for the external uptime check: /__health/<token>.
+# The token is the file name written by /usr/local/sbin/velmren-healthcheck,
+# so this config holds no secret. 200 while healthy, 503 on failure, 404 otherwise.
+(velmren_health) {
+	handle_path /__health/* {
+		root * /run/velmren-health/www
+		header Cache-Control "no-store"
+		@up file /up{path}
+		@down file /down{path}
+		handle @up {
+			rewrite * /up{path}
+			file_server
+		}
+		handle @down {
+			rewrite * /down{path}
+			file_server {
+				status 503
+			}
+		}
+		handle {
+			respond 404
+		}
+	}
+}

@@ -2,6 +2,11 @@
 # (the main Caddyfile imports /etc/caddy/sites/*.caddy). Check with:
 #   sudo caddy validate --config /etc/caddy/Caddyfile --adapter caddyfile && sudo systemctl reload caddy
 velmren.com {
+	# Security headers (audit 02.10.2026, step 6); snippets in 00-velmren-snippets.caddy.
+	import velmren_security_headers
+	header Content-Security-Policy-Report-Only "default-src 'self'; script-src 'self' 'unsafe-inline' 'wasm-unsafe-eval' https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self' data:; media-src 'self' blob:; connect-src 'self' https://cloudflareinsights.com; worker-src 'self' blob:; frame-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self'"
+	# Health status for the uptime check (audit 02.10.2026, step 4).
+	import velmren_health
 	root * /srv/velmren/sites/portfolio/current
 	# Text, scripts, data and wasm are compressed on the fly; large files ship
 	# with .br/.gz siblings from scripts/package-release.mjs and are served as they are.
@@ -47,5 +52,6 @@ velmren.com {
 	}
 }
 www.velmren.com {
+	header Strict-Transport-Security "max-age=31536000"
 	redir https://velmren.com{uri} permanent
 }

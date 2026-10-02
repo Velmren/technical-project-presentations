@@ -3,6 +3,9 @@
 #   sudo caddy validate --config /etc/caddy/Caddyfile --adapter caddyfile && sudo systemctl reload caddy
 # The export runs without threads, so no COOP/COEP headers are needed.
 lumi.velmren.com {
+	# Security headers (audit 02.10.2026, step 6); snippets in 00-velmren-snippets.caddy.
+	import velmren_security_headers
+	header Content-Security-Policy-Report-Only "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' 'wasm-unsafe-eval' https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self' data:; media-src 'self' blob: data:; connect-src 'self' https://cloudflareinsights.com; worker-src 'self' blob:; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self'"
 	root * /srv/velmren/sites/lumi/current
 	# index.wasm and index.js ship with .br/.gz siblings; smaller text files are compressed on the fly.
 	encode {
