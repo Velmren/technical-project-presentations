@@ -16,6 +16,7 @@ const BOARDS: Record<string, { file: string; accent: string }> = {
   sono: { file: 'sono', accent: '#5a6cf0' },
   godot: { file: 'spark', accent: '#1fb2cf' },
   'game-concept': { file: 'lacuna', accent: '#ffb44f' },
+  'mobile-game': { file: 'lumi', accent: '#f6c553' },
   encounter: { file: 'encounter', accent: '#9a7cf4' },
   'tilda-interior': { file: 'tilda', accent: '#8e9b64' },
   khrum: { file: 'khrum', accent: '#6a47c2' },

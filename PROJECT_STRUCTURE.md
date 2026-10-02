@@ -43,7 +43,7 @@ VELMREN portfolio: Next.js 16 (App Router), TypeScript, static export to `out/`.
 ├── public/
 │   ├── assets/
 │   │   ├── home/              home page previews, work screens for the mosaic and their outline maps
-│   │   ├── forma/, godot/, encounter/, java/, dev-utilities/, electronics-store/, orbit/, sono/, khrum/, lacuna/,
+│   │   ├── forma/, godot/, encounter/, java/, dev-utilities/, electronics-store/, orbit/, sono/, khrum/, lacuna/, lumi/,
 │   │   │   tilda-interior/, tilda-webinar/, studio-concepts/   screenshots, videos and downloads of each work
 │   │   │                      godot/web/: Category Spark browser build, not in Git, built by a script
 │   │   │                      java/: Encounter State plugin JAR, source ZIP, source viewer and its manifest

@@ -335,6 +335,59 @@
       }
     },
     {
+      "slug": "mobile-game",
+      "status": "accepted",
+      "placement": "main",
+      "title": "Люми: остров ветров",
+      "type": "Приключенческая игра",
+      "description": "Приключение на острове ветров: исследование, задания жителей и бои. Играется в браузере.",
+      "category": "Игра",
+      "tags": [
+        "Игры"
+      ],
+      "stack": "Godot 4 / GDScript",
+      "year": 2026,
+      "preview": {
+        "src": "/assets/home/card-lumi.webp",
+        "alt": "Люми у дома Реи"
+      },
+      "live": {
+        "slides": [
+          "/assets/lumi/yard.webp",
+          "/assets/lumi/oak.webp",
+          "/assets/lumi/room.webp",
+          "/assets/lumi/book-map.webp"
+        ]
+      },
+      "facts": [
+        {
+          "value": "Демо",
+          "label": "демо",
+          "name": "Версия"
+        }
+      ],
+      "action": {
+        "label": "Играть",
+        "href": "https://lumi.velmren.com/"
+      },
+      "details": "/mobile-game/",
+      "en": {
+        "title": "Lumi",
+        "type": "Adventure game",
+        "description": "An adventure on the island of winds: exploring, helping the locals and fighting. Plays in the browser.",
+        "action": "Play",
+        "alt": "Lumi outside Rhea's house",
+        "facts": [
+          {
+            "value": "Demo",
+            "label": "demo",
+            "name": "Version"
+          }
+        ],
+        "details": "/en/mobile-game/"
+      }
+    },
+    {
       "slug": "encounter",
       "status": "accepted",
       "placement": "main",
@@ -524,20 +577,6 @@
         "Minecraft"
       ],
       "stack": "Java / Paper",
-      "year": 2026
-    },
-    {
-      "slug": "mobile-game",
-      "status": "rework",
-      "placement": "more",
-      "title": "Mobile Game Prototype",
-      "description": "Мобильный игровой прототип.",
-      "category": "Игра",
-      "tags": [
-        "Игры",
-        "Прототипы"
-      ],
-      "stack": "Godot / GDScript",
       "year": 2026
     }
   ]

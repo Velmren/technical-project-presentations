@@ -1,0 +1,251 @@
+{
+  "status": "published",
+  "presentation": "case",
+  "year": 2026,
+  "slug": "mobile-game",
+  "title": "Люми: остров ветров",
+  "eyebrow": "Игра на Godot",
+  "lead": "Приключение на острове ветров, которое играется прямо в браузере",
+  "summary": "Куница-посыльный Люми и совёнок Плюм ищут семена ветра, чтобы снова зажечь маяк. Исследование, задания жителей и бои в первом районе острова.",
+  "note": "Демо первого района",
+  "closing": "Сыграйте демо",
+  "accent": "#f6c553",
+  "category": "Игра",
+  "technologies": [
+    "Godot",
+    "GDScript"
+  ],
+  "order": 28,
+  "tone": "warm",
+  "cover": {
+    "kind": "image",
+    "image": {
+      "src": "/assets/lumi/title.webp",
+      "alt": "Заставка игры «Люми: остров ветров»",
+      "width": 1920,
+      "height": 1080
+    }
+  },
+  "actions": [
+    {
+      "label": "Играть",
+      "href": "https://lumi.velmren.com/"
+    }
+  ],
+  "showcase": {
+    "image": {
+      "src": "/assets/lumi/title.webp",
+      "alt": "Заставка «Люми: остров ветров» с логотипом и меню",
+      "width": 1920,
+      "height": 1080
+    },
+    "url": "lumi.velmren.com"
+  },
+  "sections": [
+    {
+      "kind": "benefit",
+      "title": "Остров хочется обойти",
+      "text": "Двор, луг, ручей с мостом, овраг и тайная поляна. Карта в книге путника показывает, где вы сейчас.",
+      "layers": [
+        {
+          "image": {
+            "src": "/assets/lumi/brook.webp",
+            "alt": "Люми и Плюм на мосту через Звонкий ручей",
+            "width": 1920,
+            "height": 1080
+          },
+          "x": 0,
+          "y": 0.04,
+          "w": 0.6,
+          "url": "lumi.velmren.com"
+        },
+        {
+          "image": {
+            "src": "/assets/lumi/map-detail.webp",
+            "alt": "Карта острова: Шепчущий лес, Звонкий ручей и Старая роща",
+            "width": 1520,
+            "height": 1040
+          },
+          "x": 0.65,
+          "y": 0,
+          "w": 0.35,
+          "front": true
+        }
+      ]
+    },
+    {
+      "kind": "benefit",
+      "title": "У жителей есть свои просьбы",
+      "text": "Рея, Бран и Пип дают задания, а находки и достижения собираются в книге путника.",
+      "layers": [
+        {
+          "image": {
+            "src": "/assets/lumi/talk.webp",
+            "alt": "Разговор с Реей у её дома",
+            "width": 1920,
+            "height": 1080
+          },
+          "x": 0,
+          "y": 0.04,
+          "w": 0.6,
+          "url": "lumi.velmren.com"
+        },
+        {
+          "image": {
+            "src": "/assets/lumi/achievements-detail.webp",
+            "alt": "Достижения: Гроза слизней, Тайная поляна, Честный посыльный",
+            "width": 1100,
+            "height": 1120
+          },
+          "x": 0.66,
+          "y": 0,
+          "w": 0.31,
+          "front": true
+        }
+      ]
+    },
+    {
+      "kind": "benefit",
+      "title": "Бой простой и отзывчивый",
+      "text": "Серия из трёх ударов, рывок и порыв ветра. Слизни отлетают от удара и роняют монеты.",
+      "layers": [
+        {
+          "image": {
+            "src": "/assets/lumi/fight-poster.webp",
+            "alt": "Запись боя со слизнями на Солнечном лугу",
+            "width": 800,
+            "height": 450
+          },
+          "video": "/assets/lumi/fight.mp4",
+          "x": 0,
+          "y": 0.04,
+          "w": 0.6
+        },
+        {
+          "image": {
+            "src": "/assets/lumi/fight-detail.webp",
+            "alt": "Удар мечом и полоски здоровья слизней",
+            "width": 560,
+            "height": 420
+          },
+          "x": 0.66,
+          "y": 0,
+          "w": 0.34,
+          "front": true
+        }
+      ]
+    },
+    {
+      "kind": "benefit",
+      "title": "В доме своё освещение",
+      "text": "Очаг и окно освещают дом Реи, и каждый предмет отбрасывает тень от своего источника.",
+      "layers": [
+        {
+          "image": {
+            "src": "/assets/lumi/room.webp",
+            "alt": "Дом Реи изнутри",
+            "width": 1920,
+            "height": 1080
+          },
+          "x": 0,
+          "y": 0.04,
+          "w": 0.6,
+          "url": "lumi.velmren.com"
+        },
+        {
+          "image": {
+            "src": "/assets/lumi/hearth-detail.webp",
+            "alt": "Очаг и корзина с поленьями",
+            "width": 520,
+            "height": 390
+          },
+          "x": 0.66,
+          "y": 0.08,
+          "w": 0.34,
+          "front": true
+        }
+      ]
+    },
+    {
+      "kind": "features",
+      "title": "Как устроено",
+      "text": "Godot 4.7 и GDScript, сборки для браузера, Android и Windows.",
+      "items": [
+        "Земля",
+        "Персонажи",
+        "Управление",
+        "Сохранения"
+      ],
+      "descriptions": [
+        "Дорожки, подстилка и вода рисуются из маски, без тайлов.",
+        "Покадровая анимация в трёх видах: спереди, сбоку и сзади.",
+        "Клавиатура и мышь или джойстик на экране телефона.",
+        "Глава сохраняется и загружается с того же места."
+      ]
+    }
+  ],
+  "en": {
+    "title": "Lumi",
+    "eyebrow": "Godot game",
+    "lead": "An island adventure you can play right in the browser",
+    "summary": "Lumi the courier marten and Plum the owlet search for the seeds of the wind to light the lighthouse again. Exploring, helping the locals and fighting in the first area of the island.",
+    "note": "Demo of the first area, in Russian",
+    "closing": "Play the demo",
+    "actions": [
+      "Play"
+    ],
+    "showcase": [
+      "Lumi title screen with the logo and menu"
+    ],
+    "sections": [
+      {
+        "title": "An island worth walking",
+        "text": "A yard, a meadow, a brook with a bridge, a ravine and a hidden glade. The map in the traveller's book shows where you are.",
+        "alts": [
+          "Lumi and Plum on the bridge over the brook",
+          "Island map: the Whispering Forest, the brook and the Old Grove"
+        ]
+      },
+      {
+        "title": "The locals have favours to ask",
+        "text": "Rhea, Bran and Pip hand out tasks, and finds and achievements gather in the traveller's book.",
+        "alts": [
+          "Talking to Rhea outside her house",
+          "Achievements: slime slayer, hidden glade, honest courier"
+        ]
+      },
+      {
+        "title": "Simple, responsive combat",
+        "text": "A three-hit combo, a dash and a gust of wind. Slimes get knocked back and drop coins.",
+        "alts": [
+          "Recording of a fight with slimes on the meadow",
+          "A sword swing and the slimes' health bars"
+        ]
+      },
+      {
+        "title": "The house has its own light",
+        "text": "The hearth and the window light Rhea's house, and every object casts a shadow from its own source.",
+        "alts": [
+          "Inside Rhea's house",
+          "The hearth and a basket of logs"
+        ]
+      },
+      {
+        "title": "How it is built",
+        "text": "Godot 4.7 and GDScript, with builds for the browser, Android and Windows.",
+        "items": [
+          "Ground",
+          "Characters",
+          "Controls",
+          "Saves"
+        ],
+        "descriptions": [
+          "Paths, forest floor and water are painted from a mask, with no tiles.",
+          "Frame-by-frame animation in three views: front, side and back.",
+          "Keyboard and mouse, or an on-screen joystick on a phone.",
+          "The chapter saves and loads from the same spot."
+        ]
+      }
+    ]
+  }
+}
