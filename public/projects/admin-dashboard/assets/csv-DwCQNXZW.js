@@ -1,2 +1,0 @@
-import{a0 as i}from"./index-CWUIAhHY.js";const d=i("Download",[["path",{d:"M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4",key:"ih7n3h"}],["polyline",{points:"7 10 12 15 17 10",key:"2ggqvy"}],["line",{x1:"12",x2:"12",y1:"15",y2:"3",key:"1vk2je"}]]);function p(n,a,c){const r=o=>`"${String(o).replaceAll('"','""')}"`,l="\uFEFF"+[a,...c].map(o=>o.map(r).join(",")).join(`\r
-`),t=URL.createObjectURL(new Blob([l],{type:"text/csv;charset=utf-8"})),e=document.createElement("a");e.href=t,e.download=n,e.click(),setTimeout(()=>URL.revokeObjectURL(t),1e3)}export{d as D,p as d};

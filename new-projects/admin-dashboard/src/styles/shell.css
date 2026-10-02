@@ -43,37 +43,27 @@
 }
 
 /* ---------- Brand ---------- */
-.brand-mark {
-  display: inline-grid;
-  place-items: center;
-  flex-shrink: 0;
-  border-radius: 8px;
-  background: linear-gradient(140deg, #2b44d6, #13306e);
-  box-shadow: 0 0 0 1px rgba(90, 130, 230, 0.35) inset;
-}
-.brand-mark svg {
-  width: 72%;
-  height: 72%;
-}
 .wordmark {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  color: var(--o-fg);
+  display: block;
+  flex-shrink: 0;
+  width: 76px;
+  height: 22px;
+  fill: var(--o-fg);
 }
-.wordmark__text {
-  font-size: 18px;
-  font-weight: 700;
-  letter-spacing: 0.02em;
+.wordmark__body {
+  fill: var(--o-accent);
 }
-.wordmark.is-compact .wordmark__text {
-  font-size: 16px;
+.wordmark.is-compact {
+  width: 60.8px;
+  height: 17.6px;
 }
 
 /* ---------- Sidebar ---------- */
 .shell-brand {
   display: flex;
   align-items: center;
+  /* Keeps the row as tall as it was with the previous 32 px mark. */
+  min-height: 52px;
   padding: 2px 8px 18px;
   text-decoration: none;
 }
