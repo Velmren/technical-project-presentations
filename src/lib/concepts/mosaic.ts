@@ -92,10 +92,12 @@ varying vec2 vUvA, vUvB, vLocal;
 varying float vBack, vShade, vBlue, vAlpha, vLift;
 
 void main() {
-  vec3 colA = texture2D(uColorA, vUvA).rgb, colB = texture2D(uColorB, vUvB).rgb;
+  // A slight negative mip bias keeps text on the boards crisp when the board is shown a little smaller
+  // than its texture; trilinear filtering alone blends in the half-size level and softens it.
+  vec3 colA = texture2D(uColorA, vUvA, -0.6).rgb, colB = texture2D(uColorB, vUvB, -0.6).rgb;
   float edgeA = texture2D(uStructA, vUvA).r, edgeB = texture2D(uStructB, vUvB).r;
   // Reduced motion replaces the flip with a crossfade of the same two screens.
-  colA = mix(colA, texture2D(uColorB, vUvA).rgb, uFade);
+  colA = mix(colA, texture2D(uColorB, vUvA, -0.6).rgb, uFade);
   edgeA = mix(edgeA, texture2D(uStructB, vUvA).r, uFade);
   vec3 col = mix(colA, colB, vBack);
   float edge = smoothstep(0.14, 0.62, mix(edgeA, edgeB, vBack));

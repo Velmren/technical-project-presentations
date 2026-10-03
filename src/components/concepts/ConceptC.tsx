@@ -10,7 +10,7 @@ import { LivePreview, liveMode } from './LivePreview';
 const AUTOPLAY_MS = 6500;
 // Each work's own colour, taken from its interface (dark ones lifted to read on the graphite page); the page
 // borrows the colour of the work on screen.
-const BOARDS: Record<string, { file: string; accent: string }> = {
+const BOARDS: Record<string, { file: string; accent: string; titled?: boolean }> = {
   'electronics-store': { file: 'store', accent: '#3a6cf2' },
   forma: { file: 'forma', accent: '#2745c8' },
   'admin-dashboard': { file: 'orbit', accent: '#1eaefc' },
@@ -24,16 +24,21 @@ const BOARDS: Record<string, { file: string; accent: string }> = {
   'tilda-tour': { file: 'tour', accent: '#4fa584' },
   'tilda-dental': { file: 'dental', accent: '#4aa38c' },
   'tilda-webinar': { file: 'webinar', accent: '#c7795a' },
-  motion: { file: 'motion', accent: '#e4572e' },
+  motion: { file: 'motion', accent: '#e4572e', titled: true },
   encounter: { file: 'encounter', accent: '#9a7cf4' },
   'tilda-interior': { file: 'tilda', accent: '#8e9b64' },
   khrum: { file: 'khrum', accent: '#6a47c2' },
   'dev-utilities': { file: 'devutil', accent: '#2fb39a' },
 };
+// A frame without the work's name carries a title in the picture, so it has a board per language.
+const boardPath = (slug: string, locale: Locale, size = '', layer = '') => {
+  const { file, titled } = BOARDS[slug];
+  return `/assets/home/board-${file}${titled && locale === 'en' ? '-en' : ''}${size}${layer}.webp`;
+};
 const rgb = (hex: string): [number, number, number] => [1, 3, 5].map(i => parseInt(hex.slice(i, i + 2), 16) / 255) as [number, number, number];
 const capitalize = (s: string) => s.charAt(0).toUpperCase() + s.slice(1);
 
-function Hero({ works, t }: { works: HomeWork[]; t: Dictionary }) {
+function Hero({ works, t, locale }: { works: HomeWork[]; t: Dictionary; locale: Locale }) {
   const boardWorks = useMemo(() => works.filter(w => BOARDS[w.slug]), [works]);
   const stage = useRef<HTMLDivElement>(null), board = useRef<HTMLDivElement>(null), canvas = useRef<HTMLCanvasElement>(null), frame = useRef<HTMLAnchorElement>(null);
   const scene = useRef<Mosaic | null>(null);
@@ -49,8 +54,8 @@ function Hero({ works, t }: { works: HomeWork[]; t: Dictionary }) {
     if (reduced) setPlaying(false);
     const suffix = small ? '-768' : '';
     const sources: MosaicSource[] = boardWorks.map(w => ({
-      color: `/assets/home/board-${BOARDS[w.slug].file}${suffix}.webp`,
-      structure: `/assets/home/board-${BOARDS[w.slug].file}${suffix}-structure.webp`,
+      color: boardPath(w.slug, locale, suffix),
+      structure: boardPath(w.slug, locale, suffix, '-structure'),
       accent: rgb(BOARDS[w.slug].accent),
     }));
     let cancelled = false;
@@ -73,7 +78,7 @@ function Hero({ works, t }: { works: HomeWork[]; t: Dictionary }) {
       } catch { setReady(false); }
     });
     return () => { cancelled = true; observer.disconnect(); scene.current?.dispose(); scene.current = null; };
-  }, [boardWorks]);
+  }, [boardWorks, locale]);
 
   const go = useCallback((next: number, direction: 1 | -1, origin?: [number, number], byUser = false) => {
     const target = (next + boardWorks.length) % boardWorks.length;
@@ -134,7 +139,7 @@ function Hero({ works, t }: { works: HomeWork[]; t: Dictionary }) {
   const paused = !playing || hold;
   // The still under the canvas only matters until the scene draws (or if it is lost); freezing it avoids
   // decoding a new full-size image on every switch.
-  const still = BOARDS[(ready ? boardWorks[0] : work).slug].file;
+  const still = (ready ? boardWorks[0] : work).slug;
   return <section className="cc-hero" aria-labelledby="cc-title" style={{ '--accent': BOARDS[work.slug].accent } as React.CSSProperties}>
     <div className="cc-hero-copy">
       <h1 id="cc-title">{t.heroTitle}</h1>
@@ -154,7 +159,7 @@ function Hero({ works, t }: { works: HomeWork[]; t: Dictionary }) {
           aria-label={t.boardLabel(work.title)}
           onPointerDown={down} onPointerMove={move} onPointerUp={up} onPointerCancel={() => { press.current = null; }}
           onClick={e => { if (suppressClick.current) { e.preventDefault(); suppressClick.current = false; } }} onKeyDown={key}>
-          <img className="cc-still" src={`/assets/home/board-${still}.webp`} srcSet={`/assets/home/board-${still}-768.webp 768w, /assets/home/board-${still}.webp 1440w`}
+          <img className="cc-still" src={boardPath(still, locale)} srcSet={`${boardPath(still, locale, '-768')} 768w, ${boardPath(still, locale)} 1440w`}
             sizes="(max-width: 860px) 100vw, 56vw" alt="" draggable={false} fetchPriority="high"/>
         </a>
       </div>
@@ -238,7 +243,7 @@ export function ConceptC({ works, locale }: { works: HomeWork[]; locale: Locale 
   return <div className="cc-page" lang={locale}>
     <Header home locale={locale} alternate={localePath(locale === 'ru' ? 'en' : 'ru', HOME)}/>
     <main id="main">
-      <Hero works={works} t={t}/>
+      <Hero works={works} t={t} locale={locale}/>
       <section className="cc-works" id="works" aria-labelledby="cc-works-title">
         <div className="cc-works-head">
           <h2 id="cc-works-title">{t.work} <span>{works.length}</span></h2>
