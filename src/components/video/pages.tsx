@@ -40,8 +40,10 @@ export const videoParams = () => [
 const findClip = (path: string[]) => path.length === 1 ? shown.find(video => video.slug === path[0]) : undefined;
 const findCollection = (path: string[]) => path.length === 2 && path[0] === 'c' ? collections.find(set => set.slug === path[1]) : undefined;
 
+// A link preview is a wide picture, so a clip that has a wide cut shows it there even when its square cut comes first.
 const shareImage = (item: Video, locale: Locale, alt: string) => {
-  const cut = localize(item, locale).cuts[0];
+  const cuts = localize(item, locale).cuts;
+  const cut = cuts.find(one => one.width > one.height) ?? cuts[0];
   return cut.share ? { url: cut.share, ...SHARE, alt } : { url: cut.poster, width: cut.width, height: cut.height, alt };
 };
 
@@ -116,7 +118,7 @@ export function VideoRoute({ path, locale }: { path: string[]; locale: Locale })
     const cut = video.cuts[0];
     const description = {
       '@context': 'https://schema.org', '@type': 'VideoObject', name: video.title, description: video.text, uploadDate: video.date,
-      duration: `PT${Math.round(cut.duration)}S`, thumbnailUrl: SITE + (cut.share ?? cut.poster), contentUrl: absolute(cut.src),
+      duration: `PT${Math.round(cut.duration)}S`, thumbnailUrl: SITE + shareImage(item, locale, video.title).url, contentUrl: absolute(cut.src),
       url: SITE + videoPath(locale, video.slug), inLanguage: locale,
     };
     // The page of one clip: the film, its name, two lines about it and a link to copy. Nothing else around.

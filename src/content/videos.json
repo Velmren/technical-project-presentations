@@ -21,7 +21,7 @@
         "promo"
       ],
       "date": "2026-10-03",
-      "featured": 1,
+      "featured": 2,
       "sound": {
         "ru": "Velmren",
         "en": "Velmren"
@@ -70,7 +70,6 @@
         "promo"
       ],
       "date": "2026-10-03",
-      "featured": 2,
       "sound": {
         "ru": "Velmren",
         "en": "Velmren"
@@ -116,7 +115,6 @@
         "editing"
       ],
       "date": "2026-10-01",
-      "featured": 3,
       "sound": {
         "ru": "Velmren. Музыка: Sunfade, Roa Music, CC BY 3.0",
         "en": "Velmren. Music: Sunfade by Roa Music, CC BY 3.0"
@@ -159,7 +157,6 @@
         "promo"
       ],
       "date": "2026-10-01",
-      "featured": 4,
       "sound": {
         "ru": "Velmren. Музыка: Between Oceans and Summits, Alex-Productions, CC BY 3.0",
         "en": "Velmren. Music: Between Oceans and Summits by Alex-Productions, CC BY 3.0"
@@ -185,6 +182,321 @@
           },
           "lightPoster": true,
           "preview": "/assets/video/sono-promo/sono-promo-hover.mp4"
+        }
+      ]
+    },
+    {
+      "slug": "kalder",
+      "status": "accepted",
+      "title": {
+        "ru": "KALDER",
+        "en": "KALDER"
+      },
+      "kind": {
+        "ru": "Реклама товара, 3D",
+        "en": "Product ad, 3D"
+      },
+      "text": {
+        "ru": "Часы разбираются на детали и собираются обратно: свет по металлу, макро механизма, знак в финале. Модель, анимация и звук сделаны с нуля.",
+        "en": "A watch comes apart and back together: light across the metal, a macro of the movement, the wordmark at the end. The model, the animation and the sound were made from scratch."
+      },
+      "sections": [
+        "promo",
+        "3d"
+      ],
+      "date": "2026-10-03",
+      "featured": 1,
+      "sound": {
+        "ru": "Velmren",
+        "en": "Velmren"
+      },
+      "cuts": [
+        {
+          "width": 1920,
+          "height": 1080,
+          "duration": 18,
+          "src": {
+            "ru": "/assets/video/kalder/kalder.mp4"
+          },
+          "poster": {
+            "ru": "/assets/video/kalder/kalder-poster.webp"
+          },
+          "share": {
+            "ru": "/assets/video/kalder/kalder-share.jpg"
+          },
+          "preview": "/assets/video/kalder/kalder-hover.mp4"
+        },
+        {
+          "width": 1080,
+          "height": 1080,
+          "duration": 18,
+          "src": {
+            "ru": "/assets/video/kalder/kalder-1x1.mp4"
+          },
+          "poster": {
+            "ru": "/assets/video/kalder/kalder-1x1-poster.webp"
+          },
+          "share": {
+            "ru": "/assets/video/kalder/kalder-1x1-share.jpg"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "okno",
+      "status": "accepted",
+      "title": {
+        "ru": "Окно",
+        "en": "Okno"
+      },
+      "kind": {
+        "ru": "Реклама кофейни",
+        "en": "Coffee shop ad"
+      },
+      "text": {
+        "ru": "Вертикальный ролик для Reels и Shorts: очередь за кофе, заказ по дороге, первый капучино за 99 ₽.",
+        "en": "A vertical ad for Reels and Shorts: the queue for coffee, an order on the way, the first cappuccino for $0.99."
+      },
+      "sections": [
+        "promo"
+      ],
+      "date": "2026-10-03",
+      "featured": 3,
+      "sound": {
+        "ru": "Velmren",
+        "en": "Velmren"
+      },
+      "cuts": [
+        {
+          "width": 1080,
+          "height": 1920,
+          "duration": 17.5,
+          "src": {
+            "ru": "/assets/video/okno/okno-ru.mp4",
+            "en": "/assets/video/okno/okno-en.mp4"
+          },
+          "poster": {
+            "ru": "/assets/video/okno/okno-poster-ru.webp",
+            "en": "/assets/video/okno/okno-poster-en.webp"
+          },
+          "share": {
+            "ru": "/assets/video/okno/okno-share-ru.jpg",
+            "en": "/assets/video/okno/okno-share-en.jpg"
+          },
+          "preview": "/assets/video/okno/okno-hover.mp4"
+        }
+      ]
+    },
+    {
+      "slug": "lorvane",
+      "status": "accepted",
+      "title": {
+        "ru": "LORVANE",
+        "en": "LORVANE"
+      },
+      "kind": {
+        "ru": "Заставка бренда",
+        "en": "Brand ident"
+      },
+      "text": {
+        "ru": "Марка кожи и ароматов: циркуль ведёт окружность, пресс вдавливает печать в картон, вторым оттиском печатается имя.",
+        "en": "A leather and fragrance brand: a compass draws the circle, a press sinks the seal into the card and a second impression prints the name."
+      },
+      "sections": [
+        "motion"
+      ],
+      "date": "2026-10-03",
+      "featured": 4,
+      "sound": {
+        "ru": "Velmren",
+        "en": "Velmren"
+      },
+      "cuts": [
+        {
+          "width": 1080,
+          "height": 1080,
+          "duration": 8,
+          "src": {
+            "ru": "/assets/video/lorvane/lorvane-1x1.mp4"
+          },
+          "poster": {
+            "ru": "/assets/video/lorvane/lorvane-1x1-poster.webp"
+          },
+          "share": {
+            "ru": "/assets/video/lorvane/lorvane-1x1-share.jpg"
+          },
+          "preview": "/assets/video/lorvane/lorvane-1x1-hover.mp4"
+        },
+        {
+          "width": 1920,
+          "height": 1080,
+          "duration": 8,
+          "src": {
+            "ru": "/assets/video/lorvane/lorvane.mp4"
+          },
+          "poster": {
+            "ru": "/assets/video/lorvane/lorvane-poster.webp"
+          },
+          "share": {
+            "ru": "/assets/video/lorvane/lorvane-share.jpg"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "hoppo",
+      "status": "accepted",
+      "title": {
+        "ru": "HOPPO",
+        "en": "HOPPO"
+      },
+      "kind": {
+        "ru": "Заставка бренда",
+        "en": "Brand ident"
+      },
+      "text": {
+        "ru": "Игры для детей: мяч выбивает буквы из пола и сам становится последней.",
+        "en": "Games for children: a ball knocks the letters out of the floor and becomes the last one itself."
+      },
+      "sections": [
+        "motion"
+      ],
+      "date": "2026-10-03",
+      "sound": {
+        "ru": "Velmren",
+        "en": "Velmren"
+      },
+      "cuts": [
+        {
+          "width": 1080,
+          "height": 1080,
+          "duration": 7,
+          "src": {
+            "ru": "/assets/video/hoppo/hoppo-1x1.mp4"
+          },
+          "poster": {
+            "ru": "/assets/video/hoppo/hoppo-1x1-poster.webp"
+          },
+          "share": {
+            "ru": "/assets/video/hoppo/hoppo-1x1-share.jpg"
+          },
+          "lightPoster": true,
+          "preview": "/assets/video/hoppo/hoppo-1x1-hover.mp4"
+        },
+        {
+          "width": 1920,
+          "height": 1080,
+          "duration": 7,
+          "src": {
+            "ru": "/assets/video/hoppo/hoppo.mp4"
+          },
+          "poster": {
+            "ru": "/assets/video/hoppo/hoppo-poster.webp"
+          },
+          "share": {
+            "ru": "/assets/video/hoppo/hoppo-share.jpg"
+          },
+          "lightPoster": true
+        }
+      ]
+    },
+    {
+      "slug": "ketlund",
+      "status": "accepted",
+      "title": {
+        "ru": "KETLUND",
+        "en": "KETLUND"
+      },
+      "kind": {
+        "ru": "Заставка бренда",
+        "en": "Brand ident"
+      },
+      "text": {
+        "ru": "Инженерная компания: знак собирается из четырёх деталей по линиям сетки.",
+        "en": "An engineering company: the mark comes together from four parts along the lines of its grid."
+      },
+      "sections": [
+        "motion"
+      ],
+      "date": "2026-10-03",
+      "sound": {
+        "ru": "Velmren",
+        "en": "Velmren"
+      },
+      "cuts": [
+        {
+          "width": 1920,
+          "height": 1080,
+          "duration": 6.5,
+          "src": {
+            "ru": "/assets/video/ketlund/ketlund.mp4"
+          },
+          "poster": {
+            "ru": "/assets/video/ketlund/ketlund-poster.webp"
+          },
+          "share": {
+            "ru": "/assets/video/ketlund/ketlund-share.jpg"
+          },
+          "preview": "/assets/video/ketlund/ketlund-hover.mp4"
+        },
+        {
+          "width": 1080,
+          "height": 1080,
+          "duration": 6.5,
+          "src": {
+            "ru": "/assets/video/ketlund/ketlund-1x1.mp4"
+          },
+          "poster": {
+            "ru": "/assets/video/ketlund/ketlund-1x1-poster.webp"
+          },
+          "share": {
+            "ru": "/assets/video/ketlund/ketlund-1x1-share.jpg"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "polka",
+      "status": "accepted",
+      "title": {
+        "ru": "ПОЛКА",
+        "en": "SHELF"
+      },
+      "kind": {
+        "ru": "Реклама распродажи",
+        "en": "Sale ad"
+      },
+      "text": {
+        "ru": "Распродажа магазина посуды и света для Reels и Shorts: скидка 40%, товары с ценами, три дня до конца.",
+        "en": "A home goods sale for Reels and Shorts: 40% off, products with their prices, three days to go."
+      },
+      "sections": [
+        "promo"
+      ],
+      "date": "2026-10-03",
+      "sound": {
+        "ru": "Velmren",
+        "en": "Velmren"
+      },
+      "cuts": [
+        {
+          "width": 1080,
+          "height": 1920,
+          "duration": 18.6,
+          "src": {
+            "ru": "/assets/video/polka/polka-ru.mp4",
+            "en": "/assets/video/polka/polka-en.mp4"
+          },
+          "poster": {
+            "ru": "/assets/video/polka/polka-poster-ru.webp",
+            "en": "/assets/video/polka/polka-poster-en.webp"
+          },
+          "share": {
+            "ru": "/assets/video/polka/polka-share-ru.jpg",
+            "en": "/assets/video/polka/polka-share-en.jpg"
+          },
+          "lightPoster": true,
+          "preview": "/assets/video/polka/polka-hover.mp4"
         }
       ]
     }

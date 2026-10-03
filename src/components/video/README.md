@@ -19,9 +19,9 @@ The gallery at `/video/`, a page for every clip at `/video/<slug>/`, collections
 | `scripts/prepare-videos.mjs` | makes those files from a master |
 | `tests/videos.test.ts` | data, schema, row layout, filter |
 
-## Turning the pages on
+## Turning the pages off and on
 
-Until the gallery is released the two route folders are named `src/app/_video/` and `src/app/en/_video/`: a folder that starts with an underscore is not a route, so the site builds without these pages. Renaming both to `video` turns them on.
+The routes are the folders `src/app/video/` and `src/app/en/video/`. To build the site without the gallery, rename both to `_video`: a folder that starts with an underscore is not a route. `scripts/package-release.mjs` then also leaves `public/assets/video` out of the release. Renaming them back turns the pages on.
 
 ## Adding a clip
 
@@ -38,7 +38,7 @@ One record and its files.
 
    The script writes `public/assets/video/my-clip/` and prints the values for the record: size, length, file addresses and whether the poster is light in its lower left corner (`lightPoster`: the start button there turns dark).
 
-   A master at or under 6 Mbit/s is only repacked for a fast start; a heavier one is encoded again (H.264 High, CRF 21, capped at 6 Mbit/s, a key frame every two seconds).
+   A master at or under 6 Mbit/s is only repacked for a fast start; a heavier one is encoded again (H.264 High, CRF 18 with more bits for dark areas, capped at 6 Mbit/s, a key frame every two seconds).
 
 2. Add the record to `videos` in `src/content/videos.json`:
 

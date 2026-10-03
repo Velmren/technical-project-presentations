@@ -87,7 +87,8 @@ const light = source.codec === 'h264' && source.kbps <= MAX_KBPS;
 const audio = source.audio ? ['-c:a', 'aac', '-b:a', '160k'] : ['-an'];
 const encode = light
   ? ['-c', 'copy']
-  : ['-c:v', 'libx264', '-preset', 'slow', '-crf', '21', '-maxrate', '6M', '-bufsize', '12M', '-profile:v', 'high', '-pix_fmt', 'yuv420p',
+  // aq-mode 3 gives dark areas their share of bits: at a plain CRF 21 a dark studio backdrop came out in steps.
+  : ['-c:v', 'libx264', '-preset', 'slow', '-crf', '18', '-maxrate', '6M', '-bufsize', '12M', '-profile:v', 'high', '-pix_fmt', 'yuv420p', '-x264-params', 'aq-mode=3',
     // A key frame every two seconds keeps seeking quick.
     '-g', String(source.fps * 2), '-keyint_min', String(source.fps * 2), ...audio];
 const made = run(['-i', options.src, ...encode, '-movflags', '+faststart', path.join(folder, video)]);
