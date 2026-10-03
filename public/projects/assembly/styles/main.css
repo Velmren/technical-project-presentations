@@ -163,16 +163,18 @@ input[type="range"]::-moz-range-thumb { width: 14px; height: 14px; background: v
 .gantt-status p.done { color: var(--ink); }
 .gantt-status p.done::before { content: ""; width: 7px; height: 7px; background: var(--brand); flex: none; }
 .gantt-time { position: relative; display: grid; grid-template-rows: 28px repeat(3, 36px); }
-.axis { display: grid; grid-template-columns: repeat(8, 1fr); }
-.axis span { padding-left: 8px; border-left: 1px solid var(--line); font-size: 14px; color: var(--ink-2); white-space: nowrap; overflow: hidden; }
+/* The quarter names lie over the playhead line and mask it, so the line never strikes through them */
+.axis { position: relative; z-index: 1; display: grid; grid-template-columns: repeat(8, 1fr); }
+.axis span { justify-self: start; max-width: 100%; padding: 0 4px 0 8px; background: var(--bg); border-left: 1px solid var(--line); font-size: 14px; color: var(--ink-2); white-space: nowrap; overflow: hidden; }
 .axis em { font-style: normal; }
 .g-row { position: relative; background-image: linear-gradient(to right, var(--line) 1px, transparent 1px); background-size: 12.5% 100%; }
 .bar { position: absolute; left: 0; top: 50%; height: 8px; margin-top: -4px; width: calc(var(--due) / 8 * 100%); background: rgba(255, 255, 255, .14); }
 .bar i { position: absolute; inset: 0; background: var(--brand); transform-origin: 0 50%; transform: scaleX(0); will-change: transform; }
-/* The playhead spans the timeline and moves by transform only, so following the scroll costs no layout. */
-.play { position: absolute; inset: 0; pointer-events: none; will-change: transform; }
-.play::before { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 1px; background: var(--ink); }
-.play b { position: absolute; top: 0; left: 0; will-change: transform; background: var(--ink); color: var(--bg); font-weight: 500; font-size: 14px; line-height: 24px; padding: 0 8px; white-space: nowrap; }
+/* The playhead spans the timeline and moves by transform only, so following the scroll costs no layout.
+   Its label rides above the axis, level with the schedule title, so the quarter names stay readable. */
+.play { --lift: 8px; position: absolute; inset: 0; pointer-events: none; will-change: transform; }
+.play::before { content: ""; position: absolute; left: 0; top: calc(-1 * var(--lift)); bottom: 0; width: 1px; background: var(--ink); }
+.play b { position: absolute; bottom: calc(100% + var(--lift)); left: 0; will-change: transform; background: var(--ink); color: var(--bg); font-weight: 500; font-size: 14px; line-height: 24px; padding: 0 8px; white-space: nowrap; }
 .note { text-align: right; }
 
 /* Sections */
@@ -424,6 +426,7 @@ select.sort { display: block; min-height: 42px; padding: 0 34px 0 12px; backgrou
   .gantt { padding-top: 14px; }
   .gantt-head { margin-bottom: 6px; }
   .gantt-names, .gantt-status, .gantt-time { grid-template-rows: 26px repeat(3, 32px); }
+  .play { --lift: 4px; }
   .rail .what { display: none; }
   .nav a { padding: 5px 0; }
 }
@@ -483,8 +486,11 @@ select.sort { display: block; min-height: 42px; padding: 0 34px 0 12px; backgrou
   .gantt-head { margin-bottom: 4px; }
   .gantt-names, .gantt-time { grid-template-rows: 24px repeat(3, 30px); }
   .gantt-names p { font-size: 15px; }
+  /* The quarter names are hidden here and the title fills the row above, so the label takes the axis row */
+  .axis { z-index: auto; }
   .axis span { font-size: 0; }
-  .play b { font-size: 12px; line-height: 22px; padding: 0 6px; }
+  .play { --lift: 0px; }
+  .play b { bottom: auto; top: 0; font-size: 12px; line-height: 22px; padding: 0 6px; }
   .about-grid, .office-grid, .works { grid-template-columns: 1fr; }
   .about-text p { font-size: 16px; }
   .spec > div { flex-direction: column; align-items: flex-start; gap: 2px; }

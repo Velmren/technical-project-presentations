@@ -1,7 +1,8 @@
 // Checks the page in a real browser and captures screenshots:
 //   node tools/verify.mjs [output dir]
 // For each screen size and several scroll positions: no element of the first screen covers another,
-// no text sits on the rendered quarter, nothing overflows sideways. Then the sections at 1920 and 390,
+// no text sits on the rendered quarter, nothing overflows sideways; along the whole scroll the label of the
+// current quarter leaves the quarter names and the schedule title readable. Then the sections at 1920 and 390,
 // the English version, scroll smoothness (frame intervals during a scripted scroll), the fallback when
 // frames are unavailable and the Russian text in the markup against the dictionary.
 // Playwright is a development-only dependency: install `playwright` locally or point PLAYWRIGHT_CORE
@@ -118,6 +119,35 @@ const inspect = (page) => page.evaluate(() => {
   return {overlaps, onScene, overflow: document.documentElement.scrollWidth - innerWidth};
 });
 
+// Texts of the schedule that the label of the current quarter covers. Measured on the text itself, not on its cell.
+const underMarker = (page) => page.evaluate(() => {
+  const label = document.querySelector('[data-play-label]').getBoundingClientRect();
+  const texts = [...document.querySelectorAll('[data-axis] span')].map((el) => [`axis "${el.textContent}"`, el]);
+  texts.push(['schedule title', document.querySelector('.gantt-head > span')], ['note', document.querySelector('[data-note]')]);
+  const covered = [];
+  for (const [name, el] of texts) {
+    if (el.hidden || !el.offsetParent) continue;
+    const range = document.createRange();
+    range.selectNodeContents(el);
+    const r = range.getBoundingClientRect();
+    if (r.width < 1 || r.height < 1) continue;
+    const w = Math.min(label.right, r.right) - Math.max(label.left, r.left);
+    const h = Math.min(label.bottom, r.bottom) - Math.max(label.top, r.top);
+    if (w > 0 && h > 0) covered.push(name);
+  }
+  return covered;
+});
+
+// The label moves with the scroll, so it is checked along the whole first screen, not only at the stops.
+async function sweepMarker(page, name) {
+  for (let k = 0; k <= 32; k += 1) {
+    await scrollTo(page, k / 32);
+    await page.waitForTimeout(200);
+    const covered = await underMarker(page);
+    if (covered.length) fail(`${name}: the label of the current quarter covers ${covered.join(', ')} at ${k}/32 of the scroll`);
+  }
+}
+
 const report = {checked: new Date().toISOString(), screens: {}, problems: []};
 const fail = (text) => report.problems.push(text);
 
@@ -143,11 +173,14 @@ try {
         const name = `${lang}-${w}x${h}-p${String(Math.round(p * 100)).padStart(3, '0')}`;
         if (lang === 'ru' || p === 1) await page.screenshot({path: path.join(outDir, `${name}.png`)});
         const state = await inspect(page);
+        state.underMarker = await underMarker(page);
         report.screens[name] = state;
         if (state.overlaps.length) fail(`${name}: overlaps ${state.overlaps.join(', ')}`);
+        if (state.underMarker.length) fail(`${name}: the label of the current quarter covers ${state.underMarker.join(', ')}`);
         for (const [what, share] of Object.entries(state.onScene)) if (share > 1) fail(`${name}: ${what} lies on the scene (${share}% of its box)`);
         if (state.overflow > 0) fail(`${name}: horizontal overflow ${state.overflow}px`);
       }
+      await sweepMarker(page, `${lang}-${w}x${h}`);
       if (w === 1920) {
         for (const id of SECTIONS) {
           await toSection(page, id);
@@ -174,10 +207,13 @@ try {
       const name = `${lang}-390-p${String(Math.round(p * 100)).padStart(3, '0')}`;
       await page.screenshot({path: path.join(outDir, `${name}.png`)});
       const state = await inspect(page);
+      state.underMarker = await underMarker(page);
       report.screens[name] = state;
       if (state.overlaps.length) fail(`${name}: overlaps ${state.overlaps.join(', ')}`);
+      if (state.underMarker.length) fail(`${name}: the label of the current quarter covers ${state.underMarker.join(', ')}`);
       for (const [what, share] of Object.entries(state.onScene)) if (share > 1) fail(`${name}: ${what} lies on the scene (${share}% of its box)`);
     }
+    await sweepMarker(page, `${lang}-390`);
     if (lang === 'ru') {
       for (const id of SECTIONS) {
         await toSection(page, id);

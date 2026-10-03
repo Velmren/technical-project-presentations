@@ -86,7 +86,7 @@ Measured on 3 October 2026 with `tools/verify.mjs` (Chromium, local server witho
 
 The scroll was also compared with the previous version of the page in the same conditions, three runs each: the share of frames longer than 20 ms is the same within the spread between runs.
 
-`tools/verify.mjs` needs Playwright: install `playwright` in this folder or set `PLAYWRIGHT_CORE` to an existing `playwright-core` directory. It exits with an error if elements of the first screen overlap, text lies on the rendered quarter, a size overflows horizontally, the console has errors, the page does not return to the top, the fallback video does not play or the Russian markup differs from the dictionary.
+`tools/verify.mjs` needs Playwright: install `playwright` in this folder or set `PLAYWRIGHT_CORE` to an existing `playwright-core` directory. It exits with an error if elements of the first screen overlap, the label of the current quarter covers a quarter name or the schedule title anywhere along the scroll, text lies on the rendered quarter, a size overflows horizontally, the console has errors, the page does not return to the top, the fallback video does not play or the Russian markup differs from the dictionary.
 
 ## Build
 
