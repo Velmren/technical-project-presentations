@@ -102,7 +102,7 @@
   border-top-right-radius: 2px; background: var(--ground); box-shadow: 1px -1px 0 rgba(236, 237, 239, .1);
 }
 .vg-cap b { font-family: var(--cc-display), sans-serif; font-weight: 600; font-size: 22px; line-height: 1.2; }
-.vg-cap span { font-family: var(--cc-figures), sans-serif; font-size: 17px; line-height: 1.2; color: var(--muted); white-space: nowrap; }
+.vg-cap span { min-width: 0; font-family: var(--cc-figures), sans-serif; font-size: 17px; line-height: 1.2; color: var(--muted); overflow-wrap: anywhere; }
 .cc-page .vg-tile:focus-visible { outline-offset: 2px; }
 
 /* Vertical clips have their own strip: five to a row on a wide screen, fewer as the window narrows, so they stay large. */

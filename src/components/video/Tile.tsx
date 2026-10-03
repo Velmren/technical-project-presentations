@@ -35,6 +35,7 @@ export function Tile({ clip, eager = false }: { clip: GalleryClip; eager?: boole
     <img src={clip.poster} alt="" width={clip.width} height={clip.height} loading={eager ? 'eager' : 'lazy'} decoding="async"/>
     {clip.preview && <video ref={video} muted loop playsInline preload="none" tabIndex={-1} aria-hidden="true"/>}
     <i className="vg-run"/>
-    <span className="vg-cap"><b>{clip.title}</b><span>{clip.kind} · {clip.length}</span></span>
+    {/* The length never parts from its dot: on a narrow poster the line breaks inside the words before it. */}
+    <span className="vg-cap"><b>{clip.title}</b><span>{clip.kind}{'\u00a0·\u00a0'}{clip.length}</span></span>
   </a>;
 }
