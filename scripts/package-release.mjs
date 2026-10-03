@@ -1,3 +1,4 @@
+import { existsSync } from 'node:fs';
 import { cp, mkdir, readdir, readFile, stat, writeFile } from 'node:fs/promises';
 import { createHash } from 'node:crypto';
 import { execFileSync } from 'node:child_process';
@@ -27,6 +28,11 @@ await walk('out', async file => {
 });
 const excludedBuilds = (await readdir('out/projects')).filter(name => !linkedBuilds.has(name)).sort();
 const excluded = new Set([path.resolve('out/forma/live'), ...excludedBuilds.map(name => path.resolve('out/projects', name))]);
+// The video gallery's media ships only once its routes are public: while they sit in the private folder
+// src/app/_video, posters and clips in public/assets/video stay out of the release.
+const galleryPrivate = existsSync('src/app/_video') && !existsSync('src/app/video');
+const excludedPaths = galleryPrivate ? ['assets/video'] : [];
+for (const rel of excludedPaths) excluded.add(path.resolve('out', rel));
 await cp('out', path.join(bundle, 'portfolio'), { recursive: true, filter: source => !excluded.has(path.resolve(source)) });
 await cp('demos/forma', path.join(bundle, 'demos/forma'), { recursive: true });
 
@@ -52,10 +58,10 @@ await walk(bundle, async file => {
   const bytes = await readFile(file);
   files.push({ path: path.relative(bundle, file).replaceAll('\\', '/'), bytes: bytes.length, sha256: createHash('sha256').update(bytes).digest('hex') });
 });
-await writeFile(path.join(release, 'manifest.json'), JSON.stringify({ version, commit, framework: 'Next.js 16.3.6 static export', excludedBuilds, precompressed, files: files.sort((a, b) => a.path.localeCompare(b.path)) }, null, 2) + '\n');
+await writeFile(path.join(release, 'manifest.json'), JSON.stringify({ version, commit, framework: 'Next.js 16.3.6 static export', excludedBuilds, excludedPaths, precompressed, files: files.sort((a, b) => a.path.localeCompare(b.path)) }, null, 2) + '\n');
 const archive = path.join(release, 'public-bundle.tar.gz');
 // Relative paths: GNU tar from Git Bash treats "C:" in an absolute path as a remote host.
 execFileSync('tar', ['-czf', '../public-bundle.tar.gz', 'portfolio', 'demos'], { cwd: bundle });
 const archiveSha256 = createHash('sha256').update(await readFile(archive)).digest('hex');
 await writeFile('output/deploy/latest.json', JSON.stringify({ version, release, base: release, archive, archiveSha256 }, null, 2));
-console.log(JSON.stringify({ version, files: files.length, excludedBuilds, precompressed, archive, archiveSha256 }));
+console.log(JSON.stringify({ version, files: files.length, excludedBuilds, excludedPaths, precompressed, archive, archiveSha256 }));
