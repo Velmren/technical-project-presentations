@@ -137,32 +137,20 @@
     },
     {
       "kind": "benefit",
-      "title": "В доме своё освещение",
-      "text": "Очаг и окно освещают дом Реи, и каждый предмет отбрасывает тень от своего источника.",
+      "title": "Сборы в дорогу у Реи",
+      "text": "Рея не отпустит в рощу с пустыми руками. В сундуке у очага ждут две склянки целебного отвара и её старая карта. В бою отвар возвращает два сердца, а карта ложится в книгу путника.",
       "layers": [
         {
           "image": {
             "src": "/assets/lumi/room.webp",
-            "alt": "Дом Реи изнутри",
+            "alt": "Люми в доме Реи: очаг, сундук с припасами, стол и кровать",
             "width": 1920,
             "height": 1080
           },
-          "x": 0,
-          "y": 0.04,
-          "w": 0.6,
+          "x": 0.1,
+          "y": 0,
+          "w": 0.8,
           "url": "lumi.velmren.com"
-        },
-        {
-          "image": {
-            "src": "/assets/lumi/hearth-detail.webp",
-            "alt": "Очаг и корзина с поленьями",
-            "width": 520,
-            "height": 390
-          },
-          "x": 0.66,
-          "y": 0.08,
-          "w": 0.34,
-          "front": true
         }
       ]
     },
@@ -223,11 +211,10 @@
         ]
       },
       {
-        "title": "The house has its own light",
-        "text": "The hearth and the window light Rhea's house, and every object casts a shadow from its own source.",
+        "title": "Packing for the road at Rhea's",
+        "text": "Rhea won't let Lumi near the grove empty-handed. The chest by the hearth holds two flasks of healing tonic and her old map. In a fight the tonic restores two hearts, and the map goes into the traveller's book.",
         "alts": [
-          "Inside Rhea's house",
-          "The hearth and a basket of logs"
+          "Lumi inside Rhea's house: the hearth, the supply chest, the table and the bed"
         ]
       },
       {

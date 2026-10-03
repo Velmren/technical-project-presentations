@@ -601,10 +601,10 @@
       },
       "live": {
         "slides": [
-          "/assets/lumi/yard.webp",
-          "/assets/lumi/oak.webp",
-          "/assets/lumi/room.webp",
-          "/assets/lumi/book-map.webp"
+          "/assets/home/lumi-yard.webp",
+          "/assets/home/lumi-oak.webp",
+          "/assets/home/lumi-room.webp",
+          "/assets/home/lumi-map.webp"
         ]
       },
       "facts": [
@@ -634,10 +634,10 @@
         ],
         "details": "/en/mobile-game/",
         "slides": [
-          "/assets/lumi/yard-en.webp",
-          "/assets/lumi/oak-en.webp",
-          "/assets/lumi/room-en.webp",
-          "/assets/lumi/book-map-en.webp"
+          "/assets/home/lumi-yard-en.webp",
+          "/assets/home/lumi-oak-en.webp",
+          "/assets/home/lumi-room-en.webp",
+          "/assets/home/lumi-map-en.webp"
         ]
       }
     },
