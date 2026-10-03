@@ -1,5 +1,6 @@
 /* Video pages in the concept C system. Tokens, header, footer and buttons come from concept-c.css. */
-.vg-page { --vg-stage: #0a0a0b; --vg-gap: 12px; }
+.vg-page { --vg-stage: #0a0a0b; }
+.vg-page, .vg-entry { --vg-gap: 12px; }
 
 /* ---------- The page of one clip ---------- */
 /* A wide film stands on a darker band across the window, as large as the window allows with its name still in view. */
@@ -59,6 +60,13 @@
 .vg-more { width: min(1360px, 100% - 2 * var(--gutter)); margin: 44px auto 0; padding-top: 40px; border-top: 1px solid var(--line); }
 .vg-more-head { display: flex; align-items: baseline; justify-content: space-between; gap: 24px; margin-bottom: 22px; }
 .vg-more-head h2, .vg-under h2 { font-family: var(--cc-display), sans-serif; font-weight: 500; font-size: 26px; line-height: 1.1; letter-spacing: 0; }
+
+/* ---------- The way into the gallery from the home page ---------- */
+/* The heading repeats the heading of the home sections; under it one row of posters. */
+.vg-entry { padding: 104px var(--gutter) 0; }
+.vg-entry-head { display: flex; align-items: flex-end; justify-content: space-between; gap: 24px; padding-bottom: 28px; }
+.vg-entry-head h2 { font-family: var(--cc-display), sans-serif; font-weight: 600; font-size: 44px; line-height: 1; letter-spacing: 0; }
+.vg-entry-head h2 span { margin-left: 8px; font-family: var(--cc-figures), sans-serif; font-weight: 400; font-size: 22px; color: var(--dim); vertical-align: .9em; }
 
 /* ---------- The gallery ---------- */
 .vg-head { display: flex; align-items: flex-end; justify-content: space-between; gap: 20px 48px; flex-wrap: wrap; padding: 26px var(--gutter) 30px; }
@@ -152,6 +160,9 @@
   .vg-next { margin-top: 0; padding-top: 4px; }
   .vg-more { margin-top: 12px; padding-top: 30px; }
   .vg-more-head h2, .vg-under h2 { font-size: 22px; }
+  .vg-entry { padding-top: 72px; }
+  .vg-entry-head { padding-bottom: 20px; }
+  .vg-entry-head h2 { font-size: 34px; }
   .vg-head { padding: 12px var(--gutter) 22px; }
   .vg-title { font-size: 40px; }
   .vg-title span { font-size: 19px; }

@@ -13,6 +13,7 @@ The gallery at `/video/`, a page for every clip at `/video/<slug>/`, collections
 | `src/components/video/Gallery.tsx`, `Tile.tsx`, `gallery-view.ts` | rows of posters, the filter, the fragment on hover |
 | `src/components/video/Watch.tsx`, `Playlist.tsx` | the clip page and the collection page |
 | `src/components/video/clips.ts` | the clips in show order as posters; `bestClips()` gives the best ones to other pages |
+| `src/components/video/Entry.tsx` | `VideoEntry`, the block that leads into the gallery from the home page |
 | `src/components/video/strings.ts` | interface texts in Russian and English |
 | `src/app/video/`, `src/app/en/video/` | the routes |
 | `public/assets/video/<slug>/` | files of a clip |
@@ -108,19 +109,20 @@ Its address is `/video/c/for-a-game-studio/`. A collection opens only by its lin
 
 Every `src` and `preview` is then read from there, and `--check` asks the storage for them instead of looking in `public/`. Posters, link previews and subtitles stay on the site.
 
-## Posters on other pages
+## The way in from other pages
 
-A block that leads into the gallery, for example on the home page, takes ready posters with the fragment on hover:
+`VideoEntry` is a ready block for the home page: the heading "Video" with the number of clips, a link to the gallery and the best clips as large posters with the fragment on hover.
 
 ```tsx
-import { bestClips } from '@/components/video/clips';
-import { TileRow } from '@/components/video/Gallery';
-import '@/components/video/video.css';
+import { VideoEntry } from '@/components/video/Entry';
 
-<TileRow clips={bestClips(locale, 2)}/>
+<VideoEntry locale={locale}/>           // two best clips
+<VideoEntry locale={locale} count={3}/>
 ```
 
-`bestClips(locale, count)` returns the first clips in show order; each has `href`, `title`, `kind`, `length`, `poster` and `preview`, so a block with its own layout can use the data without the row. The posters expect the `.cc-page` tokens of the site around them.
+It reads the gallery data, so it is rendered on the server. A client component takes it as a ready node from its server parent, for example `<ConceptC video={<VideoEntry locale={locale}/>}/>`. It expects the `.cc-page` tokens and the site fonts around it.
+
+A block with its own layout can take just the data: `bestClips(locale, count)` from `clips.ts` returns the first clips in show order with `href`, `title`, `kind`, `length`, `poster` and `preview`, and `TileRow` from `Gallery.tsx` draws a row of them.
 
 ## Addresses with parameters
 
