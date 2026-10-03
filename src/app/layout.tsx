@@ -11,7 +11,12 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://velmren.com'),
   title: { default: 'VELMREN', template: '%s · VELMREN' },
   description: UI.ru.heroLead,
-  icons: { icon: '/favicon.svg' },
+  // New names, so browsers and the CDN drop the old icon; the ICO is marked 32x32 so browsers that read SVG
+  // still pick the SVG, which follows the light or dark browser theme.
+  icons: {
+    icon: [{ url: '/favicon-v2.ico', sizes: '32x32' }, { url: '/favicon-v2.svg', type: 'image/svg+xml' }],
+    apple: '/apple-touch-icon-v2.png',
+  },
   openGraph: { siteName: 'VELMREN', type: 'website', images: [socialImage] },
   twitter: { card: 'summary_large_image' },
 };

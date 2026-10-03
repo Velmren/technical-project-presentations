@@ -60,7 +60,7 @@ VELMREN portfolio: Next.js 16 (App Router), TypeScript, static export to `out/`.
 │   │   ├── motion/            motion section: live Lottie and Canvas examples
 │   │   ├── shopify/           Sheaf, static demo of the Shopify product configurator
 │   │   └── npc-system/        North Harbor, Minecraft NPC scenario
-│   └── favicon.svg, favicon.ico, og.png
+│   └── favicon-v2.svg, favicon-v2.ico, apple-touch-icon-v2.png  site icons (the head links these names); favicon.svg, favicon.ico same icons at the default paths; og.png
 ├── new-projects/              sources of individual works; each has its own README
 │   ├── admin-dashboard/       ORBIT: React, Vite
 │   ├── assembly/              Veresta: scroll-driven image sequence on a canvas, no dependencies
