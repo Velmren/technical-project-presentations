@@ -98,6 +98,8 @@ test('the best clips come first and rows are cut without holes wherever that is 
   assert.deepEqual(names(rows), ['a b', 'c d', 'e f', 'g h']);
   assert.deepEqual(rows.flat(), mixed);
   assert.ok(rows.every(row => rowSum(row) >= 2.7 && rowSum(row) <= 5.4));
+  // Six wide frames and two squares: the long row of three goes to the end, the best two stay the largest.
+  assert.deepEqual(names(intoRows([wide('a'), wide('b'), square('c'), square('d'), wide('e'), wide('f'), wide('g'), wide('h')])), ['a b', 'c d e', 'f g h']);
   // A lone clip cannot make a row; it stands alone and is not stretched.
   assert.deepEqual(names(intoRows([wide('a')])), ['a']);
   assert.deepEqual(intoRows([]), []);

@@ -25,13 +25,15 @@ export function splitClips(clips: GalleryClip[], filter: GalleryFilter) {
 
 // Rows are cut by the proportions of the posters, in their order. Two wide frames make the ideal row
 // (2 x 16:9 = 3.56). A row from MIN_ROW (a wide frame and a square one) to MAX_ROW (three wide frames) stretches
-// to the full width; among all ways to cut the list the one closest to ideal rows wins, and when rows must be longer
-// they go to the end, so the best clips stay the largest. A row short of MIN_ROW cannot be avoided for a lone clip
-// or a pair of squares: it keeps the usual height and does not stretch.
+// to the full width; among all ways to cut the list the one closest to ideal rows wins. A row away from the ideal
+// costs up to three times more at the top of the page than at its end, so a longer row of smaller posters goes
+// down and the best clips stay the largest. A row short of MIN_ROW cannot be avoided for a lone clip or a pair of
+// squares: it keeps the usual height and does not stretch.
 export const IDEAL_ROW = 3.56;
 export const MIN_ROW = 2.7;
 const MAX_ROW = 5.4;
 const SHORT_ROW = 100;
+const EARLY = 2;
 const ratio = (clip: { width: number; height: number }) => clip.width / clip.height;
 export const rowSum = (row: { width: number; height: number }[]) => row.reduce((sum, clip) => sum + ratio(clip), 0);
 
@@ -43,7 +45,8 @@ export function intoRows<T extends { width: number; height: number }>(clips: T[]
     for (let from = end - 1; from >= 0; from--) {
       const sum = rowSum(clips.slice(from, end));
       if (sum > MAX_ROW && end - from > 1) break;
-      const cost = best[from].cost + (sum - IDEAL_ROW) ** 2 + (sum < MIN_ROW ? SHORT_ROW : 0) + (sum > IDEAL_ROW ? (clips.length - end) / 1000 : 0);
+      const early = 1 + EARLY * (clips.length - end) / clips.length;
+      const cost = best[from].cost + (sum - IDEAL_ROW) ** 2 * early + (sum < MIN_ROW ? SHORT_ROW : 0);
       if (cost < best[end].cost) best[end] = { cost, from };
     }
   }
