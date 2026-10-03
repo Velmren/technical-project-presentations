@@ -499,6 +499,95 @@
           "preview": "/assets/video/polka/polka-hover.mp4"
         }
       ]
+    },
+    {
+      "slug": "khrum",
+      "status": "accepted",
+      "title": {
+        "ru": "Хрум",
+        "en": "Khrum"
+      },
+      "kind": {
+        "ru": "Персонаж",
+        "en": "Character"
+      },
+      "text": {
+        "ru": "Вертикальный ролик для соцсетей: упругие буквы, прыжки и конфетти, внутри циклы Lottie.",
+        "en": "A vertical clip for social networks: springy letters, jumps and confetti, with Lottie cycles inside."
+      },
+      "sections": [
+        "motion"
+      ],
+      "date": "2026-10-01",
+      "sound": {
+        "ru": "Velmren. Музыка: Little Adventures, Sokolovsky Music, CC BY 4.0",
+        "en": "Velmren. Music: Little Adventures by Sokolovsky Music, CC BY 4.0"
+      },
+      "soundLink": "https://www.free-stock-music.com/sokolovsky-music-little-adventures.html",
+      "work": {
+        "ru": "/khrum/",
+        "en": "/en/khrum/"
+      },
+      "cuts": [
+        {
+          "width": 1080,
+          "height": 1920,
+          "duration": 24,
+          "src": {
+            "ru": "/assets/video/khrum/khrum.mp4"
+          },
+          "poster": {
+            "ru": "/assets/video/khrum/khrum-poster.webp"
+          },
+          "share": {
+            "ru": "/assets/video/khrum/khrum-share.jpg"
+          },
+          "lightPoster": true,
+          "preview": "/assets/video/khrum/khrum-hover.mp4"
+        }
+      ]
+    },
+    {
+      "slug": "forum-screen",
+      "status": "accepted",
+      "title": {
+        "ru": "Знаки партнёров",
+        "en": "Partner marks"
+      },
+      "kind": {
+        "ru": "Экран форума",
+        "en": "Forum screen"
+      },
+      "text": {
+        "ru": "Знаки партнёров сменяются на боковом экране форума: у каждого свой выход, выдержка и подпись.",
+        "en": "Partner marks change on a side screen of a forum: each has its own entrance, hold and caption."
+      },
+      "sections": [
+        "motion"
+      ],
+      "date": "2026-10-01",
+      "work": {
+        "ru": "/motion/",
+        "en": "/en/motion/"
+      },
+      "cuts": [
+        {
+          "width": 768,
+          "height": 1280,
+          "duration": 24,
+          "src": {
+            "ru": "/assets/video/forum-screen/forum-screen.mp4"
+          },
+          "poster": {
+            "ru": "/assets/video/forum-screen/forum-screen-poster.webp"
+          },
+          "share": {
+            "ru": "/assets/video/forum-screen/forum-screen-share.jpg"
+          },
+          "lightPoster": true,
+          "preview": "/assets/video/forum-screen/forum-screen-hover.mp4"
+        }
+      ]
     }
   ],
   "collections": []
