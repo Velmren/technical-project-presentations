@@ -157,7 +157,7 @@
       "title": "Тяжёлая картинка при быстрой загрузке",
       "text": "Первый экран рисуется сразу одним кадром. Остальные подгружаются от грубого шага к мелкому, и прокрутка работает уже после первых 25 кадров. На телефон уходит свой лёгкий набор.",
       "figure": {
-        "value": "91",
+        "value": "97",
         "label": "из 100 за скорость в Lighthouse на телефоне"
       },
       "layers": [
@@ -267,7 +267,7 @@
         "title": "A heavy picture that loads fast",
         "text": "The first screen is drawn at once from a single frame. The rest load from a coarse step to a fine one, and scrolling works after the first 25 frames. Phones get their own lighter set.",
         "figure": {
-          "value": "91",
+          "value": "97",
           "label": "out of 100 for performance in Lighthouse on a phone"
         },
         "alts": [
