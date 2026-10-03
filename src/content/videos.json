@@ -1,0 +1,192 @@
+{
+  "videos": [
+    {
+      "slug": "lumi-promo",
+      "status": "accepted",
+      "title": {
+        "ru": "Люми: остров ветров",
+        "en": "Lumi: Isle of Winds"
+      },
+      "kind": {
+        "ru": "Промо игры",
+        "en": "Game promo"
+      },
+      "text": {
+        "ru": "Утро после бури, посыльный Люми, тайники леса и бой с кабаном. Всё снято в самой игре.",
+        "en": "The morning after the storm, Lumi the courier, the forest’s secrets and a fight with a boar. All captured in the game itself."
+      },
+      "sections": [
+        "games",
+        "promo"
+      ],
+      "date": "2026-10-03",
+      "featured": 1,
+      "sound": {
+        "ru": "Velmren",
+        "en": "Velmren"
+      },
+      "work": {
+        "ru": "/mobile-game/",
+        "en": "/en/mobile-game/"
+      },
+      "cuts": [
+        {
+          "width": 1920,
+          "height": 1080,
+          "duration": 62,
+          "src": {
+            "ru": "/assets/video/lumi-promo/lumi-promo-ru.mp4",
+            "en": "/assets/video/lumi-promo/lumi-promo-en.mp4"
+          },
+          "poster": {
+            "ru": "/assets/video/lumi-promo/lumi-promo-poster-ru.webp",
+            "en": "/assets/video/lumi-promo/lumi-promo-poster-en.webp"
+          },
+          "share": {
+            "ru": "/assets/video/lumi-promo/lumi-promo-share-ru.jpg",
+            "en": "/assets/video/lumi-promo/lumi-promo-share-en.jpg"
+          },
+          "preview": "/assets/video/lumi-promo/lumi-promo-hover.mp4"
+        }
+      ]
+    },
+    {
+      "slug": "cell",
+      "status": "accepted",
+      "title": {
+        "ru": "Ячейка",
+        "en": "Cell"
+      },
+      "kind": {
+        "ru": "Реклама онлайн-школы",
+        "en": "Online school ad"
+      },
+      "text": {
+        "ru": "Вертикальный ролик для Reels и Shorts. Всё происходит на одном листе таблицы, слова появляются вместе с голосом.",
+        "en": "A vertical ad for Reels and Shorts. Everything happens on one spreadsheet, and each word appears with the voice."
+      },
+      "sections": [
+        "promo"
+      ],
+      "date": "2026-10-03",
+      "featured": 2,
+      "sound": {
+        "ru": "Velmren",
+        "en": "Velmren"
+      },
+      "cuts": [
+        {
+          "width": 1080,
+          "height": 1920,
+          "duration": 15,
+          "src": {
+            "ru": "/assets/video/cell/cell-ru.mp4",
+            "en": "/assets/video/cell/cell-en.mp4"
+          },
+          "poster": {
+            "ru": "/assets/video/cell/cell-poster-ru.webp",
+            "en": "/assets/video/cell/cell-poster-en.webp"
+          },
+          "share": {
+            "ru": "/assets/video/cell/cell-share-ru.jpg",
+            "en": "/assets/video/cell/cell-share-en.jpg"
+          },
+          "lightPoster": true,
+          "preview": "/assets/video/cell/cell-hover.mp4"
+        }
+      ]
+    },
+    {
+      "slug": "showreel",
+      "status": "accepted",
+      "title": {
+        "ru": "Шоурил VELMREN",
+        "en": "VELMREN showreel"
+      },
+      "kind": {
+        "ru": "Монтаж",
+        "en": "Editing"
+      },
+      "text": {
+        "ru": "Восемь работ в ритме трека: кадр меняется на долю, заставка и титры собраны движением.",
+        "en": "Eight works in the rhythm of a track: the picture changes on the beat, the opening and the titles are built in motion."
+      },
+      "sections": [
+        "editing"
+      ],
+      "date": "2026-10-01",
+      "featured": 3,
+      "sound": {
+        "ru": "Velmren. Музыка: Sunfade, Roa Music, CC BY 3.0",
+        "en": "Velmren. Music: Sunfade by Roa Music, CC BY 3.0"
+      },
+      "soundLink": "https://www.free-stock-music.com/roa-music-sunfade.html",
+      "cuts": [
+        {
+          "width": 1920,
+          "height": 1080,
+          "duration": 57.3,
+          "src": {
+            "ru": "/assets/video/showreel/showreel.mp4"
+          },
+          "poster": {
+            "ru": "/assets/video/showreel/showreel-poster.webp"
+          },
+          "share": {
+            "ru": "/assets/video/showreel/showreel-share.jpg"
+          },
+          "preview": "/assets/video/showreel/showreel-hover.mp4"
+        }
+      ]
+    },
+    {
+      "slug": "sono-promo",
+      "status": "accepted",
+      "title": {
+        "ru": "SONO",
+        "en": "SONO"
+      },
+      "kind": {
+        "ru": "Промо товара",
+        "en": "Product promo"
+      },
+      "text": {
+        "ru": "Размеры рисуются линиями, цифры считаются на глазах, цвет колонки меняется вместе с фоном.",
+        "en": "Dimensions are drawn as lines, numbers count up in front of you and the speaker changes colour with the background."
+      },
+      "sections": [
+        "promo"
+      ],
+      "date": "2026-10-01",
+      "featured": 4,
+      "sound": {
+        "ru": "Velmren. Музыка: Between Oceans and Summits, Alex-Productions, CC BY 3.0",
+        "en": "Velmren. Music: Between Oceans and Summits by Alex-Productions, CC BY 3.0"
+      },
+      "soundLink": "https://www.free-stock-music.com/alex-productions-between-oceans-and-summits.html",
+      "work": {
+        "ru": "/sono/",
+        "en": "/en/sono/"
+      },
+      "cuts": [
+        {
+          "width": 1920,
+          "height": 1080,
+          "duration": 20.9,
+          "src": {
+            "ru": "/assets/video/sono-promo/sono-promo.mp4"
+          },
+          "poster": {
+            "ru": "/assets/video/sono-promo/sono-promo-poster.webp"
+          },
+          "share": {
+            "ru": "/assets/video/sono-promo/sono-promo-share.jpg"
+          },
+          "lightPoster": true,
+          "preview": "/assets/video/sono-promo/sono-promo-hover.mp4"
+        }
+      ]
+    }
+  ],
+  "collections": []
+}

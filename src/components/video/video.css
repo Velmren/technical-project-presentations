@@ -1,0 +1,62 @@
+/* Video pages in the concept C system. Tokens, header, footer and buttons come from concept-c.css. */
+.vg-page { --vg-stage: #0a0a0b; }
+
+/* A wide film stands on a darker band across the window, as large as the window allows with its name still in view. */
+.vg-frame { background: var(--vg-stage); padding: 24px var(--gutter) 28px; }
+.vg-frame-in { margin-inline: auto; width: min(100%, 1360px, max(420px, (100svh - 76px - 52px - 170px) * var(--vg-ratio))); }
+.vg-info {
+  display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 24px 64px; align-items: end;
+  width: min(1360px, 100% - 2 * var(--gutter)); margin-inline: auto; padding: 30px 0 12px;
+}
+.vg-kind { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 12px; font-family: var(--cc-figures), sans-serif; font-size: 17px; color: var(--muted); }
+.vg-kind i { font-style: normal; color: var(--dim); }
+.vg-copy h1 {
+  margin-top: 12px; font-family: var(--cc-display), sans-serif; font-weight: 500; font-variation-settings: 'wdth' 96;
+  font-size: clamp(32px, 2.5vw, 46px); line-height: 1.04; letter-spacing: -.01em;
+}
+.vg-lead { margin-top: 14px; max-width: 38em; font-size: 18px; line-height: 1.55; color: var(--muted); }
+.vg-credit { margin-top: 12px; max-width: 46em; font-size: 14px; line-height: 1.5; color: var(--dim); }
+.vg-credit a { text-decoration: underline; text-decoration-color: rgba(236, 237, 239, .3); text-underline-offset: 3px; transition: color .2s; }
+.vg-credit a:hover { color: var(--text); }
+/* The buttons stand level with the name, so they are in view on the first screen together with it. */
+.vg-actions { position: relative; align-self: start; margin-top: 36px; display: flex; flex-wrap: wrap; align-items: center; justify-content: flex-end; gap: 12px 24px; }
+.vg-copy-link { gap: 10px; }
+.vg-copy-link svg { width: 15px; height: 15px; }
+.vg-toggle {
+  display: inline-flex; align-items: center; height: 46px; padding: 0 16px; border: 1px solid rgba(236, 237, 239, .16); border-radius: 2px;
+  font-size: 15px; font-variant-numeric: tabular-nums; color: var(--muted); transition: color .2s, border-color .2s, background-color .2s;
+}
+.cc-page .vg-toggle:hover { color: var(--text); border-color: rgba(236, 237, 239, .3); }
+.vg-toggle[aria-pressed='true'] { color: var(--text); border-color: var(--accent); background: color-mix(in srgb, var(--accent) 14%, transparent); }
+.vg-actions .cc-filter button { height: 44px; font-family: var(--cc-figures), sans-serif; font-size: 16px; }
+/* The note about a copied link appears under the buttons and takes no room while empty. */
+.vg-status { position: absolute; right: 0; top: calc(100% + 10px); font-size: 14px; color: var(--muted); white-space: nowrap; }
+
+/* A vertical or square film stands beside its text. */
+.vg-watch[data-shape='tall'] { display: flex; justify-content: center; align-items: stretch; gap: 56px; padding: 24px var(--gutter) 28px; background: var(--vg-stage); }
+.vg-watch[data-shape='tall'] .vg-frame { flex: none; padding: 0; background: none; }
+.vg-watch[data-shape='tall'] .vg-frame-in { width: max(280px, (100svh - 76px - 52px - 60px) * var(--vg-ratio)); }
+.vg-watch[data-shape='tall'] .vg-info { display: flex; flex-direction: column; justify-content: space-between; align-items: stretch; gap: 32px; width: 420px; margin: 0; padding: 6px 0 0; }
+.vg-watch[data-shape='tall'] .vg-actions { align-self: auto; margin-top: 0; justify-content: flex-start; }
+.vg-watch[data-shape='tall'] .vg-status { right: auto; left: 0; }
+
+@media (max-width: 1100px) {
+  .vg-watch[data-shape='tall'] { gap: 32px; }
+  .vg-watch[data-shape='tall'] .vg-info { width: min(420px, 44vw); }
+}
+@media (max-width: 860px) {
+  /* The header is lower here, and a phone gives the film its whole width. */
+  .vg-frame { padding: 0; background: none; }
+  .vg-frame-in { width: 100%; }
+  .vg-frame .vp { border-radius: 0; }
+  .vg-info { grid-template-columns: minmax(0, 1fr); padding: 22px 0 28px; }
+  .vg-copy h1 { font-size: 30px; }
+  .vg-lead { font-size: 16.5px; }
+  .vg-actions { margin-top: 0; justify-content: flex-start; }
+  .vg-status { position: static; flex-basis: 100%; min-height: 21px; white-space: normal; }
+  .vg-watch[data-shape='tall'] { display: block; padding: 8px 0 0; background: none; }
+  .vg-watch[data-shape='tall'] .vg-frame { padding: 0 var(--gutter); }
+  .vg-watch[data-shape='tall'] .vg-frame-in { width: min(100%, max(240px, (100svh - 64px - 150px) * var(--vg-ratio))); margin-inline: auto; }
+  .vg-watch[data-shape='tall'] .vg-frame .vp { border-radius: 2px; }
+  .vg-watch[data-shape='tall'] .vg-info { display: grid; width: min(1360px, 100% - 2 * var(--gutter)); margin-inline: auto; padding: 22px 0 28px; gap: 24px; }
+}
