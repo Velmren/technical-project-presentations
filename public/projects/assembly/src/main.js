@@ -3,6 +3,7 @@ import {flatTitle, initFlats, renderFlatsText, showHouse} from './flats.js';
 import {applyLang, initialLang, lang, num, price, quarterLabel, t} from './i18n.js';
 import {calcFor, initMortgage, renderMortgageText} from './mortgage.js';
 import {initScene, renderSceneText} from './scene.js';
+import {initSelects, refreshSelects} from './select.js';
 
 const due = (id) => quarterLabel(quarter(HOUSES[id].due));
 const keys = (id) => quarterLabel(quarter(HOUSES[id].due + 1));
@@ -106,6 +107,7 @@ function initForm() {
     form.querySelector('[data-form-note]').textContent = t(filled ? 'office.done' : 'office.empty');
     if (filled) {
       form.reset();
+      refreshSelects();
       chosen = null;
       showChosen();
     }
@@ -121,6 +123,7 @@ function book(flat) {
 
 function setLang(next) {
   applyLang(next);
+  refreshSelects();
   renderFigures();
   renderFlatsText();
   renderMortgageText();
@@ -137,6 +140,7 @@ for (const button of document.querySelectorAll('[data-lang-switch]')) {
 }
 
 applyLang(initialLang());
+initSelects();
 renderFigures();
 initFlats({onBook: book, onCalc: calcFor});
 initMortgage();

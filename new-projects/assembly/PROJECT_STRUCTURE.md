@@ -19,6 +19,7 @@ assembly/
 │   ├── flats.js           apartment search, list, tiles, card of the chosen apartment
 │   ├── mortgage.js        mortgage and instalment calculator
 │   ├── plan.js            floor plan drawing from room rows
+│   ├── select.js          drop-down list in the style of the site
 │   ├── data.js            buildings, layouts, apartments, schedule, mortgage programmes
 │   ├── anchors.js         position of each building in every desktop frame
 │   └── i18n.js            Russian and English texts, number and quarter formats
@@ -42,5 +43,6 @@ public/assets/assembly/
 ├── assembly.mp4, assembly-mobile.mp4         fallback videos
 ├── home-*.webp, quay.webp     renders of the buildings and the embankment for the sections
 ├── progress-2026-10.webp      the first frame cut to the site, for the progress section
+├── site-plan.webp             the finished quarter rendered from above, for the site plan
 └── case/                      screens, details and the scroll clip for the portfolio card and case page
 ```

@@ -1,6 +1,6 @@
 # Veresta
 
-Sales website of a fictional business-class residential quarter. On the first screen the quarter is built as the visitor scrolls: on a finished embankment site three brick buildings go up part by part, and the scroll moves along the construction schedule below the scene, so each building is finished in its own quarter of the year. Below the first screen is a working sales site: the facts of the quarter, apartment search with floor plans, the buildings, a site plan, the schedule and progress, a mortgage calculator, the location and the sales office.
+Sales website of a fictional business-class residential quarter. On the first screen the quarter is built as the visitor scrolls: on a finished embankment site three brick buildings go up part by part, and the scroll moves along the construction schedule below the scene, so each building is finished in its own quarter of the year. Below the first screen is a working sales site: the facts of the quarter, apartment search with floor plans, the buildings, a site plan rendered from above from the same scene, the schedule and progress, a mortgage calculator, the location and the sales office.
 
 The scene is a 3D model rendered as an image sequence. The page draws the frame that matches the scroll position on a canvas.
 
@@ -34,13 +34,14 @@ All figures come from `src/data.js`: three buildings, 16 layouts, 126 apartments
 
 | Path | Role |
 | --- | --- |
-| `index.html` | Markup with the Russian text: side panel, first screen, sections, site plan and area map as inline SVG, footer |
+| `index.html` | Markup with the Russian text: side panel, first screen, sections, site plan overlays and the area map as inline SVG, footer |
 | `styles/main.css` | Layout and type: side panel from 1280 px, top bar below, phones and portrait screens |
 | `src/main.js` | Entry: tables and cards from the data, site plan, menu, viewing form, language switch |
 | `src/scene.js` | Frame loading, scroll to frame mapping, canvas drawing, fallback, schedule, building labels |
 | `src/flats.js` | Apartment search: filter shared by the first screen and the section, list, tiles, card of the chosen apartment |
 | `src/mortgage.js` | Mortgage and instalment calculator |
 | `src/plan.js` | Floor plan drawing from the room rows |
+| `src/select.js` | Drop-down list in the style of the site over a hidden native select: combobox and listbox roles, arrows, Home, End, Enter, Escape, first letter |
 | `src/data.js` | Buildings, layouts, apartments, schedule, mortgage programmes |
 | `src/anchors.js` | Position of each building in every desktop frame |
 | `src/i18n.js` | Russian and English texts, number and quarter formats |
@@ -50,6 +51,10 @@ All figures come from `src/data.js`: three buildings, 16 layouts, 126 apartments
 | `tools/verify.mjs` | Browser check: overlaps and text over the scene at 1920, 1440, 1366, 1280, 1024 and 390, sections, English, scroll smoothness, fallback, markup against the dictionary |
 | `tools/capture.mjs` | Images and the scroll clip that present the work in the portfolio (`public/assets/assembly/case/`) |
 | `serve.mjs` | Local preview server |
+
+## Site plan
+
+`public/assets/assembly/site-plan.webp` is the finished quarter rendered straight down with an orthographic camera, 128 m across, in the dusk light of the sequence, with a band on top for the street name. Over it the page lays outlines of the buildings and areas in the same pixel grid: `x = (X + 64) * 15`, `y = 80 + (46.93 - Y) * 15` for scene metres X, Y. The render script is kept outside this repository together with the scene.
 
 ## Frames
 

@@ -206,7 +206,29 @@ tbody tr:last-child td { border-bottom: 1px solid var(--line); }
 .filters { display: flex; flex-wrap: wrap; gap: 24px 40px; padding: 24px 0 28px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); align-items: flex-end; }
 .filters .field { flex: none; }
 .filters .dual { flex: 1 1 180px; min-width: 180px; }
-select.sort { margin-left: auto; align-self: center; display: block; min-height: 42px; padding: 0 34px 0 12px; background: var(--panel) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0h10L5 6z' fill='%23a9afb8'/%3E%3C/svg%3E") no-repeat right 12px center; border: 1px solid var(--line); -webkit-appearance: none; appearance: none; font-size: 15px; cursor: pointer; }
+select.sort { display: block; min-height: 42px; padding: 0 34px 0 12px; background: var(--panel) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0h10L5 6z' fill='%23a9afb8'/%3E%3C/svg%3E") no-repeat right 12px center; border: 1px solid var(--line); -webkit-appearance: none; appearance: none; font-size: 15px; cursor: pointer; }
+/* Drop-down list of the site (src/select.js); the native select stays as the fallback without scripts */
+.select { position: relative; display: inline-block; }
+.select.sort { margin-left: auto; align-self: center; }
+.select-button { display: flex; align-items: center; justify-content: space-between; gap: 14px; width: 100%; min-height: 42px; min-width: 214px; padding: 0 14px; background: var(--panel); border: 1px solid var(--line); color: var(--ink); font-size: 15px; text-align: left; cursor: pointer; transition: border-color .15s; }
+.select-button::after { content: ""; flex: none; border-left: 5px solid transparent; border-right: 5px solid transparent; border-top: 6px solid var(--ink-2); transition: transform .15s; }
+.select-button:hover { border-color: var(--line-2); }
+.select-button[aria-expanded="true"] { border-color: var(--ink-2); }
+.select-button[aria-expanded="true"]::after { transform: rotate(180deg); }
+.select-list { position: absolute; z-index: 30; left: 0; top: calc(100% + 4px); min-width: 100%; max-height: 320px; overflow-y: auto; margin: 0; padding: 6px 0; background: var(--panel-2); border: 1px solid var(--line-2); box-shadow: 0 14px 32px rgba(0, 0, 0, .5); animation: select-in .16s ease-out; }
+.select.up .select-list { top: auto; bottom: calc(100% + 4px); animation-name: select-up; }
+.select.end .select-list { left: auto; right: 0; }
+.select-list li { display: flex; align-items: center; gap: 10px; padding: 10px 16px 10px 14px; font-size: 15px; color: var(--ink-2); white-space: nowrap; cursor: pointer; }
+.select-list li::before { content: ""; flex: none; width: 7px; height: 7px; }
+.select-list li.active { background: rgba(255, 255, 255, .06); color: var(--ink); }
+.select-list li[aria-selected="true"] { color: var(--ink); }
+.select-list li[aria-selected="true"]::before { background: var(--brand); }
+@keyframes select-in { from { opacity: 0; transform: translateY(-4px); } }
+@keyframes select-up { from { opacity: 0; transform: translateY(4px); } }
+.form .select { display: block; }
+.form .select-button { min-height: 0; padding: 10px 0; background: none; border: 0; border-bottom: 1px solid var(--line-2); font-size: 18px; }
+.form .select-button[aria-expanded="true"], .form .select-button:focus-visible { border-bottom-color: var(--brand); outline: 0; }
+
 .reset { background: none; border: 0; padding: 0; min-height: 42px; font-size: 15px; color: var(--ink-2); cursor: pointer; border-bottom: 1px solid transparent; }
 .reset:hover { color: var(--ink); }
 
@@ -283,33 +305,25 @@ select.sort { margin-left: auto; align-self: center; display: block; min-height:
 .legend b { font-weight: 400; }
 .legend span { display: block; font-size: 14px; color: var(--ink-2); }
 .legend li[data-key="tower"], .legend li[data-key="clinker"], .legend li[data-key="club"] { cursor: pointer; }
-.plan-map svg { display: block; width: 100%; height: auto; }
-.gp-street { fill: #0d1014; }
-.gp-label { fill: var(--ink-2); font-size: 15px; letter-spacing: .02em; }
-.gp-label.small { font-size: 14px; }
-.gp-label.water { fill: #7fa7b0; }
-.gp-north { fill: var(--ink-2); font-size: 15px; font-weight: 500; }
-.gp-plaza { fill: #1b2027; }
-.gp-lawn { fill: #223327; }
-.gp-pool { fill: #1f4651; }
-.gp-pergola { fill: none; stroke: #6b5a49; stroke-width: 2; }
-.gp-prom { fill: #242a32; }
-.gp-trees circle { fill: #2d4834; }
-.gp-area[data-key="cafe"] rect, .gp-area[data-key="cafe"] circle { fill: #3c414a; }
-.gp-water { fill: #16303a; }
-.gp-deck { fill: #4a3b2f; }
-.gp-steps { stroke: #3a4048; stroke-width: 2; fill: none; }
-.gp-ramp { fill: #262b33; }
-.gp-ramp-lines { stroke: #3c434d; stroke-width: 2; fill: none; }
-.gp-scale { fill: none; stroke: var(--ink-2); stroke-width: 1.5; }
-.gp-area * { transition: stroke .15s; }
-.gp-area.on * { stroke: var(--brand); stroke-width: 2.5; }
-.gp-house { cursor: pointer; outline: none; }
-.gp-house rect { fill: #2c323b; stroke: #444b56; stroke-width: 2; transition: fill .15s; }
-.gp-house text { fill: var(--ink); font-size: 22px; text-anchor: middle; letter-spacing: .02em; pointer-events: none; }
-.gp-house text.sub { fill: var(--ink-2); font-size: 15px; letter-spacing: 0; }
-.gp-house.on rect, .gp-house:focus-visible rect { fill: var(--brand-fill); stroke: var(--brand); }
-.gp-house.on text, .gp-house:focus-visible text { fill: #fff; }
+/* Site plan: a render from above, the areas and buildings light up over it */
+.plan-map { position: relative; }
+.plan-map img { display: block; width: 100%; height: auto; background: var(--panel); }
+.plan-map svg { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; }
+.gp-area, .gp-house { fill: transparent; stroke: transparent; stroke-width: 5; pointer-events: all; transition: fill .2s, stroke .2s; }
+.gp-house { cursor: pointer; }
+.gp-area.on { fill: rgba(224, 105, 74, .12); stroke: var(--brand); }
+.gp-house.on { fill: rgba(180, 65, 42, .3); stroke: var(--brand); }
+.gp-tag { position: absolute; transform: translate(-50%, -50%); display: grid; gap: 1px; padding: 8px 13px 9px; background: rgba(12, 14, 18, .86); border: 1px solid var(--line-2); color: var(--ink); font: inherit; text-align: center; cursor: pointer; transition: background-color .2s, border-color .2s; }
+.gp-tag b { font-weight: 500; font-size: 17px; letter-spacing: .02em; }
+.gp-tag span { font-size: 13px; color: var(--ink-2); white-space: nowrap; }
+.gp-tag.on, .gp-tag:focus-visible { background: var(--brand-fill); border-color: var(--brand); outline: 0; }
+.gp-tag.on span, .gp-tag:focus-visible span { color: #fff; }
+.gp-street { position: absolute; left: 50%; top: 2.7%; transform: translate(-50%, -50%); font-size: 14px; color: var(--ink-2); letter-spacing: .02em; white-space: nowrap; }
+.gp-north { position: absolute; right: 2%; top: 2.7%; transform: translateY(-50%); font-size: 14px; font-weight: 500; color: var(--ink-2); }
+.gp-p { position: absolute; left: 90.5%; top: 7.6%; transform: translate(-50%, -50%); width: 24px; height: 24px; display: grid; place-items: center; background: #2c5aa0; color: #fff; font-size: 14px; font-weight: 600; }
+.gp-water { position: absolute; left: 62%; top: 88%; font-size: 15px; color: #8fb3bb; letter-spacing: .04em; }
+.gp-scale { position: absolute; left: 2%; bottom: 3%; display: flex; align-items: flex-end; gap: 8px; width: 24%; font-size: 13px; color: var(--ink-2); }
+.gp-scale i { width: 65%; height: 6px; border: 1.5px solid var(--ink-2); border-top: 0; }
 
 .progress-table { min-width: 720px; }
 .progress-table td:first-child { font-size: 19px; }
@@ -489,12 +503,17 @@ select.sort { margin-left: auto; align-self: center; display: block; min-height:
   .stack td[data-label]::before { content: attr(data-label); display: block; font-size: 13px; color: var(--ink-3); }
   .houses-table td:last-child { grid-column: 1 / -1; text-align: left; }
   .houses-table .btn { width: 100%; }
-  select.sort { margin-left: 0; }
+  .select.sort { margin-left: 0; }
   .chips.four { grid-template-columns: repeat(2, 1fr); }
   .view-list .flat-table, .flat-table { display: none; }
   .tiles, .view-list .tiles { display: grid; grid-template-columns: 1fr; }
   .house-cards { grid-template-columns: 1fr; gap: 48px; }
   .legend { grid-template-columns: 1fr; }
+  .gp-tag { padding: 4px 8px 5px; }
+  .gp-tag b { font-size: 13px; }
+  .gp-tag span { display: none; }
+  .gp-street, .gp-north, .gp-water, .gp-scale { font-size: 11px; }
+  .gp-p { width: 16px; height: 16px; font-size: 10px; }
   .legend li:nth-last-child(2) { border-bottom: 0; }
   .ready span { width: 90px; }
   .calc-in, .calc-out { padding: 22px 20px; }
@@ -507,5 +526,6 @@ select.sort { margin-left: auto; align-self: center; display: block; min-height:
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   .stage canvas, .menu { transition: none; }
+  .select-list { animation: none; }
   .tag.on { animation: none; }
 }

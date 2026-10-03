@@ -151,7 +151,7 @@
       <div class="block-head">
         <h2 data-i18n="flats.title">Квартиры</h2>
         <span class="count" data-flats-count>126 в продаже</span>
-        <select class="sort" data-sort data-i18n-label="sort.label" aria-label="Порядок">
+        <select class="sort" data-sort data-select data-i18n-label="sort.label" aria-label="Порядок">
           <option value="priceUp" data-i18n="sort.priceUp">Сначала дешевле</option>
           <option value="priceDown" data-i18n="sort.priceDown">Сначала дороже</option>
           <option value="areaDown" data-i18n="sort.areaDown">Сначала просторнее</option>
@@ -250,63 +250,26 @@
           <li data-key="parking" tabindex="0"><b data-i18n="plan.parking">Въезд в паркинг</b><span data-i18n="plan.parking.d">340 мест под участком</span></li>
         </ul>
       </div>
-      <figure class="plan-map">
-        <svg viewBox="0 0 960 744" role="img" data-i18n-label="plan.alt" aria-label="Генеральный план квартала: три корпуса, двор, набережная и настил у воды" data-genplan>
-          <rect class="gp-street" x="0" y="0" width="960" height="40"/>
-          <text class="gp-label" x="420" y="26" data-i18n="plan.street">Затонская улица</text>
-          <text class="gp-north" x="936" y="27">N</text>
-          <rect class="gp-plaza" x="0" y="40" width="960" height="528"/>
-          <g class="gp-area" data-key="yard">
-            <rect class="gp-lawn" x="64" y="416" width="224" height="120"/>
-            <rect class="gp-lawn" x="320" y="456" width="176" height="80"/>
-            <rect class="gp-lawn" x="64" y="248" width="112" height="128"/>
-            <rect class="gp-lawn" x="208" y="248" width="288" height="96"/>
-            <rect class="gp-lawn" x="544" y="152" width="80" height="160"/>
-            <rect class="gp-lawn" x="32" y="46.4" width="608" height="32"/>
-            <rect class="gp-lawn" x="914" y="72" width="35.2" height="464"/>
-            <rect class="gp-pool" x="320" y="372" width="176" height="56"/>
-            <rect class="gp-pergola" x="84" y="474.4" width="72" height="33.6"/>
-          </g>
-          <g class="gp-area" data-key="quay"><rect class="gp-prom" x="0" y="568" width="960" height="64"/></g>
-          <g class="gp-trees">
-            <circle cx="72" cy="596.8" r="14"/><circle cx="137.6" cy="596.8" r="14"/><circle cx="203.2" cy="596.8" r="14"/><circle cx="268.8" cy="596.8" r="14"/><circle cx="334.4" cy="596.8" r="14"/><circle cx="400" cy="596.8" r="14"/><circle cx="465.6" cy="596.8" r="14"/>
-            <circle cx="584" cy="603.2" r="12"/><circle cx="668" cy="603.2" r="12"/><circle cx="752" cy="603.2" r="12"/><circle cx="836" cy="603.2" r="12"/>
-            <circle cx="932.8" cy="504" r="13"/><circle cx="932.8" cy="435.2" r="13"/><circle cx="932.8" cy="366.4" r="13"/><circle cx="932.8" cy="297.6" r="13"/><circle cx="932.8" cy="228.8" r="13"/><circle cx="932.8" cy="160" r="13"/><circle cx="932.8" cy="91.2" r="13"/>
-            <circle cx="704" cy="384" r="17"/><circle cx="776" cy="384" r="17"/><circle cx="848" cy="384" r="17"/>
-            <circle cx="128" cy="472" r="16"/><circle cx="224" cy="488" r="16"/><circle cx="112" cy="312" r="16"/><circle cx="320" cy="296" r="16"/><circle cx="416" cy="312" r="16"/><circle cx="576" cy="232" r="14"/>
-          </g>
-          <g class="gp-area" data-key="cafe">
-            <rect x="570.4" y="569.6" width="19.2" height="19.2"/><rect x="597.6" y="569.6" width="19.2" height="19.2"/><rect x="624.8" y="569.6" width="19.2" height="19.2"/><rect x="652" y="569.6" width="19.2" height="19.2"/><rect x="679.2" y="569.6" width="19.2" height="19.2"/><rect x="706.4" y="569.6" width="19.2" height="19.2"/>
-            <circle cx="756" cy="577.6" r="5"/><circle cx="783.2" cy="577.6" r="5"/><circle cx="810.4" cy="577.6" r="5"/><circle cx="837.6" cy="577.6" r="5"/>
-          </g>
-          <rect class="gp-water" x="0" y="632" width="960" height="112"/>
-          <g class="gp-area" data-key="deck">
-            <path class="gp-steps" d="M112 642.4 H416 M112 652.8 H416 M112 663.2 H416"/>
-            <rect class="gp-deck" x="96" y="663.2" width="336" height="36"/>
-          </g>
-          <text class="gp-label water" x="560" y="700" data-i18n="plan.water">Река</text>
-          <g class="gp-area" data-key="parking">
-            <rect class="gp-ramp" x="848" y="40" width="58" height="56"/>
-            <path class="gp-ramp-lines" d="M856 52 H898 M856 64 H898 M856 76 H898 M856 88 H898"/>
-          </g>
-          <g class="gp-house" data-key="clinker" tabindex="0" role="button" data-i18n-label="house.clinker" aria-label="Клинкер">
-            <rect x="48" y="96" width="480" height="120"/>
-            <text x="288" y="152" data-i18n="house.clinker">Клинкер</text>
-            <text class="sub" x="288" y="176" data-plan-sub="clinker"></text>
-          </g>
-          <g class="gp-house" data-key="tower" tabindex="0" role="button" data-i18n-label="house.tower" aria-label="Башня">
-            <rect x="656" y="120" width="208" height="208"/>
-            <text x="760" y="216" data-i18n="house.tower">Башня</text>
-            <text class="sub" x="760" y="240" data-plan-sub="tower"></text>
-          </g>
-          <g class="gp-house" data-key="club" tabindex="0" role="button" data-i18n-label="house.club" aria-label="Клубный">
-            <rect x="544" y="440" width="336" height="112"/>
-            <text x="712" y="492" data-i18n="house.club">Клубный</text>
-            <text class="sub" x="712" y="516" data-plan-sub="club"></text>
-          </g>
-          <path class="gp-scale" d="M24 716 v8 H184 v-8"/>
-          <text class="gp-label small" x="196" y="726" data-i18n="plan.scale">20 м</text>
+      <figure class="plan-map" data-genplan>
+        <img src="../../assets/assembly/site-plan.webp" alt="Генеральный план квартала: три корпуса, двор, набережная и настил у воды" loading="lazy" width="1920" height="1488" data-i18n-alt="plan.alt">
+        <svg viewBox="0 0 1920 1488" aria-hidden="true">
+          <polygon class="gp-area" data-key="yard" points="60,484 1060,484 1060,860 1260,860 1260,1114 60,1114"/>
+          <rect class="gp-area" data-key="quay" x="60" y="1114" width="1800" height="120"/>
+          <rect class="gp-area" data-key="deck" x="240" y="1234" width="630" height="126"/>
+          <rect class="gp-area" data-key="cafe" x="1120" y="1100" width="490" height="66"/>
+          <rect class="gp-area" data-key="parking" x="1726" y="92" width="44" height="44"/>
+          <rect class="gp-house" data-key="clinker" x="150" y="229" width="900" height="225"/>
+          <rect class="gp-house" data-key="tower" x="1290" y="274" width="390" height="390"/>
+          <rect class="gp-house" data-key="club" x="1080" y="873" width="630" height="210"/>
         </svg>
+        <span class="gp-street" data-i18n="plan.street">Затонская улица</span>
+        <span class="gp-north">N</span>
+        <span class="gp-p" data-key="parking">P</span>
+        <button class="gp-tag" type="button" data-key="clinker" style="left: 31.25%; top: 22.9%"><b data-i18n="house.clinker">Клинкер</b><span data-plan-sub="clinker"></span></button>
+        <button class="gp-tag" type="button" data-key="tower" style="left: 77.3%; top: 31.5%"><b data-i18n="house.tower">Башня</b><span data-plan-sub="tower"></span></button>
+        <button class="gp-tag" type="button" data-key="club" style="left: 72.65%; top: 65.7%"><b data-i18n="house.club">Клубный</b><span data-plan-sub="club"></span></button>
+        <span class="gp-water" data-i18n="plan.water">Река</span>
+        <span class="gp-scale"><i></i><span data-i18n="plan.scale">20 м</span></span>
       </figure>
     </div>
   </section>
@@ -430,6 +393,13 @@
       <form class="form" data-form novalidate>
         <label class="input"><span data-i18n="office.name">Имя</span><input name="name" autocomplete="name" required></label>
         <label class="input"><span data-i18n="office.phone">Телефон</span><input name="phone" type="tel" autocomplete="tel" inputmode="tel" required></label>
+        <div class="input"><span data-i18n="office.when">Когда удобно приехать</span>
+          <select name="when" data-select data-i18n-label="office.when" aria-label="Когда удобно приехать">
+            <option value="days" data-i18n="office.when.days">В ближайшие дни</option>
+            <option value="weekend" data-i18n="office.when.weekend">В выходные</option>
+            <option value="call" data-i18n="office.when.call">Позвоните, договоримся</option>
+          </select>
+        </div>
         <p class="input chosen" data-chosen hidden><span data-i18n="office.flat">Квартира</span><b data-chosen-flat></b></p>
         <label class="check"><input type="checkbox" name="agree" required><span data-i18n="office.agree">Согласен на обработку персональных данных</span></label>
         <button class="btn" type="submit" data-i18n="office.send">Записаться на показ</button>

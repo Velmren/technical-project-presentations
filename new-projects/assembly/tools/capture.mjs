@@ -95,6 +95,11 @@ try {
     for (const id of ['flats', 'plan']) {
       await toSection(page, id);
       await page.waitForTimeout(900);
+      // On the site plan one building is lit, as under the pointer.
+      if (id === 'plan') {
+        await page.hover('.gp-tag[data-key="tower"]');
+        await page.waitForTimeout(400);
+      }
       const png = path.join(tmp, `${id}-${lang}.png`);
       await page.screenshot({path: png});
       webp(png, `${id}-${lang}.webp`);
