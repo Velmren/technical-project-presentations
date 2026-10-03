@@ -156,18 +156,20 @@ export function Player({ source, title, locale, startAt = 0, pageKeys = false, p
     setCaptions(Boolean(saved.captions));
 
     // A link with a time mark opens the clip paused at that moment. Some engines drop a seek made while the file
-    // is still loading, so the moment is set again at each loading step and once more when playback begins.
+    // is still loading and land back at the start, so the moment is set again at each loading step, after a seek
+    // that missed, and once more when playback begins. A few tries only: an engine that cannot seek there is left alone.
     pendingStart.current = startAt > 0 ? startAt : null;
+    let tries = 0;
     const ready = () => {
       if (Number.isFinite(element.duration)) setDuration(element.duration);
       const wanted = pendingStart.current;
       if (wanted === null) return;
       const moment = Math.min(wanted, element.duration || wanted);
-      if (Math.abs(element.currentTime - moment) > .5) element.currentTime = moment;
+      if (Math.abs(element.currentTime - moment) > .5 && !element.seeking && tries++ < 6) element.currentTime = moment;
       setStarted(true);
       note(moment);
     };
-    const steps = ['loadedmetadata', 'loadeddata', 'canplay', 'play'] as const;
+    const steps = ['loadedmetadata', 'loadeddata', 'canplay', 'seeked', 'play'] as const;
     for (const step of steps) element.addEventListener(step, ready);
     // Metadata may have arrived before the handlers were attached.
     if (element.readyState >= 1) ready();
