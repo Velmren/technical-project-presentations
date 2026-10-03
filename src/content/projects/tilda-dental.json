@@ -178,13 +178,13 @@
       "text": "Сайт на Tilda, опубликован на её поддомене.",
       "items": [
         "Заявки",
-        "Вёрстка",
+        "Правки",
         "Поиск",
         "Данные"
       ],
       "descriptions": [
         "Заявки из формы сохраняются в кабинете Tilda.",
-        "Секции собраны в Zero Block под пять ширин экрана.",
+        "Тексты, цены и фото владелец меняет в редакторе Tilda.",
         "У каждой страницы свои заголовок, описание и обложка.",
         "Согласие на обработку и отдельная страница условий."
       ]
@@ -242,13 +242,13 @@
         "text": "A Tilda site, live on its subdomain.",
         "items": [
           "Enquiries",
-          "Layout",
+          "Edits",
           "Search",
           "Data"
         ],
         "descriptions": [
           "Form enquiries are stored in the Tilda account.",
-          "Sections are built in Zero Block for five screen widths.",
+          "The owner changes text, prices and photos in the Tilda editor.",
           "Each page has its own title, description and cover.",
           "Consent to data processing and a separate terms page."
         ]

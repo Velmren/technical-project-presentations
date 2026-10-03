@@ -159,14 +159,14 @@
       "title": "Как устроено",
       "text": "Godot 4.7 и GDScript, сборки для браузера, Android и Windows.",
       "items": [
-        "Земля",
+        "Звук",
         "Персонажи",
         "Управление",
         "Сохранения"
       ],
       "descriptions": [
-        "Дорожки, подстилка и вода рисуются из маски, без тайлов.",
-        "Покадровая анимация в трёх видах: спереди, сбоку и сзади.",
+        "Своя мелодия в лесу и в доме Реи, ручей громче у воды, очаг потрескивает, шаги звучат по-разному на траве, земле и досках.",
+        "Люми встаёт к собеседнику лицом и тянется лапой к сундуку или находке, жители здороваются и жестикулируют в разговоре.",
         "Клавиатура и мышь или джойстик на экране телефона.",
         "Глава сохраняется и загружается с того же места."
       ]
@@ -221,14 +221,14 @@
         "title": "How it is built",
         "text": "Godot 4.7 and GDScript, with builds for the browser, Android and Windows.",
         "items": [
-          "Ground",
+          "Sound",
           "Characters",
           "Controls",
           "Saves"
         ],
         "descriptions": [
-          "Paths, forest floor and water are painted from a mask, with no tiles.",
-          "Frame-by-frame animation in three views: front, side and back.",
+          "Separate tunes for the forest and Rhea's house, a brook that grows louder near the water, a crackling hearth, and steps that sound different on grass, earth and boards.",
+          "Lumi turns to face whoever is talking and reaches out for chests and finds, while the locals say hello and gesture as they talk.",
           "Keyboard and mouse, or an on-screen joystick on a phone.",
           "The chapter saves and loads from the same spot."
         ]

@@ -224,8 +224,8 @@
         "Клавиатура"
       ],
       "descriptions": [
-        "Магазин генерируется из одного зерна в Web Worker, интерфейс не замирает при запуске.",
-        "Хранятся в браузере журналом действий поверх данных.",
+        "Около 14 000 заказов и 10 000 клиентов за полтора года, все разделы работают на одних данных.",
+        "Правки сохраняются в браузере и остаются после перезагрузки, а раздел с несохранёнными изменениями спрашивает перед уходом.",
         "Фильтры и открытая запись сохраняются в адресе.",
         "Командное меню по Ctrl+K находит заказ, клиента или раздел."
       ]
@@ -311,8 +311,8 @@
           "Keyboard"
         ],
         "descriptions": [
-          "The store is generated from one seed in a Web Worker, so the interface never freezes on start.",
-          "Kept in the browser as an action log over the data.",
+          "About 14,000 orders and 10,000 customers over eighteen months, with every section working on the same data.",
+          "Edits are kept in the browser and survive a reload, and a section with unsaved changes asks before you leave.",
           "Filters and the open record live in the address.",
           "The Ctrl+K command menu finds an order, a customer or a section."
         ]

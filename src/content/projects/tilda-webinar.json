@@ -166,13 +166,13 @@
       "title": "Как устроено",
       "text": "Сайт на Tilda, опубликован на её поддомене.",
       "items": [
-        "Zero Block",
+        "Урок",
         "Адаптив",
         "Скорость",
         "Данные"
       ],
       "descriptions": [
-        "Сайт целиком собран в Zero Block по своей сетке, включая форму.",
+        "Пять шагов: кадр, объяснение и короткое задание, в конце памятка.",
         "Пять раскладок: от 1200 до 360 пикселей.",
         "Первая загрузка главной весит около 390 КБ.",
         "Согласие на обработку и отдельная страница условий."
@@ -229,13 +229,13 @@
         "title": "How it is built",
         "text": "A Tilda site, live on its subdomain.",
         "items": [
-          "Zero Block",
+          "Lesson",
           "Responsive",
           "Speed",
           "Data"
         ],
         "descriptions": [
-          "The whole site is built in Zero Block on a custom grid, the form included.",
+          "Five steps, each with a photo, an explanation and a short task, and a checklist at the end.",
           "Five layouts, from 1200 down to 360 pixels.",
           "The first load of the home page weighs about 390 KB.",
           "Consent to data processing and a separate terms page."

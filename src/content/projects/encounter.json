@@ -141,8 +141,8 @@
     },
     {
       "kind": "benefit",
-      "title": "Логика отделена от карты",
-      "text": "Этапы и цели описаны в config.yml. Движок сценария не зависит от Minecraft и проходит 27 тестов.",
+      "title": "Сценарий настраивается в одном файле",
+      "text": "Этапы и цели с нужными числами лежат в config.yml: два реле, три стража, 15 секунд в зоне. Чтобы изменить сценарий, плагин пересобирать не нужно.",
       "layers": [
         {
           "image": {
@@ -178,13 +178,13 @@
         "Команды",
         "Сцена",
         "Защита",
-        "Проверка"
+        "Группа"
       ],
       "descriptions": [
         "join, kit, status и start для игроков, reset для администратора.",
         "Обсерватория строится при запуске, прогресс сбрасывается.",
         "Ломать блоки на карте нельзя.",
-        "Два полных прохождения живым игроком с обычными противниками."
+        "Старт записывает всех игроков на карте, опоздавшие ждут следующей попытки, павшие возвращаются ко входу."
       ]
     }
   ],
@@ -228,8 +228,8 @@
         ]
       },
       {
-        "title": "Logic is separate from the map",
-        "text": "Stages and goals are described in config.yml. The scenario engine does not depend on Minecraft and passes 27 tests.",
+        "title": "The scenario is set in one file",
+        "text": "Stages and goals with their counts live in config.yml: two relays, three sentinels, 15 seconds in the zone. Changing the scenario needs no rebuild of the plugin.",
         "alts": [
           "Source viewer: the scenario engine",
           "config.yml: the stages and goals of the scenario"
@@ -242,13 +242,13 @@
           "Commands",
           "Scene",
           "Protection",
-          "Check"
+          "Group"
         ],
         "descriptions": [
           "join, kit, status and start for players, reset for admins.",
           "The observatory is built on start-up, and progress resets.",
           "Blocks on the map cannot be broken.",
-          "Two full runs by a human player against normal enemies."
+          "Start enrols everyone on the map, late arrivals wait for the next attempt, and fallen players return to the entrance."
         ]
       }
     ]

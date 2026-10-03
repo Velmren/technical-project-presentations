@@ -215,13 +215,13 @@
       "title": "Как устроено",
       "text": "JavaScript-модули и Three.js, без сборки.",
       "items": [
-        "3D",
+        "Сцены",
         "Языки",
         "Телефон",
         "Клавиатура"
       ],
       "descriptions": [
-        "Корабль, модули, док и сцены операций собраны в коде, без растровых текстур.",
+        "Модуль поднимается со склада на поворотный стол, вылет и стыковка идут короткими сценами, любая клавиша их пропускает.",
         "Русский и английский переключаются без потери экрана и состояния.",
         "Нижняя панель, листы вместо колонок, кнопка решения закреплена.",
         "Быстрые клавиши для разделов, модулей и вариантов операции."
@@ -304,13 +304,13 @@
         "title": "How it is built",
         "text": "JavaScript modules and Three.js, no build step.",
         "items": [
-          "3D",
+          "Scenes",
           "Languages",
           "Phone",
           "Keyboard"
         ],
         "descriptions": [
-          "The vessel, modules, dock and operation scenes are built in code, with no bitmap textures.",
+          "A module rises from storage onto the turntable, and launch and docking play as short shots that any key skips.",
           "Russian and English switch without losing the screen or the state.",
           "A bottom tab bar, sheets instead of columns and a pinned decision button.",
           "Shortcuts for sections, modules and operation options."

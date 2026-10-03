@@ -187,8 +187,8 @@
       "descriptions": [
         "Русский и английский, выбор запоминается.",
         "Хранится в браузере и не теряется при перезагрузке.",
-        "Мел и графит получены фильтрами из одного снимка колонки.",
-        "Открывается диалогом, Escape закрывает её и возвращает фокус."
+        "Три цвета из одного снимка: мел и графит получаются из кобальтового стилями, отдельная съёмка не нужна.",
+        "Проходится с клавиатуры: фокус остаётся внутри, Escape закрывает её и возвращает фокус туда, откуда её открыли."
       ]
     }
   ],
@@ -262,8 +262,8 @@
         "descriptions": [
           "Russian and English, the choice is remembered.",
           "Stored in the browser and kept after a reload.",
-          "Chalk and Graphite come from one photo of the speaker through filters.",
-          "Opens as a dialog; Escape closes it and returns focus."
+          "Three finishes from one photo: chalk and graphite are styled from the cobalt one, with no extra shoot.",
+          "Works from the keyboard: focus stays inside, and Escape closes it and returns focus to where it was opened."
         ]
       }
     ]

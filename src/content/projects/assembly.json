@@ -154,8 +154,8 @@
     },
     {
       "kind": "benefit",
-      "title": "Тяжёлая картинка при быстрой загрузке",
-      "text": "Первый экран рисуется сразу одним кадром. Остальные подгружаются от грубого шага к мелкому, и прокрутка работает уже после первых 25 кадров. На телефон уходит свой лёгкий набор.",
+      "title": "Пока грузятся кадры, виден готовый квартал",
+      "text": "На месте сцены сразу стоит последний кадр с готовым кварталом. Остальные кадры приходят от грубого шага к мелкому, и прокрутка работает уже после первых 25. На телефон уходит свой лёгкий набор.",
       "figure": {
         "value": "97",
         "label": "из 100 за скорость в Lighthouse на телефоне"
@@ -194,14 +194,14 @@
       "text": "Модель и анимация в Blender, рендер в Cycles, сайт на JavaScript без библиотек.",
       "items": [
         "Модель",
-        "Рендер",
-        "Сцена на странице",
+        "Подписи",
+        "Запасной вариант",
         "Сайт"
       ],
       "descriptions": [
-        "Три дома, участок и анимация сборки построены скриптами на Python: фасадные секции, комнаты за окнами, мощение, фонари.",
-        "180 кадров 1920×1080, для сайта собраны в WebP. Набор для телефона вырезан из тех же кадров.",
-        "Кадр на canvas следует за прокруткой с плавным догоном. Подписи домов привязаны к сцене через камеру анимации и не съезжают при её движении. Если кадры не загрузились, идёт видео сборки.",
+        "Три кирпичных дома с комнатами за окнами, мощением и фонарями, сборка анимирована в Blender.",
+        "Подписи с ценой держатся на своих домах при любой прокрутке и встают с той стороны, где не мешают заголовку.",
+        "Если canvas недоступен или кадры не загрузились, показывается ролик сборки, а если и он не загрузился, остаётся постер.",
         "Квартиры, планировки, цены, сроки и ипотека считаются из одного набора данных. Русский и английский переключаются на месте."
       ]
     }
@@ -264,8 +264,8 @@
         ]
       },
       {
-        "title": "A heavy picture that loads fast",
-        "text": "The first screen is drawn at once from a single frame. The rest load from a coarse step to a fine one, and scrolling works after the first 25 frames. Phones get their own lighter set.",
+        "title": "The finished quarter shows while the frames load",
+        "text": "The last frame, with the finished quarter, stands in for the scene at once. The other frames arrive from a coarse step to a fine one, and scrolling works after the first 25. Phones get their own lighter set.",
         "figure": {
           "value": "97",
           "label": "out of 100 for performance in Lighthouse on a phone"
@@ -280,14 +280,14 @@
         "text": "Model and animation in Blender, render in Cycles, the website in JavaScript with no libraries.",
         "items": [
           "Model",
-          "Render",
-          "The scene on the page",
+          "Labels",
+          "Fallback",
           "Website"
         ],
         "descriptions": [
-          "The three buildings, the site and the assembly animation are built with Python scripts: facade sections, rooms behind the windows, paving, lamps.",
-          "180 frames 1920×1080, packed as WebP for the site. The phone set is cut from the same frames.",
-          "The frame on the canvas follows the scroll with easing. The building labels are tied to the scene through the camera of the animation and stay in place as it moves. If the frames fail to load, a video of the assembly plays.",
+          "Three brick buildings with rooms behind the windows, paving and lamps, with the assembly animated in Blender.",
+          "The price labels stay on their buildings at any scroll position and take the side that keeps them clear of the heading.",
+          "If the canvas is unavailable or the frames fail to load, a video of the assembly plays, and if that fails too, the poster stays.",
           "Apartments, floor plans, prices, dates and the mortgage are all computed from one data set. Russian and English switch in place."
         ]
       }

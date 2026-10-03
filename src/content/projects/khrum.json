@@ -115,12 +115,8 @@
     },
     {
       "kind": "benefit",
-      "title": "Позу можно поправить, а не перерисовать",
-      "text": "Рисунок лежит в одном SVG-файле, риг собирает его в иерархию узлов, ноги работают на обратной кинематике.",
-      "figure": {
-        "value": "49",
-        "label": "чисел описывают позу"
-      },
+      "title": "Правка рисунка сразу видна в движении",
+      "text": "Весь Хрум нарисован в одном SVG-файле. Риг читает его при загрузке, поэтому правка рисунка сразу появляется во всех движениях, кадры перерисовывать не нужно.",
       "layers": [
         {
           "image": {
@@ -222,14 +218,14 @@
       "items": [
         "Рисунок",
         "Движение",
-        "Скорость",
-        "Проверки"
+        "Действия",
+        "Просмотр"
       ],
       "descriptions": [
         "Один редактируемый SVG со слоями, градиентами и точками вращения.",
         "Пружины ушей, хвоста и головы, моргание и взгляд поверх основной позы.",
-        "Лес рисуется в фоновом потоке, разделы вне экрана не рисуются.",
-        "Числовые проверки скольжения копыт и резких скачков позы."
+        "Семь действий поверх состояний: прыжок, поклон, еда, поглаживание, «буп», разворот и торможение с заносом.",
+        "Движение замедляется до ½ и ¼, а скелет можно показать поверх персонажа."
       ]
     }
   ],
@@ -265,12 +261,8 @@
         ]
       },
       {
-        "title": "A pose is adjusted, not redrawn",
-        "text": "The drawing is one SVG file, the rig builds it into a hierarchy of nodes, and the legs use inverse kinematics.",
-        "figure": {
-          "value": "49",
-          "label": "numbers describe a pose"
-        },
+        "title": "Change the drawing, and every motion follows",
+        "text": "All of Khrum is drawn in one SVG file. The rig reads it on load, so a change to the drawing appears in every motion at once, with no frames to redraw.",
         "alts": [
           "Khrum's skeleton over the drawing and the node groups",
           "42 nodes, 132 shapes, 49 pose parameters"
@@ -302,14 +294,14 @@
         "items": [
           "Drawing",
           "Motion",
-          "Speed",
-          "Checks"
+          "Actions",
+          "Viewing"
         ],
         "descriptions": [
           "One editable SVG with layers, gradients and pivot points.",
           "Springs for ears, tail and head, blinking and gaze on top of the main pose.",
-          "The forest is drawn in a background thread, and off-screen sections are not drawn.",
-          "Numeric checks for hoof sliding and sudden jumps in the pose."
+          "Seven actions on top of the states: a jump, a bow, eating, petting, a boop, a turn and a skidding stop.",
+          "Motion slows to half or a quarter speed, and the skeleton can be shown over the character."
         ]
       }
     ],

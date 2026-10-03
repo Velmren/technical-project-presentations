@@ -216,13 +216,13 @@
         "Модели",
         "Адрес",
         "Движение",
-        "Проверки"
+        "Поиск"
       ],
       "descriptions": [
-        "Каждый предмет построен как параметрическая модель, снимки, чертежи и силуэты получены из неё.",
+        "Каждый предмет построен как параметрическая модель: снимки, чертежи и силуэты получены из неё и совпадают по размерам.",
         "Фильтры хранятся в адресе, отобранный вид можно отправить ссылкой.",
         "Изображение переходит из сетки в карточку, сниженная анимация учитывается.",
-        "Семь тестов логики и восемнадцать сценариев в браузере."
+        "Ищет на русском и английском, сортирует по номеру, цене или размеру."
       ]
     }
   ],
@@ -302,13 +302,13 @@
           "Models",
           "Address",
           "Motion",
-          "Checks"
+          "Search"
         ],
         "descriptions": [
-          "Every object is a parametric model; photos, drawings and silhouettes come from it.",
+          "Every object is a parametric model; photos, drawings and silhouettes come from it and match in size.",
           "Filters live in the address, so a filtered view can be shared as a link.",
           "The image travels from the grid into the product page, and reduced motion is respected.",
-          "Seven logic tests and eighteen browser scenarios."
+          "Works in Russian and English, and sorts by number, price or size."
         ]
       }
     ]

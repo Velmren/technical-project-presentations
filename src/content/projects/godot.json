@@ -179,13 +179,13 @@
       "text": "Godot 4.7 и GDScript. Интерфейс, фоны и анимации нарисованы кодом игры.",
       "items": [
         "Управление",
-        "Проверки",
+        "Темы",
         "Звук и движение",
         "Языки"
       ],
       "descriptions": [
         "Мышь или клавиши от 1 до 4, Tab и Enter.",
-        "Тесты счёта, завершения раунда, перезапуска, переводов и импорта вопросов.",
+        "Шесть вопросов в трёх темах: звук, веб и космос. У каждой свой цвет и рисунок фона, между темами фон сменяется шторкой.",
         "Мягкие звуки и анимацию можно выключить.",
         "Русский и английский, переключатель в шапке. Сборки для Windows и браузера."
       ]
@@ -243,13 +243,13 @@
         "text": "Godot 4.7 and GDScript. The interface, backdrops and animation are drawn by the game's own code.",
         "items": [
           "Controls",
-          "Checks",
+          "Topics",
           "Sound and motion",
           "Languages"
         ],
         "descriptions": [
           "Mouse or keys 1 to 4, Tab and Enter.",
-          "Tests for scoring, round completion, restart, translations and question import.",
+          "Six questions across three topics: sound, the web and space. Each has its own colour and background drawing, and a wipe changes the scene between topics.",
           "Soft sounds and animation can be turned off.",
           "Russian and English with a switch in the top bar. Builds for Windows and the browser."
         ]

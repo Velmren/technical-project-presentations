@@ -196,13 +196,13 @@
         "Секция",
         "Расширение",
         "Сервер",
-        "Проверка"
+        "Тема"
       ],
       "descriptions": [
         "Liquid и веб-компонент на 13 КБ без библиотек. Товар, размеры, цвета и длину монограммы менеджер задаёт в настройках секции.",
         "Theme app extension: блок срока доставки ставится внутрь секции, app embed следит за корзиной на всех страницах.",
-        "Node.js без зависимостей за app proxy. Запросы принимаются только с подписью Shopify не старше пяти минут.",
-        "28 автоматических тестов, Shopify Theme Check без замечаний к файлам секции, анимация 140 кадров в секунду на экране 144 Гц."
+        "Отвечает только на запросы магазина с подписью Shopify, подписи старше пяти минут отклоняются.",
+        "Секция сделана для Dawn 16: после добавления открывается его корзина, а в редакторе темы секцию можно поставить на любую страницу."
       ]
     }
   ],
@@ -282,13 +282,13 @@
           "Section",
           "Extension",
           "Server",
-          "Checks"
+          "Theme"
         ],
         "descriptions": [
           "Liquid and a 13 KB web component with no libraries. The merchant sets the product, sizes, colours and monogram length in the section settings.",
           "Theme app extension: the delivery block sits inside the section, an app embed watches the cart on every page.",
-          "Node.js with no dependencies behind the app proxy. Requests are accepted only with a Shopify signature no older than five minutes.",
-          "28 automated tests, Shopify Theme Check with no findings in the section files, animation at 140 frames a second on a 144 Hz screen."
+          "Answers only requests from the store signed by Shopify, and turns away signatures older than five minutes.",
+          "Built for Dawn 16: adding to cart opens its cart drawer, and the theme editor can place the section on any page."
         ]
       }
     ]

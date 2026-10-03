@@ -177,16 +177,16 @@
       "title": "Как устроено",
       "text": "Сайт на Tilda, опубликован на её поддомене.",
       "items": [
-        "Вёрстка",
         "Заявки",
         "Правки",
-        "Фотографии"
+        "Фотографии",
+        "Скорость"
       ],
       "descriptions": [
-        "Все блоки собраны в Zero Block с раскладкой под пять ширин экрана.",
         "Заявки из формы попадают в кабинет Tilda.",
         "Даты, цены и число мест владелец меняет в редакторе.",
-        "Кадры настоящих мест со свободной лицензией, авторы указаны на сайте."
+        "Кадры настоящих мест со свободной лицензией, авторы указаны на сайте.",
+        "Первый экран на телефоне весит 486 КБ, остальные фото грузятся по мере прокрутки."
       ]
     }
   ],
@@ -241,16 +241,16 @@
         "title": "How it is built",
         "text": "A Tilda site, live on its subdomain.",
         "items": [
-          "Layout",
           "Enquiries",
           "Edits",
-          "Photos"
+          "Photos",
+          "Speed"
         ],
         "descriptions": [
-          "Every block is built in Zero Block with layouts for five screen widths.",
           "Form enquiries arrive in the Tilda account.",
           "The owner changes dates, prices and seats in the editor.",
-          "Photos of the real places under free licences, with authors credited on the site."
+          "Photos of the real places under free licences, with authors credited on the site.",
+          "The first screen on a phone weighs 486 KB, and the other photos load as you scroll."
         ]
       }
     ]
