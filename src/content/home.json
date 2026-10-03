@@ -78,6 +78,70 @@
       }
     },
     {
+      "slug": "shopify",
+      "status": "accepted",
+      "placement": "main",
+      "title": "Sheaf",
+      "type": "Shopify",
+      "description": "Конфигуратор товара в теме Shopify: секция на Liquid, блок срока доставки и сервер на Node.",
+      "category": "Веб",
+      "tags": [
+        "Веб"
+      ],
+      "stack": "Shopify / Liquid / Node.js",
+      "year": 2026,
+      "preview": {
+        "src": "/assets/home/card-shopify.webp",
+        "alt": "Страница товара: зелёный блокнот с красной резинкой и монограммой, рядом параметры",
+        "light": true,
+        "overlay": {
+          "src": "/assets/home/card-shopify-mobile.webp",
+          "alt": "Конфигуратор на телефоне"
+        }
+      },
+      "live": {
+        "slides": [
+          "/assets/shopify/hero.webp",
+          "/assets/shopify/cart.webp",
+          "/assets/shopify/locale-de.webp"
+        ]
+      },
+      "facts": [
+        {
+          "value": "48",
+          "label": "вариантов без фотографий",
+          "name": "Варианты товара"
+        }
+      ],
+      "action": {
+        "label": "Открыть демо",
+        "href": "/projects/shopify/"
+      },
+      "details": "/shopify/",
+      "en": {
+        "slides": [
+          "/assets/shopify/hero-en.webp",
+          "/assets/shopify/cart-en.webp",
+          "/assets/shopify/locale-de.webp"
+        ],
+        "overlay": "/assets/home/card-shopify-mobile-en.webp",
+        "title": "Sheaf",
+        "type": "Shopify",
+        "description": "A product configurator in a Shopify theme: a Liquid section, a delivery estimate block and a Node server.",
+        "action": "Open the demo",
+        "alt": "Product page: a green notebook with a red band and a monogram, options beside it",
+        "overlayAlt": "The configurator on a phone",
+        "facts": [
+          {
+            "value": "48",
+            "label": "variants without photos",
+            "name": "Product variants"
+          }
+        ],
+        "details": "/en/shopify/"
+      }
+    },
+    {
       "slug": "forma",
       "status": "accepted",
       "placement": "main",
@@ -126,6 +190,88 @@
           "/assets/forma/case/selection-en.webp"
         ],
         "overlay": "/assets/home/card-forma-mobile-en.webp"
+      }
+    },
+    {
+      "slug": "falz",
+      "status": "accepted",
+      "placement": "main",
+      "title": "Фальц",
+      "type": "Сайт и магазин",
+      "description": "Сайт багетной мастерской на WordPress: калькулятор рамы, услуги и магазин.",
+      "category": "Веб",
+      "tags": [
+        "Веб"
+      ],
+      "stack": "WordPress / WooCommerce",
+      "year": 2026,
+      "preview": {
+        "src": "/assets/home/card-falz-ru.webp",
+        "alt": "Главная сайта «Фальц»: рамы на синей стене",
+        "overlay": {
+          "src": "/assets/home/card-falz-mobile-ru.webp",
+          "alt": "Магазин рам на телефоне"
+        }
+      },
+      "action": {
+        "label": "Открыть сайт",
+        "href": "https://wp.velmren.com"
+      },
+      "details": "/falz/",
+      "live": {
+        "slides": [
+          "/assets/falz/home-ru.webp",
+          "/assets/falz/calculator-ru.webp",
+          "/assets/falz/shop-ru.webp",
+          "/assets/falz/product-ru.webp"
+        ]
+      },
+      "facts": [
+        {
+          "value": "12",
+          "label": "товаров, 78 вариаций",
+          "name": "Товары и вариации"
+        },
+        {
+          "value": "9",
+          "label": "видов багета в калькуляторе",
+          "name": "Багет"
+        },
+        {
+          "value": "98",
+          "label": "Lighthouse у магазина на телефоне",
+          "name": "Скорость"
+        }
+      ],
+      "en": {
+        "title": "Falz",
+        "type": "Site and shop",
+        "description": "A framing workshop site on WordPress: frame calculator, services and a shop.",
+        "action": "Open the site",
+        "details": "/en/falz/",
+        "alt": "Falz home page: frames on a blue wall",
+        "overlayAlt": "Frame shop on a phone",
+        "overlay": "/assets/home/card-falz-mobile-en.webp",
+        "slides": [
+          "/assets/falz/home-en.webp",
+          "/assets/falz/calculator-en.webp",
+          "/assets/falz/shop-en.webp",
+          "/assets/falz/product-en.webp"
+        ],
+        "facts": [
+          {
+            "name": "Products and variations",
+            "label": "products, 78 variations"
+          },
+          {
+            "name": "Mouldings",
+            "label": "mouldings in the calculator"
+          },
+          {
+            "name": "Speed",
+            "label": "Lighthouse for the shop on a phone"
+          }
+        ]
       }
     },
     {
@@ -239,7 +385,7 @@
       "placement": "main",
       "title": "Category Spark",
       "type": "Игра-викторина",
-      "description": "Викторина с понятной обратной связью и счётом. Играется в браузере.",
+      "description": "Викторина с понятной обратной связью и счётом, на русском и английском. Играется в браузере.",
       "category": "Игра",
       "tags": [
         "Игры"
@@ -248,7 +394,7 @@
       "year": 2026,
       "preview": {
         "src": "/assets/home/card-spark.webp",
-        "alt": "Category Spark: вопрос о единице частоты, выбран верный ответ",
+        "alt": "Category Spark: вопрос о единице частоты, выбран верный ответ «Герцы»",
         "frame": true
       },
       "action": {
@@ -264,10 +410,50 @@
       },
       "en": {
         "type": "Quiz game",
-        "description": "A quiz with clear feedback and scoring, playable in the browser.",
+        "description": "A quiz with clear feedback and scoring, in Russian and English, playable in the browser.",
         "action": "Play in browser",
         "alt": "Category Spark: a question about frequency units with the right answer chosen",
-        "details": "/en/godot/"
+        "details": "/en/godot/",
+        "media": {
+          "/assets/home/card-spark.webp": "/assets/home/card-spark-en.webp",
+          "/assets/home/live-spark-poster.webp": "/assets/home/live-spark-poster-en.webp",
+          "/assets/godot/category-spark-playthrough.mp4": "/assets/godot/category-spark-playthrough-en.mp4"
+        }
+      }
+    },
+    {
+      "slug": "tilda-interior",
+      "status": "accepted",
+      "placement": "main",
+      "title": "Вариант света",
+      "type": "Сайт студии",
+      "description": "Сайт интерьерной студии: галерея, услуги и заявка.",
+      "category": "Веб",
+      "tags": [
+        "Веб",
+        "Дизайн"
+      ],
+      "stack": "Tilda",
+      "year": 2026,
+      "preview": {
+        "src": "/assets/studio-concepts/concept-38-hero.webp",
+        "alt": "Интерьерная визуализация концепции студии"
+      },
+      "action": {
+        "label": "Открыть сайт",
+        "href": "https://politely-able-rhino.tilda.ws/"
+      },
+      "details": "/tilda-interior/",
+      "live": {
+        "scroll": "/assets/home/live-tilda-full.webp"
+      },
+      "en": {
+        "type": "Studio website",
+        "description": "A website for an interior studio: gallery, services and enquiry form.",
+        "action": "Open the site",
+        "alt": "Interior visualisation from the studio concept",
+        "title": "Light Variant",
+        "details": "/en/tilda-interior/"
       }
     },
     {
@@ -335,6 +521,68 @@
       }
     },
     {
+      "slug": "assembly",
+      "status": "accepted",
+      "placement": "main",
+      "title": "Вереста",
+      "type": "3D для сайта",
+      "description": "Сайт продаж жилого квартала: 3D-модель достраивается по графику, пока листаешь страницу. Подбор квартир с планировками, генплан, ипотека.",
+      "category": "Веб",
+      "tags": [
+        "Веб",
+        "Анимация",
+        "3D"
+      ],
+      "stack": "Blender / Canvas",
+      "year": 2026,
+      "preview": {
+        "src": "/assets/assembly/case/card-ru.webp",
+        "alt": "Первый экран «Вересты»: квартал у воды, подбор квартиры и график строительства",
+        "overlay": {
+          "src": "/assets/assembly/case/card-mobile-ru.webp",
+          "alt": "Собранный квартал на телефоне"
+        }
+      },
+      "live": {
+        "video": {
+          "src": "/assets/assembly/case/scroll.mp4",
+          "poster": "/assets/assembly/case/card-ru.webp"
+        }
+      },
+      "facts": [
+        {
+          "value": "180",
+          "label": "кадров листаются по прокрутке",
+          "name": "Секвенция"
+        }
+      ],
+      "action": {
+        "label": "Смотреть вживую",
+        "href": "/projects/assembly/"
+      },
+      "details": "/assembly/",
+      "en": {
+        "title": "Veresta",
+        "type": "3D for the web",
+        "description": "A sales website for a residential quarter: the 3D model goes up on schedule as you scroll. Apartment search with floor plans, a site plan, mortgage.",
+        "action": "See it live",
+        "alt": "The first screen of Veresta: the quarter by the water, apartment search and the construction schedule",
+        "overlayAlt": "The finished quarter on a phone",
+        "overlay": "/assets/assembly/case/card-mobile-en.webp",
+        "facts": [
+          {
+            "value": "180",
+            "label": "frames follow the scroll",
+            "name": "Sequence"
+          }
+        ],
+        "details": "/en/assembly/",
+        "media": {
+          "/assets/assembly/case/card-ru.webp": "/assets/assembly/case/card-en.webp"
+        }
+      }
+    },
+    {
       "slug": "mobile-game",
       "status": "accepted",
       "placement": "main",
@@ -372,7 +620,7 @@
       },
       "details": "/mobile-game/",
       "en": {
-        "title": "Lumi",
+        "title": "Lumi: Isle of Winds",
         "type": "Adventure game",
         "description": "An adventure on the island of winds: exploring, helping the locals and fighting. Plays in the browser.",
         "action": "Play",
@@ -384,7 +632,48 @@
             "name": "Version"
           }
         ],
-        "details": "/en/mobile-game/"
+        "details": "/en/mobile-game/",
+        "slides": [
+          "/assets/lumi/yard-en.webp",
+          "/assets/lumi/oak-en.webp",
+          "/assets/lumi/room-en.webp",
+          "/assets/lumi/book-map-en.webp"
+        ]
+      }
+    },
+    {
+      "slug": "tilda-tour",
+      "status": "accepted",
+      "placement": "main",
+      "title": "Севернее",
+      "type": "Сайт турклуба",
+      "description": "Сайт туров выходного дня: расписание, программа по часам и бронь.",
+      "category": "Веб",
+      "tags": [
+        "Веб",
+        "Дизайн"
+      ],
+      "stack": "Tilda",
+      "year": 2026,
+      "preview": {
+        "src": "/assets/tilda-tour/preview.webp",
+        "alt": "Ладожские шхеры: гранитные острова с соснами"
+      },
+      "action": {
+        "label": "Открыть сайт",
+        "href": "https://severnee.tilda.ws/"
+      },
+      "details": "/tilda-tour/",
+      "live": {
+        "scroll": "/assets/home/live-tilda-tour-full.webp"
+      },
+      "en": {
+        "type": "Tour club website",
+        "description": "A website for weekend tours: schedule, hour-by-hour programme and booking.",
+        "action": "Open the site",
+        "alt": "Ladoga skerries: granite islands with pines",
+        "title": "Severnee",
+        "details": "/en/tilda-tour/"
       }
     },
     {
@@ -427,12 +716,70 @@
       }
     },
     {
-      "slug": "tilda-interior",
+      "slug": "motion",
       "status": "accepted",
       "placement": "main",
-      "title": "Вариант света",
-      "type": "Сайт студии",
-      "description": "Сайт интерьерной студии: галерея, услуги и заявка.",
+      "title": "Моушен-графика и монтаж",
+      "type": "Анимация",
+      "description": "Логотипы на экранах, персонажи в Lottie, анимация для сайтов в одном файле и ролики со звуком.",
+      "category": "Анимация",
+      "tags": [
+        "Анимация"
+      ],
+      "stack": "Lottie / Canvas / H.264",
+      "year": 2026,
+      "preview": {
+        "src": "/assets/home/card-motion.webp",
+        "alt": "Хрум бежит, цыплёнок вылупляется из яйца с конфетти, вертикальный экран с логотипом",
+        "overlay": {
+          "src": "/assets/home/card-motion-mobile.webp",
+          "alt": "Вертикальный экран с логотипом партнёра"
+        }
+      },
+      "live": {
+        "slides": [
+          "/assets/home/card-motion.webp",
+          "/assets/motion/hero-khrum.webp",
+          "/assets/motion/hatch-success.webp",
+          "/assets/motion/reel-poster.webp"
+        ]
+      },
+      "facts": [
+        {
+          "value": "28 КБ",
+          "label": "цикл Lottie в gzip",
+          "name": "Вес цикла"
+        }
+      ],
+      "action": {
+        "label": "Смотреть вживую",
+        "href": "/projects/motion/"
+      },
+      "details": "/motion/",
+      "en": {
+        "title": "Motion graphics and editing",
+        "type": "Animation",
+        "description": "Logos on screens, characters in Lottie, website animation in a single file and videos with sound.",
+        "action": "See it live",
+        "alt": "Khrum runs, a chick hatches from an egg in confetti, a vertical screen with a logo",
+        "overlayAlt": "A vertical screen with a partner logo",
+        "facts": [
+          {
+            "value": "28 KB",
+            "label": "Lottie cycle, gzipped",
+            "name": "Cycle size"
+          }
+        ],
+        "details": "/en/motion/"
+      }
+    },
+    {
+      "slug": "tilda-dental",
+      "status": "accepted",
+      "placement": "main",
+      "title": "Соседний двор",
+      "type": "Сайт клиники",
+      "description": "Сайт районной стоматологии: цены, врачи и запись на приём.",
       "category": "Веб",
       "tags": [
         "Веб",
@@ -441,24 +788,24 @@
       "stack": "Tilda",
       "year": 2026,
       "preview": {
-        "src": "/assets/studio-concepts/concept-38-hero.webp",
-        "alt": "Интерьерная визуализация концепции студии"
+        "src": "/assets/tilda-dental/preview.webp",
+        "alt": "Врач разговаривает с пациентом в кабинете стоматологии"
       },
       "action": {
         "label": "Открыть сайт",
-        "href": "https://politely-able-rhino.tilda.ws/"
+        "href": "https://sosedniy-dvor.tilda.ws/"
       },
-      "details": "/tilda-interior/",
+      "details": "/tilda-dental/",
       "live": {
-        "scroll": "/assets/home/live-tilda-full.webp"
+        "scroll": "/assets/home/live-dental-full.webp"
       },
       "en": {
-        "type": "Studio website",
-        "description": "A website for an interior studio: gallery, services and enquiry form.",
+        "type": "Clinic website",
+        "description": "A website for a neighbourhood dental clinic: prices, doctors and appointment form.",
         "action": "Open the site",
-        "alt": "Interior visualisation from the studio concept",
-        "title": "Light Variant",
-        "details": "/en/tilda-interior/"
+        "alt": "A dentist talking with a patient in the treatment room",
+        "title": "Sosedniy Dvor",
+        "details": "/en/tilda-dental/"
       }
     },
     {
@@ -525,6 +872,41 @@
           }
         ],
         "details": "/en/khrum/"
+      }
+    },
+    {
+      "slug": "tilda-webinar",
+      "status": "accepted",
+      "placement": "main",
+      "title": "Тихая фактура",
+      "type": "Лендинг урока",
+      "description": "Лендинг бесплатного урока по декору: программа, пример, форма и сам урок по шагам.",
+      "category": "Веб",
+      "tags": [
+        "Веб",
+        "Дизайн"
+      ],
+      "stack": "Tilda",
+      "year": 2026,
+      "preview": {
+        "src": "/assets/tilda-webinar/case/hero.webp",
+        "alt": "Первый экран сайта «Тихая фактура»"
+      },
+      "action": {
+        "label": "Открыть сайт",
+        "href": "https://bake-enjoyable-hake.tilda.ws/"
+      },
+      "details": "/tilda-webinar/",
+      "live": {
+        "scroll": "/assets/home/live-tilda-webinar-full.webp"
+      },
+      "en": {
+        "type": "Lesson landing page",
+        "description": "A landing page for a free decor lesson: programme, example, form and the lesson itself in steps.",
+        "action": "Open the site",
+        "alt": "First screen of the Quiet Texture site",
+        "title": "Quiet Texture",
+        "details": "/en/tilda-webinar/"
       }
     },
     {

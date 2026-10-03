@@ -8,7 +8,7 @@ body:has(.cc-page) { background: #111213; color: #ecedef; color-scheme: dark; }
   --line: rgba(236, 237, 239, .09);
   --text: #ecedef;
   --muted: #a4a9af;
-  --dim: #71767d;
+  --dim: #7d8289;
   --ink: #111213;
   --accent: #3a6cf2;
   --gutter: clamp(18px, 4.4vw, 64px);
@@ -101,18 +101,20 @@ body:has(.cc-page) { background: #111213; color: #ecedef; color-scheme: dark; }
 .cc-tool[aria-pressed='true'] { color: var(--text); border-color: var(--accent); background: color-mix(in srgb, var(--accent) 14%, transparent); }
 .cc-icon-tool { width: 34px; padding: 0; justify-content: center; }
 
-.cc-switch { position: relative; z-index: 2; display: grid; grid-template-columns: repeat(var(--tabs, 6), minmax(0, 1fr)); margin-top: 18px; border-top: 1px solid var(--line); }
+/* Work names on an even grid that wraps into rows, so 15-20 works fit with every name whole; each name
+   sits under its own rule, which carries the progress of the work on screen. */
+.cc-switch { position: relative; z-index: 2; display: grid; grid-template-columns: repeat(auto-fill, minmax(132px, 1fr)); column-gap: 16px; margin-top: 18px; }
 .cc-switch button {
-  position: relative; padding: 14px 10px 0 0; text-align: left; font-size: 14px; line-height: 1.3; color: var(--dim);
-  white-space: nowrap; overflow: hidden; text-overflow: ellipsis; transition: color .2s;
+  position: relative; padding: 12px 0 10px; text-align: left; font-size: 14px; line-height: 1.3; color: var(--dim);
+  border-top: 1px solid var(--line); transition: color .2s;
 }
-.cc-switch button::before { content: ''; position: absolute; left: 0; right: 10px; top: -1px; height: 1px; background: transparent; transition: background-color .2s; }
+.cc-switch button::before { content: ''; position: absolute; left: 0; right: 0; top: -1px; height: 1px; background: transparent; transition: background-color .2s; }
 .cc-switch button:hover { color: var(--muted); }
 .cc-switch button:hover::before { background: rgba(236, 237, 239, .3); }
 .cc-switch button[aria-selected='true'] { color: var(--text); }
 .cc-switch button[aria-selected='true']::before { background: rgba(236, 237, 239, .22); }
 .cc-progress {
-  position: absolute; left: 0; right: 10px; top: -1px; height: 1px; background: var(--tab-accent);
+  position: absolute; left: 0; right: 0; top: -1px; height: 1px; background: var(--tab-accent);
   transform-origin: left; animation: cc-progress linear forwards;
 }
 .cc-progress[data-paused] { animation-play-state: paused; }
@@ -143,7 +145,7 @@ body:has(.cc-page) { background: #111213; color: #ecedef; color-scheme: dark; }
 .cc-feature-media .live-scroll img { width: 100%; }
 .cc-phone {
   position: absolute; right: 4%; bottom: -1px; width: 21%; aspect-ratio: 390 / 408; overflow: hidden;
-  border: 5px solid #1c1d20; border-bottom: 0; border-radius: 16px 16px 0 0; background: #fff;
+  border: 5px solid #1c1d20; border-bottom: 0; border-radius: 16px 16px 0 0; background: #1c1d20;
   box-shadow: 0 -18px 50px -12px rgba(0, 0, 0, .45);
 }
 .cc-phone img { width: 100%; height: 100%; object-fit: cover; object-position: top; }
@@ -179,10 +181,10 @@ body:has(.cc-page) { background: #111213; color: #ecedef; color-scheme: dark; }
   .cc-canvas { top: -10%; bottom: -10%; left: -6%; right: -6%; width: 112%; height: 120%; }
   .cc-caption { flex-wrap: wrap; gap: 12px; margin-top: 20px; }
   .cc-now span { display: none; }
+  /* One scrolling row on a phone: names stay whole and the row is swiped. */
   .cc-switch { display: flex; overflow-x: auto; scrollbar-width: none; gap: 18px; }
   .cc-switch::-webkit-scrollbar { display: none; }
-  .cc-switch button { flex: none; padding-right: 0; }
-  .cc-switch button::before, .cc-progress { right: 0; }
+  .cc-switch button { flex: none; white-space: nowrap; }
   .cc-works { padding-top: 72px; }
   .cc-works-head h2 { font-size: 34px; }
   .cc-filter { width: 100%; overflow-x: auto; scrollbar-width: none; }

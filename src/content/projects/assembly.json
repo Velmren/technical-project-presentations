@@ -1,0 +1,296 @@
+{
+  "status": "published",
+  "presentation": "case",
+  "year": 2026,
+  "slug": "assembly",
+  "title": "Вереста",
+  "eyebrow": "3D для сайта",
+  "lead": "Сайт продаж жилого квартала, где 3D-модель достраивается по графику, пока листаешь страницу",
+  "summary": "Три дома вырастают по частям: каркас, перекрытия, фасады, свет в окнах. Прокрутка двигает график строительства, и каждый корпус сдаётся в свой квартал. Ниже рабочий сайт продаж: подбор квартир с планировками, генплан, ипотека, офис продаж.",
+  "note": "Квартал вымышленный, модель, сцена и сайт сделаны с нуля",
+  "closing": "Прокрутите страницу и достройте квартал",
+  "accent": "#d9603f",
+  "category": "3D для сайта",
+  "technologies": [
+    "Blender",
+    "Cycles",
+    "Canvas",
+    "JavaScript"
+  ],
+  "order": 35,
+  "tone": "night",
+  "cover": {
+    "kind": "image",
+    "image": {
+      "src": "/assets/assembly/case/final-ru.webp",
+      "alt": "Первый экран «Вересты»: собранный квартал из трёх кирпичных домов, подбор квартиры и график строительства",
+      "width": 2400,
+      "height": 1500
+    }
+  },
+  "actions": [
+    {
+      "label": "Смотреть вживую",
+      "href": "/projects/assembly/"
+    }
+  ],
+  "showcase": {
+    "image": {
+      "src": "/assets/assembly/case/final-ru.webp",
+      "alt": "Первый экран «Вересты»: квартал собран, на домах подписи с ценой, внизу график строительства",
+      "width": 2400,
+      "height": 1500
+    },
+    "video": "/assets/assembly/case/scroll.mp4",
+    "url": "velmren.com/projects/assembly/",
+    "phone": {
+      "src": "/assets/assembly/case/phone-ru.webp",
+      "alt": "Собранный квартал на телефоне",
+      "width": 780,
+      "height": 1688
+    }
+  },
+  "sections": [
+    {
+      "kind": "benefit",
+      "title": "Прокрутка двигает стройку по графику",
+      "text": "Кадр следует за прокруткой вперёд и назад. Под сценой график по корпусам: бегунок идёт от IV квартала 2026 к III кварталу 2028, клубный дом, «Клинкер» и башня достраиваются в свои сроки, на готовых домах появляются подписи с ценой.",
+      "figure": {
+        "value": "180",
+        "label": "кадров в секвенции"
+      },
+      "layers": [
+        {
+          "image": {
+            "src": "/assets/assembly/case/frame-ru.webp",
+            "alt": "Середина сборки: каркасы с перекрытиями, фасадные секции на нижних этажах",
+            "width": 2400,
+            "height": 1500
+          },
+          "x": 0,
+          "y": 0.02,
+          "w": 0.58,
+          "url": "velmren.com/projects/assembly/"
+        },
+        {
+          "image": {
+            "src": "/assets/assembly/case/stage-ru.webp",
+            "alt": "График строительства под сценой: клубный дом готов наполовину, бегунок на III квартале 2027",
+            "width": 1956,
+            "height": 726
+          },
+          "x": 0.6,
+          "y": 0.3,
+          "w": 0.4,
+          "front": true
+        }
+      ]
+    },
+    {
+      "kind": "benefit",
+      "title": "Рабочий сайт продаж, а не заставка",
+      "text": "126 квартир на демо-данных с живым фильтром по комнатам, корпусу, площади, цене и этажу. У каждой своя планировка: 16 чертежей строятся из комнат, площади и цены сходятся с паспортом квартала.",
+      "figure": {
+        "value": "16",
+        "label": "планировок, чертежи из данных"
+      },
+      "layers": [
+        {
+          "image": {
+            "src": "/assets/assembly/case/flats-ru.webp",
+            "alt": "Блок «Квартиры»: фильтры, список и карточка выбранной квартиры с планировкой",
+            "width": 2400,
+            "height": 1500
+          },
+          "x": 0,
+          "y": 0.02,
+          "w": 0.58,
+          "url": "velmren.com/projects/assembly/#flats"
+        },
+        {
+          "image": {
+            "src": "/assets/assembly/case/copy-ru.webp",
+            "alt": "Подбор квартиры на первом экране: комнаты, цена, площадь и число подходящих квартир",
+            "width": 606,
+            "height": 587
+          },
+          "x": 0.64,
+          "y": 0.08,
+          "w": 0.3,
+          "front": true
+        }
+      ]
+    },
+    {
+      "kind": "benefit",
+      "title": "Генплан из той же сцены",
+      "text": "Генплан отрендерен сверху из той же модели, что собирается на первом экране. Наведение на корпус подсвечивает его на плане и в списке, клик открывает его квартиры. Район показан своей схемой, без чужих карт и ключей.",
+      "layers": [
+        {
+          "image": {
+            "src": "/assets/assembly/case/plan-ru.webp",
+            "alt": "Генплан квартала сверху: три корпуса, двор без машин, набережная и настил у воды, башня подсвечена",
+            "width": 2400,
+            "height": 1500
+          },
+          "x": 0,
+          "y": 0.02,
+          "w": 0.58,
+          "url": "velmren.com/projects/assembly/#plan"
+        },
+        {
+          "image": {
+            "src": "/assets/assembly/home-tower.webp",
+            "alt": "Башня из светлого кирпича с бронзовым венцом",
+            "width": 900,
+            "height": 1125
+          },
+          "x": 0.66,
+          "y": 0.04,
+          "w": 0.28,
+          "front": true
+        }
+      ]
+    },
+    {
+      "kind": "benefit",
+      "title": "Тяжёлая картинка при быстрой загрузке",
+      "text": "Первый экран рисуется сразу одним кадром. Остальные подгружаются от грубого шага к мелкому, и прокрутка работает уже после первых 25 кадров. На телефон уходит свой лёгкий набор.",
+      "figure": {
+        "value": "91",
+        "label": "из 100 за скорость в Lighthouse на телефоне"
+      },
+      "layers": [
+        {
+          "image": {
+            "src": "/assets/assembly/case/mid-ru.webp",
+            "alt": "Клубный дом собран, «Клинкер» и башня ещё растут",
+            "width": 2400,
+            "height": 1500
+          },
+          "x": 0,
+          "y": 0.02,
+          "w": 0.58,
+          "url": "velmren.com/projects/assembly/"
+        },
+        {
+          "image": {
+            "src": "/assets/assembly/case/phone-ru.webp",
+            "alt": "Тот же первый экран на телефоне: текст сверху, квартал и график снизу",
+            "width": 780,
+            "height": 1688
+          },
+          "x": 0.66,
+          "y": 0,
+          "w": 0.28,
+          "front": true,
+          "phone": true
+        }
+      ]
+    },
+    {
+      "kind": "features",
+      "title": "Как устроено",
+      "text": "Модель и анимация в Blender, рендер в Cycles, сайт на JavaScript без библиотек.",
+      "items": [
+        "Модель",
+        "Рендер",
+        "Сцена на странице",
+        "Сайт"
+      ],
+      "descriptions": [
+        "Три дома, участок и анимация сборки построены скриптами на Python: фасадные секции, комнаты за окнами, мощение, фонари.",
+        "180 кадров 1920×1080, для сайта собраны в WebP. Набор для телефона вырезан из тех же кадров.",
+        "Кадр на canvas следует за прокруткой с плавным догоном. Подписи домов привязаны к сцене через камеру анимации и не съезжают при её движении. Если кадры не загрузились, идёт видео сборки.",
+        "Квартиры, планировки, цены, сроки и ипотека считаются из одного набора данных. Русский и английский переключаются на месте."
+      ]
+    }
+  ],
+  "en": {
+    "title": "Veresta",
+    "eyebrow": "3D for the web",
+    "lead": "A sales website for a residential quarter where the 3D model goes up on schedule as you scroll",
+    "summary": "Three buildings go up part by part: frame, floor slabs, facades, lights in the windows. The scroll moves along the construction schedule, and each building is handed over in its own quarter. Below is a working sales site: apartment search with floor plans, a site plan, mortgage, the sales office.",
+    "note": "The quarter is fictional; the model, the scene and the website were made from scratch",
+    "closing": "Scroll the page and finish the quarter",
+    "actions": [
+      "See it live"
+    ],
+    "showcase": [
+      "The first screen of Veresta: the finished quarter with price labels on the buildings and the construction schedule below",
+      "The finished quarter on a phone"
+    ],
+    "media": {
+      "/assets/assembly/case/final-ru.webp": "/assets/assembly/case/final-en.webp",
+      "/assets/assembly/case/phone-ru.webp": "/assets/assembly/case/phone-en.webp",
+      "/assets/assembly/case/frame-ru.webp": "/assets/assembly/case/frame-en.webp",
+      "/assets/assembly/case/stage-ru.webp": "/assets/assembly/case/stage-en.webp",
+      "/assets/assembly/case/flats-ru.webp": "/assets/assembly/case/flats-en.webp",
+      "/assets/assembly/case/copy-ru.webp": "/assets/assembly/case/copy-en.webp",
+      "/assets/assembly/case/plan-ru.webp": "/assets/assembly/case/plan-en.webp",
+      "/assets/assembly/case/mid-ru.webp": "/assets/assembly/case/mid-en.webp"
+    },
+    "sections": [
+      {
+        "title": "The scroll moves the build along its schedule",
+        "text": "The frame follows the scroll forwards and backwards. Under the scene is a schedule by building: the marker runs from Q4 2026 to Q3 2028, the Club House, Clinker and the Tower are finished on their dates, and labels with prices appear on the finished buildings.",
+        "figure": {
+          "value": "180",
+          "label": "frames in the sequence"
+        },
+        "alts": [
+          "Mid-assembly: frames with floor slabs, facade sections on the lower floors",
+          "The construction schedule under the scene: the Club House half built, the marker at Q3 2027"
+        ]
+      },
+      {
+        "title": "A working sales site, not a splash screen",
+        "text": "126 apartments of demo data with a live filter by bedrooms, building, area, price and floor. Each has its own floor plan: 16 drawings are built from the rooms, and areas and prices agree with the facts of the quarter.",
+        "figure": {
+          "value": "16",
+          "label": "layouts, drawn from the data"
+        },
+        "alts": [
+          "The Apartments block: filters, the list and the card of the chosen apartment with its floor plan",
+          "Apartment search on the first screen: bedrooms, price, area and the number of matches"
+        ]
+      },
+      {
+        "title": "A site plan from the same scene",
+        "text": "The site plan is rendered from above from the same model that assembles on the first screen. Hovering a building lights it up on the plan and in the list, a click opens its apartments. The area is shown on a map of its own, with no third-party maps or keys.",
+        "alts": [
+          "The site plan from above: three buildings, a car-free courtyard, the embankment and the deck by the water, the tower lit up",
+          "The light-brick tower with a bronze crown"
+        ]
+      },
+      {
+        "title": "A heavy picture that loads fast",
+        "text": "The first screen is drawn at once from a single frame. The rest load from a coarse step to a fine one, and scrolling works after the first 25 frames. Phones get their own lighter set.",
+        "figure": {
+          "value": "91",
+          "label": "out of 100 for performance in Lighthouse on a phone"
+        },
+        "alts": [
+          "The Club House is finished, Clinker and the Tower are still going up",
+          "The same first screen on a phone: text above, the quarter and the schedule below"
+        ]
+      },
+      {
+        "title": "How it is built",
+        "text": "Model and animation in Blender, render in Cycles, the website in JavaScript with no libraries.",
+        "items": [
+          "Model",
+          "Render",
+          "The scene on the page",
+          "Website"
+        ],
+        "descriptions": [
+          "The three buildings, the site and the assembly animation are built with Python scripts: facade sections, rooms behind the windows, paving, lamps.",
+          "180 frames 1920×1080, packed as WebP for the site. The phone set is cut from the same frames.",
+          "The frame on the canvas follows the scroll with easing. The building labels are tied to the scene through the camera of the animation and stay in place as it moves. If the frames fail to load, a video of the assembly plays.",
+          "Apartments, floor plans, prices, dates and the mortgage are all computed from one data set. Russian and English switch in place."
+        ]
+      }
+    ]
+  }
+}

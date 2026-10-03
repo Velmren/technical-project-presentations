@@ -6,7 +6,7 @@
   "year": 2026,
   "eyebrow": "Сайт на Tilda",
   "lead": "Сайт интерьерной студии, который ведёт от первого впечатления к заявке",
-  "summary": "Главная, три концепции квартир, услуги с этапами, квиз и форма. Собран на Tilda и опубликован.",
+  "summary": "Главная, три концепции квартир, услуги с этапами и две формы. Собран в Zero Block на Tilda и опубликован.",
   "note": "Концепции показаны визуализациями",
   "closing": "Посмотрите сайт вживую",
   "accent": "#58634e",
@@ -19,10 +19,10 @@
   "cover": {
     "kind": "image",
     "image": {
-      "src": "/assets/tilda-interior/after-hero-desktop.png",
+      "src": "/assets/tilda-interior/case/hero.webp",
       "alt": "Первый экран сайта «Вариант света»: интерьер, описание услуг и кнопки перехода",
-      "width": 1440,
-      "height": 1000
+      "width": 2400,
+      "height": 1500
     }
   },
   "actions": [
@@ -50,7 +50,7 @@
     {
       "kind": "benefit",
       "title": "Клиент видит замысел до первой встречи",
-      "text": "У каждой концепции своя страница с решениями, планом и галереей.",
+      "text": "У каждой концепции своя страница: решения, галерея и короткая справка о квартире.",
       "layers": [
         {
           "image": {
@@ -67,9 +67,9 @@
         {
           "image": {
             "src": "/assets/tilda-interior/case/concept-gallery.webp",
-            "alt": "План квартиры и галерея визуализаций",
-            "width": 1584,
-            "height": 1352
+            "alt": "Галерея концепции и справка: площадь, задача, состав",
+            "width": 1550,
+            "height": 1300
           },
           "x": 0.62,
           "y": 0,
@@ -98,41 +98,40 @@
         {
           "image": {
             "src": "/assets/tilda-interior/case/stages.webp",
-            "alt": "Первые четыре этапа работы, от встречи до концепции",
-            "width": 1614,
-            "height": 1178
+            "alt": "Восемь этапов работы, от первой встречи до сопровождения ремонта",
+            "width": 1550,
+            "height": 950
           },
           "x": 0.62,
           "y": 0,
           "w": 0.38,
-          "front": true,
-          "fade": true
+          "front": true
         }
       ]
     },
     {
       "kind": "benefit",
       "title": "Обратиться можно так, как удобно",
-      "text": "Квиз по шагам описывает квартиру, а в короткой форме можно сразу написать о задаче.",
+      "text": "Короткий опрос из четырёх вопросов помогает описать квартиру, а в форме на странице услуг можно сразу написать о задаче.",
       "layers": [
         {
           "image": {
             "src": "/assets/tilda-interior/case/quiz.webp",
-            "alt": "Квиз: какое пространство планируете",
+            "alt": "Опрос на главной: тип помещения, площадь, этап и задача",
             "width": 2400,
             "height": 1500
           },
           "x": 0,
           "y": 0.02,
           "w": 0.58,
-          "url": "politely-able-rhino.tilda.ws/#quiz"
+          "url": "politely-able-rhino.tilda.ws"
         },
         {
           "image": {
             "src": "/assets/tilda-interior/case/form.webp",
             "alt": "Форма заявки: имя, контакт, задача и согласие",
-            "width": 1616,
-            "height": 1168
+            "width": 1550,
+            "height": 750
           },
           "x": 0.62,
           "y": 0,
@@ -144,7 +143,7 @@
     {
       "kind": "benefit",
       "title": "На телефоне тот же путь",
-      "text": "Меню собрано в одну кнопку, этапы и квиз помещаются в экран.",
+      "text": "Этапы и формы перестроены в одну колонку, кнопки на всю ширину.",
       "layers": [
         {
           "image": {
@@ -161,7 +160,7 @@
         {
           "image": {
             "src": "/assets/tilda-interior/case/m-quiz.webp",
-            "alt": "Квиз на телефоне",
+            "alt": "Опрос на телефоне",
             "width": 780,
             "height": 1688
           },
@@ -176,7 +175,7 @@
     {
       "kind": "features",
       "title": "Как устроено",
-      "text": "Сайт на Tilda, опубликован на её поддомене.",
+      "text": "Сайт в Zero Block на Tilda, опубликован на её поддомене.",
       "items": [
         "Заявки",
         "Галереи",
@@ -184,9 +183,9 @@
         "Данные"
       ],
       "descriptions": [
-        "Заявки из формы попадают в Tilda CRM.",
-        "Изображения открываются крупно.",
-        "Частые вопросы раскрываются по нажатию.",
+        "Заявки из форм попадают в раздел заявок Tilda.",
+        "На странице концепции шесть кадров с подписями.",
+        "Частые вопросы открытым списком в две колонки.",
         "Согласие на обработку и отдельная страница условий."
       ]
     }
@@ -195,7 +194,7 @@
     "title": "Light Variant",
     "eyebrow": "Tilda website",
     "lead": "A studio website that leads from the first impression to an enquiry",
-    "summary": "Home page, three apartment concepts, services with stages, a quiz and a form. Built on Tilda and live.",
+    "summary": "Home page, three apartment concepts, services with stages and two forms. Built with Zero Block on Tilda and live.",
     "note": "Concepts shown as visualisations",
     "closing": "See the site live",
     "actions": [
@@ -208,10 +207,10 @@
     "sections": [
       {
         "title": "Clients see the idea before the first meeting",
-        "text": "Each concept has its own page with the solutions, a plan and a gallery.",
+        "text": "Each concept has its own page: the solutions, a gallery and a short brief of the apartment.",
         "alts": [
           "Concept page for a 38 m² apartment",
-          "Apartment plan and a gallery of visualisations"
+          "Concept gallery with a brief: area, task, scope"
         ]
       },
       {
@@ -219,28 +218,28 @@
         "text": "Three ways to work together and eight stages are laid out on the services page.",
         "alts": [
           "Services page: three ways to work together",
-          "The first four stages, from the meeting to the concept"
+          "Eight stages of work, from the first meeting to site supervision"
         ]
       },
       {
         "title": "Clients get in touch the way they like",
-        "text": "A step-by-step quiz describes the apartment, and a short form takes a message straight away.",
+        "text": "A short four-question survey helps describe the apartment, and the form on the services page takes a message straight away.",
         "alts": [
-          "Quiz: what space are you planning",
+          "Survey on the home page: type of space, area, stage and task",
           "Enquiry form: name, contact, task and consent"
         ]
       },
       {
         "title": "The same path on a phone",
-        "text": "The menu folds into one button, and the stages and quiz fit the screen.",
+        "text": "Stages and forms are rearranged into one column, with full-width buttons.",
         "alts": [
           "Work stages on a phone",
-          "Quiz on a phone"
+          "Survey on a phone"
         ]
       },
       {
         "title": "How it is built",
-        "text": "A Tilda site, live on its subdomain.",
+        "text": "A Zero Block site on Tilda, live on its subdomain.",
         "items": [
           "Enquiries",
           "Galleries",
@@ -248,9 +247,9 @@
           "Data"
         ],
         "descriptions": [
-          "Form enquiries go to Tilda CRM.",
-          "Images open full size.",
-          "Common questions expand on tap.",
+          "Form enquiries go to the Tilda requests section.",
+          "Each concept page shows six captioned images.",
+          "Common questions as an open two-column list.",
           "Consent to data processing and a separate terms page."
         ]
       }

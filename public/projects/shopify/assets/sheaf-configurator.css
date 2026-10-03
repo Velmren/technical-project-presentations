@@ -1,0 +1,788 @@
+.sheaf {
+  --sheaf-line: rgba(var(--color-foreground), 0.14);
+  --sheaf-line-strong: rgba(var(--color-foreground), 0.55);
+  --sheaf-muted: rgba(var(--color-foreground), 0.65);
+  --sheaf-ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+  display: grid;
+  gap: 3rem;
+}
+
+@media screen and (min-width: 750px) {
+  .sheaf {
+    grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+    gap: 4rem;
+    align-items: start;
+  }
+
+  .sheaf__media {
+    position: sticky;
+    top: 3rem;
+  }
+}
+
+@media screen and (min-width: 990px) {
+  .sheaf {
+    gap: 6rem;
+  }
+}
+
+.sheaf__placeholder {
+  color: var(--sheaf-muted);
+}
+
+/* Preview stage */
+
+.sheaf__stage-wrap {
+  position: relative;
+}
+
+/* The stage is a canvas of --stage-w by --stage-h millimetres that scales to the column. */
+.sheaf-stage {
+  --stage-w: 340;
+  --stage-h: 345;
+  --zoom: 1.5;
+  container-type: size;
+  position: relative;
+  width: 100%;
+  aspect-ratio: var(--stage-w) / var(--stage-h);
+  max-height: calc(100vh - 17rem);
+  min-height: 30rem;
+  overflow: hidden;
+  background: rgba(var(--color-foreground), 0.045);
+  border-radius: var(--media-radius, 0);
+  --paper: #f5f2ea;
+  --rule: rgba(52, 60, 78, 0.3);
+  --foil: color-mix(in srgb, var(--cover) 76%, #000);
+  --foil-edge: color-mix(in srgb, var(--cover) 86%, #fff);
+}
+
+.sheaf-stage[data-foil='gold'] {
+  --foil: #c6a465;
+  --foil-edge: rgba(0, 0, 0, 0.28);
+}
+
+.sheaf-stage[data-foil='silver'] {
+  --foil: #d5d7da;
+  --foil-edge: rgba(0, 0, 0, 0.28);
+}
+
+.sheaf-book {
+  --u: min(calc(100cqw / var(--stage-w)), calc(100cqh / var(--stage-h)));
+  --rule-width: max(1px, calc(0.2 * var(--u)));
+  position: absolute;
+  left: 50%;
+  top: 49.5%;
+  width: calc(var(--w) * var(--u));
+  height: calc(var(--h) * var(--u));
+  margin-left: calc(var(--w) * var(--u) / -2);
+  margin-top: calc(var(--h) * var(--u) / -2);
+  perspective: calc(1100 * var(--u));
+  transform: scale(var(--zoom));
+  transition:
+    transform 0.8s var(--sheaf-ease),
+    width 0.5s var(--sheaf-ease),
+    height 0.5s var(--sheaf-ease),
+    margin 0.5s var(--sheaf-ease);
+}
+
+.sheaf-stage[data-view='inside'] .sheaf-book {
+  transform: translateX(50%) scale(1);
+}
+
+.sheaf-book__shadow {
+  position: absolute;
+  inset: calc(6 * var(--u)) calc(2 * var(--u)) calc(-5 * var(--u)) calc(4 * var(--u));
+  background: rgba(20, 22, 26, 0.3);
+  filter: blur(calc(7 * var(--u)));
+  transform-origin: right center;
+  transition: transform 0.3s var(--sheaf-ease);
+}
+
+/* The shadow widens only once the cover is on its way down to the table. */
+.sheaf-stage[data-view='inside'] .sheaf-book__shadow {
+  transform: scaleX(1.96);
+  transition: transform 0.45s var(--sheaf-ease) 0.35s;
+}
+
+.sheaf-book__ribbon {
+  position: absolute;
+  left: 38%;
+  bottom: calc(-11 * var(--u));
+  width: calc(3.2 * var(--u));
+  height: calc(16 * var(--u));
+  background: var(--band);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 86%, 0 100%);
+  transition: background-color 0.35s ease;
+}
+
+.sheaf-book__back,
+.sheaf-book__face--front {
+  border-radius: calc(1.6 * var(--u)) calc(6 * var(--u)) calc(6 * var(--u)) calc(1.6 * var(--u));
+}
+
+.sheaf-book__back {
+  position: absolute;
+  inset: 0;
+  background: var(--cover);
+  transition: background-color 0.35s ease;
+}
+
+.sheaf-book__block {
+  position: absolute;
+  inset: calc(2.4 * var(--u)) calc(2.6 * var(--u)) calc(2.4 * var(--u)) 0;
+  overflow: hidden;
+  background: var(--paper);
+  border-radius: 0 calc(4.6 * var(--u)) calc(4.6 * var(--u)) 0;
+}
+
+.sheaf-book__block::before {
+  content: '';
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: calc(9 * var(--u));
+  background: linear-gradient(90deg, rgba(40, 36, 28, 0.2), rgba(40, 36, 28, 0));
+}
+
+.sheaf-book__page {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.sheaf-stage:not([data-paper='blank']) .sheaf-book__page {
+  opacity: 1;
+}
+
+.sheaf-stage[data-paper='grid'] .sheaf-book__page {
+  background-image: linear-gradient(var(--rule) var(--rule-width), transparent 0),
+    linear-gradient(90deg, var(--rule) var(--rule-width), transparent 0);
+  background-size: calc(5 * var(--u)) calc(5 * var(--u));
+  background-position: calc(3 * var(--u)) calc(3 * var(--u));
+}
+
+.sheaf-stage[data-paper='ruled'] .sheaf-book__page {
+  background-image: linear-gradient(var(--rule) var(--rule-width), transparent 0);
+  background-size: 100% calc(7 * var(--u));
+  background-position: 0 calc(18 * var(--u));
+}
+
+.sheaf-stage[data-paper='dot'] .sheaf-book__page {
+  background-image: radial-gradient(circle, rgba(52, 60, 78, 0.55) max(0.8px, calc(0.4 * var(--u))), transparent max(1.1px, calc(0.52 * var(--u))));
+  background-size: calc(5 * var(--u)) calc(5 * var(--u));
+  background-position: calc(1.5 * var(--u)) calc(1.5 * var(--u));
+}
+
+.sheaf-book__cover {
+  position: absolute;
+  inset: 0;
+  transform-origin: left center;
+  transform-style: preserve-3d;
+  transition: transform 0.8s var(--sheaf-ease);
+}
+
+.sheaf-stage[data-view='inside'] .sheaf-book__cover {
+  transform: rotateY(-180deg);
+}
+
+.sheaf-book__face {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  backface-visibility: hidden;
+  background: var(--cover);
+  transition: background-color 0.35s ease;
+}
+
+.sheaf-book__face--front {
+  box-shadow:
+    inset 0 calc(0.45 * var(--u)) 0 rgba(255, 255, 255, 0.07),
+    inset calc(-0.5 * var(--u)) calc(-0.5 * var(--u)) 0 rgba(0, 0, 0, 0.16);
+}
+
+.sheaf-book__face--front::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1.1' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.55 0'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size: calc(46 * var(--u));
+  mix-blend-mode: soft-light;
+  opacity: 0.8;
+  pointer-events: none;
+}
+
+.sheaf-book__face--inner {
+  transform: rotateY(180deg);
+  border-radius: calc(6 * var(--u)) calc(1.6 * var(--u)) calc(1.6 * var(--u)) calc(6 * var(--u));
+}
+
+.sheaf-book__hinge {
+  position: absolute;
+  inset: 0 auto 0 calc(8.5 * var(--u));
+  width: calc(1.1 * var(--u));
+  background: color-mix(in srgb, var(--cover) 82%, #000);
+  box-shadow: calc(1.1 * var(--u)) 0 0 color-mix(in srgb, var(--cover) 92%, #fff);
+}
+
+.sheaf-book__band {
+  position: absolute;
+  inset: 0 calc(13 * var(--u)) 0 auto;
+  width: calc(6.4 * var(--u));
+  background: var(--band);
+  box-shadow: calc(0.7 * var(--u)) 0 calc(1.4 * var(--u)) rgba(0, 0, 0, 0.22);
+  transition: background-color 0.35s ease;
+}
+
+.sheaf-book__monogram {
+  position: absolute;
+  right: calc(27 * var(--u));
+  bottom: calc(15 * var(--u));
+  font-family: var(--font-heading-family);
+  font-style: var(--font-heading-style);
+  font-weight: var(--font-heading-weight);
+  font-size: calc(11.5 * var(--u));
+  line-height: 1;
+  letter-spacing: 0.14em;
+  margin-right: -0.14em;
+  white-space: nowrap;
+  color: var(--foil);
+  text-shadow: 0 calc(0.32 * var(--u)) 0 var(--foil-edge);
+  transition: color 0.35s ease;
+}
+
+.sheaf-book__monogram.is-stamped {
+  animation: sheaf-stamp 0.28s var(--sheaf-ease);
+}
+
+@keyframes sheaf-stamp {
+  from {
+    opacity: 0.2;
+    transform: scale(1.06);
+  }
+}
+
+.sheaf-book__endpaper {
+  position: absolute;
+  inset: calc(2.4 * var(--u)) 0 calc(2.4 * var(--u)) calc(2.6 * var(--u));
+  background: color-mix(in srgb, var(--cover) 16%, var(--paper));
+  border-radius: calc(4.6 * var(--u)) 0 0 calc(4.6 * var(--u));
+  transition: background-color 0.35s ease;
+}
+
+.sheaf-book__endpaper::after {
+  content: '';
+  position: absolute;
+  inset: 0 0 0 auto;
+  width: calc(9 * var(--u));
+  background: linear-gradient(270deg, rgba(40, 36, 28, 0.18), rgba(40, 36, 28, 0));
+}
+
+.sheaf-book__colophon {
+  position: absolute;
+  left: calc(12 * var(--u));
+  bottom: calc(12 * var(--u));
+  display: grid;
+  gap: calc(1.2 * var(--u));
+  margin: 0;
+  font-size: calc(4.2 * var(--u));
+  line-height: 1.2;
+  letter-spacing: 0.06em;
+  color: color-mix(in srgb, var(--cover) 70%, #6b6558);
+}
+
+.sheaf-book__colophon span:first-child {
+  font-family: var(--font-heading-family);
+  font-size: calc(6 * var(--u));
+  letter-spacing: 0.02em;
+}
+
+.sheaf__stage-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.6rem;
+  margin-top: 1.2rem;
+}
+
+.sheaf__dims {
+  margin: 0;
+  font-size: 1.3rem;
+  letter-spacing: 0.06rem;
+  color: var(--sheaf-muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.sheaf__views {
+  display: flex;
+  border: 0.1rem solid var(--sheaf-line-strong);
+  border-radius: var(--variant-pills-radius, 4rem);
+  overflow: hidden;
+}
+
+.sheaf__view {
+  appearance: none;
+  border: 0;
+  margin: 0;
+  padding: 0.7rem 1.4rem;
+  background: none;
+  color: rgb(var(--color-foreground));
+  font: inherit;
+  font-size: 1.3rem;
+  letter-spacing: 0.04rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.sheaf__view[aria-pressed='true'] {
+  background: rgb(var(--color-foreground));
+  color: rgb(var(--color-background));
+}
+
+.sheaf__view:focus-visible {
+  outline: 0.2rem solid rgba(var(--color-foreground), 0.5);
+  outline-offset: -0.2rem;
+}
+
+/* Info column */
+
+.sheaf__vendor {
+  margin: 0 0 0.6rem;
+  color: var(--sheaf-muted);
+}
+
+.sheaf__title {
+  margin: 0;
+}
+
+.sheaf__lead {
+  margin-top: 1.2rem;
+  color: var(--sheaf-muted);
+}
+
+.sheaf__form {
+  margin-top: 2.4rem;
+  display: grid;
+  gap: 2rem;
+}
+
+.sheaf__field {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  min-width: 0;
+}
+
+.sheaf__legend {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  width: 100%;
+  padding: 0;
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+  letter-spacing: 0.04rem;
+  color: var(--sheaf-muted);
+}
+
+.sheaf__legend-value {
+  color: rgb(var(--color-foreground));
+}
+
+.sheaf__choices {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+.sheaf__choice {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.9rem;
+  min-height: 4.4rem;
+  padding: 0.6rem 1.8rem;
+  border: 0.1rem solid var(--sheaf-line-strong);
+  border-radius: var(--variant-pills-radius, 4rem);
+  background: rgb(var(--color-background));
+  color: rgb(var(--color-foreground));
+  font-size: 1.4rem;
+  letter-spacing: 0.04rem;
+  line-height: 1.2;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.sheaf__choice:hover {
+  border-color: rgb(var(--color-foreground));
+}
+
+.sheaf__choice-note {
+  font-size: 1.2rem;
+  opacity: 0.65;
+  font-variant-numeric: tabular-nums;
+}
+
+.sheaf__radio:checked + .sheaf__choice {
+  background: rgb(var(--color-foreground));
+  border-color: rgb(var(--color-foreground));
+  color: rgb(var(--color-background));
+}
+
+.sheaf__radio:focus-visible + .sheaf__choice {
+  outline: 0.2rem solid rgba(var(--color-foreground), 0.5);
+  outline-offset: 0.3rem;
+}
+
+.sheaf__radio.is-unavailable + .sheaf__choice {
+  border-style: dashed;
+  color: rgba(var(--color-foreground), 0.45);
+  text-decoration: line-through;
+}
+
+.sheaf__radio.is-unavailable:checked + .sheaf__choice {
+  background: rgba(var(--color-foreground), 0.08);
+  border-color: rgba(var(--color-foreground), 0.55);
+}
+
+/* Swatches */
+
+.sheaf__field--swatch .sheaf__choices {
+  gap: 1.2rem;
+}
+
+.sheaf__field--swatch .sheaf__choice {
+  min-height: 0;
+  padding: 0.4rem;
+  border-color: transparent;
+  border-radius: 50%;
+  background: none;
+}
+
+.sheaf__field--swatch .sheaf__radio:checked + .sheaf__choice {
+  background: none;
+  border-color: rgb(var(--color-foreground));
+}
+
+.sheaf__swatch {
+  display: block;
+  width: 3.4rem;
+  height: 3.4rem;
+  border-radius: 50%;
+  background: var(--swatch);
+  box-shadow: inset 0 0 0 0.1rem rgba(var(--color-foreground), 0.16);
+  transition: transform 0.2s var(--sheaf-ease);
+}
+
+.sheaf__swatch--band {
+  width: 4.6rem;
+  height: 2.2rem;
+  border-radius: 0.3rem;
+}
+
+.sheaf__field--swatch .sheaf__choice:has(.sheaf__swatch--band) {
+  border-radius: 0.6rem;
+}
+
+.sheaf__choice:active .sheaf__swatch {
+  transform: scale(0.92);
+}
+
+.sheaf__field--swatch .sheaf__radio.is-unavailable + .sheaf__choice::after {
+  content: '';
+  position: absolute;
+  inset: 50% 0.4rem auto;
+  height: 0.1rem;
+  background: rgb(var(--color-background));
+  box-shadow: 0 0 0 0.05rem rgba(var(--color-foreground), 0.5);
+  transform: rotate(-45deg);
+}
+
+/* Paper */
+
+.sheaf__paper {
+  flex: none;
+  width: 2.2rem;
+  height: 2.2rem;
+  border-radius: 0.2rem;
+  background-color: #f5f2ea;
+  box-shadow: inset 0 0 0 0.1rem rgba(52, 60, 78, 0.28);
+}
+
+.sheaf__paper--dot {
+  background-image: radial-gradient(circle, rgba(52, 60, 78, 0.75) 0.08rem, transparent 0.1rem);
+  background-size: 0.55rem 0.55rem;
+  background-position: 0.28rem 0.28rem;
+}
+
+.sheaf__paper--ruled {
+  background-image: linear-gradient(rgba(52, 60, 78, 0.6) 0.1rem, transparent 0);
+  background-size: 100% 0.55rem;
+  background-position: 0 0.4rem;
+}
+
+.sheaf__paper--grid {
+  background-image: linear-gradient(rgba(52, 60, 78, 0.45) 0.1rem, transparent 0),
+    linear-gradient(90deg, rgba(52, 60, 78, 0.45) 0.1rem, transparent 0);
+  background-size: 0.55rem 0.55rem;
+}
+
+/* Monogram */
+
+.sheaf__legend label {
+  color: inherit;
+}
+
+.sheaf__monogram-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+.sheaf__monogram-input {
+  flex: 0 0 12rem;
+  width: 12rem;
+  min-height: 4.4rem;
+  padding: 0 1.6rem;
+  border: 0.1rem solid var(--sheaf-line-strong);
+  border-radius: var(--inputs-radius, 0);
+  background: rgb(var(--color-background));
+  color: rgb(var(--color-foreground));
+  font: inherit;
+  font-family: var(--font-heading-family);
+  font-size: 1.8rem;
+  letter-spacing: 0.3rem;
+  text-transform: uppercase;
+}
+
+.sheaf__monogram-input::placeholder {
+  color: rgba(var(--color-foreground), 0.4);
+}
+
+.sheaf__monogram-input:focus-visible {
+  outline: 0.2rem solid rgba(var(--color-foreground), 0.5);
+  outline-offset: 0.2rem;
+  box-shadow: none;
+}
+
+.sheaf__foils {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  transition: opacity 0.2s ease;
+}
+
+.sheaf__field--monogram:not(.has-monogram) .sheaf__foils {
+  opacity: 0.45;
+}
+
+.sheaf__hint {
+  margin: 0.8rem 0 0;
+  font-size: 1.2rem;
+  letter-spacing: 0.04rem;
+  color: var(--sheaf-muted);
+}
+
+/* Summary and buy */
+
+.sheaf__summary {
+  margin: 0;
+  border-top: 0.1rem solid var(--sheaf-line);
+  font-size: 1.4rem;
+}
+
+.sheaf__summary-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 1rem 0;
+  border-bottom: 0.1rem solid var(--sheaf-line);
+}
+
+.sheaf__summary-row[hidden] {
+  display: none;
+}
+
+.sheaf__summary dt {
+  color: var(--sheaf-muted);
+}
+
+.sheaf__summary dd {
+  margin: 0;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.sheaf__buy {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 1rem;
+}
+
+.sheaf__quantity {
+  display: flex;
+  align-items: stretch;
+  min-height: 4.7rem;
+  border: 0.1rem solid var(--sheaf-line-strong);
+  border-radius: var(--inputs-radius, 0);
+}
+
+.sheaf__step {
+  appearance: none;
+  display: grid;
+  place-items: center;
+  width: 4rem;
+  border: 0;
+  background: none;
+  color: rgb(var(--color-foreground));
+  cursor: pointer;
+}
+
+.sheaf__step:focus-visible {
+  outline: 0.2rem solid rgba(var(--color-foreground), 0.5);
+  outline-offset: -0.2rem;
+}
+
+.sheaf__quantity-input {
+  width: 3.6rem;
+  border: 0;
+  padding: 0;
+  background: none;
+  color: rgb(var(--color-foreground));
+  font: inherit;
+  font-size: 1.5rem;
+  text-align: center;
+  font-variant-numeric: tabular-nums;
+  appearance: textfield;
+  -moz-appearance: textfield;
+}
+
+.sheaf__quantity-input::-webkit-outer-spin-button,
+.sheaf__quantity-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.sheaf__quantity-input:focus-visible {
+  outline: 0;
+  box-shadow: none;
+}
+
+.sheaf__submit {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.6rem;
+  min-height: 4.7rem;
+}
+
+.sheaf__submit-total {
+  font-variant-numeric: tabular-nums;
+}
+
+.sheaf__submit[aria-busy='true'] {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.sheaf__message {
+  margin: -1rem 0 0;
+  font-size: 1.4rem;
+}
+
+.sheaf__message[hidden] {
+  display: none;
+}
+
+.sheaf__message.is-error {
+  color: #b3261e;
+}
+
+.sheaf__message a {
+  color: inherit;
+}
+
+.sheaf__noscript {
+  display: grid;
+  gap: 0.6rem;
+}
+
+.sheaf__app-block {
+  margin-top: 2.4rem;
+}
+
+.sheaf__details {
+  margin-top: 2.4rem;
+  border-top: 0.1rem solid var(--sheaf-line);
+  border-bottom: 0.1rem solid var(--sheaf-line);
+}
+
+.sheaf__details + .sheaf__details {
+  margin-top: 0;
+  border-top: 0;
+}
+
+.sheaf__details summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.4rem 0;
+  font-size: 1.5rem;
+  cursor: pointer;
+  list-style: none;
+}
+
+.sheaf__details summary::-webkit-details-marker {
+  display: none;
+}
+
+.sheaf__details summary svg {
+  transition: transform 0.2s ease;
+}
+
+.sheaf__details[open] summary svg {
+  transform: rotate(180deg);
+}
+
+.sheaf__details .rte {
+  padding-bottom: 1.6rem;
+  color: var(--sheaf-muted);
+}
+
+@media screen and (max-width: 749px) {
+  .sheaf-stage {
+    --stage-h: 236;
+    --zoom: 0.94;
+    max-height: none;
+    min-height: 0;
+  }
+
+  .sheaf__stage-bar {
+    margin-top: 0.8rem;
+  }
+}
+
+/* On a phone the options scroll under the preview, so every choice is seen at once. */
+@media screen and (max-width: 749px) and (min-height: 700px) {
+  .sheaf__media {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    margin: 0 -1.5rem;
+    padding: 0 1.5rem 1rem;
+    background: rgb(var(--color-background));
+    border-bottom: 0.1rem solid var(--sheaf-line);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sheaf-book,
+  .sheaf-book__cover,
+  .sheaf-book__shadow,
+  .sheaf-book__face,
+  .sheaf-book__back,
+  .sheaf-book__page,
+  .sheaf-book__monogram {
+    transition: none;
+    animation: none;
+  }
+}

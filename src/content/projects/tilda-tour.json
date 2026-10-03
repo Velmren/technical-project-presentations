@@ -1,0 +1,258 @@
+{
+  "slug": "tilda-tour",
+  "title": "Севернее",
+  "status": "published",
+  "presentation": "case",
+  "year": 2026,
+  "eyebrow": "Сайт на Tilda",
+  "lead": "Сайт турклуба, где выезд выбирают по дате и бронируют одной формой",
+  "summary": "Главная, три маршрута с программой по часам, расписание с ценами и форма брони. Собран на Tilda и опубликован.",
+  "note": "Турклуб вымышленный, маршруты и фотографии настоящие",
+  "closing": "Посмотрите сайт вживую",
+  "accent": "#2f6b55",
+  "category": "Веб-сайты",
+  "technologies": [
+    "Tilda"
+  ],
+  "order": 51,
+  "tone": "cool",
+  "cover": {
+    "kind": "image",
+    "image": {
+      "src": "/assets/tilda-tour/cover.webp",
+      "alt": "Первый экран сайта «Севернее»: ладожские шхеры, заголовок и ближайший выезд",
+      "width": 1440,
+      "height": 1000
+    }
+  },
+  "actions": [
+    {
+      "label": "Открыть сайт",
+      "href": "https://severnee.tilda.ws/"
+    }
+  ],
+  "showcase": {
+    "image": {
+      "src": "/assets/tilda-tour/case/hero.webp",
+      "alt": "Первый экран сайта «Севернее»: фотография шхер, заголовок, две кнопки и ближайший выезд",
+      "width": 2400,
+      "height": 1500
+    },
+    "url": "severnee.tilda.ws",
+    "phone": {
+      "src": "/assets/tilda-tour/case/m-hero.webp",
+      "alt": "Первый экран на телефоне",
+      "width": 780,
+      "height": 1688
+    }
+  },
+  "sections": [
+    {
+      "kind": "benefit",
+      "title": "Ближайший выезд виден сразу",
+      "text": "Даты, цены и остаток мест стоят под первым экраном. Строки, где мест почти нет, выделены.",
+      "layers": [
+        {
+          "image": {
+            "src": "/assets/tilda-tour/case/schedule.webp",
+            "alt": "Таблица ближайших выездов: дата, маршрут, цена, остаток мест",
+            "width": 2400,
+            "height": 1500
+          },
+          "x": 0,
+          "y": 0.02,
+          "w": 0.58,
+          "url": "severnee.tilda.ws"
+        },
+        {
+          "image": {
+            "src": "/assets/tilda-tour/case/dates.webp",
+            "alt": "Страница расписания на весь сезон",
+            "width": 1613,
+            "height": 1175
+          },
+          "x": 0.62,
+          "y": 0,
+          "w": 0.38,
+          "front": true
+        }
+      ]
+    },
+    {
+      "kind": "benefit",
+      "title": "Программа расписана по часам",
+      "text": "У каждого маршрута своя страница: выезд, остановки, обед и возвращение со временем, цена и что в неё входит.",
+      "layers": [
+        {
+          "image": {
+            "src": "/assets/tilda-tour/case/program.webp",
+            "alt": "Программа маршрута по Карелии: два дня по часам",
+            "width": 2400,
+            "height": 1500
+          },
+          "x": 0,
+          "y": 0.02,
+          "w": 0.58,
+          "url": "severnee.tilda.ws/karelia"
+        },
+        {
+          "image": {
+            "src": "/assets/tilda-tour/case/gallery.webp",
+            "alt": "Галерея маршрута с подписью к кадру",
+            "width": 1613,
+            "height": 1175
+          },
+          "x": 0.62,
+          "y": 0,
+          "w": 0.38,
+          "front": true
+        }
+      ]
+    },
+    {
+      "kind": "benefit",
+      "title": "Бронь на конкретную дату",
+      "text": "В форме выбирают выезд и число человек. Пустые поля не проходят, после отправки открывается страница с тем, что будет дальше.",
+      "layers": [
+        {
+          "image": {
+            "src": "/assets/tilda-tour/case/form.webp",
+            "alt": "Форма брони: имя, контакт, выезд, число человек, комментарий и согласие",
+            "width": 2400,
+            "height": 1500
+          },
+          "x": 0,
+          "y": 0.02,
+          "w": 0.58,
+          "url": "severnee.tilda.ws"
+        },
+        {
+          "image": {
+            "src": "/assets/tilda-tour/case/routes.webp",
+            "alt": "Карточки маршрутов с длительностью и ценой",
+            "width": 1585,
+            "height": 1313
+          },
+          "x": 0.62,
+          "y": 0,
+          "w": 0.38,
+          "front": true
+        }
+      ]
+    },
+    {
+      "kind": "benefit",
+      "title": "На телефоне тот же путь",
+      "text": "Таблица выездов складывается в строки, программа и форма помещаются в экран.",
+      "layers": [
+        {
+          "image": {
+            "src": "/assets/tilda-tour/case/m-schedule.webp",
+            "alt": "Ближайшие выезды на телефоне",
+            "width": 780,
+            "height": 1688
+          },
+          "x": 0.17,
+          "y": 0.08,
+          "w": 0.3,
+          "phone": true
+        },
+        {
+          "image": {
+            "src": "/assets/tilda-tour/case/m-program.webp",
+            "alt": "Программа маршрута на телефоне",
+            "width": 780,
+            "height": 1688
+          },
+          "x": 0.53,
+          "y": 0,
+          "w": 0.3,
+          "phone": true,
+          "front": true
+        }
+      ]
+    },
+    {
+      "kind": "features",
+      "title": "Как устроено",
+      "text": "Сайт на Tilda, опубликован на её поддомене.",
+      "items": [
+        "Вёрстка",
+        "Заявки",
+        "Правки",
+        "Фотографии"
+      ],
+      "descriptions": [
+        "Все блоки собраны в Zero Block с раскладкой под пять ширин экрана.",
+        "Заявки из формы попадают в кабинет Tilda.",
+        "Даты, цены и число мест владелец меняет в редакторе.",
+        "Кадры настоящих мест со свободной лицензией, авторы указаны на сайте."
+      ]
+    }
+  ],
+  "en": {
+    "title": "Severnee",
+    "eyebrow": "Tilda website",
+    "lead": "A tour club website where you pick a departure by date and book it in one form",
+    "summary": "Home page, three routes with an hour-by-hour programme, a schedule with prices and a booking form. Built on Tilda and live.",
+    "note": "The club is fictional, the routes and photos are real",
+    "closing": "See the site live",
+    "actions": [
+      "Open the site"
+    ],
+    "showcase": [
+      "First screen of the Severnee site: a photo of the Ladoga skerries, the headline, two buttons and the next departure",
+      "First screen on a phone"
+    ],
+    "sections": [
+      {
+        "title": "The next departure is visible at once",
+        "text": "Dates, prices and seats left sit right under the first screen. Rows that are nearly full are highlighted.",
+        "alts": [
+          "Table of upcoming departures: date, route, price, seats left",
+          "Schedule page for the whole season"
+        ]
+      },
+      {
+        "title": "The programme is laid out by the hour",
+        "text": "Each route has its own page: departure, stops, lunch and return with times, the price and what it covers.",
+        "alts": [
+          "Karelia route programme: two days by the hour",
+          "Route gallery with a caption for the photo"
+        ]
+      },
+      {
+        "title": "Booking for a specific date",
+        "text": "The form asks for a departure and the number of people. Empty fields are rejected, and a page explains what happens next.",
+        "alts": [
+          "Booking form: name, contact, departure, number of people, comment and consent",
+          "Route cards with duration and price"
+        ]
+      },
+      {
+        "title": "The same path on a phone",
+        "text": "The departures table folds into rows, and the programme and the form fit the screen.",
+        "alts": [
+          "Upcoming departures on a phone",
+          "Route programme on a phone"
+        ]
+      },
+      {
+        "title": "How it is built",
+        "text": "A Tilda site, live on its subdomain.",
+        "items": [
+          "Layout",
+          "Enquiries",
+          "Edits",
+          "Photos"
+        ],
+        "descriptions": [
+          "Every block is built in Zero Block with layouts for five screen widths.",
+          "Form enquiries arrive in the Tilda account.",
+          "The owner changes dates, prices and seats in the editor.",
+          "Photos of the real places under free licences, with authors credited on the site."
+        ]
+      }
+    ]
+  }
+}

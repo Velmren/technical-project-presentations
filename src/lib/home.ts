@@ -35,8 +35,8 @@ const work = z.object({
   extra: z.object({ label: z.string().min(1), href }).optional(),
   details: href.optional(),
   // English texts shown on /en/ pages; anything missing falls back to Russian. slides and overlay are screens of the
-  // work's English interface for a bilingual work.
-  en: z.object({ title: z.string(), type: z.string(), description: z.string(), action: z.string(), extra: z.string(), details: href, alt: z.string(), overlayAlt: z.string(), slides: z.array(z.string().startsWith('/')).min(2), overlay: z.string().startsWith('/'), facts: z.array(z.object({ value: z.string(), label: z.string(), name: z.string() }).partial()) }).partial().optional(),
+  // work's English interface for a bilingual work; media swaps any other picture or clip by its Russian path.
+  en: z.object({ title: z.string(), type: z.string(), description: z.string(), action: z.string(), extra: z.string(), details: href, alt: z.string(), overlayAlt: z.string(), slides: z.array(z.string().startsWith('/')).min(2), overlay: z.string().startsWith('/'), media: z.record(z.string().startsWith('/'), z.string().startsWith('/')), facts: z.array(z.object({ value: z.string(), label: z.string(), name: z.string() }).partial()) }).partial().optional(),
 }).refine(w => w.status === 'rework' || (w.preview && (w.details || w.action?.href)), 'An accepted work needs a preview and a link');
 
 export const homeSchema = z.object({

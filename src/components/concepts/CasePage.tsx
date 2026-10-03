@@ -5,6 +5,7 @@ import { languageGateScript, localePath, UI, type Locale } from '@/lib/i18n';
 import { buttonColors } from '@/lib/color';
 import { Footer, Header, HOME, TextLink } from './Chrome';
 import { Depth } from './Depth';
+import { LiveEmbed } from './LiveEmbed';
 import { LoopVideo } from './LoopVideo';
 import '@/app/concepts/concepts.css';
 import '@/app/concepts/c/concept-c.css';
@@ -18,13 +19,14 @@ type Picture = Layer['image'];
 // Every screenshot on the page gets the same frame: a browser window when its address is known, a phone,
 // or a plain cut-out of the interface. fade marks a cut where the interface continues; video replaces the
 // still with a loop of the same view.
-function Shot({ image, url, phone, fade, video, sizes, priority }: { image: Picture; url?: string; phone?: boolean; fade?: boolean; video?: string; sizes: string; priority?: boolean }) {
+function Shot({ image, url, phone, fade, video, embed, sizes, priority }: { image: Picture; url?: string; phone?: boolean; fade?: boolean; video?: string; embed?: string; sizes: string; priority?: boolean }) {
   const kind = phone ? 'phone' : url ? 'browser' : 'panel';
   return <span className={`cs-shot cs-shot-${kind}` + (fade ? ' cs-shot-fade' : '')}>
     {url && !phone && <span className="cs-shot-bar" aria-hidden="true"><span>{url}</span></span>}
     {video
       ? <LoopVideo src={video} poster={image.src} width={image.width} height={image.height} label={image.alt}/>
       : <Image {...image} sizes={sizes} priority={priority}/>}
+    {embed && <LiveEmbed src={embed} label={image.alt}/>}
   </span>;
 }
 
@@ -38,7 +40,7 @@ function Composition({ benefit }: { benefit: Benefit }) {
       return <span key={layer.image.src} className={'cs-layer' + (layer.front ? ' cs-layer-front' : ' cs-layer-back')}
         style={{ width: `${layer.w * 100}%`, marginLeft: `${(layer.x - before) * 100}%`, marginTop: `${layer.y * 100}%` }}>
         <span className="cs-layer-inner">
-          <Shot image={layer.image} url={layer.url} phone={layer.phone} fade={layer.fade} video={layer.video}
+          <Shot image={layer.image} url={layer.url} phone={layer.phone} fade={layer.fade} video={layer.video} embed={layer.embed}
             sizes={`(max-width: 1100px) ${Math.round(layer.w * 100)}vw, ${Math.round(layer.w * 720)}px`}/>
         </span>
       </span>;
@@ -98,7 +100,7 @@ export function CasePage({ project, locale }: { project: Project; locale: Locale
           </div>
           {project.showcase && <figure className="cs-hero-shot">
             <span className="cs-hero-screen"><Shot image={project.showcase.image} url={project.showcase.url} video={project.showcase.video} priority sizes="(max-width: 1100px) 78vw, 46vw"/></span>
-            {project.showcase.phone && <span className="cs-hero-phone"><Shot image={project.showcase.phone} phone sizes="(max-width: 1100px) 20vw, 160px"/></span>}
+            {project.showcase.phone && <span className="cs-hero-phone"><Shot image={project.showcase.phone} video={project.showcase.phoneVideo} phone sizes="(max-width: 1100px) 20vw, 160px"/></span>}
           </figure>}
         </section>
         {benefits.map((benefit, i) => <BenefitBlock key={benefit.title} benefit={benefit} index={i}/>)}

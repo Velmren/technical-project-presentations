@@ -8,7 +8,9 @@ const intro = { title: z.string().min(1), text: z.string().min(1) };
 // fade: the fragment continues past its lower edge. url shows the screen in a browser window, phone in a device.
 // video plays a short silent loop of the real work in the frame; image is its first frame.
 const clip = z.string().startsWith('/assets/').endsWith('.mp4');
-const layer = z.object({ image, x: z.number().min(0).max(1), y: z.number().min(0), w: z.number().positive().max(1), front: z.boolean().optional(), fade: z.boolean().optional(), phone: z.boolean().optional(), url: z.string().optional(), video: clip.optional() });
+// embed puts a live page of the work (Lottie, Canvas) in the frame; image stays as its poster.
+const embedPage = z.string().startsWith('/assets/').endsWith('.html');
+const layer = z.object({ image, x: z.number().min(0).max(1), y: z.number().min(0), w: z.number().positive().max(1), front: z.boolean().optional(), fade: z.boolean().optional(), phone: z.boolean().optional(), url: z.string().optional(), video: clip.optional(), embed: embedPage.optional() });
 // Layers move vertically at different speeds, so they must never share horizontal space.
 const sideBySide = (layers: z.infer<typeof layer>[]) => [...layers].sort((a, b) => a.x - b.x)
   .every((l, i, all) => l.x + l.w <= 1 + 1e-9 && (i === 0 || l.x >= all[i - 1].x + all[i - 1].w - 1e-9));
@@ -44,7 +46,7 @@ export const projectSchema = z.object({
   // Colour of the work's own main button, used for the main button of its page.
   accent: z.string().regex(/^#[0-9a-f]{6}$/i).optional(),
   // The real site in the first screen, in a browser window at url, with an optional phone screen beside it.
-  showcase: z.object({ image, url: z.string().optional(), video: clip.optional(), phone: image.optional() }).optional(),
+  showcase: z.object({ image, url: z.string().optional(), video: clip.optional(), phone: image.optional(), phoneVideo: clip.optional() }).optional(),
   en: translation.optional(),
   slug: z.string().regex(/^[a-z][a-z0-9-]*$/), title: z.string().min(1), summary: z.string().min(1),
   category: z.string().min(1), technologies: z.array(z.string().min(1)).min(1), order: z.number(),

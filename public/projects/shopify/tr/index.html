@@ -1,0 +1,1299 @@
+<!doctype html>
+<html class="js" lang="tr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Field Defter · Sheaf</title>
+    <link rel="icon" href="data:,">
+    <style>
+      :root, .color-scheme-1 {
+        --color-background: 255,255,255;
+        --gradient-background: #ffffff;
+        --color-foreground: 22,24,28;
+        --color-background-contrast: 191,191,191;
+        --color-shadow: 22,24,28;
+        --color-button: 22,24,28;
+        --color-button-text: 255,255,255;
+        --color-secondary-button: 255,255,255;
+        --color-secondary-button-text: 22,24,28;
+        --color-link: 22,24,28;
+        --color-badge-foreground: 22,24,28;
+        --color-badge-background: 255,255,255;
+        --color-badge-border: 22,24,28;
+      }
+      :root {
+        --font-body-family: Inter, -apple-system, 'Segoe UI', sans-serif;
+        --font-body-style: normal;
+        --font-body-weight: 400;
+        --font-body-weight-bold: 700;
+        --font-heading-family: Literata, Georgia, serif;
+        --font-heading-style: normal;
+        --font-heading-weight: 500;
+        --font-body-scale: 1;
+        --font-heading-scale: 1.05;
+        --media-radius: 0px;
+        --page-width: 140rem;
+        --page-width-margin: 0rem;
+        --spacing-sections-desktop: 0px;
+        --spacing-sections-mobile: 0px;
+        --buttons-radius: 0px;
+        --buttons-radius-outset: 0px;
+        --buttons-border-width: 1px;
+        --buttons-border-opacity: 1;
+        --buttons-shadow-opacity: 0;
+        --buttons-shadow-visible: 0;
+        --buttons-shadow-horizontal-offset: 0px;
+        --buttons-shadow-vertical-offset: 4px;
+        --buttons-shadow-blur-radius: 5px;
+        --buttons-border-offset: 0px;
+        --inputs-radius: 0px;
+        --inputs-border-width: 1px;
+        --inputs-border-opacity: 0.55;
+        --inputs-shadow-opacity: 0;
+        --inputs-margin-offset: 0px;
+        --inputs-radius-outset: 0px;
+        --variant-pills-radius: 40px;
+        --variant-pills-border-width: 1px;
+        --variant-pills-border-opacity: 0.55;
+        --variant-pills-shadow-opacity: 0;
+      }
+      *, *::before, *::after { box-sizing: inherit; }
+      html { box-sizing: border-box; font-size: calc(var(--font-body-scale) * 62.5%); height: 100%; }
+      body {
+        display: grid; grid-template-rows: auto 1fr auto; grid-template-columns: 100%;
+        min-height: 100%; margin: 0; font-size: 1.5rem; letter-spacing: 0.06rem; line-height: calc(1 + 0.8 / var(--font-body-scale));
+        font-family: var(--font-body-family); font-style: var(--font-body-style); font-weight: var(--font-body-weight);
+        color: rgba(var(--color-foreground), 0.75); background-color: rgb(var(--color-background));
+      }
+      @media screen and (min-width: 750px) { body { font-size: 1.6rem; } }
+    </style>
+    <link href="/projects/shopify/preview/base.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/projects/shopify/preview/shell.css" rel="stylesheet" type="text/css" media="all">
+    <script src="/projects/shopify/preview/pubsub.js" defer="defer"></script>
+    <script type="application/json" id="shell-config">{"locale":"tr","standalone":true,"defaultLocale":"en","routes":{"root_url":"/projects/shopify/tr/","cart_url":"/projects/shopify/tr/cart","cart_add_url":"/projects/shopify/tr/cart/add","cart_change_url":"/projects/shopify/tr/cart/change","cart_update_url":"/projects/shopify/tr/cart/update"},"moneyFormat":"€{{amount_with_comma_separator}}","strings":{"remove":"Kaldır","clear":"Sepeti boşalt","empty":"Sepetiniz boş","product":"Ürün","quantity":"Adet","total":"Toplam","estimatedTotal":"Tahmini toplam","increase":"{{ product }} için adedi artırın","decrease":"{{ product }} için adedi azaltın"}}</script>
+    <script type="application/json" id="demo-config">{"currency":"EUR","rules":{"timeZone":"Europe/Vienna","cutoffHour":14,"cutoffMinute":0,"productionDays":2,"holidays":["2026-10-26","2026-11-01","2026-12-08","2026-12-24","2026-12-25","2026-12-26","2026-12-31","2027-01-01","2027-01-06","2027-03-29","2027-05-01","2027-05-06","2027-05-17","2027-05-27","2027-08-15","2027-10-26","2027-11-01","2027-12-08","2027-12-25","2027-12-26"],"zones":[{"id":"domestic","countries":["AT"],"transitDays":[1,2]},{"id":"eu","countries":["BE","BG","CY","CZ","DE","DK","EE","ES","FI","FR","GR","HR","HU","IE","IT","LT","LU","LV","MT","NL","PL","PT","RO","SE","SI","SK"],"transitDays":[2,4]},{"id":"europe","countries":["CH","GB","IS","LI","NO","TR"],"transitDays":[3,6]},{"id":"world","countries":["AU","CA","JP","KR","NZ","SG","US"],"transitDays":[6,10]}]},"products":[{"id":9100000000001,"title":"Field Defter","handle":"field-notebook","vendor":"Sheaf","url":"/projects/shopify/tr/","options":["Boyut","Kapak","Kâğıt"],"variants":[{"id":44100000000001,"title":"A5 / Grafit / Noktalı","options":["A5","Grafit","Noktalı"],"price":2400,"available":true},{"id":44100000000002,"title":"A5 / Grafit / Çizgili","options":["A5","Grafit","Çizgili"],"price":2400,"available":true},{"id":44100000000003,"title":"A5 / Grafit / Kareli","options":["A5","Grafit","Kareli"],"price":2400,"available":true},{"id":44100000000004,"title":"A5 / Grafit / Düz","options":["A5","Grafit","Düz"],"price":2400,"available":true},{"id":44100000000005,"title":"A5 / Bordo / Noktalı","options":["A5","Bordo","Noktalı"],"price":2400,"available":true},{"id":44100000000006,"title":"A5 / Bordo / Çizgili","options":["A5","Bordo","Çizgili"],"price":2400,"available":true},{"id":44100000000007,"title":"A5 / Bordo / Kareli","options":["A5","Bordo","Kareli"],"price":2400,"available":true},{"id":44100000000008,"title":"A5 / Bordo / Düz","options":["A5","Bordo","Düz"],"price":2400,"available":true},{"id":44100000000009,"title":"A5 / Çam yeşili / Noktalı","options":["A5","Çam yeşili","Noktalı"],"price":2400,"available":true},{"id":44100000000010,"title":"A5 / Çam yeşili / Çizgili","options":["A5","Çam yeşili","Çizgili"],"price":2400,"available":true},{"id":44100000000011,"title":"A5 / Çam yeşili / Kareli","options":["A5","Çam yeşili","Kareli"],"price":2400,"available":true},{"id":44100000000012,"title":"A5 / Çam yeşili / Düz","options":["A5","Çam yeşili","Düz"],"price":2400,"available":true},{"id":44100000000013,"title":"A5 / Hardal / Noktalı","options":["A5","Hardal","Noktalı"],"price":2400,"available":true},{"id":44100000000014,"title":"A5 / Hardal / Çizgili","options":["A5","Hardal","Çizgili"],"price":2400,"available":true},{"id":44100000000015,"title":"A5 / Hardal / Kareli","options":["A5","Hardal","Kareli"],"price":2400,"available":true},{"id":44100000000016,"title":"A5 / Hardal / Düz","options":["A5","Hardal","Düz"],"price":2400,"available":true},{"id":44100000000017,"title":"A5 / Mürekkep / Noktalı","options":["A5","Mürekkep","Noktalı"],"price":2400,"available":true},{"id":44100000000018,"title":"A5 / Mürekkep / Çizgili","options":["A5","Mürekkep","Çizgili"],"price":2400,"available":true},{"id":44100000000019,"title":"A5 / Mürekkep / Kareli","options":["A5","Mürekkep","Kareli"],"price":2400,"available":true},{"id":44100000000020,"title":"A5 / Mürekkep / Düz","options":["A5","Mürekkep","Düz"],"price":2400,"available":true},{"id":44100000000021,"title":"A5 / Keten / Noktalı","options":["A5","Keten","Noktalı"],"price":2400,"available":true},{"id":44100000000022,"title":"A5 / Keten / Çizgili","options":["A5","Keten","Çizgili"],"price":2400,"available":true},{"id":44100000000023,"title":"A5 / Keten / Kareli","options":["A5","Keten","Kareli"],"price":2400,"available":true},{"id":44100000000024,"title":"A5 / Keten / Düz","options":["A5","Keten","Düz"],"price":2400,"available":false},{"id":44100000000025,"title":"B6 / Grafit / Noktalı","options":["B6","Grafit","Noktalı"],"price":1900,"available":true},{"id":44100000000026,"title":"B6 / Grafit / Çizgili","options":["B6","Grafit","Çizgili"],"price":1900,"available":true},{"id":44100000000027,"title":"B6 / Grafit / Kareli","options":["B6","Grafit","Kareli"],"price":1900,"available":true},{"id":44100000000028,"title":"B6 / Grafit / Düz","options":["B6","Grafit","Düz"],"price":1900,"available":true},{"id":44100000000029,"title":"B6 / Bordo / Noktalı","options":["B6","Bordo","Noktalı"],"price":1900,"available":true},{"id":44100000000030,"title":"B6 / Bordo / Çizgili","options":["B6","Bordo","Çizgili"],"price":1900,"available":true},{"id":44100000000031,"title":"B6 / Bordo / Kareli","options":["B6","Bordo","Kareli"],"price":1900,"available":true},{"id":44100000000032,"title":"B6 / Bordo / Düz","options":["B6","Bordo","Düz"],"price":1900,"available":true},{"id":44100000000033,"title":"B6 / Çam yeşili / Noktalı","options":["B6","Çam yeşili","Noktalı"],"price":1900,"available":true},{"id":44100000000034,"title":"B6 / Çam yeşili / Çizgili","options":["B6","Çam yeşili","Çizgili"],"price":1900,"available":true},{"id":44100000000035,"title":"B6 / Çam yeşili / Kareli","options":["B6","Çam yeşili","Kareli"],"price":1900,"available":true},{"id":44100000000036,"title":"B6 / Çam yeşili / Düz","options":["B6","Çam yeşili","Düz"],"price":1900,"available":true},{"id":44100000000037,"title":"B6 / Hardal / Noktalı","options":["B6","Hardal","Noktalı"],"price":1900,"available":false},{"id":44100000000038,"title":"B6 / Hardal / Çizgili","options":["B6","Hardal","Çizgili"],"price":1900,"available":false},{"id":44100000000039,"title":"B6 / Hardal / Kareli","options":["B6","Hardal","Kareli"],"price":1900,"available":false},{"id":44100000000040,"title":"B6 / Hardal / Düz","options":["B6","Hardal","Düz"],"price":1900,"available":false},{"id":44100000000041,"title":"B6 / Mürekkep / Noktalı","options":["B6","Mürekkep","Noktalı"],"price":1900,"available":true},{"id":44100000000042,"title":"B6 / Mürekkep / Çizgili","options":["B6","Mürekkep","Çizgili"],"price":1900,"available":true},{"id":44100000000043,"title":"B6 / Mürekkep / Kareli","options":["B6","Mürekkep","Kareli"],"price":1900,"available":true},{"id":44100000000044,"title":"B6 / Mürekkep / Düz","options":["B6","Mürekkep","Düz"],"price":1900,"available":true},{"id":44100000000045,"title":"B6 / Keten / Noktalı","options":["B6","Keten","Noktalı"],"price":1900,"available":true},{"id":44100000000046,"title":"B6 / Keten / Çizgili","options":["B6","Keten","Çizgili"],"price":1900,"available":true},{"id":44100000000047,"title":"B6 / Keten / Kareli","options":["B6","Keten","Kareli"],"price":1900,"available":true},{"id":44100000000048,"title":"B6 / Keten / Düz","options":["B6","Keten","Düz"],"price":1900,"available":false}]},{"id":9100000000002,"title":"Monogram baskısı","handle":"monogram-stamping","url":"/projects/shopify/tr/","options":["Title"],"variants":[{"id":44200000000001,"title":"Default Title","options":["Default Title"],"price":600,"available":true}]}]}</script>
+    <script type="module" src="/projects/shopify/preview/demo-backend.js"></script>
+    <script src="/projects/shopify/preview/shell.js" defer="defer"></script>
+    <link href="/projects/shopify/ext/delivery-estimate.css" rel="stylesheet" type="text/css" media="all"><script src="/projects/shopify/ext/delivery-estimate.js" defer="defer"></script>
+  </head>
+  <body class="gradient">
+    <header class="shell-header">
+      <div class="shell-header__inner page-width">
+        <a class="shell-header__brand" href="/projects/shopify/tr/">Sheaf</a>
+        <nav class="shell-header__nav">
+          <a class="shell-header__cart" href="/projects/shopify/tr/cart/">Sepet <span data-cart-count>0</span></a>
+        </nav>
+      </div>
+    </header>
+    <main id="MainContent" class="content-for-layout" role="main" tabindex="-1"><div id="shopify-section-template--configurator" class="shopify-section section"><link href="/projects/shopify/assets/sheaf-configurator.css" rel="stylesheet" type="text/css" media="all">
+<script src="/projects/shopify/assets/sheaf-configurator.js" defer="defer"></script><style>.section-template--configurator-padding {
+    padding-top: 27px;
+    padding-bottom: 27px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-template--configurator-padding {
+      padding-top: 36px;
+      padding-bottom: 36px;
+    }
+  }</style><div class="color-scheme-1 gradient">
+  <div class="page-width section-template--configurator-padding"><sheaf-configurator
+        class="sheaf"
+        data-section-id="template--configurator"
+        data-product-url="/projects/shopify/tr/"
+        data-update-url="true"
+        data-monogram-max="3"
+        data-money-format="€{{amount_with_comma_separator}}"
+        data-cart-add-url="/projects/shopify/tr/cart/add"
+        data-cart-url="/projects/shopify/tr/cart"
+      >
+        <div class="sheaf__media">
+          <div class="sheaf__stage-wrap">
+
+<div
+  class="sheaf-stage"
+  data-stage
+  data-view="cover"
+  data-paper="dot"
+  data-foil="blind"
+  style="--w: 148; --h: 210; --cover: #33363b; --band: #1d1d1f;"
+  aria-hidden="true"
+>
+  <div class="sheaf-book">
+    <span class="sheaf-book__shadow"></span>
+    <span class="sheaf-book__ribbon"></span>
+    <span class="sheaf-book__back"></span>
+    <div class="sheaf-book__block">
+      <span class="sheaf-book__page"></span>
+    </div>
+    <div class="sheaf-book__cover">
+      <div class="sheaf-book__face sheaf-book__face--front">
+        <span class="sheaf-book__hinge"></span>
+        <span class="sheaf-book__band"></span>
+        <span class="sheaf-book__monogram" data-monogram-preview></span>
+      </div>
+      <div class="sheaf-book__face sheaf-book__face--inner">
+        <div class="sheaf-book__endpaper">
+          <p class="sheaf-book__colophon">
+            <span>Sheaf</span>
+            <span data-colophon-size>148 × 210</span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="sheaf__stage-bar">
+              <div class="sheaf__views" role="group" aria-label="Önizleme">
+                <button type="button" class="sheaf__view" data-view="cover" aria-pressed="true">Kapak</button>
+                <button type="button" class="sheaf__view" data-view="inside" aria-pressed="false">İç sayfa</button>
+              </div>
+              <p class="sheaf__dims">
+                <span data-dims-label>148 × 210</span>
+                mm
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="sheaf__info"><h2 class="sheaf__title h1">Field Defter</h2><div class="sheaf__lead rte"><p>Boyutu, kapağı ve kâğıdı seçin. Önizleme gerçek ölçeğe göre çizilir.</p></div><form method="post" action="/projects/shopify/tr/cart/add" id="sheaf-form-template--configurator" class="sheaf__form" novalidate="novalidate" data-type="add-to-cart-form" accept-charset="UTF-8" enctype="multipart/form-data"><input type="hidden" name="form_type" value="product"><input type="hidden" name="utf8" value="✓"><input type="hidden" name="id" value="44100000000001" disabled data-variant-id><fieldset class="sheaf__field sheaf__field--pill" data-option-index="0">
+                <legend class="sheaf__legend">
+                  <span>Boyut</span>
+                  <span class="sheaf__legend-value" data-option-value>A5</span>
+                </legend>
+                <div class="sheaf__choices"><input
+                      type="radio"
+                      class="sheaf__radio visually-hidden"
+                      id="sheaf-form-template--configurator-1-0"
+                      name="sheaf-option-template--configurator-1"
+                      value="A5"
+                      form="sheaf-form-template--configurator-options"
+                      
+                        checked
+                      
+                      
+                      
+                        data-dims="148x210"
+                      
+                      
+                    >
+                    <label
+                      class="sheaf__choice"
+                      for="sheaf-form-template--configurator-1-0"
+                      
+                    ><span>A5</span><span class="sheaf__choice-note">148 × 210 mm</span></label><input
+                      type="radio"
+                      class="sheaf__radio visually-hidden"
+                      id="sheaf-form-template--configurator-1-1"
+                      name="sheaf-option-template--configurator-1"
+                      value="B6"
+                      form="sheaf-form-template--configurator-options"
+                      
+                      
+                      
+                        data-dims="125x176"
+                      
+                      
+                    >
+                    <label
+                      class="sheaf__choice"
+                      for="sheaf-form-template--configurator-1-1"
+                      
+                    ><span>B6</span><span class="sheaf__choice-note">125 × 176 mm</span></label></div>
+              </fieldset><fieldset class="sheaf__field sheaf__field--swatch" data-option-index="1">
+                <legend class="sheaf__legend">
+                  <span>Kapak</span>
+                  <span class="sheaf__legend-value" data-option-value>Grafit</span>
+                </legend>
+                <div class="sheaf__choices"><input
+                      type="radio"
+                      class="sheaf__radio visually-hidden"
+                      id="sheaf-form-template--configurator-2-0"
+                      name="sheaf-option-template--configurator-2"
+                      value="Grafit"
+                      form="sheaf-form-template--configurator-options"
+                      
+                        checked
+                      
+                      
+                        data-hex="#33363b"
+                      
+                      
+                      
+                    >
+                    <label
+                      class="sheaf__choice"
+                      for="sheaf-form-template--configurator-2-0"
+                      
+                        style="--swatch: #33363b;"
+                        title="Grafit"
+                      
+                    ><span class="sheaf__swatch" aria-hidden="true"></span>
+                        <span class="visually-hidden">Grafit</span></label><input
+                      type="radio"
+                      class="sheaf__radio visually-hidden"
+                      id="sheaf-form-template--configurator-2-1"
+                      name="sheaf-option-template--configurator-2"
+                      value="Bordo"
+                      form="sheaf-form-template--configurator-options"
+                      
+                      
+                        data-hex="#6e2a2c"
+                      
+                      
+                      
+                    >
+                    <label
+                      class="sheaf__choice"
+                      for="sheaf-form-template--configurator-2-1"
+                      
+                        style="--swatch: #6e2a2c;"
+                        title="Bordo"
+                      
+                    ><span class="sheaf__swatch" aria-hidden="true"></span>
+                        <span class="visually-hidden">Bordo</span></label><input
+                      type="radio"
+                      class="sheaf__radio visually-hidden"
+                      id="sheaf-form-template--configurator-2-2"
+                      name="sheaf-option-template--configurator-2"
+                      value="Çam yeşili"
+                      form="sheaf-form-template--configurator-options"
+                      
+                      
+                        data-hex="#2f4a3c"
+                      
+                      
+                      
+                    >
+                    <label
+                      class="sheaf__choice"
+                      for="sheaf-form-template--configurator-2-2"
+                      
+                        style="--swatch: #2f4a3c;"
+                        title="Çam yeşili"
+                      
+                    ><span class="sheaf__swatch" aria-hidden="true"></span>
+                        <span class="visually-hidden">Çam yeşili</span></label><input
+                      type="radio"
+                      class="sheaf__radio visually-hidden"
+                      id="sheaf-form-template--configurator-2-3"
+                      name="sheaf-option-template--configurator-2"
+                      value="Hardal"
+                      form="sheaf-form-template--configurator-options"
+                      
+                      
+                        data-hex="#b98a3a"
+                      
+                      
+                      
+                    >
+                    <label
+                      class="sheaf__choice"
+                      for="sheaf-form-template--configurator-2-3"
+                      
+                        style="--swatch: #b98a3a;"
+                        title="Hardal"
+                      
+                    ><span class="sheaf__swatch" aria-hidden="true"></span>
+                        <span class="visually-hidden">Hardal</span></label><input
+                      type="radio"
+                      class="sheaf__radio visually-hidden"
+                      id="sheaf-form-template--configurator-2-4"
+                      name="sheaf-option-template--configurator-2"
+                      value="Mürekkep"
+                      form="sheaf-form-template--configurator-options"
+                      
+                      
+                        data-hex="#26365c"
+                      
+                      
+                      
+                    >
+                    <label
+                      class="sheaf__choice"
+                      for="sheaf-form-template--configurator-2-4"
+                      
+                        style="--swatch: #26365c;"
+                        title="Mürekkep"
+                      
+                    ><span class="sheaf__swatch" aria-hidden="true"></span>
+                        <span class="visually-hidden">Mürekkep</span></label><input
+                      type="radio"
+                      class="sheaf__radio visually-hidden"
+                      id="sheaf-form-template--configurator-2-5"
+                      name="sheaf-option-template--configurator-2"
+                      value="Keten"
+                      form="sheaf-form-template--configurator-options"
+                      
+                      
+                        data-hex="#d9d2c3"
+                      
+                      
+                      
+                    >
+                    <label
+                      class="sheaf__choice"
+                      for="sheaf-form-template--configurator-2-5"
+                      
+                        style="--swatch: #d9d2c3;"
+                        title="Keten"
+                      
+                    ><span class="sheaf__swatch" aria-hidden="true"></span>
+                        <span class="visually-hidden">Keten</span></label></div>
+              </fieldset><fieldset class="sheaf__field sheaf__field--paper" data-option-index="2">
+                <legend class="sheaf__legend">
+                  <span>Kâğıt</span>
+                  <span class="sheaf__legend-value" data-option-value>Noktalı</span>
+                </legend>
+                <div class="sheaf__choices"><input
+                      type="radio"
+                      class="sheaf__radio visually-hidden"
+                      id="sheaf-form-template--configurator-3-0"
+                      name="sheaf-option-template--configurator-3"
+                      value="Noktalı"
+                      form="sheaf-form-template--configurator-options"
+                      
+                        checked
+                      
+                      
+                      
+                      
+                        data-paper="dot"
+                      
+                    >
+                    <label
+                      class="sheaf__choice"
+                      for="sheaf-form-template--configurator-3-0"
+                      
+                    ><span class="sheaf__paper sheaf__paper--dot" aria-hidden="true"></span>
+                        <span>Noktalı</span></label><input
+                      type="radio"
+                      class="sheaf__radio visually-hidden"
+                      id="sheaf-form-template--configurator-3-1"
+                      name="sheaf-option-template--configurator-3"
+                      value="Çizgili"
+                      form="sheaf-form-template--configurator-options"
+                      
+                      
+                      
+                      
+                        data-paper="ruled"
+                      
+                    >
+                    <label
+                      class="sheaf__choice"
+                      for="sheaf-form-template--configurator-3-1"
+                      
+                    ><span class="sheaf__paper sheaf__paper--ruled" aria-hidden="true"></span>
+                        <span>Çizgili</span></label><input
+                      type="radio"
+                      class="sheaf__radio visually-hidden"
+                      id="sheaf-form-template--configurator-3-2"
+                      name="sheaf-option-template--configurator-3"
+                      value="Kareli"
+                      form="sheaf-form-template--configurator-options"
+                      
+                      
+                      
+                      
+                        data-paper="grid"
+                      
+                    >
+                    <label
+                      class="sheaf__choice"
+                      for="sheaf-form-template--configurator-3-2"
+                      
+                    ><span class="sheaf__paper sheaf__paper--grid" aria-hidden="true"></span>
+                        <span>Kareli</span></label><input
+                      type="radio"
+                      class="sheaf__radio visually-hidden"
+                      id="sheaf-form-template--configurator-3-3"
+                      name="sheaf-option-template--configurator-3"
+                      value="Düz"
+                      form="sheaf-form-template--configurator-options"
+                      
+                      
+                      
+                      
+                        data-paper="blank"
+                      
+                    >
+                    <label
+                      class="sheaf__choice"
+                      for="sheaf-form-template--configurator-3-3"
+                      
+                    ><span class="sheaf__paper sheaf__paper--blank" aria-hidden="true"></span>
+                        <span>Düz</span></label></div>
+              </fieldset><fieldset class="sheaf__field sheaf__field--swatch" data-band>
+                <legend class="sheaf__legend">
+                  <span>Lastik</span>
+                  <span class="sheaf__legend-value" data-band-value>Siyah</span>
+                </legend>
+                <div class="sheaf__choices"><input
+                        type="radio"
+                        class="sheaf__radio visually-hidden"
+                        id="sheaf-form-template--configurator-band-0"
+                        name="properties[Lastik]"
+                        value="Siyah"
+                        data-hex="#1d1d1f"
+                        
+                          checked
+                        
+                      >
+                      <label
+                        class="sheaf__choice"
+                        for="sheaf-form-template--configurator-band-0"
+                        style="--swatch: #1d1d1f;"
+                        title="Siyah"
+                      >
+                        <span class="sheaf__swatch sheaf__swatch--band" aria-hidden="true"></span>
+                        <span class="visually-hidden">Siyah</span>
+                      </label><input
+                        type="radio"
+                        class="sheaf__radio visually-hidden"
+                        id="sheaf-form-template--configurator-band-1"
+                        name="properties[Lastik]"
+                        value="Kırmızı"
+                        data-hex="#b5372e"
+                        
+                      >
+                      <label
+                        class="sheaf__choice"
+                        for="sheaf-form-template--configurator-band-1"
+                        style="--swatch: #b5372e;"
+                        title="Kırmızı"
+                      >
+                        <span class="sheaf__swatch sheaf__swatch--band" aria-hidden="true"></span>
+                        <span class="visually-hidden">Kırmızı</span>
+                      </label><input
+                        type="radio"
+                        class="sheaf__radio visually-hidden"
+                        id="sheaf-form-template--configurator-band-2"
+                        name="properties[Lastik]"
+                        value="Kum"
+                        data-hex="#c8b89a"
+                        
+                      >
+                      <label
+                        class="sheaf__choice"
+                        for="sheaf-form-template--configurator-band-2"
+                        style="--swatch: #c8b89a;"
+                        title="Kum"
+                      >
+                        <span class="sheaf__swatch sheaf__swatch--band" aria-hidden="true"></span>
+                        <span class="visually-hidden">Kum</span>
+                      </label><input
+                        type="radio"
+                        class="sheaf__radio visually-hidden"
+                        id="sheaf-form-template--configurator-band-3"
+                        name="properties[Lastik]"
+                        value="Lacivert"
+                        data-hex="#26365c"
+                        
+                      >
+                      <label
+                        class="sheaf__choice"
+                        for="sheaf-form-template--configurator-band-3"
+                        style="--swatch: #26365c;"
+                        title="Lacivert"
+                      >
+                        <span class="sheaf__swatch sheaf__swatch--band" aria-hidden="true"></span>
+                        <span class="visually-hidden">Lacivert</span>
+                      </label></div>
+              </fieldset><div class="sheaf__field sheaf__field--monogram" data-monogram>
+                <div class="sheaf__legend">
+                  <label for="sheaf-form-template--configurator-monogram">Monogram</label><span class="sheaf__legend-value">+ €6,00</span></div>
+                <div class="sheaf__monogram-row">
+                  <input
+                    type="text"
+                    class="sheaf__monogram-input"
+                    id="sheaf-form-template--configurator-monogram"
+                    name="properties[Monogram]"
+                    maxlength="3"
+                    autocomplete="off"
+                    autocapitalize="characters"
+                    spellcheck="false"
+                    placeholder="ABC"
+                    aria-describedby="sheaf-form-template--configurator-monogram-hint"
+                    data-monogram-input
+                  >
+                  <div class="sheaf__foils" role="radiogroup" aria-label="Baskı"><input
+                        type="radio"
+                        class="sheaf__radio visually-hidden"
+                        id="sheaf-form-template--configurator-foil-blind"
+                        name="properties[Baskı]"
+                        value="Kör baskı"
+                        data-foil="blind"
+                        
+                          checked
+                        
+                      >
+                      <label class="sheaf__choice sheaf__choice--foil" for="sheaf-form-template--configurator-foil-blind">Kör baskı</label><input
+                        type="radio"
+                        class="sheaf__radio visually-hidden"
+                        id="sheaf-form-template--configurator-foil-gold"
+                        name="properties[Baskı]"
+                        value="Altın"
+                        data-foil="gold"
+                        
+                      >
+                      <label class="sheaf__choice sheaf__choice--foil" for="sheaf-form-template--configurator-foil-gold">Altın</label><input
+                        type="radio"
+                        class="sheaf__radio visually-hidden"
+                        id="sheaf-form-template--configurator-foil-silver"
+                        name="properties[Baskı]"
+                        value="Gümüş"
+                        data-foil="silver"
+                        
+                      >
+                      <label class="sheaf__choice sheaf__choice--foil" for="sheaf-form-template--configurator-foil-silver">Gümüş</label></div>
+                </div>
+                <p class="sheaf__hint" id="sheaf-form-template--configurator-monogram-hint">En fazla 3 harf veya rakam. Kişiye özel defterler sipariş üzerine üretilir.</p>
+              </div><dl class="sheaf__summary" aria-live="polite">
+              <div class="sheaf__summary-row">
+                <dt data-summary-title>A5 / Grafit / Noktalı</dt>
+                <dd data-summary-price>€24,00</dd>
+              </div><div class="sheaf__summary-row" data-summary-addon hidden>
+                  <dt>Monogram baskısı <span data-summary-monogram></span></dt>
+                  <dd>€6,00</dd>
+                </div></dl>
+
+            <div class="sheaf__buy">
+              <div class="sheaf__quantity">
+                <label class="visually-hidden" for="sheaf-form-template--configurator-quantity">Adet</label>
+                <button type="button" class="sheaf__step" data-step="-1" aria-label="Field Defter için adedi azaltın">
+                  <svg viewBox="0 0 10 2" width="10" height="2" aria-hidden="true" focusable="false"><path d="M0 1h10" stroke="currentColor" stroke-width="1.2"/></svg>
+                </button>
+                <input
+                  class="sheaf__quantity-input"
+                  type="number"
+                  id="sheaf-form-template--configurator-quantity"
+                  name="quantity"
+                  value="1"
+                  min="1"
+                  max="99"
+                  inputmode="numeric"
+                  data-quantity
+                >
+                <button type="button" class="sheaf__step" data-step="1" aria-label="Field Defter için adedi artırın">
+                  <svg viewBox="0 0 10 10" width="10" height="10" aria-hidden="true" focusable="false"><path d="M0 5h10M5 0v10" stroke="currentColor" stroke-width="1.2"/></svg>
+                </button>
+              </div>
+
+              <button
+                type="submit"
+                name="add"
+                class="sheaf__submit button button--full-width button--primary"
+                
+                data-submit
+              >
+                <span data-submit-label>Sepete ekle</span>
+                <span class="sheaf__submit-total" data-total>€24,00</span>
+              </button>
+            </div>
+
+            <p class="sheaf__message" role="status" data-message hidden></p>
+
+            <noscript>
+              <div class="sheaf__noscript">
+                <label for="sheaf-form-template--configurator-noscript">Ürün varyasyonları</label>
+                <select id="sheaf-form-template--configurator-noscript" name="id"><option
+                      value="44100000000001"
+                      
+                        selected
+                      
+                      
+                    >
+                      A5 / Grafit / Noktalı - €24,00
+                    </option><option
+                      value="44100000000002"
+                      
+                      
+                    >
+                      A5 / Grafit / Çizgili - €24,00
+                    </option><option
+                      value="44100000000003"
+                      
+                      
+                    >
+                      A5 / Grafit / Kareli - €24,00
+                    </option><option
+                      value="44100000000004"
+                      
+                      
+                    >
+                      A5 / Grafit / Düz - €24,00
+                    </option><option
+                      value="44100000000005"
+                      
+                      
+                    >
+                      A5 / Bordo / Noktalı - €24,00
+                    </option><option
+                      value="44100000000006"
+                      
+                      
+                    >
+                      A5 / Bordo / Çizgili - €24,00
+                    </option><option
+                      value="44100000000007"
+                      
+                      
+                    >
+                      A5 / Bordo / Kareli - €24,00
+                    </option><option
+                      value="44100000000008"
+                      
+                      
+                    >
+                      A5 / Bordo / Düz - €24,00
+                    </option><option
+                      value="44100000000009"
+                      
+                      
+                    >
+                      A5 / Çam yeşili / Noktalı - €24,00
+                    </option><option
+                      value="44100000000010"
+                      
+                      
+                    >
+                      A5 / Çam yeşili / Çizgili - €24,00
+                    </option><option
+                      value="44100000000011"
+                      
+                      
+                    >
+                      A5 / Çam yeşili / Kareli - €24,00
+                    </option><option
+                      value="44100000000012"
+                      
+                      
+                    >
+                      A5 / Çam yeşili / Düz - €24,00
+                    </option><option
+                      value="44100000000013"
+                      
+                      
+                    >
+                      A5 / Hardal / Noktalı - €24,00
+                    </option><option
+                      value="44100000000014"
+                      
+                      
+                    >
+                      A5 / Hardal / Çizgili - €24,00
+                    </option><option
+                      value="44100000000015"
+                      
+                      
+                    >
+                      A5 / Hardal / Kareli - €24,00
+                    </option><option
+                      value="44100000000016"
+                      
+                      
+                    >
+                      A5 / Hardal / Düz - €24,00
+                    </option><option
+                      value="44100000000017"
+                      
+                      
+                    >
+                      A5 / Mürekkep / Noktalı - €24,00
+                    </option><option
+                      value="44100000000018"
+                      
+                      
+                    >
+                      A5 / Mürekkep / Çizgili - €24,00
+                    </option><option
+                      value="44100000000019"
+                      
+                      
+                    >
+                      A5 / Mürekkep / Kareli - €24,00
+                    </option><option
+                      value="44100000000020"
+                      
+                      
+                    >
+                      A5 / Mürekkep / Düz - €24,00
+                    </option><option
+                      value="44100000000021"
+                      
+                      
+                    >
+                      A5 / Keten / Noktalı - €24,00
+                    </option><option
+                      value="44100000000022"
+                      
+                      
+                    >
+                      A5 / Keten / Çizgili - €24,00
+                    </option><option
+                      value="44100000000023"
+                      
+                      
+                    >
+                      A5 / Keten / Kareli - €24,00
+                    </option><option
+                      value="44100000000024"
+                      
+                      
+                        disabled
+                      
+                    >
+                      A5 / Keten / Düz - €24,00
+                    </option><option
+                      value="44100000000025"
+                      
+                      
+                    >
+                      B6 / Grafit / Noktalı - €19,00
+                    </option><option
+                      value="44100000000026"
+                      
+                      
+                    >
+                      B6 / Grafit / Çizgili - €19,00
+                    </option><option
+                      value="44100000000027"
+                      
+                      
+                    >
+                      B6 / Grafit / Kareli - €19,00
+                    </option><option
+                      value="44100000000028"
+                      
+                      
+                    >
+                      B6 / Grafit / Düz - €19,00
+                    </option><option
+                      value="44100000000029"
+                      
+                      
+                    >
+                      B6 / Bordo / Noktalı - €19,00
+                    </option><option
+                      value="44100000000030"
+                      
+                      
+                    >
+                      B6 / Bordo / Çizgili - €19,00
+                    </option><option
+                      value="44100000000031"
+                      
+                      
+                    >
+                      B6 / Bordo / Kareli - €19,00
+                    </option><option
+                      value="44100000000032"
+                      
+                      
+                    >
+                      B6 / Bordo / Düz - €19,00
+                    </option><option
+                      value="44100000000033"
+                      
+                      
+                    >
+                      B6 / Çam yeşili / Noktalı - €19,00
+                    </option><option
+                      value="44100000000034"
+                      
+                      
+                    >
+                      B6 / Çam yeşili / Çizgili - €19,00
+                    </option><option
+                      value="44100000000035"
+                      
+                      
+                    >
+                      B6 / Çam yeşili / Kareli - €19,00
+                    </option><option
+                      value="44100000000036"
+                      
+                      
+                    >
+                      B6 / Çam yeşili / Düz - €19,00
+                    </option><option
+                      value="44100000000037"
+                      
+                      
+                        disabled
+                      
+                    >
+                      B6 / Hardal / Noktalı - €19,00
+                    </option><option
+                      value="44100000000038"
+                      
+                      
+                        disabled
+                      
+                    >
+                      B6 / Hardal / Çizgili - €19,00
+                    </option><option
+                      value="44100000000039"
+                      
+                      
+                        disabled
+                      
+                    >
+                      B6 / Hardal / Kareli - €19,00
+                    </option><option
+                      value="44100000000040"
+                      
+                      
+                        disabled
+                      
+                    >
+                      B6 / Hardal / Düz - €19,00
+                    </option><option
+                      value="44100000000041"
+                      
+                      
+                    >
+                      B6 / Mürekkep / Noktalı - €19,00
+                    </option><option
+                      value="44100000000042"
+                      
+                      
+                    >
+                      B6 / Mürekkep / Çizgili - €19,00
+                    </option><option
+                      value="44100000000043"
+                      
+                      
+                    >
+                      B6 / Mürekkep / Kareli - €19,00
+                    </option><option
+                      value="44100000000044"
+                      
+                      
+                    >
+                      B6 / Mürekkep / Düz - €19,00
+                    </option><option
+                      value="44100000000045"
+                      
+                      
+                    >
+                      B6 / Keten / Noktalı - €19,00
+                    </option><option
+                      value="44100000000046"
+                      
+                      
+                    >
+                      B6 / Keten / Çizgili - €19,00
+                    </option><option
+                      value="44100000000047"
+                      
+                      
+                    >
+                      B6 / Keten / Kareli - €19,00
+                    </option><option
+                      value="44100000000048"
+                      
+                      
+                        disabled
+                      
+                    >
+                      B6 / Keten / Düz - €19,00
+                    </option></select>
+              </div>
+            </noscript></form><div class="sheaf__app-block"><div id="shopify-block-delivery_estimate" class="shopify-block shopify-app-block"><sheaf-delivery
+  class="sheaf-delivery"
+  data-endpoint="/projects/shopify/apps/sheaf-delivery/estimate"
+  data-country="DE"
+  data-country-name="Almanya"
+  data-locale="tr"
+  data-variant="44100000000001"
+  hidden
+  
+>
+  <svg class="sheaf-delivery__icon" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false">
+    <path d="M2 6h11v10.5H2zM13 9.5h4.3l3.2 3.5v3.5H13z" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/>
+    <circle cx="6.5" cy="17" r="1.9" stroke="currentColor" stroke-width="1.2"/>
+    <circle cx="16.8" cy="17" r="1.9" stroke="currentColor" stroke-width="1.2"/>
+  </svg>
+  <div class="sheaf-delivery__text" aria-live="polite">
+    <p class="sheaf-delivery__dispatch" data-dispatch></p>
+    <p class="sheaf-delivery__arrival" data-arrival></p>
+  </div>
+
+  <script type="application/json" data-strings>
+    {
+      "orderWithin": "[time] içinde sipariş verin, bugün kargoda",
+      "shipsOn": "Kargoya veriliş: [date]",
+      "madeToOrder": "Siparişe özel üretilir, kargoya veriliş: [date]",
+      "arrivesBetween": "Teslimat [from] - [to], [country]",
+      "noShipping": "Bu ülkeye henüz gönderim yapmıyoruz: [country]",
+      "hours": "[count] sa",
+      "minutes": "[count] dk"
+    }
+  </script>
+</sheaf-delivery>
+
+
+</div></div><details class="sheaf__details" >
+                  <summary>
+                    <span>Kâğıt ve cilt</span>
+                    <svg viewBox="0 0 10 6" width="10" height="6" aria-hidden="true" focusable="false"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.2"/></svg>
+                  </summary>
+                  <div class="rte"><p>192 sayfa, 120 g/m² kâğıt. İplik dikişli olduğu için defter düz açılır. Bez kapak, lastik ve ayraç kurdelesi.</p></div>
+                </details><details class="sheaf__details" >
+                  <summary>
+                    <span>Kargo ve iade</span>
+                    <svg viewBox="0 0 10 6" width="10" height="6" aria-hidden="true" focusable="false"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.2"/></svg>
+                  </summary>
+                  <div class="rte"><p>Saat 14:00’e kadar verilen siparişler aynı iş günü kargoya verilir. Monogramsız defterler 30 gün içinde iade edilebilir.</p></div>
+                </details></div>
+
+        <script type="application/json" data-product-json>
+          {
+            "id": 9100000000001,
+            "title": "Field Defter",
+            "options": ["Boyut","Kapak","Kâğıt"],
+            "variants": [{
+                  "id": 44100000000001,
+                  "title": "A5 / Grafit / Noktalı",
+                  "options": ["A5","Grafit","Noktalı"],
+                  "price": 2400,
+                  "available": true
+                },{
+                  "id": 44100000000002,
+                  "title": "A5 / Grafit / Çizgili",
+                  "options": ["A5","Grafit","Çizgili"],
+                  "price": 2400,
+                  "available": true
+                },{
+                  "id": 44100000000003,
+                  "title": "A5 / Grafit / Kareli",
+                  "options": ["A5","Grafit","Kareli"],
+                  "price": 2400,
+                  "available": true
+                },{
+                  "id": 44100000000004,
+                  "title": "A5 / Grafit / Düz",
+                  "options": ["A5","Grafit","Düz"],
+                  "price": 2400,
+                  "available": true
+                },{
+                  "id": 44100000000005,
+                  "title": "A5 / Bordo / Noktalı",
+                  "options": ["A5","Bordo","Noktalı"],
+                  "price": 2400,
+                  "available": true
+                },{
+                  "id": 44100000000006,
+                  "title": "A5 / Bordo / Çizgili",
+                  "options": ["A5","Bordo","Çizgili"],
+                  "price": 2400,
+                  "available": true
+                },{
+                  "id": 44100000000007,
+                  "title": "A5 / Bordo / Kareli",
+                  "options": ["A5","Bordo","Kareli"],
+                  "price": 2400,
+                  "available": true
+                },{
+                  "id": 44100000000008,
+                  "title": "A5 / Bordo / Düz",
+                  "options": ["A5","Bordo","Düz"],
+                  "price": 2400,
+                  "available": true
+                },{
+                  "id": 44100000000009,
+                  "title": "A5 / Çam yeşili / Noktalı",
+                  "options": ["A5","Çam yeşili","Noktalı"],
+                  "price": 2400,
+                  "available": true
+                },{
+                  "id": 44100000000010,
+                  "title": "A5 / Çam yeşili / Çizgili",
+                  "options": ["A5","Çam yeşili","Çizgili"],
+                  "price": 2400,
+                  "available": true
+                },{
+                  "id": 44100000000011,
+                  "title": "A5 / Çam yeşili / Kareli",
+                  "options": ["A5","Çam yeşili","Kareli"],
+                  "price": 2400,
+                  "available": true
+                },{
+                  "id": 44100000000012,
+                  "title": "A5 / Çam yeşili / Düz",
+                  "options": ["A5","Çam yeşili","Düz"],
+                  "price": 2400,
+                  "available": true
+                },{
+                  "id": 44100000000013,
+                  "title": "A5 / Hardal / Noktalı",
+                  "options": ["A5","Hardal","Noktalı"],
+                  "price": 2400,
+                  "available": true
+                },{
+                  "id": 44100000000014,
+                  "title": "A5 / Hardal / Çizgili",
+                  "options": ["A5","Hardal","Çizgili"],
+                  "price": 2400,
+                  "available": true
+                },{
+                  "id": 44100000000015,
+                  "title": "A5 / Hardal / Kareli",
+                  "options": ["A5","Hardal","Kareli"],
+                  "price": 2400,
+                  "available": true
+                },{
+                  "id": 44100000000016,
+                  "title": "A5 / Hardal / Düz",
+                  "options": ["A5","Hardal","Düz"],
+                  "price": 2400,
+                  "available": true
+                },{
+                  "id": 44100000000017,
+                  "title": "A5 / Mürekkep / Noktalı",
+                  "options": ["A5","Mürekkep","Noktalı"],
+                  "price": 2400,
+                  "available": true
+                },{
+                  "id": 44100000000018,
+                  "title": "A5 / Mürekkep / Çizgili",
+                  "options": ["A5","Mürekkep","Çizgili"],
+                  "price": 2400,
+                  "available": true
+                },{
+                  "id": 44100000000019,
+                  "title": "A5 / Mürekkep / Kareli",
+                  "options": ["A5","Mürekkep","Kareli"],
+                  "price": 2400,
+                  "available": true
+                },{
+                  "id": 44100000000020,
+                  "title": "A5 / Mürekkep / Düz",
+                  "options": ["A5","Mürekkep","Düz"],
+                  "price": 2400,
+                  "available": true
+                },{
+                  "id": 44100000000021,
+                  "title": "A5 / Keten / Noktalı",
+                  "options": ["A5","Keten","Noktalı"],
+                  "price": 2400,
+                  "available": true
+                },{
+                  "id": 44100000000022,
+                  "title": "A5 / Keten / Çizgili",
+                  "options": ["A5","Keten","Çizgili"],
+                  "price": 2400,
+                  "available": true
+                },{
+                  "id": 44100000000023,
+                  "title": "A5 / Keten / Kareli",
+                  "options": ["A5","Keten","Kareli"],
+                  "price": 2400,
+                  "available": true
+                },{
+                  "id": 44100000000024,
+                  "title": "A5 / Keten / Düz",
+                  "options": ["A5","Keten","Düz"],
+                  "price": 2400,
+                  "available": false
+                },{
+                  "id": 44100000000025,
+                  "title": "B6 / Grafit / Noktalı",
+                  "options": ["B6","Grafit","Noktalı"],
+                  "price": 1900,
+                  "available": true
+                },{
+                  "id": 44100000000026,
+                  "title": "B6 / Grafit / Çizgili",
+                  "options": ["B6","Grafit","Çizgili"],
+                  "price": 1900,
+                  "available": true
+                },{
+                  "id": 44100000000027,
+                  "title": "B6 / Grafit / Kareli",
+                  "options": ["B6","Grafit","Kareli"],
+                  "price": 1900,
+                  "available": true
+                },{
+                  "id": 44100000000028,
+                  "title": "B6 / Grafit / Düz",
+                  "options": ["B6","Grafit","Düz"],
+                  "price": 1900,
+                  "available": true
+                },{
+                  "id": 44100000000029,
+                  "title": "B6 / Bordo / Noktalı",
+                  "options": ["B6","Bordo","Noktalı"],
+                  "price": 1900,
+                  "available": true
+                },{
+                  "id": 44100000000030,
+                  "title": "B6 / Bordo / Çizgili",
+                  "options": ["B6","Bordo","Çizgili"],
+                  "price": 1900,
+                  "available": true
+                },{
+                  "id": 44100000000031,
+                  "title": "B6 / Bordo / Kareli",
+                  "options": ["B6","Bordo","Kareli"],
+                  "price": 1900,
+                  "available": true
+                },{
+                  "id": 44100000000032,
+                  "title": "B6 / Bordo / Düz",
+                  "options": ["B6","Bordo","Düz"],
+                  "price": 1900,
+                  "available": true
+                },{
+                  "id": 44100000000033,
+                  "title": "B6 / Çam yeşili / Noktalı",
+                  "options": ["B6","Çam yeşili","Noktalı"],
+                  "price": 1900,
+                  "available": true
+                },{
+                  "id": 44100000000034,
+                  "title": "B6 / Çam yeşili / Çizgili",
+                  "options": ["B6","Çam yeşili","Çizgili"],
+                  "price": 1900,
+                  "available": true
+                },{
+                  "id": 44100000000035,
+                  "title": "B6 / Çam yeşili / Kareli",
+                  "options": ["B6","Çam yeşili","Kareli"],
+                  "price": 1900,
+                  "available": true
+                },{
+                  "id": 44100000000036,
+                  "title": "B6 / Çam yeşili / Düz",
+                  "options": ["B6","Çam yeşili","Düz"],
+                  "price": 1900,
+                  "available": true
+                },{
+                  "id": 44100000000037,
+                  "title": "B6 / Hardal / Noktalı",
+                  "options": ["B6","Hardal","Noktalı"],
+                  "price": 1900,
+                  "available": false
+                },{
+                  "id": 44100000000038,
+                  "title": "B6 / Hardal / Çizgili",
+                  "options": ["B6","Hardal","Çizgili"],
+                  "price": 1900,
+                  "available": false
+                },{
+                  "id": 44100000000039,
+                  "title": "B6 / Hardal / Kareli",
+                  "options": ["B6","Hardal","Kareli"],
+                  "price": 1900,
+                  "available": false
+                },{
+                  "id": 44100000000040,
+                  "title": "B6 / Hardal / Düz",
+                  "options": ["B6","Hardal","Düz"],
+                  "price": 1900,
+                  "available": false
+                },{
+                  "id": 44100000000041,
+                  "title": "B6 / Mürekkep / Noktalı",
+                  "options": ["B6","Mürekkep","Noktalı"],
+                  "price": 1900,
+                  "available": true
+                },{
+                  "id": 44100000000042,
+                  "title": "B6 / Mürekkep / Çizgili",
+                  "options": ["B6","Mürekkep","Çizgili"],
+                  "price": 1900,
+                  "available": true
+                },{
+                  "id": 44100000000043,
+                  "title": "B6 / Mürekkep / Kareli",
+                  "options": ["B6","Mürekkep","Kareli"],
+                  "price": 1900,
+                  "available": true
+                },{
+                  "id": 44100000000044,
+                  "title": "B6 / Mürekkep / Düz",
+                  "options": ["B6","Mürekkep","Düz"],
+                  "price": 1900,
+                  "available": true
+                },{
+                  "id": 44100000000045,
+                  "title": "B6 / Keten / Noktalı",
+                  "options": ["B6","Keten","Noktalı"],
+                  "price": 1900,
+                  "available": true
+                },{
+                  "id": 44100000000046,
+                  "title": "B6 / Keten / Çizgili",
+                  "options": ["B6","Keten","Çizgili"],
+                  "price": 1900,
+                  "available": true
+                },{
+                  "id": 44100000000047,
+                  "title": "B6 / Keten / Kareli",
+                  "options": ["B6","Keten","Kareli"],
+                  "price": 1900,
+                  "available": true
+                },{
+                  "id": 44100000000048,
+                  "title": "B6 / Keten / Düz",
+                  "options": ["B6","Keten","Düz"],
+                  "price": 1900,
+                  "available": false
+                }],
+            "addon": { "id": 44200000000001, "price": 600, "available": true },
+            "strings": {
+              "addToCart": "Sepete ekle",
+              "soldOut": "Tükendi",
+              "unavailable": "Kullanım dışı",
+              "added": "Sepete eklendi.",
+              "viewCart": "Sepeti görüntüle",
+              "error": "Sepete eklenemedi. Lütfen tekrar deneyin.",
+              "monogramFor": "Kime"
+            }
+          }
+        </script>
+      </sheaf-configurator></div>
+</div>
+
+
+</div></main>
+    <footer class="shell-footer">
+      <div class="shell-footer__inner page-width">
+        <div class="shell-footer__selectors">
+          <label>Ülke/bölge
+            <select data-country-select><option value="AT">Avusturya</option><option value="DE" selected>Almanya</option><option value="FR">Fransa</option><option value="PL">Polonya</option><option value="IT">İtalya</option><option value="TR">Türkiye</option><option value="GB">Birleşik Krallık</option><option value="JP">Japonya</option><option value="US">Amerika Birleşik Devletleri</option><option value="BR">Brezilya</option></select>
+          </label>
+          <label>Dil
+            <select data-language-select><option value="/projects/shopify/" data-locale="en">English</option><option value="/projects/shopify/de/" data-locale="de">Deutsch</option><option value="/projects/shopify/fr/" data-locale="fr">Français</option><option value="/projects/shopify/tr/" data-locale="tr" selected>Türkçe</option><option value="/projects/shopify/ru/" data-locale="ru">Русский</option></select>
+          </label>
+        </div>
+        <p class="shell-footer__note">© 2026 Sheaf · <a href="https://velmren.com/">VELMREN</a></p>
+      </div>
+    </footer>
+    <script>
+      // The country chosen earlier is applied before the delivery block starts.
+      (() => {
+        const match = document.cookie.match(/(?:^|; )sheaf_country=([A-Z]{2})/);
+        const select = document.querySelector('[data-country-select]');
+        if (!match || ![...select.options].some((option) => option.value === match[1])) return;
+        select.value = match[1];
+        const block = document.querySelector('sheaf-delivery');
+        if (!block) return;
+        block.dataset.country = match[1];
+        block.dataset.countryName = new Intl.DisplayNames([document.documentElement.lang], { type: 'region' }).of(match[1]);
+      })();
+    </script>
+    <sheaf-cart-guard
+  data-cart-url="/projects/shopify/tr/cart"
+  data-cart-update-url="/projects/shopify/tr/cart/update"
+  data-cart-page="false"
+  hidden
+></sheaf-cart-guard>
+
+
+<script src="/projects/shopify/ext/monogram-guard.js" defer="defer"></script>
+  </body>
+</html>

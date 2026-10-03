@@ -1,0 +1,366 @@
+{
+  "slug": "falz",
+  "presentation": "case",
+  "title": "Фальц",
+  "eyebrow": "Сайт и магазин на WordPress",
+  "year": 2026,
+  "lead": "Сайт мастерской, который сам считает заказ",
+  "summary": "Багетная мастерская: услуги, калькулятор рамы и магазин на WooCommerce. Демонстрационный проект, своя тема и свои плагины.",
+  "note": "Демо-режим",
+  "category": "Веб-сайты",
+  "technologies": [
+    "WordPress",
+    "WooCommerce",
+    "PHP",
+    "Gutenberg",
+    "JavaScript"
+  ],
+  "order": 65,
+  "tone": "cool",
+  "cover": {
+    "kind": "image",
+    "image": {
+      "src": "/assets/falz/home-ru.webp",
+      "alt": "Главная сайта «Фальц»: заголовок на синей стене и пять рам рядом",
+      "width": 1920,
+      "height": 1080
+    }
+  },
+  "actions": [
+    {
+      "label": "Открыть сайт",
+      "href": "https://wp.velmren.com"
+    }
+  ],
+  "showcase": {
+    "image": {
+      "src": "/assets/falz/home-ru.webp",
+      "alt": "Первый экран сайта «Фальц»",
+      "width": 1920,
+      "height": 1080
+    },
+    "url": "wp.velmren.com",
+    "phone": {
+      "src": "/assets/falz/phone-shop-ru.webp",
+      "alt": "Магазин рам на телефоне",
+      "width": 780,
+      "height": 1688
+    }
+  },
+  "sections": [
+    {
+      "kind": "benefit",
+      "title": "Клиент видит цену до визита в мастерскую",
+      "text": "Размер, багет, паспарту и стекло сразу меняют раму на экране и сумму.",
+      "layers": [
+        {
+          "image": {
+            "src": "/assets/falz/calculator-ru.webp",
+            "alt": "Калькулятор: рама из ореха с паспарту на синей стене и параметры справа",
+            "width": 1920,
+            "height": 1080
+          },
+          "x": 0,
+          "y": 0.05,
+          "w": 0.63,
+          "url": "wp.velmren.com/calculator"
+        },
+        {
+          "image": {
+            "src": "/assets/falz/calculator-total-ru.webp",
+            "alt": "Разбивка цены: багет, стекло, паспарту, сборка, итого 122 €",
+            "width": 677,
+            "height": 298
+          },
+          "x": 0.68,
+          "y": 0,
+          "w": 0.32,
+          "front": true
+        }
+      ]
+    },
+    {
+      "kind": "benefit",
+      "title": "Расчёт уходит в корзину как обычный товар",
+      "text": "Цену считает сервер по выбранным параметрам, поэтому в заказе та же сумма.",
+      "layers": [
+        {
+          "image": {
+            "src": "/assets/falz/cart-ru.webp",
+            "alt": "Корзина с оформлением на заказ",
+            "width": 1920,
+            "height": 1080
+          },
+          "x": 0,
+          "y": 0.07,
+          "w": 0.6,
+          "url": "wp.velmren.com/cart"
+        },
+        {
+          "image": {
+            "src": "/assets/falz/cart-line-ru.webp",
+            "alt": "Строка корзины: работа 40 × 50 см, орех, паспарту 8 см, антибликовое стекло",
+            "width": 820,
+            "height": 258
+          },
+          "x": 0.64,
+          "y": 0,
+          "w": 0.36,
+          "front": true
+        }
+      ]
+    },
+    {
+      "kind": "benefit",
+      "title": "Готовые рамы покупают в два касания",
+      "text": "У каждого размера и отделки своя цена и своё фото.",
+      "figure": {
+        "value": "78",
+        "label": "вариаций у 12 товаров"
+      },
+      "layers": [
+        {
+          "image": {
+            "src": "/assets/falz/product-ru.webp",
+            "alt": "Страница рамы «Норд»: рама на стене и панель покупки",
+            "width": 1920,
+            "height": 1080
+          },
+          "x": 0,
+          "y": 0.1,
+          "w": 0.6,
+          "url": "wp.velmren.com/product/frame-nord"
+        },
+        {
+          "image": {
+            "src": "/assets/falz/product-variants-ru.webp",
+            "alt": "Выбор размера и отделки, цена 32 €",
+            "width": 564,
+            "height": 379
+          },
+          "x": 0.66,
+          "y": 0,
+          "w": 0.34,
+          "front": true
+        }
+      ]
+    },
+    {
+      "kind": "benefit",
+      "title": "Владелец меняет цены без программиста",
+      "text": "Калькулятор ставится на страницу как блок, багет и тарифы правятся в админке.",
+      "layers": [
+        {
+          "image": {
+            "src": "/assets/falz/editor-ru.webp",
+            "alt": "Блок «Калькулятор рамы» в редакторе с настройками справа",
+            "width": 1920,
+            "height": 1080
+          },
+          "x": 0,
+          "y": 0.06,
+          "w": 0.62,
+          "url": "wp.velmren.com/wp-admin"
+        },
+        {
+          "image": {
+            "src": "/assets/falz/admin-rates-ru.webp",
+            "alt": "Тарифы оформления: стекло, паспарту, задник, сборка",
+            "width": 684,
+            "height": 783
+          },
+          "x": 0.68,
+          "y": 0,
+          "w": 0.32,
+          "front": true,
+          "fade": true
+        }
+      ]
+    },
+    {
+      "kind": "benefit",
+      "title": "Заказы и заявки собираются в одном месте",
+      "text": "Заказ с параметрами рамы виден в админке, уведомление уходит в Telegram.",
+      "layers": [
+        {
+          "image": {
+            "src": "/assets/falz/admin-orders-ru.webp",
+            "alt": "Список заказов в админке WooCommerce",
+            "width": 1920,
+            "height": 1080
+          },
+          "x": 0.1,
+          "y": 0,
+          "w": 0.8,
+          "url": "wp.velmren.com/wp-admin"
+        }
+      ]
+    },
+    {
+      "kind": "benefit",
+      "title": "Быстро открывается на телефоне",
+      "text": "Замер на рабочем адресе: медленный телефон, сеть 4G, шесть страниц.",
+      "figure": {
+        "value": "95–100",
+        "label": "Lighthouse, мобильный профиль"
+      },
+      "layers": [
+        {
+          "image": {
+            "src": "/assets/falz/phone-shop-ru.webp",
+            "alt": "Магазин рам на телефоне",
+            "width": 780,
+            "height": 1688
+          },
+          "x": 0.17,
+          "y": 0.08,
+          "w": 0.3,
+          "phone": true
+        },
+        {
+          "image": {
+            "src": "/assets/falz/phone-calculator-ru.webp",
+            "alt": "Калькулятор рамы на телефоне",
+            "width": 780,
+            "height": 1688
+          },
+          "x": 0.53,
+          "y": 0,
+          "w": 0.3,
+          "front": true,
+          "phone": true
+        }
+      ]
+    },
+    {
+      "kind": "features",
+      "title": "Как устроено",
+      "text": "Своя тема и два плагина. WooCommerce не правится: всё через хуки и три шаблона.",
+      "items": [
+        "Стек",
+        "Калькулятор",
+        "Заявки",
+        "Два языка",
+        "Скорость",
+        "Перенос"
+      ],
+      "descriptions": [
+        "WordPress, WooCommerce, PHP, MariaDB, nginx, Docker.",
+        "Блок Gutenberg: рама рисуется на Canvas в масштабе, цена пересчитывается на сервере.",
+        "Форма с подписанным токеном, ловушкой для ботов и ограничением частоты, без сторонних сервисов.",
+        "Русская и английская версии на одном наборе товаров, без платных плагинов.",
+        "Кэш страниц, свои шрифты, WebP. Стандартная тема на тех же данных даёт 73–78, эта 98.",
+        "Скрипты переноса базы и файлов с заменой адреса, проверены на втором экземпляре."
+      ]
+    }
+  ],
+  "closing": "Посмотрите сайт в работе",
+  "accent": "#40627f",
+  "en": {
+    "title": "Falz",
+    "eyebrow": "WordPress site and shop",
+    "lead": "A workshop site that prices the order itself",
+    "summary": "A framing workshop: services, a frame calculator and a WooCommerce shop. A demonstration project with its own theme and plugins.",
+    "note": "Demo mode",
+    "closing": "See the site in action",
+    "actions": [
+      "Open the site"
+    ],
+    "showcase": [
+      "First screen of the Falz site",
+      "Frame shop on a phone"
+    ],
+    "media": {
+      "/assets/falz/home-ru.webp": "/assets/falz/home-en.webp",
+      "/assets/falz/shop-ru.webp": "/assets/falz/shop-en.webp",
+      "/assets/falz/product-ru.webp": "/assets/falz/product-en.webp",
+      "/assets/falz/calculator-ru.webp": "/assets/falz/calculator-en.webp",
+      "/assets/falz/cart-ru.webp": "/assets/falz/cart-en.webp",
+      "/assets/falz/editor-ru.webp": "/assets/falz/editor-en.webp",
+      "/assets/falz/admin-orders-ru.webp": "/assets/falz/admin-orders-en.webp",
+      "/assets/falz/phone-shop-ru.webp": "/assets/falz/phone-shop-en.webp",
+      "/assets/falz/phone-calculator-ru.webp": "/assets/falz/phone-calculator-en.webp",
+      "/assets/falz/calculator-total-ru.webp": "/assets/falz/calculator-total-en.webp",
+      "/assets/falz/cart-line-ru.webp": "/assets/falz/cart-line-en.webp",
+      "/assets/falz/product-variants-ru.webp": "/assets/falz/product-variants-en.webp",
+      "/assets/falz/admin-rates-ru.webp": "/assets/falz/admin-rates-en.webp"
+    },
+    "sections": [
+      {
+        "title": "The customer sees the price before visiting",
+        "text": "Size, moulding, mat and glass change the frame on screen and the total at once.",
+        "alts": [
+          "Calculator: a walnut frame with a mat on a blue wall, options on the right",
+          "Price breakdown: moulding, glass, mat, assembly, total 122 €"
+        ]
+      },
+      {
+        "title": "The quote goes to the cart like any product",
+        "text": "The server prices the chosen options, so the order carries the same total.",
+        "alts": [
+          "Cart with a custom framing line",
+          "Cart line: piece 40 × 50 cm, walnut, 8 cm mat, anti-glare glass"
+        ]
+      },
+      {
+        "title": "Ready-made frames take two taps",
+        "text": "Each size and finish has its own price and picture.",
+        "figure": {
+          "value": "78",
+          "label": "variations across 12 products"
+        },
+        "alts": [
+          "Nord frame page: the frame on the wall and the purchase panel",
+          "Size and finish choice, 32 €"
+        ]
+      },
+      {
+        "title": "The owner changes prices without a developer",
+        "text": "The calculator is a block placed on any page; mouldings and rates are edited in the admin.",
+        "alts": [
+          "Frame calculator block in the editor with settings on the right",
+          "Framing rates: glass, mat, backing, assembly"
+        ]
+      },
+      {
+        "title": "Orders and enquiries arrive in one place",
+        "text": "An order with the frame options shows in the admin, and a notification goes to Telegram.",
+        "alts": [
+          "Orders list in the WooCommerce admin"
+        ]
+      },
+      {
+        "title": "Fast on a phone",
+        "text": "Measured on the live address: a slow phone over 4G, six pages.",
+        "figure": {
+          "value": "95–100",
+          "label": "Lighthouse, mobile profile"
+        },
+        "alts": [
+          "Frame shop on a phone",
+          "Frame calculator on a phone"
+        ]
+      },
+      {
+        "title": "How it is built",
+        "text": "A custom theme and two plugins. WooCommerce is not edited: hooks and three templates do the work.",
+        "items": [
+          "Stack",
+          "Calculator",
+          "Enquiries",
+          "Two languages",
+          "Speed",
+          "Migration"
+        ],
+        "descriptions": [
+          "WordPress, WooCommerce, PHP, MariaDB, nginx, Docker.",
+          "A Gutenberg block: the frame is drawn to scale on Canvas, the price is recalculated on the server.",
+          "A form with a signed token, a bot trap and rate limiting, with no third-party service.",
+          "Russian and English on one set of products, with no paid plugins.",
+          "Page cache, self-hosted fonts, WebP. The stock theme scores 73–78 on the same data, this one 98.",
+          "Scripts move the database and files and replace the address, rehearsed on a second instance."
+        ]
+      }
+    ]
+  }
+}

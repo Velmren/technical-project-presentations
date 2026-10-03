@@ -1,29 +1,30 @@
 {
   "slug": "tilda-webinar",
-  "status": "draft",
   "title": "Тихая фактура",
-  "summary": "Лендинг занятия о цвете, фактуре и расстановке вещей.",
+  "status": "published",
+  "presentation": "case",
+  "year": 2026,
+  "eyebrow": "Сайт на Tilda",
+  "lead": "Лендинг бесплатного урока по декору, который ведёт от первого экрана к самому уроку",
+  "summary": "Главная с программой и примером, страница урока из пяти шагов, форма доступа. Собран целиком в Zero Block на Tilda и опубликован.",
+  "note": "Школа и урок придуманы для этой работы",
+  "closing": "Посмотрите сайт вживую",
+  "accent": "#99573f",
   "category": "Веб-сайты",
   "technologies": [
-    "Tilda"
+    "Tilda",
+    "Zero Block"
   ],
   "order": 40,
-  "tone": "cool",
-  "eyebrow": "Сайт на Tilda",
+  "tone": "warm",
   "cover": {
     "kind": "image",
     "image": {
-      "src": "/assets/tilda-webinar/final-hero-desktop.jpg",
-      "alt": "Первый экран сайта «Тихая фактура»: тема занятия о декоре и переход к форме",
-      "width": 1440,
-      "height": 900
+      "src": "/assets/tilda-webinar/case/hero.webp",
+      "alt": "Первый экран сайта «Тихая фактура»: название урока, кнопка и кадр с полкой",
+      "width": 2400,
+      "height": 1500
     }
-  },
-  "heroImage": {
-    "src": "/assets/tilda-webinar/final-hero-desktop.jpg",
-    "alt": "Первый экран сайта «Тихая фактура»: тема занятия о декоре и переход к форме",
-    "width": 1440,
-    "height": 900
   },
   "actions": [
     {
@@ -31,56 +32,215 @@
       "href": "https://bake-enjoyable-hake.tilda.ws/"
     }
   ],
+  "showcase": {
+    "image": {
+      "src": "/assets/tilda-webinar/case/hero.webp",
+      "alt": "Первый экран сайта «Тихая фактура»: название урока, кнопка и кадр с полкой",
+      "width": 2400,
+      "height": 1500
+    },
+    "url": "bake-enjoyable-hake.tilda.ws",
+    "phone": {
+      "src": "/assets/tilda-webinar/case/m-hero.webp",
+      "alt": "Первый экран на телефоне",
+      "width": 780,
+      "height": 1688
+    }
+  },
   "sections": [
     {
-      "kind": "features",
-      "title": "Занятие о декоре",
-      "text": "Как подобрать цвета, сочетать материалы и оставить свободное место на полке или комоде.",
-      "detailText": "В примерах — ваза, миска, книга и ткань. Одна группа предметов помогает рассмотреть разные варианты расстановки.",
-      "items": [
-        "Цветовая пара",
-        "Фактура и высота",
-        "Расстояние и свет"
-      ],
-      "descriptions": [
-        "В программе — два основных оттенка и небольшой акцент.",
-        "Керамика, ткань и стекло показаны рядом, в одной композиции.",
-        "Отдельная часть посвящена свободному месту между предметами, дневному и вечернему свету."
-      ],
-      "icons": [
-        "file",
-        "layers",
-        "check"
-      ]
-    },
-    {
-      "kind": "mobile",
-      "title": "Один набор вещей — две расстановки",
-      "text": "В одном кадре миска стоит перед книгой, в другом — на книге. Меняется и положение ткани. На сайте эти расстановки можно сравнить, двигая разделитель.",
-      "image": {
-        "src": "/assets/tilda-webinar/comparison-mobile.jpg",
-        "alt": "Две расстановки вазы, миски, книги и ткани на сайте «Тихая фактура»",
-        "width": 390,
-        "height": 844
-      },
-      "link": {
-        "label": "Рассмотреть снимок",
-        "href": "/assets/tilda-webinar/comparison-mobile.jpg"
-      }
-    },
-    {
-      "kind": "links",
-      "title": "Страница целиком",
-      "links": [
+      "kind": "benefit",
+      "title": "За один экран понятно, что это и зачем",
+      "text": "Название урока, одна фраза о пользе, кнопка и три факта: сколько шагов, сколько времени, что останется на руках.",
+      "layers": [
         {
-          "label": "Вся страница на компьютере",
-          "href": "/assets/tilda-webinar/final-desktop.jpg"
+          "image": {
+            "src": "/assets/tilda-webinar/case/program.webp",
+            "alt": "Блок «Что внутри урока»: три карточки с кадрами",
+            "width": 2400,
+            "height": 1500
+          },
+          "x": 0,
+          "y": 0.02,
+          "w": 0.58,
+          "url": "bake-enjoyable-hake.tilda.ws"
         },
         {
-          "label": "Вся страница на телефоне",
-          "href": "/assets/tilda-webinar/final-mobile-390.jpg"
+          "image": {
+            "src": "/assets/tilda-webinar/case/example.webp",
+            "alt": "Два кадра «Было» и «Стало»: одни и те же вещи в двух расстановках",
+            "width": 1550,
+            "height": 900
+          },
+          "x": 0.62,
+          "y": 0,
+          "w": 0.38,
+          "front": true
         }
       ]
+    },
+    {
+      "kind": "benefit",
+      "title": "После формы человек сразу получает урок",
+      "text": "Страница урока ведёт по пяти шагам: кадр, объяснение и короткое задание. В конце памятка.",
+      "layers": [
+        {
+          "image": {
+            "src": "/assets/tilda-webinar/case/lesson.webp",
+            "alt": "Страница урока: заголовок и первый шаг с палитрой",
+            "width": 2400,
+            "height": 1500
+          },
+          "x": 0,
+          "y": 0.02,
+          "w": 0.58,
+          "url": "bake-enjoyable-hake.tilda.ws/lesson"
+        },
+        {
+          "image": {
+            "src": "/assets/tilda-webinar/case/lesson-step.webp",
+            "alt": "Шаг «Задайте высоту»: кадр с тремя уровнями и задание",
+            "width": 1550,
+            "height": 838
+          },
+          "x": 0.62,
+          "y": 0,
+          "w": 0.38,
+          "front": true
+        }
+      ]
+    },
+    {
+      "kind": "benefit",
+      "title": "Форма просит только имя и почту",
+      "text": "Два поля и согласие. После отправки открывается урок, заявка остаётся в Tilda.",
+      "layers": [
+        {
+          "image": {
+            "src": "/assets/tilda-webinar/case/form.webp",
+            "alt": "Форма доступа: имя, почта, согласие и кнопка",
+            "width": 1550,
+            "height": 750
+          },
+          "x": 0.14,
+          "y": 0,
+          "w": 0.72,
+          "front": true
+        }
+      ]
+    },
+    {
+      "kind": "benefit",
+      "title": "На телефоне тот же порядок",
+      "text": "Блоки перестроены под узкий экран: кнопка на всю ширину, программа и шаги в одну колонку.",
+      "layers": [
+        {
+          "image": {
+            "src": "/assets/tilda-webinar/case/m-program.webp",
+            "alt": "Программа урока на телефоне",
+            "width": 780,
+            "height": 1688
+          },
+          "x": 0.17,
+          "y": 0.08,
+          "w": 0.3,
+          "phone": true
+        },
+        {
+          "image": {
+            "src": "/assets/tilda-webinar/case/m-lesson.webp",
+            "alt": "Первый шаг урока на телефоне",
+            "width": 780,
+            "height": 1688
+          },
+          "x": 0.53,
+          "y": 0,
+          "w": 0.3,
+          "phone": true,
+          "front": true
+        }
+      ]
+    },
+    {
+      "kind": "features",
+      "title": "Как устроено",
+      "text": "Сайт на Tilda, опубликован на её поддомене.",
+      "items": [
+        "Zero Block",
+        "Адаптив",
+        "Скорость",
+        "Данные"
+      ],
+      "descriptions": [
+        "Сайт целиком собран в Zero Block по своей сетке, включая форму.",
+        "Пять раскладок: от 1200 до 360 пикселей.",
+        "Первая загрузка главной весит около 390 КБ.",
+        "Согласие на обработку и отдельная страница условий."
+      ]
     }
-  ]
+  ],
+  "en": {
+    "title": "Quiet Texture",
+    "eyebrow": "Tilda website",
+    "lead": "A landing page for a free decor lesson that leads from the first screen to the lesson itself",
+    "summary": "A home page with the programme and an example, a five-step lesson page and an access form. Built entirely with Zero Block on Tilda and live.",
+    "note": "The school and the lesson were invented for this work",
+    "closing": "See the site live",
+    "actions": [
+      "Open the site"
+    ],
+    "showcase": [
+      "First screen of the Quiet Texture site: the lesson title, a button and a shelf photo",
+      "First screen on a phone"
+    ],
+    "sections": [
+      {
+        "title": "One screen says what it is and why",
+        "text": "The lesson title, one line about the benefit, a button and three facts: how many steps, how long, what you keep.",
+        "alts": [
+          "The block about what is inside: three cards with photos",
+          "Two photos, before and after: the same things in two arrangements"
+        ]
+      },
+      {
+        "title": "The lesson opens right after the form",
+        "text": "The lesson page walks through five steps: a photo, an explanation and a short task. A checklist closes it.",
+        "alts": [
+          "Lesson page: the heading and the first step with a palette",
+          "The step about height: a photo with three levels and a task"
+        ]
+      },
+      {
+        "title": "The form asks for a name and an email only",
+        "text": "Two fields and a consent. The lesson opens after sending, and the request stays in Tilda.",
+        "alts": [
+          "Access form: name, email, consent and a button"
+        ]
+      },
+      {
+        "title": "The same order on a phone",
+        "text": "Blocks are rearranged for a narrow screen: a full-width button, the programme and steps in one column.",
+        "alts": [
+          "Lesson programme on a phone",
+          "First lesson step on a phone"
+        ]
+      },
+      {
+        "title": "How it is built",
+        "text": "A Tilda site, live on its subdomain.",
+        "items": [
+          "Zero Block",
+          "Responsive",
+          "Speed",
+          "Data"
+        ],
+        "descriptions": [
+          "The whole site is built in Zero Block on a custom grid, the form included.",
+          "Five layouts, from 1200 down to 360 pixels.",
+          "The first load of the home page weighs about 390 KB.",
+          "Consent to data processing and a separate terms page."
+        ]
+      }
+    ]
+  }
 }

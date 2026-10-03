@@ -20,6 +20,11 @@ All fonts below are licensed under the SIL Open Font License 1.1.
 | Inter, Caveat | `public/projects/admin-dashboard/assets/` | `OFL-Inter.txt`, `OFL-Caveat.txt` in the same folder; sources in `new-projects/admin-dashboard/static/assets/` |
 | Tektur, IBM Plex Sans (subset renamed Lacuna Text) | `new-projects/game-concept/assets/fonts/`, `public/projects/game-concept/assets/fonts/` | `OFL-Tektur.txt`, `OFL-IBMPlexSans.txt` in the same folders |
 | Nunito, Rubik, PT Sans, Noto Serif | `public/projects/mobile-game/` (inside the game package) | OFL files packaged with the game |
+| Golos Text, Tektur | `public/projects/motion/fonts/` | `Golos-Text-OFL.txt`, `Tektur-OFL.txt` in the same folder |
+| Inter, Literata (subsets) | `public/projects/shopify/preview/fonts/` | `OFL-Inter.txt`, `OFL-Literata.txt` in the same folder |
+| Jost | `new-projects/assembly/fonts/`, `public/projects/assembly/fonts/` | `Jost-OFL.txt` in the same folders |
+
+The videos in `public/assets/motion/video/` were rendered with Inter Tight, Nunito, Manrope, Unbounded, Tektur and Golos Text, all under the SIL Open Font License 1.1; those font files are not in the repository.
 
 The browser build of Category Spark, produced by `scripts/build-category-spark-web.mjs` and not committed, also includes DejaVu Sans Bold from the `dejavu-fonts-ttf` package, under the Bitstream Vera and DejaVu licence, with its licence file.
 
@@ -27,6 +32,25 @@ The browser build of Category Spark, produced by `scripts/build-category-spark-w
 
 - three.js, MIT: `new-projects/game-concept/vendor/three/` and `public/projects/game-concept/vendor/three/`, licence in `LICENSE` in each folder.
 - JSONPath Compliance Test Suite, BSD 2-Clause: test fixture in `new-projects/dev-utilities/tests/fixtures/jsonpath-cts/`, licence in the same folder.
+- lottie-web 5.13.0 (light, canvas build), MIT: `public/assets/motion/embed/lottie_light_canvas.min.js`, licence in `lottie-web-LICENSE.txt` in the same folder.
+- The hatch animation (`public/assets/motion/embed/hatch.js`), the live Lottie page and the motion examples page are original code. The motion videos were composed with GSAP 3.15 (GSAP Standard licence, https://gsap.com/standard-license) and rendered locally; only the finished videos are published.
+- The Sheaf demo (`public/projects/shopify/`) does not include files of Shopify's Dawn theme. The screenshots on its page show the section rendered next to Dawn's stylesheet in local development.
+
+## Music
+
+The sound of the videos in `public/assets/motion/video/` is music from Free Stock Music cut on its bar grid and mixed with synthesised effects. The tracks themselves are not stored in the repository, only excerpts inside the finished videos. The credit is also in the footer of `public/projects/motion/`.
+
+- "Sunfade" by Roa Music, Royalty Free Music by https://www.free-stock-music.com. Licence: [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/). Page: https://www.free-stock-music.com/roa-music-sunfade.html (checked 1 October 2026). Used in `reel.mp4`.
+- "Between Oceans and Summits" by Alex-Productions, https://onsound.eu/, Royalty Free Music by https://www.free-stock-music.com. Licence: [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/). Page: https://www.free-stock-music.com/alex-productions-between-oceans-and-summits.html (checked 1 October 2026). Used in `sono-promo.mp4`.
+- "Little Adventures" by Sokolovsky Music, http://sokolovskymusic.com, Royalty Free Music by https://www.free-stock-music.com. Licence: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Page: https://www.free-stock-music.com/sokolovsky-music-little-adventures.html (checked 1 October 2026). Used in `vertical.mp4`.
+
+## Veresta
+
+The buildings, the site and the materials without textures are modelled for the project in Blender. The rendered frames in `public/assets/assembly/` also contain the Poly Haven assets below, all under [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/); the source files are not stored in the repository. The full list with authors is in `new-projects/assembly/ASSETS.md`.
+
+- Brick textures: Brick Wall 006, Brick Wall 001, Red Bricks 04.
+- Sky: Qwantani Dusk 2 (Pure Sky).
+- Plants: Tree Small 02, Jacaranda Tree, Island Tree 01, 02 and 03, Pine Tree 01, Searsia Burchellii, Shrub 02, Fern 02, Grass Medium 02, Periwinkle Plant.
 
 ## VELMREN tech
 

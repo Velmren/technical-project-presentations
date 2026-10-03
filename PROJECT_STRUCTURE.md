@@ -44,21 +44,26 @@ VELMREN portfolio: Next.js 16 (App Router), TypeScript, static export to `out/`.
 │   ├── assets/
 │   │   ├── home/              home page previews, work screens for the mosaic and their outline maps
 │   │   ├── forma/, godot/, encounter/, java/, dev-utilities/, electronics-store/, orbit/, sono/, khrum/, lacuna/, lumi/,
-│   │   │   tilda-interior/, tilda-webinar/, studio-concepts/   screenshots, videos and downloads of each work
+│   │   │   falz/, shopify/, motion/, assembly/, tilda-interior/, tilda-webinar/, tilda-tour/, tilda-dental/, studio-concepts/
+│   │   │                      screenshots, videos and downloads of each work
 │   │   │                      godot/web/: Category Spark browser build, not in Git, built by a script
 │   │   │                      java/: Encounter State plugin JAR, source ZIP, source viewer and its manifest
 │   │   └── brands/            Godot logo, its licence and credit page
 │   ├── projects/              static builds of individual works, served under /projects/<name>/
 │   │   ├── admin-dashboard/   ORBIT, store operations panel
+│   │   ├── assembly/          Veresta, a residential quarter that assembles as you scroll
 │   │   ├── dev-utilities/     Dev Utilities, developer tools
 │   │   ├── electronics/       SONO, speaker landing page
 │   │   ├── game-concept/      LACUNA, game interface concept
 │   │   ├── khrum/             Khrum, a boar character on an SVG rig, and his site (built from a separate repository)
 │   │   ├── mobile-game/       Lumi, playable web build (source kept in a separate private repository)
+│   │   ├── motion/            motion section: live Lottie and Canvas examples
+│   │   ├── shopify/           Sheaf, static demo of the Shopify product configurator
 │   │   └── npc-system/        North Harbor, Minecraft NPC scenario
 │   └── favicon.svg, favicon.ico, og.png
 ├── new-projects/              sources of individual works; each has its own README
 │   ├── admin-dashboard/       ORBIT: React, Vite
+│   ├── assembly/              Veresta: scroll-driven image sequence on a canvas, no dependencies
 │   ├── dev-utilities/         Dev Utilities: React, esbuild
 │   ├── electronics/           SONO: React, Vite
 │   ├── electronics-store/     VELMREN tech: Next.js, PostgreSQL, MinIO (server app, deployed separately)

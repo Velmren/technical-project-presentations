@@ -9,6 +9,10 @@ export function liveMode(work: HomeWork, prefer: LiveMode[]): LiveMode | null {
   return prefer.find(mode => work.live?.[mode]) ?? null;
 }
 
+// How far ahead of the screen a preview starts loading: about a screen and a half, so fast scrolling rarely
+// meets an empty frame.
+const AHEAD = '150% 0px';
+
 function useReducedMotion() {
   const [reduced, setReduced] = useState(false);
   useEffect(() => {
@@ -31,7 +35,7 @@ export function ScrollFrame({ src, alt, playing, className = '' }: { src: string
     if (!el) return;
     const size = new ResizeObserver(() => el.style.setProperty('--live-frame-h', el.clientHeight + 'px'));
     size.observe(el);
-    const io = new IntersectionObserver(([e]) => { if (e.isIntersecting) { setNear(true); io.disconnect(); } }, { rootMargin: '400px 0px' });
+    const io = new IntersectionObserver(([e]) => { if (e.isIntersecting) { setNear(true); io.disconnect(); } }, { rootMargin: AHEAD });
     io.observe(el);
     return () => { size.disconnect(); io.disconnect(); };
   }, []);
@@ -51,7 +55,7 @@ export function LivePreview({ work, mode, active, interval = 2400, className = '
   useEffect(() => {
     const el = box.current;
     if (near || !el) return;
-    const io = new IntersectionObserver(([e]) => { if (e.isIntersecting) { setNear(true); io.disconnect(); } }, { rootMargin: '400px 0px' });
+    const io = new IntersectionObserver(([e]) => { if (e.isIntersecting) { setNear(true); io.disconnect(); } }, { rootMargin: AHEAD });
     io.observe(el);
     return () => io.disconnect();
   }, [near]);

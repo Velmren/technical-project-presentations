@@ -6,10 +6,10 @@
   "year": 2026,
   "eyebrow": "Игра на Godot",
   "lead": "Короткая викторина, которая объясняет каждую ошибку",
-  "summary": "Шесть вопросов из трёх категорий, счёт и новый раунд. Играется в браузере и в Windows.",
-  "note": "Игра на английском",
+  "summary": "Шесть вопросов из трёх категорий, счёт и новый раунд. На русском и английском, в браузере и в Windows.",
+  "note": "Игра на русском и английском",
   "closing": "Сыграйте раунд в браузере",
-  "accent": "#37dfff",
+  "accent": "#ffb81f",
   "category": "Игры",
   "technologies": [
     "Godot",
@@ -53,14 +53,14 @@
     {
       "kind": "benefit",
       "title": "Игрок сразу понимает, прав ли он",
-      "text": "Верный ответ загорается зелёным, ошибка розовым, и игра тут же называет правильный вариант.",
+      "text": "Верный ответ загорается зелёным, ошибка красным, и игра тут же называет правильный вариант.",
       "layers": [
         {
           "image": {
             "src": "/assets/godot/case/round-poster.webp",
             "alt": "Запись раунда: ответы, подсказки и итог",
-            "width": 900,
-            "height": 620
+            "width": 1280,
+            "height": 720
           },
           "video": "/assets/godot/category-spark-playthrough.mp4",
           "x": 0,
@@ -70,9 +70,9 @@
         {
           "image": {
             "src": "/assets/godot/case/wrong-detail.webp",
-            "alt": "Ошибка: Vertex отмечен розовым, верный ответ Pulse зелёным",
+            "alt": "Ошибка: «Вершина» отмечена красным, верный ответ «Пульс» зелёным",
             "width": 1360,
-            "height": 700
+            "height": 539
           },
           "x": 0.63,
           "y": 0.1,
@@ -84,12 +84,12 @@
     {
       "kind": "benefit",
       "title": "Счёт честный, итог понятный",
-      "text": "Ответ засчитывается один раз. В конце раунда счёт и кнопка новой попытки.",
+      "text": "Ответ засчитывается один раз. В конце раунда счёт, отметка по каждому вопросу и кнопка новой попытки.",
       "layers": [
         {
           "image": {
             "src": "/assets/godot/case/result.webp",
-            "alt": "Итог раунда: 5 из 6",
+            "alt": "Итог раунда: 5 из 6 и отметки по категориям",
             "width": 2000,
             "height": 1320
           },
@@ -101,9 +101,9 @@
         {
           "image": {
             "src": "/assets/godot/case/right-detail.webp",
-            "alt": "Верный ответ и +1 очко, счёт 1",
+            "alt": "Верный ответ: зелёная плашка, отметка и вердикт внизу",
             "width": 1360,
-            "height": 870
+            "height": 539
           },
           "x": 0.63,
           "y": 0,
@@ -115,7 +115,7 @@
     {
       "kind": "benefit",
       "title": "Игра подстраивается под окно",
-      "text": "В низком окне ответы встают в две колонки, в узком остаются списком.",
+      "text": "В низком окне ответы встают в две колонки, в узком идут списком, а вердикт с кнопкой всегда внизу.",
       "layers": [
         {
           "image": {
@@ -145,12 +145,12 @@
     {
       "kind": "benefit",
       "title": "Вопросы меняются без программиста",
-      "text": "Вопросы лежат в отдельном JSON. Игра проверяет файл при запуске и не падает, если он испорчен.",
+      "text": "Вопросы и их переводы лежат в одном JSON. Игра проверяет файл при запуске и не падает, если он испорчен.",
       "layers": [
         {
           "image": {
             "src": "/assets/godot/case/github-questions.webp",
-            "alt": "Файл вопросов на GitHub",
+            "alt": "Файл вопросов на GitHub: тексты на английском и русском",
             "width": 2400,
             "height": 1500
           },
@@ -162,9 +162,9 @@
         {
           "image": {
             "src": "/assets/godot/case/questions-detail.webp",
-            "alt": "Вопрос в JSON: текст, варианты и номер верного ответа",
-            "width": 960,
-            "height": 440
+            "alt": "Вопрос в JSON: текст и варианты на двух языках, номер верного ответа",
+            "width": 1408,
+            "height": 408
           },
           "x": 0.63,
           "y": 0.12,
@@ -176,26 +176,26 @@
     {
       "kind": "features",
       "title": "Как устроено",
-      "text": "Godot 4.7 и GDScript, интерфейс на стандартных элементах движка.",
+      "text": "Godot 4.7 и GDScript. Интерфейс, фоны и анимации нарисованы кодом игры.",
       "items": [
         "Управление",
         "Проверки",
-        "Движение",
-        "Сборки"
+        "Звук и движение",
+        "Языки"
       ],
       "descriptions": [
         "Мышь или клавиши от 1 до 4, Tab и Enter.",
-        "Тесты счёта, завершения раунда, перезапуска и импорта вопросов.",
-        "Анимацию вопросов можно выключить.",
-        "Windows без установки движка и веб-версия."
+        "Тесты счёта, завершения раунда, перезапуска, переводов и импорта вопросов.",
+        "Мягкие звуки и анимацию можно выключить.",
+        "Русский и английский, переключатель в шапке. Сборки для Windows и браузера."
       ]
     }
   ],
   "en": {
     "eyebrow": "Godot game",
     "lead": "A short quiz that explains every mistake",
-    "summary": "Six questions in three categories, a score and a new round. Plays in the browser and on Windows.",
-    "note": "",
+    "summary": "Six questions in three categories, a score and a new round. In Russian and English, in the browser and on Windows.",
+    "note": "Plays in Russian and English",
     "closing": "Play a round in the browser",
     "actions": [
       "Play in the browser",
@@ -208,23 +208,23 @@
     "sections": [
       {
         "title": "Players know at once whether they were right",
-        "text": "A correct answer lights up green, a mistake pink, and the game names the right option straight away.",
+        "text": "A correct answer lights up green, a mistake red, and the game names the right option straight away.",
         "alts": [
           "Recording of a round: answers, hints and result",
-          "A mistake: Vertex marked pink, the right answer Pulse green"
+          "A mistake: Vertex marked red, the right answer Pulse green"
         ]
       },
       {
         "title": "A fair score and a clear result",
-        "text": "Each answer counts once. The round ends with a score and a button to try again.",
+        "text": "Each answer counts once. The round ends with a score, a mark for every question and a button to try again.",
         "alts": [
-          "End of the round: 5 out of 6",
-          "A correct answer and +1 point, score 1"
+          "End of the round: 5 out of 6 with marks by category",
+          "A correct answer: green tile, check mark and the verdict below"
         ]
       },
       {
         "title": "The game fits the window",
-        "text": "In a low window the answers form two columns; in a narrow one they stay a list.",
+        "text": "In a low window the answers form two columns, in a narrow one a list, and the verdict with its button stays at the bottom.",
         "alts": [
           "An 844 by 390 window: answers in two columns",
           "A 390 by 844 window: answers as a list"
@@ -232,28 +232,41 @@
       },
       {
         "title": "Questions change without a programmer",
-        "text": "Questions live in a separate JSON file. The game checks it on launch and does not crash if it is broken.",
+        "text": "Questions and their translations live in one JSON file. The game checks it on launch and does not crash if it is broken.",
         "alts": [
-          "The question file on GitHub",
-          "A question in JSON: text, options and the index of the right answer"
+          "The question file on GitHub with English and Russian texts",
+          "A question in JSON: text and options in two languages, the index of the right answer"
         ]
       },
       {
         "title": "How it is built",
-        "text": "Godot 4.7 and GDScript, with the interface made of the engine's own controls.",
+        "text": "Godot 4.7 and GDScript. The interface, backdrops and animation are drawn by the game's own code.",
         "items": [
           "Controls",
           "Checks",
-          "Motion",
-          "Builds"
+          "Sound and motion",
+          "Languages"
         ],
         "descriptions": [
           "Mouse or keys 1 to 4, Tab and Enter.",
-          "Tests for scoring, round completion, restart and question import.",
-          "Question animations can be turned off.",
-          "Windows without installing the engine, plus a web version."
+          "Tests for scoring, round completion, restart, translations and question import.",
+          "Soft sounds and animation can be turned off.",
+          "Russian and English with a switch in the top bar. Builds for Windows and the browser."
         ]
       }
-    ]
+    ],
+    "media": {
+      "/assets/godot/case/start.webp": "/assets/godot/case/start-en.webp",
+      "/assets/godot/case/result.webp": "/assets/godot/case/result-en.webp",
+      "/assets/godot/case/wrong-844x390.webp": "/assets/godot/case/wrong-844x390-en.webp",
+      "/assets/godot/case/wrong-390x844.webp": "/assets/godot/case/wrong-390x844-en.webp",
+      "/assets/godot/case/wrong-detail.webp": "/assets/godot/case/wrong-detail-en.webp",
+      "/assets/godot/case/right-detail.webp": "/assets/godot/case/right-detail-en.webp",
+      "/assets/godot/case/round-poster.webp": "/assets/godot/case/round-poster-en.webp",
+      "/assets/godot/case/world-web.webp": "/assets/godot/case/world-web-en.webp",
+      "/assets/godot/case/world-space.webp": "/assets/godot/case/world-space-en.webp",
+      "/assets/godot/1280x720/correct.png": "/assets/godot/1280x720/correct-en.png",
+      "/assets/godot/category-spark-playthrough.mp4": "/assets/godot/category-spark-playthrough-en.mp4"
+    }
   }
 }

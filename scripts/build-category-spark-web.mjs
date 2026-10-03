@@ -70,6 +70,8 @@ const SITE_LINK_STYLE = `
 `;
 const SITE_LINK = '<a id="site-link" href="https://velmren.com/">VELMREN</a>';
 function addSiteLink(html) {
+  // Newer sources carry the link in their own web shell.
+  if (html.includes('velmren.com')) return html;
   if (!html.includes('</style>') || !html.includes('<script src="index.js">')) throw new Error('Unexpected Godot web shell');
   return html.replace('</style>', SITE_LINK_STYLE + '</style>').replace('<script src="index.js">', SITE_LINK + '\n\t\t<script src="index.js">');
 }

@@ -1,0 +1,296 @@
+{
+  "status": "published",
+  "presentation": "case",
+  "year": 2026,
+  "slug": "shopify",
+  "title": "Sheaf",
+  "eyebrow": "Доработка магазина на Shopify",
+  "lead": "Конфигуратор в теме Shopify: покупатель видит блокнот до заказа",
+  "summary": "Секция темы на Liquid, блок срока доставки как расширение приложения и сервер на Node. Собственная демонстрация на вымышленном магазине.",
+  "note": "Демо работает без магазина: корзину и даты считает браузер",
+  "closing": "Соберите свой блокнот",
+  "accent": "#2f4a3c",
+  "category": "Веб-сайты",
+  "technologies": [
+    "Shopify",
+    "Liquid",
+    "JavaScript",
+    "Theme app extension",
+    "Node.js"
+  ],
+  "order": 85,
+  "tone": "cool",
+  "cover": {
+    "kind": "image",
+    "image": {
+      "src": "/assets/shopify/hero.webp",
+      "alt": "Страница товара: зелёный блокнот с красной резинкой и монограммой, рядом параметры",
+      "width": 2400,
+      "height": 1500
+    }
+  },
+  "actions": [
+    {
+      "label": "Открыть демо",
+      "href": "/projects/shopify/"
+    }
+  ],
+  "showcase": {
+    "image": {
+      "src": "/assets/shopify/hero-start.webp",
+      "alt": "Страница товара с конфигуратором блокнота",
+      "width": 2400,
+      "height": 1500
+    },
+    "video": "/assets/shopify/hero.mp4",
+    "url": "velmren.com/projects/shopify/",
+    "phone": {
+      "src": "/assets/shopify/m-hero.webp",
+      "alt": "Конфигуратор на телефоне: блокнот закреплён над параметрами",
+      "width": 780,
+      "height": 1688
+    }
+  },
+  "sections": [
+    {
+      "kind": "benefit",
+      "title": "Покупатель видит блокнот, который закажет",
+      "text": "Формат, обложка, бумага, резинка и монограмма меняются на экране сразу. Блокнот нарисован кодом в масштабе, поэтому магазину не нужно снимать каждую комбинацию.",
+      "figure": {
+        "value": "48",
+        "label": "вариантов товара без единой фотографии"
+      },
+      "layers": [
+        {
+          "image": {
+            "src": "/assets/shopify/hero.webp",
+            "alt": "Собранный блокнот: обложка «Хвоя», красная резинка, монограмма золотом",
+            "width": 2400,
+            "height": 1500
+          },
+          "url": "velmren.com/projects/shopify/",
+          "x": 0,
+          "y": 0.02,
+          "w": 0.6
+        },
+        {
+          "image": {
+            "src": "/assets/shopify/inside-detail.webp",
+            "alt": "Тот же блокнот раскрыт: форзац и страница в точку",
+            "width": 1070,
+            "height": 1086
+          },
+          "front": true,
+          "x": 0.66,
+          "y": 0.1,
+          "w": 0.34
+        }
+      ]
+    },
+    {
+      "kind": "benefit",
+      "title": "Срок доставки считает сервер",
+      "text": "Блок показывает, сколько осталось до отправки сегодня и когда заказ приедет в страну покупателя. Учтены отсечка, выходные, праздники и время на монограмму.",
+      "figure": {
+        "value": "14:00",
+        "label": "отсечка отправки по времени склада"
+      },
+      "layers": [
+        {
+          "image": {
+            "src": "/assets/shopify/delivery.webp",
+            "alt": "Три состояния блока: отсчёт до отправки, изготовление под заказ, доставка в Японию",
+            "width": 1158,
+            "height": 588
+          },
+          "x": 0,
+          "y": 0.06,
+          "w": 0.58
+        },
+        {
+          "image": {
+            "src": "/assets/shopify/response.webp",
+            "alt": "Ответ сервера: страна, зона, дата отправки и окно доставки",
+            "width": 1080,
+            "height": 872
+          },
+          "front": true,
+          "x": 0.64,
+          "y": 0.02,
+          "w": 0.36
+        }
+      ]
+    },
+    {
+      "kind": "benefit",
+      "title": "Заказ приходит в магазин без уточнений",
+      "text": "Цвет резинки, монограмма и вид тиснения записаны в строке заказа. Платное тиснение идёт отдельной позицией и не остаётся в корзине без своего блокнота.",
+      "layers": [
+        {
+          "image": {
+            "src": "/assets/shopify/cart.webp",
+            "alt": "Корзина: блокнот со свойствами и позиция тиснения",
+            "width": 2400,
+            "height": 1080
+          },
+          "url": "velmren.com/projects/shopify/cart/",
+          "x": 0,
+          "y": 0.02,
+          "w": 0.6
+        },
+        {
+          "image": {
+            "src": "/assets/shopify/cart-detail.webp",
+            "alt": "Строки заказа: резинка, монограмма, тиснение и для какого блокнота",
+            "width": 900,
+            "height": 423
+          },
+          "front": true,
+          "x": 0.64,
+          "y": 0.16,
+          "w": 0.36
+        }
+      ]
+    },
+    {
+      "kind": "benefit",
+      "title": "Готово для магазина на несколько стран",
+      "text": "Интерфейс переведён на пять языков, даты пишутся так, как принято у покупателя. Цвета, шрифты и кнопки секция берёт из настроек темы.",
+      "figure": {
+        "value": "5",
+        "label": "языков: английский, немецкий, французский, турецкий, русский"
+      },
+      "layers": [
+        {
+          "image": {
+            "src": "/assets/shopify/locale-de.webp",
+            "alt": "Та же страница на немецком для покупателя из Австрии",
+            "width": 2400,
+            "height": 1500
+          },
+          "url": "velmren.com/projects/shopify/de/",
+          "x": 0,
+          "y": 0.02,
+          "w": 0.6
+        },
+        {
+          "image": {
+            "src": "/assets/shopify/m-locale-tr.webp",
+            "alt": "Страница на турецком на телефоне",
+            "width": 780,
+            "height": 1688
+          },
+          "phone": true,
+          "front": true,
+          "x": 0.7,
+          "y": 0.04,
+          "w": 0.24
+        }
+      ]
+    },
+    {
+      "kind": "features",
+      "title": "Как устроено",
+      "text": "Секция темы, расширение приложения, сервер и проверка.",
+      "items": [
+        "Секция",
+        "Расширение",
+        "Сервер",
+        "Проверка"
+      ],
+      "descriptions": [
+        "Liquid и веб-компонент на 13 КБ без библиотек. Товар, размеры, цвета и длину монограммы менеджер задаёт в настройках секции.",
+        "Theme app extension: блок срока доставки ставится внутрь секции, app embed следит за корзиной на всех страницах.",
+        "Node.js без зависимостей за app proxy. Запросы принимаются только с подписью Shopify не старше пяти минут.",
+        "28 автоматических тестов, Shopify Theme Check без замечаний к файлам секции, анимация 140 кадров в секунду на экране 144 Гц."
+      ]
+    }
+  ],
+  "en": {
+    "title": "Sheaf",
+    "eyebrow": "Shopify store customisation",
+    "lead": "A configurator in a Shopify theme: the customer sees the notebook before ordering",
+    "summary": "A theme section in Liquid, a delivery estimate block as an app extension and a Node server. My own demonstration on a fictional shop.",
+    "note": "The demo runs without a store: the browser keeps the cart and works out the dates",
+    "closing": "Build your own notebook",
+    "actions": [
+      "Open the demo"
+    ],
+    "showcase": [
+      "Product page with the notebook configurator",
+      "The configurator on a phone: the notebook stays pinned above the options"
+    ],
+    "media": {
+      "/assets/shopify/hero-start.webp": "/assets/shopify/hero-start-en.webp",
+      "/assets/shopify/hero.mp4": "/assets/shopify/hero-en.mp4",
+      "/assets/shopify/hero.webp": "/assets/shopify/hero-en.webp",
+      "/assets/shopify/m-hero.webp": "/assets/shopify/m-hero-en.webp",
+      "/assets/shopify/inside-detail.webp": "/assets/shopify/inside-detail-en.webp",
+      "/assets/shopify/delivery.webp": "/assets/shopify/delivery-en.webp",
+      "/assets/shopify/cart.webp": "/assets/shopify/cart-en.webp",
+      "/assets/shopify/cart-detail.webp": "/assets/shopify/cart-detail-en.webp"
+    },
+    "sections": [
+      {
+        "title": "The customer sees the notebook they will order",
+        "text": "Size, cover, paper, band and monogram change on screen at once. The notebook is drawn to scale in code, so the shop does not have to photograph every combination.",
+        "figure": {
+          "value": "48",
+          "label": "product variants without a single photo"
+        },
+        "alts": [
+          "The finished notebook: Forest cover, red band, gold monogram",
+          "The same notebook open: endpaper and a dot grid page"
+        ]
+      },
+      {
+        "title": "The server works out the delivery date",
+        "text": "The block shows how long is left to ship today and when the order reaches the customer's country. It knows the cutoff, weekends, closed days and the time a monogram takes.",
+        "figure": {
+          "value": "14:00",
+          "label": "dispatch cutoff, in warehouse time"
+        },
+        "alts": [
+          "Three states of the block: countdown to dispatch, made to order, delivery to Japan",
+          "Server response: country, zone, dispatch date and arrival window"
+        ]
+      },
+      {
+        "title": "The order reaches the shop with nothing to clarify",
+        "text": "Band colour, monogram and finish are written into the order line. The paid monogram is a separate item and never stays in the cart without its notebook.",
+        "alts": [
+          "Cart: the notebook with its properties and the monogram line",
+          "Order lines: band, monogram, finish and the notebook it belongs to"
+        ]
+      },
+      {
+        "title": "Ready for a shop that sells to several countries",
+        "text": "The interface is translated into five languages and dates are written the way the customer expects. Colours, fonts and buttons come from the theme settings.",
+        "figure": {
+          "value": "5",
+          "label": "languages: English, German, French, Turkish, Russian"
+        },
+        "alts": [
+          "The same page in German for a customer in Austria",
+          "The page in Turkish on a phone"
+        ]
+      },
+      {
+        "title": "How it is built",
+        "text": "A theme section, an app extension, a server and the checks.",
+        "items": [
+          "Section",
+          "Extension",
+          "Server",
+          "Checks"
+        ],
+        "descriptions": [
+          "Liquid and a 13 KB web component with no libraries. The merchant sets the product, sizes, colours and monogram length in the section settings.",
+          "Theme app extension: the delivery block sits inside the section, an app embed watches the cart on every page.",
+          "Node.js with no dependencies behind the app proxy. Requests are accepted only with a Shopify signature no older than five minutes.",
+          "28 automated tests, Shopify Theme Check with no findings in the section files, animation at 140 frames a second on a 144 Hz screen."
+        ]
+      }
+    ]
+  }
+}

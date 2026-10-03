@@ -6,7 +6,7 @@
   "title": "Люми: остров ветров",
   "eyebrow": "Игра на Godot",
   "lead": "Приключение на острове ветров, которое играется прямо в браузере",
-  "summary": "Куница-посыльный Люми и совёнок Плюм ищут семена ветра, чтобы снова зажечь маяк. Исследование, задания жителей и бои в первом районе острова.",
+  "summary": "Куница-посыльный Люми и совёнок Плюм ищут семена ветра, чтобы снова зажечь маяк. Исследование, задания жителей и бои в первом районе острова. На русском и английском.",
   "note": "Демо первого района",
   "closing": "Сыграйте демо",
   "accent": "#f6c553",
@@ -94,7 +94,7 @@
           "image": {
             "src": "/assets/lumi/achievements-detail.webp",
             "alt": "Достижения: Гроза слизней, Тайная поляна, Честный посыльный",
-            "width": 1100,
+            "width": 1280,
             "height": 1120
           },
           "x": 0.66,
@@ -185,11 +185,11 @@
     }
   ],
   "en": {
-    "title": "Lumi",
+    "title": "Lumi: Isle of Winds",
     "eyebrow": "Godot game",
     "lead": "An island adventure you can play right in the browser",
-    "summary": "Lumi the courier marten and Plum the owlet search for the seeds of the wind to light the lighthouse again. Exploring, helping the locals and fighting in the first area of the island.",
-    "note": "Demo of the first area, in Russian",
+    "summary": "Lumi the courier marten and Plum the owlet search for the seeds of the wind to light the lighthouse again. Exploring, helping the locals and fighting in the first area of the island. In Russian and English.",
+    "note": "Demo of the first area",
     "closing": "Play the demo",
     "actions": [
       "Play"
@@ -246,6 +246,14 @@
           "The chapter saves and loads from the same spot."
         ]
       }
-    ]
+    ],
+    "media": {
+      "/assets/lumi/title.webp": "/assets/lumi/title-en.webp",
+      "/assets/lumi/brook.webp": "/assets/lumi/brook-en.webp",
+      "/assets/lumi/talk.webp": "/assets/lumi/talk-en.webp",
+      "/assets/lumi/room.webp": "/assets/lumi/room-en.webp",
+      "/assets/lumi/map-detail.webp": "/assets/lumi/map-detail-en.webp",
+      "/assets/lumi/achievements-detail.webp": "/assets/lumi/achievements-detail-en.webp"
+    }
   }
 }

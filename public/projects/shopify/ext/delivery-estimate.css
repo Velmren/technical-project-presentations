@@ -1,0 +1,41 @@
+.sheaf-delivery {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 1.4rem;
+  align-items: start;
+  padding: 1.4rem 1.6rem;
+  border: 0.1rem solid rgba(var(--color-foreground), 0.14);
+  border-radius: var(--inputs-radius, 0);
+  font-size: 1.4rem;
+  line-height: 1.45;
+}
+
+.sheaf-delivery[hidden] {
+  display: none;
+}
+
+.sheaf-delivery__icon {
+  margin-top: 0.1rem;
+  color: rgb(var(--color-foreground));
+}
+
+.sheaf-delivery__icon circle {
+  fill: rgb(var(--color-background));
+}
+
+.sheaf-delivery p {
+  margin: 0;
+}
+
+.sheaf-delivery__dispatch {
+  color: rgb(var(--color-foreground));
+  font-variant-numeric: tabular-nums;
+}
+
+.sheaf-delivery__arrival {
+  color: rgba(var(--color-foreground), 0.65);
+}
+
+.sheaf-delivery__arrival:empty {
+  display: none;
+}

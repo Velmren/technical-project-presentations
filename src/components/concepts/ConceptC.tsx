@@ -8,15 +8,23 @@ import { localePath, UI, type Dictionary, type Locale } from '@/lib/i18n';
 import { LivePreview, liveMode } from './LivePreview';
 
 const AUTOPLAY_MS = 6500;
-// Each work's own colour, taken from its interface; the page borrows the colour of the work on screen.
+// Each work's own colour, taken from its interface (dark ones lifted to read on the graphite page); the page
+// borrows the colour of the work on screen.
 const BOARDS: Record<string, { file: string; accent: string }> = {
   'electronics-store': { file: 'store', accent: '#3a6cf2' },
   forma: { file: 'forma', accent: '#2745c8' },
   'admin-dashboard': { file: 'orbit', accent: '#1eaefc' },
   sono: { file: 'sono', accent: '#5a6cf0' },
-  godot: { file: 'spark', accent: '#1fb2cf' },
+  godot: { file: 'spark', accent: '#ffb81f' },
   'game-concept': { file: 'lacuna', accent: '#ffb44f' },
+  assembly: { file: 'veresta', accent: '#d9603f' },
   'mobile-game': { file: 'lumi', accent: '#f6c553' },
+  shopify: { file: 'shopify', accent: '#5f9a7b' },
+  falz: { file: 'falz', accent: '#6f97bb' },
+  'tilda-tour': { file: 'tour', accent: '#4fa584' },
+  'tilda-dental': { file: 'dental', accent: '#4aa38c' },
+  'tilda-webinar': { file: 'webinar', accent: '#c7795a' },
+  motion: { file: 'motion', accent: '#e4572e' },
   encounter: { file: 'encounter', accent: '#9a7cf4' },
   'tilda-interior': { file: 'tilda', accent: '#8e9b64' },
   khrum: { file: 'khrum', accent: '#6a47c2' },
@@ -147,7 +155,7 @@ function Hero({ works, t }: { works: HomeWork[]; t: Dictionary }) {
           onPointerDown={down} onPointerMove={move} onPointerUp={up} onPointerCancel={() => { press.current = null; }}
           onClick={e => { if (suppressClick.current) { e.preventDefault(); suppressClick.current = false; } }} onKeyDown={key}>
           <img className="cc-still" src={`/assets/home/board-${still}.webp`} srcSet={`/assets/home/board-${still}-768.webp 768w, /assets/home/board-${still}.webp 1440w`}
-            sizes="(max-width: 860px) 100vw, 56vw" alt="" draggable={false}/>
+            sizes="(max-width: 860px) 100vw, 56vw" alt="" draggable={false} fetchPriority="high"/>
         </a>
       </div>
       <div className="cc-caption">
@@ -162,7 +170,7 @@ function Hero({ works, t }: { works: HomeWork[]; t: Dictionary }) {
           </button>
         </div>
       </div>
-      <div className="cc-switch" role="tablist" aria-label={t.boardTabs} onKeyDown={tabKey} style={{ '--tabs': boardWorks.length } as React.CSSProperties}>
+      <div className="cc-switch" role="tablist" aria-label={t.boardTabs} onKeyDown={tabKey}>
         {boardWorks.map((w, i) => <button key={w.slug} type="button" role="tab" aria-selected={i === index} aria-controls="cc-board" tabIndex={i === index ? 0 : -1}
           style={{ '--tab-accent': BOARDS[w.slug].accent } as React.CSSProperties} onClick={() => go(i, i >= index ? 1 : -1, undefined, true)}>
           {w.title}
@@ -229,7 +237,7 @@ export function ConceptC({ works, locale }: { works: HomeWork[]; locale: Locale 
 
   return <div className="cc-page" lang={locale}>
     <Header home locale={locale} alternate={localePath(locale === 'ru' ? 'en' : 'ru', HOME)}/>
-    <main>
+    <main id="main">
       <Hero works={works} t={t}/>
       <section className="cc-works" id="works" aria-labelledby="cc-works-title">
         <div className="cc-works-head">

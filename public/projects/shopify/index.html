@@ -1,0 +1,1299 @@
+<!doctype html>
+<html class="js" lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Field Notebook · Sheaf</title>
+    <link rel="icon" href="data:,">
+    <style>
+      :root, .color-scheme-1 {
+        --color-background: 255,255,255;
+        --gradient-background: #ffffff;
+        --color-foreground: 22,24,28;
+        --color-background-contrast: 191,191,191;
+        --color-shadow: 22,24,28;
+        --color-button: 22,24,28;
+        --color-button-text: 255,255,255;
+        --color-secondary-button: 255,255,255;
+        --color-secondary-button-text: 22,24,28;
+        --color-link: 22,24,28;
+        --color-badge-foreground: 22,24,28;
+        --color-badge-background: 255,255,255;
+        --color-badge-border: 22,24,28;
+      }
+      :root {
+        --font-body-family: Inter, -apple-system, 'Segoe UI', sans-serif;
+        --font-body-style: normal;
+        --font-body-weight: 400;
+        --font-body-weight-bold: 700;
+        --font-heading-family: Literata, Georgia, serif;
+        --font-heading-style: normal;
+        --font-heading-weight: 500;
+        --font-body-scale: 1;
+        --font-heading-scale: 1.05;
+        --media-radius: 0px;
+        --page-width: 140rem;
+        --page-width-margin: 0rem;
+        --spacing-sections-desktop: 0px;
+        --spacing-sections-mobile: 0px;
+        --buttons-radius: 0px;
+        --buttons-radius-outset: 0px;
+        --buttons-border-width: 1px;
+        --buttons-border-opacity: 1;
+        --buttons-shadow-opacity: 0;
+        --buttons-shadow-visible: 0;
+        --buttons-shadow-horizontal-offset: 0px;
+        --buttons-shadow-vertical-offset: 4px;
+        --buttons-shadow-blur-radius: 5px;
+        --buttons-border-offset: 0px;
+        --inputs-radius: 0px;
+        --inputs-border-width: 1px;
+        --inputs-border-opacity: 0.55;
+        --inputs-shadow-opacity: 0;
+        --inputs-margin-offset: 0px;
+        --inputs-radius-outset: 0px;
+        --variant-pills-radius: 40px;
+        --variant-pills-border-width: 1px;
+        --variant-pills-border-opacity: 0.55;
+        --variant-pills-shadow-opacity: 0;
+      }
+      *, *::before, *::after { box-sizing: inherit; }
+      html { box-sizing: border-box; font-size: calc(var(--font-body-scale) * 62.5%); height: 100%; }
+      body {
+        display: grid; grid-template-rows: auto 1fr auto; grid-template-columns: 100%;
+        min-height: 100%; margin: 0; font-size: 1.5rem; letter-spacing: 0.06rem; line-height: calc(1 + 0.8 / var(--font-body-scale));
+        font-family: var(--font-body-family); font-style: var(--font-body-style); font-weight: var(--font-body-weight);
+        color: rgba(var(--color-foreground), 0.75); background-color: rgb(var(--color-background));
+      }
+      @media screen and (min-width: 750px) { body { font-size: 1.6rem; } }
+    </style>
+    <link href="/projects/shopify/preview/base.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/projects/shopify/preview/shell.css" rel="stylesheet" type="text/css" media="all">
+    <script src="/projects/shopify/preview/pubsub.js" defer="defer"></script>
+    <script type="application/json" id="shell-config">{"locale":"en","standalone":true,"defaultLocale":"en","routes":{"root_url":"/projects/shopify/","cart_url":"/projects/shopify/cart","cart_add_url":"/projects/shopify/cart/add","cart_change_url":"/projects/shopify/cart/change","cart_update_url":"/projects/shopify/cart/update"},"moneyFormat":"€{{amount_with_comma_separator}}","strings":{"remove":"Remove","clear":"Clear cart","empty":"Your cart is empty","product":"Product","quantity":"Quantity","total":"Total","estimatedTotal":"Estimated total","increase":"Increase quantity for {{ product }}","decrease":"Decrease quantity for {{ product }}"}}</script>
+    <script type="application/json" id="demo-config">{"currency":"EUR","rules":{"timeZone":"Europe/Vienna","cutoffHour":14,"cutoffMinute":0,"productionDays":2,"holidays":["2026-10-26","2026-11-01","2026-12-08","2026-12-24","2026-12-25","2026-12-26","2026-12-31","2027-01-01","2027-01-06","2027-03-29","2027-05-01","2027-05-06","2027-05-17","2027-05-27","2027-08-15","2027-10-26","2027-11-01","2027-12-08","2027-12-25","2027-12-26"],"zones":[{"id":"domestic","countries":["AT"],"transitDays":[1,2]},{"id":"eu","countries":["BE","BG","CY","CZ","DE","DK","EE","ES","FI","FR","GR","HR","HU","IE","IT","LT","LU","LV","MT","NL","PL","PT","RO","SE","SI","SK"],"transitDays":[2,4]},{"id":"europe","countries":["CH","GB","IS","LI","NO","TR"],"transitDays":[3,6]},{"id":"world","countries":["AU","CA","JP","KR","NZ","SG","US"],"transitDays":[6,10]}]},"products":[{"id":9100000000001,"title":"Field Notebook","handle":"field-notebook","vendor":"Sheaf","url":"/projects/shopify/","options":["Size","Cover","Paper"],"variants":[{"id":44100000000001,"title":"A5 / Graphite / Dot grid","options":["A5","Graphite","Dot grid"],"price":2400,"available":true},{"id":44100000000002,"title":"A5 / Graphite / Ruled","options":["A5","Graphite","Ruled"],"price":2400,"available":true},{"id":44100000000003,"title":"A5 / Graphite / Grid","options":["A5","Graphite","Grid"],"price":2400,"available":true},{"id":44100000000004,"title":"A5 / Graphite / Blank","options":["A5","Graphite","Blank"],"price":2400,"available":true},{"id":44100000000005,"title":"A5 / Oxblood / Dot grid","options":["A5","Oxblood","Dot grid"],"price":2400,"available":true},{"id":44100000000006,"title":"A5 / Oxblood / Ruled","options":["A5","Oxblood","Ruled"],"price":2400,"available":true},{"id":44100000000007,"title":"A5 / Oxblood / Grid","options":["A5","Oxblood","Grid"],"price":2400,"available":true},{"id":44100000000008,"title":"A5 / Oxblood / Blank","options":["A5","Oxblood","Blank"],"price":2400,"available":true},{"id":44100000000009,"title":"A5 / Forest / Dot grid","options":["A5","Forest","Dot grid"],"price":2400,"available":true},{"id":44100000000010,"title":"A5 / Forest / Ruled","options":["A5","Forest","Ruled"],"price":2400,"available":true},{"id":44100000000011,"title":"A5 / Forest / Grid","options":["A5","Forest","Grid"],"price":2400,"available":true},{"id":44100000000012,"title":"A5 / Forest / Blank","options":["A5","Forest","Blank"],"price":2400,"available":true},{"id":44100000000013,"title":"A5 / Ochre / Dot grid","options":["A5","Ochre","Dot grid"],"price":2400,"available":true},{"id":44100000000014,"title":"A5 / Ochre / Ruled","options":["A5","Ochre","Ruled"],"price":2400,"available":true},{"id":44100000000015,"title":"A5 / Ochre / Grid","options":["A5","Ochre","Grid"],"price":2400,"available":true},{"id":44100000000016,"title":"A5 / Ochre / Blank","options":["A5","Ochre","Blank"],"price":2400,"available":true},{"id":44100000000017,"title":"A5 / Ink / Dot grid","options":["A5","Ink","Dot grid"],"price":2400,"available":true},{"id":44100000000018,"title":"A5 / Ink / Ruled","options":["A5","Ink","Ruled"],"price":2400,"available":true},{"id":44100000000019,"title":"A5 / Ink / Grid","options":["A5","Ink","Grid"],"price":2400,"available":true},{"id":44100000000020,"title":"A5 / Ink / Blank","options":["A5","Ink","Blank"],"price":2400,"available":true},{"id":44100000000021,"title":"A5 / Bone / Dot grid","options":["A5","Bone","Dot grid"],"price":2400,"available":true},{"id":44100000000022,"title":"A5 / Bone / Ruled","options":["A5","Bone","Ruled"],"price":2400,"available":true},{"id":44100000000023,"title":"A5 / Bone / Grid","options":["A5","Bone","Grid"],"price":2400,"available":true},{"id":44100000000024,"title":"A5 / Bone / Blank","options":["A5","Bone","Blank"],"price":2400,"available":false},{"id":44100000000025,"title":"B6 / Graphite / Dot grid","options":["B6","Graphite","Dot grid"],"price":1900,"available":true},{"id":44100000000026,"title":"B6 / Graphite / Ruled","options":["B6","Graphite","Ruled"],"price":1900,"available":true},{"id":44100000000027,"title":"B6 / Graphite / Grid","options":["B6","Graphite","Grid"],"price":1900,"available":true},{"id":44100000000028,"title":"B6 / Graphite / Blank","options":["B6","Graphite","Blank"],"price":1900,"available":true},{"id":44100000000029,"title":"B6 / Oxblood / Dot grid","options":["B6","Oxblood","Dot grid"],"price":1900,"available":true},{"id":44100000000030,"title":"B6 / Oxblood / Ruled","options":["B6","Oxblood","Ruled"],"price":1900,"available":true},{"id":44100000000031,"title":"B6 / Oxblood / Grid","options":["B6","Oxblood","Grid"],"price":1900,"available":true},{"id":44100000000032,"title":"B6 / Oxblood / Blank","options":["B6","Oxblood","Blank"],"price":1900,"available":true},{"id":44100000000033,"title":"B6 / Forest / Dot grid","options":["B6","Forest","Dot grid"],"price":1900,"available":true},{"id":44100000000034,"title":"B6 / Forest / Ruled","options":["B6","Forest","Ruled"],"price":1900,"available":true},{"id":44100000000035,"title":"B6 / Forest / Grid","options":["B6","Forest","Grid"],"price":1900,"available":true},{"id":44100000000036,"title":"B6 / Forest / Blank","options":["B6","Forest","Blank"],"price":1900,"available":true},{"id":44100000000037,"title":"B6 / Ochre / Dot grid","options":["B6","Ochre","Dot grid"],"price":1900,"available":false},{"id":44100000000038,"title":"B6 / Ochre / Ruled","options":["B6","Ochre","Ruled"],"price":1900,"available":false},{"id":44100000000039,"title":"B6 / Ochre / Grid","options":["B6","Ochre","Grid"],"price":1900,"available":false},{"id":44100000000040,"title":"B6 / Ochre / Blank","options":["B6","Ochre","Blank"],"price":1900,"available":false},{"id":44100000000041,"title":"B6 / Ink / Dot grid","options":["B6","Ink","Dot grid"],"price":1900,"available":true},{"id":44100000000042,"title":"B6 / Ink / Ruled","options":["B6","Ink","Ruled"],"price":1900,"available":true},{"id":44100000000043,"title":"B6 / Ink / Grid","options":["B6","Ink","Grid"],"price":1900,"available":true},{"id":44100000000044,"title":"B6 / Ink / Blank","options":["B6","Ink","Blank"],"price":1900,"available":true},{"id":44100000000045,"title":"B6 / Bone / Dot grid","options":["B6","Bone","Dot grid"],"price":1900,"available":true},{"id":44100000000046,"title":"B6 / Bone / Ruled","options":["B6","Bone","Ruled"],"price":1900,"available":true},{"id":44100000000047,"title":"B6 / Bone / Grid","options":["B6","Bone","Grid"],"price":1900,"available":true},{"id":44100000000048,"title":"B6 / Bone / Blank","options":["B6","Bone","Blank"],"price":1900,"available":false}]},{"id":9100000000002,"title":"Monogram stamping","handle":"monogram-stamping","url":"/projects/shopify/","options":["Title"],"variants":[{"id":44200000000001,"title":"Default Title","options":["Default Title"],"price":600,"available":true}]}]}</script>
+    <script type="module" src="/projects/shopify/preview/demo-backend.js"></script>
+    <script src="/projects/shopify/preview/shell.js" defer="defer"></script>
+    <link href="/projects/shopify/ext/delivery-estimate.css" rel="stylesheet" type="text/css" media="all"><script src="/projects/shopify/ext/delivery-estimate.js" defer="defer"></script>
+  </head>
+  <body class="gradient">
+    <header class="shell-header">
+      <div class="shell-header__inner page-width">
+        <a class="shell-header__brand" href="/projects/shopify/">Sheaf</a>
+        <nav class="shell-header__nav">
+          <a class="shell-header__cart" href="/projects/shopify/cart/">Cart <span data-cart-count>0</span></a>
+        </nav>
+      </div>
+    </header>
+    <main id="MainContent" class="content-for-layout" role="main" tabindex="-1"><div id="shopify-section-template--configurator" class="shopify-section section"><link href="/projects/shopify/assets/sheaf-configurator.css" rel="stylesheet" type="text/css" media="all">
+<script src="/projects/shopify/assets/sheaf-configurator.js" defer="defer"></script><style>.section-template--configurator-padding {
+    padding-top: 27px;
+    padding-bottom: 27px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-template--configurator-padding {
+      padding-top: 36px;
+      padding-bottom: 36px;
+    }
+  }</style><div class="color-scheme-1 gradient">
+  <div class="page-width section-template--configurator-padding"><sheaf-configurator
+        class="sheaf"
+        data-section-id="template--configurator"
+        data-product-url="/projects/shopify/"
+        data-update-url="true"
+        data-monogram-max="3"
+        data-money-format="€{{amount_with_comma_separator}}"
+        data-cart-add-url="/projects/shopify/cart/add"
+        data-cart-url="/projects/shopify/cart"
+      >
+        <div class="sheaf__media">
+          <div class="sheaf__stage-wrap">
+
+<div
+  class="sheaf-stage"
+  data-stage
+  data-view="cover"
+  data-paper="dot"
+  data-foil="blind"
+  style="--w: 148; --h: 210; --cover: #33363b; --band: #1d1d1f;"
+  aria-hidden="true"
+>
+  <div class="sheaf-book">
+    <span class="sheaf-book__shadow"></span>
+    <span class="sheaf-book__ribbon"></span>
+    <span class="sheaf-book__back"></span>
+    <div class="sheaf-book__block">
+      <span class="sheaf-book__page"></span>
+    </div>
+    <div class="sheaf-book__cover">
+      <div class="sheaf-book__face sheaf-book__face--front">
+        <span class="sheaf-book__hinge"></span>
+        <span class="sheaf-book__band"></span>
+        <span class="sheaf-book__monogram" data-monogram-preview></span>
+      </div>
+      <div class="sheaf-book__face sheaf-book__face--inner">
+        <div class="sheaf-book__endpaper">
+          <p class="sheaf-book__colophon">
+            <span>Sheaf</span>
+            <span data-colophon-size>148 × 210</span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="sheaf__stage-bar">
+              <div class="sheaf__views" role="group" aria-label="Preview">
+                <button type="button" class="sheaf__view" data-view="cover" aria-pressed="true">Cover</button>
+                <button type="button" class="sheaf__view" data-view="inside" aria-pressed="false">Inside</button>
+              </div>
+              <p class="sheaf__dims">
+                <span data-dims-label>148 × 210</span>
+                mm
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="sheaf__info"><h2 class="sheaf__title h1">Field Notebook</h2><div class="sheaf__lead rte"><p>Pick a size, a cover and the paper you write on. The preview is drawn to scale.</p></div><form method="post" action="/projects/shopify/cart/add" id="sheaf-form-template--configurator" class="sheaf__form" novalidate="novalidate" data-type="add-to-cart-form" accept-charset="UTF-8" enctype="multipart/form-data"><input type="hidden" name="form_type" value="product"><input type="hidden" name="utf8" value="✓"><input type="hidden" name="id" value="44100000000001" disabled data-variant-id><fieldset class="sheaf__field sheaf__field--pill" data-option-index="0">
+                <legend class="sheaf__legend">
+                  <span>Size</span>
+                  <span class="sheaf__legend-value" data-option-value>A5</span>
+                </legend>
+                <div class="sheaf__choices"><input
+                      type="radio"
+                      class="sheaf__radio visually-hidden"
+                      id="sheaf-form-template--configurator-1-0"
+                      name="sheaf-option-template--configurator-1"
+                      value="A5"
+                      form="sheaf-form-template--configurator-options"
+                      
+                        checked
+                      
+                      
+                      
+                        data-dims="148x210"
+                      
+                      
+                    >
+                    <label
+                      class="sheaf__choice"
+                      for="sheaf-form-template--configurator-1-0"
+                      
+                    ><span>A5</span><span class="sheaf__choice-note">148 × 210 mm</span></label><input
+                      type="radio"
+                      class="sheaf__radio visually-hidden"
+                      id="sheaf-form-template--configurator-1-1"
+                      name="sheaf-option-template--configurator-1"
+                      value="B6"
+                      form="sheaf-form-template--configurator-options"
+                      
+                      
+                      
+                        data-dims="125x176"
+                      
+                      
+                    >
+                    <label
+                      class="sheaf__choice"
+                      for="sheaf-form-template--configurator-1-1"
+                      
+                    ><span>B6</span><span class="sheaf__choice-note">125 × 176 mm</span></label></div>
+              </fieldset><fieldset class="sheaf__field sheaf__field--swatch" data-option-index="1">
+                <legend class="sheaf__legend">
+                  <span>Cover</span>
+                  <span class="sheaf__legend-value" data-option-value>Graphite</span>
+                </legend>
+                <div class="sheaf__choices"><input
+                      type="radio"
+                      class="sheaf__radio visually-hidden"
+                      id="sheaf-form-template--configurator-2-0"
+                      name="sheaf-option-template--configurator-2"
+                      value="Graphite"
+                      form="sheaf-form-template--configurator-options"
+                      
+                        checked
+                      
+                      
+                        data-hex="#33363b"
+                      
+                      
+                      
+                    >
+                    <label
+                      class="sheaf__choice"
+                      for="sheaf-form-template--configurator-2-0"
+                      
+                        style="--swatch: #33363b;"
+                        title="Graphite"
+                      
+                    ><span class="sheaf__swatch" aria-hidden="true"></span>
+                        <span class="visually-hidden">Graphite</span></label><input
+                      type="radio"
+                      class="sheaf__radio visually-hidden"
+                      id="sheaf-form-template--configurator-2-1"
+                      name="sheaf-option-template--configurator-2"
+                      value="Oxblood"
+                      form="sheaf-form-template--configurator-options"
+                      
+                      
+                        data-hex="#6e2a2c"
+                      
+                      
+                      
+                    >
+                    <label
+                      class="sheaf__choice"
+                      for="sheaf-form-template--configurator-2-1"
+                      
+                        style="--swatch: #6e2a2c;"
+                        title="Oxblood"
+                      
+                    ><span class="sheaf__swatch" aria-hidden="true"></span>
+                        <span class="visually-hidden">Oxblood</span></label><input
+                      type="radio"
+                      class="sheaf__radio visually-hidden"
+                      id="sheaf-form-template--configurator-2-2"
+                      name="sheaf-option-template--configurator-2"
+                      value="Forest"
+                      form="sheaf-form-template--configurator-options"
+                      
+                      
+                        data-hex="#2f4a3c"
+                      
+                      
+                      
+                    >
+                    <label
+                      class="sheaf__choice"
+                      for="sheaf-form-template--configurator-2-2"
+                      
+                        style="--swatch: #2f4a3c;"
+                        title="Forest"
+                      
+                    ><span class="sheaf__swatch" aria-hidden="true"></span>
+                        <span class="visually-hidden">Forest</span></label><input
+                      type="radio"
+                      class="sheaf__radio visually-hidden"
+                      id="sheaf-form-template--configurator-2-3"
+                      name="sheaf-option-template--configurator-2"
+                      value="Ochre"
+                      form="sheaf-form-template--configurator-options"
+                      
+                      
+                        data-hex="#b98a3a"
+                      
+                      
+                      
+                    >
+                    <label
+                      class="sheaf__choice"
+                      for="sheaf-form-template--configurator-2-3"
+                      
+                        style="--swatch: #b98a3a;"
+                        title="Ochre"
+                      
+                    ><span class="sheaf__swatch" aria-hidden="true"></span>
+                        <span class="visually-hidden">Ochre</span></label><input
+                      type="radio"
+                      class="sheaf__radio visually-hidden"
+                      id="sheaf-form-template--configurator-2-4"
+                      name="sheaf-option-template--configurator-2"
+                      value="Ink"
+                      form="sheaf-form-template--configurator-options"
+                      
+                      
+                        data-hex="#26365c"
+                      
+                      
+                      
+                    >
+                    <label
+                      class="sheaf__choice"
+                      for="sheaf-form-template--configurator-2-4"
+                      
+                        style="--swatch: #26365c;"
+                        title="Ink"
+                      
+                    ><span class="sheaf__swatch" aria-hidden="true"></span>
+                        <span class="visually-hidden">Ink</span></label><input
+                      type="radio"
+                      class="sheaf__radio visually-hidden"
+                      id="sheaf-form-template--configurator-2-5"
+                      name="sheaf-option-template--configurator-2"
+                      value="Bone"
+                      form="sheaf-form-template--configurator-options"
+                      
+                      
+                        data-hex="#d9d2c3"
+                      
+                      
+                      
+                    >
+                    <label
+                      class="sheaf__choice"
+                      for="sheaf-form-template--configurator-2-5"
+                      
+                        style="--swatch: #d9d2c3;"
+                        title="Bone"
+                      
+                    ><span class="sheaf__swatch" aria-hidden="true"></span>
+                        <span class="visually-hidden">Bone</span></label></div>
+              </fieldset><fieldset class="sheaf__field sheaf__field--paper" data-option-index="2">
+                <legend class="sheaf__legend">
+                  <span>Paper</span>
+                  <span class="sheaf__legend-value" data-option-value>Dot grid</span>
+                </legend>
+                <div class="sheaf__choices"><input
+                      type="radio"
+                      class="sheaf__radio visually-hidden"
+                      id="sheaf-form-template--configurator-3-0"
+                      name="sheaf-option-template--configurator-3"
+                      value="Dot grid"
+                      form="sheaf-form-template--configurator-options"
+                      
+                        checked
+                      
+                      
+                      
+                      
+                        data-paper="dot"
+                      
+                    >
+                    <label
+                      class="sheaf__choice"
+                      for="sheaf-form-template--configurator-3-0"
+                      
+                    ><span class="sheaf__paper sheaf__paper--dot" aria-hidden="true"></span>
+                        <span>Dot grid</span></label><input
+                      type="radio"
+                      class="sheaf__radio visually-hidden"
+                      id="sheaf-form-template--configurator-3-1"
+                      name="sheaf-option-template--configurator-3"
+                      value="Ruled"
+                      form="sheaf-form-template--configurator-options"
+                      
+                      
+                      
+                      
+                        data-paper="ruled"
+                      
+                    >
+                    <label
+                      class="sheaf__choice"
+                      for="sheaf-form-template--configurator-3-1"
+                      
+                    ><span class="sheaf__paper sheaf__paper--ruled" aria-hidden="true"></span>
+                        <span>Ruled</span></label><input
+                      type="radio"
+                      class="sheaf__radio visually-hidden"
+                      id="sheaf-form-template--configurator-3-2"
+                      name="sheaf-option-template--configurator-3"
+                      value="Grid"
+                      form="sheaf-form-template--configurator-options"
+                      
+                      
+                      
+                      
+                        data-paper="grid"
+                      
+                    >
+                    <label
+                      class="sheaf__choice"
+                      for="sheaf-form-template--configurator-3-2"
+                      
+                    ><span class="sheaf__paper sheaf__paper--grid" aria-hidden="true"></span>
+                        <span>Grid</span></label><input
+                      type="radio"
+                      class="sheaf__radio visually-hidden"
+                      id="sheaf-form-template--configurator-3-3"
+                      name="sheaf-option-template--configurator-3"
+                      value="Blank"
+                      form="sheaf-form-template--configurator-options"
+                      
+                      
+                      
+                      
+                        data-paper="blank"
+                      
+                    >
+                    <label
+                      class="sheaf__choice"
+                      for="sheaf-form-template--configurator-3-3"
+                      
+                    ><span class="sheaf__paper sheaf__paper--blank" aria-hidden="true"></span>
+                        <span>Blank</span></label></div>
+              </fieldset><fieldset class="sheaf__field sheaf__field--swatch" data-band>
+                <legend class="sheaf__legend">
+                  <span>Elastic band</span>
+                  <span class="sheaf__legend-value" data-band-value>Black</span>
+                </legend>
+                <div class="sheaf__choices"><input
+                        type="radio"
+                        class="sheaf__radio visually-hidden"
+                        id="sheaf-form-template--configurator-band-0"
+                        name="properties[Elastic band]"
+                        value="Black"
+                        data-hex="#1d1d1f"
+                        
+                          checked
+                        
+                      >
+                      <label
+                        class="sheaf__choice"
+                        for="sheaf-form-template--configurator-band-0"
+                        style="--swatch: #1d1d1f;"
+                        title="Black"
+                      >
+                        <span class="sheaf__swatch sheaf__swatch--band" aria-hidden="true"></span>
+                        <span class="visually-hidden">Black</span>
+                      </label><input
+                        type="radio"
+                        class="sheaf__radio visually-hidden"
+                        id="sheaf-form-template--configurator-band-1"
+                        name="properties[Elastic band]"
+                        value="Red"
+                        data-hex="#b5372e"
+                        
+                      >
+                      <label
+                        class="sheaf__choice"
+                        for="sheaf-form-template--configurator-band-1"
+                        style="--swatch: #b5372e;"
+                        title="Red"
+                      >
+                        <span class="sheaf__swatch sheaf__swatch--band" aria-hidden="true"></span>
+                        <span class="visually-hidden">Red</span>
+                      </label><input
+                        type="radio"
+                        class="sheaf__radio visually-hidden"
+                        id="sheaf-form-template--configurator-band-2"
+                        name="properties[Elastic band]"
+                        value="Sand"
+                        data-hex="#c8b89a"
+                        
+                      >
+                      <label
+                        class="sheaf__choice"
+                        for="sheaf-form-template--configurator-band-2"
+                        style="--swatch: #c8b89a;"
+                        title="Sand"
+                      >
+                        <span class="sheaf__swatch sheaf__swatch--band" aria-hidden="true"></span>
+                        <span class="visually-hidden">Sand</span>
+                      </label><input
+                        type="radio"
+                        class="sheaf__radio visually-hidden"
+                        id="sheaf-form-template--configurator-band-3"
+                        name="properties[Elastic band]"
+                        value="Navy"
+                        data-hex="#26365c"
+                        
+                      >
+                      <label
+                        class="sheaf__choice"
+                        for="sheaf-form-template--configurator-band-3"
+                        style="--swatch: #26365c;"
+                        title="Navy"
+                      >
+                        <span class="sheaf__swatch sheaf__swatch--band" aria-hidden="true"></span>
+                        <span class="visually-hidden">Navy</span>
+                      </label></div>
+              </fieldset><div class="sheaf__field sheaf__field--monogram" data-monogram>
+                <div class="sheaf__legend">
+                  <label for="sheaf-form-template--configurator-monogram">Monogram</label><span class="sheaf__legend-value">+ €6,00</span></div>
+                <div class="sheaf__monogram-row">
+                  <input
+                    type="text"
+                    class="sheaf__monogram-input"
+                    id="sheaf-form-template--configurator-monogram"
+                    name="properties[Monogram]"
+                    maxlength="3"
+                    autocomplete="off"
+                    autocapitalize="characters"
+                    spellcheck="false"
+                    placeholder="ABC"
+                    aria-describedby="sheaf-form-template--configurator-monogram-hint"
+                    data-monogram-input
+                  >
+                  <div class="sheaf__foils" role="radiogroup" aria-label="Finish"><input
+                        type="radio"
+                        class="sheaf__radio visually-hidden"
+                        id="sheaf-form-template--configurator-foil-blind"
+                        name="properties[Finish]"
+                        value="Blind"
+                        data-foil="blind"
+                        
+                          checked
+                        
+                      >
+                      <label class="sheaf__choice sheaf__choice--foil" for="sheaf-form-template--configurator-foil-blind">Blind</label><input
+                        type="radio"
+                        class="sheaf__radio visually-hidden"
+                        id="sheaf-form-template--configurator-foil-gold"
+                        name="properties[Finish]"
+                        value="Gold"
+                        data-foil="gold"
+                        
+                      >
+                      <label class="sheaf__choice sheaf__choice--foil" for="sheaf-form-template--configurator-foil-gold">Gold</label><input
+                        type="radio"
+                        class="sheaf__radio visually-hidden"
+                        id="sheaf-form-template--configurator-foil-silver"
+                        name="properties[Finish]"
+                        value="Silver"
+                        data-foil="silver"
+                        
+                      >
+                      <label class="sheaf__choice sheaf__choice--foil" for="sheaf-form-template--configurator-foil-silver">Silver</label></div>
+                </div>
+                <p class="sheaf__hint" id="sheaf-form-template--configurator-monogram-hint">Up to 3 letters or digits. Personalised notebooks are made to order.</p>
+              </div><dl class="sheaf__summary" aria-live="polite">
+              <div class="sheaf__summary-row">
+                <dt data-summary-title>A5 / Graphite / Dot grid</dt>
+                <dd data-summary-price>€24,00</dd>
+              </div><div class="sheaf__summary-row" data-summary-addon hidden>
+                  <dt>Monogram stamping <span data-summary-monogram></span></dt>
+                  <dd>€6,00</dd>
+                </div></dl>
+
+            <div class="sheaf__buy">
+              <div class="sheaf__quantity">
+                <label class="visually-hidden" for="sheaf-form-template--configurator-quantity">Quantity</label>
+                <button type="button" class="sheaf__step" data-step="-1" aria-label="Decrease quantity for Field Notebook">
+                  <svg viewBox="0 0 10 2" width="10" height="2" aria-hidden="true" focusable="false"><path d="M0 1h10" stroke="currentColor" stroke-width="1.2"/></svg>
+                </button>
+                <input
+                  class="sheaf__quantity-input"
+                  type="number"
+                  id="sheaf-form-template--configurator-quantity"
+                  name="quantity"
+                  value="1"
+                  min="1"
+                  max="99"
+                  inputmode="numeric"
+                  data-quantity
+                >
+                <button type="button" class="sheaf__step" data-step="1" aria-label="Increase quantity for Field Notebook">
+                  <svg viewBox="0 0 10 10" width="10" height="10" aria-hidden="true" focusable="false"><path d="M0 5h10M5 0v10" stroke="currentColor" stroke-width="1.2"/></svg>
+                </button>
+              </div>
+
+              <button
+                type="submit"
+                name="add"
+                class="sheaf__submit button button--full-width button--primary"
+                
+                data-submit
+              >
+                <span data-submit-label>Add to cart</span>
+                <span class="sheaf__submit-total" data-total>€24,00</span>
+              </button>
+            </div>
+
+            <p class="sheaf__message" role="status" data-message hidden></p>
+
+            <noscript>
+              <div class="sheaf__noscript">
+                <label for="sheaf-form-template--configurator-noscript">Product variants</label>
+                <select id="sheaf-form-template--configurator-noscript" name="id"><option
+                      value="44100000000001"
+                      
+                        selected
+                      
+                      
+                    >
+                      A5 / Graphite / Dot grid - €24,00
+                    </option><option
+                      value="44100000000002"
+                      
+                      
+                    >
+                      A5 / Graphite / Ruled - €24,00
+                    </option><option
+                      value="44100000000003"
+                      
+                      
+                    >
+                      A5 / Graphite / Grid - €24,00
+                    </option><option
+                      value="44100000000004"
+                      
+                      
+                    >
+                      A5 / Graphite / Blank - €24,00
+                    </option><option
+                      value="44100000000005"
+                      
+                      
+                    >
+                      A5 / Oxblood / Dot grid - €24,00
+                    </option><option
+                      value="44100000000006"
+                      
+                      
+                    >
+                      A5 / Oxblood / Ruled - €24,00
+                    </option><option
+                      value="44100000000007"
+                      
+                      
+                    >
+                      A5 / Oxblood / Grid - €24,00
+                    </option><option
+                      value="44100000000008"
+                      
+                      
+                    >
+                      A5 / Oxblood / Blank - €24,00
+                    </option><option
+                      value="44100000000009"
+                      
+                      
+                    >
+                      A5 / Forest / Dot grid - €24,00
+                    </option><option
+                      value="44100000000010"
+                      
+                      
+                    >
+                      A5 / Forest / Ruled - €24,00
+                    </option><option
+                      value="44100000000011"
+                      
+                      
+                    >
+                      A5 / Forest / Grid - €24,00
+                    </option><option
+                      value="44100000000012"
+                      
+                      
+                    >
+                      A5 / Forest / Blank - €24,00
+                    </option><option
+                      value="44100000000013"
+                      
+                      
+                    >
+                      A5 / Ochre / Dot grid - €24,00
+                    </option><option
+                      value="44100000000014"
+                      
+                      
+                    >
+                      A5 / Ochre / Ruled - €24,00
+                    </option><option
+                      value="44100000000015"
+                      
+                      
+                    >
+                      A5 / Ochre / Grid - €24,00
+                    </option><option
+                      value="44100000000016"
+                      
+                      
+                    >
+                      A5 / Ochre / Blank - €24,00
+                    </option><option
+                      value="44100000000017"
+                      
+                      
+                    >
+                      A5 / Ink / Dot grid - €24,00
+                    </option><option
+                      value="44100000000018"
+                      
+                      
+                    >
+                      A5 / Ink / Ruled - €24,00
+                    </option><option
+                      value="44100000000019"
+                      
+                      
+                    >
+                      A5 / Ink / Grid - €24,00
+                    </option><option
+                      value="44100000000020"
+                      
+                      
+                    >
+                      A5 / Ink / Blank - €24,00
+                    </option><option
+                      value="44100000000021"
+                      
+                      
+                    >
+                      A5 / Bone / Dot grid - €24,00
+                    </option><option
+                      value="44100000000022"
+                      
+                      
+                    >
+                      A5 / Bone / Ruled - €24,00
+                    </option><option
+                      value="44100000000023"
+                      
+                      
+                    >
+                      A5 / Bone / Grid - €24,00
+                    </option><option
+                      value="44100000000024"
+                      
+                      
+                        disabled
+                      
+                    >
+                      A5 / Bone / Blank - €24,00
+                    </option><option
+                      value="44100000000025"
+                      
+                      
+                    >
+                      B6 / Graphite / Dot grid - €19,00
+                    </option><option
+                      value="44100000000026"
+                      
+                      
+                    >
+                      B6 / Graphite / Ruled - €19,00
+                    </option><option
+                      value="44100000000027"
+                      
+                      
+                    >
+                      B6 / Graphite / Grid - €19,00
+                    </option><option
+                      value="44100000000028"
+                      
+                      
+                    >
+                      B6 / Graphite / Blank - €19,00
+                    </option><option
+                      value="44100000000029"
+                      
+                      
+                    >
+                      B6 / Oxblood / Dot grid - €19,00
+                    </option><option
+                      value="44100000000030"
+                      
+                      
+                    >
+                      B6 / Oxblood / Ruled - €19,00
+                    </option><option
+                      value="44100000000031"
+                      
+                      
+                    >
+                      B6 / Oxblood / Grid - €19,00
+                    </option><option
+                      value="44100000000032"
+                      
+                      
+                    >
+                      B6 / Oxblood / Blank - €19,00
+                    </option><option
+                      value="44100000000033"
+                      
+                      
+                    >
+                      B6 / Forest / Dot grid - €19,00
+                    </option><option
+                      value="44100000000034"
+                      
+                      
+                    >
+                      B6 / Forest / Ruled - €19,00
+                    </option><option
+                      value="44100000000035"
+                      
+                      
+                    >
+                      B6 / Forest / Grid - €19,00
+                    </option><option
+                      value="44100000000036"
+                      
+                      
+                    >
+                      B6 / Forest / Blank - €19,00
+                    </option><option
+                      value="44100000000037"
+                      
+                      
+                        disabled
+                      
+                    >
+                      B6 / Ochre / Dot grid - €19,00
+                    </option><option
+                      value="44100000000038"
+                      
+                      
+                        disabled
+                      
+                    >
+                      B6 / Ochre / Ruled - €19,00
+                    </option><option
+                      value="44100000000039"
+                      
+                      
+                        disabled
+                      
+                    >
+                      B6 / Ochre / Grid - €19,00
+                    </option><option
+                      value="44100000000040"
+                      
+                      
+                        disabled
+                      
+                    >
+                      B6 / Ochre / Blank - €19,00
+                    </option><option
+                      value="44100000000041"
+                      
+                      
+                    >
+                      B6 / Ink / Dot grid - €19,00
+                    </option><option
+                      value="44100000000042"
+                      
+                      
+                    >
+                      B6 / Ink / Ruled - €19,00
+                    </option><option
+                      value="44100000000043"
+                      
+                      
+                    >
+                      B6 / Ink / Grid - €19,00
+                    </option><option
+                      value="44100000000044"
+                      
+                      
+                    >
+                      B6 / Ink / Blank - €19,00
+                    </option><option
+                      value="44100000000045"
+                      
+                      
+                    >
+                      B6 / Bone / Dot grid - €19,00
+                    </option><option
+                      value="44100000000046"
+                      
+                      
+                    >
+                      B6 / Bone / Ruled - €19,00
+                    </option><option
+                      value="44100000000047"
+                      
+                      
+                    >
+                      B6 / Bone / Grid - €19,00
+                    </option><option
+                      value="44100000000048"
+                      
+                      
+                        disabled
+                      
+                    >
+                      B6 / Bone / Blank - €19,00
+                    </option></select>
+              </div>
+            </noscript></form><div class="sheaf__app-block"><div id="shopify-block-delivery_estimate" class="shopify-block shopify-app-block"><sheaf-delivery
+  class="sheaf-delivery"
+  data-endpoint="/projects/shopify/apps/sheaf-delivery/estimate"
+  data-country="DE"
+  data-country-name="Germany"
+  data-locale="en"
+  data-variant="44100000000001"
+  hidden
+  
+>
+  <svg class="sheaf-delivery__icon" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false">
+    <path d="M2 6h11v10.5H2zM13 9.5h4.3l3.2 3.5v3.5H13z" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/>
+    <circle cx="6.5" cy="17" r="1.9" stroke="currentColor" stroke-width="1.2"/>
+    <circle cx="16.8" cy="17" r="1.9" stroke="currentColor" stroke-width="1.2"/>
+  </svg>
+  <div class="sheaf-delivery__text" aria-live="polite">
+    <p class="sheaf-delivery__dispatch" data-dispatch></p>
+    <p class="sheaf-delivery__arrival" data-arrival></p>
+  </div>
+
+  <script type="application/json" data-strings>
+    {
+      "orderWithin": "Order within [time] and it ships today",
+      "shipsOn": "Ships [date]",
+      "madeToOrder": "Made to order, ships [date]",
+      "arrivesBetween": "Arrives [from] to [to] in [country]",
+      "noShipping": "We do not ship to [country] yet",
+      "hours": "[count] h",
+      "minutes": "[count] min"
+    }
+  </script>
+</sheaf-delivery>
+
+
+</div></div><details class="sheaf__details" >
+                  <summary>
+                    <span>Paper and binding</span>
+                    <svg viewBox="0 0 10 6" width="10" height="6" aria-hidden="true" focusable="false"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.2"/></svg>
+                  </summary>
+                  <div class="rte"><p>192 pages of 120 gsm paper, thread-sewn so the notebook opens flat. Cloth-covered boards, an elastic band and a ribbon marker.</p></div>
+                </details><details class="sheaf__details" >
+                  <summary>
+                    <span>Shipping and returns</span>
+                    <svg viewBox="0 0 10 6" width="10" height="6" aria-hidden="true" focusable="false"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.2"/></svg>
+                  </summary>
+                  <div class="rte"><p>Orders placed before 14:00 leave the workshop the same working day. Notebooks without a monogram can be returned within 30 days.</p></div>
+                </details></div>
+
+        <script type="application/json" data-product-json>
+          {
+            "id": 9100000000001,
+            "title": "Field Notebook",
+            "options": ["Size","Cover","Paper"],
+            "variants": [{
+                  "id": 44100000000001,
+                  "title": "A5 / Graphite / Dot grid",
+                  "options": ["A5","Graphite","Dot grid"],
+                  "price": 2400,
+                  "available": true
+                },{
+                  "id": 44100000000002,
+                  "title": "A5 / Graphite / Ruled",
+                  "options": ["A5","Graphite","Ruled"],
+                  "price": 2400,
+                  "available": true
+                },{
+                  "id": 44100000000003,
+                  "title": "A5 / Graphite / Grid",
+                  "options": ["A5","Graphite","Grid"],
+                  "price": 2400,
+                  "available": true
+                },{
+                  "id": 44100000000004,
+                  "title": "A5 / Graphite / Blank",
+                  "options": ["A5","Graphite","Blank"],
+                  "price": 2400,
+                  "available": true
+                },{
+                  "id": 44100000000005,
+                  "title": "A5 / Oxblood / Dot grid",
+                  "options": ["A5","Oxblood","Dot grid"],
+                  "price": 2400,
+                  "available": true
+                },{
+                  "id": 44100000000006,
+                  "title": "A5 / Oxblood / Ruled",
+                  "options": ["A5","Oxblood","Ruled"],
+                  "price": 2400,
+                  "available": true
+                },{
+                  "id": 44100000000007,
+                  "title": "A5 / Oxblood / Grid",
+                  "options": ["A5","Oxblood","Grid"],
+                  "price": 2400,
+                  "available": true
+                },{
+                  "id": 44100000000008,
+                  "title": "A5 / Oxblood / Blank",
+                  "options": ["A5","Oxblood","Blank"],
+                  "price": 2400,
+                  "available": true
+                },{
+                  "id": 44100000000009,
+                  "title": "A5 / Forest / Dot grid",
+                  "options": ["A5","Forest","Dot grid"],
+                  "price": 2400,
+                  "available": true
+                },{
+                  "id": 44100000000010,
+                  "title": "A5 / Forest / Ruled",
+                  "options": ["A5","Forest","Ruled"],
+                  "price": 2400,
+                  "available": true
+                },{
+                  "id": 44100000000011,
+                  "title": "A5 / Forest / Grid",
+                  "options": ["A5","Forest","Grid"],
+                  "price": 2400,
+                  "available": true
+                },{
+                  "id": 44100000000012,
+                  "title": "A5 / Forest / Blank",
+                  "options": ["A5","Forest","Blank"],
+                  "price": 2400,
+                  "available": true
+                },{
+                  "id": 44100000000013,
+                  "title": "A5 / Ochre / Dot grid",
+                  "options": ["A5","Ochre","Dot grid"],
+                  "price": 2400,
+                  "available": true
+                },{
+                  "id": 44100000000014,
+                  "title": "A5 / Ochre / Ruled",
+                  "options": ["A5","Ochre","Ruled"],
+                  "price": 2400,
+                  "available": true
+                },{
+                  "id": 44100000000015,
+                  "title": "A5 / Ochre / Grid",
+                  "options": ["A5","Ochre","Grid"],
+                  "price": 2400,
+                  "available": true
+                },{
+                  "id": 44100000000016,
+                  "title": "A5 / Ochre / Blank",
+                  "options": ["A5","Ochre","Blank"],
+                  "price": 2400,
+                  "available": true
+                },{
+                  "id": 44100000000017,
+                  "title": "A5 / Ink / Dot grid",
+                  "options": ["A5","Ink","Dot grid"],
+                  "price": 2400,
+                  "available": true
+                },{
+                  "id": 44100000000018,
+                  "title": "A5 / Ink / Ruled",
+                  "options": ["A5","Ink","Ruled"],
+                  "price": 2400,
+                  "available": true
+                },{
+                  "id": 44100000000019,
+                  "title": "A5 / Ink / Grid",
+                  "options": ["A5","Ink","Grid"],
+                  "price": 2400,
+                  "available": true
+                },{
+                  "id": 44100000000020,
+                  "title": "A5 / Ink / Blank",
+                  "options": ["A5","Ink","Blank"],
+                  "price": 2400,
+                  "available": true
+                },{
+                  "id": 44100000000021,
+                  "title": "A5 / Bone / Dot grid",
+                  "options": ["A5","Bone","Dot grid"],
+                  "price": 2400,
+                  "available": true
+                },{
+                  "id": 44100000000022,
+                  "title": "A5 / Bone / Ruled",
+                  "options": ["A5","Bone","Ruled"],
+                  "price": 2400,
+                  "available": true
+                },{
+                  "id": 44100000000023,
+                  "title": "A5 / Bone / Grid",
+                  "options": ["A5","Bone","Grid"],
+                  "price": 2400,
+                  "available": true
+                },{
+                  "id": 44100000000024,
+                  "title": "A5 / Bone / Blank",
+                  "options": ["A5","Bone","Blank"],
+                  "price": 2400,
+                  "available": false
+                },{
+                  "id": 44100000000025,
+                  "title": "B6 / Graphite / Dot grid",
+                  "options": ["B6","Graphite","Dot grid"],
+                  "price": 1900,
+                  "available": true
+                },{
+                  "id": 44100000000026,
+                  "title": "B6 / Graphite / Ruled",
+                  "options": ["B6","Graphite","Ruled"],
+                  "price": 1900,
+                  "available": true
+                },{
+                  "id": 44100000000027,
+                  "title": "B6 / Graphite / Grid",
+                  "options": ["B6","Graphite","Grid"],
+                  "price": 1900,
+                  "available": true
+                },{
+                  "id": 44100000000028,
+                  "title": "B6 / Graphite / Blank",
+                  "options": ["B6","Graphite","Blank"],
+                  "price": 1900,
+                  "available": true
+                },{
+                  "id": 44100000000029,
+                  "title": "B6 / Oxblood / Dot grid",
+                  "options": ["B6","Oxblood","Dot grid"],
+                  "price": 1900,
+                  "available": true
+                },{
+                  "id": 44100000000030,
+                  "title": "B6 / Oxblood / Ruled",
+                  "options": ["B6","Oxblood","Ruled"],
+                  "price": 1900,
+                  "available": true
+                },{
+                  "id": 44100000000031,
+                  "title": "B6 / Oxblood / Grid",
+                  "options": ["B6","Oxblood","Grid"],
+                  "price": 1900,
+                  "available": true
+                },{
+                  "id": 44100000000032,
+                  "title": "B6 / Oxblood / Blank",
+                  "options": ["B6","Oxblood","Blank"],
+                  "price": 1900,
+                  "available": true
+                },{
+                  "id": 44100000000033,
+                  "title": "B6 / Forest / Dot grid",
+                  "options": ["B6","Forest","Dot grid"],
+                  "price": 1900,
+                  "available": true
+                },{
+                  "id": 44100000000034,
+                  "title": "B6 / Forest / Ruled",
+                  "options": ["B6","Forest","Ruled"],
+                  "price": 1900,
+                  "available": true
+                },{
+                  "id": 44100000000035,
+                  "title": "B6 / Forest / Grid",
+                  "options": ["B6","Forest","Grid"],
+                  "price": 1900,
+                  "available": true
+                },{
+                  "id": 44100000000036,
+                  "title": "B6 / Forest / Blank",
+                  "options": ["B6","Forest","Blank"],
+                  "price": 1900,
+                  "available": true
+                },{
+                  "id": 44100000000037,
+                  "title": "B6 / Ochre / Dot grid",
+                  "options": ["B6","Ochre","Dot grid"],
+                  "price": 1900,
+                  "available": false
+                },{
+                  "id": 44100000000038,
+                  "title": "B6 / Ochre / Ruled",
+                  "options": ["B6","Ochre","Ruled"],
+                  "price": 1900,
+                  "available": false
+                },{
+                  "id": 44100000000039,
+                  "title": "B6 / Ochre / Grid",
+                  "options": ["B6","Ochre","Grid"],
+                  "price": 1900,
+                  "available": false
+                },{
+                  "id": 44100000000040,
+                  "title": "B6 / Ochre / Blank",
+                  "options": ["B6","Ochre","Blank"],
+                  "price": 1900,
+                  "available": false
+                },{
+                  "id": 44100000000041,
+                  "title": "B6 / Ink / Dot grid",
+                  "options": ["B6","Ink","Dot grid"],
+                  "price": 1900,
+                  "available": true
+                },{
+                  "id": 44100000000042,
+                  "title": "B6 / Ink / Ruled",
+                  "options": ["B6","Ink","Ruled"],
+                  "price": 1900,
+                  "available": true
+                },{
+                  "id": 44100000000043,
+                  "title": "B6 / Ink / Grid",
+                  "options": ["B6","Ink","Grid"],
+                  "price": 1900,
+                  "available": true
+                },{
+                  "id": 44100000000044,
+                  "title": "B6 / Ink / Blank",
+                  "options": ["B6","Ink","Blank"],
+                  "price": 1900,
+                  "available": true
+                },{
+                  "id": 44100000000045,
+                  "title": "B6 / Bone / Dot grid",
+                  "options": ["B6","Bone","Dot grid"],
+                  "price": 1900,
+                  "available": true
+                },{
+                  "id": 44100000000046,
+                  "title": "B6 / Bone / Ruled",
+                  "options": ["B6","Bone","Ruled"],
+                  "price": 1900,
+                  "available": true
+                },{
+                  "id": 44100000000047,
+                  "title": "B6 / Bone / Grid",
+                  "options": ["B6","Bone","Grid"],
+                  "price": 1900,
+                  "available": true
+                },{
+                  "id": 44100000000048,
+                  "title": "B6 / Bone / Blank",
+                  "options": ["B6","Bone","Blank"],
+                  "price": 1900,
+                  "available": false
+                }],
+            "addon": { "id": 44200000000001, "price": 600, "available": true },
+            "strings": {
+              "addToCart": "Add to cart",
+              "soldOut": "Sold out",
+              "unavailable": "Unavailable",
+              "added": "Added to cart.",
+              "viewCart": "View cart",
+              "error": "Could not add to cart. Please try again.",
+              "monogramFor": "For"
+            }
+          }
+        </script>
+      </sheaf-configurator></div>
+</div>
+
+
+</div></main>
+    <footer class="shell-footer">
+      <div class="shell-footer__inner page-width">
+        <div class="shell-footer__selectors">
+          <label>Country/region
+            <select data-country-select><option value="AT">Austria</option><option value="DE" selected>Germany</option><option value="FR">France</option><option value="PL">Poland</option><option value="IT">Italy</option><option value="TR">Türkiye</option><option value="GB">United Kingdom</option><option value="JP">Japan</option><option value="US">United States</option><option value="BR">Brazil</option></select>
+          </label>
+          <label>Language
+            <select data-language-select><option value="/projects/shopify/" data-locale="en" selected>English</option><option value="/projects/shopify/de/" data-locale="de">Deutsch</option><option value="/projects/shopify/fr/" data-locale="fr">Français</option><option value="/projects/shopify/tr/" data-locale="tr">Türkçe</option><option value="/projects/shopify/ru/" data-locale="ru">Русский</option></select>
+          </label>
+        </div>
+        <p class="shell-footer__note">© 2026 Sheaf · <a href="https://velmren.com/">VELMREN</a></p>
+      </div>
+    </footer>
+    <script>
+      // The country chosen earlier is applied before the delivery block starts.
+      (() => {
+        const match = document.cookie.match(/(?:^|; )sheaf_country=([A-Z]{2})/);
+        const select = document.querySelector('[data-country-select]');
+        if (!match || ![...select.options].some((option) => option.value === match[1])) return;
+        select.value = match[1];
+        const block = document.querySelector('sheaf-delivery');
+        if (!block) return;
+        block.dataset.country = match[1];
+        block.dataset.countryName = new Intl.DisplayNames([document.documentElement.lang], { type: 'region' }).of(match[1]);
+      })();
+    </script>
+    <sheaf-cart-guard
+  data-cart-url="/projects/shopify/cart"
+  data-cart-update-url="/projects/shopify/cart/update"
+  data-cart-page="false"
+  hidden
+></sheaf-cart-guard>
+
+
+<script src="/projects/shopify/ext/monogram-guard.js" defer="defer"></script>
+  </body>
+</html>

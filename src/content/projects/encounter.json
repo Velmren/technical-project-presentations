@@ -20,10 +20,10 @@
   "cover": {
     "kind": "image",
     "image": {
-      "src": "/assets/java/01-relays-and-sentinels.png",
-      "alt": "Каменная обсерватория, два включённых реле и стражи в Minecraft",
-      "width": 1600,
-      "height": 900
+      "src": "/assets/encounter/cover.webp",
+      "alt": "Игрок с мечом против трёх стражей у голубого круга обсерватории в Minecraft",
+      "width": 1920,
+      "height": 1080
     }
   },
   "actions": [
@@ -44,8 +44,8 @@
     "image": {
       "src": "/assets/encounter/scene-stabilize.webp",
       "alt": "Обсерватория: реле включены, впереди стражи",
-      "width": 1600,
-      "height": 900
+      "width": 1920,
+      "height": 1080
     }
   },
   "sections": [
@@ -58,8 +58,8 @@
           "image": {
             "src": "/assets/encounter/scene-start.webp",
             "alt": "Старт у магнетита при входе в обсерваторию",
-            "width": 1600,
-            "height": 900
+            "width": 1920,
+            "height": 1080
           },
           "x": 0,
           "y": 0.04,
@@ -69,8 +69,8 @@
           "image": {
             "src": "/assets/encounter/hud-stabilize.webp",
             "alt": "Панель этапа: реле 2 из 2, стражи 0 из 3",
-            "width": 440,
-            "height": 200
+            "width": 638,
+            "height": 290
           },
           "x": 0.65,
           "y": 0.1,
@@ -88,8 +88,8 @@
           "image": {
             "src": "/assets/encounter/scene-zone.webp",
             "alt": "Удержание голубого круга под атакой",
-            "width": 1600,
-            "height": 900
+            "width": 1920,
+            "height": 1080
           },
           "x": 0,
           "y": 0.02,
@@ -99,8 +99,8 @@
           "image": {
             "src": "/assets/encounter/hint-zone.webp",
             "alt": "Подсказка: выход из круга ставит прогресс на паузу",
-            "width": 540,
-            "height": 160
+            "width": 864,
+            "height": 256
           },
           "x": 0.64,
           "y": 0.14,
@@ -118,8 +118,8 @@
           "image": {
             "src": "/assets/encounter/scene-sealed.webp",
             "alt": "Разлом запечатан, маяк горит",
-            "width": 1600,
-            "height": 900
+            "width": 1920,
+            "height": 1080
           },
           "x": 0,
           "y": 0.02,
@@ -129,8 +129,8 @@
           "image": {
             "src": "/assets/encounter/fin-detail.webp",
             "alt": "Аметист в инвентаре и подсказка для нового захода",
-            "width": 420,
-            "height": 160
+            "width": 672,
+            "height": 256
           },
           "x": 0.65,
           "y": 0.14,

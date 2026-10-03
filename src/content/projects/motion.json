@@ -1,0 +1,398 @@
+{
+  "status": "published",
+  "presentation": "case",
+  "year": 2026,
+  "slug": "motion",
+  "title": "Моушен-графика и монтаж",
+  "eyebrow": "Анимация и монтаж",
+  "lead": "Анимация и монтаж, которые сразу встают на сайт, экран и в ленту",
+  "summary": "Логотипы на экранах, персонажи в Lottie, анимация для сайтов в одном файле и ролики со звуком. Беру ваши материалы и сдаю готовое.",
+  "closing": "Посмотрите примеры в движении",
+  "accent": "#e4572e",
+  "category": "Анимация",
+  "technologies": [
+    "Lottie",
+    "Canvas",
+    "SVG",
+    "H.264",
+    "WebM"
+  ],
+  "order": 80,
+  "tone": "warm",
+  "cover": {
+    "kind": "image",
+    "image": {
+      "src": "/assets/motion/hero-khrum.webp",
+      "alt": "Хрум бежит по лесной тропе: цикл Lottie на движущемся фоне",
+      "width": 1200,
+      "height": 750
+    }
+  },
+  "actions": [
+    {
+      "label": "Смотреть вживую",
+      "href": "/projects/motion/"
+    }
+  ],
+  "showcase": {
+    "image": {
+      "src": "/assets/motion/hero-khrum.webp",
+      "alt": "Хрум бежит по лесной тропе: цикл Lottie на движущемся фоне",
+      "width": 1200,
+      "height": 750
+    },
+    "video": "/assets/motion/hero-khrum.mp4",
+    "url": "run.json",
+    "phone": {
+      "src": "/assets/motion/logos-hero-poster.webp",
+      "alt": "Вертикальный экран с логотипом партнёра форума",
+      "width": 768,
+      "height": 1280
+    },
+    "phoneVideo": "/assets/motion/logos-hero.mp4"
+  },
+  "sections": [
+    {
+      "kind": "benefit",
+      "title": "Знаки сменяются на экране мягко и точно",
+      "text": "Вертикальный ролик для боковых экранов: у каждого знака свой выход, выдержка и подпись. Такой ролик на 29 логотипов, 2 мин 47 с, я уже собирал для экранов форума.",
+      "figure": {
+        "value": "60",
+        "label": "кадров в секунду на экране 768×1280"
+      },
+      "layers": [
+        {
+          "image": {
+            "src": "/assets/motion/logos-poster.webp",
+            "alt": "Вертикальный экран: логотип партнёра форума и подпись",
+            "width": 768,
+            "height": 1280
+          },
+          "video": "/assets/motion/logos.mp4",
+          "phone": true,
+          "x": 0.06,
+          "y": 0.02,
+          "w": 0.4
+        },
+        {
+          "image": {
+            "src": "/assets/motion/marks.webp",
+            "alt": "Шесть знаков из ролика: ORVEN, TALVIK, MIRELO, KESTRA, NUVARO, SOLDEN",
+            "width": 1000,
+            "height": 1250
+          },
+          "front": true,
+          "x": 0.54,
+          "y": 0.1,
+          "w": 0.38
+        }
+      ]
+    },
+    {
+      "kind": "benefit",
+      "title": "Персонаж живёт в интерфейсе и почти ничего не весит",
+      "text": "Цикл бега, ожидания или радости отдаётся одним Lottie-файлом, его проигрывает обычный плеер. Нужно видео с прозрачным фоном, отдам и его.",
+      "figure": {
+        "value": "28 КБ",
+        "label": "цикл бега в Lottie, в gzip"
+      },
+      "layers": [
+        {
+          "image": {
+            "src": "/assets/motion/lottie-poster.webp",
+            "alt": "Хрум бежит: живой цикл Lottie с выбором состояний",
+            "width": 1000,
+            "height": 625
+          },
+          "embed": "/assets/motion/embed/lottie.html",
+          "url": "run.json",
+          "x": 0,
+          "y": 0.02,
+          "w": 0.62
+        },
+        {
+          "image": {
+            "src": "/assets/motion/weight.webp",
+            "alt": "Один цикл бега: Lottie 28 КБ, WebM с альфой 240 КБ",
+            "width": 780,
+            "height": 501
+          },
+          "front": true,
+          "x": 0.68,
+          "y": 0.14,
+          "w": 0.32
+        }
+      ]
+    },
+    {
+      "kind": "benefit",
+      "title": "Анимация встаёт в вашу вёрстку одним файлом",
+      "text": "Награда, переход или конфетти подключаются одной строкой, без библиотек, и не трогают остальную страницу. Успех и неудача запускаются двумя вызовами.",
+      "figure": {
+        "value": "7 КБ",
+        "label": "весь скрипт в gzip"
+      },
+      "layers": [
+        {
+          "image": {
+            "src": "/assets/motion/hatch-poster.webp",
+            "alt": "Яйцо в гнезде: события успеха и неудачи на canvas",
+            "width": 1000,
+            "height": 625
+          },
+          "embed": "/assets/motion/embed/hatch.html",
+          "url": "hatch.js",
+          "x": 0,
+          "y": 0.02,
+          "w": 0.62
+        },
+        {
+          "image": {
+            "src": "/assets/motion/snippet.webp",
+            "alt": "Подключение: скрипт, Hatch.mount, success и fail",
+            "width": 780,
+            "height": 495
+          },
+          "front": true,
+          "x": 0.68,
+          "y": 0.2,
+          "w": 0.32
+        }
+      ]
+    },
+    {
+      "kind": "benefit",
+      "title": "Монтаж, в котором склейки идут по музыке",
+      "text": "Восемь работ в ритме трека: кадр меняется на долю, заставка и титры собраны движением. Видео записано кадр за кадром с работающих сайтов и игр.",
+      "figure": {
+        "value": "57 с",
+        "label": "шоурил со звуком, склейки по долям"
+      },
+      "layers": [
+        {
+          "image": {
+            "src": "/assets/motion/reel-poster.webp",
+            "alt": "Шоурил VELMREN: окно с работой и название на цветном фоне",
+            "width": 1280,
+            "height": 720
+          },
+          "embed": "/assets/motion/embed/reel.html",
+          "url": "reel.mp4",
+          "x": 0,
+          "y": 0.02,
+          "w": 0.62
+        },
+        {
+          "image": {
+            "src": "/assets/motion/reel-grid.webp",
+            "alt": "Восемь работ из шоурила: плитки с кадрами",
+            "width": 560,
+            "height": 644
+          },
+          "front": true,
+          "x": 0.68,
+          "y": 0.14,
+          "w": 0.32
+        }
+      ]
+    },
+    {
+      "kind": "benefit",
+      "title": "Товар в движении: текст и характеристики",
+      "text": "Размеры рисуются линиями, цифры считаются на глазах, цвет колонки меняется вместе с фоном. Типографика и продукт движутся в такт музыке.",
+      "figure": {
+        "value": "21 с",
+        "label": "промо колонки со звуком"
+      },
+      "layers": [
+        {
+          "image": {
+            "src": "/assets/motion/sono-promo-poster.webp",
+            "alt": "Промо колонки SONO: заголовок и синяя колонка",
+            "width": 1280,
+            "height": 720
+          },
+          "embed": "/assets/motion/embed/sono-promo.html",
+          "url": "sono-promo.mp4",
+          "x": 0,
+          "y": 0.02,
+          "w": 0.62
+        },
+        {
+          "image": {
+            "src": "/assets/motion/sono-specs.webp",
+            "alt": "Раскладка характеристик: 40 Вт, 32 часа, 980 граммов",
+            "width": 560,
+            "height": 510
+          },
+          "front": true,
+          "x": 0.68,
+          "y": 0.16,
+          "w": 0.32
+        }
+      ]
+    },
+    {
+      "kind": "benefit",
+      "title": "Вертикальный ролик для соцсетей",
+      "text": "Другой характер движения: упругие буквы, прыжки, конфетти. Формат 9:16, со звуком, с циклами Lottie внутри.",
+      "figure": {
+        "value": "24 с",
+        "label": "вертикальный ролик 1080×1920"
+      },
+      "layers": [
+        {
+          "image": {
+            "src": "/assets/motion/vertical-poster.webp",
+            "alt": "Вертикальный ролик: надпись «Хрум!» и конфетти над кабанчиком",
+            "width": 540,
+            "height": 960
+          },
+          "embed": "/assets/motion/embed/vertical.html",
+          "phone": true,
+          "x": 0.04,
+          "y": 0.02,
+          "w": 0.36
+        },
+        {
+          "image": {
+            "src": "/assets/motion/vertical-end.webp",
+            "alt": "Финальная заставка ролика: имя персонажа и адрес",
+            "width": 560,
+            "height": 565
+          },
+          "front": true,
+          "x": 0.5,
+          "y": 0.18,
+          "w": 0.42
+        }
+      ]
+    },
+    {
+      "kind": "features",
+      "title": "Как устроено",
+      "text": "Материалы, черновик, правки, форматы сдачи.",
+      "items": [
+        "Материалы",
+        "Черновик",
+        "Правки",
+        "Форматы"
+      ],
+      "descriptions": [
+        "Логотипы и персонажи лучше в SVG, AI, PSD или PNG, плюс шрифты и референсы.",
+        "Сначала показываю движение на одном знаке или одном цикле, потом собираю всё остальное.",
+        "Замечания вносятся в ту же сборку, прежняя версия остаётся.",
+        "MP4 H.264, вертикальный и горизонтальный, 30 или 60 к/с, со звуком. Lottie JSON, WebM с прозрачностью, SVG-риг, Canvas и JS одним файлом. Монтаж из ваших съёмок, титры, музыка с лицензией."
+      ]
+    }
+  ],
+  "en": {
+    "title": "Motion graphics and editing",
+    "eyebrow": "Animation and editing",
+    "lead": "Animation and editing that drop straight into a website, a screen and a feed",
+    "summary": "Logos on screens, characters in Lottie, website animation in a single file and videos with sound. I take your materials and hand back the finished work.",
+    "closing": "See the examples in motion",
+    "actions": [
+      "See it live"
+    ],
+    "showcase": [
+      "Khrum runs along a forest path: a Lottie cycle over a scrolling background",
+      "A vertical screen with a forum partner logo"
+    ],
+    "media": {
+      "/assets/motion/lottie-poster.webp": "/assets/motion/lottie-poster-en.webp",
+      "/assets/motion/weight.webp": "/assets/motion/weight-en.webp",
+      "/assets/motion/snippet.webp": "/assets/motion/snippet-en.webp"
+    },
+    "sections": [
+      {
+        "title": "Logos change on screen softly and exactly",
+        "text": "A vertical video for side screens: every mark gets its own exit, hold and caption. I have already built one like it for forum screens, with 29 logos and 2 min 47 s.",
+        "figure": {
+          "value": "60",
+          "label": "frames a second on a 768×1280 screen"
+        },
+        "alts": [
+          "Vertical screen: a forum partner logo and its caption",
+          "The six marks from the video: ORVEN, TALVIK, MIRELO, KESTRA, NUVARO, SOLDEN"
+        ]
+      },
+      {
+        "title": "A character lives in the interface and weighs almost nothing",
+        "text": "A run, idle or joy cycle is handed over as one Lottie file that an ordinary player plays. If you need video with a transparent background, I will hand that over too.",
+        "figure": {
+          "value": "28 KB",
+          "label": "run cycle in Lottie, gzipped"
+        },
+        "alts": [
+          "Khrum running: a live Lottie cycle with a choice of states",
+          "One run cycle: Lottie 28 KB, WebM with alpha 240 KB"
+        ]
+      },
+      {
+        "title": "Animation drops into your page as one file",
+        "text": "A reward, a transition or confetti connects with one line, needs no libraries and leaves the rest of the page alone. Success and failure start with two calls.",
+        "figure": {
+          "value": "7 KB",
+          "label": "the whole script, gzipped"
+        },
+        "alts": [
+          "An egg in a nest: success and failure events on a canvas",
+          "Connection: the script, Hatch.mount, success and fail"
+        ]
+      },
+      {
+        "title": "Editing where the cuts land on the music",
+        "text": "Eight works in the rhythm of a track: the picture changes on the beat, the opening and the titles are built in motion. The footage was recorded frame by frame from working sites and games.",
+        "figure": {
+          "value": "57 s",
+          "label": "showreel with sound, cuts on the beat"
+        },
+        "alts": [
+          "VELMREN showreel: a window with a work and its name on a coloured ground",
+          "Eight works from the showreel: tiles with frames"
+        ]
+      },
+      {
+        "title": "A product in motion: type and specifications",
+        "text": "Dimensions are drawn as lines, numbers count up in front of you and the speaker changes colour with the background. Type and product move to the music.",
+        "figure": {
+          "value": "21 s",
+          "label": "speaker promo with sound"
+        },
+        "alts": [
+          "SONO speaker promo: a headline and a blue speaker",
+          "Specification layout: 40 W, 32 hours, 980 grams"
+        ]
+      },
+      {
+        "title": "A vertical clip for social networks",
+        "text": "A different character of movement: springy letters, jumps, confetti. A 9:16 format with sound and Lottie cycles inside.",
+        "figure": {
+          "value": "24 s",
+          "label": "vertical clip 1080×1920"
+        },
+        "alts": [
+          "Vertical clip: the word Khrum and confetti above the boar",
+          "Closing card of the clip: the character name and the address"
+        ]
+      },
+      {
+        "title": "How it is built",
+        "text": "Materials, a draft, revisions, delivery formats.",
+        "items": [
+          "Materials",
+          "Draft",
+          "Revisions",
+          "Formats"
+        ],
+        "descriptions": [
+          "Logos and characters are best in SVG, AI, PSD or PNG, with fonts and references.",
+          "I first show the movement on one mark or one cycle, then build the rest.",
+          "Comments go into the same build and the previous version stays.",
+          "MP4 H.264, vertical and horizontal, 30 or 60 fps, with sound. Lottie JSON, WebM with transparency, SVG rig, Canvas and JS in one file. Editing from your footage, titles, licensed music."
+        ]
+      }
+    ]
+  }
+}

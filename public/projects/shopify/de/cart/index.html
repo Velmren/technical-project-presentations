@@ -1,0 +1,125 @@
+<!doctype html>
+<html class="js" lang="de">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Dein Warenkorb · Sheaf</title>
+    <link rel="icon" href="data:,">
+    <style>
+      :root, .color-scheme-1 {
+        --color-background: 255,255,255;
+        --gradient-background: #ffffff;
+        --color-foreground: 22,24,28;
+        --color-background-contrast: 191,191,191;
+        --color-shadow: 22,24,28;
+        --color-button: 22,24,28;
+        --color-button-text: 255,255,255;
+        --color-secondary-button: 255,255,255;
+        --color-secondary-button-text: 22,24,28;
+        --color-link: 22,24,28;
+        --color-badge-foreground: 22,24,28;
+        --color-badge-background: 255,255,255;
+        --color-badge-border: 22,24,28;
+      }
+      :root {
+        --font-body-family: Inter, -apple-system, 'Segoe UI', sans-serif;
+        --font-body-style: normal;
+        --font-body-weight: 400;
+        --font-body-weight-bold: 700;
+        --font-heading-family: Literata, Georgia, serif;
+        --font-heading-style: normal;
+        --font-heading-weight: 500;
+        --font-body-scale: 1;
+        --font-heading-scale: 1.05;
+        --media-radius: 0px;
+        --page-width: 140rem;
+        --page-width-margin: 0rem;
+        --spacing-sections-desktop: 0px;
+        --spacing-sections-mobile: 0px;
+        --buttons-radius: 0px;
+        --buttons-radius-outset: 0px;
+        --buttons-border-width: 1px;
+        --buttons-border-opacity: 1;
+        --buttons-shadow-opacity: 0;
+        --buttons-shadow-visible: 0;
+        --buttons-shadow-horizontal-offset: 0px;
+        --buttons-shadow-vertical-offset: 4px;
+        --buttons-shadow-blur-radius: 5px;
+        --buttons-border-offset: 0px;
+        --inputs-radius: 0px;
+        --inputs-border-width: 1px;
+        --inputs-border-opacity: 0.55;
+        --inputs-shadow-opacity: 0;
+        --inputs-margin-offset: 0px;
+        --inputs-radius-outset: 0px;
+        --variant-pills-radius: 40px;
+        --variant-pills-border-width: 1px;
+        --variant-pills-border-opacity: 0.55;
+        --variant-pills-shadow-opacity: 0;
+      }
+      *, *::before, *::after { box-sizing: inherit; }
+      html { box-sizing: border-box; font-size: calc(var(--font-body-scale) * 62.5%); height: 100%; }
+      body {
+        display: grid; grid-template-rows: auto 1fr auto; grid-template-columns: 100%;
+        min-height: 100%; margin: 0; font-size: 1.5rem; letter-spacing: 0.06rem; line-height: calc(1 + 0.8 / var(--font-body-scale));
+        font-family: var(--font-body-family); font-style: var(--font-body-style); font-weight: var(--font-body-weight);
+        color: rgba(var(--color-foreground), 0.75); background-color: rgb(var(--color-background));
+      }
+      @media screen and (min-width: 750px) { body { font-size: 1.6rem; } }
+    </style>
+    <link href="/projects/shopify/preview/base.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/projects/shopify/preview/shell.css" rel="stylesheet" type="text/css" media="all">
+    <script src="/projects/shopify/preview/pubsub.js" defer="defer"></script>
+    <script type="application/json" id="shell-config">{"locale":"de","standalone":true,"defaultLocale":"en","routes":{"root_url":"/projects/shopify/de/","cart_url":"/projects/shopify/de/cart","cart_add_url":"/projects/shopify/de/cart/add","cart_change_url":"/projects/shopify/de/cart/change","cart_update_url":"/projects/shopify/de/cart/update"},"moneyFormat":"€{{amount_with_comma_separator}}","strings":{"remove":"Entfernen","clear":"Warenkorb leeren","empty":"Dein Warenkorb ist leer","product":"Produkt","quantity":"Anzahl","total":"Gesamtsumme","estimatedTotal":"Geschätzte Gesamtkosten","increase":"Erhöhe die Menge für {{ product }}","decrease":"Verringere die Menge für {{ product }}"}}</script>
+    <script type="application/json" id="demo-config">{"currency":"EUR","rules":{"timeZone":"Europe/Vienna","cutoffHour":14,"cutoffMinute":0,"productionDays":2,"holidays":["2026-10-26","2026-11-01","2026-12-08","2026-12-24","2026-12-25","2026-12-26","2026-12-31","2027-01-01","2027-01-06","2027-03-29","2027-05-01","2027-05-06","2027-05-17","2027-05-27","2027-08-15","2027-10-26","2027-11-01","2027-12-08","2027-12-25","2027-12-26"],"zones":[{"id":"domestic","countries":["AT"],"transitDays":[1,2]},{"id":"eu","countries":["BE","BG","CY","CZ","DE","DK","EE","ES","FI","FR","GR","HR","HU","IE","IT","LT","LU","LV","MT","NL","PL","PT","RO","SE","SI","SK"],"transitDays":[2,4]},{"id":"europe","countries":["CH","GB","IS","LI","NO","TR"],"transitDays":[3,6]},{"id":"world","countries":["AU","CA","JP","KR","NZ","SG","US"],"transitDays":[6,10]}]},"products":[{"id":9100000000001,"title":"Notizbuch Field","handle":"field-notebook","vendor":"Sheaf","url":"/projects/shopify/de/","options":["Format","Einband","Papier"],"variants":[{"id":44100000000001,"title":"A5 / Graphit / Punktraster","options":["A5","Graphit","Punktraster"],"price":2400,"available":true},{"id":44100000000002,"title":"A5 / Graphit / Liniert","options":["A5","Graphit","Liniert"],"price":2400,"available":true},{"id":44100000000003,"title":"A5 / Graphit / Kariert","options":["A5","Graphit","Kariert"],"price":2400,"available":true},{"id":44100000000004,"title":"A5 / Graphit / Blanko","options":["A5","Graphit","Blanko"],"price":2400,"available":true},{"id":44100000000005,"title":"A5 / Bordeaux / Punktraster","options":["A5","Bordeaux","Punktraster"],"price":2400,"available":true},{"id":44100000000006,"title":"A5 / Bordeaux / Liniert","options":["A5","Bordeaux","Liniert"],"price":2400,"available":true},{"id":44100000000007,"title":"A5 / Bordeaux / Kariert","options":["A5","Bordeaux","Kariert"],"price":2400,"available":true},{"id":44100000000008,"title":"A5 / Bordeaux / Blanko","options":["A5","Bordeaux","Blanko"],"price":2400,"available":true},{"id":44100000000009,"title":"A5 / Tanne / Punktraster","options":["A5","Tanne","Punktraster"],"price":2400,"available":true},{"id":44100000000010,"title":"A5 / Tanne / Liniert","options":["A5","Tanne","Liniert"],"price":2400,"available":true},{"id":44100000000011,"title":"A5 / Tanne / Kariert","options":["A5","Tanne","Kariert"],"price":2400,"available":true},{"id":44100000000012,"title":"A5 / Tanne / Blanko","options":["A5","Tanne","Blanko"],"price":2400,"available":true},{"id":44100000000013,"title":"A5 / Ocker / Punktraster","options":["A5","Ocker","Punktraster"],"price":2400,"available":true},{"id":44100000000014,"title":"A5 / Ocker / Liniert","options":["A5","Ocker","Liniert"],"price":2400,"available":true},{"id":44100000000015,"title":"A5 / Ocker / Kariert","options":["A5","Ocker","Kariert"],"price":2400,"available":true},{"id":44100000000016,"title":"A5 / Ocker / Blanko","options":["A5","Ocker","Blanko"],"price":2400,"available":true},{"id":44100000000017,"title":"A5 / Tinte / Punktraster","options":["A5","Tinte","Punktraster"],"price":2400,"available":true},{"id":44100000000018,"title":"A5 / Tinte / Liniert","options":["A5","Tinte","Liniert"],"price":2400,"available":true},{"id":44100000000019,"title":"A5 / Tinte / Kariert","options":["A5","Tinte","Kariert"],"price":2400,"available":true},{"id":44100000000020,"title":"A5 / Tinte / Blanko","options":["A5","Tinte","Blanko"],"price":2400,"available":true},{"id":44100000000021,"title":"A5 / Leinen / Punktraster","options":["A5","Leinen","Punktraster"],"price":2400,"available":true},{"id":44100000000022,"title":"A5 / Leinen / Liniert","options":["A5","Leinen","Liniert"],"price":2400,"available":true},{"id":44100000000023,"title":"A5 / Leinen / Kariert","options":["A5","Leinen","Kariert"],"price":2400,"available":true},{"id":44100000000024,"title":"A5 / Leinen / Blanko","options":["A5","Leinen","Blanko"],"price":2400,"available":false},{"id":44100000000025,"title":"B6 / Graphit / Punktraster","options":["B6","Graphit","Punktraster"],"price":1900,"available":true},{"id":44100000000026,"title":"B6 / Graphit / Liniert","options":["B6","Graphit","Liniert"],"price":1900,"available":true},{"id":44100000000027,"title":"B6 / Graphit / Kariert","options":["B6","Graphit","Kariert"],"price":1900,"available":true},{"id":44100000000028,"title":"B6 / Graphit / Blanko","options":["B6","Graphit","Blanko"],"price":1900,"available":true},{"id":44100000000029,"title":"B6 / Bordeaux / Punktraster","options":["B6","Bordeaux","Punktraster"],"price":1900,"available":true},{"id":44100000000030,"title":"B6 / Bordeaux / Liniert","options":["B6","Bordeaux","Liniert"],"price":1900,"available":true},{"id":44100000000031,"title":"B6 / Bordeaux / Kariert","options":["B6","Bordeaux","Kariert"],"price":1900,"available":true},{"id":44100000000032,"title":"B6 / Bordeaux / Blanko","options":["B6","Bordeaux","Blanko"],"price":1900,"available":true},{"id":44100000000033,"title":"B6 / Tanne / Punktraster","options":["B6","Tanne","Punktraster"],"price":1900,"available":true},{"id":44100000000034,"title":"B6 / Tanne / Liniert","options":["B6","Tanne","Liniert"],"price":1900,"available":true},{"id":44100000000035,"title":"B6 / Tanne / Kariert","options":["B6","Tanne","Kariert"],"price":1900,"available":true},{"id":44100000000036,"title":"B6 / Tanne / Blanko","options":["B6","Tanne","Blanko"],"price":1900,"available":true},{"id":44100000000037,"title":"B6 / Ocker / Punktraster","options":["B6","Ocker","Punktraster"],"price":1900,"available":false},{"id":44100000000038,"title":"B6 / Ocker / Liniert","options":["B6","Ocker","Liniert"],"price":1900,"available":false},{"id":44100000000039,"title":"B6 / Ocker / Kariert","options":["B6","Ocker","Kariert"],"price":1900,"available":false},{"id":44100000000040,"title":"B6 / Ocker / Blanko","options":["B6","Ocker","Blanko"],"price":1900,"available":false},{"id":44100000000041,"title":"B6 / Tinte / Punktraster","options":["B6","Tinte","Punktraster"],"price":1900,"available":true},{"id":44100000000042,"title":"B6 / Tinte / Liniert","options":["B6","Tinte","Liniert"],"price":1900,"available":true},{"id":44100000000043,"title":"B6 / Tinte / Kariert","options":["B6","Tinte","Kariert"],"price":1900,"available":true},{"id":44100000000044,"title":"B6 / Tinte / Blanko","options":["B6","Tinte","Blanko"],"price":1900,"available":true},{"id":44100000000045,"title":"B6 / Leinen / Punktraster","options":["B6","Leinen","Punktraster"],"price":1900,"available":true},{"id":44100000000046,"title":"B6 / Leinen / Liniert","options":["B6","Leinen","Liniert"],"price":1900,"available":true},{"id":44100000000047,"title":"B6 / Leinen / Kariert","options":["B6","Leinen","Kariert"],"price":1900,"available":true},{"id":44100000000048,"title":"B6 / Leinen / Blanko","options":["B6","Leinen","Blanko"],"price":1900,"available":false}]},{"id":9100000000002,"title":"Monogrammprägung","handle":"monogram-stamping","url":"/projects/shopify/de/","options":["Title"],"variants":[{"id":44200000000001,"title":"Default Title","options":["Default Title"],"price":600,"available":true}]}]}</script>
+    <script type="module" src="/projects/shopify/preview/demo-backend.js"></script>
+    <script src="/projects/shopify/preview/shell.js" defer="defer"></script>
+    
+  </head>
+  <body class="gradient">
+    <header class="shell-header">
+      <div class="shell-header__inner page-width">
+        <a class="shell-header__brand" href="/projects/shopify/de/">Sheaf</a>
+        <nav class="shell-header__nav">
+          <a class="shell-header__cart" href="/projects/shopify/de/cart/">Warenkorb <span data-cart-count>0</span></a>
+        </nav>
+      </div>
+    </header>
+    <main id="MainContent" class="content-for-layout" role="main" tabindex="-1"><div class="page-width shell-cart"><h1 class="h1">Dein Warenkorb</h1><div data-cart-lines></div></div></main>
+    <footer class="shell-footer">
+      <div class="shell-footer__inner page-width">
+        <div class="shell-footer__selectors">
+          <label>Land/Region
+            <select data-country-select><option value="AT">Österreich</option><option value="DE" selected>Deutschland</option><option value="FR">Frankreich</option><option value="PL">Polen</option><option value="IT">Italien</option><option value="TR">Türkei</option><option value="GB">Vereinigtes Königreich</option><option value="JP">Japan</option><option value="US">Vereinigte Staaten</option><option value="BR">Brasilien</option></select>
+          </label>
+          <label>Sprache
+            <select data-language-select><option value="/projects/shopify/cart/" data-locale="en">English</option><option value="/projects/shopify/de/cart/" data-locale="de" selected>Deutsch</option><option value="/projects/shopify/fr/cart/" data-locale="fr">Français</option><option value="/projects/shopify/tr/cart/" data-locale="tr">Türkçe</option><option value="/projects/shopify/ru/cart/" data-locale="ru">Русский</option></select>
+          </label>
+        </div>
+        <p class="shell-footer__note">© 2026 Sheaf · <a href="https://velmren.com/">VELMREN</a></p>
+      </div>
+    </footer>
+    <script>
+      // The country chosen earlier is applied before the delivery block starts.
+      (() => {
+        const match = document.cookie.match(/(?:^|; )sheaf_country=([A-Z]{2})/);
+        const select = document.querySelector('[data-country-select]');
+        if (!match || ![...select.options].some((option) => option.value === match[1])) return;
+        select.value = match[1];
+        const block = document.querySelector('sheaf-delivery');
+        if (!block) return;
+        block.dataset.country = match[1];
+        block.dataset.countryName = new Intl.DisplayNames([document.documentElement.lang], { type: 'region' }).of(match[1]);
+      })();
+    </script>
+    <sheaf-cart-guard
+  data-cart-url="/projects/shopify/de/cart"
+  data-cart-update-url="/projects/shopify/de/cart/update"
+  data-cart-page="true"
+  hidden
+></sheaf-cart-guard>
+
+
+<script src="/projects/shopify/ext/monogram-guard.js" defer="defer"></script>
+  </body>
+</html>

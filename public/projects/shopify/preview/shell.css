@@ -1,0 +1,211 @@
+/* Page frame of the local preview. The section itself is styled by Dawn's base.css and the theme assets. */
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url('fonts/inter.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Literata';
+  font-style: normal;
+  font-weight: 400 600;
+  font-display: swap;
+  src: url('fonts/literata.woff2') format('woff2');
+}
+
+.shell-header {
+  border-bottom: 0.1rem solid rgba(var(--color-foreground), 0.08);
+}
+
+.shell-header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  min-height: 7.2rem;
+}
+
+.shell-header__brand {
+  font-family: var(--font-heading-family);
+  font-weight: var(--font-heading-weight);
+  font-size: 2.6rem;
+  letter-spacing: 0.02rem;
+  color: rgb(var(--color-foreground));
+  text-decoration: none;
+}
+
+.shell-header__nav {
+  display: flex;
+  gap: 2.8rem;
+  font-size: 1.4rem;
+  letter-spacing: 0.06rem;
+}
+
+.shell-header__nav a {
+  color: rgba(var(--color-foreground), 0.75);
+  text-decoration: none;
+}
+
+.shell-header__nav a[aria-current='page'],
+.shell-header__nav a:hover {
+  color: rgb(var(--color-foreground));
+  text-decoration: underline;
+  text-underline-offset: 0.4rem;
+}
+
+.shell-header__cart {
+  font-variant-numeric: tabular-nums;
+}
+
+.shell-footer {
+  margin-top: 6rem;
+  border-top: 0.1rem solid rgba(var(--color-foreground), 0.08);
+}
+
+.shell-footer__inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.6rem 3rem;
+  padding-top: 2.4rem;
+  padding-bottom: 3.2rem;
+  font-size: 1.3rem;
+}
+
+.shell-footer__selectors {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+}
+
+.shell-footer label {
+  display: grid;
+  gap: 0.4rem;
+  color: rgba(var(--color-foreground), 0.65);
+}
+
+.shell-footer select {
+  min-height: 4rem;
+  min-width: 17rem;
+  padding: 0 1.2rem;
+  border: 0.1rem solid rgba(var(--color-foreground), 0.55);
+  border-radius: var(--inputs-radius);
+  background: rgb(var(--color-background));
+  color: rgb(var(--color-foreground));
+  font: inherit;
+}
+
+.shell-footer__note {
+  margin: 0;
+  color: rgba(var(--color-foreground), 0.65);
+}
+
+/* Cart page */
+
+.shell-cart {
+  width: 100%;
+  padding-top: 4rem;
+  padding-bottom: 2rem;
+}
+
+.shell-cart h1 {
+  margin: 0 0 2.4rem;
+}
+
+.shell-cart table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 1.5rem;
+}
+
+.shell-cart th:nth-child(2),
+.shell-cart th:nth-child(3) {
+  width: 16rem;
+}
+
+.shell-cart th {
+  padding: 0 0 1.2rem;
+  border-bottom: 0.1rem solid rgba(var(--color-foreground), 0.14);
+  font-size: 1.2rem;
+  font-weight: 400;
+  letter-spacing: 0.08rem;
+  text-align: left;
+  color: rgba(var(--color-foreground), 0.65);
+}
+
+.shell-cart td {
+  padding: 1.8rem 0;
+  border-bottom: 0.1rem solid rgba(var(--color-foreground), 0.14);
+  vertical-align: top;
+}
+
+.shell-cart th:not(:first-child),
+.shell-cart td:not(:first-child) {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+  padding-left: 2rem;
+}
+
+.shell-cart__title {
+  color: rgb(var(--color-foreground));
+}
+
+.shell-cart dl {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.2rem 1rem;
+  margin: 0.6rem 0 0;
+  font-size: 1.3rem;
+  color: rgba(var(--color-foreground), 0.65);
+}
+
+.shell-cart dd {
+  margin: 0;
+}
+
+.shell-cart__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 2.4rem;
+}
+
+.shell-cart__total {
+  font-size: 1.8rem;
+  color: rgb(var(--color-foreground));
+  font-variant-numeric: tabular-nums;
+}
+
+.shell-cart__quantity {
+  display: inline-flex;
+  color: rgb(var(--color-foreground));
+  align-items: center;
+  border: 0.1rem solid rgba(var(--color-foreground), 0.55);
+}
+
+.shell-cart__quantity button {
+  width: 3.6rem;
+  height: 3.6rem;
+  border: 0;
+  background: none;
+  color: rgb(var(--color-foreground));
+  font: inherit;
+  cursor: pointer;
+}
+
+.shell-cart__quantity span {
+  min-width: 2.4rem;
+  text-align: center;
+}
+
+.shell-cart__remove {
+  display: block;
+  margin: 0.6rem 0 0 auto;
+  font-size: 1.3rem;
+}

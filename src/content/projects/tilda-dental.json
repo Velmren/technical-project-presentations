@@ -1,0 +1,258 @@
+{
+  "slug": "tilda-dental",
+  "title": "Соседний двор",
+  "status": "published",
+  "presentation": "case",
+  "year": 2026,
+  "eyebrow": "Сайт на Tilda",
+  "lead": "Сайт районной стоматологии, на котором цена и врач известны до визита",
+  "summary": "Главная, прайс, врачи, контакты и запись на приём. Собран на Tilda и опубликован.",
+  "note": "Клиника, врачи и цены вымышлены",
+  "closing": "Посмотрите сайт вживую",
+  "accent": "#1f5a4c",
+  "category": "Веб-сайты",
+  "technologies": [
+    "Tilda"
+  ],
+  "order": 52,
+  "tone": "cool",
+  "cover": {
+    "kind": "image",
+    "image": {
+      "src": "/assets/tilda-dental/cover-desktop.png",
+      "alt": "Первый экран сайта стоматологии «Соседний двор»: заголовок, кнопка записи и фото приёма",
+      "width": 1440,
+      "height": 1000
+    }
+  },
+  "actions": [
+    {
+      "label": "Открыть сайт",
+      "href": "https://sosedniy-dvor.tilda.ws/"
+    }
+  ],
+  "showcase": {
+    "image": {
+      "src": "/assets/tilda-dental/case/hero.webp",
+      "alt": "Первый экран сайта «Соседний двор»: заголовок, запись на приём и фото кабинета",
+      "width": 1905,
+      "height": 1200
+    },
+    "url": "sosedniy-dvor.tilda.ws",
+    "phone": {
+      "src": "/assets/tilda-dental/case/m-hero.webp",
+      "alt": "Первый экран на телефоне",
+      "width": 780,
+      "height": 1688
+    }
+  },
+  "sections": [
+    {
+      "kind": "benefit",
+      "title": "Цена известна до визита",
+      "text": "Частые услуги с ценами стоят на главной, полный прайс по разделам на отдельной странице.",
+      "layers": [
+        {
+          "image": {
+            "src": "/assets/tilda-dental/case/prices.webp",
+            "alt": "Страница «Услуги и цены»: разделы прайса",
+            "width": 1905,
+            "height": 1200
+          },
+          "x": 0,
+          "y": 0.02,
+          "w": 0.58,
+          "url": "sosedniy-dvor.tilda.ws/prices"
+        },
+        {
+          "image": {
+            "src": "/assets/tilda-dental/case/price-table.webp",
+            "alt": "Таблица цен на частые услуги на главной",
+            "width": 760,
+            "height": 640
+          },
+          "x": 0.62,
+          "y": 0,
+          "w": 0.38,
+          "front": true
+        }
+      ]
+    },
+    {
+      "kind": "benefit",
+      "title": "Видно, кто будет лечить",
+      "text": "Три врача с фотографиями, специализацией и часами приёма.",
+      "layers": [
+        {
+          "image": {
+            "src": "/assets/tilda-dental/case/doctors.webp",
+            "alt": "Страница «Врачи»: фото, специализация и часы приёма",
+            "width": 1905,
+            "height": 1200
+          },
+          "x": 0,
+          "y": 0.02,
+          "w": 0.58,
+          "url": "sosedniy-dvor.tilda.ws/doctors"
+        },
+        {
+          "image": {
+            "src": "/assets/tilda-dental/case/doctor-cards.webp",
+            "alt": "Карточки врачей на главной",
+            "width": 800,
+            "height": 660
+          },
+          "x": 0.62,
+          "y": 0,
+          "w": 0.38,
+          "front": true
+        }
+      ]
+    },
+    {
+      "kind": "benefit",
+      "title": "Запись занимает минуту",
+      "text": "Имя, телефон и пара слов о причине. Рядом телефон для тех, кому удобнее позвонить.",
+      "layers": [
+        {
+          "image": {
+            "src": "/assets/tilda-dental/case/booking.webp",
+            "alt": "Блок записи на приём: текст, телефон и форма",
+            "width": 1920,
+            "height": 1200
+          },
+          "x": 0,
+          "y": 0.02,
+          "w": 0.58,
+          "url": "sosedniy-dvor.tilda.ws/"
+        },
+        {
+          "image": {
+            "src": "/assets/tilda-dental/case/form.webp",
+            "alt": "Форма записи: имя, телефон, причина, удобное время и согласие",
+            "width": 500,
+            "height": 500
+          },
+          "x": 0.62,
+          "y": 0,
+          "w": 0.38,
+          "front": true
+        }
+      ]
+    },
+    {
+      "kind": "benefit",
+      "title": "На телефоне всё под рукой",
+      "text": "Телефон клиники нажимается из шапки, прайс и форма помещаются в экран.",
+      "layers": [
+        {
+          "image": {
+            "src": "/assets/tilda-dental/case/m-prices.webp",
+            "alt": "Прайс на телефоне",
+            "width": 780,
+            "height": 1688
+          },
+          "x": 0.17,
+          "y": 0.08,
+          "w": 0.3,
+          "phone": true
+        },
+        {
+          "image": {
+            "src": "/assets/tilda-dental/case/m-form.webp",
+            "alt": "Форма записи на телефоне",
+            "width": 780,
+            "height": 1688
+          },
+          "x": 0.53,
+          "y": 0,
+          "w": 0.3,
+          "phone": true,
+          "front": true
+        }
+      ]
+    },
+    {
+      "kind": "features",
+      "title": "Как устроено",
+      "text": "Сайт на Tilda, опубликован на её поддомене.",
+      "items": [
+        "Заявки",
+        "Вёрстка",
+        "Поиск",
+        "Данные"
+      ],
+      "descriptions": [
+        "Заявки из формы сохраняются в кабинете Tilda.",
+        "Секции собраны в Zero Block под пять ширин экрана.",
+        "У каждой страницы свои заголовок, описание и обложка.",
+        "Согласие на обработку и отдельная страница условий."
+      ]
+    }
+  ],
+  "en": {
+    "title": "Sosedniy Dvor",
+    "eyebrow": "Tilda website",
+    "lead": "A neighbourhood dental clinic site where the price and the doctor are known before the visit",
+    "summary": "Home page, price list, doctors, contacts and an appointment form. Built on Tilda and live.",
+    "note": "The clinic, doctors and prices are fictional",
+    "closing": "See the site live",
+    "actions": [
+      "Open the site"
+    ],
+    "showcase": [
+      "First screen of the Sosedniy Dvor site: headline, appointment button and a photo of the treatment room",
+      "First screen on a phone"
+    ],
+    "sections": [
+      {
+        "title": "The price is known before the visit",
+        "text": "Common services with prices sit on the home page, the full price list has its own page.",
+        "alts": [
+          "Services and prices page: price list sections",
+          "Price table for common services on the home page"
+        ]
+      },
+      {
+        "title": "Patients see who will treat them",
+        "text": "Three doctors with photos, specialisation and working hours.",
+        "alts": [
+          "Doctors page: photos, specialisation and working hours",
+          "Doctor cards on the home page"
+        ]
+      },
+      {
+        "title": "Booking takes a minute",
+        "text": "Name, phone and a few words about the reason. The phone number is next to the form for those who prefer to call.",
+        "alts": [
+          "Appointment block: text, phone number and form",
+          "Appointment form: name, phone, reason, preferred time and consent"
+        ]
+      },
+      {
+        "title": "Everything is at hand on a phone",
+        "text": "The clinic number is tappable in the header, and the price list and form fit the screen.",
+        "alts": [
+          "Price list on a phone",
+          "Appointment form on a phone"
+        ]
+      },
+      {
+        "title": "How it is built",
+        "text": "A Tilda site, live on its subdomain.",
+        "items": [
+          "Enquiries",
+          "Layout",
+          "Search",
+          "Data"
+        ],
+        "descriptions": [
+          "Form enquiries are stored in the Tilda account.",
+          "Sections are built in Zero Block for five screen widths.",
+          "Each page has its own title, description and cover.",
+          "Consent to data processing and a separate terms page."
+        ]
+      }
+    ]
+  }
+}

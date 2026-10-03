@@ -2,7 +2,7 @@
 // components can use it without shipping the validator to the browser.
 import type { HomeData, HomeWork } from './home';
 
-export const categoryOrder = ['Веб', 'Игры', 'Анимация', 'Инструменты', 'Дизайн', 'Minecraft', 'Прототипы'];
+export const categoryOrder = ['Веб', 'Игры', 'Анимация', '3D', 'Инструменты', 'Дизайн', 'Minecraft', 'Прототипы'];
 
 export function shownWorks(home: HomeData) {
   const accepted = home.works.filter(w => w.status === 'accepted');
