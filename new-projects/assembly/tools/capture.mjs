@@ -45,10 +45,25 @@ const webp = (png, name, filter) => {
   execFileSync(ffmpeg, args);
 };
 
+// Scroll position for a share of the pinned first screen, with the sticky offset of the top bar.
 const scrollTo = (page, p) => page.evaluate((v) => {
   const hero = document.querySelector('[data-hero]');
-  scrollTo({top: (hero.offsetHeight - innerHeight) * v, behavior: 'instant'});
+  const pin = hero.querySelector('.hero-pin');
+  const top = parseFloat(getComputedStyle(pin).top) || 0;
+  scrollTo({top: hero.offsetTop - top + (hero.offsetHeight - pin.clientHeight) * v, behavior: 'instant'});
 }, p);
+
+const toSection = (page, id) => page.evaluate((s) => scrollTo({top: document.getElementById(s).offsetTop, behavior: 'instant'}), id);
+
+// Clip around page elements, in CSS pixels, padded and kept inside the viewport.
+const clipAround = (page, selectors, pad) => page.evaluate(([list, p]) => {
+  const rects = list.map((s) => document.querySelector(s).getBoundingClientRect());
+  const x = Math.max(0, Math.min(...rects.map((r) => r.left)) - p);
+  const y = Math.max(0, Math.min(...rects.map((r) => r.top)) - p);
+  const right = Math.min(innerWidth, Math.max(...rects.map((r) => r.right)) + p);
+  const bottom = Math.min(innerHeight, Math.max(...rects.map((r) => r.bottom)) + p);
+  return {x: Math.round(x), y: Math.round(y), width: Math.round(right - x), height: Math.round(bottom - y)};
+}, [selectors, pad]);
 
 async function ready(page) {
   await page.waitForFunction(() => document.querySelector('.stage').classList.contains('live'), null, {timeout: 30000});
@@ -70,29 +85,31 @@ try {
     const page = await context.newPage();
     await page.goto(`${base}?lang=${lang}`);
     await ready(page);
-    for (const [name, p] of [['final', 1], ['frame', 0.27], ['mid', 0.5]]) {
+    for (const [name, p] of [['final', 1], ['frame', 0.27], ['mid', 0.45]]) {
       await scrollTo(page, p);
       await page.waitForTimeout(1000);
       const png = path.join(tmp, `${name}-${lang}.png`);
       await page.screenshot({path: png});
       webp(png, `${name}-${lang}.webp`);
     }
-    await page.evaluate(() => document.querySelector('#homes').scrollIntoView({behavior: 'instant'}));
-    await page.waitForTimeout(900);
-    const homes = path.join(tmp, `homes-${lang}.png`);
-    await page.screenshot({path: homes});
-    webp(homes, `homes-${lang}.webp`);
-    // Detail: title, button and facts over the scene, 1:1.
+    for (const id of ['flats', 'plan']) {
+      await toSection(page, id);
+      await page.waitForTimeout(900);
+      const png = path.join(tmp, `${id}-${lang}.png`);
+      await page.screenshot({path: png});
+      webp(png, `${id}-${lang}.webp`);
+    }
+    // Details at 1:1 of the device pixels: the search panel, the schedule under the scene.
     await scrollTo(page, 1);
     await page.waitForTimeout(900);
     const copy = path.join(tmp, `copy-${lang}.png`);
-    await page.screenshot({path: copy, clip: {x: 40, y: 150, width: 720, height: 520}});
+    await page.screenshot({path: copy, clip: await clipAround(page, ['[data-find]'], 0)});
     webp(copy, `copy-${lang}.webp`);
-    // Detail: the stage label and progress line while the facade sections arrive.
-    await scrollTo(page, 0.27);
+    await scrollTo(page, 0.45);
     await page.waitForTimeout(900);
     const stage = path.join(tmp, `stage-${lang}.png`);
-    await page.screenshot({path: stage, clip: {x: 900, y: 430, width: 660, height: 520}});
+    const clip = await clipAround(page, ['[data-gantt]'], 0);
+    await page.screenshot({path: stage, clip: {...clip, y: clip.y - 300, height: clip.height + 300}});
     webp(stage, `stage-${lang}.webp`);
     await context.close();
 
@@ -118,7 +135,7 @@ try {
     const png = path.join(tmp, `phone-${lang}.png`);
     await mobile.screenshot({path: png});
     webp(png, `phone-${lang}.webp`);
-    webp(png, `card-mobile-${lang}.webp`, 'crop=780:816:0:800,scale=390:408:flags=lanczos');
+    webp(png, `card-mobile-${lang}.webp`, 'crop=724:758:28:590,scale=390:408:flags=lanczos');
     await phone.close();
   }
 
@@ -131,7 +148,7 @@ try {
   const started = await page.evaluate(() => performance.now());
   await page.evaluate(() => new Promise((resolve) => {
     const hero = document.querySelector('[data-hero]');
-    const span = hero.offsetHeight - innerHeight;
+    const span = hero.offsetHeight - hero.querySelector('.hero-pin').clientHeight;
     const t0 = performance.now();
     const step = (now) => {
       const k = Math.min(1, (now - t0) / 7500);

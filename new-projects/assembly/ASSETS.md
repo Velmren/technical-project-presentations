@@ -6,8 +6,9 @@ The buildings, the site, the furniture and all materials without textures are mo
 
 | Font | Files | Licence |
 | --- | --- | --- |
-| Onest | `fonts/Onest-cyrillic.woff2`, `fonts/Onest-latin.woff2` | SIL Open Font License 1.1, `fonts/Onest-OFL.txt` |
-| Noto Serif Display | `fonts/NotoSerifDisplay-cyrillic.woff2`, `fonts/NotoSerifDisplay-latin.woff2` | SIL Open Font License 1.1, `fonts/NotoSerifDisplay-OFL.txt` |
+| Jost | `fonts/Jost.woff2`, a subset of the variable font (weights 300-600, Latin, Cyrillic, the rouble sign) made from the Google Fonts source | SIL Open Font License 1.1, `fonts/Jost-OFL.txt` |
+
+The logo is drawn for the project: the mark is three blocks, the word is set in Jost and converted to outlines.
 
 ## Poly Haven, CC0 1.0
 
