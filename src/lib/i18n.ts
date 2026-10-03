@@ -9,7 +9,7 @@ export const localePath = (locale: Locale, path: string) => locale === 'en' ? '/
 
 export const UI = {
   ru: {
-    nav: 'Основная навигация', work: 'Работы', about: 'Обо мне', contact: 'Контакты', language: 'Язык',
+    nav: 'Основная навигация', work: 'Работы', video: 'Видео', about: 'Обо мне', contact: 'Контакты', language: 'Язык',
     heroTitle: 'Интерактивные продукты и\u00a0игровые системы',
     heroLead: 'Веб-интерфейсы, игровые механики и небольшие продукты: от идеи до работающей сборки.',
     seeWork: 'Смотреть работы', getInTouch: 'Написать мне',
@@ -22,7 +22,7 @@ export const UI = {
     tags: { 'Все': 'Все', 'Веб': 'Веб', 'Игры': 'Игры', 'Анимация': 'Анимация', '3D': '3D', 'Инструменты': 'Инструменты', 'Дизайн': 'Дизайн', 'Minecraft': 'Minecraft' } as Record<string, string>,
   },
   en: {
-    nav: 'Main navigation', work: 'Work', about: 'About', contact: 'Contact', language: 'Language',
+    nav: 'Main navigation', work: 'Work', video: 'Video', about: 'About', contact: 'Contact', language: 'Language',
     heroTitle: 'Interactive products and game systems',
     heroLead: 'Web interfaces, game mechanics and small products, from idea to working build.',
     seeWork: 'See the work', getInTouch: 'Get in touch',
@@ -87,5 +87,5 @@ export function localizeProject(project: Project, locale: Locale): Project {
 
 // Runs before the page paints: a first visit follows the browser language, later visits follow the saved choice.
 export function languageGateScript(locale: Locale, alternate: string) {
-  return `(function(){try{var s=localStorage.getItem('${LANG_KEY}');var b=((navigator.languages&&navigator.languages[0])||navigator.language||'').toLowerCase();var w=s||(b.indexOf('ru')===0?'ru':'en');${locale === 'en' ? "document.documentElement.lang='en';" : ''}if(w!=='${locale}')location.replace('${alternate}'+location.hash);}catch(e){}})();`;
+  return `(function(){try{var s=localStorage.getItem('${LANG_KEY}');var b=((navigator.languages&&navigator.languages[0])||navigator.language||'').toLowerCase();var w=s||(b.indexOf('ru')===0?'ru':'en');${locale === 'en' ? "document.documentElement.lang='en';" : ''}if(w!=='${locale}')location.replace('${alternate}'+location.search+location.hash);}catch(e){}})();`;
 }

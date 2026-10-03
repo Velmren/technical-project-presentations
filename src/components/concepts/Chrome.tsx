@@ -6,6 +6,8 @@ import { LangSwitch } from './LangSwitch';
 export const GITHUB = 'https://github.com/Velmren';
 // The home page; English lives at /en/.
 export const HOME = '/';
+// The video gallery; English lives at /en/video/.
+export const VIDEO = '/video/';
 
 export const isExternal = (href: string) => href.startsWith('https://');
 
@@ -33,7 +35,7 @@ export function Header({ home = false, locale, alternate }: { home?: boolean; lo
   const t = UI[locale], homePath = localePath(locale, HOME);
   return <header className="cc-header" id="top">
     <a className="cc-logo" href={home ? '#top' : homePath}><Mark/>VELMREN</a>
-    <nav aria-label={t.nav}><a href={(home ? '' : homePath) + '#works'}>{t.work}</a><a href={GITHUB} target="_blank" rel="noopener noreferrer">{t.about}</a><a href="#contact">{t.contact}</a></nav>
+    <nav aria-label={t.nav}><a href={(home ? '' : homePath) + '#works'}>{t.work}</a><a href={localePath(locale, VIDEO)}>{t.video}</a><a href={GITHUB} target="_blank" rel="noopener noreferrer">{t.about}</a><a href="#contact">{t.contact}</a></nav>
     <LangSwitch locale={locale} alternate={alternate} label={t.language}/>
     <a className="cc-header-link" href={GITHUB} target="_blank" rel="noopener noreferrer"><GithubIcon/>GitHub</a>
   </header>;
@@ -44,6 +46,6 @@ export function Footer({ home = false, locale }: { home?: boolean; locale: Local
   return <footer className="cc-footer" id="contact">
     <a className="cc-logo" href={home ? '#top' : localePath(locale, HOME)}><Mark/>VELMREN</a>
     <p>{t.quote}</p>
-    <div><a href={GITHUB} target="_blank" rel="noopener noreferrer"><GithubIcon/>GitHub</a><a href="#top">{t.toTop}</a></div>
+    <div><a href={localePath(locale, VIDEO)}>{t.video}</a><a href={GITHUB} target="_blank" rel="noopener noreferrer"><GithubIcon/>GitHub</a><a href="#top">{t.toTop}</a></div>
   </footer>;
 }

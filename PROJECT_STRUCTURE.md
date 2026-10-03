@@ -15,6 +15,7 @@ VELMREN portfolio: Next.js 16 (App Router), TypeScript, static export to `out/`.
 │   │   ├── page.tsx           home page in Russian
 │   │   ├── [slug]/page.tsx    case page built from src/content/projects/<slug>.json (classic or case layout)
 │   │   ├── en/                English home page (/en/) and case pages (/en/<slug>/)
+│   │   ├── video/, en/video/  the video gallery, clip pages and collections in Russian and English
 │   │   ├── concepts/          styles of the current design: concepts.css (live previews), c/concept-c.css (home, header,
 │   │   │                      footer, buttons), c/case.css (case pages); c/page.tsx redirects the old prototype URL to /
 │   │   ├── globals.css, editorial.css  styles of the classic case layout
@@ -23,17 +24,21 @@ VELMREN portfolio: Next.js 16 (App Router), TypeScript, static export to `out/`.
 │   ├── components/
 │   │   ├── Sections.tsx, ProjectMedia.tsx, Icon.tsx, VideoPlayer.tsx  sections and media of the classic case layout
 │   │   ├── SiteFrame.tsx      header and footer of the classic case layout
+│   │   ├── video/             the site player, gallery, clip and collection pages, the block for the home page, interface
+│   │   │                      texts, README with how to add a clip
 │   │   └── concepts/          home page (ConceptC, ConceptCView), live work previews, header and footer (Chrome),
 │   │                          language switch, case page (CasePage) with scroll depth (Depth), looping clips (LoopVideo),
 │   │                          redirects from old URLs (Redirect)
 │   ├── content/
 │   │   ├── home.json          works on the home page: status, placement, texts, previews, facts, links
+│   │   ├── videos.json        video gallery data: clips, collections, where the films are served from
 │   │   └── projects/*.json    case page data, one file per slug
 │   └── lib/
 │       ├── schema.ts          Zod schema of case pages
 │       ├── projects.ts        reads and validates src/content/projects/
 │       ├── home.ts            Zod schema of home page data
 │       ├── home-view.ts       which works are shown and how they are filtered, without the validator
+│       ├── videos.ts          Zod schema of the gallery data and helpers
 │       ├── catalog.ts         filters for case page data (covered by tests)
 │       ├── i18n.ts            Russian and English: interface strings, translated works and pages, first-visit language
 │       ├── social.ts          social preview images
@@ -48,6 +53,7 @@ VELMREN portfolio: Next.js 16 (App Router), TypeScript, static export to `out/`.
 │   │   │                      screenshots, videos and downloads of each work
 │   │   │                      godot/web/: Category Spark browser build, not in Git, built by a script
 │   │   │                      java/: Encounter State plugin JAR, source ZIP, source viewer and its manifest
+│   │   ├── video/             posters and link previews of the gallery clips; the films are not in Git
 │   │   └── brands/            Godot logo, its licence and credit page
 │   ├── projects/              static builds of individual works, served under /projects/<name>/
 │   │   ├── admin-dashboard/   ORBIT, store operations panel
@@ -73,15 +79,19 @@ VELMREN portfolio: Next.js 16 (App Router), TypeScript, static export to `out/`.
 ├── demos/forma/               FORMA catalogue build, copied to /forma/live/ on export
 ├── scripts/
 │   ├── prepare-export.mjs     post-processes out/: FORMA build, draft media, Windows segment file names
-│   ├── package-release.mjs    packs a release with a SHA-256 manifest
+│   ├── package-release.mjs    packs a release with a SHA-256 manifest; leaves public/assets/video out while the gallery
+│   │                          routes are private (src/app/_video)
 │   ├── deploy-release.sh      installs a release on the server
 │   ├── portfolio.caddy        Caddy site config for velmren.com: compression, wasm type, cache headers, 404
 │   ├── prepare-encounter-viewer.mjs  embeds the Encounter State source files in the source viewer
+│   ├── prepare-videos.mjs     prepares web video, poster, link preview and hover fragment of a clip; --check verifies
+│   │                          the files before a release
 │   └── build-category-spark-web.mjs  builds the Category Spark browser version from its source ZIP (GODOT=<path to Godot 4.7.2>)
 ├── tests/
 │   ├── model.test.ts          case page data and catalogue filters
 │   ├── home.test.ts           home page data: statuses, "other projects" threshold, filters
-│   └── i18n.test.ts           completeness of English texts
+│   ├── i18n.test.ts           completeness of English texts
+│   └── videos.test.ts         gallery data, schema, row layout and filter
 └── docs/
     └── THIRD-PARTY.md         third-party assets, fonts and licences
 ```

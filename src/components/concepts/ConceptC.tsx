@@ -234,7 +234,7 @@ function Feature({ work, t, flip }: { work: HomeWork; t: Dictionary; flip: boole
 }
 
 // Works arrive already translated; locale picks the interface texts.
-export function ConceptC({ works, locale }: { works: HomeWork[]; locale: Locale }) {
+export function ConceptC({ works, locale, video }: { works: HomeWork[]; locale: Locale; video?: React.ReactNode }) {
   const t = UI[locale];
   const [category, setCategory] = useState('Все');
   const tabs = useMemo(() => filterTabs(works), [works]);
@@ -244,6 +244,7 @@ export function ConceptC({ works, locale }: { works: HomeWork[]; locale: Locale 
     <Header home locale={locale} alternate={localePath(locale === 'ru' ? 'en' : 'ru', HOME)}/>
     <main id="main">
       <Hero works={works} t={t} locale={locale}/>
+      {video}
       <section className="cc-works" id="works" aria-labelledby="cc-works-title">
         <div className="cc-works-head">
           <h2 id="cc-works-title">{t.work} <span>{works.length}</span></h2>
