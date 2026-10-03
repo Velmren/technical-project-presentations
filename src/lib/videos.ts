@@ -52,7 +52,14 @@ const video = z.object({
 
 const collection = z.object({ slug, title: both, text: both, clips: z.array(slug).min(3).max(6) });
 
-export const videoDataSchema = z.object({ videos: z.array(video), collections: z.array(collection) }).superRefine((data, ctx) => {
+export const videoDataSchema = z.object({
+  // Where the films are served from. Empty: from the site itself. When they move to their own storage, its address
+  // goes here (https://media.example.com, no slash at the end) and every src and preview is read from there.
+  // Posters, link previews and subtitles always stay on the site.
+  mediaBase: z.string().refine(v => v === '' || (v.startsWith('https://') && !v.endsWith('/')), 'Use an HTTPS address without a trailing slash, or leave empty').default(''),
+  videos: z.array(video),
+  collections: z.array(collection),
+}).superRefine((data, ctx) => {
   const slugs = data.videos.map(v => v.slug);
   if (new Set(slugs).size !== slugs.length) ctx.addIssue({ code: 'custom', message: 'Duplicate video slug' });
   if (new Set(data.collections.map(c => c.slug)).size !== data.collections.length) ctx.addIssue({ code: 'custom', message: 'Duplicate collection slug' });
@@ -67,6 +74,7 @@ export const videoDataSchema = z.object({ videos: z.array(video), collections: z
 
 export type VideoData = z.infer<typeof videoDataSchema>;
 export type Video = VideoData['videos'][number];
+export type Collection = VideoData['collections'][number];
 
 // Clips in rework are built only for a local review, with VIDEO_REWORK=1.
 export const shownVideos = (data: VideoData, withRework = false) => data.videos.filter(v => withRework || v.status === 'accepted');
@@ -83,10 +91,17 @@ export function clock(seconds: number) {
   return `${Math.floor(whole / 60)}:${String(whole % 60).padStart(2, '0')}`;
 }
 
-export const videoPath = (locale: Locale, slugName: string) => (locale === 'en' ? '/en' : '') + `/video/${slugName}/`;
+export const galleryPath = (locale: Locale) => (locale === 'en' ? '/en' : '') + '/video/';
+export const videoPath = (locale: Locale, slugName: string) => galleryPath(locale) + `${slugName}/`;
+export const collectionPath = (locale: Locale, slugName: string) => galleryPath(locale) + `c/${slugName}/`;
+
+// The best clips first, in their given order; the rest from new to old.
+export const byShowOrder = (a: Video, b: Video) =>
+  (a.featured ?? Infinity) - (b.featured ?? Infinity) || b.date.localeCompare(a.date) || a.slug.localeCompare(b.slug);
 
 // A clip in one language, ready for the page: the English page takes the English file where there is one.
-export function localizeVideo(item: Video, locale: Locale) {
+// Films are read from mediaBase when it is set.
+export function localizeVideo(item: Video, locale: Locale, mediaBase = '') {
   const pick = <T,>(pair: { ru: T; en?: T }) => (locale === 'en' && pair.en) || pair.ru;
   return {
     slug: item.slug,
@@ -104,11 +119,11 @@ export function localizeVideo(item: Video, locale: Locale) {
       width: c.width,
       height: c.height,
       duration: c.duration,
-      src: pick(c.src),
+      src: mediaBase + pick(c.src),
       poster: pick(c.poster),
       share: c.share && pick(c.share),
       lightPoster: c.lightPoster ?? false,
-      preview: c.preview,
+      preview: c.preview && mediaBase + c.preview,
       captions: c.captions?.[locale],
     })),
   };

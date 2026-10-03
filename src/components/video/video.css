@@ -1,6 +1,7 @@
 /* Video pages in the concept C system. Tokens, header, footer and buttons come from concept-c.css. */
-.vg-page { --vg-stage: #0a0a0b; }
+.vg-page { --vg-stage: #0a0a0b; --vg-gap: 12px; }
 
+/* ---------- The page of one clip ---------- */
 /* A wide film stands on a darker band across the window, as large as the window allows with its name still in view. */
 .vg-frame { background: var(--vg-stage); padding: 24px var(--gutter) 28px; }
 .vg-frame-in { margin-inline: auto; width: min(100%, 1360px, max(420px, (100svh - 76px - 52px - 170px) * var(--vg-ratio))); }
@@ -10,7 +11,7 @@
 }
 .vg-kind { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 12px; font-family: var(--cc-figures), sans-serif; font-size: 17px; color: var(--muted); }
 .vg-kind i { font-style: normal; color: var(--dim); }
-.vg-copy h1 {
+.vg-copy h1, .vg-playlist-head h1 {
   margin-top: 12px; font-family: var(--cc-display), sans-serif; font-weight: 500; font-variation-settings: 'wdth' 96;
   font-size: clamp(32px, 2.5vw, 46px); line-height: 1.04; letter-spacing: -.01em;
 }
@@ -32,17 +33,101 @@
 /* The note about a copied link appears under the buttons and takes no room while empty. */
 .vg-status { position: absolute; right: 0; top: calc(100% + 10px); font-size: 14px; color: var(--muted); white-space: nowrap; }
 
-/* A vertical or square film stands beside its text. */
+/* A vertical or square film stands beside its text; the next clips are listed at the foot of the text column. */
 .vg-watch[data-shape='tall'] { display: flex; justify-content: center; align-items: stretch; gap: 56px; padding: 24px var(--gutter) 28px; background: var(--vg-stage); }
 .vg-watch[data-shape='tall'] .vg-frame { flex: none; padding: 0; background: none; }
 .vg-watch[data-shape='tall'] .vg-frame-in { width: max(280px, (100svh - 76px - 52px - 60px) * var(--vg-ratio)); }
-.vg-watch[data-shape='tall'] .vg-info { display: flex; flex-direction: column; justify-content: space-between; align-items: stretch; gap: 32px; width: 420px; margin: 0; padding: 6px 0 0; }
+.vg-watch[data-shape='tall'] .vg-info { display: flex; flex-direction: column; align-items: stretch; gap: 28px; width: 420px; margin: 0; padding: 6px 0 0; }
 .vg-watch[data-shape='tall'] .vg-actions { align-self: auto; margin-top: 0; justify-content: flex-start; }
 .vg-watch[data-shape='tall'] .vg-status { right: auto; left: 0; }
+.vg-next { margin-top: auto; padding-top: 24px; }
+.vg-next > .cc-link { margin-top: 18px; }
 
+/* A plain list of clips: the next ones beside a vertical film, the clips of a collection. */
+.vg-list-title { padding-bottom: 10px; font-family: var(--cc-figures), sans-serif; font-weight: 400; font-size: 17px; line-height: 1.3; letter-spacing: 0; color: var(--dim); }
+.vg-list { margin: 0; padding: 0; list-style: none; border-bottom: 1px solid var(--line); }
+.vg-list :is(a, button) {
+  display: flex; align-items: baseline; justify-content: space-between; gap: 16px; width: 100%; padding: 12px 0 11px; border-top: 1px solid var(--line);
+  font-size: 16px; text-align: left; color: var(--muted); transition: color .2s, border-color .2s;
+}
+.vg-list b { font-weight: 500; }
+.vg-list span { font-family: var(--cc-figures), sans-serif; font-size: 17px; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.vg-list :is(a, button):hover { color: var(--text); }
+.vg-list [aria-current='true'] { color: var(--text); border-top-color: rgba(236, 237, 239, .42); }
+
+/* More clips under a wide film. */
+.vg-more { width: min(1360px, 100% - 2 * var(--gutter)); margin: 44px auto 0; padding-top: 40px; border-top: 1px solid var(--line); }
+.vg-more-head { display: flex; align-items: baseline; justify-content: space-between; gap: 24px; margin-bottom: 22px; }
+.vg-more-head h2, .vg-under h2 { font-family: var(--cc-display), sans-serif; font-weight: 500; font-size: 26px; line-height: 1.1; letter-spacing: 0; }
+
+/* ---------- The gallery ---------- */
+.vg-head { display: flex; align-items: flex-end; justify-content: space-between; gap: 20px 48px; flex-wrap: wrap; padding: 26px var(--gutter) 30px; }
+.vg-title { font-family: var(--cc-display), sans-serif; font-weight: 500; font-variation-settings: 'wdth' 96; font-size: clamp(40px, 4.3vw, 64px); line-height: 1; letter-spacing: -.01em; }
+.vg-title span, .vg-sub span { font-family: var(--cc-figures), sans-serif; font-weight: 400; letter-spacing: 0; color: var(--dim); }
+.vg-title span { margin-left: 8px; font-size: 24px; vertical-align: 1.1em; }
+/* The filter is plain words; the chosen one is underlined. */
+.vg-filter { display: flex; flex-wrap: wrap; gap: 4px 30px; padding-bottom: 2px; }
+.vg-filter button { position: relative; padding: 6px 0; font-size: 16px; color: var(--muted); transition: color .2s; }
+.vg-filter button:hover { color: var(--text); }
+.vg-filter button[aria-pressed='true'] { color: var(--text); }
+.vg-filter button[aria-pressed='true']::after { content: ''; position: absolute; left: 0; right: 0; bottom: 2px; height: 1px; background: currentColor; }
+
+/* Rows of one height: every poster keeps the proportions of its clip, so 16:9 and 1:1 stand side by side uncropped.
+   A row that is not full takes only its share of the width, so its posters are no taller than in a full row. */
+.vg-rows { display: grid; gap: var(--vg-gap); padding: 0 var(--gutter); }
+.vg-row { display: flex; gap: var(--vg-gap); width: calc(var(--vg-share, 1) * 100%); }
+.vg-row > .vg-tile { flex: var(--vg-ratio) 1 0; }
+.vg-tile { position: relative; display: block; min-width: 0; aspect-ratio: var(--vg-ratio); overflow: hidden; border-radius: 2px; background: #17181b; }
+.vg-tile img, .vg-tile video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.vg-tile video { opacity: 0; transition: opacity .25s ease; }
+.vg-tile[data-playing] video { opacity: 1; }
+/* While the fragment plays a hairline runs along the top edge. */
+.vg-run { position: absolute; left: 0; top: 0; width: 100%; height: 2px; background: #fff; transform: scaleX(0); transform-origin: left; }
+.vg-tile[data-playing] .vg-run { animation: vg-run 4s linear infinite; }
+@keyframes vg-run { to { transform: scaleX(1); } }
+/* The name sits in a corner cut out of the poster, on the page ground. */
+/* A long name is never cut: the line about the clip drops under it, and the name itself may take two lines. */
+.vg-cap { position: absolute; left: 0; bottom: 0; max-width: 92%; display: flex; flex-wrap: wrap; align-items: baseline; gap: 2px 12px; padding: 11px 18px 0 0; border-top-right-radius: 2px; background: var(--ground); }
+.vg-cap b { font-family: var(--cc-display), sans-serif; font-weight: 600; font-size: 22px; line-height: 1.2; }
+.vg-cap span { font-family: var(--cc-figures), sans-serif; font-size: 17px; line-height: 1.2; color: var(--muted); white-space: nowrap; }
+.cc-page .vg-tile:focus-visible { outline-offset: 2px; }
+
+/* Vertical clips have their own strip: five to a row on a wide screen, fewer as the window narrows, so they stay large. */
+.vg-sub { display: flex; align-items: baseline; gap: 10px; padding: 64px var(--gutter) 24px; font-family: var(--cc-display), sans-serif; font-weight: 600; font-size: 32px; line-height: 1; letter-spacing: 0; }
+.vg-sub span { font-size: 20px; }
+.vg-strip { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: var(--vg-gap); align-items: end; padding: 0 var(--gutter); }
+.vg-strip .vg-cap { flex-direction: column; gap: 2px; }
+
+/* ---------- A collection: one player and the list of its clips ---------- */
+.vg-playlist { display: grid; grid-template-columns: minmax(0, 1fr) 400px; grid-template-rows: auto 1fr; column-gap: 56px; align-items: start; padding: 16px var(--gutter) 24px; }
+.vg-playlist-head { grid-column: 2; grid-row: 1; }
+.vg-playlist-main { grid-column: 1; grid-row: 1 / span 2; }
+.vg-playlist-list { grid-column: 2; grid-row: 2; }
+/* The player keeps one place whatever the clip: a vertical one stands in the middle of the same slot. */
+.vg-slot { display: grid; place-items: center; aspect-ratio: 16 / 9; width: min(100%, (100svh - 76px - 64px) * 16 / 9); margin-inline: auto; background: var(--vg-stage); }
+.vg-slot .vp { height: 100%; width: auto; max-width: 100%; }
+.vg-slot[data-shape='wide'] .vp { width: 100%; height: auto; }
+.vg-under { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 12px 48px; align-items: start; margin-top: 20px; }
+.vg-under h2 { margin-top: 8px; }
+.vg-under .vg-lead { margin-top: 10px; font-size: 17px; }
+.vg-playlist-head h1 { font-size: 38px; }
+.vg-playlist-head .vg-lead { font-size: 17px; }
+.vg-playlist-list .vg-list-title { margin-top: 30px; }
+.vg-playlist-list .vg-actions { margin-top: 26px; justify-content: flex-start; }
+.vg-playlist-list .vg-status { right: auto; left: 0; }
+
+@media (max-width: 1600px) {
+  .vg-strip { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}
+@media (max-width: 1300px) {
+  .vg-strip { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
 @media (max-width: 1100px) {
   .vg-watch[data-shape='tall'] { gap: 32px; }
   .vg-watch[data-shape='tall'] .vg-info { width: min(420px, 44vw); }
+  .vg-playlist { display: block; }
+  .vg-playlist-main { margin-top: 24px; }
+  .vg-playlist-list .vg-list-title { margin-top: 26px; }
 }
 @media (max-width: 860px) {
   /* The header is lower here, and a phone gives the film its whole width. */
@@ -50,7 +135,7 @@
   .vg-frame-in { width: 100%; }
   .vg-frame .vp { border-radius: 0; }
   .vg-info { grid-template-columns: minmax(0, 1fr); padding: 22px 0 28px; }
-  .vg-copy h1 { font-size: 30px; }
+  .vg-copy h1, .vg-playlist-head h1 { font-size: 30px; }
   .vg-lead { font-size: 16.5px; }
   .vg-actions { margin-top: 0; justify-content: flex-start; }
   .vg-status { position: static; flex-basis: 100%; min-height: 21px; white-space: normal; }
@@ -59,4 +144,29 @@
   .vg-watch[data-shape='tall'] .vg-frame-in { width: min(100%, max(240px, (100svh - 64px - 150px) * var(--vg-ratio))); margin-inline: auto; }
   .vg-watch[data-shape='tall'] .vg-frame .vp { border-radius: 2px; }
   .vg-watch[data-shape='tall'] .vg-info { display: grid; width: min(1360px, 100% - 2 * var(--gutter)); margin-inline: auto; padding: 22px 0 28px; gap: 24px; }
+  .vg-next { margin-top: 0; padding-top: 4px; }
+  .vg-more { margin-top: 12px; padding-top: 30px; }
+  .vg-more-head h2, .vg-under h2 { font-size: 22px; }
+  .vg-head { padding: 12px var(--gutter) 22px; }
+  .vg-title { font-size: 40px; }
+  .vg-title span { font-size: 19px; }
+  /* The filter becomes one row that is swiped. */
+  .vg-filter { flex-wrap: nowrap; gap: 22px; width: calc(100% + 2 * var(--gutter)); margin-inline: calc(-1 * var(--gutter)); padding-inline: var(--gutter); overflow-x: auto; scrollbar-width: none; }
+  .vg-filter::-webkit-scrollbar { display: none; }
+  .vg-filter button { flex: none; white-space: nowrap; }
+  /* One poster to a row; vertical ones two to a row. */
+  .vg-row { flex-direction: column; width: auto; }
+  .vg-row > .vg-tile { flex: none; }
+  .vg-cap b { font-size: 19px; }
+  .vg-sub { padding-top: 44px; font-size: 26px; }
+  .vg-strip { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .vg-playlist { padding-top: 4px; }
+  .vg-slot { aspect-ratio: auto; max-height: none; display: block; background: none; }
+  .vg-slot .vp, .vg-slot[data-shape='wide'] .vp { width: 100%; height: auto; }
+  .vg-slot[data-shape='tall'] .vp { width: min(100%, (100svh - 64px - 150px) * var(--vg-ratio)); margin-inline: auto; }
+  .vg-under { grid-template-columns: minmax(0, 1fr); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .vg-tile video { transition: none; }
+  .vg-tile[data-playing] .vg-run { animation: none; }
 }

@@ -21,16 +21,24 @@ const MAX_KBPS = 6200;
 const root = path.join(import.meta.dirname, '..');
 
 if (process.argv[2] === '--check') {
-  const { videos } = JSON.parse(readFileSync(path.join(root, 'src/content/videos.json'), 'utf8'));
+  const { videos, mediaBase = '' } = JSON.parse(readFileSync(path.join(root, 'src/content/videos.json'), 'utf8'));
   let missing = 0, bytes = 0;
+  const local = (slug, file) => {
+    const found = existsSync(path.join(root, 'public', file));
+    if (found) bytes += statSync(path.join(root, 'public', file)).size; else { missing++; console.error(`${slug}: missing ${file}`); }
+  };
+  // With mediaBase set the films live in their own storage and are asked for there; pictures and subtitles stay in public/.
+  const remote = async (slug, file) => {
+    const answer = await fetch(mediaBase + file, { method: 'HEAD' }).catch(() => null);
+    if (answer?.ok) bytes += Number(answer.headers.get('content-length') ?? 0); else { missing++; console.error(`${slug}: ${mediaBase + file} answers ${answer?.status ?? 'nothing'}`); }
+  };
   for (const video of videos.filter(item => item.status === 'accepted')) for (const cut of video.cuts) {
-    const files = [cut.src, cut.poster, cut.share, cut.captions].flatMap(pair => Object.values(pair ?? {})).concat(cut.preview ?? []);
-    for (const file of new Set(files)) {
-      const found = existsSync(path.join(root, 'public', file));
-      if (found) bytes += statSync(path.join(root, 'public', file)).size; else { missing++; console.error(`${video.slug}: missing ${file}`); }
-    }
+    const films = new Set([...Object.values(cut.src), ...(cut.preview ? [cut.preview] : [])]);
+    const pictures = new Set([cut.poster, cut.share, cut.captions].flatMap(pair => Object.values(pair ?? {})));
+    for (const file of pictures) local(video.slug, file);
+    for (const file of films) if (mediaBase) await remote(video.slug, file); else local(video.slug, file);
   }
-  console.log(missing ? `${missing} files are missing` : `All files of the accepted clips are in place, ${(bytes / 1e6).toFixed(1)} MB`);
+  console.log(missing ? `${missing} files are missing` : `All files of the accepted clips are in place, ${(bytes / 1e6).toFixed(1)} MB${mediaBase ? `, films at ${mediaBase}` : ''}`);
   process.exit(missing ? 1 : 0);
 }
 

@@ -20,6 +20,8 @@ export function clock(seconds: number) {
   const whole = Number.isFinite(seconds) ? Math.max(0, Math.floor(seconds)) : 0;
   return `${Math.floor(whole / 60)}:${String(whole % 60).padStart(2, '0')}`;
 }
+// The length of a clip is rounded to the nearest second, the same on a poster, in a list and in the player.
+export const fullLength = (seconds: number) => clock(Math.round(seconds));
 const clamp = (value: number, min: number, max: number) => Math.min(max, Math.max(min, value));
 const share = (event: React.PointerEvent<HTMLElement>) => {
   const box = event.currentTarget.getBoundingClientRect();
@@ -33,8 +35,9 @@ type NativeFullscreenVideo = HTMLVideoElement & { webkitEnterFullscreen?: () => 
 // startAt opens the clip paused at a moment; pageKeys lets the main player of a page hear the keys
 // even when nothing on the page has focus. The page of one clip preloads its index for a quick start;
 // where several players share a page they pass preload="none" and load nothing before a press.
-export function Player({ source, title, locale, startAt = 0, pageKeys = false, preload = 'metadata', onTime }: {
-  source: PlayerSource; title: string; locale: Locale; startAt?: number; pageKeys?: boolean; preload?: 'metadata' | 'none'; onTime?: (seconds: number) => void;
+export function Player({ source, title, locale, startAt = 0, pageKeys = false, preload = 'metadata', onTime, onEnded }: {
+  source: PlayerSource; title: string; locale: Locale; startAt?: number; pageKeys?: boolean; preload?: 'metadata' | 'none';
+  onTime?: (seconds: number) => void; onEnded?: () => void;
 }) {
   const t = VIDEO_UI[locale];
   const root = useRef<HTMLDivElement>(null);
@@ -268,7 +271,7 @@ export function Player({ source, title, locale, startAt = 0, pageKeys = false, p
       onSeeked={event => { seekTarget.current = null; note(event.currentTarget.currentTime); setEnded(event.currentTarget.ended); }}
       onPlay={event => { setStarted(true); setPlaying(true); setEnded(false); window.dispatchEvent(new CustomEvent(PLAY_EVENT, { detail: event.currentTarget })); wake(); }}
       onPause={() => { setPlaying(false); setShown(true); }}
-      onEnded={() => { setPlaying(false); setEnded(true); setShown(true); }}
+      onEnded={() => { setPlaying(false); setEnded(true); setShown(true); onEnded?.(); }}
       onProgress={event => {
         const { buffered, currentTime, duration: all } = event.currentTarget;
         for (let i = 0; i < buffered.length; i++) if (buffered.start(i) <= currentTime + .5 && buffered.end(i) >= currentTime) root.current?.style.setProperty('--vp-buffered', String(clamp(buffered.end(i) / (all || source.duration), 0, 1)));
@@ -279,12 +282,12 @@ export function Player({ source, title, locale, startAt = 0, pageKeys = false, p
     </video>
     {enhanced && !failed && <>
       {!started && <button type="button" className="vp-start" onClick={() => void toggle()}>
-        <PlayerIcon name="play"/>{t.watch}<span>{clock(duration)}</span>
+        <PlayerIcon name="play"/>{t.watch}<span>{fullLength(duration)}</span>
       </button>}
       {captions && cue && <p className="vp-cue" lang={locale}><span>{cue}</span></p>}
       {started && <div className="vp-bar">
         <div className="vp-seek" role="slider" tabIndex={0} aria-label={t.seek} aria-valuemin={0} aria-valuemax={Math.round(duration)}
-          aria-valuenow={Math.round(time)} aria-valuetext={t.position(clock(time), clock(duration))} onKeyDown={onSeekKey}
+          aria-valuenow={Math.round(time)} aria-valuetext={t.position(clock(time), fullLength(duration))} onKeyDown={onSeekKey}
           onPointerDown={event => { event.currentTarget.setPointerCapture(event.pointerId); seek(share(event) * duration); }}
           onPointerMove={event => {
             const part = share(event);
@@ -309,7 +312,7 @@ export function Player({ source, title, locale, startAt = 0, pageKeys = false, p
             onPointerMove={event => { if (event.currentTarget.hasPointerCapture(event.pointerId)) changeVolume(share(event)); }}>
             <span className="vp-track"><i style={{ transform: `scaleX(${level})` }}/></span>
           </div>
-          <span className="vp-time">{clock(time)} <span>/ {clock(duration)}</span></span>
+          <span className="vp-time">{clock(time)} <span>/ {fullLength(duration)}</span></span>
           <span className="vp-space"/>
           {source.captions && <button type="button" className="vp-button" onClick={toggleCaptions} aria-pressed={captions} aria-label={captions ? t.captionsOff : t.captionsOn}>
             <span className="vp-cc">CC</span>
