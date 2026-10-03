@@ -2,7 +2,7 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { fontVariables } from '@/lib/fonts-c';
-import { LANG_KEY, type Locale } from '@/lib/i18n';
+import { languageGateScript, type Locale } from '@/lib/i18n';
 import { collectionPath, galleryPath, SECTIONS, videoPath, type Video } from '@/lib/videos';
 import { Footer, Header } from '@/components/concepts/Chrome';
 import { localize, shown, toClip } from './clips';
@@ -47,13 +47,10 @@ const shareImage = (item: Video, locale: Locale, alt: string) => {
   return cut.share ? { url: cut.share, ...SHARE, alt } : { url: cut.poster, width: cut.width, height: cut.height, alt };
 };
 
-// The language choice of the site, kept through a link with a time mark: the query goes along to the other language.
-const languageGate = (locale: Locale, alternate: string) =>
-  `(function(){try{var s=localStorage.getItem('${LANG_KEY}');var b=((navigator.languages&&navigator.languages[0])||navigator.language||'').toLowerCase();var w=s||(b.indexOf('ru')===0?'ru':'en');${locale === 'en' ? "document.documentElement.lang='en';" : ''}if(w!=='${locale}')location.replace('${alternate}'+location.search+location.hash);}catch(e){}})();`;
-
 function Frame({ locale, alternate, children }: { locale: Locale; alternate: string; children: React.ReactNode }) {
   return <div className={fontVariables} lang={locale}>
-    <script dangerouslySetInnerHTML={{ __html: languageGate(locale, alternate) }}/>
+    {/* The language choice of the site; a time mark or a chosen clip in the address goes along to the other language. */}
+    <script dangerouslySetInnerHTML={{ __html: languageGateScript(locale, alternate) }}/>
     <div className="cc-page vg-page">
       <Header locale={locale} alternate={alternate}/>
       <main id="main">{children}</main>
