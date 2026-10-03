@@ -404,8 +404,8 @@
       "details": "/godot/",
       "live": {
         "video": {
-          "src": "/assets/godot/category-spark-playthrough.mp4",
-          "poster": "/assets/home/live-spark-poster.webp"
+          "src": "/assets/home/live-spark.mp4",
+          "poster": "/assets/home/live-spark.webp"
         }
       },
       "en": {
@@ -416,8 +416,8 @@
         "details": "/en/godot/",
         "media": {
           "/assets/home/card-spark.webp": "/assets/home/card-spark-en.webp",
-          "/assets/home/live-spark-poster.webp": "/assets/home/live-spark-poster-en.webp",
-          "/assets/godot/category-spark-playthrough.mp4": "/assets/godot/category-spark-playthrough-en.mp4"
+          "/assets/home/live-spark.webp": "/assets/home/live-spark-en.webp",
+          "/assets/home/live-spark.mp4": "/assets/home/live-spark-en.mp4"
         }
       }
     },
