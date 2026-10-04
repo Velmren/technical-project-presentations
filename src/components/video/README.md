@@ -68,7 +68,7 @@ One record and its files.
    ```
 
    - `status`: `accepted` gives the clip its pages; `rework` keeps it in the data without pages.
-   - `sections`: `promo`, `games`, `motion`, `3d`, `editing`. The first one is the home of the clip, a second one only makes the filter find it. A vertical clip also goes to the strip of vertical clips by itself.
+   - `sections`: `promo`, `games`, `motion`, `3d`, `editing`. The first one is the home of the clip, a second one only makes the filter find it. A vertical clip also goes to the strip of vertical clips by itself. Every poster in that strip stands in one 9:16 frame, so a vertical clip of another shape (3:5, 4:5) is trimmed a little at its sides there; its own page shows the whole frame.
    - `featured`: place among the best, 1 first. Clips without it follow from new to old.
    - `sound`: who made the sound and the music. A licensed track is named here with its licence, `soundLink` leads to its page. A silent clip has no `sound`.
    - `work`: the page of the work the clip belongs to, if there is one.

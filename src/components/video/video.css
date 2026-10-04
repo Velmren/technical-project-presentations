@@ -108,7 +108,10 @@
 /* Vertical clips have their own strip: five to a row on a wide screen, fewer as the window narrows, so they stay large. */
 .vg-sub { display: flex; align-items: baseline; gap: 10px; padding: 64px var(--gutter) 24px; font-family: var(--cc-display), sans-serif; font-weight: 600; font-size: 32px; line-height: 1; letter-spacing: 0; }
 .vg-sub span { font-size: 20px; }
-.vg-strip { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: var(--vg-gap); align-items: end; padding: 0 var(--gutter); }
+.vg-strip { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: var(--vg-gap); align-items: start; padding: 0 var(--gutter); }
+/* Every poster of the strip stands in one 9:16 frame, so the row keeps a straight top and bottom edge. A vertical
+   clip of another shape (3:5, 4:5) is trimmed a little at its sides here; its own page shows the whole frame. */
+.vg-strip .vg-tile { aspect-ratio: 9 / 16; }
 .vg-strip .vg-cap { flex-direction: column; gap: 2px; }
 
 /* ---------- A collection: one player and the list of its clips ---------- */
