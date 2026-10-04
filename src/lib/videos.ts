@@ -61,9 +61,6 @@ export const videoDataSchema = z.object({
   // goes here (https://media.example.com, no slash at the end) and every src and preview is read from there.
   // Posters, link previews and subtitles always stay on the site.
   mediaBase: z.string().refine(v => v === '' || (v.startsWith('https://') && !v.endsWith('/')), 'Use an HTTPS address without a trailing slash, or leave empty').default(''),
-  // The clips of the block on the home page, in its order. The block was accepted with these, so the order of the
-  // best in the gallery can change without changing the home page. Empty: the block shows the best clips.
-  home: z.array(slug).max(4).default([]),
   videos: z.array(video),
   collections: z.array(collection),
 }).superRefine((data, ctx) => {
@@ -77,7 +74,6 @@ export const videoDataSchema = z.object({
   for (const set of data.collections) for (const clip of set.clips) {
     if (!slugs.includes(clip)) ctx.addIssue({ code: 'custom', message: `${set.slug}: unknown clip ${clip}` });
   }
-  for (const clip of data.home) if (!slugs.includes(clip)) ctx.addIssue({ code: 'custom', message: `home: unknown clip ${clip}` });
 });
 
 export type VideoData = z.infer<typeof videoDataSchema>;
