@@ -33,7 +33,7 @@ velmren.com {
 	@pages path / */ *.html *.txt
 	header @pages Cache-Control "no-cache"
 	# Other static files keep their names between releases: cache for an hour only.
-	@static path *.js *.css *.json *.wasm *.pck *.webp *.png *.jpg *.jpeg *.svg *.ico *.woff *.woff2 *.mp4 *.webm *.zip *.jar
+	@static path *.js *.css *.json *.wasm *.pck *.webp *.avif *.png *.jpg *.jpeg *.svg *.ico *.woff *.woff2 *.mp4 *.webm *.zip *.jar
 	header @static ?Cache-Control "public, max-age=3600"
 	@private path /.git/* /.env /AGENTS.md
 	respond @private 404

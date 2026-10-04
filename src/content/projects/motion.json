@@ -63,12 +63,12 @@
       "layers": [
         {
           "image": {
-            "src": "/assets/motion/logos-poster.webp",
+            "src": "/assets/video/forum-screen/forum-screen-poster.webp",
             "alt": "Вертикальный экран: логотип партнёра форума и подпись",
             "width": 768,
             "height": 1280
           },
-          "video": "/assets/motion/logos.mp4",
+          "video": "/assets/video/forum-screen/forum-screen.mp4",
           "phone": true,
           "x": 0.06,
           "y": 0.02,
@@ -207,7 +207,7 @@
       "layers": [
         {
           "image": {
-            "src": "/assets/motion/sono-promo-poster.webp",
+            "src": "/assets/motion/sono-promo-poster-ru.webp",
             "alt": "Промо колонки SONO: заголовок и синяя колонка",
             "width": 1280,
             "height": 720
@@ -234,16 +234,52 @@
     },
     {
       "kind": "benefit",
+      "title": "Промо сервиса: телефон и ноутбук в одной истории",
+      "text": "Покупательница пишет, на телефоне заказ упаковывают, и ноутбук тут же видит это в очереди. Устройства собраны в 3D, на экранах живой интерфейс, склейки идут по музыке, у каждого действия свой звук.",
+      "figure": {
+        "value": "42 с",
+        "label": "промо сервиса со звуком"
+      },
+      "layers": [
+        {
+          "image": {
+            "src": "/assets/motion/orbit-promo-poster.webp",
+            "alt": "Промо ORBIT: ноутбук и телефон в студии, на экранах заказ NL-23786",
+            "width": 1280,
+            "height": 720
+          },
+          "embed": "/assets/motion/embed/orbit-promo.html",
+          "url": "orbit-promo.mp4",
+          "x": 0,
+          "y": 0.02,
+          "w": 0.62
+        },
+        {
+          "image": {
+            "src": "/assets/motion/orbit-promo-detail.webp",
+            "alt": "Телефон: переписка с покупательницей и карточка заказа",
+            "width": 560,
+            "height": 640
+          },
+          "front": true,
+          "x": 0.68,
+          "y": 0.12,
+          "w": 0.32
+        }
+      ]
+    },
+    {
+      "kind": "benefit",
       "title": "Вертикальный ролик для соцсетей",
       "text": "Другой характер движения: упругие буквы, прыжки, конфетти. Формат 9:16, со звуком, с циклами Lottie внутри.",
       "figure": {
-        "value": "24 с",
+        "value": "27 с",
         "label": "вертикальный ролик 1080×1920"
       },
       "layers": [
         {
           "image": {
-            "src": "/assets/motion/vertical-poster.webp",
+            "src": "/assets/motion/khrum-poster-ru.webp",
             "alt": "Вертикальный ролик: надпись «Хрум!» и конфетти над кабанчиком",
             "width": 540,
             "height": 960
@@ -256,7 +292,7 @@
         },
         {
           "image": {
-            "src": "/assets/motion/vertical-end.webp",
+            "src": "/assets/motion/khrum-end-ru.webp",
             "alt": "Финальная заставка ролика: имя персонажа и адрес",
             "width": 560,
             "height": 565
@@ -302,7 +338,10 @@
     "media": {
       "/assets/motion/lottie-poster.webp": "/assets/motion/lottie-poster-en.webp",
       "/assets/motion/weight.webp": "/assets/motion/weight-en.webp",
-      "/assets/motion/snippet.webp": "/assets/motion/snippet-en.webp"
+      "/assets/motion/snippet.webp": "/assets/motion/snippet-en.webp",
+      "/assets/motion/khrum-end-ru.webp": "/assets/motion/khrum-end-en.webp",
+      "/assets/motion/sono-promo-poster-ru.webp": "/assets/motion/sono-promo-poster-en.webp",
+      "/assets/motion/khrum-poster-ru.webp": "/assets/motion/khrum-poster-en.webp"
     },
     "sections": [
       {
@@ -366,10 +405,22 @@
         ]
       },
       {
+        "title": "A service promo: phone and laptop in one story",
+        "text": "A customer writes, the order is packed on the phone and the laptop sees it leave the queue at once. The devices are 3D, the interface on screen is live, the cuts follow the music and every action has its own sound.",
+        "figure": {
+          "value": "42 s",
+          "label": "service promo with sound"
+        },
+        "alts": [
+          "ORBIT promo: a laptop and a phone in a studio, order NL-23786 on screen",
+          "Phone: the chat with the customer and the order card"
+        ]
+      },
+      {
         "title": "A vertical clip for social networks",
         "text": "A different character of movement: springy letters, jumps, confetti. A 9:16 format with sound and Lottie cycles inside.",
         "figure": {
-          "value": "24 s",
+          "value": "27 s",
           "label": "vertical clip 1080×1920"
         },
         "alts": [

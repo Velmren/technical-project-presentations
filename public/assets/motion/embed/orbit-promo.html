@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="ru">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>orbit-promo</title>
+<style>
+html,body{margin:0;height:100%;background:#07111a;overflow:hidden}
+.stage{position:absolute;inset:0}
+.stage img,.stage video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.stage video{background:#000}
+.stage video[hidden]{display:none}
+button{position:absolute;left:5%;bottom:8%;width:clamp(48px,11cqw,84px);height:clamp(48px,11cqw,84px);border:0;border-radius:50%;background:#f4f5f7;color:#111213;box-shadow:0 0 0 2px rgba(17,18,19,.28),0 10px 28px rgba(0,0,0,.35);cursor:pointer;display:grid;place-items:center;transition:transform .2s ease}
+button:hover{filter:brightness(.92)}
+button:focus-visible{outline:3px solid #e4572e;outline-offset:4px}
+button svg{width:34%;height:34%;margin-left:6%}
+.stage{container-type:size}
+.on img,.on button{display:none}
+</style>
+<div class="stage" id="s">
+<img id="p" src="../orbit-promo-poster.webp" alt="">
+<video id="v" playsinline preload="none" controls hidden></video>
+<button id="b" type="button" aria-label="Смотреть промо"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6 3.5v17l14-8.5z"/></svg></button>
+</div>
+<script>
+var en=new URLSearchParams(location.search).get('lang')==='en',b=document.getElementById('b'),v=document.getElementById('v'),s=document.getElementById('s'),p=document.getElementById('p');
+if(en)p.src="../orbit-promo-poster-en.webp";
+b.setAttribute('aria-label',en?"Play the promo":"Смотреть промо");
+b.onclick=function(){v.src=en?"../video/orbit-promo-en.mp4":"../video/orbit-promo.mp4";v.hidden=false;s.className='stage on';v.play().catch(function(){});};
+p.addEventListener('load',function(){try{if(parent!==window)parent.postMessage({live:location.pathname},location.origin)}catch(e){}});
+if(p.complete){try{if(parent!==window)parent.postMessage({live:location.pathname},location.origin)}catch(e){}}
+</script>
