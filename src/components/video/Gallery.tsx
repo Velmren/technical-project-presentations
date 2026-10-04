@@ -11,11 +11,12 @@ import { Tile } from './Tile';
 // which of them the browser counts as the largest is decided by a rounded pixel, so all of them go first.
 // 'low' for a row far down another page, which must not take the line from the pictures above it.
 // contained: the row stands in the 1360 px column of a clip page, not across the window.
-export function TileRow({ clips, priority, contained = false }: { clips: GalleryClip[]; priority?: 'high' | 'low'; contained?: boolean }) {
+// eager: the row is seen on the first screen of a wide window, so its posters are not left to load lazily.
+export function TileRow({ clips, priority, eager = false, contained = false }: { clips: GalleryClip[]; priority?: 'high' | 'low'; eager?: boolean; contained?: boolean }) {
   const sum = rowSum(clips);
   const share = sum >= MIN_ROW ? 1 : sum / IDEAL_ROW;
   return <div className="vg-row" style={{ '--vg-share': share } as React.CSSProperties}>
-    {clips.map(clip => <Tile key={clip.slug} clip={clip} sizes={rowTileSizes(clip, clips, share, contained)} priority={priority}/>)}
+    {clips.map(clip => <Tile key={clip.slug} clip={clip} sizes={rowTileSizes(clip, clips, share, contained)} priority={priority} eager={eager}/>)}
   </div>;
 }
 
@@ -46,7 +47,7 @@ export function Gallery({ clips, options, locale }: { clips: GalleryClip[]; opti
         {options.map(option => <button key={option} type="button" aria-pressed={option === filter} onClick={() => choose(option)}>{label(option)}</button>)}
       </div>
     </section>
-    {rows.length > 0 && <div className="vg-rows">{rows.map((row, index) => <TileRow key={row[0].slug} clips={row} priority={index === 0 ? 'high' : undefined}/>)}</div>}
+    {rows.length > 0 && <div className="vg-rows">{rows.map((row, index) => <TileRow key={row[0].slug} clips={row} priority={index === 0 ? 'high' : undefined} eager={index === 1}/>)}</div>}
     {tall.length > 0 && <>
       {filter !== VERTICAL && <h2 className="vg-sub">{t.vertical}<span>{tall.length}</span></h2>}
       <div className="vg-strip">{tall.map(clip => <Tile key={clip.slug} clip={clip} sizes={stripTileSizes(clip)} priority={rows.length === 0 ? 'high' : undefined}/>)}</div>

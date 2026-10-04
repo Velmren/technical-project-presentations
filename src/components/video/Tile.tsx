@@ -9,8 +9,9 @@ import type { GalleryClip } from './gallery-view';
 // The picture is one of the reduced AVIF copies of the poster, chosen by the browser from `sizes` (how wide the
 // poster is drawn); a browser without AVIF shows the poster itself. priority: 'high' for the posters that open a
 // page, its largest pictures, which load at once; 'low' for posters that must not compete with the picture above
-// them; the rest load as they come near the screen.
-export function Tile({ clip, sizes, priority }: { clip: GalleryClip; sizes: string; priority?: 'high' | 'low' }) {
+// them; the rest load as they come near the screen. eager: a poster that is on the first screen of a wide window
+// without opening the page; it loads at once too, at the usual priority.
+export function Tile({ clip, sizes, priority, eager = false }: { clip: GalleryClip; sizes: string; priority?: 'high' | 'low'; eager?: boolean }) {
   const video = useRef<HTMLVideoElement>(null);
   const timer = useRef<ReturnType<typeof setTimeout> | undefined>(undefined);
   const [playing, setPlaying] = useState(false);
@@ -40,7 +41,7 @@ export function Tile({ clip, sizes, priority }: { clip: GalleryClip; sizes: stri
     onFocus={event => { if (event.currentTarget.matches(':focus-visible')) start(); }} onBlur={stop}>
     <picture>
       {clip.posterSet && <source type="image/avif" srcSet={clip.posterSet} sizes={sizes}/>}
-      <img src={clip.poster} alt="" width={clip.width} height={clip.height} loading={first ? 'eager' : 'lazy'}
+      <img src={clip.poster} alt="" width={clip.width} height={clip.height} loading={first || eager ? 'eager' : 'lazy'}
         fetchPriority={priority} decoding={first ? undefined : 'async'}/>
     </picture>
     {clip.preview && <video ref={video} muted loop playsInline preload="none" tabIndex={-1} aria-hidden="true"/>}
