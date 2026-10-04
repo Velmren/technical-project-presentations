@@ -8,6 +8,7 @@ import { shownVideos, videoDataSchema } from '@/lib/videos';
 const extra = process.env.VIDEO_EXTRA ? JSON.parse(readFileSync(process.env.VIDEO_EXTRA, 'utf8')) as { videos?: unknown[]; collections?: unknown[] } : {};
 
 export const videoData = videoDataSchema.parse({
+  ...raw,
   videos: [...raw.videos, ...(extra.videos ?? [])],
   collections: [...raw.collections, ...(extra.collections ?? [])],
 });

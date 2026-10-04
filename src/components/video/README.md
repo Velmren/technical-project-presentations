@@ -138,12 +138,14 @@ Every `src` and `preview` is then read from there, and `--check` asks the storag
 
 ## The way in from other pages
 
-`VideoEntry` is a ready block for the home page: the heading "Video" with the number of clips, a link to the gallery and the best clips as large posters with the fragment on hover.
+`VideoEntry` is a ready block for the home page: the heading "Video" with the number of clips, a link to the gallery and a few clips as large posters with the fragment on hover.
+
+Which clips it shows is set in `videos.json`: `"home": ["kalder", "lumi-promo"]`, in that order. The block was accepted with these two, so the order of the best in the gallery (`featured`) can change without changing the home page. With `"home": []` or without the line the block shows the best clips.
 
 ```tsx
 import { VideoEntry } from '@/components/video/Entry';
 
-<VideoEntry locale={locale}/>           // two best clips
+<VideoEntry locale={locale}/>           // up to two clips
 <VideoEntry locale={locale} count={3}/>
 ```
 

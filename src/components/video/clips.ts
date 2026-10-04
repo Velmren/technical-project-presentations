@@ -16,3 +16,10 @@ export function toClip(item: Video, locale: Locale): GalleryClip {
 }
 
 export const bestClips = (locale: Locale, count = 4) => shown.slice(0, count).map(item => toClip(item, locale));
+
+// The clips of the block on the home page: those named in "home" of the data, or the best ones when none is named.
+// A named clip that is not shown (in rework) is left out.
+export function homeClips(locale: Locale, count: number) {
+  const named = videoData.home.flatMap(slug => shown.filter(item => item.slug === slug));
+  return (named.length ? named : shown).slice(0, count).map(item => toClip(item, locale));
+}

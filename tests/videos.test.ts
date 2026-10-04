@@ -37,6 +37,10 @@ test('the schema refuses a clip named as the collections address, twin slugs, tw
   const lost = clone();
   lost.collections.push({ slug: 'for-a-studio', title: { ru: 'Подборка', en: 'Collection' }, text: { ru: 'Текст', en: 'Text' }, clips: [lost.videos[0].slug, 'no-such-clip', 'another'] });
   assert.throws(() => videoDataSchema.parse(lost), /unknown clip/);
+  // The block on the home page names its clips; every one of them must be in the data.
+  assert.deepEqual(data.home, ['kalder', 'lumi-promo']);
+  assert.throws(() => videoDataSchema.parse({ ...clone(), home: ['kalder', 'no-such-clip'] }), /home: unknown clip/);
+  assert.deepEqual(videoDataSchema.parse({ ...clone(), home: undefined }).home, []);
 });
 
 test('formats, time and addresses read as on the page', () => {
