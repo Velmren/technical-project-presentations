@@ -86,7 +86,9 @@ VELMREN portfolio: Next.js 16 (App Router), TypeScript, static export to `out/`.
 │   ├── prepare-encounter-viewer.mjs  embeds the Encounter State source files in the source viewer
 │   ├── prepare-videos.mjs     prepares web video, poster, link preview and hover fragment of a clip; --check verifies
 │   │                          the files before a release
-│   └── build-category-spark-web.mjs  builds the Category Spark browser version from its source ZIP (GODOT=<path to Godot 4.7.2>)
+│   ├── build-category-spark-web.mjs  builds the Category Spark browser version from its source ZIP (GODOT=<path to Godot 4.7.2>)
+│   └── build-candidate.sh     builds a release candidate from one pinned commit in a clean copy (RELEASE_OUT, default
+│                              C:/AstraTmp/portfolio-release), adding the Category Spark build and the gallery films
 ├── tests/
 │   ├── model.test.ts          case page data and catalogue filters
 │   ├── home.test.ts           home page data: statuses, "other projects" threshold, filters
