@@ -18,18 +18,15 @@ VELMREN portfolio: Next.js 16 (App Router), TypeScript, static export to `out/`.
 │   │   │   ├── [slug]/page.tsx  case page built from src/content/projects/<slug>.json (classic or case layout)
 │   │   │   ├── video/         the video gallery, clip pages and collections
 │   │   │   ├── contacts/page.tsx  contacts page
-│   │   │   ├── services/      the list of services (page.tsx) and one page per Russian service ([service]/page.tsx)
 │   │   │   └── concepts/c/page.tsx  redirects the old prototype URL to /
 │   │   ├── en/                English routes with their own root layout (<html lang="en">): home (/en/), case pages
-│   │   │                      (/en/<slug>/), the video gallery (/en/video/), contacts (/en/contacts/), services
-│   │   │                      (/en/services/ and one page per English service)
+│   │   │                      (/en/<slug>/), the video gallery (/en/video/), contacts (/en/contacts/)
 │   │   ├── concepts/          styles of the current design: concepts.css (live previews), c/concept-c.css (home, header,
 │   │   │                      footer, buttons), c/case.css (case pages)
 │   │   ├── globals.css, editorial.css  styles of the classic case layout
 │   │   ├── global-not-found.tsx  404 page for any missing address, in both languages
 │   │   ├── robots.txt/route.ts   robots.txt as plain text (with Clean-param for Yandex)
-│   │   └── sitemap.ts         pages in both languages with their language versions, then the service pages written
-│   │                          for one language; live demos are not listed
+│   │   └── sitemap.ts         pages in both languages with their language versions; live demos are not listed
 │   ├── components/
 │   │   ├── Sections.tsx, ProjectMedia.tsx, Icon.tsx, VideoPlayer.tsx  sections and media of the classic case layout
 │   │   ├── RootDocument.tsx   <html> and <body> shared by the two root layouts: language, body font, skip link
@@ -42,13 +39,10 @@ VELMREN portfolio: Next.js 16 (App Router), TypeScript, static export to `out/`.
 │   │                          language switch and the note about the other language (LangHint), case page (CasePage)
 │   │                          with scroll depth (Depth), looping clips (LoopVideo),
 │   │                          contacts: links and the footer block (Contacts), the copy button (CopyMail), the
-│   │                          contacts page (ContactsPage), the page of a service and the list of services
-│   │                          (ServicePage), redirects from old URLs (Redirect)
+│   │                          contacts page (ContactsPage), redirects from old URLs (Redirect)
 │   ├── content/
 │   │   ├── home.json          works on the home page: status, placement, texts, previews, facts, links
 │   │   ├── videos.json        video gallery data: clips, collections, where the films are served from
-│   │   ├── services.json      service pages: texts shared by a language, then each service with its language, search
-│   │   │                      title, heading, what the client gets, the works and clips shown as examples, questions
 │   │   └── projects/*.json    case page data, one file per slug
 │   └── lib/
 │       ├── schema.ts          Zod schema of case pages
@@ -62,10 +56,7 @@ VELMREN portfolio: Next.js 16 (App Router), TypeScript, static export to `out/`.
 │       ├── seo.ts             page metadata in one shape: title, description, canonical, hreflang, link preview
 │       ├── contacts.ts        the two published contacts (Telegram, mail) and the address of the contacts page
 │       ├── clipboard.ts       copying a text to the clipboard
-│       ├── structured-data.ts schema.org data of the pages: organization, site, works, gallery, clips, contacts,
-│       │                      services with their questions
-│       ├── services.ts        Zod schema of the service pages, their addresses, the services of one language
-│       ├── services-data.ts   the validated content of services.json
+│       ├── structured-data.ts schema.org data of the pages: organization, site, works, gallery, clips, contacts
 │       ├── social.ts          social preview images
 │       ├── color.ts           main button colour of a case page and its text contrast
 │       ├── fonts-c.ts         display fonts (Tektur, Sofia Sans Condensed)
@@ -126,9 +117,7 @@ VELMREN portfolio: Next.js 16 (App Router), TypeScript, static export to `out/`.
 │   ├── seo.test.ts            search titles and descriptions of works and clips, language versions, no automatic
 │   │                          move to another language, only the two agreed contacts in the sources, every contact
 │   │                          named for the count of clicks
-│   ├── videos.test.ts         gallery data, schema, row layout and filter
-│   └── services.test.ts       service pages: examples exist, headings speak about the result, unique search titles,
-│                              no prices or deadlines in the texts
+│   └── videos.test.ts         gallery data, schema, row layout and filter
 └── docs/
     └── THIRD-PARTY.md         third-party assets, fonts and licences
 ```
