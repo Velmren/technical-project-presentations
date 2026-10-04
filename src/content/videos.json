@@ -21,7 +21,7 @@
         "promo"
       ],
       "date": "2026-10-03",
-      "featured": 2,
+      "featured": 3,
       "sound": {
         "ru": "Velmren",
         "en": "Velmren"
@@ -304,7 +304,7 @@
         "promo"
       ],
       "date": "2026-10-03",
-      "featured": 3,
+      "featured": 4,
       "sound": {
         "ru": "Velmren",
         "en": "Velmren"
@@ -358,7 +358,7 @@
         "motion"
       ],
       "date": "2026-10-03",
-      "featured": 4,
+      "featured": 5,
       "sound": {
         "ru": "Velmren",
         "en": "Velmren"
@@ -704,6 +704,7 @@
         "3d"
       ],
       "date": "2026-10-04",
+      "featured": 2,
       "sound": {
         "ru": "Velmren",
         "en": "Velmren"
