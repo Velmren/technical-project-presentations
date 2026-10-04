@@ -105,7 +105,10 @@
             "en": "/assets/video/cell/cell-share-en.jpg"
           },
           "lightPoster": true,
-          "preview": "/assets/video/cell/cell-hover.mp4"
+          "preview": {
+            "ru": "/assets/video/cell/cell-hover.mp4",
+            "en": "/assets/video/cell/cell-hover-en.mp4"
+          }
         }
       ]
     },
@@ -323,7 +326,10 @@
             "ru": "/assets/video/okno/okno-share-ru.jpg",
             "en": "/assets/video/okno/okno-share-en.jpg"
           },
-          "preview": "/assets/video/okno/okno-hover.mp4"
+          "preview": {
+            "ru": "/assets/video/okno/okno-hover.mp4",
+            "en": "/assets/video/okno/okno-hover-en.mp4"
+          }
         }
       ]
     },
@@ -559,7 +565,10 @@
             "en": "/assets/video/polka/polka-share-en.jpg"
           },
           "lightPoster": true,
-          "preview": "/assets/video/polka/polka-hover.mp4"
+          "preview": {
+            "ru": "/assets/video/polka/polka-hover.mp4",
+            "en": "/assets/video/polka/polka-hover-en.mp4"
+          }
         }
       ]
     },
@@ -595,12 +604,14 @@
         {
           "width": 1080,
           "height": 1920,
-          "duration": 24,
+          "duration": 26.7,
           "src": {
-            "ru": "/assets/video/khrum/khrum.mp4"
+            "ru": "/assets/video/khrum/khrum-ru.mp4",
+            "en": "/assets/video/khrum/khrum-en.mp4"
           },
           "poster": {
-            "ru": "/assets/video/khrum/khrum-poster.webp"
+            "ru": "/assets/video/khrum/khrum-poster-ru.webp",
+            "en": "/assets/video/khrum/khrum-poster-en.webp"
           },
           "posterWidths": [
             360,
@@ -609,10 +620,14 @@
             1080
           ],
           "share": {
-            "ru": "/assets/video/khrum/khrum-share.jpg"
+            "ru": "/assets/video/khrum/khrum-share-ru.jpg",
+            "en": "/assets/video/khrum/khrum-share-en.jpg"
           },
           "lightPoster": true,
-          "preview": "/assets/video/khrum/khrum-hover.mp4"
+          "preview": {
+            "ru": "/assets/video/khrum/khrum-hover.mp4",
+            "en": "/assets/video/khrum/khrum-hover-en.mp4"
+          }
         }
       ]
     },
@@ -643,7 +658,7 @@
         {
           "width": 768,
           "height": 1280,
-          "duration": 24,
+          "duration": 21.6,
           "src": {
             "ru": "/assets/video/forum-screen/forum-screen.mp4"
           },
@@ -660,6 +675,66 @@
           },
           "lightPoster": true,
           "preview": "/assets/video/forum-screen/forum-screen-hover.mp4"
+        }
+      ]
+    },
+    {
+      "slug": "orbit-promo",
+      "status": "accepted",
+      "title": {
+        "ru": "ORBIT",
+        "en": "ORBIT"
+      },
+      "kind": {
+        "ru": "Промо сервиса",
+        "en": "Service promo"
+      },
+      "text": {
+        "ru": "Покупательница пишет, заказ упаковывают с телефона, и ноутбук тут же видит это в очереди. Устройства в 3D, на экранах живой интерфейс.",
+        "en": "A customer writes, the order is packed on the phone and the laptop sees it leave the queue at once. 3D devices with the live interface on screen."
+      },
+      "sections": [
+        "promo",
+        "3d"
+      ],
+      "date": "2026-10-04",
+      "sound": {
+        "ru": "Velmren",
+        "en": "Velmren"
+      },
+      "work": {
+        "ru": "/admin-dashboard/",
+        "en": "/en/admin-dashboard/"
+      },
+      "cuts": [
+        {
+          "width": 1920,
+          "height": 1080,
+          "duration": 42,
+          "src": {
+            "ru": "/assets/video/orbit-promo/orbit-promo-ru.mp4",
+            "en": "/assets/video/orbit-promo/orbit-promo-en.mp4"
+          },
+          "poster": {
+            "ru": "/assets/video/orbit-promo/orbit-promo-poster-ru.webp",
+            "en": "/assets/video/orbit-promo/orbit-promo-poster-en.webp"
+          },
+          "posterWidths": [
+            480,
+            720,
+            960,
+            1280,
+            1920
+          ],
+          "share": {
+            "ru": "/assets/video/orbit-promo/orbit-promo-share-ru.jpg",
+            "en": "/assets/video/orbit-promo/orbit-promo-share-en.jpg"
+          },
+          "lightPoster": true,
+          "preview": {
+            "ru": "/assets/video/orbit-promo/orbit-promo-hover.mp4",
+            "en": "/assets/video/orbit-promo/orbit-promo-hover-en.mp4"
+          }
         }
       ]
     }

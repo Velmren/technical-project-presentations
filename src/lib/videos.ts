@@ -27,8 +27,9 @@ const cut = z.object({
   share: perLanguage(asset.endsWith('.jpg')).optional(),
   // The lower left corner of the poster is light, so the start button there is dark.
   lightPoster: z.boolean().optional(),
-  // Short silent fragment played in the gallery while the pointer is on the poster.
-  preview: asset.endsWith('.mp4').optional(),
+  // Short silent fragment played in the gallery while the pointer is on the poster. One file for both languages
+  // when it shows no words, a file per language when it does.
+  preview: z.union([asset.endsWith('.mp4'), perLanguage(asset.endsWith('.mp4'))]).optional(),
   captions: z.object({ ru: asset.endsWith('.vtt'), en: asset.endsWith('.vtt') }).partial().optional(),
 });
 
@@ -131,7 +132,7 @@ export function localizeVideo(item: Video, locale: Locale, mediaBase = '') {
       posterSet: c.posterWidths && posterSet(pick(c.poster), c.posterWidths),
       share: c.share && pick(c.share),
       lightPoster: c.lightPoster ?? false,
-      preview: c.preview && mediaBase + c.preview,
+      preview: c.preview && mediaBase + (typeof c.preview === 'string' ? c.preview : pick(c.preview)),
       captions: c.captions?.[locale],
     })),
   };

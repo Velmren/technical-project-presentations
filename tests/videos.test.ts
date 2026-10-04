@@ -62,6 +62,14 @@ test('the English page takes English files where they exist and Russian ones oth
   assert.equal(english.cuts[0].src, '/assets/video/x/x-en.mp4');
   assert.equal(english.cuts[0].poster, '/assets/video/x/x-poster.webp');
   assert.equal(localizeVideo(videoDataSchema.parse(next).videos[0], 'ru').cuts[0].src, '/assets/video/x/x-ru.mp4');
+  // The hover fragment: one file for both languages, or a file per language when it shows words.
+  video.cuts[0].preview = '/assets/video/x/x-hover.mp4';
+  assert.equal(localizeVideo(videoDataSchema.parse(next).videos[0], 'en').cuts[0].preview, '/assets/video/x/x-hover.mp4');
+  video.cuts[0].preview = { ru: '/assets/video/x/x-hover.mp4', en: '/assets/video/x/x-hover-en.mp4' };
+  assert.equal(localizeVideo(videoDataSchema.parse(next).videos[0], 'en').cuts[0].preview, '/assets/video/x/x-hover-en.mp4');
+  assert.equal(localizeVideo(videoDataSchema.parse(next).videos[0], 'ru', 'https://media.example.com').cuts[0].preview, 'https://media.example.com/assets/video/x/x-hover.mp4');
+  video.cuts[0].preview = { ru: '/assets/video/x/x-hover.mp4' };
+  assert.equal(localizeVideo(videoDataSchema.parse(next).videos[0], 'en').cuts[0].preview, '/assets/video/x/x-hover.mp4');
 });
 
 test('films move to their own storage by one setting, pictures stay on the site', () => {

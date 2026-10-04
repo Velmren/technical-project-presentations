@@ -32,10 +32,14 @@ One record and its files.
 
    ```bash
    node scripts/prepare-videos.mjs my-clip --src /path/to/master-ru.mp4 --lang ru --poster 12.5 --hover 20,4
-   node scripts/prepare-videos.mjs my-clip --src /path/to/master-en.mp4 --lang en --poster 12.5
+   node scripts/prepare-videos.mjs my-clip --src /path/to/master-en.mp4 --lang en --poster 12.5 --hover 20,4
    ```
 
    A clip without words has one file for both languages: leave `--lang` out. `--poster` is a second of the clip or a picture file; `--hover` is where the silent fragment starts and how long it is. A second frame format of the same clip is another run with `--name 1x1`. ffmpeg with libx264 and libwebp comes from the `FFMPEG` variable or from `PATH`.
+
+   The fragment is played on the poster in the gallery, so words in it must be in the language of the page. When the fragment shows words (titles, an interface), make it for each language: the English run writes `my-clip-hover-en.mp4`. When it shows none, one fragment serves both: leave `--hover` out of the English run.
+
+   Without `--src` the film already in the folder is kept and only the poster or the fragment asked for is made from it: `node scripts/prepare-videos.mjs my-clip --lang en --hover 20,4` adds an English fragment to a clip prepared earlier.
 
    The script writes `public/assets/video/my-clip/` and prints the values for the record: size, length, file addresses and whether the poster is light in its lower left corner (`lightPoster`: the start button there turns dark).
 
@@ -62,7 +66,7 @@ One record and its files.
          "poster": { "ru": "/assets/video/my-clip/my-clip-poster-ru.webp", "en": "/assets/video/my-clip/my-clip-poster-en.webp" },
          "posterWidths": [480, 720, 960, 1280, 1920],
          "share": { "ru": "/assets/video/my-clip/my-clip-share-ru.jpg", "en": "/assets/video/my-clip/my-clip-share-en.jpg" },
-         "preview": "/assets/video/my-clip/my-clip-hover.mp4"
+         "preview": { "ru": "/assets/video/my-clip/my-clip-hover.mp4", "en": "/assets/video/my-clip/my-clip-hover-en.mp4" }
        }
      ]
    }
@@ -74,6 +78,7 @@ One record and its files.
    - `sound`: who made the sound and the music. A licensed track is named here with its licence, `soundLink` leads to its page. A silent clip has no `sound`.
    - `work`: the page of the work the clip belongs to, if there is one.
    - `cuts`: frame formats of the clip. The first one is shown in the gallery; the page offers a switch when there are two. `captions: { "ru": "….vtt", "en": "….vtt" }` adds subtitles.
+   - `preview`: the fragment for hover. A pair of files when it shows words, or one address for both languages when it shows none: `"preview": "/assets/video/my-clip/my-clip-hover.mp4"`.
    - `posterWidths` is written by step 3; leave it out of a new record.
    - `en` may be left out of `src`, `poster` and `share`: the English page then uses the Russian file.
 
@@ -109,7 +114,7 @@ Its address is `/video/c/for-a-game-studio/`. A collection opens only by its lin
 
 A poster is made at the size of the film and is shown so on the page of the clip and in the link preview. In the gallery, in the block on the home page and in the row of next clips it is drawn far smaller, so there the browser gets a reduced AVIF copy of it: `my-clip-poster-ru-720.avif` next to `my-clip-poster-ru.webp`. The widths are 480, 720, 960 and 1280 for a wide or square poster, 360, 540 and 720 for a vertical one, and the full width for large and dense screens. `posterWidths` in the first cut of the record lists them; a browser without AVIF shows the poster itself.
 
-A copy must not look softer than the poster does at the same place. Each one takes the lightest quality level at which it cannot be told from the poster reduced without loss (SSIM 0.99 or more). A frame that does not get there, one full of fine detail or grain, takes the best level that keeps it within 1.15 bits per pixel and under 60% of the weight of the poster. Colour is stored at full resolution: a copy is drawn close to its own size, where halved colour shows as soft edges.
+A copy must not look softer than the poster does at the same place. Each one takes the lightest quality level at which it cannot be told from the poster reduced without loss (SSIM 0.99 or more). A frame that does not get there, one full of fine detail or grain, takes the best level that keeps it within its weight allowance (1.25 bits per pixel at 960x540, more per pixel for a smaller copy) and under 60% of the weight of the poster. Colour is stored at full resolution: a copy is drawn close to its own size, where halved colour shows as soft edges.
 
 `node scripts/prepare-videos.mjs --tiles` makes the copies for the first cut of every clip, the one the gallery shows, and keeps those already in place. `--tiles my-clip` makes the copies of that clip again. A poster made again with `--poster` renews its copies by itself. `--check` fails when an accepted clip has no copies.
 

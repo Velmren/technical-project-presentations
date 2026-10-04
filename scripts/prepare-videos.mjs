@@ -1,10 +1,13 @@
 // Prepares the files of one gallery clip in public/assets/video/<slug>/ from a master outside the repository:
 // the web video, its poster and the silent fragment played on hover. Prints the values for src/content/videos.json.
 //
-//   node scripts/prepare-videos.mjs <slug> --src <master.mp4> [--lang ru|en] [--name 1x1]
+//   node scripts/prepare-videos.mjs <slug> [--src <master.mp4>] [--lang ru|en] [--name 1x1]
 //        [--poster <seconds or image file>] [--hover <from>[,<length>]]
 //
 // --name marks another cut of the same clip (a square version next to the wide one).
+// Without --src the film already in the folder is kept, and the poster or the fragment asked for is made from it.
+// A fragment that shows words is made once per language: with --lang en it is named <slug>-hover-en.mp4, and the
+// record lists both, "preview": { "ru": "…-hover.mp4", "en": "…-hover-en.mp4" }.
 // ffmpeg with libx264 and libwebp is taken from the FFMPEG variable or from PATH.
 //
 // The films are not stored in Git. Before a release build:
@@ -29,11 +32,15 @@ const MAX_KBPS = 6200;
 const TILE_STEPS = { wide: [480, 720, 960, 1280], tall: [360, 540, 720] };
 // Quality levels of the AV1 encoder for a copy, the lightest first. A copy takes the lightest level at which it
 // cannot be told from the poster reduced without loss (TILE_CLOSE, as SSIM). A frame that does not get there, one
-// full of fine detail or grain, takes the best level that keeps it within TILE_BITS bits per pixel and under
-// TILE_SHARE of the weight of the poster itself.
+// full of fine detail or grain, takes the best level that keeps it within its allowance and under TILE_SHARE of
+// the weight of the poster itself. The allowance is TILE_BITS bits per pixel for a copy of TILE_BITS_AT pixels
+// (960x540) and grows per pixel as the copy gets smaller: a small picture packs the same detail into fewer pixels,
+// and at a flat rate the 480 px copy of a detailed frame came out visibly softer than the 1280 px one.
 const TILE_LEVELS = [34, 32, 30, 28, 26, 24, 22, 20, 18, 16, 14, 12, 10];
 const TILE_CLOSE = 0.99;
-const TILE_BITS = 1.15;
+const TILE_BITS = 1.25;
+const TILE_BITS_AT = 960 * 540;
+const TILE_BITS_SLOPE = 0.35;
 const TILE_SHARE = 0.6;
 
 const root = path.join(import.meta.dirname, '..');
@@ -55,7 +62,8 @@ function makeTile(poster, width, shape) {
   const trial = file.replace(/\.avif$/, '.trial.avif');
   // The height is given outright: rounding it to an even number would change the shape of a 720x405 copy.
   const reduce = `scale=${width}:${Math.round(width * shape)}:flags=lanczos`;
-  const limit = Math.min(TILE_BITS * width * width * shape / 8, TILE_SHARE * statSync(poster).size);
+  const pixels = width * Math.round(width * shape);
+  const limit = Math.min(TILE_BITS * pixels / 8 * (TILE_BITS_AT / pixels) ** TILE_BITS_SLOPE, TILE_SHARE * statSync(poster).size);
   let chosen;
   // From the lightest level up: stop at the first copy that is close enough, or before the one that is too heavy.
   for (const level of TILE_LEVELS) {
@@ -113,7 +121,9 @@ if (process.argv[2] === '--check') {
     if (answer?.ok) bytes += Number(answer.headers.get('content-length') ?? 0); else { missing++; console.error(`${slug}: ${mediaBase + file} answers ${answer?.status ?? 'nothing'}`); }
   };
   for (const video of videos.filter(item => item.status === 'accepted')) for (const cut of video.cuts) {
-    const films = new Set([...Object.values(cut.src), ...(cut.preview ? [cut.preview] : [])]);
+    // The hover fragment is one file, or one per language.
+    const fragments = typeof cut.preview === 'string' ? [cut.preview] : Object.values(cut.preview ?? {});
+    const films = new Set([...Object.values(cut.src), ...fragments]);
     const pictures = new Set([cut.poster, cut.share, cut.captions].flatMap(pair => Object.values(pair ?? {})));
     for (const poster of Object.values(cut.poster)) for (const width of cut.posterWidths ?? []) pictures.add(tileName(poster, width));
     if (cut === video.cuts[0] && !cut.posterWidths) { missing++; console.error(`${video.slug}: no reduced posters for the gallery, run --tiles`); }
@@ -127,11 +137,11 @@ if (process.argv[2] === '--check') {
 const [slug, ...rest] = process.argv.slice(2);
 const options = {};
 for (let i = 0; i < rest.length; i += 2) options[rest[i].replace(/^--/, '')] = rest[i + 1];
-if (!slug || !/^[a-z0-9]+(-[a-z0-9]+)*$/.test(slug) || !options.src) {
-  console.error('Usage: node scripts/prepare-videos.mjs <slug> --src <master.mp4> [--lang ru|en] [--name 1x1] [--poster <seconds|image>] [--hover <from>[,<length>]]');
+if (!slug || !/^[a-z0-9]+(-[a-z0-9]+)*$/.test(slug) || !(options.src || options.poster || options.hover)) {
+  console.error('Usage: node scripts/prepare-videos.mjs <slug> [--src <master.mp4>] [--lang ru|en] [--name 1x1] [--poster <seconds|image>] [--hover <from>[,<length>]]');
   process.exit(1);
 }
-if (!existsSync(options.src)) { console.error('No such file: ' + options.src); process.exit(1); }
+if (options.src && !existsSync(options.src)) { console.error('No such file: ' + options.src); process.exit(1); }
 
 // ffmpeg prints the stream description to stderr when asked for a file without an output.
 function probe(file) {
@@ -157,18 +167,23 @@ const withLang = name => options.lang ? `${name}-${options.lang}` : name;
 const url = file => '/' + path.posix.join('assets/video', slug, file);
 const report = { files: {} };
 
-const source = probe(options.src);
 const video = withLang(base) + '.mp4';
-const light = source.codec === 'h264' && source.kbps <= MAX_KBPS;
-const audio = source.audio ? ['-c:a', 'aac', '-b:a', '160k'] : ['-an'];
-const encode = light
-  ? ['-c', 'copy']
-  // aq-mode 3 gives dark areas their share of bits: at a plain CRF 21 a dark studio backdrop came out in steps.
-  : ['-c:v', 'libx264', '-preset', 'slow', '-crf', '18', '-maxrate', '6M', '-bufsize', '12M', '-profile:v', 'high', '-pix_fmt', 'yuv420p', '-x264-params', 'aq-mode=3',
-    // A key frame every two seconds keeps seeking quick.
-    '-g', String(source.fps * 2), '-keyint_min', String(source.fps * 2), ...audio];
-const made = run(['-i', options.src, ...encode, '-movflags', '+faststart', path.join(folder, video)]);
-if (made.status !== 0) { console.error(made.stderr); process.exit(1); }
+if (options.src) {
+  const source = probe(options.src);
+  const light = source.codec === 'h264' && source.kbps <= MAX_KBPS;
+  const audio = source.audio ? ['-c:a', 'aac', '-b:a', '160k'] : ['-an'];
+  const encode = light
+    ? ['-c', 'copy']
+    // aq-mode 3 gives dark areas their share of bits: at a plain CRF 21 a dark studio backdrop came out in steps.
+    : ['-c:v', 'libx264', '-preset', 'slow', '-crf', '18', '-maxrate', '6M', '-bufsize', '12M', '-profile:v', 'high', '-pix_fmt', 'yuv420p', '-x264-params', 'aq-mode=3',
+      // A key frame every two seconds keeps seeking quick.
+      '-g', String(source.fps * 2), '-keyint_min', String(source.fps * 2), ...audio];
+  const made = run(['-i', options.src, ...encode, '-movflags', '+faststart', path.join(folder, video)]);
+  if (made.status !== 0) { console.error(made.stderr); process.exit(1); }
+} else if (!existsSync(path.join(folder, video))) {
+  console.error(`No film ${video} in ${folder}: give its master with --src`);
+  process.exit(1);
+}
 const result = probe(path.join(folder, video));
 Object.assign(report, { width: result.width, height: result.height, fps: result.fps, duration: Math.round(result.seconds * 10) / 10, sound: result.audio });
 report.files.src = url(video);
@@ -197,7 +212,8 @@ if (options.poster) {
 
 if (options.hover) {
   const [from, length = '4'] = options.hover.split(',');
-  const hover = base + '-hover.mp4';
+  // The Russian fragment, or the only one, keeps the plain name; the English one is marked.
+  const hover = base + (options.lang === 'en' ? '-hover-en.mp4' : '-hover.mp4');
   // A short silent fragment at a quarter of the frame area: it loads only when the pointer comes to a poster.
   const scale = result.width >= result.height ? 'scale=-2:540' : 'scale=540:-2';
   const cut = run(['-ss', from, '-t', length, '-i', path.join(folder, video), '-an', '-vf', `${scale},fps=30`, '-c:v', 'libx264', '-preset', 'slow', '-crf', '27',
