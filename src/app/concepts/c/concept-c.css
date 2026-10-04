@@ -201,6 +201,8 @@ body:has(.cc-page) { background: #111213; color: #ecedef; color-scheme: dark; }
      switch and the link beside it, so it never lies over the page. */
   .cc-lang-hint { position: absolute; top: 50%; right: calc(var(--gutter) - 13px); transform: translateY(-50%); margin: 0; padding-left: 14px; background: var(--ground); }
   .cc-lang-hint + .cc-lang { margin-left: auto; }
+  /* What the note stands over is switched off for that time, so no control lies half covered under another. */
+  .cc-header:has(.cc-lang-hint) :is(.cc-lang, .cc-header-link) { visibility: hidden; }
   .cc-lang-hint .cc-link { padding: 8px 0; }
   .cc-lang-hint button { width: 36px; height: 36px; }
   .cc-hero { gap: 36px; padding-bottom: 40px; }

@@ -3,6 +3,8 @@ import type { Project, ProjectSection } from '@/lib/schema';
 import { fontVariables } from '@/lib/fonts-c';
 import { localePath, UI, type Locale } from '@/lib/i18n';
 import { buttonColors } from '@/lib/color';
+import { workData } from '@/lib/structured-data';
+import { JsonLd } from '@/components/JsonLd';
 import { Footer, Header, HOME, TextLink } from './Chrome';
 import { Depth } from './Depth';
 import { LiveEmbed } from './LiveEmbed';
@@ -73,7 +75,8 @@ function DetailsBlock({ details }: { details: Details }) {
 
 // Project page in the concept C system: one main idea, the work's advantages with real proof, details last.
 // The project comes already translated; locale picks the interface texts and the language links.
-export function CasePage({ project, locale }: { project: Project; locale: Locale }) {
+// share is the link preview picture of the page, named in its structured data as well.
+export function CasePage({ project, locale, share }: { project: Project; locale: Locale; share: string }) {
   const t = UI[locale];
   const alternate = localePath(locale === 'ru' ? 'en' : 'ru', `/${project.slug}/`);
   const [live, ...more] = project.actions;
@@ -82,7 +85,9 @@ export function CasePage({ project, locale }: { project: Project; locale: Locale
   // The main button takes the colour of the work itself; without one it stays white.
   const colors = project.accent && buttonColors(project.accent);
   const buttonStyle = colors ? { '--button': colors.button, '--button-ink': colors.ink, '--button-hover': colors.hover, '--button-press': colors.press } as React.CSSProperties : undefined;
+  const about = { slug: project.slug, name: project.title, headline: project.seo?.title ?? project.title, description: project.seo?.description ?? project.summary, image: share, year: project.year, technologies: project.technologies };
   return <div className={fontVariables} lang={locale} style={buttonStyle}>
+    <JsonLd data={workData(locale, about)}/>
     <div className="cc-page">
       <Header locale={locale} alternate={alternate}/>
       <main id="main" className="cs-main">

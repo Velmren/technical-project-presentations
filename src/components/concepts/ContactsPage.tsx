@@ -1,6 +1,8 @@
 import { fontVariables } from '@/lib/fonts-c';
 import { CONTACTS } from '@/lib/contacts';
 import { localePath, UI, type Locale } from '@/lib/i18n';
+import { contactsData } from '@/lib/structured-data';
+import { JsonLd } from '@/components/JsonLd';
 import { Footer, Header } from './Chrome';
 import { ContactLinks } from './Contacts';
 import '@/app/concepts/concepts.css';
@@ -11,6 +13,7 @@ import '@/app/concepts/c/case.css';
 export function ContactsPage({ locale }: { locale: Locale }) {
   const t = UI[locale];
   return <div className={fontVariables}>
+    <JsonLd data={contactsData(locale, { name: t.contact, description: t.contactsAbout, path: CONTACTS })}/>
     <div className="cc-page ct-screen" lang={locale}>
       <Header locale={locale} alternate={localePath(locale === 'ru' ? 'en' : 'ru', CONTACTS)}/>
       <main id="main" className="cs-main">

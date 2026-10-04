@@ -30,6 +30,7 @@ VELMREN portfolio: Next.js 16 (App Router), TypeScript, static export to `out/`.
 │   ├── components/
 │   │   ├── Sections.tsx, ProjectMedia.tsx, Icon.tsx, VideoPlayer.tsx  sections and media of the classic case layout
 │   │   ├── RootDocument.tsx   <html> and <body> shared by the two root layouts: language, body font, skip link
+│   │   ├── JsonLd.tsx         structured data of a page as a script tag
 │   │   ├── SiteFrame.tsx      header and footer of the classic case layout
 │   │   ├── video/             the site player, gallery, clip and collection pages, the block for the home page, interface
 │   │   │                      texts, README with how to add a clip
@@ -54,6 +55,7 @@ VELMREN portfolio: Next.js 16 (App Router), TypeScript, static export to `out/`.
 │       ├── seo.ts             page metadata in one shape: title, description, canonical, hreflang, link preview
 │       ├── contacts.ts        the two published contacts (Telegram, mail) and the address of the contacts page
 │       ├── clipboard.ts       copying a text to the clipboard
+│       ├── structured-data.ts schema.org data of the pages: organization, site, works, gallery, clips, contacts
 │       ├── social.ts          social preview images
 │       ├── color.ts           main button colour of a case page and its text contrast
 │       ├── fonts-c.ts         display fonts (Tektur, Sofia Sans Condensed)
@@ -66,6 +68,7 @@ VELMREN portfolio: Next.js 16 (App Router), TypeScript, static export to `out/`.
 │   │   │                      screenshots, videos and downloads of each work
 │   │   │                      godot/web/: Category Spark browser build, not in Git, built by a script
 │   │   │                      java/: Encounter State plugin JAR, source ZIP, source viewer and its manifest
+│   │   ├── share/             link preview pictures of the works, 1200x630 JPEG, written by scripts/prepare-share.mjs
 │   │   ├── video/             posters and link previews of the gallery clips; the films are not in Git
 │   │   └── brands/            Godot logo, its licence and credit page
 │   ├── projects/              static builds of individual works, served under /projects/<name>/
@@ -98,6 +101,8 @@ VELMREN portfolio: Next.js 16 (App Router), TypeScript, static export to `out/`.
 │   ├── portfolio.caddy        Caddy site config for velmren.com: compression, wasm type, cache headers, 404,
 │   │                          noindex for live demos and service files
 │   ├── prepare-encounter-viewer.mjs  embeds the Encounter State source files in the source viewer
+│   ├── prepare-share.mjs      cuts the link preview picture of every work from its showcase (public/assets/share/);
+│   │                          --check verifies that all of them are in place
 │   ├── prepare-videos.mjs     prepares web video, poster, link preview and hover fragment of a clip; --check verifies
 │   │                          the files before a release
 │   ├── build-category-spark-web.mjs  builds the Category Spark browser version from its source ZIP (GODOT=<path to Godot 4.7.2>)

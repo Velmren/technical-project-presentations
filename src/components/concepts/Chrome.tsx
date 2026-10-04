@@ -1,4 +1,4 @@
-import { CONTACTS, TELEGRAM } from '@/lib/contacts';
+import { CONTACTS, GITHUB, TELEGRAM } from '@/lib/contacts';
 import { localePath, UI, type Locale } from '@/lib/i18n';
 import { ContactLinks, TelegramIcon } from './Contacts';
 import { LangHint } from './LangHint';
@@ -6,7 +6,6 @@ import { LangSwitch } from './LangSwitch';
 
 // Header, footer and small marks shared by the home page, the work pages and the error page.
 
-export const GITHUB = 'https://github.com/Velmren';
 // The home page; English lives at /en/.
 export const HOME = '/';
 // The video gallery; English lives at /en/video/.

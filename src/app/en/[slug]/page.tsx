@@ -16,11 +16,11 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const project = (await caseProjects()).find(project => project.slug === slug);
   if (!project) return {};
   const en = localizeProject(project, 'en');
-  return pageMetadata({ locale: 'en', path: `/${slug}/`, title: en.seo?.title ?? en.title, description: en.seo?.description ?? en.summary, image: projectImage(en) });
+  return pageMetadata({ locale: 'en', path: `/${slug}/`, title: en.seo?.title ?? en.title, description: en.seo?.description ?? en.summary, image: projectImage(project, 'en') });
 }
 export default async function ProjectPageEn({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const project = (await caseProjects()).find(project => project.slug === slug);
   if (!project) notFound();
-  return <CasePage project={localizeProject(project, 'en')} locale="en"/>;
+  return <CasePage project={localizeProject(project, 'en')} locale="en" share={projectImage(project, 'en').url}/>;
 }

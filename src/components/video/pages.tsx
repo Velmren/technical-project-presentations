@@ -4,6 +4,8 @@ import { notFound } from 'next/navigation';
 import { fontVariables } from '@/lib/fonts-c';
 import { UI, type Locale } from '@/lib/i18n';
 import { ORGANIZATION_ID, pageMetadata, SITE, SITE_NAME } from '@/lib/seo';
+import { clipTrail, galleryData } from '@/lib/structured-data';
+import { JsonLd } from '@/components/JsonLd';
 import { collectionPath, galleryPath, SECTIONS, videoPath, type ShownVideo, type Video } from '@/lib/videos';
 import { Footer, Header } from '@/components/concepts/Chrome';
 import { localize, shown, toClip } from './clips';
@@ -65,8 +67,11 @@ export function galleryMetadata(locale: Locale): Metadata {
 }
 
 export function GalleryPage({ locale }: { locale: Locale }) {
+  const t = VIDEO_UI[locale];
   const clips = shown.map(item => toClip(item, locale));
+  const list = shown.map(item => ({ name: searchTitle(localize(item, locale)), path: videoPath('ru', item.slug) }));
   return <Frame locale={locale} alternate={galleryPath(other(locale))}>
+    <JsonLd data={galleryData(locale, { name: t.gallery, description: t.galleryAbout, path: galleryPath('ru') }, list)}/>
     <Gallery clips={clips} options={filterOptions(clips, SECTIONS)} locale={locale}/>
   </Frame>;
 }
@@ -101,11 +106,12 @@ export function VideoRoute({ path, locale }: { path: string[]; locale: Locale })
       // Search engines ask for a time with its zone; the day is what is known, so it starts at midnight in Minsk.
       uploadDate: `${video.date}T00:00:00+03:00`,
       duration: `PT${Math.round(cut.duration)}S`, thumbnailUrl: SITE + shareImage(item, locale, video.title).url, contentUrl: absolute(cut.src),
-      url: SITE + videoPath(locale, video.slug), inLanguage: locale, publisher: { '@type': 'Organization', '@id': ORGANIZATION_ID, name: SITE_NAME, url: SITE },
+      url: SITE + videoPath(locale, video.slug), inLanguage: locale, publisher: { '@type': 'Organization', '@id': ORGANIZATION_ID, name: SITE_NAME, url: SITE + '/' },
     };
     // The page of one clip: the film, its name, two lines about it and a link to copy. Nothing else around.
     return <Frame locale={locale} alternate={videoPath(other(locale), video.slug)} ask={UI[locale].askClip}>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(description).replace(/</g, '\\u003c') }}/>
+      <JsonLd data={description}/>
+      <JsonLd data={clipTrail(locale, { name: VIDEO_UI[locale].gallery, path: galleryPath('ru') }, { name: video.title, path: videoPath('ru', video.slug) })}/>
       <Watch video={video} more={moreFor(item).map(next => toClip(next, locale))} galleryHref={galleryPath(locale)} locale={locale}/>
     </Frame>;
   }

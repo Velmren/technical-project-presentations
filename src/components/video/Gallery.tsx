@@ -41,7 +41,7 @@ export function Gallery({ clips, options, locale }: { clips: GalleryClip[]; opti
 
   return <>
     <section className="vg-head">
-      <h1 className="vg-title">{t.gallery}<span>{clips.length}</span></h1>
+      <div className="vg-title"><h1>{t.gallery}</h1><span>{clips.length}</span></div>
       <div className="vg-filter" role="group" aria-label={t.sectionsLabel}>
         {options.map(option => <button key={option} type="button" aria-pressed={option === filter} onClick={() => choose(option)}>{label(option)}</button>)}
       </div>

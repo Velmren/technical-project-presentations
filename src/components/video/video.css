@@ -71,6 +71,8 @@
 /* ---------- The gallery ---------- */
 .vg-head { display: flex; align-items: flex-end; justify-content: space-between; gap: 20px 48px; flex-wrap: wrap; padding: 26px var(--gutter) 30px; }
 .vg-title { font-family: var(--cc-display), sans-serif; font-weight: 500; font-variation-settings: 'wdth' 96; font-size: clamp(40px, 4.3vw, 64px); line-height: 1; letter-spacing: -.01em; }
+/* The heading takes the type of its line; the number of clips beside it is not part of the heading. */
+.vg-title h1 { display: inline; font: inherit; letter-spacing: inherit; }
 .vg-title span, .vg-sub span { font-family: var(--cc-figures), sans-serif; font-weight: 400; letter-spacing: 0; color: var(--dim); }
 .vg-title span { margin-left: 8px; font-size: 24px; vertical-align: 1.1em; }
 /* The filter is plain words; the chosen one is underlined. */

@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { readdirSync, readFileSync } from 'node:fs';
+import { existsSync, readdirSync, readFileSync } from 'node:fs';
 import { projectSchema } from '../src/lib/schema.ts';
 import { browserLocale, languageAddresses, localizeProject } from '../src/lib/i18n.ts';
 import { localizeVideo, shownVideos, videoDataSchema } from '../src/lib/videos.ts';
@@ -50,6 +50,14 @@ test('every clip has a search title in both languages, unique across the gallery
     const titles = videos.map(video => localizeVideo(video, locale).searchTitle);
     assert.ok(titles.every(Boolean), `${locale}: a clip without a search title`);
     assert.equal(new Set(titles).size, titles.length, `${locale}: two clips share a search title`);
+  }
+});
+
+test('every work has its link preview picture, an English one where the English page shows its own screenshot', () => {
+  for (const project of projects) {
+    assert.ok(project.showcase, `${project.slug}: a showcase to cut the preview from`);
+    assert.ok(existsSync(`public/assets/share/${project.slug}.jpg`), `${project.slug}: run node scripts/prepare-share.mjs`);
+    if (project.en?.media?.[project.showcase.image.src]) assert.ok(existsSync(`public/assets/share/${project.slug}-en.jpg`), `${project.slug}: the English preview is missing`);
   }
 });
 
