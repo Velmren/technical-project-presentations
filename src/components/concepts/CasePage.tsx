@@ -112,7 +112,7 @@ export function CasePage({ project, locale }: { project: Project; locale: Locale
           </div>
         </section>
       </main>
-      <Footer locale={locale}/>
+      <Footer locale={locale} ask={t.askSimilar} contained/>
     </div>
   </div>;
 }

@@ -166,11 +166,25 @@ body:has(.cc-page) { background: #111213; color: #ecedef; color-scheme: dark; }
 .cc-spec td { padding: 9px 0; text-align: right; font-weight: 600; font-variant-numeric: tabular-nums; }
 
 
-.cc-footer { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 24px; margin-top: 72px; padding: 40px var(--gutter) 44px; border-top: 1px solid var(--line); color: var(--muted); font-size: 15px; }
+/* Contacts: Telegram and mail as plain links, and a button that copies the address. */
+.cc-contact-links { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 28px; }
+.cc-mail { display: inline-flex; align-items: center; gap: 14px; }
+.cc-copy { padding: 5px 0; font-size: 14px; color: var(--dim); transition: color .2s; }
+.cc-page .cc-copy:hover { color: var(--text); }
+
+.cc-footer { margin-top: 72px; border-top: 1px solid var(--line); color: var(--muted); font-size: 15px; }
+/* The footer opens with the contacts. Its main button stays white on every page, whatever colour the work has. */
+.cc-contact { padding: 56px var(--gutter) 60px; border-bottom: 1px solid var(--line); --button: #ffffff; --button-ink: var(--ink); --button-hover: #e8e9eb; --button-press: #d9dadd; }
+.cc-contact h2 { font-family: var(--cc-display), sans-serif; font-weight: 600; font-size: 44px; line-height: 1; color: var(--text); }
+.cc-contact p { margin-top: 16px; max-width: 30em; font-size: 18px; line-height: 1.55; }
+.cc-contact .cc-contact-links { margin-top: 28px; }
+/* On pages that keep their content in the centred 1360 px column the contacts start at its edge. */
+.cc-contact-contained { padding-inline: max(var(--gutter), calc((100% - 1360px) / 2)); }
+.cc-footer-row { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 24px; padding: 40px var(--gutter) 44px; }
 .cc-footer .cc-logo { color: var(--text); }
-.cc-footer > div { display: flex; justify-content: flex-end; gap: 28px; }
-.cc-footer > div a { display: inline-flex; align-items: center; transition: color .2s; }
-.cc-footer > div a:hover { color: var(--text); }
+.cc-footer-row > div { display: flex; justify-content: flex-end; gap: 28px; }
+.cc-footer-row > div a { display: inline-flex; align-items: center; transition: color .2s; }
+.cc-footer-row > div a:hover { color: var(--text); }
 
 @media (max-width: 1100px) {
   .cc-hero { grid-template-columns: minmax(0, 1fr); min-height: 0; padding-top: 24px; }
@@ -181,7 +195,8 @@ body:has(.cc-page) { background: #111213; color: #ecedef; color-scheme: dark; }
 @media (max-width: 860px) {
   .cc-header { gap: 20px; height: 64px; }
   .cc-header nav { display: none; }
-  .cc-header-link { margin-left: 0; }
+  /* The only link to write from a phone header: tall enough for a finger. */
+  .cc-header-link { margin-left: 0; padding: 12px 0; }
   /* The narrow header has no free part: until it is used or closed, the note stands in place of the language
      switch and the link beside it, so it never lies over the page. */
   .cc-lang-hint { position: absolute; top: 50%; right: calc(var(--gutter) - 13px); transform: translateY(-50%); margin: 0; padding-left: 14px; background: var(--ground); }
@@ -205,8 +220,11 @@ body:has(.cc-page) { background: #111213; color: #ecedef; color-scheme: dark; }
   .cc-filter button { flex: none; }
   .cc-feature { padding: 36px 0 48px; gap: 24px; }
   .cc-phone { width: 26%; border-width: 3px; border-radius: 10px 10px 0 0; }
-  .cc-footer { grid-template-columns: 1fr; }
-  .cc-footer > div { justify-content: flex-start; }
+  .cc-contact { padding: 40px var(--gutter) 44px; }
+  .cc-contact h2 { font-size: 34px; }
+  .cc-contact p { font-size: 16.5px; }
+  .cc-footer-row { grid-template-columns: 1fr; }
+  .cc-footer-row > div { justify-content: flex-start; }
 }
 /* On the narrowest phones the note is set smaller, so it does not reach the logo. */
 @media (max-width: 350px) {

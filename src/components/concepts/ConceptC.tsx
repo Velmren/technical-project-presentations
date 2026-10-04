@@ -3,6 +3,7 @@ import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import type { HomeWork } from '@/lib/home';
 import { filterTabs, matchesWork } from '@/lib/home-view';
 import type { Mosaic, MosaicSource } from '@/lib/concepts/mosaic';
+import { MAIL, TELEGRAM } from '@/lib/contacts';
 import { HOME, Footer, Header, TextLink } from './Chrome';
 import { localePath, UI, type Dictionary, type Locale } from '@/lib/i18n';
 import { LivePreview, liveMode } from './LivePreview';
@@ -146,7 +147,8 @@ function Hero({ works, t, locale }: { works: HomeWork[]; t: Dictionary; locale: 
       <p className="cc-lead">{t.heroLead}</p>
       <div className="cc-actions">
         <a className="cc-button" href="#works">{t.seeWork}</a>
-        <a className="cc-link" href="#contact">{t.getInTouch}</a>
+        <a className="cc-link" href={TELEGRAM} target="_blank" rel="noopener noreferrer">{t.writeTelegram}</a>
+        <a className="cc-link" href={`mailto:${MAIL}`}>{MAIL}</a>
       </div>
     </div>
     <div className="cc-stage" ref={stage} data-ready={ready} data-structure={structure || undefined}

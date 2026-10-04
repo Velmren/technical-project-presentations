@@ -2,7 +2,7 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { fontVariables } from '@/lib/fonts-c';
-import type { Locale } from '@/lib/i18n';
+import { UI, type Locale } from '@/lib/i18n';
 import { ORGANIZATION_ID, pageMetadata, SITE, SITE_NAME } from '@/lib/seo';
 import { collectionPath, galleryPath, SECTIONS, videoPath, type ShownVideo, type Video } from '@/lib/videos';
 import { Footer, Header } from '@/components/concepts/Chrome';
@@ -48,12 +48,13 @@ const shareImage = (item: Video, locale: Locale, alt: string) => {
   return cut.share ? { url: cut.share, ...SHARE, alt } : { url: cut.poster, width: cut.width, height: cut.height, alt };
 };
 
-function Frame({ locale, alternate, children }: { locale: Locale; alternate: string; children: React.ReactNode }) {
+function Frame({ locale, alternate, ask, children }: { locale: Locale; alternate: string; ask?: string; children: React.ReactNode }) {
   return <div className={fontVariables} lang={locale}>
     <div className="cc-page vg-page">
       <Header locale={locale} alternate={alternate}/>
       <main id="main">{children}</main>
-      <Footer locale={locale}/>
+      {/* A clip page keeps its content in the centred column; the gallery runs across the window. */}
+      <Footer locale={locale} ask={ask} contained={Boolean(ask)}/>
     </div>
   </div>;
 }
@@ -103,7 +104,7 @@ export function VideoRoute({ path, locale }: { path: string[]; locale: Locale })
       url: SITE + videoPath(locale, video.slug), inLanguage: locale, publisher: { '@type': 'Organization', '@id': ORGANIZATION_ID, name: SITE_NAME, url: SITE },
     };
     // The page of one clip: the film, its name, two lines about it and a link to copy. Nothing else around.
-    return <Frame locale={locale} alternate={videoPath(other(locale), video.slug)}>
+    return <Frame locale={locale} alternate={videoPath(other(locale), video.slug)} ask={UI[locale].askClip}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(description).replace(/</g, '\\u003c') }}/>
       <Watch video={video} more={moreFor(item).map(next => toClip(next, locale))} galleryHref={galleryPath(locale)} locale={locale}/>
     </Frame>;

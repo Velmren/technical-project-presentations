@@ -25,7 +25,7 @@ export default function GlobalNotFound() {
             </div>
           </section>
         </main>
-        <Footer locale="ru"/>
+        <Footer locale="ru" contained/>
       </div>
     </div>
   </RootDocument>;

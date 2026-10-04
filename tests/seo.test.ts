@@ -53,6 +53,19 @@ test('every clip has a search title in both languages, unique across the gallery
   }
 });
 
+test('the site publishes two contacts and no others', () => {
+  const walk = (folder: string): string[] => readdirSync(folder, { withFileTypes: true })
+    .flatMap(entry => entry.isDirectory() ? walk(`${folder}/${entry.name}`) : [`${folder}/${entry.name}`]);
+  const found = { telegram: new Set<string>(), mail: new Set<string>() };
+  for (const file of walk('src').filter(name => /\.(ts|tsx|json)$/.test(name))) {
+    const text = readFileSync(file, 'utf8');
+    for (const [address] of text.matchAll(/t\.me\/[A-Za-z0-9_]+/g)) found.telegram.add(address);
+    for (const [address] of text.matchAll(/[A-Za-z0-9._-]+@[A-Za-z0-9-]+\.[a-z]{2,}/g)) found.mail.add(address);
+  }
+  assert.deepEqual([...found.telegram], ['t.me/velmren']);
+  assert.deepEqual([...found.mail], ['hello@velmren.com']);
+});
+
 test('no page moves a visitor to another language on its own', () => {
   const sources = ['src/lib/i18n.ts', 'src/components/concepts/ConceptCView.tsx', 'src/components/concepts/CasePage.tsx', 'src/components/video/pages.tsx', 'src/components/concepts/LangHint.tsx'];
   for (const file of sources) assert.doesNotMatch(readFileSync(file, 'utf8'), /location\.(replace|assign|href\s*=)/, file);

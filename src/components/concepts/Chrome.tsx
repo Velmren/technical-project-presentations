@@ -1,4 +1,6 @@
+import { CONTACTS, TELEGRAM } from '@/lib/contacts';
 import { localePath, UI, type Locale } from '@/lib/i18n';
+import { ContactLinks, TelegramIcon } from './Contacts';
 import { LangHint } from './LangHint';
 import { LangSwitch } from './LangSwitch';
 
@@ -36,18 +38,29 @@ export function Header({ home = false, locale, alternate }: { home?: boolean; lo
   const t = UI[locale], homePath = localePath(locale, HOME);
   return <header className="cc-header" id="top">
     <a className="cc-logo" href={home ? '#top' : homePath}><Mark/>VELMREN</a>
-    <nav aria-label={t.nav}><a href={(home ? '' : homePath) + '#works'}>{t.work}</a><a href={localePath(locale, VIDEO)}>{t.video}</a><a href={GITHUB} target="_blank" rel="noopener noreferrer">{t.about}</a><a href="#contact">{t.contact}</a></nav>
+    <nav aria-label={t.nav}><a href={(home ? '' : homePath) + '#works'}>{t.work}</a><a href={localePath(locale, VIDEO)}>{t.video}</a><a href={GITHUB} target="_blank" rel="noopener noreferrer">{t.about}</a><a href={localePath(locale, CONTACTS)}>{t.contact}</a></nav>
     <LangHint locale={locale} alternate={alternate}/>
     <LangSwitch locale={locale} alternate={alternate} label={t.language}/>
-    <a className="cc-header-link" href={GITHUB} target="_blank" rel="noopener noreferrer"><GithubIcon/>GitHub</a>
+    {/* One click to write from any page, on a phone too, where the navigation is hidden. */}
+    <a className="cc-header-link" href={TELEGRAM} target="_blank" rel="noopener noreferrer"><TelegramIcon/>{t.telegram}</a>
   </header>;
 }
 
-export function Footer({ home = false, locale }: { home?: boolean; locale: Locale }) {
+// The footer opens with the contacts. Under a work or a clip their heading is a question (ask): "Need something
+// similar?". contained: the page keeps its content in the centred column, and the contacts line up with it.
+// The contacts page shows them itself and leaves the block out.
+export function Footer({ home = false, locale, contacts = true, ask, contained = false }: { home?: boolean; locale: Locale; contacts?: boolean; ask?: string; contained?: boolean }) {
   const t = UI[locale];
   return <footer className="cc-footer" id="contact">
-    <a className="cc-logo" href={home ? '#top' : localePath(locale, HOME)}><Mark/>VELMREN</a>
-    <p>{t.quote}</p>
-    <div><a href={localePath(locale, VIDEO)}>{t.video}</a><a href={GITHUB} target="_blank" rel="noopener noreferrer"><GithubIcon/>GitHub</a><a href="#top">{t.toTop}</a></div>
+    {contacts && <section className={'cc-contact' + (contained ? ' cc-contact-contained' : '')} aria-labelledby="cc-contact-title">
+      <h2 id="cc-contact-title">{ask ?? t.contact}</h2>
+      <p>{t.contactsLead}</p>
+      <ContactLinks locale={locale} primary/>
+    </section>}
+    <div className="cc-footer-row">
+      <a className="cc-logo" href={home ? '#top' : localePath(locale, HOME)}><Mark/>VELMREN</a>
+      <p>{t.quote}</p>
+      <div><a href={localePath(locale, VIDEO)}>{t.video}</a><a href={GITHUB} target="_blank" rel="noopener noreferrer"><GithubIcon/>GitHub</a><a href="#top">{t.toTop}</a></div>
+    </div>
   </footer>;
 }
