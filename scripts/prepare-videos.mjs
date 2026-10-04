@@ -10,18 +10,98 @@
 // The films are not stored in Git. Before a release build:
 //   node scripts/prepare-videos.mjs --check
 // lists every file the accepted clips need and fails when one is missing from public/.
+//
+// The gallery draws a poster far smaller than the film, so it shows reduced AVIF copies of it. Once the record
+// of a clip is in videos.json:
+//   node scripts/prepare-videos.mjs --tiles [<slug> ...]
+// makes the copies that are missing for the first cut of every clip (the cut the gallery shows) and writes their
+// widths into the record as posterWidths. With slugs it makes the copies of those clips again.
+// ffmpeg needs libaom-av1 for that.
 import { spawnSync } from 'node:child_process';
-import { existsSync, mkdirSync, readFileSync, statSync } from 'node:fs';
+import { existsSync, mkdirSync, readFileSync, renameSync, rmSync, statSync, writeFileSync } from 'node:fs';
 import path from 'node:path';
 
 const FFMPEG = process.env.FFMPEG || 'ffmpeg';
 // A file already at or under this video bitrate is only repacked for a fast start; a heavier one is encoded again.
 const MAX_KBPS = 6200;
+// Widths of the reduced copies of a poster, for a wide or square frame and for a vertical one. The full width
+// closes the list for large and dense screens; a step close to it is left out.
+const TILE_STEPS = { wide: [480, 720, 960, 1280], tall: [360, 540, 720] };
+// Quality levels of the AV1 encoder for a copy, the lightest first. A copy takes the lightest level at which it
+// cannot be told from the poster reduced without loss (TILE_CLOSE, as SSIM). A frame that does not get there, one
+// full of fine detail or grain, takes the best level that keeps it within TILE_BITS bits per pixel and under
+// TILE_SHARE of the weight of the poster itself.
+const TILE_LEVELS = [34, 32, 30, 28, 26, 24, 22, 20, 18, 16, 14, 12, 10];
+const TILE_CLOSE = 0.99;
+const TILE_BITS = 1.15;
+const TILE_SHARE = 0.6;
 
 const root = path.join(import.meta.dirname, '..');
+const dataFile = path.join(root, 'src/content/videos.json');
+
+const run = (args, capture = false) => {
+  const result = spawnSync(FFMPEG, ['-hide_banner', '-y', ...args], { encoding: capture ? 'buffer' : 'utf8', maxBuffer: 64 * 1024 * 1024 });
+  if (result.error) throw result.error;
+  return result;
+};
+
+const tileWidths = (width, height) => [...TILE_STEPS[height > width ? 'tall' : 'wide'].filter(step => step < width * 0.85), width];
+const tileName = (poster, width) => poster.replace(/\.webp$/, `-${width}.avif`);
+// One reduced copy of a poster; shape is the height of the frame over its width. Returns its quality level.
+// The encoder is tuned for still pictures and keeps colour at full resolution: a copy is drawn close to its own
+// size, where halved colour shows as soft edges, while the poster itself is drawn at half its size or less.
+function makeTile(poster, width, shape) {
+  const file = tileName(poster, width);
+  const trial = file.replace(/\.avif$/, '.trial.avif');
+  // The height is given outright: rounding it to an even number would change the shape of a 720x405 copy.
+  const reduce = `scale=${width}:${Math.round(width * shape)}:flags=lanczos`;
+  const limit = Math.min(TILE_BITS * width * width * shape / 8, TILE_SHARE * statSync(poster).size);
+  let chosen;
+  // From the lightest level up: stop at the first copy that is close enough, or before the one that is too heavy.
+  for (const level of TILE_LEVELS) {
+    const made = run(['-i', poster, '-frames:v', '1', '-vf', reduce, '-c:v', 'libaom-av1', '-still-picture', '1',
+      '-usage', 'allintra', '-aom-params', 'tune=iq', '-crf', String(level), '-b:v', '0', '-cpu-used', '4', '-pix_fmt', 'yuv444p', trial]);
+    if (made.status !== 0) { console.error(made.stderr); process.exit(1); }
+    if (chosen !== undefined && statSync(trial).size > limit) break;
+    renameSync(trial, file);
+    chosen = level;
+    const compared = run(['-i', file, '-i', poster, '-lavfi', `[1:v]${reduce},format=gbrp[full];[0:v]format=gbrp[copy];[copy][full]ssim`, '-f', 'null', '-']);
+    if (Number(compared.stderr.match(/All:([\d.]+)/)?.[1] ?? 0) >= TILE_CLOSE) break;
+  }
+  rmSync(trial, { force: true });
+  return chosen;
+}
+
+if (process.argv[2] === '--tiles') {
+  const text = readFileSync(dataFile, 'utf8');
+  const data = JSON.parse(text);
+  const again = new Set(process.argv.slice(3));
+  for (const slug of again) if (!data.videos.some(item => item.slug === slug)) { console.error('No such clip in videos.json: ' + slug); process.exit(1); }
+  let made = 0, bytes = 0;
+  for (const video of data.videos) {
+    const cut = video.cuts[0];
+    const widths = tileWidths(cut.width, cut.height);
+    for (const poster of new Set(Object.values(cut.poster))) for (const width of widths) {
+      const file = path.join(root, 'public', tileName(poster, width));
+      if (again.has(video.slug) || !existsSync(file)) {
+        const level = makeTile(path.join(root, 'public', poster), width, cut.height / cut.width);
+        console.log(`${path.basename(file)}: ${(statSync(file).size / 1000).toFixed(1)} KB, level ${level}`);
+        made++;
+      }
+      bytes += statSync(file).size;
+    }
+    // posterWidths stands right after poster in the record.
+    video.cuts[0] = Object.fromEntries(Object.entries(cut).flatMap(([key, value]) =>
+      key === 'posterWidths' ? [] : key === 'poster' ? [[key, value], ['posterWidths', widths]] : [[key, value]]));
+  }
+  const next = JSON.stringify(data, null, 2) + '\n';
+  if (next !== text) writeFileSync(dataFile, next);
+  console.log(`${made} reduced posters made, ${(bytes / 1e6).toFixed(1)} MB of them in public/${next !== text ? ', videos.json updated' : ''}`);
+  process.exit(0);
+}
 
 if (process.argv[2] === '--check') {
-  const { videos, mediaBase = '' } = JSON.parse(readFileSync(path.join(root, 'src/content/videos.json'), 'utf8'));
+  const { videos, mediaBase = '' } = JSON.parse(readFileSync(dataFile, 'utf8'));
   let missing = 0, bytes = 0;
   const local = (slug, file) => {
     const found = existsSync(path.join(root, 'public', file));
@@ -35,6 +115,8 @@ if (process.argv[2] === '--check') {
   for (const video of videos.filter(item => item.status === 'accepted')) for (const cut of video.cuts) {
     const films = new Set([...Object.values(cut.src), ...(cut.preview ? [cut.preview] : [])]);
     const pictures = new Set([cut.poster, cut.share, cut.captions].flatMap(pair => Object.values(pair ?? {})));
+    for (const poster of Object.values(cut.poster)) for (const width of cut.posterWidths ?? []) pictures.add(tileName(poster, width));
+    if (cut === video.cuts[0] && !cut.posterWidths) { missing++; console.error(`${video.slug}: no reduced posters for the gallery, run --tiles`); }
     for (const file of pictures) local(video.slug, file);
     for (const file of films) if (mediaBase) await remote(video.slug, file); else local(video.slug, file);
   }
@@ -50,12 +132,6 @@ if (!slug || !/^[a-z0-9]+(-[a-z0-9]+)*$/.test(slug) || !options.src) {
   process.exit(1);
 }
 if (!existsSync(options.src)) { console.error('No such file: ' + options.src); process.exit(1); }
-
-const run = (args, capture = false) => {
-  const result = spawnSync(FFMPEG, ['-hide_banner', '-y', ...args], { encoding: capture ? 'buffer' : 'utf8', maxBuffer: 64 * 1024 * 1024 });
-  if (result.error) throw result.error;
-  return result;
-};
 
 // ffmpeg prints the stream description to stderr when asked for a file without an output.
 function probe(file) {
@@ -104,6 +180,8 @@ if (options.poster) {
   const shot = run([...from, '-frames:v', '1', '-vf', `scale=${result.width}:${result.height}`, '-c:v', 'libwebp', '-quality', '84', path.join(folder, poster)]);
   if (shot.status !== 0) { console.error(shot.stderr); process.exit(1); }
   report.files.poster = url(poster);
+  // Reduced copies of this poster already made for the gallery follow the new picture.
+  for (const width of tileWidths(result.width, result.height)) if (existsSync(tileName(path.join(folder, poster), width))) makeTile(path.join(folder, poster), width, result.height / result.width);
   // Link preview for messengers, 1200x630 JPEG: a wide frame fills it, a vertical or square one stands in the middle on the site ground.
   const share = withLang(base + '-share') + '.jpg';
   const fit = result.width > result.height

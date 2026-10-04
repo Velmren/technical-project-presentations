@@ -60,6 +60,7 @@ One record and its files.
          "width": 1920, "height": 1080, "duration": 62,
          "src": { "ru": "/assets/video/my-clip/my-clip-ru.mp4", "en": "/assets/video/my-clip/my-clip-en.mp4" },
          "poster": { "ru": "/assets/video/my-clip/my-clip-poster-ru.webp", "en": "/assets/video/my-clip/my-clip-poster-en.webp" },
+         "posterWidths": [480, 720, 960, 1280, 1920],
          "share": { "ru": "/assets/video/my-clip/my-clip-share-ru.jpg", "en": "/assets/video/my-clip/my-clip-share-en.jpg" },
          "preview": "/assets/video/my-clip/my-clip-hover.mp4"
        }
@@ -73,9 +74,18 @@ One record and its files.
    - `sound`: who made the sound and the music. A licensed track is named here with its licence, `soundLink` leads to its page. A silent clip has no `sound`.
    - `work`: the page of the work the clip belongs to, if there is one.
    - `cuts`: frame formats of the clip. The first one is shown in the gallery; the page offers a switch when there are two. `captions: { "ru": "….vtt", "en": "….vtt" }` adds subtitles.
+   - `posterWidths` is written by step 3; leave it out of a new record.
    - `en` may be left out of `src`, `poster` and `share`: the English page then uses the Russian file.
 
-3. Check and build:
+3. Make the reduced posters for the gallery:
+
+   ```bash
+   node scripts/prepare-videos.mjs --tiles
+   ```
+
+   It makes the copies that are missing and writes `posterWidths` into the record (see "Posters in the gallery" below). ffmpeg needs libaom-av1 for this step.
+
+4. Check and build:
 
    ```bash
    node --experimental-strip-types --test tests/videos.test.ts
@@ -95,9 +105,21 @@ One record in `collections`, three to six clips in the order they should play:
 
 Its address is `/video/c/for-a-game-studio/`. A collection opens only by its link: it is not listed in the gallery and asks search engines not to index it. It is published once every clip in it is accepted.
 
+## Posters in the gallery
+
+A poster is made at the size of the film and is shown so on the page of the clip and in the link preview. In the gallery, in the block on the home page and in the row of next clips it is drawn far smaller, so there the browser gets a reduced AVIF copy of it: `my-clip-poster-ru-720.avif` next to `my-clip-poster-ru.webp`. The widths are 480, 720, 960 and 1280 for a wide or square poster, 360, 540 and 720 for a vertical one, and the full width for large and dense screens. `posterWidths` in the first cut of the record lists them; a browser without AVIF shows the poster itself.
+
+A copy must not look softer than the poster does at the same place. Each one takes the lightest quality level at which it cannot be told from the poster reduced without loss (SSIM 0.99 or more). A frame that does not get there, one full of fine detail or grain, takes the best level that keeps it within 1.15 bits per pixel and under 60% of the weight of the poster. Colour is stored at full resolution: a copy is drawn close to its own size, where halved colour shows as soft edges.
+
+`node scripts/prepare-videos.mjs --tiles` makes the copies for the first cut of every clip, the one the gallery shows, and keeps those already in place. `--tiles my-clip` makes the copies of that clip again. A poster made again with `--poster` renews its copies by itself. `--check` fails when an accepted clip has no copies.
+
+Which copy is taken depends on how wide the poster is drawn: `rowTileSizes()` and `stripTileSizes()` in `gallery-view.ts` give the browser that width and repeat the layout rules of `video.css` (the page gutter, the gap between posters, the columns of the vertical strip). When those rules change, change both.
+
+The posters of the first row of the gallery are the largest pictures of its first screen: they load at once and at high priority, everything below loads as it comes near the screen. The block on the home page loads its posters late and at low priority.
+
 ## Films are not in Git
 
-`public/assets/video/.gitignore` keeps `*.mp4` out of the repository. Posters, link previews and subtitles are committed. Before a release build the films must be in `public/assets/video/<slug>/` on the build machine: `node scripts/prepare-videos.mjs --check` lists what the accepted clips need and fails when a file is missing.
+`public/assets/video/.gitignore` keeps `*.mp4` out of the repository. Posters with their reduced copies, link previews and subtitles are committed. Before a release build the films must be in `public/assets/video/<slug>/` on the build machine: `node scripts/prepare-videos.mjs --check` lists what the accepted clips need and fails when a file is missing.
 
 ## Moving the films to their own storage
 
@@ -122,7 +144,7 @@ import { VideoEntry } from '@/components/video/Entry';
 
 It reads the gallery data, so it is rendered on the server. A client component takes it as a ready node from its server parent, for example `<ConceptC video={<VideoEntry locale={locale}/>}/>`. It expects the `.cc-page` tokens and the site fonts around it.
 
-A block with its own layout can take just the data: `bestClips(locale, count)` from `clips.ts` returns the first clips in show order with `href`, `title`, `kind`, `length`, `poster` and `preview`, and `TileRow` from `Gallery.tsx` draws a row of them.
+A block with its own layout can take just the data: `bestClips(locale, count)` from `clips.ts` returns the first clips in show order with `href`, `title`, `kind`, `length`, `poster`, `posterSet` and `preview`, and `TileRow` from `Gallery.tsx` draws a row of them. Under the first screen of a page give it `priority="low"`.
 
 ## Addresses with parameters
 

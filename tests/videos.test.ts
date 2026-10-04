@@ -1,8 +1,8 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { existsSync, readFileSync } from 'node:fs';
-import { aspect, byShowOrder, clock, collectionPath, galleryPath, localizeVideo, SECTIONS, shownVideos, videoDataSchema, videoPath, type VideoData } from '../src/lib/videos.ts';
-import { filterOptions, intoRows, rowSum, splitClips, type GalleryClip } from '../src/components/video/gallery-view.ts';
+import { aspect, byShowOrder, clock, collectionPath, galleryPath, localizeVideo, posterTile, SECTIONS, shownVideos, videoDataSchema, videoPath, type VideoData } from '../src/lib/videos.ts';
+import { filterOptions, intoRows, rowSum, rowTileSizes, splitClips, stripTileSizes, type GalleryClip } from '../src/components/video/gallery-view.ts';
 
 const data = videoDataSchema.parse(JSON.parse(readFileSync('src/content/videos.json', 'utf8')));
 const clone = (): VideoData => structuredClone(data);
@@ -103,6 +103,37 @@ test('the best clips come first and rows are cut without holes wherever that is 
   // A lone clip cannot make a row; it stands alone and is not stretched.
   assert.deepEqual(names(intoRows([wide('a')])), ['a']);
   assert.deepEqual(intoRows([]), []);
+});
+
+test('the gallery shows reduced copies of a poster, the page of the clip keeps the full one', () => {
+  for (const video of shownVideos(data)) {
+    const cut = video.cuts[0];
+    assert.ok(cut.posterWidths, `${video.slug}: no reduced posters, run scripts/prepare-videos.mjs --tiles`);
+    assert.deepEqual(cut.posterWidths, [...cut.posterWidths].sort((a, b) => a - b), `${video.slug}: widths go up`);
+    assert.equal(cut.posterWidths.at(-1), cut.width, `${video.slug}: the full width closes the list`);
+    for (const poster of [cut.poster.ru, cut.poster.en]) for (const width of cut.posterWidths) {
+      if (poster) assert.ok(existsSync('public' + posterTile(poster, width)), `${video.slug}: missing ${posterTile(poster, width)}`);
+    }
+  }
+  const next = clone();
+  next.videos[0].cuts[0].poster = { ru: '/assets/video/x/x-poster-ru.webp', en: '/assets/video/x/x-poster-en.webp' };
+  next.videos[0].cuts[0].posterWidths = [480, 960];
+  const english = localizeVideo(videoDataSchema.parse(next).videos[0], 'en').cuts[0];
+  assert.equal(english.poster, '/assets/video/x/x-poster-en.webp');
+  assert.equal(english.posterSet, '/assets/video/x/x-poster-en-480.avif 480w, /assets/video/x/x-poster-en-960.avif 960w');
+  delete next.videos[0].cuts[0].posterWidths;
+  assert.equal(localizeVideo(videoDataSchema.parse(next).videos[0], 'ru').cuts[0].posterSet, undefined);
+  // The browser is told how wide a poster is drawn: two wide frames in a 1920 px window are 890 px each,
+  // a lone one keeps the width of a half row, and on a phone a poster takes the whole line.
+  const pair = [wide('a'), wide('b')];
+  assert.equal(rowTileSizes(pair[0], pair), '(max-width: 860px) calc(100vw - 36px), (max-width: 1455px) calc(45.60vw - 6px), calc(50.00vw - 70px)');
+  assert.equal(rowTileSizes(pair[0], [pair[0]], 0.5), '(max-width: 860px) calc(100vw - 36px), (max-width: 1455px) calc(45.60vw - 0px), calc(50.00vw - 64px)');
+  // On the page of a clip the row stands in a column that stops growing at 1360 px.
+  assert.ok(rowTileSizes(pair[0], pair, 1, true).endsWith('(max-width: 1488px) calc(50.00vw - 70px), 674px'));
+  // In the strip of vertical clips a 9:16 poster is as wide as its column; a 3:5 one fills the same frame and is drawn wider.
+  assert.equal(stripTileSizes(clip('tall', 1080, 1920)),
+    '(max-width: 860px) calc(50vw - 24px), (max-width: 1300px) calc(30.4vw - 8px), (max-width: 1455px) calc(22.8vw - 9px), (max-width: 1600px) calc(25vw - 41px), calc(20vw - 35px)');
+  assert.ok(stripTileSizes(clip('screen', 768, 1280)).startsWith('(max-width: 860px) calc(1.067 * (50vw - 24px)), '));
 });
 
 test('vertical clips never mix with the others and the filter offers only what exists', () => {

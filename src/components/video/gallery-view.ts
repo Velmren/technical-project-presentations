@@ -4,6 +4,8 @@ import type { SectionId } from '@/lib/videos';
 export type GalleryClip = {
   slug: string; href: string; title: string; kind: string; length: string; sections: SectionId[];
   width: number; height: number; poster: string; preview?: string;
+  // Reduced AVIF copies of the poster as a srcset; without them the poster itself is shown.
+  posterSet?: string;
 };
 
 export const VERTICAL = 'vertical';
@@ -53,4 +55,31 @@ export function intoRows<T extends { width: number; height: number }>(clips: T[]
   const rows: T[][] = [];
   for (let end = clips.length; end > 0; end = best[end].from) rows.unshift(clips.slice(best[end].from, end));
   return rows;
+}
+
+// How wide a poster is drawn, for the sizes attribute: the browser then takes the smallest copy that is enough.
+// The page gutter is clamp(18px, 4.4vw, 64px): 64 px from a 1455 px window up, 4.4vw below it, 18 px on a phone,
+// where posters stand one to a row. gap is the 12 px between posters.
+const GAP = 12;
+const PHONE = '(max-width: 860px)';
+const part = (vw: number, px: number) => `calc(${vw.toFixed(2)}vw - ${Math.round(px)}px)`;
+
+// A poster in a row: its share of the row by proportions. contained: the row lives in the 1360 px column of a clip page.
+export function rowTileSizes(clip: { width: number; height: number }, row: { width: number; height: number }[], share = 1, contained = false) {
+  const fraction = ratio(clip) / rowSum(row);
+  const gaps = (row.length - 1) * GAP * fraction;
+  const fluid = `(max-width: 1455px) ${part(91.2 * share * fraction, gaps)}`;
+  const wide = part(100 * share * fraction, 128 * share * fraction + gaps);
+  return contained
+    ? `${PHONE} calc(100vw - 36px), ${fluid}, (max-width: 1488px) ${wide}, ${Math.round((1360 * share - (row.length - 1) * GAP) * fraction)}px`
+    : `${PHONE} calc(100vw - 36px), ${fluid}, ${wide}`;
+}
+
+// A poster in the strip of vertical clips: two columns on a phone, then three, four and five. Every poster there
+// fills one 9:16 frame, so a clip of another vertical shape (3:5) is drawn wider than its column by that much.
+const STRIP_FRAME = 9 / 16;
+const STRIP_COLUMNS: [string, string][] = [[PHONE, '50vw - 24px'], ['(max-width: 1300px)', '30.4vw - 8px'], ['(max-width: 1455px)', '22.8vw - 9px'], ['(max-width: 1600px)', '25vw - 41px'], ['', '20vw - 35px']];
+export function stripTileSizes(clip: { width: number; height: number }) {
+  const cover = Math.max(1, ratio(clip) / STRIP_FRAME);
+  return STRIP_COLUMNS.map(([media, column]) => `${media} calc(${cover === 1 ? column : `${cover.toFixed(3)} * (${column})`})`.trim()).join(', ');
 }

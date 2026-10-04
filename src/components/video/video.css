@@ -86,6 +86,7 @@
 .vg-row { display: flex; gap: var(--vg-gap); width: calc(var(--vg-share, 1) * 100%); }
 .vg-row > .vg-tile { flex: var(--vg-ratio) 1 0; }
 .vg-tile { position: relative; display: block; min-width: 0; aspect-ratio: var(--vg-ratio); overflow: hidden; border-radius: 2px; background: #17181b; }
+.vg-tile picture { display: contents; }
 .vg-tile img, .vg-tile video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
 /* A thin light edge over the picture, as on the screenshots of the work pages: a dark poster stays a poster on the dark page. */
 .vg-tile::before { content: ''; position: absolute; inset: 0; z-index: 1; border-radius: inherit; box-shadow: inset 0 0 0 1px rgba(236, 237, 239, .1); pointer-events: none; }

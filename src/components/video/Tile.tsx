@@ -5,7 +5,12 @@ import type { GalleryClip } from './gallery-view';
 // A large poster that leads to the page of its clip. While the pointer or the keyboard focus rests on it,
 // a short silent fragment plays in place; the fragment is not requested before that. The name sits in a corner
 // cut out of the poster, on the page ground, so it reads on any frame and nothing shades the picture.
-export function Tile({ clip, eager = false }: { clip: GalleryClip; eager?: boolean }) {
+//
+// The picture is one of the reduced AVIF copies of the poster, chosen by the browser from `sizes` (how wide the
+// poster is drawn); a browser without AVIF shows the poster itself. priority: 'high' for the posters that open a
+// page, its largest pictures, which load at once; 'low' for posters that must not compete with the picture above
+// them; the rest load as they come near the screen.
+export function Tile({ clip, sizes, priority }: { clip: GalleryClip; sizes: string; priority?: 'high' | 'low' }) {
   const video = useRef<HTMLVideoElement>(null);
   const timer = useRef<ReturnType<typeof setTimeout> | undefined>(undefined);
   const [playing, setPlaying] = useState(false);
@@ -29,10 +34,15 @@ export function Tile({ clip, eager = false }: { clip: GalleryClip; eager?: boole
     setPlaying(false);
   };
 
+  const first = priority === 'high';
   return <a className="vg-tile" href={clip.href} data-playing={playing || undefined} style={{ '--vg-ratio': clip.width / clip.height } as React.CSSProperties}
     onPointerEnter={event => { if (event.pointerType === 'mouse') start(); }} onPointerLeave={stop}
     onFocus={event => { if (event.currentTarget.matches(':focus-visible')) start(); }} onBlur={stop}>
-    <img src={clip.poster} alt="" width={clip.width} height={clip.height} loading={eager ? 'eager' : 'lazy'} decoding="async"/>
+    <picture>
+      {clip.posterSet && <source type="image/avif" srcSet={clip.posterSet} sizes={sizes}/>}
+      <img src={clip.poster} alt="" width={clip.width} height={clip.height} loading={first ? 'eager' : 'lazy'}
+        fetchPriority={priority} decoding={first ? undefined : 'async'}/>
+    </picture>
     {clip.preview && <video ref={video} muted loop playsInline preload="none" tabIndex={-1} aria-hidden="true"/>}
     <i className="vg-run"/>
     {/* The length never parts from its dot: on a narrow poster the line breaks inside the words before it. */}

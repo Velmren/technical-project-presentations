@@ -81,7 +81,7 @@ export function Watch({ video, more, galleryHref, locale }: { video: ShownVideo;
     </div>
     {wide && <section className="vg-more" aria-labelledby="vg-more-title">
       <div className="vg-more-head"><h2 id="vg-more-title">{t.next}</h2><a className="cc-link" href={galleryHref}>{t.allVideos}</a></div>
-      {more.length > 0 && <TileRow clips={more}/>}
+      {more.length > 0 && <TileRow clips={more} contained/>}
     </section>}
   </>;
 }

@@ -12,7 +12,7 @@ export function toClip(item: Video, locale: Locale): GalleryClip {
   const video = localize(item, locale);
   const cut = video.cuts[0];
   return { slug: video.slug, href: videoPath(locale, video.slug), title: video.title, kind: video.kind, length: clock(cut.duration),
-    sections: video.sections, width: cut.width, height: cut.height, poster: cut.poster, preview: cut.preview };
+    sections: video.sections, width: cut.width, height: cut.height, poster: cut.poster, posterSet: cut.posterSet, preview: cut.preview };
 }
 
 export const bestClips = (locale: Locale, count = 4) => shown.slice(0, count).map(item => toClip(item, locale));

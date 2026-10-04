@@ -20,6 +20,9 @@ const cut = z.object({
   duration: z.number().positive(),
   src: perLanguage(asset.endsWith('.mp4')),
   poster: perLanguage(asset.endsWith('.webp')),
+  // Widths of the reduced AVIF copies of the poster, made for the gallery posters by scripts/prepare-videos.mjs:
+  // <poster name>-<width>.avif next to the poster. The clip page and the link preview keep the full poster.
+  posterWidths: z.array(z.number().int().positive()).min(1).optional(),
   // Link preview picture for messengers, JPEG.
   share: perLanguage(asset.endsWith('.jpg')).optional(),
   // The lower left corner of the poster is light, so the start button there is dark.
@@ -99,6 +102,10 @@ export const collectionPath = (locale: Locale, slugName: string) => galleryPath(
 export const byShowOrder = (a: Video, b: Video) =>
   (a.featured ?? Infinity) - (b.featured ?? Infinity) || b.date.localeCompare(a.date) || a.slug.localeCompare(b.slug);
 
+// The reduced copies of a poster as a srcset: /a/x-poster.webp and [480, 960] give "/a/x-poster-480.avif 480w, …".
+export const posterTile = (poster: string, width: number) => poster.replace(/\.webp$/, `-${width}.avif`);
+export const posterSet = (poster: string, widths: number[]) => widths.map(width => `${posterTile(poster, width)} ${width}w`).join(', ');
+
 // A clip in one language, ready for the page: the English page takes the English file where there is one.
 // Films are read from mediaBase when it is set.
 export function localizeVideo(item: Video, locale: Locale, mediaBase = '') {
@@ -121,6 +128,7 @@ export function localizeVideo(item: Video, locale: Locale, mediaBase = '') {
       duration: c.duration,
       src: mediaBase + pick(c.src),
       poster: pick(c.poster),
+      posterSet: c.posterWidths && posterSet(pick(c.poster), c.posterWidths),
       share: c.share && pick(c.share),
       lightPoster: c.lightPoster ?? false,
       preview: c.preview && mediaBase + c.preview,

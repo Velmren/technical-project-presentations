@@ -43,6 +43,13 @@
             "ru": "/assets/video/lumi-promo/lumi-promo-poster-ru.webp",
             "en": "/assets/video/lumi-promo/lumi-promo-poster-en.webp"
           },
+          "posterWidths": [
+            480,
+            720,
+            960,
+            1280,
+            1920
+          ],
           "share": {
             "ru": "/assets/video/lumi-promo/lumi-promo-share-ru.jpg",
             "en": "/assets/video/lumi-promo/lumi-promo-share-en.jpg"
@@ -87,6 +94,12 @@
             "ru": "/assets/video/cell/cell-poster-ru.webp",
             "en": "/assets/video/cell/cell-poster-en.webp"
           },
+          "posterWidths": [
+            360,
+            540,
+            720,
+            1080
+          ],
           "share": {
             "ru": "/assets/video/cell/cell-share-ru.jpg",
             "en": "/assets/video/cell/cell-share-en.jpg"
@@ -131,6 +144,13 @@
           "poster": {
             "ru": "/assets/video/showreel/showreel-poster.webp"
           },
+          "posterWidths": [
+            480,
+            720,
+            960,
+            1280,
+            1920
+          ],
           "share": {
             "ru": "/assets/video/showreel/showreel-share.jpg"
           },
@@ -177,6 +197,13 @@
           "poster": {
             "ru": "/assets/video/sono-promo/sono-promo-poster.webp"
           },
+          "posterWidths": [
+            480,
+            720,
+            960,
+            1280,
+            1920
+          ],
           "share": {
             "ru": "/assets/video/sono-promo/sono-promo-share.jpg"
           },
@@ -221,6 +248,13 @@
           "poster": {
             "ru": "/assets/video/kalder/kalder-poster.webp"
           },
+          "posterWidths": [
+            480,
+            720,
+            960,
+            1280,
+            1920
+          ],
           "share": {
             "ru": "/assets/video/kalder/kalder-share.jpg"
           },
@@ -279,6 +313,12 @@
             "ru": "/assets/video/okno/okno-poster-ru.webp",
             "en": "/assets/video/okno/okno-poster-en.webp"
           },
+          "posterWidths": [
+            360,
+            540,
+            720,
+            1080
+          ],
           "share": {
             "ru": "/assets/video/okno/okno-share-ru.jpg",
             "en": "/assets/video/okno/okno-share-en.jpg"
@@ -322,6 +362,11 @@
           "poster": {
             "ru": "/assets/video/lorvane/lorvane-1x1-poster.webp"
           },
+          "posterWidths": [
+            480,
+            720,
+            1080
+          ],
           "share": {
             "ru": "/assets/video/lorvane/lorvane-1x1-share.jpg"
           },
@@ -377,6 +422,11 @@
           "poster": {
             "ru": "/assets/video/hoppo/hoppo-1x1-poster.webp"
           },
+          "posterWidths": [
+            480,
+            720,
+            1080
+          ],
           "share": {
             "ru": "/assets/video/hoppo/hoppo-1x1-share.jpg"
           },
@@ -434,6 +484,13 @@
           "poster": {
             "ru": "/assets/video/ketlund/ketlund-poster.webp"
           },
+          "posterWidths": [
+            480,
+            720,
+            960,
+            1280,
+            1920
+          ],
           "share": {
             "ru": "/assets/video/ketlund/ketlund-share.jpg"
           },
@@ -491,6 +548,12 @@
             "ru": "/assets/video/polka/polka-poster-ru.webp",
             "en": "/assets/video/polka/polka-poster-en.webp"
           },
+          "posterWidths": [
+            360,
+            540,
+            720,
+            1080
+          ],
           "share": {
             "ru": "/assets/video/polka/polka-share-ru.jpg",
             "en": "/assets/video/polka/polka-share-en.jpg"
@@ -539,6 +602,12 @@
           "poster": {
             "ru": "/assets/video/khrum/khrum-poster.webp"
           },
+          "posterWidths": [
+            360,
+            540,
+            720,
+            1080
+          ],
           "share": {
             "ru": "/assets/video/khrum/khrum-share.jpg"
           },
@@ -581,6 +650,11 @@
           "poster": {
             "ru": "/assets/video/forum-screen/forum-screen-poster.webp"
           },
+          "posterWidths": [
+            360,
+            540,
+            768
+          ],
           "share": {
             "ru": "/assets/video/forum-screen/forum-screen-share.jpg"
           },
