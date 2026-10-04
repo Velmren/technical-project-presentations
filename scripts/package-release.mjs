@@ -33,8 +33,10 @@ const excluded = new Set([path.resolve('out/forma/live'), ...excludedBuilds.map(
 const galleryPrivate = existsSync('src/app/_video') && !existsSync('src/app/video');
 const excludedPaths = galleryPrivate ? ['assets/video'] : [];
 for (const rel of excludedPaths) excluded.add(path.resolve('out', rel));
-await cp('out', path.join(bundle, 'portfolio'), { recursive: true, filter: source => !excluded.has(path.resolve(source)) });
-await cp('demos/forma', path.join(bundle, 'demos/forma'), { recursive: true });
+// Dot files (.gitignore, .DS_Store) are housekeeping, not part of the site; the server's deploy check rejects them.
+const visible = source => !path.basename(source).startsWith('.');
+await cp('out', path.join(bundle, 'portfolio'), { recursive: true, filter: source => visible(source) && !excluded.has(path.resolve(source)) });
+await cp('demos/forma', path.join(bundle, 'demos/forma'), { recursive: true, filter: visible });
 
 // Large compressible files get .br/.gz siblings that Caddy serves as they are
 // (file_server precompressed), so the 40 MB Godot wasm is not recompressed per request.
