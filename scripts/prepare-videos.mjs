@@ -34,11 +34,11 @@ const TILE_STEPS = { wide: [480, 720, 960, 1280], tall: [360, 540, 720] };
 // cannot be told from the poster reduced without loss (TILE_CLOSE, as SSIM). A frame that does not get there, one
 // full of fine detail or grain, takes the best level that keeps it within its allowance and under TILE_SHARE of
 // the weight of the poster itself. The allowance is TILE_BITS bits per pixel for a copy of TILE_BITS_AT pixels
-// (960x540) and grows per pixel as the copy gets smaller: a small picture packs the same detail into fewer pixels,
-// and at a flat rate the 480 px copy of a detailed frame came out visibly softer than the 1280 px one.
+// (960x540) or more, and grows per pixel as the copy gets smaller: a small picture packs the same detail into
+// fewer pixels, and at a flat rate the 480 px copy of a detailed frame came out visibly softer than the 1280 px one.
 const TILE_LEVELS = [34, 32, 30, 28, 26, 24, 22, 20, 18, 16, 14, 12, 10];
 const TILE_CLOSE = 0.99;
-const TILE_BITS = 1.25;
+const TILE_BITS = 1.22;
 const TILE_BITS_AT = 960 * 540;
 const TILE_BITS_SLOPE = 0.35;
 const TILE_SHARE = 0.6;
@@ -63,7 +63,7 @@ function makeTile(poster, width, shape) {
   // The height is given outright: rounding it to an even number would change the shape of a 720x405 copy.
   const reduce = `scale=${width}:${Math.round(width * shape)}:flags=lanczos`;
   const pixels = width * Math.round(width * shape);
-  const limit = Math.min(TILE_BITS * pixels / 8 * (TILE_BITS_AT / pixels) ** TILE_BITS_SLOPE, TILE_SHARE * statSync(poster).size);
+  const limit = Math.min(TILE_BITS * pixels / 8 * Math.max(1, (TILE_BITS_AT / pixels) ** TILE_BITS_SLOPE), TILE_SHARE * statSync(poster).size);
   let chosen;
   // From the lightest level up: stop at the first copy that is close enough, or before the one that is too heavy.
   for (const level of TILE_LEVELS) {

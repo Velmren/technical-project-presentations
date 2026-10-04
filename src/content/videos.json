@@ -195,10 +195,12 @@
           "height": 1080,
           "duration": 20.9,
           "src": {
-            "ru": "/assets/video/sono-promo/sono-promo.mp4"
+            "ru": "/assets/video/sono-promo/sono-promo-ru.mp4",
+            "en": "/assets/video/sono-promo/sono-promo-en.mp4"
           },
           "poster": {
-            "ru": "/assets/video/sono-promo/sono-promo-poster.webp"
+            "ru": "/assets/video/sono-promo/sono-promo-poster-ru.webp",
+            "en": "/assets/video/sono-promo/sono-promo-poster-en.webp"
           },
           "posterWidths": [
             480,
@@ -208,10 +210,14 @@
             1920
           ],
           "share": {
-            "ru": "/assets/video/sono-promo/sono-promo-share.jpg"
+            "ru": "/assets/video/sono-promo/sono-promo-share-ru.jpg",
+            "en": "/assets/video/sono-promo/sono-promo-share-en.jpg"
           },
           "lightPoster": true,
-          "preview": "/assets/video/sono-promo/sono-promo-hover.mp4"
+          "preview": {
+            "ru": "/assets/video/sono-promo/sono-promo-hover.mp4",
+            "en": "/assets/video/sono-promo/sono-promo-hover-en.mp4"
+          }
         }
       ]
     },
