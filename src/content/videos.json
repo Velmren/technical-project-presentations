@@ -1,5 +1,9 @@
 {
   "mediaBase": "",
+  "home": [
+    "kalder",
+    "orbit-promo"
+  ],
   "videos": [
     {
       "slug": "lumi-promo",
