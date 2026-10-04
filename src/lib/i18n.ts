@@ -13,7 +13,9 @@ export const languageAddresses = (path: string) => ({ ru: path, en: localePath('
 
 export const UI = {
   ru: {
-    nav: 'Основная навигация', work: 'Работы', video: 'Видео', about: 'Обо мне', contact: 'Контакты', language: 'Язык',
+    nav: 'Основная навигация', work: 'Работы', services: 'Услуги', video: 'Видео', about: 'Обо мне', contact: 'Контакты', language: 'Язык',
+    // On a work page: the link to the service this work is an example of.
+    serviceLink: (name: string) => `Услуга: ${name}`,
     // Shown on an English page to a visitor whose browser is Russian.
     thisLanguage: 'Версия на русском', closeHint: 'Закрыть',
     // Contacts: the footer block, the contacts page and the line under a work or a clip.
@@ -39,7 +41,8 @@ export const UI = {
     tags: { 'Все': 'Все', 'Веб': 'Веб', 'Игры': 'Игры', 'Анимация': 'Анимация', '3D': '3D', 'Инструменты': 'Инструменты', 'Дизайн': 'Дизайн', 'Minecraft': 'Minecraft' } as Record<string, string>,
   },
   en: {
-    nav: 'Main navigation', work: 'Work', video: 'Video', about: 'About', contact: 'Contact', language: 'Language',
+    nav: 'Main navigation', work: 'Work', services: 'Services', video: 'Video', about: 'About', contact: 'Contact', language: 'Language',
+    serviceLink: (name: string) => `Service: ${name}`,
     // Shown on a Russian page to a visitor whose browser is not Russian.
     thisLanguage: 'English version', closeHint: 'Close',
     telegram: 'Telegram', writeTelegram: 'Write on Telegram',

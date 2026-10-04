@@ -1,0 +1,253 @@
+{
+  "common": {
+    "ru": {
+      "label": "Услуга",
+      "hub": {
+        "seo": {
+          "title": "Услуги: сайты, интернет-магазины, ролики и анимация",
+          "description": "Разработка лендингов и сайтов на Tilda, интернет-магазинов, рекламных роликов и анимации. К каждой услуге примеры, которые можно открыть."
+        },
+        "title": "Что можно заказать",
+        "lead": "У каждой услуги есть примеры в работающем виде. Откройте, посмотрите, напишите, что нужно вам."
+      },
+      "getsTitle": "Что вы получите",
+      "worksTitle": "Примеры, которые можно открыть",
+      "clipsTitle": "Примеры роликов",
+      "stepsTitle": "Как идёт работа",
+      "faqTitle": "Вопросы",
+      "seeExamples": "Смотреть примеры",
+      "steps": [
+        { "title": "Задача", "text": "Вы рассказываете, что нужно и к какому сроку. Я задаю уточняющие вопросы и предлагаю решение." },
+        { "title": "Цена и срок", "text": "Называю цену и срок под вашу задачу. Как удобнее платить, договариваемся: например, двумя частями или по этапам." },
+        { "title": "Работа", "text": "Показываю промежуточный результат, который можно открыть и проверить, и учитываю ваши правки." },
+        { "title": "Сдача", "text": "Вы получаете готовый результат и всё, что нужно, чтобы им пользоваться. Если после сдачи найдётся моя ошибка, исправлю." }
+      ]
+    },
+    "en": {
+      "label": "Service",
+      "hub": {
+        "seo": {
+          "title": "Services: Shopify, WooCommerce, game UI, Minecraft plugins",
+          "description": "Shopify theme customization, WooCommerce development, game UI and Godot builds, Minecraft plugin development. Every service comes with examples you can open."
+        },
+        "title": "What you can order",
+        "lead": "Every service comes with working examples. Open them, try them, then write what you need."
+      },
+      "getsTitle": "What you get",
+      "worksTitle": "Examples you can open",
+      "clipsTitle": "Video examples",
+      "stepsTitle": "How the work goes",
+      "faqTitle": "Questions",
+      "seeExamples": "See the examples",
+      "steps": [
+        { "title": "The task", "text": "You tell me what you need and by when. I ask clarifying questions and suggest a solution." },
+        { "title": "Price and timeline", "text": "I quote a price and a timeline for your task. We agree on how you pay: in two parts or by stages, for example." },
+        { "title": "The work", "text": "Along the way I show results you can open and check, and I work in your feedback." },
+        { "title": "Handover", "text": "You get the finished result and everything you need to use it. If a mistake of mine turns up after handover, I fix it." }
+      ]
+    }
+  },
+  "services": [
+    {
+      "slug": "landing",
+      "locale": "ru",
+      "seo": {
+        "title": "Заказать лендинг: разработка лендинга под ключ",
+        "description": "Разработка лендинга под ключ: структура, дизайн, вёрстка, форма заявки. Примеры можно открыть и пройти до заявки. Цена считается под задачу."
+      },
+      "name": "Лендинг",
+      "title": "Страница, которая ведёт посетителя от\u00a0первого экрана к\u00a0заявке",
+      "lead": "Одна страница под одну цель: человек понимает, что вы предлагаете, находит ответы на свои вопросы и оставляет заявку. Ниже три такие страницы, каждую можно открыть и пройти до конца.",
+      "ask": "Нужен лендинг?",
+      "gets": [
+        { "title": "Первый экран, который объясняет", "text": "Что вы предлагаете и кому, одной фразой и одной кнопкой." },
+        { "title": "Доводы в порядке вопросов", "text": "Блоки идут так, как у посетителя возникают вопросы: что это, почему вам можно верить, сколько стоит, что дальше." },
+        { "title": "Заявки там, где вы их читаете", "text": "Короткая форма, заявки приходят в почту, Telegram или таблицу. Перед сдачей проверяю путь заявки от кнопки до вас." },
+        { "title": "Телефон в первую очередь", "text": "Страница собрана под экран телефона и быстро открывается на мобильном интернете." }
+      ],
+      "works": ["sono", "tilda-webinar", "tilda-interior"],
+      "faq": [
+        { "q": "Сколько стоит лендинг?", "a": "Зависит от объёма: сколько экранов, есть ли готовые тексты и фото, нужна ли анимация или калькулятор. Цену и срок назову после короткого описания задачи, порядок оплаты обсудим." },
+        { "q": "Когда будет готов?", "a": "Срок называю, когда понятен объём и есть ваши материалы." },
+        { "q": "На чём он будет сделан?", "a": "На Tilda, если вы хотите сами менять тексты и фото. Кодом на React или Next.js, если нужны конфигуратор, калькулятор или сложная анимация." },
+        { "q": "Что нужно от меня?", "a": "Рассказ о том, что вы предлагаете и кому. Логотип и фотографии, если есть. Тексты напишу по вашим ответам." }
+      ]
+    },
+    {
+      "slug": "tilda",
+      "locale": "ru",
+      "seo": {
+        "title": "Сайт на Tilda под ключ: заказать разработку сайта",
+        "description": "Разработка сайта на Tilda под ключ, включая Zero Block: главная, услуги, цены, формы заявок. Четыре опубликованных сайта можно открыть. Цена под задачу."
+      },
+      "name": "Сайт на Tilda",
+      "title": "Сайт, в\u00a0котором вы сами меняете тексты, цены и\u00a0фото",
+      "lead": "Собираю сайт так, чтобы после сдачи он не зависел от меня: правки вносите вы в обычном редакторе, заявки приходят вам. Ниже четыре опубликованных сайта.",
+      "ask": "Нужен сайт на Tilda?",
+      "gets": [
+        { "title": "Свой вид, а не шаблон", "text": "Страницы собраны в Zero Block под вашу задачу, без типовых блоков, по которым конструктор узнаётся с первого взгляда." },
+        { "title": "Правки без программиста", "text": "Тексты, цены и фотографии вы меняете сами в редакторе. Покажу, где что лежит." },
+        { "title": "Заявки и запись", "text": "Формы короткие, заявки сохраняются в вашем кабинете и уходят вам в почту или Telegram." },
+        { "title": "Готов к поиску", "text": "У каждой страницы свои заголовок, описание и обложка для ссылок. Служебные страницы закрыты от поисковиков." }
+      ],
+      "works": ["tilda-dental", "tilda-interior", "tilda-tour", "tilda-webinar"],
+      "faq": [
+        { "q": "Сколько стоит сайт на Tilda?", "a": "Цена зависит от числа страниц и от того, есть ли тексты и фото. Назову её после описания задачи, порядок оплаты обсудим. Тариф самой Tilda вы оплачиваете отдельно." },
+        { "q": "Можно ли доработать готовый сайт?", "a": "Да: переделать отдельные страницы, собрать новые блоки в Zero Block, поправить вид на телефоне, настроить формы." },
+        { "q": "Сайт будет в моём аккаунте?", "a": "Да. Сайт создаётся в вашем аккаунте Tilda или передаётся в него при сдаче." },
+        { "q": "Когда Tilda не подойдёт?", "a": "Когда нужен каталог на тысячи товаров, личный кабинет или сложные расчёты. Тогда предложу WordPress или собственную разработку." }
+      ]
+    },
+    {
+      "slug": "online-store",
+      "locale": "ru",
+      "seo": {
+        "title": "Разработка интернет-магазина под ключ: заказать магазин",
+        "description": "Создание интернет-магазина под ключ на WooCommerce, Shopify или Next.js: каталог, корзина, оформление заказа, админка. Демо-магазины можно открыть."
+      },
+      "name": "Интернет-магазин",
+      "title": "Магазин, где покупатель доходит до\u00a0заказа, а\u00a0вы управляете сами",
+      "lead": "Каталог с поиском и фильтрами, корзина, оформление заказа и панель, в которой вы ведёте товары и заказы. Три магазина ниже работают: в каждом можно выбрать товар и дойти до заказа.",
+      "ask": "Нужен интернет-магазин?",
+      "gets": [
+        { "title": "Каталог, в котором находят", "text": "Поиск, фильтры и сравнение настроены под ваш товар: по каким свойствам его выбирают, такие и фильтры." },
+        { "title": "Короткий путь к заказу", "text": "Корзина и оформление без лишних шагов, на телефоне так же удобно, как на компьютере." },
+        { "title": "Управление без разработчика", "text": "Товары, цены, остатки и заказы вы ведёте сами в панели." },
+        { "title": "То, чего нет в шаблонах", "text": "Калькулятор цены, конфигуратор товара, расчёт срока доставки: под ваш товар и ваши правила." }
+      ],
+      "works": ["electronics-store", "falz", "shopify"],
+      "faq": [
+        { "q": "Сколько стоит интернет-магазин?", "a": "Зависит от числа товаров, способов оплаты и доставки и от того, что нужно сверх стандартного. Цену и срок назову после описания задачи, порядок оплаты обсудим." },
+        { "q": "На чём делать магазин?", "a": "WooCommerce, если нужен привычный редактор и много готовых дополнений. Shopify, если продаёте за рубеж. Собственная разработка, если важны скорость и своя логика. Выбор объясню на вашей задаче." },
+        { "q": "Подключите оплату и доставку?", "a": "Да. Какие именно сервисы, зависит от страны и юридического лица, это обсуждаем в начале." },
+        { "q": "Можно начать с небольшого?", "a": "Да. Первым этапом может быть каталог с заявкой вместо оплаты, остальное добавляется следующими этапами." }
+      ]
+    },
+    {
+      "slug": "video",
+      "locale": "ru",
+      "seo": {
+        "title": "Рекламный ролик и анимация на заказ: 3D, моушен, монтаж",
+        "description": "3D-ролик товара, анимация логотипа, промо-ролик, вертикальные ролики для Reels и Shorts, монтаж. Примеры со звуком можно посмотреть. Цена под задачу."
+      },
+      "name": "Ролик и анимация",
+      "title": "Ролик, после которого понятно, что вы продаёте",
+      "lead": "Реклама товара в 3D, заставка с логотипом, промо сервиса, вертикальные ролики для ленты. Делаю картинку, движение и звук и сдаю файлы под те площадки, где ролик будет стоять.",
+      "ask": "Нужен ролик?",
+      "gets": [
+        { "title": "Товар крупным планом", "text": "3D-модель по вашим фото или чертежам: разбор на детали, макро, свет по материалу. То, что трудно или дорого снять камерой." },
+        { "title": "Логотип в движении", "text": "Короткая заставка для видео, сайта и экранов, в горизонтальном и квадратном кадре." },
+        { "title": "Форматы под площадки", "text": "Горизонтальный, квадратный и вертикальный варианты одного ролика, с субтитрами там, где смотрят без звука." },
+        { "title": "Звук в комплекте", "text": "Музыка, шумы и акценты под движение. Лицензии на музыку указываю." }
+      ],
+      "works": ["motion"],
+      "clips": ["kalder", "sono-promo", "orbit-promo", "lorvane"],
+      "faq": [
+        { "q": "Сколько стоит ролик?", "a": "Зависит от длины, от того, есть ли 3D-модель или её нужно сделать, и от числа форматов. Цену и срок назову после описания задачи, порядок оплаты обсудим." },
+        { "q": "Что нужно от меня?", "a": "Фотографии товара или логотип в векторе и пара слов о том, где ролик будет показан. Сценарий предложу сам." },
+        { "q": "Можно смонтировать из моих материалов?", "a": "Да: монтаж из ваших записей, титры, цвет и звук." },
+        { "q": "В каком виде сдаёте?", "a": "MP4 под нужные площадки. Для сайта дополнительно лёгкий файл и первый кадр, для приложений анимация в Lottie." }
+      ]
+    },
+    {
+      "slug": "shopify",
+      "locale": "en",
+      "seo": {
+        "title": "Shopify theme customization and product configurators",
+        "description": "Custom Shopify theme sections in Liquid, product configurators and delivery estimate blocks as theme app extensions. A working demo to try. Priced per task."
+      },
+      "name": "Shopify",
+      "title": "A store where the customer sees the product before ordering",
+      "lead": "I add what a ready theme lacks: a configurator with a live preview, a delivery date on the product page, a section your team places and edits in the theme editor. The demo below works: build a notebook and take it to the cart.",
+      "ask": "Need this in your store?",
+      "gets": [
+        { "title": "A section in your theme", "text": "Written in Liquid, placed on any page in the theme editor. Colours, fonts and buttons come from the theme settings." },
+        { "title": "A configurator with a preview", "text": "The customer picks size, colour and options and sees the result and the price at once. No photo of every combination is needed." },
+        { "title": "A delivery date", "text": "A block that tells when the order ships and arrives. It knows your cutoff time, weekends and closed days." },
+        { "title": "Orders with nothing to clarify", "text": "Every chosen option is written into the order line, so the shop does not have to ask the customer again." }
+      ],
+      "works": ["shopify"],
+      "faq": [
+        { "q": "How much does a customization cost?", "a": "It depends on the scope: one section or several, with or without an app extension. I quote a price and a timeline after a short description of the task, and we agree on how you pay." },
+        { "q": "Do you work in my live store?", "a": "On a copy of the theme. You look at the preview and publish it when it is right." },
+        { "q": "Which themes do you work with?", "a": "Online Store 2.0 themes. The demo is built for Dawn; for another theme the section is fitted to its cart and its styles." },
+        { "q": "Can it work in several languages?", "a": "Yes. The demo interface is translated into five languages, and dates are written the way the customer expects." }
+      ]
+    },
+    {
+      "slug": "woocommerce",
+      "locale": "en",
+      "seo": {
+        "title": "WooCommerce development: custom plugins and configurators",
+        "description": "WooCommerce developer for custom plugins, product configurators and price calculators with a custom WordPress theme. A live demo store to try. Priced per task."
+      },
+      "name": "WooCommerce",
+      "title": "A store that prices a made-to-order product by itself",
+      "lead": "When a product has sizes, materials and options, a standard product page is not enough. I write the calculator, the plugin behind it and the theme around it. The demo is a framing workshop: set the frame size and see the price.",
+      "ask": "Need this in your store?",
+      "gets": [
+        { "title": "A calculator the customer trusts", "text": "Sizes and options change the picture and the total at once. The server prices the choice, so the order carries the same total." },
+        { "title": "Prices you change yourself", "text": "The calculator is a block you place on any page. Materials and rates are edited in the admin, without a developer." },
+        { "title": "A plugin written for your store", "text": "WooCommerce itself is not edited: hooks and a few templates do the work, so updates do not overwrite it." },
+        { "title": "A fast theme", "text": "A custom theme with page cache, self-hosted fonts and light images. The demo scores 98 where the stock theme scores 73 to 78 on the same data." }
+      ],
+      "works": ["falz"],
+      "faq": [
+        { "q": "How much does it cost?", "a": "It depends on the scope: what the calculator counts, how many product types, whether a theme is needed. I quote a price and a timeline after a short description of the task, and we agree on how you pay." },
+        { "q": "Can you work on an existing store?", "a": "Yes. I look at the theme and the plugins first and tell you what can be added safely." },
+        { "q": "Where do orders and enquiries go?", "a": "Into the WooCommerce admin with all chosen options, and as a notification to Telegram or email." },
+        { "q": "Can the store be moved to my hosting?", "a": "Yes. The demo has scripts that move the database and files and replace the address." }
+      ]
+    },
+    {
+      "slug": "game-ui",
+      "locale": "en",
+      "seo": {
+        "title": "Game UI design and Godot game development",
+        "description": "Game UI designer and developer: menus, HUD and whole game screens built and running, Godot games for the browser and desktop. Playable demos. Priced per task."
+      },
+      "name": "Game UI and Godot",
+      "title": "An interface the player understands without a tutorial",
+      "lead": "I design the screens and build them, so you get a working interface, not a set of mock-ups: menus, HUD, inventory, dialogue and the whole loop from the first screen to the result. Three playable examples below.",
+      "ask": "Need an interface or a game?",
+      "gets": [
+        { "title": "Screens that work", "text": "Built in the engine or for the browser, with states, transitions and input from keyboard, mouse and touch." },
+        { "title": "The whole loop", "text": "From the start screen through play to the result and back, so a player can go through it end to end." },
+        { "title": "Two languages from the start", "text": "Texts are kept apart from the layout. The examples run in English and Russian." },
+        { "title": "A build you can show", "text": "A browser build opens by a link. A desktop build comes as an archive." }
+      ],
+      "works": ["game-concept", "mobile-game", "godot"],
+      "faq": [
+        { "q": "How much does it cost?", "a": "It depends on the number of screens and on how much logic stands behind them. I quote a price and a timeline after a short description of the task, and we agree on how you pay." },
+        { "q": "Which engines do you work with?", "a": "Godot 4 for games; HTML, CSS and Three.js for browser interfaces." },
+        { "q": "Can you join an existing project?", "a": "Yes: a set of screens, a HUD or one system, in your repository and your code style." },
+        { "q": "What do you need from me?", "a": "The idea or the build you have, a list of screens and a few references you like." }
+      ]
+    },
+    {
+      "slug": "minecraft-plugins",
+      "locale": "en",
+      "seo": {
+        "title": "Minecraft plugin development: custom Paper plugins",
+        "description": "Minecraft plugin developer for hire: custom Paper plugins in Java with staged scenarios, objectives and progress. Source code and a ready jar. Priced per task."
+      },
+      "name": "Minecraft plugins",
+      "title": "A plugin that turns your map into a game with stages",
+      "lead": "Custom plugins for Paper servers: scenarios that lead players from goal to goal, progress on screen, a finale with a reward. The demo comes with its source code and a ready jar.",
+      "ask": "Need a plugin for your server?",
+      "gets": [
+        { "title": "A scenario players can follow", "text": "Stages open one after another, the current goal and the counter stay on screen." },
+        { "title": "Settings in one file", "text": "Stages, goals and their counts live in the config. Changing the scenario needs no rebuild of the plugin." },
+        { "title": "A map that stays intact", "text": "The scene is built on start-up, blocks cannot be broken, progress resets for a new run." },
+        { "title": "Source code and a jar", "text": "You get the project with its build script and a ready file for the plugins folder." }
+      ],
+      "works": ["encounter"],
+      "faq": [
+        { "q": "How much does a plugin cost?", "a": "It depends on the mechanics and on how much has to be configurable. I quote a price and a timeline after a short description of the task, and we agree on how you pay." },
+        { "q": "Which server versions?", "a": "Paper. The demo is built for 1.21 on Java 21; the version for your server is agreed at the start." },
+        { "q": "Can you change an existing plugin?", "a": "If its source code is available and its licence allows it. Otherwise I write a separate plugin that works next to it." },
+        { "q": "How do I test it?", "a": "You get a jar for a test server and a short list of commands to run through the scenario." }
+      ]
+    }
+  ]
+}

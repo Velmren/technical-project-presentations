@@ -1,5 +1,6 @@
 import { CONTACTS, GITHUB, TELEGRAM } from '@/lib/contacts';
 import { localePath, UI, type Locale } from '@/lib/i18n';
+import { SERVICES } from '@/lib/services';
 import { ContactLinks, TelegramIcon } from './Contacts';
 import { LangHint } from './LangHint';
 import { LangSwitch } from './LangSwitch';
@@ -37,7 +38,7 @@ export function Header({ home = false, locale, alternate }: { home?: boolean; lo
   const t = UI[locale], homePath = localePath(locale, HOME);
   return <header className="cc-header" id="top">
     <a className="cc-logo" href={home ? '#top' : homePath}><Mark/>VELMREN</a>
-    <nav aria-label={t.nav}><a href={(home ? '' : homePath) + '#works'}>{t.work}</a><a href={localePath(locale, VIDEO)}>{t.video}</a><a href={GITHUB} target="_blank" rel="noopener noreferrer">{t.about}</a><a href={localePath(locale, CONTACTS)}>{t.contact}</a></nav>
+    <nav aria-label={t.nav}><a href={(home ? '' : homePath) + '#works'}>{t.work}</a><a href={localePath(locale, SERVICES)}>{t.services}</a><a href={localePath(locale, VIDEO)}>{t.video}</a><a href={GITHUB} target="_blank" rel="noopener noreferrer">{t.about}</a><a href={localePath(locale, CONTACTS)}>{t.contact}</a></nav>
     <LangHint locale={locale} alternate={alternate}/>
     <LangSwitch locale={locale} alternate={alternate} label={t.language}/>
     {/* One click to write from any page, on a phone too, where the navigation is hidden. */}
@@ -59,7 +60,7 @@ export function Footer({ home = false, locale, contacts = true, ask, contained =
     <div className="cc-footer-row">
       <a className="cc-logo" href={home ? '#top' : localePath(locale, HOME)}><Mark/>VELMREN</a>
       <p>{t.quote}</p>
-      <div><a href={localePath(locale, VIDEO)}>{t.video}</a><a href={GITHUB} target="_blank" rel="noopener noreferrer"><GithubIcon/>GitHub</a><a href="#top">{t.toTop}</a></div>
+      <div><a href={localePath(locale, SERVICES)}>{t.services}</a><a href={localePath(locale, VIDEO)}>{t.video}</a><a href={GITHUB} target="_blank" rel="noopener noreferrer"><GithubIcon/>GitHub</a><a href="#top">{t.toTop}</a></div>
     </div>
   </footer>;
 }
