@@ -95,7 +95,7 @@ export async function ServicePage({ service, locale }: { service: Service; local
             <h1 id="sv-title">{service.title}</h1>
             <p className="cs-lead">{service.lead}</p>
             <div className="cc-actions">
-              <a className="cc-button" href={TELEGRAM} target="_blank" rel="noopener noreferrer"><TelegramIcon/>{t.writeTelegram}</a>
+              <a className="cc-button" href={TELEGRAM} target="_blank" rel="noopener noreferrer" data-contact="telegram/service"><TelegramIcon/>{t.writeTelegram}</a>
               <a className="cc-link" href="#sv-examples">{c.seeExamples}</a>
             </div>
           </div>

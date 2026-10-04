@@ -74,6 +74,21 @@ test('the site publishes two contacts and no others', () => {
   assert.deepEqual([...found.mail], ['hello@velmren.com']);
 });
 
+test('every link to Telegram or mail and the copy button name themselves for the count of clicks', () => {
+  const walk = (folder: string): string[] => readdirSync(folder, { withFileTypes: true })
+    .flatMap(entry => entry.isDirectory() ? walk(`${folder}/${entry.name}`) : [`${folder}/${entry.name}`]);
+  let found = 0;
+  for (const file of walk('src/components').filter(name => name.endsWith('.tsx'))) {
+    for (const [tag] of readFileSync(file, 'utf8').matchAll(/<a [^>]*href=\{(?:TELEGRAM|`mailto:)[^>]*>|<button [^>]*onClick=\{copy\}[^>]*>/g)) {
+      found++;
+      assert.match(tag, /data-contact=(?:"|\{`)(?:telegram|mail|copy)\//, `${file}: ${tag}`);
+    }
+  }
+  assert.ok(found >= 6, 'the contact links were not found: the search of this test is out of date');
+  assert.match(readFileSync('src/components/RootDocument.tsx', 'utf8'), /<ContactClicks\/>/);
+  assert.match(readFileSync('scripts/portfolio.caddy', 'utf8'), /path \/ping\/\*/);
+});
+
 test('no page moves a visitor to another language on its own', () => {
   const sources = ['src/lib/i18n.ts', 'src/components/concepts/ConceptCView.tsx', 'src/components/concepts/CasePage.tsx', 'src/components/video/pages.tsx', 'src/components/concepts/LangHint.tsx'];
   for (const file of sources) assert.doesNotMatch(readFileSync(file, 'utf8'), /location\.(replace|assign|href\s*=)/, file);

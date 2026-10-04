@@ -42,7 +42,7 @@ export function Header({ home = false, locale, alternate }: { home?: boolean; lo
     <LangHint locale={locale} alternate={alternate}/>
     <LangSwitch locale={locale} alternate={alternate} label={t.language}/>
     {/* One click to write from any page, on a phone too, where the navigation is hidden. */}
-    <a className="cc-header-link" href={TELEGRAM} target="_blank" rel="noopener noreferrer"><TelegramIcon/>{t.telegram}</a>
+    <a className="cc-header-link" href={TELEGRAM} target="_blank" rel="noopener noreferrer" data-contact="telegram/header"><TelegramIcon/>{t.telegram}</a>
   </header>;
 }
 
@@ -55,7 +55,7 @@ export function Footer({ home = false, locale, contacts = true, ask, contained =
     {contacts && <section className={'cc-contact' + (contained ? ' cc-contact-contained' : '')} aria-labelledby="cc-contact-title">
       <h2 id="cc-contact-title">{ask ?? t.contact}</h2>
       <p>{t.contactsLead}</p>
-      <ContactLinks locale={locale} primary/>
+      <ContactLinks locale={locale} place="footer" primary/>
     </section>}
     <div className="cc-footer-row">
       <a className="cc-logo" href={home ? '#top' : localePath(locale, HOME)}><Mark/>VELMREN</a>

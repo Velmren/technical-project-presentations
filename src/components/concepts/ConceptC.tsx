@@ -147,8 +147,8 @@ function Hero({ works, t, locale }: { works: HomeWork[]; t: Dictionary; locale: 
       <p className="cc-lead">{t.heroLead}</p>
       <div className="cc-actions">
         <a className="cc-button" href="#works">{t.seeWork}</a>
-        <a className="cc-link" href={TELEGRAM} target="_blank" rel="noopener noreferrer">{t.writeTelegram}</a>
-        <a className="cc-link" href={`mailto:${MAIL}`}>{MAIL}</a>
+        <a className="cc-link" href={TELEGRAM} target="_blank" rel="noopener noreferrer" data-contact="telegram/hero">{t.writeTelegram}</a>
+        <a className="cc-link" href={`mailto:${MAIL}`} data-contact="mail/hero">{MAIL}</a>
       </div>
     </div>
     <div className="cc-stage" ref={stage} data-ready={ready} data-structure={structure || undefined}

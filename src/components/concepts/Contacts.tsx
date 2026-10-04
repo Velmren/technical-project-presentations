@@ -1,4 +1,4 @@
-import { MAIL, TELEGRAM } from '@/lib/contacts';
+import { MAIL, TELEGRAM, type ContactPlace } from '@/lib/contacts';
 import { UI, type Locale } from '@/lib/i18n';
 import { CopyMail } from './CopyMail';
 
@@ -7,11 +7,11 @@ export function TelegramIcon() {
 }
 
 // The two ways to write: Telegram and mail, as plain links, plus a button that copies the address.
-// primary makes Telegram the main button of its block.
-export function ContactLinks({ locale, primary = false }: { locale: Locale; primary?: boolean }) {
+// primary makes Telegram the main button of its block; place names the block in the count of clicks.
+export function ContactLinks({ locale, place, primary = false }: { locale: Locale; place: ContactPlace; primary?: boolean }) {
   const t = UI[locale];
   return <div className="cc-contact-links">
-    <a className={primary ? 'cc-button' : 'cc-link'} href={TELEGRAM} target="_blank" rel="noopener noreferrer"><TelegramIcon/>{t.writeTelegram}</a>
-    <span className="cc-mail"><a className="cc-link" href={`mailto:${MAIL}`}>{MAIL}</a><CopyMail locale={locale}/></span>
+    <a className={primary ? 'cc-button' : 'cc-link'} href={TELEGRAM} target="_blank" rel="noopener noreferrer" data-contact={`telegram/${place}`}><TelegramIcon/>{t.writeTelegram}</a>
+    <span className="cc-mail"><a className="cc-link" href={`mailto:${MAIL}`} data-contact={`mail/${place}`}>{MAIL}</a><CopyMail locale={locale} place={place}/></span>
   </div>;
 }

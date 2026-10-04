@@ -48,6 +48,12 @@ velmren.com {
 	header @payloads X-Robots-Tag "noindex"
 	@private path /.git/* /.env /AGENTS.md
 	respond @private 404
+	# Clicks on the contacts are counted without cookies: a page sends one empty request per click
+	# (src/components/ContactClicks.tsx) and the server only writes it down, to a log of its own.
+	# scripts/contact-clicks.mjs sums the log up.
+	@clicks path /ping/*
+	log_name @clicks contacts
+	respond @clicks 204
 	file_server {
 		precompressed br gzip
 	}
@@ -59,6 +65,15 @@ velmren.com {
 		output file /var/log/caddy/velmren-access.log {
 			roll_size 10MiB
 			roll_keep 3
+		}
+	}
+	# Kept for a year: the count is read by weeks and compared over months.
+	log contacts {
+		no_hostname
+		output file /var/log/caddy/velmren-contacts.log {
+			roll_size 10MiB
+			roll_keep 10
+			roll_keep_for 8760h
 		}
 	}
 }

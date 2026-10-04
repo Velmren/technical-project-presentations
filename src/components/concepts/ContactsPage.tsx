@@ -20,7 +20,7 @@ export function ContactsPage({ locale }: { locale: Locale }) {
         <section className="ct-page" aria-labelledby="ct-title">
           <h1 id="ct-title">{t.contact}</h1>
           <p className="cs-lead">{t.contactsLead}</p>
-          <ContactLinks locale={locale} primary/>
+          <ContactLinks locale={locale} place="contacts" primary/>
         </section>
         <section className="ct-first" aria-labelledby="ct-first-title">
           <h2 id="ct-first-title">{t.firstMessage}</h2>

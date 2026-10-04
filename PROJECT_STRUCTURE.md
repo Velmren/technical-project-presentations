@@ -34,6 +34,7 @@ VELMREN portfolio: Next.js 16 (App Router), TypeScript, static export to `out/`.
 │   │   ├── Sections.tsx, ProjectMedia.tsx, Icon.tsx, VideoPlayer.tsx  sections and media of the classic case layout
 │   │   ├── RootDocument.tsx   <html> and <body> shared by the two root layouts: language, body font, skip link
 │   │   ├── JsonLd.tsx         structured data of a page as a script tag
+│   │   ├── ContactClicks.tsx  counts clicks on the contacts without cookies: one empty request to /ping/<contact>/<place>
 │   │   ├── SiteFrame.tsx      header and footer of the classic case layout
 │   │   ├── video/             the site player, gallery, clip and collection pages, the block for the home page, interface
 │   │   │                      texts, README with how to add a clip
@@ -108,7 +109,8 @@ VELMREN portfolio: Next.js 16 (App Router), TypeScript, static export to `out/`.
 │   │                          routes are private (src/app/(ru)/_video)
 │   ├── deploy-release.sh      installs a release on the server
 │   ├── portfolio.caddy        Caddy site config for velmren.com: compression, wasm type, cache headers, 404,
-│   │                          noindex for live demos and service files
+│   │                          noindex for live demos and service files, the log of clicks on the contacts
+│   ├── contact-clicks.mjs     sums that log up: clicks by week and contact, by page and utm_source
 │   ├── prepare-encounter-viewer.mjs  embeds the Encounter State source files in the source viewer
 │   ├── prepare-share.mjs      cuts the link preview picture of every work from its showcase (public/assets/share/);
 │   │                          --check verifies that all of them are in place
@@ -122,7 +124,8 @@ VELMREN portfolio: Next.js 16 (App Router), TypeScript, static export to `out/`.
 │   ├── home.test.ts           home page data: statuses, "other projects" threshold, filters
 │   ├── i18n.test.ts           completeness of English texts
 │   ├── seo.test.ts            search titles and descriptions of works and clips, language versions, no automatic
-│   │                          move to another language, only the two agreed contacts in the sources
+│   │                          move to another language, only the two agreed contacts in the sources, every contact
+│   │                          named for the count of clicks
 │   ├── videos.test.ts         gallery data, schema, row layout and filter
 │   └── services.test.ts       service pages: examples exist, headings speak about the result, unique search titles,
 │                              no prices or deadlines in the texts
