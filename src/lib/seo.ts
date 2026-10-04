@@ -24,16 +24,18 @@ type PageInfo = {
   absoluteTitle?: boolean;
   openGraph?: NonNullable<Metadata['openGraph']>;
   robots?: Metadata['robots'];
+  // The page exists in this language only (a service written for one market): it names no other version.
+  single?: boolean;
 };
 
-export function pageMetadata({ locale, path, title, description, image = socialImage, absoluteTitle, openGraph, robots }: PageInfo): Metadata {
+export function pageMetadata({ locale, path, title, description, image = socialImage, absoluteTitle, openGraph, robots, single = false }: PageInfo): Metadata {
   const address = localePath(locale, path);
   return {
     title: absoluteTitle ? { absolute: title } : title,
     description,
     robots,
-    alternates: { canonical: address, languages: languageAddresses(path) },
-    openGraph: { title, description, url: address, siteName: SITE_NAME, locale: OG_LOCALE[locale], alternateLocale: [OG_LOCALE[other(locale)]], type: 'website', images: [image], ...openGraph },
+    alternates: single ? { canonical: address } : { canonical: address, languages: languageAddresses(path) },
+    openGraph: { title, description, url: address, siteName: SITE_NAME, locale: OG_LOCALE[locale], ...(single ? {} : { alternateLocale: [OG_LOCALE[other(locale)]] }), type: 'website', images: [image], ...openGraph },
     twitter: { card: 'summary_large_image', title, description, images: [image.url] },
   };
 }

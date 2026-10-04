@@ -87,6 +87,32 @@
 .cs-closing p { font-family: var(--cc-display), sans-serif; font-weight: 500; font-size: clamp(32px, 3vw, 44px); line-height: 1.05; }
 .cs-closing .cc-actions { margin-top: 26px; }
 
+/* Service pages reuse the first screen and the detail lists of a work page. Examples stand in a grid, each with
+   its first screen, a line about it and two links. */
+.sv-works { padding: 52px 0 60px; border-top: 1px solid var(--line); }
+.sv-works h2 { font-family: var(--cc-display), sans-serif; font-weight: 500; font-size: clamp(30px, 2.8vw, 42px); line-height: 1.06; }
+.sv-works > .cc-actions { margin-top: 20px; }
+.sv-clips { margin-top: 32px; }
+.sv-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 48px clamp(28px, 3vw, 48px); margin-top: 36px; }
+.sv-grid[data-count='1'] { grid-template-columns: minmax(0, 660px); }
+.sv-grid[data-count='3'] { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.sv-work-shot { display: block; filter: drop-shadow(0 18px 28px rgba(0, 0, 0, .45)); }
+.sv-work .cs-name { margin-top: 22px; }
+.sv-work-text { margin-top: 8px; max-width: 30em; font-size: 16px; line-height: 1.55; color: var(--muted); }
+.sv-work .cc-actions { margin-top: 14px; }
+/* Under the screens of a single work: its name and the two ways in. */
+.sv-one { display: flex; flex-wrap: wrap; align-items: baseline; gap: 12px 32px; margin-top: 40px; padding-top: 22px; border-top: 1px solid var(--line); }
+.sv-one .cc-actions { margin-top: 0; }
+/* Questions read better in one column. */
+.sv-wide dl { grid-template-columns: minmax(0, 1fr); }
+.sv-wide dd { max-width: 46em; }
+/* The list of services: the name and, beside it, what the client ends up with. */
+.sv-list { margin: 0; padding: 0; list-style: none; border-top: 1px solid var(--line); }
+.sv-list a { display: grid; grid-template-columns: minmax(0, 340px) minmax(0, 1fr); gap: 8px 48px; align-items: baseline; padding: 26px 0; border-bottom: 1px solid var(--line); }
+.sv-list b { font-family: var(--cc-display), sans-serif; font-weight: 600; font-size: 26px; line-height: 1.1; }
+.sv-list span { font-size: 18px; line-height: 1.5; color: var(--muted); transition: color .2s; }
+.sv-list a:hover span { color: var(--text); }
+
 /* The contacts page: the two ways to write, then what helps to say in the first message.
    The page is short, so it fills the window and its footer stays at the bottom. */
 .ct-screen { display: flex; flex-direction: column; min-height: 100svh; }
@@ -100,6 +126,7 @@
 .ct-first li { padding: 12px 0; border-bottom: 1px solid var(--line); }
 
 @media (max-width: 1100px) {
+  .sv-grid[data-count='3'] { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .cs-intro { grid-template-columns: minmax(0, 1fr); min-height: 0; padding-top: 28px; }
   .cs-hero-shot { max-width: 820px; }
   .cs-benefit, .cs-benefit-flip, .cs-details { grid-template-columns: minmax(0, 1fr); justify-content: stretch; gap: 32px; }
@@ -124,6 +151,11 @@
   .cs-details { padding: 40px 0; }
   .cs-details dl { grid-template-columns: minmax(0, 1fr); }
   .cs-closing { padding: 44px 0 48px; }
+  .sv-works { padding: 40px 0 44px; }
+  .sv-grid, .sv-grid[data-count] { grid-template-columns: minmax(0, 1fr); gap: 36px; margin-top: 28px; }
+  .sv-list a { grid-template-columns: minmax(0, 1fr); padding: 20px 0; }
+  .sv-list b { font-size: 22px; }
+  .sv-list span { font-size: 16.5px; }
   .ct-page { padding: 36px 0 48px; }
   .ct-page h1 { font-size: 34px; line-height: 1.06; }
   .ct-first { padding: 36px 0 12px; }

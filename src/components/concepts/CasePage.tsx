@@ -3,6 +3,8 @@ import type { Project, ProjectSection } from '@/lib/schema';
 import { fontVariables } from '@/lib/fonts-c';
 import { localePath, UI, type Locale } from '@/lib/i18n';
 import { buttonColors } from '@/lib/color';
+import { servicePath, servicesOf } from '@/lib/services';
+import { services } from '@/lib/services-data';
 import { workData } from '@/lib/structured-data';
 import { JsonLd } from '@/components/JsonLd';
 import { Footer, Header, HOME, TextLink } from './Chrome';
@@ -21,7 +23,7 @@ type Picture = Layer['image'];
 // Every screenshot on the page gets the same frame: a browser window when its address is known, a phone,
 // or a plain cut-out of the interface. fade marks a cut where the interface continues; video replaces the
 // still with a loop of the same view.
-function Shot({ image, url, phone, fade, video, embed, sizes, priority }: { image: Picture; url?: string; phone?: boolean; fade?: boolean; video?: string; embed?: string; sizes: string; priority?: boolean }) {
+export function Shot({ image, url, phone, fade, video, embed, sizes, priority }: { image: Picture; url?: string; phone?: boolean; fade?: boolean; video?: string; embed?: string; sizes: string; priority?: boolean }) {
   const kind = phone ? 'phone' : url ? 'browser' : 'panel';
   return <span className={`cs-shot cs-shot-${kind}` + (fade ? ' cs-shot-fade' : '')}>
     {url && !phone && <span className="cs-shot-bar" aria-hidden="true"><span>{url}</span></span>}
@@ -85,6 +87,8 @@ export function CasePage({ project, locale, share }: { project: Project; locale:
   // The main button takes the colour of the work itself; without one it stays white.
   const colors = project.accent && buttonColors(project.accent);
   const buttonStyle = colors ? { '--button': colors.button, '--button-ink': colors.ink, '--button-hover': colors.hover, '--button-press': colors.press } as React.CSSProperties : undefined;
+  // The services this work is shown under, in the language of the page.
+  const offered = servicesOf(services, locale).filter(item => item.works.includes(project.slug));
   const about = { slug: project.slug, name: project.title, headline: project.seo?.title ?? project.title, description: project.seo?.description ?? project.summary, image: share, year: project.year, technologies: project.technologies };
   return <div className={fontVariables} lang={locale} style={buttonStyle}>
     <JsonLd data={workData(locale, about)}/>
@@ -114,6 +118,7 @@ export function CasePage({ project, locale, share }: { project: Project; locale:
           <div className="cc-actions">
             {live && <TextLink className="cc-button" href={live.href}>{live.label}</TextLink>}
             <TextLink href={localePath(locale, HOME) + '#works'}>{t.allWork}</TextLink>
+            {offered.map(item => <TextLink key={item.slug} href={localePath(locale, servicePath(item.slug))}>{t.serviceLink(item.name)}</TextLink>)}
           </div>
         </section>
       </main>

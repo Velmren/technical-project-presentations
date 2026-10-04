@@ -55,6 +55,31 @@ export function galleryData(locale: Locale, gallery: { name: string; description
 // The trail of a clip page; the clip itself is described next to it as a VideoObject.
 export const clipTrail = (locale: Locale, gallery: Step, clip: Step) => ({ '@context': 'https://schema.org', ...breadcrumbs(locale, [home, gallery, clip]) });
 
+// A service page: the service, the trail to it and the questions with their answers.
+type Offer = { slug: string; name: string; seo: { title: string; description: string }; faq: { q: string; a: string }[] };
+export function serviceData(locale: Locale, service: Offer, listName: string) {
+  const path = `/services/${service.slug}/`;
+  return graph({
+    '@type': 'Service', '@id': address(locale, path) + '#service', url: address(locale, path),
+    name: service.name, serviceType: service.seo.title, description: service.seo.description, provider: { '@id': ORGANIZATION_ID },
+  }, organization, breadcrumbs(locale, [home, { name: listName, path: '/services/' }, { name: service.name, path }]), {
+    '@type': 'FAQPage',
+    mainEntity: service.faq.map(item => ({ '@type': 'Question', name: item.q, acceptedAnswer: { '@type': 'Answer', text: item.a } })),
+  });
+}
+
+// The list of services in one language.
+export function servicesListData(locale: Locale, page: { name: string; description: string; path: string }, list: Step[]) {
+  return graph({
+    '@type': 'CollectionPage', '@id': address(locale, page.path) + '#services', url: address(locale, page.path),
+    name: page.name, description: page.description, inLanguage: locale, isPartOf: website, publisher: { '@id': ORGANIZATION_ID },
+    mainEntity: {
+      '@type': 'ItemList', numberOfItems: list.length,
+      itemListElement: list.map((item, index) => ({ '@type': 'ListItem', position: index + 1, name: item.name, url: address(locale, item.path) })),
+    },
+  }, organization, breadcrumbs(locale, [home, { name: page.name, path: page.path }]));
+}
+
 export function contactsData(locale: Locale, page: { name: string; description: string; path: string }) {
   return graph({
     '@type': 'ContactPage', '@id': address(locale, page.path) + '#contacts', url: address(locale, page.path),
