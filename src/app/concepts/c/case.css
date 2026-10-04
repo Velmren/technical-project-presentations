@@ -93,13 +93,22 @@
 .sv-works h2 { font-family: var(--cc-display), sans-serif; font-weight: 500; font-size: clamp(30px, 2.8vw, 42px); line-height: 1.06; }
 .sv-works > .cc-actions { margin-top: 20px; }
 .sv-clips { margin-top: 32px; }
-.sv-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 48px clamp(28px, 3vw, 48px); margin-top: 36px; }
+.sv-grid { --sv-gap: 48px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--sv-gap) clamp(28px, 3vw, 48px); margin-top: 36px; }
 .sv-grid[data-count='1'] { grid-template-columns: minmax(0, 660px); }
 .sv-grid[data-count='3'] { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 .sv-work-shot { display: block; filter: drop-shadow(0 18px 28px rgba(0, 0, 0, .45)); }
 .sv-work .cs-name { margin-top: 22px; }
 .sv-work-text { margin-top: 8px; max-width: 30em; font-size: 16px; line-height: 1.55; color: var(--muted); }
 .sv-work .cc-actions { margin-top: 14px; }
+/* Screens differ in proportions: in a row they stand on one line, and the lines of their captions match.
+   The space between rows of cards is the padding of a card: a gap of the grid would also part the lines
+   inside a card. */
+@supports (grid-template-rows: subgrid) {
+  .sv-grid { row-gap: 0; margin-bottom: calc(-1 * var(--sv-gap)); }
+  .sv-work { display: grid; grid-template-rows: subgrid; grid-row: span 4; padding-bottom: var(--sv-gap); }
+  .sv-screen { grid-row: span 3; }
+  .sv-work-shot { align-self: end; }
+}
 /* Under the screens of a single work: its name and the two ways in. */
 .sv-one { display: flex; flex-wrap: wrap; align-items: baseline; gap: 12px 32px; margin-top: 40px; padding-top: 22px; border-top: 1px solid var(--line); }
 .sv-one .cc-actions { margin-top: 0; }
@@ -107,7 +116,7 @@
 .sv-wide dl { grid-template-columns: minmax(0, 1fr); }
 .sv-wide dd { max-width: 46em; }
 /* The list of services: the name and, beside it, what the client ends up with. */
-.sv-list { margin: 0; padding: 0; list-style: none; border-top: 1px solid var(--line); }
+.sv-list { margin-block: 0; padding: 0; list-style: none; border-top: 1px solid var(--line); }
 .sv-list a { display: grid; grid-template-columns: minmax(0, 340px) minmax(0, 1fr); gap: 8px 48px; align-items: baseline; padding: 26px 0; border-bottom: 1px solid var(--line); }
 .sv-list b { font-family: var(--cc-display), sans-serif; font-weight: 600; font-size: 26px; line-height: 1.1; }
 .sv-list span { font-size: 18px; line-height: 1.5; color: var(--muted); transition: color .2s; }
@@ -152,7 +161,7 @@
   .cs-details dl { grid-template-columns: minmax(0, 1fr); }
   .cs-closing { padding: 44px 0 48px; }
   .sv-works { padding: 40px 0 44px; }
-  .sv-grid, .sv-grid[data-count] { grid-template-columns: minmax(0, 1fr); gap: 36px; margin-top: 28px; }
+  .sv-grid, .sv-grid[data-count] { --sv-gap: 36px; grid-template-columns: minmax(0, 1fr); margin-top: 28px; }
   .sv-list a { grid-template-columns: minmax(0, 1fr); padding: 20px 0; }
   .sv-list b { font-size: 22px; }
   .sv-list span { font-size: 16.5px; }

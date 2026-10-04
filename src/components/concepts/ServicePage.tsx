@@ -52,7 +52,7 @@ function Screens({ project, locale }: { project: Project; locale: Locale }) {
     <div className="sv-grid" data-count={benefits.length}>{benefits.map(benefit => {
       // The whole screen rather than the detail beside it; a phone screen only when there is nothing else.
       const layer = benefit.layers.find(one => !one.phone && !one.front) ?? benefit.layers.find(one => !one.phone) ?? benefit.layers[0];
-      return <article className="sv-work" key={benefit.title}>
+      return <article className="sv-work sv-screen" key={benefit.title}>
         <span className="sv-work-shot"><Shot image={layer.image} url={layer.url} phone={layer.phone} fade={layer.fade} sizes={SCREEN}/></span>
         <p className="cs-name"><b>{benefit.title}</b></p>
         <p className="sv-work-text">{benefit.text}</p>
