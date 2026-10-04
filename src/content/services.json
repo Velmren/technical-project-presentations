@@ -17,10 +17,10 @@
       "faqTitle": "Вопросы",
       "seeExamples": "Смотреть примеры",
       "steps": [
-        { "title": "Задача", "text": "Вы рассказываете, что нужно и к какому сроку. Я задаю уточняющие вопросы и предлагаю решение." },
-        { "title": "Цена и срок", "text": "Называю цену и срок под вашу задачу. Как удобнее платить, договариваемся: например, двумя частями или по этапам." },
-        { "title": "Работа", "text": "Показываю промежуточный результат, который можно открыть и проверить, и учитываю ваши правки." },
-        { "title": "Сдача", "text": "Вы получаете готовый результат и всё, что нужно, чтобы им пользоваться. Если после сдачи найдётся моя ошибка, исправлю." }
+        { "title": "Задача", "text": "Вы рассказываете, что нужно и\u00a0к\u00a0какому сроку. Я\u00a0задаю уточняющие вопросы и\u00a0предлагаю решение." },
+        { "title": "Цена и срок", "text": "Называю цену и\u00a0срок под вашу задачу. Как удобнее платить, договариваемся: например, двумя частями или по\u00a0этапам." },
+        { "title": "Работа", "text": "Показываю промежуточный результат, который можно открыть и\u00a0проверить, и\u00a0учитываю ваши правки." },
+        { "title": "Сдача", "text": "Вы получаете готовый результат и\u00a0всё, что нужно, чтобы им пользоваться. Если после сдачи найдётся моя ошибка, исправлю." }
       ]
     },
     "en": {
@@ -40,10 +40,10 @@
       "faqTitle": "Questions",
       "seeExamples": "See the examples",
       "steps": [
-        { "title": "The task", "text": "You tell me what you need and by when. I ask clarifying questions and suggest a solution." },
-        { "title": "Price and timeline", "text": "I quote a price and a timeline for your task. We agree on how you pay: in two parts or by stages, for example." },
-        { "title": "The work", "text": "Along the way I show results you can open and check, and I work in your feedback." },
-        { "title": "Handover", "text": "You get the finished result and everything you need to use it. If a mistake of mine turns up after handover, I fix it." }
+        { "title": "The task", "text": "You tell me what you need and by when. I\u00a0ask clarifying questions and suggest a\u00a0solution." },
+        { "title": "Price and timeline", "text": "I\u00a0quote a\u00a0price and a\u00a0timeline for your task. We agree on how you pay: in two parts or by stages, for example." },
+        { "title": "The work", "text": "Along the way I\u00a0show results you can open and check, and I\u00a0work in your feedback." },
+        { "title": "Handover", "text": "You get the finished result and everything you need to use it. If a\u00a0mistake of mine turns up after handover, I\u00a0fix\u00a0it." }
       ]
     }
   },
