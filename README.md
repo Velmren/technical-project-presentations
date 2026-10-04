@@ -10,7 +10,7 @@ Live site: https://velmren.com (Russian) and https://velmren.com/en/ (English).
 
 - The home page shows a rotating board of works with category tabs. Its content comes from `src/content/home.json`.
 - Every project has a case page built from one JSON file in `src/content/projects/`. Sections such as media, features, flow, architecture, code and links are validated with Zod and rendered by shared components, so a new project needs no page code.
-- Russian pages live at plain paths, English pages under `/en/`. On the first visit the language follows the browser; a choice made with the switch is remembered.
+- Russian pages live at plain paths, English pages under `/en/`. A page always opens in the language of its address. A first-time visitor whose browser speaks the other language sees a note that offers that version.
 - The site is a static export. There is no Node.js server, database or admin panel at runtime. Some projects ship their own static builds, which are served from `/projects/<name>/` and `/forma/live/`.
 
 ## Projects

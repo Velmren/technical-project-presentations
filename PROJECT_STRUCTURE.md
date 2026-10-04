@@ -7,27 +7,34 @@ VELMREN portfolio: Next.js 16 (App Router), TypeScript, static export to `out/`.
 ├── README.md                  what the site is, projects, commands, credits
 ├── PROJECT_STRUCTURE.md       this map
 ├── package.json               scripts: dev, build, test, typecheck, package:release
-├── next.config.ts             static export, trailing slashes, unoptimised images
+├── next.config.ts             static export, trailing slashes, unoptimised images, the page for a missing address
 ├── tsconfig.json              TypeScript settings, @/* alias for src/*
 ├── src/
 │   ├── app/
-│   │   ├── layout.tsx         root layout: Golos Text, metadata and social preview, frame of the classic case pages
-│   │   ├── page.tsx           home page in Russian
-│   │   ├── [slug]/page.tsx    case page built from src/content/projects/<slug>.json (classic or case layout)
-│   │   ├── en/                English home page (/en/) and case pages (/en/<slug>/)
-│   │   ├── video/, en/video/  the video gallery, clip pages and collections in Russian and English
+│   │   ├── (ru)/              Russian routes with their own root layout (<html lang="ru">); the folder name is not
+│   │   │   │                  part of the address
+│   │   │   ├── layout.tsx     root layout: site metadata, frame of the classic case pages
+│   │   │   ├── page.tsx       home page
+│   │   │   ├── [slug]/page.tsx  case page built from src/content/projects/<slug>.json (classic or case layout)
+│   │   │   ├── video/         the video gallery, clip pages and collections
+│   │   │   └── concepts/c/page.tsx  redirects the old prototype URL to /
+│   │   ├── en/                English routes with their own root layout (<html lang="en">): home (/en/), case pages
+│   │   │                      (/en/<slug>/), the video gallery (/en/video/)
 │   │   ├── concepts/          styles of the current design: concepts.css (live previews), c/concept-c.css (home, header,
-│   │   │                      footer, buttons), c/case.css (case pages); c/page.tsx redirects the old prototype URL to /
+│   │   │                      footer, buttons), c/case.css (case pages)
 │   │   ├── globals.css, editorial.css  styles of the classic case layout
-│   │   ├── not-found.tsx      404 page
-│   │   └── robots.ts, sitemap.ts
+│   │   ├── global-not-found.tsx  404 page for any missing address, in both languages
+│   │   ├── robots.txt/route.ts   robots.txt as plain text (with Clean-param for Yandex)
+│   │   └── sitemap.ts         pages in both languages with their language versions; live demos are not listed
 │   ├── components/
 │   │   ├── Sections.tsx, ProjectMedia.tsx, Icon.tsx, VideoPlayer.tsx  sections and media of the classic case layout
+│   │   ├── RootDocument.tsx   <html> and <body> shared by the two root layouts: language, body font, skip link
 │   │   ├── SiteFrame.tsx      header and footer of the classic case layout
 │   │   ├── video/             the site player, gallery, clip and collection pages, the block for the home page, interface
 │   │   │                      texts, README with how to add a clip
 │   │   └── concepts/          home page (ConceptC, ConceptCView), live work previews, header and footer (Chrome),
-│   │                          language switch, case page (CasePage) with scroll depth (Depth), looping clips (LoopVideo),
+│   │                          language switch and the note about the other language (LangHint), case page (CasePage)
+│   │                          with scroll depth (Depth), looping clips (LoopVideo),
 │   │                          redirects from old URLs (Redirect)
 │   ├── content/
 │   │   ├── home.json          works on the home page: status, placement, texts, previews, facts, links
@@ -40,7 +47,9 @@ VELMREN portfolio: Next.js 16 (App Router), TypeScript, static export to `out/`.
 │       ├── home-view.ts       which works are shown and how they are filtered, without the validator
 │       ├── videos.ts          Zod schema of the gallery data and helpers
 │       ├── catalog.ts         filters for case page data (covered by tests)
-│       ├── i18n.ts            Russian and English: interface strings, translated works and pages, first-visit language
+│       ├── i18n.ts            Russian and English: interface strings, translated works and pages, addresses of the
+│       │                      language versions
+│       ├── seo.ts             page metadata in one shape: title, description, canonical, hreflang, link preview
 │       ├── social.ts          social preview images
 │       ├── color.ts           main button colour of a case page and its text contrast
 │       ├── fonts-c.ts         display fonts (Tektur, Sofia Sans Condensed)
@@ -80,9 +89,10 @@ VELMREN portfolio: Next.js 16 (App Router), TypeScript, static export to `out/`.
 ├── scripts/
 │   ├── prepare-export.mjs     post-processes out/: FORMA build, draft media, Windows segment file names
 │   ├── package-release.mjs    packs a release with a SHA-256 manifest; leaves public/assets/video out while the gallery
-│   │                          routes are private (src/app/_video)
+│   │                          routes are private (src/app/(ru)/_video)
 │   ├── deploy-release.sh      installs a release on the server
-│   ├── portfolio.caddy        Caddy site config for velmren.com: compression, wasm type, cache headers, 404
+│   ├── portfolio.caddy        Caddy site config for velmren.com: compression, wasm type, cache headers, 404,
+│   │                          noindex for live demos and service files
 │   ├── prepare-encounter-viewer.mjs  embeds the Encounter State source files in the source viewer
 │   ├── prepare-videos.mjs     prepares web video, poster, link preview and hover fragment of a clip; --check verifies
 │   │                          the files before a release
@@ -93,6 +103,8 @@ VELMREN portfolio: Next.js 16 (App Router), TypeScript, static export to `out/`.
 │   ├── model.test.ts          case page data and catalogue filters
 │   ├── home.test.ts           home page data: statuses, "other projects" threshold, filters
 │   ├── i18n.test.ts           completeness of English texts
+│   ├── seo.test.ts            search titles and descriptions of works and clips, language versions, no automatic
+│   │                          move to another language
 │   └── videos.test.ts         gallery data, schema, row layout and filter
 └── docs/
     └── THIRD-PARTY.md         third-party assets, fonts and licences

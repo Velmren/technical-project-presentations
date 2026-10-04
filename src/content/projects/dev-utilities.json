@@ -7,6 +7,10 @@
   "eyebrow": "Инструменты разработчика",
   "lead": "Инструменты разработчика, которые не отправляют данные в сеть",
   "summary": "JSON, цвет, хеши и Base64 в одном браузерном приложении. Работает без сервера, на русском и английском, в светлой и тёмной теме.",
+  "seo": {
+    "title": "Веб-приложение на React: инструменты разработчика",
+    "description": "JSON, цвет, хеши и Base64 в одном браузерном приложении на React. Работает без сервера и не отправляет данные в сеть, на русском и английском."
+  },
   "closing": "Попробуйте на своих данных",
   "accent": "#0c6f69",
   "category": "Веб-приложения",
@@ -222,6 +226,10 @@
     "eyebrow": "Developer tools",
     "lead": "Developer tools that never send your data anywhere",
     "summary": "JSON, colour, hashes and Base64 in one browser app. No server, in Russian and English, light and dark.",
+    "seo": {
+      "title": "React web app: developer tools that run offline",
+      "description": "JSON, colour, hashes and Base64 in one browser app on React. No server, nothing is sent over the network, in Russian and English."
+    },
     "closing": "Try it on your own data",
     "actions": [
       "Open the app"

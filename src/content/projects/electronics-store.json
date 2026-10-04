@@ -6,6 +6,10 @@
   "year": 2026,
   "lead": "Интернет-магазин электроники, который работает целиком",
   "summary": "От поиска модели до заказа и управления каталогом. Магазин развёрнут, его можно открыть и пройти.",
+  "seo": {
+    "title": "Интернет-магазин на Next.js: каталог, заказ, админка",
+    "description": "Демо-магазин электроники на Next.js и PostgreSQL: поиск модели, корзина, оформление заказа и управление каталогом. Развёрнут, его можно открыть и пройти."
+  },
   "note": "Демо-режим",
   "category": "Веб-приложения",
   "technologies": [
@@ -234,6 +238,10 @@
     "eyebrow": "Online store",
     "lead": "An electronics store that works end to end",
     "summary": "From finding a model to checkout and catalogue management. The store is live, so you can open it and try it.",
+    "seo": {
+      "title": "Online store on Next.js: catalogue, checkout, admin",
+      "description": "A demo electronics store on Next.js and PostgreSQL: product search, cart, checkout and catalogue management. It is live, so you can open it and try it."
+    },
     "note": "Demo mode",
     "closing": "See the store in action",
     "actions": [

@@ -35,6 +35,17 @@ velmren.com {
 	# Other static files keep their names between releases: cache for an hour only.
 	@static path *.js *.css *.json *.wasm *.pck *.webp *.avif *.png *.jpg *.jpeg *.svg *.ico *.woff *.woff2 *.mp4 *.webm *.zip *.jar
 	header @static ?Cache-Control "public, max-age=3600"
+	# Live demos, service pages and data payloads stay out of search results: the work pages are what should be
+	# found, and they link to the demos. Links on a demo are still followed.
+	@demos path /projects/* /forma/live/* /assets/godot/web/* /concepts/* /en/concepts/*
+	header @demos X-Robots-Tag "noindex, follow"
+	@asset_pages path_regexp ^/assets/.*\.html$
+	header @asset_pages X-Robots-Tag "noindex, follow"
+	@payloads {
+		path *.txt
+		not path /robots.txt
+	}
+	header @payloads X-Robots-Tag "noindex"
 	@private path /.git/* /.env /AGENTS.md
 	respond @private 404
 	file_server {

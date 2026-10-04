@@ -1,4 +1,5 @@
 import { localePath, UI, type Locale } from '@/lib/i18n';
+import { LangHint } from './LangHint';
 import { LangSwitch } from './LangSwitch';
 
 // Header, footer and small marks shared by the home page, the work pages and the error page.
@@ -36,6 +37,7 @@ export function Header({ home = false, locale, alternate }: { home?: boolean; lo
   return <header className="cc-header" id="top">
     <a className="cc-logo" href={home ? '#top' : homePath}><Mark/>VELMREN</a>
     <nav aria-label={t.nav}><a href={(home ? '' : homePath) + '#works'}>{t.work}</a><a href={localePath(locale, VIDEO)}>{t.video}</a><a href={GITHUB} target="_blank" rel="noopener noreferrer">{t.about}</a><a href="#contact">{t.contact}</a></nav>
+    <LangHint locale={locale} alternate={alternate}/>
     <LangSwitch locale={locale} alternate={alternate} label={t.language}/>
     <a className="cc-header-link" href={GITHUB} target="_blank" rel="noopener noreferrer"><GithubIcon/>GitHub</a>
   </header>;

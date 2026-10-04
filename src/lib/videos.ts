@@ -41,6 +41,9 @@ const video = z.object({
   // Short noun for what the clip is, e.g. "Промо игры".
   kind: both,
   text: both,
+  // The title for search results and link previews: the kind of clip first, e.g. "3D-ролик товара: реклама часов KALDER".
+  // The page itself keeps showing title and kind.
+  searchTitle: both.optional(),
   // The first section is the home of the clip; a second one only makes the filter find it.
   sections: z.array(z.enum(SECTIONS)).min(1).max(2),
   date: z.string().regex(/^\d{4}-\d{2}-\d{2}$/),
@@ -120,6 +123,7 @@ export function localizeVideo(item: Video, locale: Locale, mediaBase = '') {
     title: item.title[locale],
     kind: item.kind[locale],
     text: item.text[locale],
+    searchTitle: item.searchTitle?.[locale],
     sections: item.sections,
     year: Number(item.date.slice(0, 4)),
     sound: item.sound?.[locale],

@@ -20,6 +20,10 @@
         "ru": "Утро после бури, посыльный Люми, тайники леса и бой с кабаном. Всё снято в самой игре.",
         "en": "The morning after the storm, Lumi the courier, the forest’s secrets and a fight with a boar. All captured in the game itself."
       },
+      "searchTitle": {
+        "ru": "Промо-ролик игры: Люми, остров ветров",
+        "en": "Game promo trailer: Lumi, Isle of Winds"
+      },
       "sections": [
         "games",
         "promo"
@@ -77,6 +81,10 @@
         "ru": "Вертикальный ролик для Reels и Shorts. Всё происходит на одном листе таблицы, слова появляются вместе с голосом.",
         "en": "A vertical ad for Reels and Shorts. Everything happens on one spreadsheet, and each word appears with the voice."
       },
+      "searchTitle": {
+        "ru": "Вертикальный ролик для онлайн-школы: Ячейка",
+        "en": "Vertical video ad for an online school: Cell"
+      },
       "sections": [
         "promo"
       ],
@@ -131,6 +139,10 @@
         "ru": "Восемь работ в ритме трека: кадр меняется на долю, заставка и титры собраны движением.",
         "en": "Eight works in the rhythm of a track: the picture changes on the beat, the opening and the titles are built in motion."
       },
+      "searchTitle": {
+        "ru": "Шоурил VELMREN: монтаж под музыку",
+        "en": "VELMREN showreel: editing to music"
+      },
       "sections": [
         "editing"
       ],
@@ -179,6 +191,10 @@
       "text": {
         "ru": "Размеры рисуются линиями, цифры считаются на глазах, цвет колонки меняется вместе с фоном.",
         "en": "Dimensions are drawn as lines, numbers count up in front of you and the speaker changes colour with the background."
+      },
+      "searchTitle": {
+        "ru": "Промо-ролик товара: колонка SONO",
+        "en": "Product promo video: SONO speaker"
       },
       "sections": [
         "promo"
@@ -239,6 +255,10 @@
       "text": {
         "ru": "Часы разбираются на детали и собираются обратно: свет по металлу, макро механизма, знак в финале. Модель, анимация и звук сделаны с нуля.",
         "en": "A watch comes apart and back together: light across the metal, a macro of the movement, the wordmark at the end. The model, the animation and the sound were made from scratch."
+      },
+      "searchTitle": {
+        "ru": "3D-ролик товара: реклама часов KALDER",
+        "en": "3D product animation: KALDER watch ad"
       },
       "sections": [
         "promo",
@@ -304,6 +324,10 @@
         "ru": "Вертикальный ролик для Reels и Shorts: очередь за кофе, заказ по дороге, первый капучино за 99 ₽.",
         "en": "A vertical ad for Reels and Shorts: the queue for coffee, an order on the way, the first cappuccino for $0.99."
       },
+      "searchTitle": {
+        "ru": "Вертикальный ролик для кофейни: Окно",
+        "en": "Vertical video ad for a coffee shop: Okno"
+      },
       "sections": [
         "promo"
       ],
@@ -357,6 +381,10 @@
       "text": {
         "ru": "Марка кожи и ароматов: циркуль ведёт окружность, пресс вдавливает печать в картон, вторым оттиском печатается имя.",
         "en": "A leather and fragrance brand: a compass draws the circle, a press sinks the seal into the card and a second impression prints the name."
+      },
+      "searchTitle": {
+        "ru": "Анимация логотипа: заставка LORVANE",
+        "en": "Logo animation: LORVANE brand ident"
       },
       "sections": [
         "motion"
@@ -418,6 +446,10 @@
       "text": {
         "ru": "Игры для детей: мяч выбивает буквы из пола и сам становится последней.",
         "en": "Games for children: a ball knocks the letters out of the floor and becomes the last one itself."
+      },
+      "searchTitle": {
+        "ru": "Анимация логотипа: заставка HOPPO",
+        "en": "Logo animation: HOPPO brand ident"
       },
       "sections": [
         "motion"
@@ -481,6 +513,10 @@
         "ru": "Инженерная компания: знак собирается из четырёх деталей по линиям сетки.",
         "en": "An engineering company: the mark comes together from four parts along the lines of its grid."
       },
+      "searchTitle": {
+        "ru": "Анимация логотипа: заставка KETLUND",
+        "en": "Logo animation: KETLUND brand ident"
+      },
       "sections": [
         "motion"
       ],
@@ -543,6 +579,10 @@
         "ru": "Распродажа магазина посуды и света для Reels и Shorts: скидка 40%, товары с ценами, три дня до конца.",
         "en": "A home goods sale for Reels and Shorts: 40% off, products with their prices, three days to go."
       },
+      "searchTitle": {
+        "ru": "Вертикальный ролик распродажи: ПОЛКА",
+        "en": "Vertical sale video ad: SHELF"
+      },
       "sections": [
         "promo"
       ],
@@ -596,6 +636,10 @@
       "text": {
         "ru": "Вертикальный ролик для соцсетей: упругие буквы, прыжки и конфетти, внутри циклы Lottie.",
         "en": "A vertical clip for social networks: springy letters, jumps and confetti, with Lottie cycles inside."
+      },
+      "searchTitle": {
+        "ru": "Вертикальный ролик с персонажем: Хрум",
+        "en": "Vertical character animation clip: Khrum"
       },
       "sections": [
         "motion"
@@ -656,6 +700,10 @@
         "ru": "Знаки партнёров сменяются на боковом экране форума: у каждого свой выход, выдержка и подпись.",
         "en": "Partner marks change on a side screen of a forum: each has its own entrance, hold and caption."
       },
+      "searchTitle": {
+        "ru": "Анимация логотипов для экрана форума",
+        "en": "Logo animations for a forum screen"
+      },
       "sections": [
         "motion"
       ],
@@ -702,6 +750,10 @@
       "text": {
         "ru": "Покупательница пишет, заказ упаковывают с телефона, и ноутбук тут же видит это в очереди. Устройства в 3D, на экранах живой интерфейс.",
         "en": "A customer writes, the order is packed on the phone and the laptop sees it leave the queue at once. 3D devices with the live interface on screen."
+      },
+      "searchTitle": {
+        "ru": "Промо-ролик сервиса с 3D: ORBIT",
+        "en": "Service promo video with 3D: ORBIT"
       },
       "sections": [
         "promo",

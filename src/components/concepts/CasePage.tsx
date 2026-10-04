@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import type { Project, ProjectSection } from '@/lib/schema';
 import { fontVariables } from '@/lib/fonts-c';
-import { languageGateScript, localePath, UI, type Locale } from '@/lib/i18n';
+import { localePath, UI, type Locale } from '@/lib/i18n';
 import { buttonColors } from '@/lib/color';
 import { Footer, Header, HOME, TextLink } from './Chrome';
 import { Depth } from './Depth';
@@ -83,7 +83,6 @@ export function CasePage({ project, locale }: { project: Project; locale: Locale
   const colors = project.accent && buttonColors(project.accent);
   const buttonStyle = colors ? { '--button': colors.button, '--button-ink': colors.ink, '--button-hover': colors.hover, '--button-press': colors.press } as React.CSSProperties : undefined;
   return <div className={fontVariables} lang={locale} style={buttonStyle}>
-    <script dangerouslySetInnerHTML={{ __html: languageGateScript(locale, alternate) }}/>
     <div className="cc-page">
       <Header locale={locale} alternate={alternate}/>
       <main id="main" className="cs-main">

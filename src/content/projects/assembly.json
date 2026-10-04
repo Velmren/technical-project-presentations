@@ -7,6 +7,10 @@
   "eyebrow": "3D для сайта",
   "lead": "Сайт продаж жилого квартала, где 3D-модель достраивается по графику, пока листаешь страницу",
   "summary": "Три дома вырастают по частям: каркас, перекрытия, фасады, свет в окнах. Прокрутка двигает график строительства, и каждый корпус сдаётся в свой квартал. Ниже рабочий сайт продаж: подбор квартир с планировками, генплан, ипотека, офис продаж.",
+  "seo": {
+    "title": "3D-сайт жилого комплекса: дом строится при прокрутке",
+    "description": "Сайт продаж жилого квартала: 3D-модель трёх домов достраивается при прокрутке, ниже подбор квартир, генплан и ипотека. Модель и сайт сделаны с нуля."
+  },
   "note": "Квартал вымышленный, модель, сцена и сайт сделаны с нуля",
   "closing": "Прокрутите страницу и достройте квартал",
   "accent": "#d9603f",
@@ -211,6 +215,10 @@
     "eyebrow": "3D for the web",
     "lead": "A sales website for a residential quarter where the 3D model goes up on schedule as you scroll",
     "summary": "Three buildings go up part by part: frame, floor slabs, facades, lights in the windows. The scroll moves along the construction schedule, and each building is handed over in its own quarter. Below is a working sales site: apartment search with floor plans, a site plan, mortgage, the sales office.",
+    "seo": {
+      "title": "3D real estate website: a building assembled on scroll",
+      "description": "A sales website for a residential quarter: the 3D model of three buildings goes up as you scroll, with apartment search, a site plan and mortgage below."
+    },
     "note": "The quarter is fictional; the model, the scene and the website were made from scratch",
     "closing": "Scroll the page and finish the quarter",
     "actions": [

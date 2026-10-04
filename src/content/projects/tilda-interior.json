@@ -7,6 +7,10 @@
   "eyebrow": "Сайт на Tilda",
   "lead": "Сайт интерьерной студии, который ведёт от первого впечатления к заявке",
   "summary": "Главная, три концепции квартир, услуги с этапами и две формы. Собран в Zero Block на Tilda и опубликован.",
+  "seo": {
+    "title": "Сайт для студии дизайна интерьера на Tilda",
+    "description": "Сайт интерьерной студии на Tilda Zero Block: главная, три концепции квартир, услуги с этапами и две формы заявки. Опубликован, его можно открыть."
+  },
   "note": "Концепции показаны визуализациями",
   "closing": "Посмотрите сайт вживую",
   "accent": "#58634e",
@@ -195,6 +199,10 @@
     "eyebrow": "Tilda website",
     "lead": "A studio website that leads from the first impression to an enquiry",
     "summary": "Home page, three apartment concepts, services with stages and two forms. Built with Zero Block on Tilda and live.",
+    "seo": {
+      "title": "Interior design studio website on Tilda",
+      "description": "An interior studio website built with Tilda Zero Block: home page, three apartment concepts, services with stages and two enquiry forms. It is live."
+    },
     "note": "Concepts shown as visualisations",
     "closing": "See the site live",
     "actions": [

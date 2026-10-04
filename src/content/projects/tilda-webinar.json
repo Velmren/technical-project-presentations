@@ -7,6 +7,10 @@
   "eyebrow": "Сайт на Tilda",
   "lead": "Лендинг бесплатного урока по декору, который ведёт от первого экрана к самому уроку",
   "summary": "Главная с программой и примером, страница урока из пяти шагов, форма доступа. Собран целиком в Zero Block на Tilda и опубликован.",
+  "seo": {
+    "title": "Лендинг онлайн-урока на Tilda Zero Block",
+    "description": "Лендинг бесплатного урока по декору на Tilda Zero Block: программа, пример, форма доступа и страница урока из пяти шагов. Опубликован."
+  },
   "note": "Школа и урок придуманы для этой работы",
   "closing": "Посмотрите сайт вживую",
   "accent": "#99573f",
@@ -184,6 +188,10 @@
     "eyebrow": "Tilda website",
     "lead": "A landing page for a free decor lesson that leads from the first screen to the lesson itself",
     "summary": "A home page with the programme and an example, a five-step lesson page and an access form. Built entirely with Zero Block on Tilda and live.",
+    "seo": {
+      "title": "Webinar landing page on Tilda Zero Block",
+      "description": "A landing page for a free decor lesson built with Tilda Zero Block: the programme, an example, an access form and a five-step lesson page. It is live."
+    },
     "note": "The school and the lesson were invented for this work",
     "closing": "See the site live",
     "actions": [

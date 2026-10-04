@@ -59,6 +59,14 @@ body:has(.cc-page) { background: #111213; color: #ecedef; color-scheme: dark; }
 .cc-lang a { color: var(--dim); transition: color .2s; }
 .cc-lang a:hover { color: var(--text); }
 .cc-lang span { color: var(--text); }
+/* A note for a first visit from a browser of the other language. It offers that version and never moves the page.
+   It stands before the language switch in the free part of the header, so nothing shifts when it appears. */
+.cc-lang-hint { display: flex; align-items: center; gap: 2px; margin-left: auto; margin-right: -32px; }
+.cc-lang-hint + .cc-lang { margin-left: 0; }
+.cc-lang-hint .cc-link { padding: 4px 0; font-size: 14px; }
+.cc-lang-hint button { display: grid; place-items: center; width: 32px; height: 32px; color: var(--dim); transition: color .2s; }
+.cc-lang-hint button:hover { color: var(--text); }
+.cc-lang-hint svg { width: 10px; height: 10px; }
 
 /* Hero */
 .cc-hero {
@@ -174,6 +182,12 @@ body:has(.cc-page) { background: #111213; color: #ecedef; color-scheme: dark; }
   .cc-header { gap: 20px; height: 64px; }
   .cc-header nav { display: none; }
   .cc-header-link { margin-left: 0; }
+  /* The narrow header has no free part: until it is used or closed, the note stands in place of the language
+     switch and the link beside it, so it never lies over the page. */
+  .cc-lang-hint { position: absolute; top: 50%; right: calc(var(--gutter) - 13px); transform: translateY(-50%); margin: 0; padding-left: 14px; background: var(--ground); }
+  .cc-lang-hint + .cc-lang { margin-left: auto; }
+  .cc-lang-hint .cc-link { padding: 8px 0; }
+  .cc-lang-hint button { width: 36px; height: 36px; }
   .cc-hero { gap: 36px; padding-bottom: 40px; }
   .cc-hero h1 { font-size: 40px; line-height: 1; }
   .cc-lead { margin-top: 18px; font-size: 16.5px; }
@@ -193,6 +207,11 @@ body:has(.cc-page) { background: #111213; color: #ecedef; color-scheme: dark; }
   .cc-phone { width: 26%; border-width: 3px; border-radius: 10px 10px 0 0; }
   .cc-footer { grid-template-columns: 1fr; }
   .cc-footer > div { justify-content: flex-start; }
+}
+/* On the narrowest phones the note is set smaller, so it does not reach the logo. */
+@media (max-width: 350px) {
+  .cc-lang-hint { padding-left: 8px; }
+  .cc-lang-hint .cc-link { font-size: 13px; }
 }
 
 @media (prefers-reduced-motion: reduce) {

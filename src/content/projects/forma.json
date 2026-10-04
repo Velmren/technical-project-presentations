@@ -7,6 +7,10 @@
   "eyebrow": "Каталог",
   "lead": "Каталог для дома, в котором материал и размер видны до покупки",
   "summary": "Двенадцать предметов из семи материалов: фильтры, карточка с чертежом, сравнение в одном масштабе и подборка. На русском и английском.",
+  "seo": {
+    "title": "Каталог товаров на React: фильтры и сравнение",
+    "description": "Каталог предметов для дома на React и TypeScript: фильтры, карточка с чертежом, сравнение в одном масштабе и подборка. На русском и английском."
+  },
   "note": "Демо-каталог",
   "closing": "Соберите подборку в каталоге",
   "accent": "#2745c8",
@@ -230,6 +234,10 @@
     "eyebrow": "Catalogue",
     "lead": "A home catalogue where material and size are clear before buying",
     "summary": "Twelve objects in seven materials: filters, a product page with a drawing, comparison at one scale and a selection. In Russian and English.",
+    "seo": {
+      "title": "Product catalogue on React: filters and comparison",
+      "description": "A home goods catalogue on React and TypeScript: filters, a product page with a drawing, comparison at one scale and a saved selection. In Russian and English."
+    },
     "note": "Demo catalogue",
     "closing": "Put together a selection in the catalogue",
     "actions": [

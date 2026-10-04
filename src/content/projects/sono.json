@@ -7,6 +7,10 @@
   "eyebrow": "Лендинг",
   "lead": "Лендинг, который ведёт от первого экрана к готовой заявке",
   "summary": "Концепт беспроводной колонки: две модели, сравнение, конфигуратор, корзина и заявка. На русском и английском.",
+  "seo": {
+    "title": "Лендинг товара с конфигуратором и заявкой",
+    "description": "Лендинг беспроводной колонки на React: две модели, сравнение, конфигуратор, корзина и заявка. Концепт на русском и английском."
+  },
   "note": "Демо-лендинг",
   "closing": "Соберите свой комплект на лендинге",
   "accent": "#244bd8",
@@ -196,6 +200,10 @@
     "eyebrow": "Landing page",
     "lead": "A landing page that takes visitors from the first screen to a ready enquiry",
     "summary": "A wireless speaker concept: two models, a comparison, a configurator, a bag and an enquiry form. In Russian and English.",
+    "seo": {
+      "title": "Product landing page with a configurator",
+      "description": "A landing page for a wireless speaker on React: two models, a comparison, a configurator, a bag and an enquiry form. A concept in Russian and English."
+    },
     "note": "Demo landing page",
     "closing": "Build your own set on the landing page",
     "actions": [

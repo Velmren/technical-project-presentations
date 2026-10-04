@@ -14,8 +14,12 @@ const layer = z.object({ image, x: z.number().min(0).max(1), y: z.number().min(0
 // Layers move vertically at different speeds, so they must never share horizontal space.
 const sideBySide = (layers: z.infer<typeof layer>[]) => [...layers].sort((a, b) => a.x - b.x)
   .every((l, i, all) => l.x + l.w <= 1 + 1e-9 && (i === 0 || l.x >= all[i - 1].x + all[i - 1].w - 1e-9));
+// What a search result and a link preview say about the work: the kind of work and its platform first,
+// since nobody searches for the name of a demonstration brand. Without it the page falls back to title and summary.
+const seo = z.object({ title: z.string().min(1).max(60), description: z.string().min(1).max(165) });
 // English texts of a project, merged over the Russian ones; arrays follow the order of the original.
 const translation = z.object({
+  seo,
   title: z.string(), eyebrow: z.string(), lead: z.string(), summary: z.string(), note: z.string(), closing: z.string(),
   actions: z.array(z.string()), showcase: z.array(z.string()),
   // English screenshots of a bilingual work, by the source of the Russian one they replace.
@@ -48,6 +52,7 @@ export const projectSchema = z.object({
   // The real site in the first screen, in a browser window at url, with an optional phone screen beside it.
   showcase: z.object({ image, url: z.string().optional(), video: clip.optional(), phone: image.optional(), phoneVideo: clip.optional() }).optional(),
   en: translation.optional(),
+  seo: seo.optional(),
   slug: z.string().regex(/^[a-z][a-z0-9-]*$/), title: z.string().min(1), summary: z.string().min(1),
   category: z.string().min(1), technologies: z.array(z.string().min(1)).min(1), order: z.number(),
   tone: z.enum(['cool', 'warm', 'night', 'slate']).default('cool'),

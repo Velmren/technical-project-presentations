@@ -15,14 +15,14 @@ The gallery at `/video/`, a page for every clip at `/video/<slug>/`, collections
 | `src/components/video/clips.ts` | the clips in show order as posters; `bestClips()` gives the best ones to other pages |
 | `src/components/video/Entry.tsx` | `VideoEntry`, the block that leads into the gallery from the home page |
 | `src/components/video/strings.ts` | interface texts in Russian and English |
-| `src/app/video/`, `src/app/en/video/` | the routes |
+| `src/app/(ru)/video/`, `src/app/en/video/` | the routes |
 | `public/assets/video/<slug>/` | files of a clip |
 | `scripts/prepare-videos.mjs` | makes those files from a master |
 | `tests/videos.test.ts` | data, schema, row layout, filter |
 
 ## Turning the pages off and on
 
-The routes are the folders `src/app/video/` and `src/app/en/video/`. To build the site without the gallery, rename both to `_video`: a folder that starts with an underscore is not a route. `scripts/package-release.mjs` then also leaves `public/assets/video` out of the release. Renaming them back turns the pages on.
+The routes are the folders `src/app/(ru)/video/` and `src/app/en/video/`. To build the site without the gallery, rename both to `_video`: a folder that starts with an underscore is not a route. `scripts/package-release.mjs` then also leaves `public/assets/video` out of the release. Renaming them back turns the pages on.
 
 ## Adding a clip
 
@@ -54,6 +54,7 @@ One record and its files.
      "title": { "ru": "Название", "en": "Title" },
      "kind": { "ru": "Промо игры", "en": "Game promo" },
      "text": { "ru": "Одна-две строки о ролике.", "en": "A line or two about the clip." },
+     "searchTitle": { "ru": "Промо-ролик игры: название", "en": "Game promo video: title" },
      "sections": ["games", "promo"],
      "date": "2026-10-03",
      "featured": 2,
@@ -74,6 +75,7 @@ One record and its files.
 
    - `status`: `accepted` gives the clip its pages; `rework` keeps it in the data without pages.
    - `sections`: `promo`, `games`, `motion`, `3d`, `editing`. The first one is the home of the clip, a second one only makes the filter find it. A vertical clip also goes to the strip of vertical clips by itself. Every poster in that strip stands in one 9:16 frame, so a vertical clip of another shape (3:5, 4:5) is trimmed a little at its sides there; its own page shows the whole frame.
+   - `searchTitle`: the title for search results and link previews. It names the kind of clip first, because that is what people search for: "Анимация логотипа: заставка LORVANE". The page keeps showing `title` and `kind`. Up to 60 characters, unique across the gallery.
    - `featured`: place among the best, 1 first. Clips without it follow from new to old.
    - `sound`: who made the sound and the music. A licensed track is named here with its licence, `soundLink` leads to its page. A silent clip has no `sound`.
    - `work`: the page of the work the clip belongs to, if there is one.

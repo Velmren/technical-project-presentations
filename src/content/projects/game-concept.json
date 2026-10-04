@@ -7,6 +7,10 @@
   "eyebrow": "Интерфейс игры",
   "lead": "Игровой интерфейс орбитального спасательного промысла",
   "summary": "Пилот буксира берёт контракты в разрушенном кольце, готовит корабль и выкупает его у верфи. Полный цикл от контракта до трюма, на русском и английском.",
+  "seo": {
+    "title": "Игровой интерфейс на Three.js: демо LACUNA",
+    "description": "Интерфейс игры про орбитальный спасательный промысел: контракты, подготовка корабля, трюм и верфь. Работает в браузере на JavaScript и Three.js."
+  },
   "note": "Версия 6.2, в разработке",
   "closing": "Возьмите первый контракт",
   "accent": "#ffb44f",
@@ -232,6 +236,10 @@
     "eyebrow": "Game interface",
     "lead": "A game interface for orbital salvage work",
     "summary": "A tug pilot takes contracts in a broken ring, fits the vessel and buys it from the yard. The whole loop from contract to hold, in Russian and English.",
+    "seo": {
+      "title": "Game UI design and build on Three.js: LACUNA",
+      "description": "The interface of a game about orbital salvage work: contracts, fitting the vessel, the hold and the yard. Runs in the browser on JavaScript and Three.js."
+    },
     "note": "Version 6.2, in development",
     "closing": "Take the first contract",
     "actions": [

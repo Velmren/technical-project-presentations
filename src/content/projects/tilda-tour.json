@@ -7,6 +7,10 @@
   "eyebrow": "Сайт на Tilda",
   "lead": "Сайт турклуба, где выезд выбирают по дате и бронируют одной формой",
   "summary": "Главная, три маршрута с программой по часам, расписание с ценами и форма брони. Собран на Tilda и опубликован.",
+  "seo": {
+    "title": "Сайт турклуба на Tilda с расписанием и бронью",
+    "description": "Сайт турклуба на Tilda: три маршрута с программой по часам, расписание выездов с ценами и одна форма брони. Опубликован, его можно открыть."
+  },
   "note": "Турклуб вымышленный, маршруты и фотографии настоящие",
   "closing": "Посмотрите сайт вживую",
   "accent": "#2f6b55",
@@ -195,6 +199,10 @@
     "eyebrow": "Tilda website",
     "lead": "A tour club website where you pick a departure by date and book it in one form",
     "summary": "Home page, three routes with an hour-by-hour programme, a schedule with prices and a booking form. Built on Tilda and live.",
+    "seo": {
+      "title": "Tour club website on Tilda with schedule and booking",
+      "description": "A tour club website on Tilda: three routes with an hour-by-hour programme, a schedule of departures with prices and one booking form. It is live."
+    },
     "note": "The club is fictional, the routes and photos are real",
     "closing": "See the site live",
     "actions": [

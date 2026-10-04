@@ -7,6 +7,10 @@
   "eyebrow": "Доработка магазина на Shopify",
   "lead": "Конфигуратор в теме Shopify: покупатель видит блокнот до заказа",
   "summary": "Секция темы на Liquid, блок срока доставки как расширение приложения и сервер на Node. Собственная демонстрация на вымышленном магазине.",
+  "seo": {
+    "title": "Доработка магазина на Shopify: конфигуратор товара",
+    "description": "Конфигуратор блокнота как секция темы на Liquid, блок срока доставки как расширение приложения и сервер на Node. Демонстрация на вымышленном магазине."
+  },
   "note": "Демо работает без магазина: корзину и даты считает браузер",
   "closing": "Соберите свой блокнот",
   "accent": "#2f4a3c",
@@ -211,6 +215,10 @@
     "eyebrow": "Shopify store customisation",
     "lead": "A configurator in a Shopify theme: the customer sees the notebook before ordering",
     "summary": "A theme section in Liquid, a delivery estimate block as an app extension and a Node server. My own demonstration on a fictional shop.",
+    "seo": {
+      "title": "Shopify product configurator as a custom theme section",
+      "description": "A notebook configurator as a Liquid theme section, a delivery estimate block as an app extension and a Node server. A demonstration on a fictional shop."
+    },
     "note": "The demo runs without a store: the browser keeps the cart and works out the dates",
     "closing": "Build your own notebook",
     "actions": [

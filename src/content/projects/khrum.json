@@ -7,6 +7,10 @@
   "eyebrow": "2D-персонаж",
   "lead": "Кабанчик на собственном риге, который живёт на сайте и в Lottie",
   "summary": "Персонаж на SVG-риге: состояния, действия, мимика и реакции на курсор. Циклы запекаются в Lottie для приложений и интерфейсов.",
+  "seo": {
+    "title": "Анимация персонажа для сайта и Lottie: Хрум",
+    "description": "Персонаж на SVG-риге: состояния, действия, мимика и реакции на курсор. Циклы запекаются в Lottie для приложений и интерфейсов."
+  },
   "note": "На русском и английском",
   "closing": "Познакомьтесь с Хрумом",
   "accent": "#6a47c2",
@@ -234,6 +238,10 @@
     "eyebrow": "2D character",
     "lead": "A boar on his own rig who lives on a website and in Lottie",
     "summary": "A character on an SVG rig: states, actions, facial expressions and reactions to the pointer. Loops are baked into Lottie for apps and interfaces.",
+    "seo": {
+      "title": "Character animation for web and Lottie: Khrum",
+      "description": "A character on an SVG rig: states, actions, facial expressions and reactions to the pointer. Loops are baked into Lottie for apps and interfaces."
+    },
     "note": "In Russian and English",
     "closing": "Meet Khrum",
     "actions": [

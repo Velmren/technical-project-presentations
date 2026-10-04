@@ -2,15 +2,21 @@ import type { MetadataRoute } from 'next';
 import { getProjects } from '@/lib/projects';
 import { shown } from '@/components/video/clips';
 import { galleryPath, videoPath } from '@/lib/videos';
+import { languageAddresses, localePath } from '@/lib/i18n';
+import { SITE } from '@/lib/seo';
 export const dynamic = 'force-static';
-// Home and project pages in both languages, plus the live versions hosted on this site (a page path, not a file under /assets/).
-const livePage = (href?: string) => href && href.startsWith('/') && href.endsWith('/') && !href.startsWith('/assets/');
+// The home, the work pages, the video gallery and its clips, each in both languages and naming its other version.
+// Live demos are left out: the work pages are what should be found, and they link to the demos.
+// Collections of clips open only by their links and are not listed either.
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const projects = await getProjects();
-  const live = projects.map(project => project.actions[0]?.href).filter(livePage);
-  const english = projects.filter(project => project.presentation === 'case' && project.en).map(project => `/en/${project.slug}/`);
-  // The video gallery and its clips; collections open only by their links and are not listed.
-  const video = [galleryPath('ru'), galleryPath('en'), ...shown.flatMap(clip => [videoPath('ru', clip.slug), videoPath('en', clip.slug)])];
-  const pages = ['/', '/en/', ...projects.map(project => `/${project.slug}/`), ...english, ...live, ...video];
-  return pages.map(path => ({ url: `https://velmren.com${path}` }));
+  // A work page of the earlier template has no English version.
+  const russianOnly = projects.filter(project => !(project.presentation === 'case' && project.en)).map(project => `/${project.slug}/`);
+  const paths = ['/', ...projects.map(project => `/${project.slug}/`), galleryPath('ru'), ...shown.map(clip => videoPath('ru', clip.slug))];
+  // The day of the build: every release rewrites all pages.
+  const lastModified = new Date().toISOString().slice(0, 10);
+  const absolute = (path: string) => Object.fromEntries(Object.entries(languageAddresses(path)).map(([language, address]) => [language, SITE + address]));
+  return paths.flatMap(path => russianOnly.includes(path)
+    ? [{ url: SITE + path, lastModified }]
+    : (['ru', 'en'] as const).map(locale => ({ url: SITE + localePath(locale, path), lastModified, alternates: { languages: absolute(path) } })));
 }

@@ -7,6 +7,10 @@
   "eyebrow": "Панель управления",
   "lead": "Панель, в которой весь день интернет-магазина на одном экране",
   "summary": "Заказы, оплаты, склад, задачи и переписка с клиентами связаны между собой. Демо на вымышленном магазине, на русском и английском.",
+  "seo": {
+    "title": "Админ-панель для интернет-магазина: демо ORBIT",
+    "description": "Панель управления магазином на React: заказы, оплаты, склад, задачи и переписка с клиентами связаны между собой. Демо можно открыть, на русском и английском."
+  },
   "note": "Демо-панель",
   "closing": "Откройте панель и пройдите один заказ",
   "accent": "#1eaefc",
@@ -235,6 +239,10 @@
     "eyebrow": "Admin panel",
     "lead": "A panel that puts an online store's whole day on one screen",
     "summary": "Orders, payments, stock, tasks and customer messages are linked together. A demo on a fictional store, in Russian and English.",
+    "seo": {
+      "title": "Admin dashboard for an online store: ORBIT demo",
+      "description": "A store operations panel on React: orders, payments, stock, tasks and customer messages are linked together. The demo is live, in Russian and English."
+    },
     "note": "Demo panel",
     "closing": "Open the panel and follow one order",
     "actions": [

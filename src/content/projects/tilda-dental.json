@@ -7,6 +7,10 @@
   "eyebrow": "Сайт на Tilda",
   "lead": "Сайт районной стоматологии, на котором цена и врач известны до визита",
   "summary": "Главная, прайс, врачи, контакты и запись на приём. Собран на Tilda и опубликован.",
+  "seo": {
+    "title": "Сайт для стоматологии на Tilda: прайс, врачи, запись",
+    "description": "Сайт стоматологии на Tilda: цены на главной, врачи с фотографиями и часами приёма, запись за минуту. Демонстрационная работа, сайт опубликован."
+  },
   "note": "Клиника, врачи и цены вымышлены",
   "closing": "Посмотрите сайт вживую",
   "accent": "#1f5a4c",
@@ -195,6 +199,10 @@
     "eyebrow": "Tilda website",
     "lead": "A neighbourhood dental clinic site where the price and the doctor are known before the visit",
     "summary": "Home page, price list, doctors, contacts and an appointment form. Built on Tilda and live.",
+    "seo": {
+      "title": "Dental clinic website on Tilda: prices, doctors, booking",
+      "description": "A dental clinic website on Tilda: prices on the home page, doctors with photos and hours, an appointment in a minute. A demonstration work, the site is live."
+    },
     "note": "The clinic, doctors and prices are fictional",
     "closing": "See the site live",
     "actions": [

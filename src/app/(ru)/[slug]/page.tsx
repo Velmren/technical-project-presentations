@@ -8,6 +8,7 @@ import { Cover } from '@/components/ProjectMedia';
 import { Icon } from '@/components/Icon';
 import { VideoPlayer } from '@/components/VideoPlayer';
 import { CasePage } from '@/components/concepts/CasePage';
+import { pageMetadata } from '@/lib/seo';
 import { projectImage } from '@/lib/social';
 export const dynamicParams = false;
 export async function generateStaticParams() { return (await getProjects()).map(project => ({ slug: project.slug })); }
@@ -15,9 +16,9 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const project = (await getProjects()).find(project => project.slug === slug);
   if (!project) return {};
-  const languages = project.presentation === 'case' && project.en ? { ru: `/${slug}/`, en: `/en/${slug}/` } : undefined;
-  return { title: project.title, description: project.summary, alternates: { canonical: `/${slug}/`, languages },
-    openGraph: { title: project.title, description: project.summary, url: `/${slug}/`, locale: 'ru_RU', type: 'website', siteName: 'VELMREN', images: [projectImage(project)] } };
+  const page = pageMetadata({ locale: 'ru', path: `/${slug}/`, title: project.seo?.title ?? project.title, description: project.seo?.description ?? project.summary, image: projectImage(project) });
+  // A page of the earlier template has no English version to name.
+  return project.presentation === 'case' && project.en ? page : { ...page, alternates: { canonical: `/${slug}/` } };
 }
 export default async function ProjectPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;

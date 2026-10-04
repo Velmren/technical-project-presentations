@@ -7,11 +7,20 @@ export const LANG_KEY = 'velmren.lang';
 
 export const localePath = (locale: Locale, path: string) => locale === 'en' ? '/en' + path : path;
 
+// The addresses a page names as its language versions; path is the Russian one.
+// x-default is the English page: it serves everyone the Russian one is not written for.
+export const languageAddresses = (path: string) => ({ ru: path, en: localePath('en', path), 'x-default': localePath('en', path) });
+
 export const UI = {
   ru: {
     nav: 'Основная навигация', work: 'Работы', video: 'Видео', about: 'Обо мне', contact: 'Контакты', language: 'Язык',
-    heroTitle: 'Интерактивные продукты и\u00a0игровые системы',
-    heroLead: 'Веб-интерфейсы, игровые механики и небольшие продукты: от идеи до работающей сборки.',
+    // Shown on an English page to a visitor whose browser is Russian.
+    thisLanguage: 'Версия на русском', closeHint: 'Закрыть',
+    // What the practice does, in the words clients search with: the home title, its description and the first screen.
+    siteTitle: 'VELMREN · Сайты, интернет-магазины, игры и моушен на заказ',
+    siteAbout: 'Сайты на Tilda, WordPress и Next.js, интернет-магазины, админ-панели, игры на Godot и моушен-графика. Работы можно открыть и проверить.',
+    heroTitle: 'Сайты, магазины, игры и\u00a0моушен',
+    heroLead: 'На Tilda, WordPress, Shopify, Next.js и Godot: от идеи до работающей сборки.',
     seeWork: 'Смотреть работы', getInTouch: 'Написать мне',
     structure: 'Структура', pause: 'Остановить смену работ', resume: 'Продолжить смену работ',
     boardLabel: (title: string) => `${title}: открыть проект. Стрелки влево и вправо переключают работы`,
@@ -23,8 +32,12 @@ export const UI = {
   },
   en: {
     nav: 'Main navigation', work: 'Work', video: 'Video', about: 'About', contact: 'Contact', language: 'Language',
-    heroTitle: 'Interactive products and game systems',
-    heroLead: 'Web interfaces, game mechanics and small products, from idea to working build.',
+    // Shown on a Russian page to a visitor whose browser is not Russian.
+    thisLanguage: 'English version', closeHint: 'Close',
+    siteTitle: 'VELMREN · Websites, online stores, games and motion design',
+    siteAbout: 'Websites on Tilda, WordPress and Next.js, online stores, admin dashboards, Godot games and motion graphics. Every work can be opened and tried.',
+    heroTitle: 'Websites, stores, games and motion design',
+    heroLead: 'On Tilda, WordPress, Shopify, Next.js and Godot, from idea to working build.',
     seeWork: 'See the work', getInTouch: 'Get in touch',
     structure: 'Structure', pause: 'Pause the showcase', resume: 'Resume the showcase',
     boardLabel: (title: string) => `${title}: open the project. Left and right arrows switch works`,
@@ -71,6 +84,8 @@ export function localizeProject(project: Project, locale: Locale): Project {
   const alt = <T extends { src: string; alt: string }>(image: T, text?: string) => ({ ...image, src: en.media?.[image.src] ?? image.src, alt: text ?? image.alt });
   return {
     ...project,
+    // The English page never falls back to the Russian search title: without its own it takes the English title.
+    seo: en.seo,
     title: en.title ?? project.title, eyebrow: en.eyebrow ?? project.eyebrow, lead: en.lead ?? project.lead,
     summary: en.summary ?? project.summary, note: en.note ?? project.note, closing: en.closing ?? project.closing,
     actions: project.actions.map((action, i) => ({ ...action, label: en.actions?.[i] ?? action.label })),
@@ -85,7 +100,5 @@ export function localizeProject(project: Project, locale: Locale): Project {
   };
 }
 
-// Runs before the page paints: a first visit follows the browser language, later visits follow the saved choice.
-export function languageGateScript(locale: Locale, alternate: string) {
-  return `(function(){try{var s=localStorage.getItem('${LANG_KEY}');var b=((navigator.languages&&navigator.languages[0])||navigator.language||'').toLowerCase();var w=s||(b.indexOf('ru')===0?'ru':'en');${locale === 'en' ? "document.documentElement.lang='en';" : ''}if(w!=='${locale}')location.replace('${alternate}'+location.search+location.hash);}catch(e){}})();`;
-}
+// The language a first-time visitor reads, by the browser setting: Russian for a Russian browser, English otherwise.
+export const browserLocale = (language: string): Locale => language.toLowerCase().startsWith('ru') ? 'ru' : 'en';

@@ -7,6 +7,10 @@
   "eyebrow": "Игра на Godot",
   "lead": "Короткая викторина, которая объясняет каждую ошибку",
   "summary": "Шесть вопросов из трёх категорий, счёт и новый раунд. На русском и английском, в браузере и в Windows.",
+  "seo": {
+    "title": "Игра-викторина на Godot для браузера и Windows",
+    "description": "Category Spark: викторина на Godot, которая объясняет каждую ошибку. Шесть вопросов из трёх категорий, счёт и новый раунд, на русском и английском."
+  },
   "note": "Игра на русском и английском",
   "closing": "Сыграйте раунд в браузере",
   "accent": "#ffb81f",
@@ -195,6 +199,10 @@
     "eyebrow": "Godot game",
     "lead": "A short quiz that explains every mistake",
     "summary": "Six questions in three categories, a score and a new round. In Russian and English, in the browser and on Windows.",
+    "seo": {
+      "title": "Quiz game on Godot for the browser and Windows",
+      "description": "Category Spark: a Godot quiz that explains every mistake. Six questions in three categories, a score and a new round, in Russian and English."
+    },
     "note": "Plays in Russian and English",
     "closing": "Play a round in the browser",
     "actions": [

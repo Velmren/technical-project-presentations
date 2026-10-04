@@ -2,8 +2,9 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { fontVariables } from '@/lib/fonts-c';
-import { languageGateScript, type Locale } from '@/lib/i18n';
-import { collectionPath, galleryPath, SECTIONS, videoPath, type Video } from '@/lib/videos';
+import type { Locale } from '@/lib/i18n';
+import { ORGANIZATION_ID, pageMetadata, SITE, SITE_NAME } from '@/lib/seo';
+import { collectionPath, galleryPath, SECTIONS, videoPath, type ShownVideo, type Video } from '@/lib/videos';
 import { Footer, Header } from '@/components/concepts/Chrome';
 import { localize, shown, toClip } from './clips';
 import { videoData } from './data';
@@ -15,7 +16,6 @@ import { Watch } from './Watch';
 import '@/app/concepts/c/concept-c.css';
 import './video.css';
 
-const SITE = 'https://velmren.com';
 // Link previews are cut to one size for every clip.
 const SHARE = { width: 1200, height: 630 };
 
@@ -23,7 +23,8 @@ const SHARE = { width: 1200, height: 630 };
 const collections = videoData.collections.filter(set => set.clips.every(slug => shown.some(video => video.slug === slug)));
 const absolute = (address: string) => address.startsWith('https://') ? address : SITE + address;
 const other = (locale: Locale): Locale => locale === 'ru' ? 'en' : 'ru';
-const ogLocale = (locale: Locale) => locale === 'ru' ? 'ru_RU' : 'en_GB';
+// The title for search results says what kind of clip it is first; a clip without its own takes name and kind.
+const searchTitle = (video: ShownVideo) => video.searchTitle ?? `${video.title}. ${video.kind}`;
 
 // A few clips to go on with: the same shape of frame, the clip's own section first.
 function moreFor(item: Video) {
@@ -49,8 +50,6 @@ const shareImage = (item: Video, locale: Locale, alt: string) => {
 
 function Frame({ locale, alternate, children }: { locale: Locale; alternate: string; children: React.ReactNode }) {
   return <div className={fontVariables} lang={locale}>
-    {/* The language choice of the site; a time mark or a chosen clip in the address goes along to the other language. */}
-    <script dangerouslySetInnerHTML={{ __html: languageGateScript(locale, alternate) }}/>
     <div className="cc-page vg-page">
       <Header locale={locale} alternate={alternate}/>
       <main id="main">{children}</main>
@@ -61,13 +60,7 @@ function Frame({ locale, alternate, children }: { locale: Locale; alternate: str
 
 export function galleryMetadata(locale: Locale): Metadata {
   const t = VIDEO_UI[locale];
-  const path = galleryPath(locale);
-  const images = shown.length ? [shareImage(shown[0], locale, 'VELMREN')] : undefined;
-  return {
-    title: t.gallery, description: t.galleryAbout,
-    alternates: { canonical: path, languages: { ru: galleryPath('ru'), en: galleryPath('en') } },
-    openGraph: { title: `${t.gallery} · VELMREN`, description: t.galleryAbout, url: path, siteName: 'VELMREN', locale: ogLocale(locale), type: 'website', images },
-  };
+  return pageMetadata({ locale, path: galleryPath('ru'), title: t.galleryTitle, description: t.galleryAbout, image: shown.length ? shareImage(shown[0], locale, SITE_NAME) : undefined });
 }
 
 export function GalleryPage({ locale }: { locale: Locale }) {
@@ -82,30 +75,19 @@ export function videoMetadata(path: string[], locale: Locale): Metadata {
   if (item) {
     const video = localize(item, locale);
     const cut = video.cuts[0];
-    const address = videoPath(locale, video.slug);
-    const title = `${video.title}. ${video.kind}`;
-    const image = shareImage(item, locale, video.title);
-    return {
-      title, description: video.text,
-      alternates: { canonical: address, languages: { ru: videoPath('ru', video.slug), en: videoPath('en', video.slug) } },
-      openGraph: {
-        title, description: video.text, url: address, siteName: 'VELMREN', locale: ogLocale(locale), type: 'video.other', images: [image],
-        videos: [{ url: absolute(cut.src), secureUrl: absolute(cut.src), type: 'video/mp4', width: cut.width, height: cut.height }],
-      },
-      twitter: { card: 'summary_large_image', title, description: video.text, images: [image.url] },
-    };
+    return pageMetadata({
+      locale, path: videoPath('ru', video.slug), title: searchTitle(video), description: video.text, image: shareImage(item, locale, video.title),
+      openGraph: { type: 'video.other', videos: [{ url: absolute(cut.src), secureUrl: absolute(cut.src), type: 'video/mp4', width: cut.width, height: cut.height }] },
+    });
   }
   const set = findCollection(path);
   if (!set) return {};
-  const address = collectionPath(locale, set.slug);
   const first = shown.find(video => video.slug === set.clips[0])!;
-  return {
-    title: set.title[locale], description: set.text[locale],
+  return pageMetadata({
+    locale, path: collectionPath('ru', set.slug), title: set.title[locale], description: set.text[locale], image: shareImage(first, locale, set.title[locale]),
     // A collection is made for one client and opens only by its link.
     robots: { index: false },
-    alternates: { canonical: address, languages: { ru: collectionPath('ru', set.slug), en: collectionPath('en', set.slug) } },
-    openGraph: { title: set.title[locale], description: set.text[locale], url: address, siteName: 'VELMREN', locale: ogLocale(locale), type: 'website', images: [shareImage(first, locale, set.title[locale])] },
-  };
+  });
 }
 
 export function VideoRoute({ path, locale }: { path: string[]; locale: Locale }) {
@@ -114,9 +96,11 @@ export function VideoRoute({ path, locale }: { path: string[]; locale: Locale })
     const video = localize(item, locale);
     const cut = video.cuts[0];
     const description = {
-      '@context': 'https://schema.org', '@type': 'VideoObject', name: video.title, description: video.text, uploadDate: video.date,
+      '@context': 'https://schema.org', '@type': 'VideoObject', name: searchTitle(video), description: video.text,
+      // Search engines ask for a time with its zone; the day is what is known, so it starts at midnight in Minsk.
+      uploadDate: `${video.date}T00:00:00+03:00`,
       duration: `PT${Math.round(cut.duration)}S`, thumbnailUrl: SITE + shareImage(item, locale, video.title).url, contentUrl: absolute(cut.src),
-      url: SITE + videoPath(locale, video.slug), inLanguage: locale,
+      url: SITE + videoPath(locale, video.slug), inLanguage: locale, publisher: { '@type': 'Organization', '@id': ORGANIZATION_ID, name: SITE_NAME, url: SITE },
     };
     // The page of one clip: the film, its name, two lines about it and a link to copy. Nothing else around.
     return <Frame locale={locale} alternate={videoPath(other(locale), video.slug)}>

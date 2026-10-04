@@ -7,6 +7,10 @@
   "eyebrow": "Анимация и монтаж",
   "lead": "Анимация и монтаж, которые сразу встают на сайт, экран и в ленту",
   "summary": "Логотипы на экранах, персонажи в Lottie, анимация для сайтов в одном файле и ролики со звуком. Беру ваши материалы и сдаю готовое.",
+  "seo": {
+    "title": "Моушен-графика и монтаж: логотипы, Lottie, ролики",
+    "description": "Логотипы на экранах, персонажи в Lottie, анимация для сайтов в одном файле и ролики со звуком. Беру ваши материалы и сдаю готовое."
+  },
   "closing": "Посмотрите примеры в движении",
   "accent": "#e4572e",
   "category": "Анимация",
@@ -327,6 +331,10 @@
     "eyebrow": "Animation and editing",
     "lead": "Animation and editing that drop straight into a website, a screen and a feed",
     "summary": "Logos on screens, characters in Lottie, website animation in a single file and videos with sound. I take your materials and hand back the finished work.",
+    "seo": {
+      "title": "Motion graphics and editing: logos, Lottie, promos",
+      "description": "Logos on screens, characters in Lottie, website animation in a single file and videos with sound. I take your materials and hand back the finished work."
+    },
     "closing": "See the examples in motion",
     "actions": [
       "See it live"

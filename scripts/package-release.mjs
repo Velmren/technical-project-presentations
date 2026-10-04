@@ -29,8 +29,8 @@ await walk('out', async file => {
 const excludedBuilds = (await readdir('out/projects')).filter(name => !linkedBuilds.has(name)).sort();
 const excluded = new Set([path.resolve('out/forma/live'), ...excludedBuilds.map(name => path.resolve('out/projects', name))]);
 // The video gallery's media ships only once its routes are public: while they sit in the private folder
-// src/app/_video, posters and clips in public/assets/video stay out of the release.
-const galleryPrivate = existsSync('src/app/_video') && !existsSync('src/app/video');
+// src/app/(ru)/_video, posters and clips in public/assets/video stay out of the release.
+const galleryPrivate = existsSync('src/app/(ru)/_video') && !existsSync('src/app/(ru)/video');
 const excludedPaths = galleryPrivate ? ['assets/video'] : [];
 for (const rel of excludedPaths) excluded.add(path.resolve('out', rel));
 // Dot files (.gitignore, .DS_Store) are housekeeping, not part of the site; the server's deploy check rejects them.

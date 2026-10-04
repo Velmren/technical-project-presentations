@@ -5,7 +5,8 @@ import type { SectionId } from '@/lib/videos';
 export const VIDEO_UI = {
   ru: {
     gallery: 'Видео', allVideos: 'Все видео', all: 'Все', sectionsLabel: 'Разделы',
-    galleryAbout: 'Реклама, промо, трейлеры и заставки VELMREN. У каждого ролика своя ссылка.',
+    galleryTitle: 'Видео: реклама товаров, промо игр, заставки и монтаж',
+    galleryAbout: 'Рекламные ролики товаров, промо и трейлеры игр, заставки брендов, вертикальные ролики и монтаж. У каждого ролика своя страница.',
     next: 'Дальше', collection: 'Подборка', inCollection: 'В подборке', openAlone: 'Открыть отдельно',
     // 1 ролик, 2 ролика, 5 роликов, 21 ролик.
     clips: (count: number) => `${count} ${count % 10 === 1 && count % 100 !== 11 ? 'ролик' : count % 10 >= 2 && count % 10 <= 4 && (count % 100 < 12 || count % 100 > 14) ? 'ролика' : 'роликов'}`,
@@ -24,7 +25,8 @@ export const VIDEO_UI = {
   },
   en: {
     gallery: 'Video', allVideos: 'All videos', all: 'All', sectionsLabel: 'Sections',
-    galleryAbout: 'Ads, promos, trailers and idents by VELMREN. Every video has its own link.',
+    galleryTitle: 'Video: product ads, game promos, idents and editing',
+    galleryAbout: 'Product ads, game promos and trailers, brand idents, vertical videos and editing. Every video has its own page.',
     next: 'Next', collection: 'Collection', inCollection: 'In this collection', openAlone: 'Open on its own page',
     clips: (count: number) => `${count} ${count === 1 ? 'video' : 'videos'}`,
     sections: { promo: 'Ads and promos', games: 'Games and trailers', motion: 'Motion and idents', '3d': '3D', editing: 'Editing' } as Record<SectionId, string>,
