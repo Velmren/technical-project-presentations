@@ -62,7 +62,7 @@
   "sections": [
     {
       "kind": "benefit",
-      "title": "Покупатель видит блокнот, который закажет",
+      "title": "Конфигуратор прямо в карточке товара",
       "text": "Формат, обложка, бумага, резинка и монограмма меняются на экране сразу. Блокнот нарисован кодом в масштабе, поэтому магазину не нужно снимать каждую комбинацию.",
       "figure": {
         "value": "48",
@@ -248,7 +248,7 @@
     },
     "sections": [
       {
-        "title": "The customer sees the notebook they will order",
+        "title": "A configurator right on the product page",
         "text": "Size, cover, paper, band and monogram change on screen at once. The notebook is drawn to scale in code, so the shop does not have to photograph every combination.",
         "figure": {
           "value": "48",
