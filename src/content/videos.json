@@ -136,8 +136,8 @@
         "en": "Editing"
       },
       "text": {
-        "ru": "Восемь работ в ритме трека: кадр меняется на долю, заставка и титры собраны движением.",
-        "en": "Eight works in the rhythm of a track: the picture changes on the beat, the opening and the titles are built in motion."
+        "ru": "Товарные 3D-ролики, промо приложений, живые интерфейсы, игры, заставки брендов и вертикальные ролики в ритме одного трека.",
+        "en": "3D product films, app promos, live interfaces, games, brand idents and vertical videos in the rhythm of one track."
       },
       "searchTitle": {
         "ru": "Шоурил VELMREN: монтаж под музыку",
@@ -156,12 +156,14 @@
         {
           "width": 1920,
           "height": 1080,
-          "duration": 57.3,
+          "duration": 53.7,
           "src": {
-            "ru": "/assets/video/showreel/showreel.mp4"
+            "ru": "/assets/video/showreel/showreel-ru.mp4",
+            "en": "/assets/video/showreel/showreel-en.mp4"
           },
           "poster": {
-            "ru": "/assets/video/showreel/showreel-poster.webp"
+            "ru": "/assets/video/showreel/showreel-poster-ru.webp",
+            "en": "/assets/video/showreel/showreel-poster-en.webp"
           },
           "posterWidths": [
             480,
@@ -171,7 +173,8 @@
             1920
           ],
           "share": {
-            "ru": "/assets/video/showreel/showreel-share.jpg"
+            "ru": "/assets/video/showreel/showreel-share-ru.jpg",
+            "en": "/assets/video/showreel/showreel-share-en.jpg"
           },
           "preview": "/assets/video/showreel/showreel-hover.mp4"
         }
