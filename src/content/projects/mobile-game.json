@@ -9,10 +9,10 @@
   "summary": "Куница-посыльный Люми и совёнок Плюм ищут семена ветра, чтобы снова зажечь маяк. Исследование, задания жителей и бои в первом районе острова. На русском и английском.",
   "seo": {
     "title": "Игра на Godot 4 для браузера: Люми, остров ветров",
-    "description": "Приключенческая игра на Godot 4, которая запускается в браузере: исследование острова, задания жителей и бои. Демо первого района, на русском и английском."
+    "description": "Приключенческая игра на Godot 4, которая запускается в браузере: исследование острова, задания жителей и бои. Первый район острова, на русском и английском."
   },
-  "note": "Демо первого района",
-  "closing": "Сыграйте демо",
+  "note": "Первый район острова",
+  "closing": "Играть в браузере",
   "accent": "#f6c553",
   "category": "Игра",
   "technologies": [
@@ -183,10 +183,10 @@
     "summary": "Lumi the courier marten and Plum the owlet search for the seeds of the wind to light the lighthouse again. Exploring, helping the locals and fighting in the first area of the island. In Russian and English.",
     "seo": {
       "title": "Browser game on Godot 4: Lumi, Isle of Winds",
-      "description": "An adventure game on Godot 4 that runs in the browser: exploring the island, helping the locals and fighting. A demo of the first area, in Russian and English."
+      "description": "An adventure game on Godot 4 that runs in the browser: exploring the island, helping the locals and fighting. The first area of the island, in Russian and English."
     },
-    "note": "Demo of the first area",
-    "closing": "Play the demo",
+    "note": "The first area of the island",
+    "closing": "Play in the browser",
     "actions": [
       "Play"
     ],

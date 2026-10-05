@@ -11,7 +11,6 @@
     "title": "Сайт турклуба на Tilda с расписанием и бронью",
     "description": "Сайт турклуба на Tilda: три маршрута с программой по часам, расписание выездов с ценами и одна форма брони. Опубликован, его можно открыть."
   },
-  "note": "Турклуб вымышленный, маршруты и фотографии настоящие",
   "closing": "Посмотрите сайт вживую",
   "accent": "#2f6b55",
   "category": "Веб-сайты",
@@ -203,7 +202,6 @@
       "title": "Tour club website on Tilda with schedule and booking",
       "description": "A tour club website on Tilda: three routes with an hour-by-hour programme, a schedule of departures with prices and one booking form. It is live."
     },
-    "note": "The club is fictional, the routes and photos are real",
     "closing": "See the site live",
     "actions": [
       "Open the site"

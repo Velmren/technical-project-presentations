@@ -9,9 +9,8 @@
   "summary": "Защитить обсерваторию: включить реле, победить стражей, удержать зону и запечатать разлом.",
   "seo": {
     "title": "Плагин Minecraft (Paper): сценарий по этапам",
-    "description": "Плагин на Java для серверов Paper превращает карту в сценарий с этапами. В демо: включить реле, победить стражей, удержать зону. Исходный код и готовый jar."
+    "description": "Плагин на Java для серверов Paper превращает карту в сценарий с этапами: включить реле, победить стражей, удержать зону. Исходный код и готовый jar."
   },
-  "note": "Демо-сцена",
   "closing": "Посмотрите, как устроен сценарий",
   "accent": "#5a00ac",
   "category": "Игровые системы",
@@ -200,7 +199,6 @@
       "title": "Minecraft Paper plugin: a staged encounter system",
       "description": "A Java plugin for Paper servers that turns a map into a staged scenario: switch on the relays, defeat the sentinels, hold the zone. Source code and a ready jar."
     },
-    "note": "Demo scene",
     "closing": "See how the scenario is built",
     "actions": [
       "Source code",

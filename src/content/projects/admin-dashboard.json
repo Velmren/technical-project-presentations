@@ -6,12 +6,11 @@
   "title": "ORBIT",
   "eyebrow": "Панель управления",
   "lead": "Панель, в которой весь день интернет-магазина на одном экране",
-  "summary": "Заказы, оплаты, склад, задачи и переписка с клиентами связаны между собой. Демо на вымышленном магазине, на русском и английском.",
+  "summary": "Заказы, оплаты, склад, задачи и переписка с клиентами связаны между собой. На русском и английском.",
   "seo": {
-    "title": "Админ-панель для интернет-магазина: демо ORBIT",
-    "description": "Панель управления магазином на React: заказы, оплаты, склад, задачи и переписка с клиентами связаны между собой. Демо можно открыть, на русском и английском."
+    "title": "Админ-панель для интернет-магазина: ORBIT",
+    "description": "Панель управления магазином на React: заказы, оплаты, склад, задачи и переписка с клиентами связаны между собой. Панель можно открыть, на русском и английском."
   },
-  "note": "Демо-панель",
   "closing": "Откройте панель и пройдите один заказ",
   "accent": "#1eaefc",
   "category": "Веб-приложения",
@@ -92,7 +91,7 @@
       "text": "В карточке заказа следующий шаг, ход доставки, клиент и товары. Ссылка ведёт прямо на открытый заказ.",
       "figure": {
         "value": "14 000",
-        "label": "заказов в демо-магазине"
+        "label": "заказов в панели"
       },
       "layers": [
         {
@@ -238,12 +237,11 @@
   "en": {
     "eyebrow": "Admin panel",
     "lead": "A panel that puts an online store's whole day on one screen",
-    "summary": "Orders, payments, stock, tasks and customer messages are linked together. A demo on a fictional store, in Russian and English.",
+    "summary": "Orders, payments, stock, tasks and customer messages are linked together. In Russian and English.",
     "seo": {
-      "title": "Admin dashboard for an online store: ORBIT demo",
-      "description": "A store operations panel on React: orders, payments, stock, tasks and customer messages are linked together. The demo is live, in Russian and English."
+      "title": "Admin dashboard for an online store: ORBIT",
+      "description": "A store operations panel on React: orders, payments, stock, tasks and customer messages are linked together. The panel is live, in Russian and English."
     },
-    "note": "Demo panel",
     "closing": "Open the panel and follow one order",
     "actions": [
       "Open the panel"
@@ -278,7 +276,7 @@
         "text": "The order shows the next step, delivery progress, the customer and the items. A link opens that exact order.",
         "figure": {
           "value": "14,000",
-          "label": "orders in the demo store"
+          "label": "orders in the panel"
         },
         "alts": [
           "The order list with an order open",

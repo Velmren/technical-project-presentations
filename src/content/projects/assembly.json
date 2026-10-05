@@ -11,7 +11,7 @@
     "title": "3D-сайт жилого комплекса: дом строится при прокрутке",
     "description": "Сайт продаж жилого квартала: 3D-модель трёх домов достраивается при прокрутке, ниже подбор квартир, генплан и ипотека. Модель и сайт сделаны с нуля."
   },
-  "note": "Квартал вымышленный, модель, сцена и сайт сделаны с нуля",
+  "note": "Модель, сцена и сайт сделаны с нуля",
   "closing": "Прокрутите страницу и достройте квартал",
   "accent": "#d9603f",
   "category": "3D для сайта",
@@ -93,7 +93,7 @@
     {
       "kind": "benefit",
       "title": "Рабочий сайт продаж, а не заставка",
-      "text": "126 квартир на демо-данных с живым фильтром по комнатам, корпусу, площади, цене и этажу. У каждой своя планировка: 16 чертежей строятся из комнат, площади и цены сходятся с паспортом квартала.",
+      "text": "126 квартир с живым фильтром по комнатам, корпусу, площади, цене и этажу. У каждой своя планировка: 16 чертежей строятся из комнат, площади и цены сходятся с паспортом квартала.",
       "figure": {
         "value": "16",
         "label": "планировок, чертежи из данных"
@@ -219,7 +219,7 @@
       "title": "3D real estate website: a building assembled on scroll",
       "description": "A sales website for a residential quarter: the 3D model of three buildings goes up as you scroll, with apartment search, a site plan and mortgage below."
     },
-    "note": "The quarter is fictional; the model, the scene and the website were made from scratch",
+    "note": "The model, the scene and the website were made from scratch",
     "closing": "Scroll the page and finish the quarter",
     "actions": [
       "See it live"
@@ -253,7 +253,7 @@
       },
       {
         "title": "A working sales site, not a splash screen",
-        "text": "126 apartments of demo data with a live filter by bedrooms, building, area, price and floor. Each has its own floor plan: 16 drawings are built from the rooms, and areas and prices agree with the facts of the quarter.",
+        "text": "126 apartments with a live filter by bedrooms, building, area, price and floor. Each has its own floor plan: 16 drawings are built from the rooms, and areas and prices agree with the facts of the quarter.",
         "figure": {
           "value": "16",
           "label": "layouts, drawn from the data"
