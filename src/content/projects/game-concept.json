@@ -7,11 +7,15 @@
   "eyebrow": "Интерфейс игры",
   "lead": "Игровой интерфейс орбитального спасательного промысла",
   "summary": "Пилот буксира берёт контракты в разрушенном кольце, готовит корабль и выкупает его у верфи. Полный цикл от контракта до трюма, на русском и английском.",
+  "story": {
+    "task": "В игре про орбитальный промысел много состояний: контракты, корабль, топливо, груз, долг перед верфью. Игрок должен понимать, что делать дальше, без обучения.",
+    "solution": "Цель и следующий шаг всегда на экране: шкала выкупа сверху и строка «Сейчас». Карта сектора служит списком контрактов, корабль готовят на стенде с живой моделью, у каждого решения цена видна до выбора.",
+    "result": "Полный цикл от контракта до трюма проходится в браузере: на русском и английском, с клавиатуры и на телефоне. Игру можно открыть и взять первый контракт."
+  },
   "seo": {
-    "title": "Игровой интерфейс на Three.js: демо LACUNA",
+    "title": "Игровой интерфейс на Three.js: LACUNA",
     "description": "Интерфейс игры про орбитальный спасательный промысел: контракты, подготовка корабля, трюм и верфь. Работает в браузере на JavaScript и Three.js."
   },
-  "note": "Версия 6.2, в разработке",
   "closing": "Возьмите первый контракт",
   "accent": "#ffb44f",
   "category": "Игра",
@@ -236,11 +240,15 @@
     "eyebrow": "Game interface",
     "lead": "A game interface for orbital salvage work",
     "summary": "A tug pilot takes contracts in a broken ring, fits the vessel and buys it from the yard. The whole loop from contract to hold, in Russian and English.",
+    "story": {
+      "task": "A game about orbital salvage has many states: contracts, the vessel, fuel, cargo, the debt to the yard. The player has to know what to do next without a tutorial.",
+      "solution": "The goal and the next step are always on screen: a buyout meter at the top and a \"Now\" line. The sector map is the contract list, the vessel is fitted on a bench with a live model, and every decision shows its cost before the choice.",
+      "result": "The whole loop from contract to hold plays in the browser: in Russian and English, with a keyboard or on a phone. The game is open: take the first contract."
+    },
     "seo": {
       "title": "Game UI design and build on Three.js: LACUNA",
       "description": "The interface of a game about orbital salvage work: contracts, fitting the vessel, the hold and the yard. Runs in the browser on JavaScript and Three.js."
     },
-    "note": "Version 6.2, in development",
     "closing": "Take the first contract",
     "actions": [
       "Open the game"
