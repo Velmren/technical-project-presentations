@@ -101,7 +101,8 @@
 .sv-works { padding: 52px 0 60px; border-top: 1px solid var(--line); }
 .sv-works h2 { font-family: var(--cc-display), sans-serif; font-weight: 500; font-size: clamp(30px, 2.8vw, 42px); line-height: 1.06; }
 .sv-works > .cc-actions { margin-top: 20px; }
-.sv-clips { margin-top: 32px; }
+/* The tiles space themselves by the gallery's gap, which is set on gallery pages only. */
+.sv-clips { --vg-gap: 12px; margin-top: 32px; }
 .sv-grid { --sv-gap: 48px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--sv-gap) clamp(28px, 3vw, 48px); margin-top: 36px; }
 .sv-grid[data-count='1'] { grid-template-columns: minmax(0, 660px); }
 .sv-grid[data-count='3'] { grid-template-columns: repeat(3, minmax(0, 1fr)); }
