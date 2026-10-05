@@ -103,7 +103,7 @@
       "locale": "ru",
       "seo": {
         "title": "Разработка интернет-магазина под ключ: заказать магазин",
-        "description": "Создание интернет-магазина под ключ на WooCommerce, Shopify или Next.js: каталог, корзина, оформление заказа, админка. Демо-магазины можно открыть."
+        "description": "Создание интернет-магазина под ключ на WooCommerce, Shopify или Next.js: каталог, корзина, оформление заказа, админка. Примеры магазинов можно открыть."
       },
       "name": "Интернет-магазин",
       "title": "Магазин, где покупатель доходит до\u00a0заказа, а\u00a0вы управляете сами",
@@ -180,11 +180,11 @@
       "locale": "en",
       "seo": {
         "title": "Shopify theme customization and product configurators",
-        "description": "Custom Shopify theme sections in Liquid, product configurators and delivery estimate blocks as theme app extensions. A working demo to try. Priced per task."
+        "description": "Custom Shopify theme sections in Liquid, product configurators and delivery estimate blocks as theme app extensions. A working example to try. Priced per task."
       },
       "name": "Shopify",
       "title": "A store where the customer sees the product before ordering",
-      "lead": "I add what a ready theme lacks: a configurator with a live preview, a delivery date on the product page, a section your team places and edits in the theme editor. The demo below works: build a notebook and take it to the cart.",
+      "lead": "I add what a ready theme lacks: a configurator with a live preview, a delivery date on the product page, a section your team places and edits in the theme editor. The example below works: build a notebook and take it to the cart.",
       "ask": "Need this in your store?",
       "gets": [
         { "title": "A section in your theme", "text": "Written in Liquid, placed on any page in the theme editor. Colours, fonts and buttons come from the theme settings." },
@@ -196,8 +196,8 @@
       "faq": [
         { "q": "How much does a customization cost?", "a": "It depends on the scope: one section or several, with or without an app extension. I quote a price and a timeline after a short description of the task, and we agree on how you pay." },
         { "q": "Do you work in my live store?", "a": "On a copy of the theme. You look at the preview and publish it when it is right." },
-        { "q": "Which themes do you work with?", "a": "Online Store 2.0 themes. The demo is built for Dawn; for another theme the section is fitted to its cart and its styles." },
-        { "q": "Can it work in several languages?", "a": "Yes. The demo interface is translated into five languages, and dates are written the way the customer expects." }
+        { "q": "Which themes do you work with?", "a": "Online Store 2.0 themes. The example is built for Dawn; for another theme the section is fitted to its cart and its styles." },
+        { "q": "Can it work in several languages?", "a": "Yes. The example's interface is translated into five languages, and dates are written the way the customer expects." }
       ]
     },
     {
@@ -205,24 +205,24 @@
       "locale": "en",
       "seo": {
         "title": "WooCommerce development: custom plugins and configurators",
-        "description": "WooCommerce developer for custom plugins, product configurators and price calculators with a custom WordPress theme. A live demo store to try. Priced per task."
+        "description": "WooCommerce developer for custom plugins, product configurators and price calculators with a custom WordPress theme. A live store to try. Priced per task."
       },
       "name": "WooCommerce",
       "title": "A store that prices a made-to-order product by itself",
-      "lead": "When a product has sizes, materials and options, a standard product page is not enough. I write the calculator, the plugin behind it and the theme around it. The demo is a framing workshop: set the frame size and see the price.",
+      "lead": "When a product has sizes, materials and options, a standard product page is not enough. I write the calculator, the plugin behind it and the theme around it. The example is a framing workshop site: set the frame size and see the price.",
       "ask": "Need this in your store?",
       "gets": [
         { "title": "A calculator the customer trusts", "text": "Sizes and options change the picture and the total at once. The server prices the choice, so the order carries the same total." },
         { "title": "Prices you change yourself", "text": "The calculator is a block you place on any page. Materials and rates are edited in the admin, without a developer." },
         { "title": "A plugin written for your store", "text": "WooCommerce itself is not edited: hooks and a few templates do the work, so updates do not overwrite it." },
-        { "title": "A fast theme", "text": "A custom theme with page cache, self-hosted fonts and light images. The demo scores 98 where the stock theme scores 73 to 78 on the same data." }
+        { "title": "A fast theme", "text": "A custom theme with page cache, self-hosted fonts and light images. The example store scores 98 where the stock theme scores 73 to 78 on the same data." }
       ],
       "works": ["falz"],
       "faq": [
         { "q": "How much does it cost?", "a": "It depends on the scope: what the calculator counts, how many product types, whether a theme is needed. I quote a price and a timeline after a short description of the task, and we agree on how you pay." },
         { "q": "Can you work on an existing store?", "a": "Yes. I look at the theme and the plugins first and tell you what can be added safely." },
         { "q": "Where do orders and enquiries go?", "a": "Into the WooCommerce admin with all chosen options, and as a notification to Telegram or email." },
-        { "q": "Can the store be moved to my hosting?", "a": "Yes. The demo has scripts that move the database and files and replace the address." }
+        { "q": "Can the store be moved to my hosting?", "a": "Yes. The example store has scripts that move the database and files and replace the address." }
       ]
     },
     {
@@ -230,7 +230,7 @@
       "locale": "en",
       "seo": {
         "title": "Game UI design and Godot game development",
-        "description": "Game UI designer and developer: menus, HUD and whole game screens built and running, Godot games for the browser and desktop. Playable demos. Priced per task."
+        "description": "Game UI designer and developer: menus, HUD and whole game screens built and running, Godot games for the browser and desktop. Playable examples. Priced per task."
       },
       "name": "Game UI and Godot",
       "title": "An interface the player understands without a tutorial",
@@ -259,7 +259,7 @@
       },
       "name": "Minecraft plugins",
       "title": "A plugin that turns your map into a game with stages",
-      "lead": "Custom plugins for Paper servers: scenarios that lead players from goal to goal, progress on screen, a finale with a reward. The demo comes with its source code and a ready jar.",
+      "lead": "Custom plugins for Paper servers: scenarios that lead players from goal to goal, progress on screen, a finale with a reward. The example comes with its source code and a ready jar.",
       "ask": "Need a plugin for your server?",
       "gets": [
         { "title": "A scenario players can follow", "text": "Stages open one after another, the current goal and the counter stay on screen." },
@@ -270,7 +270,7 @@
       "works": ["encounter"],
       "faq": [
         { "q": "How much does a plugin cost?", "a": "It depends on the mechanics and on how much has to be configurable. I quote a price and a timeline after a short description of the task, and we agree on how you pay." },
-        { "q": "Which server versions?", "a": "Paper. The demo is built for 1.21 on Java 21; the version for your server is agreed at the start." },
+        { "q": "Which server versions?", "a": "Paper. The example is built for 1.21 on Java 21; the version for your server is agreed at the start." },
         { "q": "Can you change an existing plugin?", "a": "If its source code is available and its licence allows it. Otherwise I write a separate plugin that works next to it." },
         { "q": "How do I test it?", "a": "You get a jar for a test server and a short list of commands to run through the scenario." }
       ]
@@ -306,7 +306,7 @@
       "locale": "en",
       "seo": {
         "title": "3D website design and product configurators",
-        "description": "3D websites and product configurators: a scene that builds as you scroll, a live model in the interface, a configurator with a price. Open the demos."
+        "description": "3D websites and product configurators: a scene that builds as you scroll, a live model in the interface, a configurator with a price. Open the examples."
       },
       "name": "3D websites and configurators",
       "title": "A website that lets people explore what you sell",
