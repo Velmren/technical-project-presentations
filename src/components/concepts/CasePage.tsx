@@ -123,6 +123,9 @@ export function CasePage({ project, locale, share }: { project: Project; locale:
             {project.showcase.phone && <span className="cs-hero-phone"><Shot image={project.showcase.phone} video={project.showcase.phoneVideo} phone priority="low" sizes={SHOT_SIZES.heroPhone}/></span>}
           </figure>}
         </section>
+        {project.story && <section className="cs-story" aria-label={t.story.title}>
+          <dl>{(['task', 'solution', 'result'] as const).map(part => <div key={part}><dt>{t.story[part]}</dt><dd>{project.story![part]}</dd></div>)}</dl>
+        </section>}
         {benefits.map((benefit, i) => <BenefitBlock key={benefit.title} benefit={benefit} index={i}/>)}
         {details.map(block => <DetailsBlock key={block.title} details={block}/>)}
         <section className="cs-closing" aria-label={t.openProject}>

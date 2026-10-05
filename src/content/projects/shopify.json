@@ -5,13 +5,17 @@
   "slug": "shopify",
   "title": "Sheaf",
   "eyebrow": "Доработка магазина на Shopify",
-  "lead": "Конфигуратор в теме Shopify: покупатель видит блокнот до заказа",
-  "summary": "Секция темы на Liquid, блок срока доставки как расширение приложения и сервер на Node. Собственная демонстрация на вымышленном магазине.",
+  "lead": "Покупатель видит свой блокнот до заказа",
+  "summary": "Секция темы на Liquid, блок срока доставки как расширение приложения и сервер на Node.",
+  "story": {
+    "task": "Магазин продаёт блокноты на заказ, и у каждого десятки сочетаний: формат, обложка, бумага, резинка, монограмма. Покупателю нужно увидеть именно своё, а магазину не снимать каждое.",
+    "solution": "Секция темы с конфигуратором: блокнот нарисован кодом в масштабе и меняется вместе с выбором. Рядом блок срока доставки, который считает сервер. Выбор записывается в строку заказа.",
+    "result": "48 вариантов товара без единой фотографии, интерфейс на пяти языках, в корзине у позиции записано всё, что выбрано. Конфигуратор открыт: соберите блокнот и доведите его до корзины."
+  },
   "seo": {
     "title": "Доработка магазина на Shopify: конфигуратор товара",
-    "description": "Конфигуратор блокнота как секция темы на Liquid, блок срока доставки как расширение приложения и сервер на Node. Демонстрация на вымышленном магазине."
+    "description": "Конфигуратор блокнота как секция темы на Liquid, блок срока доставки как расширение приложения и сервер на Node."
   },
-  "note": "Демо работает без магазина: корзину и даты считает браузер",
   "closing": "Соберите свой блокнот",
   "accent": "#2f4a3c",
   "category": "Веб-сайты",
@@ -35,7 +39,7 @@
   },
   "actions": [
     {
-      "label": "Открыть демо",
+      "label": "Открыть конфигуратор",
       "href": "/projects/shopify/"
     }
   ],
@@ -127,7 +131,7 @@
     },
     {
       "kind": "benefit",
-      "title": "Заказ приходит в магазин без уточнений",
+      "title": "В корзине у позиции записано всё, что выбрано",
       "text": "Цвет резинки, монограмма и вид тиснения записаны в строке заказа. Платное тиснение идёт отдельной позицией и не остаётся в корзине без своего блокнота.",
       "layers": [
         {
@@ -213,16 +217,20 @@
   "en": {
     "title": "Sheaf",
     "eyebrow": "Shopify store customisation",
-    "lead": "A configurator in a Shopify theme: the customer sees the notebook before ordering",
-    "summary": "A theme section in Liquid, a delivery estimate block as an app extension and a Node server. My own demonstration on a fictional shop.",
+    "lead": "The customer sees their notebook before ordering",
+    "summary": "A theme section in Liquid, a delivery estimate block as an app extension and a Node server.",
+    "story": {
+      "task": "A shop sells made-to-order notebooks, each in dozens of combinations: size, cover, paper, band, monogram. The customer has to see their own, and the shop should not have to photograph each one.",
+      "solution": "A theme section with a configurator: the notebook is drawn to scale in code and changes with every choice. Next to it, a delivery estimate worked out by the server. The choice is written into the order line.",
+      "result": "48 product variants without a single photo, an interface in five languages, and a cart line that carries everything the customer chose. The configurator is open: build a notebook and take it to the cart."
+    },
     "seo": {
       "title": "Shopify product configurator as a custom theme section",
-      "description": "A notebook configurator as a Liquid theme section, a delivery estimate block as an app extension and a Node server. A demonstration on a fictional shop."
+      "description": "A notebook configurator as a Liquid theme section, a delivery estimate block as an app extension and a Node server."
     },
-    "note": "The demo runs without a store: the browser keeps the cart and works out the dates",
     "closing": "Build your own notebook",
     "actions": [
-      "Open the demo"
+      "Open the configurator"
     ],
     "showcase": [
       "Product page with the notebook configurator",
@@ -264,7 +272,7 @@
         ]
       },
       {
-        "title": "The order reaches the shop with nothing to clarify",
+        "title": "The cart line carries everything the customer chose",
         "text": "Band colour, monogram and finish are written into the order line. The paid monogram is a separate item and never stays in the cart without its notebook.",
         "alts": [
           "Cart: the notebook with its properties and the monogram line",

@@ -73,6 +73,13 @@
   .cs-stage:not([data-shown]) .cs-layer-front { opacity: 0; transform: translate3d(0, 32px, 0) scale(.96); }
 }
 
+/* The work in three paragraphs right under the first screen: where it started, what was made, what can be
+   checked. */
+.cs-story { padding: 44px 0 48px; border-top: 1px solid var(--line); }
+.cs-story dl { margin: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px clamp(28px, 3.4vw, 56px); }
+.cs-story dt { font-family: var(--cc-display), sans-serif; font-weight: 500; font-size: 24px; line-height: 1.15; }
+.cs-story dd { margin: 12px 0 0; max-width: 34em; font-size: 16.5px; line-height: 1.6; color: var(--muted); }
+
 /* Technical details: small, for those who want them. */
 .cs-details {
   display: grid; grid-template-columns: minmax(0, 420px) minmax(0, 1fr); gap: clamp(36px, 4.4vw, 72px);
@@ -159,6 +166,10 @@
   .cs-benefit-copy > p { font-size: 17px; }
   .cs-figure b { font-size: 34px; }
   .cs-stage { --shift: .5; }
+  .cs-story { padding: 32px 0 36px; }
+  .cs-story dl { grid-template-columns: minmax(0, 1fr); gap: 24px; }
+  .cs-story dt { font-size: 21px; }
+  .cs-story dd { margin-top: 8px; }
   .cs-details { padding: 40px 0; }
   .cs-details dl { grid-template-columns: minmax(0, 1fr); }
   .cs-closing { padding: 44px 0 48px; }

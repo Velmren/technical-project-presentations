@@ -17,9 +17,12 @@ const sideBySide = (layers: z.infer<typeof layer>[]) => [...layers].sort((a, b) 
 // What a search result and a link preview say about the work: the kind of work and its platform first,
 // since nobody searches for the name of a demonstration brand. Without it the page falls back to title and summary.
 const seo = z.object({ title: z.string().min(1).max(60), description: z.string().min(1).max(165) });
+// The work in three short paragraphs for a client who asks "will they do this for me?": the task it started
+// from, what was made, and what can be checked. The works are demonstrations: no client, sale or review is named.
+const story = z.object({ task: z.string().min(1), solution: z.string().min(1), result: z.string().min(1) });
 // English texts of a project, merged over the Russian ones; arrays follow the order of the original.
 const translation = z.object({
-  seo,
+  seo, story,
   title: z.string(), eyebrow: z.string(), lead: z.string(), summary: z.string(), note: z.string(), closing: z.string(),
   actions: z.array(z.string()), showcase: z.array(z.string()),
   // English screenshots of a bilingual work, by the source of the Russian one they replace.
@@ -43,10 +46,11 @@ export const projectSchema = z.object({
   // 'case' pages use the concept C system; 'classic' pages keep the earlier editorial layout.
   presentation: z.enum(['classic', 'case']).default('classic'),
   year: z.number().int().optional(),
-  // Case pages: the one main idea above the summary, a small honest note under the button, the closing line.
+  // Case pages: the one main idea above the summary, a small note under the button, the closing line.
   lead: z.string().optional(),
   note: z.string().optional(),
   closing: z.string().optional(),
+  story: story.optional(),
   // Colour of the work's own main button, used for the main button of its page.
   accent: z.string().regex(/^#[0-9a-f]{6}$/i).optional(),
   // The real site in the first screen, in a browser window at url, with an optional phone screen beside it.

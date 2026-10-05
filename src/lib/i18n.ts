@@ -36,6 +36,7 @@ export const UI = {
     boardLabel: (title: string) => `${title}: открыть проект. Стрелки влево и вправо переключают работы`,
     boardTabs: 'Работы на экране', nowShowing: 'На экране: ',
     categories: 'Категории работ', aboutProject: 'О проекте', allWork: 'Все работы', openProject: 'Открыть проект',
+    story: { title: 'Задача, решение, результат', task: 'Задача', solution: 'Решение', result: 'Результат' },
     stack: 'Стек', year: 'Год',
     quote: 'Интересные идеи всегда находят способ стать реальностью.', toTop: 'Наверх',
     tags: { 'Все': 'Все', 'Веб': 'Веб', 'Игры': 'Игры', 'Анимация': 'Анимация', '3D': '3D', 'Инструменты': 'Инструменты', 'Дизайн': 'Дизайн', 'Minecraft': 'Minecraft' } as Record<string, string>,
@@ -61,6 +62,7 @@ export const UI = {
     boardLabel: (title: string) => `${title}: open the project. Left and right arrows switch works`,
     boardTabs: 'Works on screen', nowShowing: 'Now showing: ',
     categories: 'Work categories', aboutProject: 'About the project', allWork: 'All work', openProject: 'Open the project',
+    story: { title: 'Task, solution, result', task: 'The task', solution: 'The solution', result: 'The result' },
     stack: 'Stack', year: 'Year',
     quote: 'Interesting ideas always find a way to become real.', toTop: 'Back to top',
     tags: { 'Все': 'All', 'Веб': 'Web', 'Игры': 'Games', 'Анимация': 'Animation', '3D': '3D', 'Инструменты': 'Tools', 'Дизайн': 'Design', 'Minecraft': 'Minecraft' } as Record<string, string>,
@@ -103,7 +105,8 @@ export function localizeProject(project: Project, locale: Locale): Project {
   return {
     ...project,
     // The English page never falls back to the Russian search title: without its own it takes the English title.
-    seo: en.seo,
+    // The same with the task, solution and result: Russian paragraphs do not stand on an English page.
+    seo: en.seo, story: en.story,
     title: en.title ?? project.title, eyebrow: en.eyebrow ?? project.eyebrow, lead: en.lead ?? project.lead,
     summary: en.summary ?? project.summary, note: en.note ?? project.note, closing: en.closing ?? project.closing,
     actions: project.actions.map((action, i) => ({ ...action, label: en.actions?.[i] ?? action.label })),

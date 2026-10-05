@@ -30,7 +30,7 @@ test('every work has its own search title and description in both languages', ()
     assert.ok(project.seo && en.seo, `${project.slug}: search texts in both languages`);
     assert.notEqual(project.seo.title, en.seo.title, `${project.slug}: the English title is not the Russian one`);
     for (const seo of [project.seo, en.seo]) {
-      // The site name is added to the title by the layout; the name of a demonstration brand alone says nothing to a search.
+      // The site name is added to the title by the layout; the name of a work alone says nothing to a search.
       assert.notEqual(seo.title, project.title, `${project.slug}: the title says what the work is`);
       assert.ok(!titles.has(seo.title), `${project.slug}: title "${seo.title}" is used twice`);
       titles.add(seo.title);
