@@ -28,6 +28,7 @@
 /* Screenshot frames. One treatment for the whole page: a soft radius, a thin light edge and a quiet shadow.
    Screens sit in a browser window with their address, fragments are plain cut-outs, phones get a device. */
 .cs-shot { display: block; position: relative; overflow: hidden; border-radius: 10px; background: #1b1c1f; }
+.cs-shot picture { display: block; }
 .cs-shot img, .cs-shot video { display: block; width: 100%; height: auto; }
 .cs-shot-browser { container-type: inline-size; }
 .cs-shot-bar {
@@ -37,7 +38,8 @@
 .cs-shot-bar span {
   max-width: 100%; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;
   padding: .2em .9em; border-radius: 5px; background: rgba(236, 237, 239, .06);
-  font-size: clamp(8.5px, 2.1cqi, 12px); line-height: 1.4; color: var(--dim);
+  /* A shade lighter than --dim: small text needs a contrast of 4.5 to 1 against the plate under it. */
+  font-size: clamp(8.5px, 2.1cqi, 12px); line-height: 1.4; color: #8f949b;
 }
 /* The frame edge is drawn over the picture, so light screenshots keep a crisp rounded border too. */
 .cs-shot::after { content: ''; position: absolute; inset: 0; border-radius: inherit; box-shadow: inset 0 0 0 1px rgba(236, 237, 239, .12); pointer-events: none; }

@@ -67,6 +67,8 @@ VELMREN portfolio: Next.js 16 (App Router), TypeScript, static export to `out/`.
 │       ├── services.ts        Zod schema of the service pages, the services of one language
 │       ├── service-paths.ts   addresses of the service pages without the schema (header and footer link to them)
 │       ├── services-data.ts   the validated content of services.json
+│       ├── shots.ts           reduced copies of screenshots: their widths and names, and how wide the layout draws
+│       │                      a screenshot (the sizes of its picture)
 │       ├── social.ts          social preview images
 │       ├── color.ts           main button colour of a case page and its text contrast
 │       ├── fonts-c.ts         display fonts (Tektur, Sofia Sans Condensed)
@@ -76,7 +78,8 @@ VELMREN portfolio: Next.js 16 (App Router), TypeScript, static export to `out/`.
 │   │   ├── home/              home page previews, work screens for the mosaic and their outline maps
 │   │   ├── forma/, godot/, encounter/, java/, dev-utilities/, electronics-store/, orbit/, sono/, khrum/, lacuna/, lumi/,
 │   │   │   falz/, shopify/, motion/, assembly/, tilda-interior/, tilda-webinar/, tilda-tour/, tilda-dental/, studio-concepts/
-│   │   │                      screenshots, videos and downloads of each work
+│   │   │                      screenshots, videos and downloads of each work; beside a screenshot its reduced
+│   │   │                      AVIF copies named by width (hero-720.avif), made by scripts/prepare-shots.mjs
 │   │   │                      godot/web/: Category Spark browser build, not in Git, built by a script
 │   │   │                      java/: Encounter State plugin JAR, source ZIP, source viewer and its manifest
 │   │   ├── share/             link preview pictures of the works, 1200x630 JPEG, written by scripts/prepare-share.mjs
@@ -115,6 +118,8 @@ VELMREN portfolio: Next.js 16 (App Router), TypeScript, static export to `out/`.
 │   ├── prepare-encounter-viewer.mjs  embeds the Encounter State source files in the source viewer
 │   ├── prepare-share.mjs      cuts the link preview picture of every work from its showcase (public/assets/share/);
 │   │                          --check verifies that all of them are in place
+│   ├── prepare-shots.mjs      makes the reduced AVIF copies of the screenshots of case and service pages (needs
+│   │                          ffmpeg with libaom-av1, FFMPEG=<path>); --check verifies that all of them are in place
 │   ├── prepare-videos.mjs     prepares web video, poster, link preview and hover fragment of a clip; --check verifies
 │   │                          the files before a release
 │   ├── build-category-spark-web.mjs  builds the Category Spark browser version from its source ZIP (GODOT=<path to Godot 4.7.2>)
@@ -128,8 +133,9 @@ VELMREN portfolio: Next.js 16 (App Router), TypeScript, static export to `out/`.
 │   │                          move to another language, only the two agreed contacts in the sources, every contact
 │   │                          named for the count of clicks
 │   ├── videos.test.ts         gallery data, schema, row layout and filter
-│   └── services.test.ts       service pages: examples exist, headings speak about the result, unique search titles,
-│                              no prices or deadlines in the texts
+│   ├── services.test.ts       service pages: examples exist, headings speak about the result, unique search titles,
+│   │                          no prices or deadlines in the texts
+│   └── shots.test.ts          reduced copies of screenshots: the rule of widths, every copy on disk, valid sizes
 └── docs/
     └── THIRD-PARTY.md         third-party assets, fonts and licences
 ```

@@ -7,6 +7,7 @@ import { servicePath, SERVICES } from '@/lib/service-paths';
 import { servicesOf, type Service } from '@/lib/services';
 import { services } from '@/lib/services-data';
 import { projectImage } from '@/lib/social';
+import { SHOT_SIZES } from '@/lib/shots';
 import { serviceData, servicesListData } from '@/lib/structured-data';
 import { galleryPath } from '@/lib/videos';
 import { JsonLd } from '@/components/JsonLd';
@@ -24,7 +25,8 @@ import '@/components/video/video.css';
 
 type Benefit = Extract<ProjectSection, { kind: 'benefit' }>;
 const other = (locale: Locale): Locale => locale === 'ru' ? 'en' : 'ru';
-const SCREEN = '(max-width: 860px) 92vw, (max-width: 1100px) 46vw, 440px';
+// How many cards of examples stand in a row on a wide window (.sv-grid in case.css): the width of their pictures.
+const cardSizes = (count: number) => SHOT_SIZES.example(count === 1 ? 1 : count === 3 ? 3 : 2);
 
 // The link preview of a service shows its main example, the one on its first screen: the first clip of a video
 // service, otherwise the first work.
@@ -45,10 +47,10 @@ function Ways({ project, locale }: { project: Project; locale: Locale }) {
 }
 
 // A work shown as proof: its first screen, what it is and the two ways in.
-function Example({ project, locale }: { project: Project; locale: Locale }) {
+function Example({ project, locale, sizes }: { project: Project; locale: Locale; sizes: string }) {
   return <article className="sv-work">
     {project.showcase && <a className="sv-work-shot" href={localePath(locale, `/${project.slug}/`)} tabIndex={-1} aria-hidden="true">
-      <Shot image={project.showcase.image} url={project.showcase.url} sizes={SCREEN}/>
+      <Shot image={project.showcase.image} url={project.showcase.url} sizes={sizes}/>
     </a>}
     <p className="cs-name"><b>{project.title}</b><span>{project.eyebrow ?? project.category}</span></p>
     <p className="sv-work-text">{project.lead ?? project.summary}</p>
@@ -65,7 +67,7 @@ function Screens({ project, locale }: { project: Project; locale: Locale }) {
       // The whole screen rather than the detail beside it; a phone screen only when there is nothing else.
       const layer = benefit.layers.find(one => !one.phone && !one.front) ?? benefit.layers.find(one => !one.phone) ?? benefit.layers[0];
       return <article className="sv-work sv-screen" key={benefit.title}>
-        <span className="sv-work-shot"><Shot image={layer.image} url={layer.url} phone={layer.phone} fade={layer.fade} sizes={SCREEN}/></span>
+        <span className="sv-work-shot"><Shot image={layer.image} url={layer.url} phone={layer.phone} fade={layer.fade} sizes={cardSizes(benefits.length)}/></span>
         <p className="cs-name"><b>{benefit.title}</b></p>
         <p className="sv-work-text">{benefit.text}</p>
       </article>;
@@ -94,8 +96,8 @@ export async function ServicePage({ service, locale }: { service: Service; local
   // first screen of the first work.
   const [clip] = clips, [first] = works;
   const hero = clip
-    ? <Shot image={{ src: clip.poster, alt: clip.title, width: clip.width, height: clip.height }} priority sizes="(max-width: 1100px) 92vw, 54vw"/>
-    : first?.showcase && <Shot image={first.showcase.image} url={first.showcase.url} priority sizes="(max-width: 1100px) 92vw, 54vw"/>;
+    ? <Shot image={{ src: clip.poster, alt: clip.title, width: clip.width, height: clip.height }} set={clip.posterSet ?? ''} priority="high" sizes={SHOT_SIZES.hero}/>
+    : first?.showcase && <Shot image={first.showcase.image} url={first.showcase.url} priority="high" sizes={SHOT_SIZES.hero}/>;
   return <div className={fontVariables}>
     <JsonLd data={serviceData(locale, service, t.services)}/>
     <div className="cc-page" lang={locale}>
@@ -127,7 +129,7 @@ export async function ServicePage({ service, locale }: { service: Service; local
             </>
             : works.length === 1
               ? <Screens project={first} locale={locale}/>
-              : <div className="sv-grid" data-count={works.length}>{works.map(project => <Example key={project.slug} project={project} locale={locale}/>)}</div>}
+              : <div className="sv-grid" data-count={works.length}>{works.map(project => <Example key={project.slug} project={project} locale={locale} sizes={cardSizes(works.length)}/>)}</div>}
         </section>
         <Points id="sv-steps" title={c.stepsTitle} items={c.steps}/>
         <Points id="sv-faq" title={c.faqTitle} items={service.faq.map(item => ({ title: item.q, text: item.a }))} wide/>

@@ -7,7 +7,7 @@
     "dev": "next dev --hostname 127.0.0.1",
     "typecheck": "tsc --noEmit",
     "build": "next build && node scripts/prepare-export.mjs",
-    "test": "node --experimental-strip-types --test tests/model.test.ts tests/home.test.ts tests/i18n.test.ts tests/videos.test.ts tests/seo.test.ts tests/services.test.ts",
+    "test": "node --experimental-strip-types --test tests/model.test.ts tests/home.test.ts tests/i18n.test.ts tests/videos.test.ts tests/seo.test.ts tests/services.test.ts tests/shots.test.ts",
     "package:release": "node scripts/package-release.mjs"
   },
   "dependencies": {
