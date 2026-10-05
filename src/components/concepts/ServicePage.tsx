@@ -5,11 +5,13 @@ import { getProjects } from '@/lib/projects';
 import type { Project, ProjectSection } from '@/lib/schema';
 import { servicePath, SERVICES, servicesOf, type Service } from '@/lib/services';
 import { services } from '@/lib/services-data';
+import { projectImage } from '@/lib/social';
 import { serviceData, servicesListData } from '@/lib/structured-data';
 import { galleryPath } from '@/lib/videos';
 import { JsonLd } from '@/components/JsonLd';
 import { shown, toClip } from '@/components/video/clips';
 import { TileRow } from '@/components/video/Gallery';
+import { shareImage } from '@/components/video/pages';
 import { VIDEO_UI } from '@/components/video/strings';
 import { Shot } from './CasePage';
 import { Footer, Header, TextLink } from './Chrome';
@@ -22,6 +24,15 @@ import '@/components/video/video.css';
 type Benefit = Extract<ProjectSection, { kind: 'benefit' }>;
 const other = (locale: Locale): Locale => locale === 'ru' ? 'en' : 'ru';
 const SCREEN = '(max-width: 860px) 92vw, (max-width: 1100px) 46vw, 440px';
+
+// The link preview of a service shows its main example, the one on its first screen: the first clip of a video
+// service, otherwise the first work.
+export async function serviceImage(service: Service, locale: Locale) {
+  const clip = shown.find(video => video.slug === service.clips?.[0]);
+  if (clip) return shareImage(clip, locale, service.name);
+  const work = (await getProjects()).find(project => project.slug === service.works[0]);
+  return work && projectImage(work, locale);
+}
 
 // The page about the work and the work itself: the two ways into an example.
 function Ways({ project, locale }: { project: Project; locale: Locale }) {

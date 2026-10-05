@@ -44,7 +44,7 @@ const findClip = (path: string[]) => path.length === 1 ? shown.find(video => vid
 const findCollection = (path: string[]) => path.length === 2 && path[0] === 'c' ? collections.find(set => set.slug === path[1]) : undefined;
 
 // A link preview is a wide picture, so a clip that has a wide cut shows it there even when its square cut comes first.
-const shareImage = (item: Video, locale: Locale, alt: string) => {
+export const shareImage = (item: Video, locale: Locale, alt: string) => {
   const cuts = localize(item, locale).cuts;
   const cut = cuts.find(one => one.width > one.height) ?? cuts[0];
   return cut.share ? { url: cut.share, ...SHARE, alt } : { url: cut.poster, width: cut.width, height: cut.height, alt };

@@ -4,8 +4,10 @@ export const dynamic = 'force-static';
 
 // Written as plain text rather than through the typed robots file: Clean-param is not among its fields.
 // Yandex reads it as "these marks in an address do not make a new page".
+// /cdn-cgi/ holds the service addresses of Cloudflare, none of them a page of the site.
 const RULES = `User-agent: *
 Allow: /
+Disallow: /cdn-cgi/
 Clean-param: utm_source&utm_medium&utm_campaign&utm_content&utm_term&yclid&ysclid&gclid&fbclid
 
 Sitemap: ${SITE}/sitemap.xml

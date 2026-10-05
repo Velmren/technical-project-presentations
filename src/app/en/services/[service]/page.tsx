@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
-import { ServicePage } from '@/components/concepts/ServicePage';
+import { serviceImage, ServicePage } from '@/components/concepts/ServicePage';
 import { pageMetadata } from '@/lib/seo';
 import { servicePath, servicesOf } from '@/lib/services';
 import { services } from '@/lib/services-data';
@@ -13,7 +13,7 @@ export const dynamicParams = false;
 export function generateStaticParams() { return servicesOf(services, 'en').map(item => ({ service: item.slug })); }
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const item = find((await params).service);
-  return item ? pageMetadata({ locale: 'en', path: servicePath(item.slug), title: item.seo.title, description: item.seo.description, single: true }) : {};
+  return item ? pageMetadata({ locale: 'en', path: servicePath(item.slug), title: item.seo.title, description: item.seo.description, image: await serviceImage(item, 'en'), single: true }) : {};
 }
 export default async function ServiceEn({ params }: Props) {
   const item = find((await params).service);
