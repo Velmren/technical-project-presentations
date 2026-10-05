@@ -6,9 +6,14 @@
   "year": 2026,
   "lead": "Интернет-магазин электроники, который работает целиком",
   "summary": "От поиска модели до заказа и управления каталогом. Магазин развёрнут, его можно открыть и пройти.",
+  "story": {
+    "task": "Магазину электроники нужно всё сразу: каталог, в котором находят модель, оформление без ошибок в сумме и панель, где команда сама ведёт товары и заказы.",
+    "solution": "Одно приложение: витрина, кабинет покупателя и панель управления. У каждого цвета и объёма памяти своя цена, остаток и фото. Итог и скидку считает сервер, товар резервируется при оформлении.",
+    "result": "Магазин развёрнут по своему адресу: 60 моделей и 261 вариант, заказ без регистрации, роли покупателя, сотрудника и администратора. Его можно открыть и пройти путь до заказа."
+  },
   "seo": {
     "title": "Интернет-магазин на Next.js: каталог, заказ, админка",
-    "description": "Демо-магазин электроники на Next.js и PostgreSQL: поиск модели, корзина, оформление заказа и управление каталогом. Развёрнут, его можно открыть и пройти."
+    "description": "Магазин электроники на Next.js и PostgreSQL: поиск модели, корзина, оформление заказа и управление каталогом. Развёрнут, его можно открыть и пройти."
   },
   "note": "Демо-режим",
   "category": "Веб-приложения",
@@ -221,14 +226,12 @@
       "items": [
         "Стек",
         "Заказ",
-        "Доступ",
-        "Оплата и доставка"
+        "Доступ"
       ],
       "descriptions": [
         "Next.js, TypeScript, PostgreSQL, Prisma, MinIO.",
         "Одна транзакция: цены перечитываются, остаток резервируется, повтор не создаёт второй заказ.",
-        "Роли покупателя, сотрудника и администратора, права проверяет сервер.",
-        "Тестовые провайдеры."
+        "Роли покупателя, сотрудника и администратора, права проверяет сервер."
       ]
     }
   ],
@@ -238,9 +241,14 @@
     "eyebrow": "Online store",
     "lead": "An electronics store that works end to end",
     "summary": "From finding a model to checkout and catalogue management. The store is live, so you can open it and try it.",
+    "story": {
+      "task": "An electronics store needs everything at once: a catalogue where people find the model, a checkout with no mistakes in the total and a panel where the team runs products and orders.",
+      "solution": "One application: storefront, customer account and admin panel. Every colour and storage size has its own price, stock and photo. The server works out the total and the discount, and the item is reserved at checkout.",
+      "result": "The store runs at its own address: 60 models and 261 variants, checkout without an account, roles for customer, staff and administrator. Open it and go all the way to an order."
+    },
     "seo": {
       "title": "Online store on Next.js: catalogue, checkout, admin",
-      "description": "A demo electronics store on Next.js and PostgreSQL: product search, cart, checkout and catalogue management. It is live, so you can open it and try it."
+      "description": "An electronics store on Next.js and PostgreSQL: product search, cart, checkout and catalogue management. It is live, so you can open it and try it."
     },
     "note": "Demo mode",
     "closing": "See the store in action",
@@ -302,14 +310,12 @@
         "items": [
           "Stack",
           "Orders",
-          "Access",
-          "Payments and delivery"
+          "Access"
         ],
         "descriptions": [
           "Next.js, TypeScript, PostgreSQL, Prisma, MinIO.",
           "One transaction: prices are re-read, stock is reserved, and a resubmission never creates a second order.",
-          "Customer, staff and admin roles, checked on the server.",
-          "Test providers."
+          "Customer, staff and admin roles, checked on the server."
         ]
       }
     ]
