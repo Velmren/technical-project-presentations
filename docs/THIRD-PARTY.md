@@ -38,11 +38,11 @@ The browser build of Category Spark, produced by `scripts/build-category-spark-w
 
 ## Music
 
-The sound of the videos in `public/assets/motion/video/` is music from Free Stock Music cut on its bar grid and mixed with synthesised effects. The tracks themselves are not stored in the repository, only excerpts inside the finished videos. The credit is also in the footer of `public/projects/motion/`.
+The sound of the showreel, the SONO promo and the Khrum vertical (files in `public/assets/video/`, shared by the motion section and the video gallery) is music from Free Stock Music cut on its bar grid and mixed with synthesised effects. The tracks themselves are not stored in the repository, only excerpts inside the finished videos. The credit is also in the footer of `public/projects/motion/`.
 
-- "Sunfade" by Roa Music, Royalty Free Music by https://www.free-stock-music.com. Licence: [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/). Page: https://www.free-stock-music.com/roa-music-sunfade.html (checked 1 October 2026). Used in `reel.mp4`.
-- "Between Oceans and Summits" by Alex-Productions, https://onsound.eu/, Royalty Free Music by https://www.free-stock-music.com. Licence: [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/). Page: https://www.free-stock-music.com/alex-productions-between-oceans-and-summits.html (checked 1 October 2026). Used in `sono-promo.mp4`.
-- "Little Adventures" by Sokolovsky Music, http://sokolovskymusic.com, Royalty Free Music by https://www.free-stock-music.com. Licence: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Page: https://www.free-stock-music.com/sokolovsky-music-little-adventures.html (checked 1 October 2026). Used in `vertical.mp4`.
+- "Sunfade" by Roa Music, Royalty Free Music by https://www.free-stock-music.com. Licence: [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/). Page: https://www.free-stock-music.com/roa-music-sunfade.html (checked 1 October 2026). Used in `showreel-ru.mp4` and `showreel-en.mp4`.
+- "Between Oceans and Summits" by Alex-Productions, https://onsound.eu/, Royalty Free Music by https://www.free-stock-music.com. Licence: [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/). Page: https://www.free-stock-music.com/alex-productions-between-oceans-and-summits.html (checked 1 October 2026). Used in `sono-promo-ru.mp4` and `sono-promo-en.mp4`.
+- "Little Adventures" by Sokolovsky Music, http://sokolovskymusic.com, Royalty Free Music by https://www.free-stock-music.com. Licence: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Page: https://www.free-stock-music.com/sokolovsky-music-little-adventures.html (checked 1 October 2026). Used in `khrum-ru.mp4` and `khrum-en.mp4`.
 
 ## Veresta
 

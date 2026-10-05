@@ -17,14 +17,15 @@ button svg{width:34%;height:34%;margin-left:6%}
 .on img,.on button{display:none}
 </style>
 <div class="stage" id="s">
-<img id="p" src="../reel-poster.webp" alt="">
+<img id="p" alt="">
 <video id="v" playsinline preload="none" controls hidden></video>
 <button id="b" type="button" aria-label="Смотреть шоурил"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6 3.5v17l14-8.5z"/></svg></button>
 </div>
 <script>
-var en=new URLSearchParams(location.search).get('lang')==='en',b=document.getElementById('b'),v=document.getElementById('v'),s=document.getElementById('s');
+var en=new URLSearchParams(location.search).get('lang')==='en',b=document.getElementById('b'),v=document.getElementById('v'),s=document.getElementById('s'),p=document.getElementById('p');
+// The poster and the clip follow the page language; the poster is set after the load listener, so an English page never fetches the Russian one.
+p.addEventListener('load',function(){try{if(parent!==window)parent.postMessage({live:location.pathname},location.origin)}catch(e){}});
+p.src=en?"../reel-poster-en.webp":"../reel-poster.webp";
 b.setAttribute('aria-label',en?"Play the showreel":"Смотреть шоурил");
-b.onclick=function(){v.src="../video/reel.mp4";v.hidden=false;s.className='stage on';v.play().catch(function(){});};
-document.getElementById('p').addEventListener('load',function(){try{if(parent!==window)parent.postMessage({live:location.pathname},location.origin)}catch(e){}});
-if(document.getElementById('p').complete){try{if(parent!==window)parent.postMessage({live:location.pathname},location.origin)}catch(e){}}
+b.onclick=function(){v.src=en?"/assets/video/showreel/showreel-en.mp4":"/assets/video/showreel/showreel-ru.mp4";v.hidden=false;s.className='stage on';v.play().catch(function(){});};
 </script>

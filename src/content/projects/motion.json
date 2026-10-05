@@ -167,16 +167,16 @@
     {
       "kind": "benefit",
       "title": "Монтаж, в котором склейки идут по музыке",
-      "text": "Восемь работ в ритме трека: кадр меняется на долю, заставка и титры собраны движением. Видео записано кадр за кадром с работающих сайтов и игр.",
+      "text": "Товарные 3D-ролики, промо приложений, живые интерфейсы, игры, заставки брендов и вертикальные ролики в ритме одного трека: кадр меняется на долю, переходы собраны движением. Интерфейсы записаны кадр за кадром с работающих страниц.",
       "figure": {
-        "value": "57 с",
+        "value": "54 с",
         "label": "шоурил со звуком, склейки по долям"
       },
       "layers": [
         {
           "image": {
             "src": "/assets/motion/reel-poster.webp",
-            "alt": "Шоурил VELMREN: окно с работой и название на цветном фоне",
+            "alt": "Шоурил VELMREN: часы KALDER и название ролика",
             "width": 1280,
             "height": 720
           },
@@ -189,7 +189,7 @@
         {
           "image": {
             "src": "/assets/motion/reel-grid.webp",
-            "alt": "Восемь работ из шоурила: плитки с кадрами",
+            "alt": "Шесть кадров из шоурила: часы, колонка, ноутбук и телефон, корабль, квартал, герой игры",
             "width": 560,
             "height": 644
           },
@@ -349,7 +349,8 @@
       "/assets/motion/snippet.webp": "/assets/motion/snippet-en.webp",
       "/assets/motion/khrum-end-ru.webp": "/assets/motion/khrum-end-en.webp",
       "/assets/motion/sono-promo-poster-ru.webp": "/assets/motion/sono-promo-poster-en.webp",
-      "/assets/motion/khrum-poster-ru.webp": "/assets/motion/khrum-poster-en.webp"
+      "/assets/motion/khrum-poster-ru.webp": "/assets/motion/khrum-poster-en.webp",
+      "/assets/motion/reel-poster.webp": "/assets/motion/reel-poster-en.webp"
     },
     "sections": [
       {
@@ -390,14 +391,14 @@
       },
       {
         "title": "Editing where the cuts land on the music",
-        "text": "Eight works in the rhythm of a track: the picture changes on the beat, the opening and the titles are built in motion. The footage was recorded frame by frame from working sites and games.",
+        "text": "3D product films, app promos, live interfaces, games, brand idents and vertical videos in the rhythm of one track: the picture changes on the beat and the transitions are built in motion. The interfaces were recorded frame by frame from working pages.",
         "figure": {
-          "value": "57 s",
+          "value": "54 s",
           "label": "showreel with sound, cuts on the beat"
         },
         "alts": [
-          "VELMREN showreel: a window with a work and its name on a coloured ground",
-          "Eight works from the showreel: tiles with frames"
+          "VELMREN showreel: the KALDER watch and the title of the film",
+          "Six frames from the showreel: a watch, a speaker, a laptop and a phone, a vessel, a residential block, the hero of a game"
         ]
       },
       {
