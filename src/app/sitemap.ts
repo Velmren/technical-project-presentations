@@ -4,7 +4,7 @@ import { shown } from '@/components/video/clips';
 import { galleryPath, videoPath } from '@/lib/videos';
 import { CONTACTS } from '@/lib/contacts';
 import { languageAddresses, localePath } from '@/lib/i18n';
-import { servicePath, SERVICES } from '@/lib/services';
+import { servicePath, SERVICES } from '@/lib/service-paths';
 import { services } from '@/lib/services-data';
 import { SITE } from '@/lib/seo';
 export const dynamic = 'force-static';
