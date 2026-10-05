@@ -5,10 +5,10 @@
   "eyebrow": "Сайт и магазин на WordPress",
   "year": 2026,
   "lead": "Сайт мастерской, который сам считает заказ",
-  "summary": "Багетная мастерская: услуги, калькулятор рамы и магазин на WooCommerce. Демонстрационный проект, своя тема и свои плагины.",
+  "summary": "Багетная мастерская: услуги, калькулятор рамы и магазин на WooCommerce. Своя тема и свои плагины.",
   "seo": {
     "title": "Сайт на WordPress и WooCommerce с калькулятором заказа",
-    "description": "Сайт багетной мастерской на WordPress: услуги, калькулятор рамы и магазин на WooCommerce. Своя тема и свои плагины, демонстрационный проект."
+    "description": "Сайт багетной мастерской на WordPress: услуги, калькулятор рамы и магазин на WooCommerce. Своя тема и свои плагины."
   },
   "note": "Демо-режим",
   "category": "Веб-сайты",
@@ -184,7 +184,7 @@
     {
       "kind": "benefit",
       "title": "Заказы и заявки собираются в одном месте",
-      "text": "Заказ с параметрами рамы виден в админке, уведомление уходит в Telegram.",
+      "text": "Заказ с параметрами рамы виден в админке, уведомления о заказах можно получать в Telegram.",
       "layers": [
         {
           "image": {
@@ -264,10 +264,10 @@
     "title": "Falz",
     "eyebrow": "WordPress site and shop",
     "lead": "A workshop site that prices the order itself",
-    "summary": "A framing workshop: services, a frame calculator and a WooCommerce shop. A demonstration project with its own theme and plugins.",
+    "summary": "A framing workshop: services, a frame calculator and a WooCommerce shop, with its own theme and plugins.",
     "seo": {
       "title": "WordPress and WooCommerce site with a price calculator",
-      "description": "A framing workshop site on WordPress: services, a frame price calculator and a WooCommerce shop. Custom theme and plugins, a demonstration project."
+      "description": "A framing workshop site on WordPress: services, a frame price calculator and a WooCommerce shop. Custom theme and plugins."
     },
     "note": "Demo mode",
     "closing": "See the site in action",
@@ -332,7 +332,7 @@
       },
       {
         "title": "Orders and enquiries arrive in one place",
-        "text": "An order with the frame options shows in the admin, and a notification goes to Telegram.",
+        "text": "An order with the frame options shows in the admin, and order notifications can be sent to Telegram.",
         "alts": [
           "Orders list in the WooCommerce admin"
         ]
