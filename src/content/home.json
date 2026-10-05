@@ -763,6 +763,9 @@
         "action": "See it live",
         "alt": "Khrum runs, a chick hatches from an egg in confetti, a vertical screen with a logo",
         "overlayAlt": "A vertical screen with a partner logo",
+        "media": {
+          "/assets/motion/reel-poster.webp": "/assets/motion/reel-poster-en.webp"
+        },
         "facts": [
           {
             "value": "28 KB",
