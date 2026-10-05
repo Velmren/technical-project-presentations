@@ -6,12 +6,16 @@
   "year": 2026,
   "eyebrow": "Лендинг",
   "lead": "Лендинг, который ведёт от первого экрана к готовой заявке",
-  "summary": "Концепт беспроводной колонки: две модели, сравнение, конфигуратор, корзина и заявка. На русском и английском.",
+  "summary": "Беспроводная колонка в двух моделях: сравнение, конфигуратор, корзина и заявка. На русском и английском.",
+  "story": {
+    "task": "Товару с двумя моделями и несколькими цветами нужна одна страница, которая объясняет разницу и доводит до заявки, где уже записано, что выбрано.",
+    "solution": "Модели сравниваются на карточках и в таблице, конфигуратор задаёт цвет и число колонок, корзина собирает выбор. В заявку подставляется собранный комплект.",
+    "result": "Лендинг открыт: на русском и английском, выбор сохраняется на устройстве, корзина проходится с клавиатуры, на телефоне тот же путь. Три цвета колонки получены из одного снимка, без отдельной съёмки."
+  },
   "seo": {
     "title": "Лендинг товара с конфигуратором и заявкой",
-    "description": "Лендинг беспроводной колонки на React: две модели, сравнение, конфигуратор, корзина и заявка. Концепт на русском и английском."
+    "description": "Лендинг беспроводной колонки на React: две модели, сравнение, конфигуратор, корзина и заявка. На русском и английском."
   },
-  "note": "Демо-лендинг",
   "closing": "Соберите свой комплект на лендинге",
   "accent": "#244bd8",
   "category": "Веб-сайты",
@@ -199,12 +203,16 @@
   "en": {
     "eyebrow": "Landing page",
     "lead": "A landing page that takes visitors from the first screen to a ready enquiry",
-    "summary": "A wireless speaker concept: two models, a comparison, a configurator, a bag and an enquiry form. In Russian and English.",
+    "summary": "A wireless speaker in two models: a comparison, a configurator, a bag and an enquiry form. In Russian and English.",
+    "story": {
+      "task": "A product with two models and several colours needs one page that explains the difference and brings an enquiry that already says what was chosen.",
+      "solution": "The models are compared on cards and in a table, a configurator sets the colour and the number of speakers, and a bag collects the choice. The enquiry is filled in with the set the visitor built.",
+      "result": "The landing page is open: in Russian and English, the choice is kept on the device, the bag works from the keyboard, and the path is the same on a phone. Three speaker colours come from one photograph, with no extra shoot."
+    },
     "seo": {
       "title": "Product landing page with a configurator",
-      "description": "A landing page for a wireless speaker on React: two models, a comparison, a configurator, a bag and an enquiry form. A concept in Russian and English."
+      "description": "A landing page for a wireless speaker on React: two models, a comparison, a configurator, a bag and an enquiry form. In Russian and English."
     },
-    "note": "Demo landing page",
     "closing": "Build your own set on the landing page",
     "actions": [
       "Open the landing page"
