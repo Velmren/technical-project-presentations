@@ -49,7 +49,5 @@ export type ServicesData = z.infer<typeof servicesSchema>;
 export type Service = ServicesData['services'][number];
 export type ServiceTexts = ServicesData['common'][Locale];
 
-// The list of services; English lives at /en/services/.
-export const SERVICES = '/services/';
-export const servicePath = (name: string) => `${SERVICES}${name}/`;
+export { SERVICES, servicePath } from './service-paths';
 export const servicesOf = (data: ServicesData, locale: Locale) => data.services.filter(item => item.locale === locale);

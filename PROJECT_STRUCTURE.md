@@ -64,7 +64,8 @@ VELMREN portfolio: Next.js 16 (App Router), TypeScript, static export to `out/`.
 │       ├── clipboard.ts       copying a text to the clipboard
 │       ├── structured-data.ts schema.org data of the pages: organization, site, works, gallery, clips, contacts,
 │       │                      services with their questions
-│       ├── services.ts        Zod schema of the service pages, their addresses, the services of one language
+│       ├── services.ts        Zod schema of the service pages, the services of one language
+│       ├── service-paths.ts   addresses of the service pages without the schema (header and footer link to them)
 │       ├── services-data.ts   the validated content of services.json
 │       ├── social.ts          social preview images
 │       ├── color.ts           main button colour of a case page and its text contrast

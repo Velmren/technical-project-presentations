@@ -1,6 +1,6 @@
 import { CONTACTS, GITHUB, TELEGRAM } from '@/lib/contacts';
 import { localePath, UI, type Locale } from '@/lib/i18n';
-import { SERVICES } from '@/lib/services';
+import { SERVICES } from '@/lib/service-paths';
 import { ContactLinks, TelegramIcon } from './Contacts';
 import { LangHint } from './LangHint';
 import { LangSwitch } from './LangSwitch';
