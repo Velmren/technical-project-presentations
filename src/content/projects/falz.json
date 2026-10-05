@@ -6,6 +6,11 @@
   "year": 2026,
   "lead": "Сайт мастерской, который сам считает заказ",
   "summary": "Багетная мастерская: услуги, калькулятор рамы и магазин на WooCommerce. Своя тема и свои плагины.",
+  "story": {
+    "task": "Мастерская делает рамы под размер, и цену обычно узнают по телефону или уже на месте. Нужен сайт, где клиент сам получает цену и оформляет заказ.",
+    "solution": "Калькулятор рамы стоит на странице как блок: размер, багет, паспарту и стекло меняют раму на экране и сумму. Цену считает сервер, расчёт уходит в корзину как обычный товар. Рядом магазин готовых рам.",
+    "result": "Сайт работает по своему адресу: 12 товаров с 78 вариациями, две языковые версии, заказы и заявки видны в админке. На телефоне Lighthouse даёт 95-100 на шести страницах. Цены и багет владелец меняет сам."
+  },
   "seo": {
     "title": "Сайт на WordPress и WooCommerce с калькулятором заказа",
     "description": "Сайт багетной мастерской на WordPress: услуги, калькулятор рамы и магазин на WooCommerce. Своя тема и свои плагины."
@@ -265,6 +270,11 @@
     "eyebrow": "WordPress site and shop",
     "lead": "A workshop site that prices the order itself",
     "summary": "A framing workshop: services, a frame calculator and a WooCommerce shop, with its own theme and plugins.",
+    "story": {
+      "task": "A workshop makes frames to size, and the price is usually given over the phone or at the counter. It needs a site where the customer gets the price and places the order without a call.",
+      "solution": "A frame calculator sits on the page as a block: size, moulding, mat and glass change the frame on screen and the total. The server prices the choice, and the quote goes to the cart like any product. A shop of ready-made frames stands beside it.",
+      "result": "The site runs at its own address: 12 products with 78 variations, two languages, orders and enquiries in the admin. On a phone Lighthouse scores 95-100 across six pages. The owner changes prices and mouldings without a developer."
+    },
     "seo": {
       "title": "WordPress and WooCommerce site with a price calculator",
       "description": "A framing workshop site on WordPress: services, a frame price calculator and a WooCommerce shop. Custom theme and plugins."
