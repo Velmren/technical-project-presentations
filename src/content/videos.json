@@ -176,6 +176,7 @@
             "ru": "/assets/video/showreel/showreel-share-ru.jpg",
             "en": "/assets/video/showreel/showreel-share-en.jpg"
           },
+          "lightPoster": true,
           "preview": "/assets/video/showreel/showreel-hover.mp4"
         }
       ]
