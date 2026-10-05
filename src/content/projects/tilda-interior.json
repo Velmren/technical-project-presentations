@@ -7,11 +7,15 @@
   "eyebrow": "Сайт на Tilda",
   "lead": "Сайт интерьерной студии, который ведёт от первого впечатления к заявке",
   "summary": "Главная, три концепции квартир, услуги с этапами и две формы. Собран в Zero Block на Tilda и опубликован.",
+  "story": {
+    "task": "Интерьерной студии нужен сайт, после которого человек понимает, что и как будут делать, и оставляет заявку с описанием своей квартиры.",
+    "solution": "У каждой концепции своя страница с решениями и галереей. На странице услуг три формата работы и восемь этапов. Обратиться можно коротким опросом из четырёх вопросов или формой с описанием задачи.",
+    "result": "Сайт опубликован, его можно открыть: главная, три концепции, услуги и две формы. Заявки попадают в раздел заявок Tilda. На телефоне тот же путь: этапы и формы в одну колонку."
+  },
   "seo": {
     "title": "Сайт для студии дизайна интерьера на Tilda",
     "description": "Сайт интерьерной студии на Tilda Zero Block: главная, три концепции квартир, услуги с этапами и две формы заявки. Опубликован, его можно открыть."
   },
-  "note": "Концепции показаны визуализациями",
   "closing": "Посмотрите сайт вживую",
   "accent": "#58634e",
   "category": "Веб-сайты",
@@ -199,11 +203,15 @@
     "eyebrow": "Tilda website",
     "lead": "A studio website that leads from the first impression to an enquiry",
     "summary": "Home page, three apartment concepts, services with stages and two forms. Built with Zero Block on Tilda and live.",
+    "story": {
+      "task": "An interior studio needs a site that shows what will be done and how, and brings an enquiry with the apartment already described.",
+      "solution": "Every concept has its own page with the decisions and a gallery. The services page lists three ways of working and eight stages. A visitor can answer a short survey of four questions or write about the task in a form.",
+      "result": "The site is live and can be opened: a home page, three concepts, services and two forms. Enquiries land in the Tilda leads section. On a phone the path is the same: stages and forms in one column."
+    },
     "seo": {
       "title": "Interior design studio website on Tilda",
       "description": "An interior studio website built with Tilda Zero Block: home page, three apartment concepts, services with stages and two enquiry forms. It is live."
     },
-    "note": "Concepts shown as visualisations",
     "closing": "See the site live",
     "actions": [
       "Open the site"
