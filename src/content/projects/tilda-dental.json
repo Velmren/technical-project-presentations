@@ -7,11 +7,15 @@
   "eyebrow": "Сайт на Tilda",
   "lead": "Сайт районной стоматологии, на котором цена и врач известны до визита",
   "summary": "Главная, прайс, врачи, контакты и запись на приём. Собран на Tilda и опубликован.",
+  "story": {
+    "task": "Районной клинике нужен сайт, с которого записываются на приём, а не звонят узнать цену и кто принимает.",
+    "solution": "Частые услуги с ценами стоят на главной, полный прайс на отдельной странице. Три врача с фотографиями, специализацией и часами приёма. Запись одной короткой формой, рядом телефон.",
+    "result": "Сайт опубликован, его можно открыть: главная, прайс, врачи, контакты и запись. Заявки сохраняются в кабинете Tilda, тексты, цены и фото владелец меняет в редакторе сам."
+  },
   "seo": {
     "title": "Сайт для стоматологии на Tilda: прайс, врачи, запись",
-    "description": "Сайт стоматологии на Tilda: цены на главной, врачи с фотографиями и часами приёма, запись за минуту. Демонстрационная работа, сайт опубликован."
+    "description": "Сайт стоматологии на Tilda: цены на главной, врачи с фотографиями и часами приёма, запись за минуту. Сайт опубликован."
   },
-  "note": "Клиника, врачи и цены вымышлены",
   "closing": "Посмотрите сайт вживую",
   "accent": "#1f5a4c",
   "category": "Веб-сайты",
@@ -199,11 +203,15 @@
     "eyebrow": "Tilda website",
     "lead": "A neighbourhood dental clinic site where the price and the doctor are known before the visit",
     "summary": "Home page, price list, doctors, contacts and an appointment form. Built on Tilda and live.",
+    "story": {
+      "task": "A neighbourhood clinic needs a site people book from, instead of calling to ask the price and who will see them.",
+      "solution": "Common treatments with prices stand on the home page, the full price list on a page of its own. Three doctors with photos, specialities and hours. Booking is one short form, with the phone number beside it.",
+      "result": "The site is live and can be opened: home page, price list, doctors, contacts and booking. Requests are saved in the Tilda account, and the owner edits texts, prices and photos in the editor."
+    },
     "seo": {
       "title": "Dental clinic website on Tilda: prices, doctors, booking",
-      "description": "A dental clinic website on Tilda: prices on the home page, doctors with photos and hours, an appointment in a minute. A demonstration work, the site is live."
+      "description": "A dental clinic website on Tilda: prices on the home page, doctors with photos and hours, an appointment in a minute. The site is live."
     },
-    "note": "The clinic, doctors and prices are fictional",
     "closing": "See the site live",
     "actions": [
       "Open the site"
