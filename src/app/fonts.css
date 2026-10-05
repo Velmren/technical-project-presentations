@@ -1,0 +1,13 @@
+/* Fallbacks with the metrics of the site fonts (the values next/font computed for them): text drawn before a web
+   font arrives takes the same space, so nothing moves when the font swaps in. */
+@font-face { font-family: 'Tektur Fallback'; src: local('Arial'); ascent-override: 90.61%; descent-override: 27.18%; line-gap-override: 0%; size-adjust: 110.36%; }
+@font-face { font-family: 'Sofia Sans Condensed Fallback'; src: local('Arial'); ascent-override: 120.13%; descent-override: 40.04%; line-gap-override: 0%; size-adjust: 74.92%; }
+@font-face { font-family: 'Golos Text Fallback'; src: local('Arial'); ascent-override: 90.27%; descent-override: 20.26%; line-gap-override: 0%; size-adjust: 108.57%; }
+
+/* A family is its Latin face, the rouble sign, the Cyrillic face where the page declares one (src/lib/fonts-*.ts),
+   then the fallback. */
+html { --font-body: var(--golos-latin), var(--golos-rouble), var(--golos-cyrillic, 'Golos Text Fallback'), 'Golos Text Fallback'; }
+.cc-fonts {
+  --cc-display: var(--tektur-latin), var(--tektur-rouble), var(--tektur-cyrillic, 'Tektur Fallback'), 'Tektur Fallback';
+  --cc-figures: var(--sofia-latin), var(--sofia-cyrillic, 'Sofia Sans Condensed Fallback'), 'Sofia Sans Condensed Fallback';
+}

@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { RootDocument } from '@/components/RootDocument';
 import { fontVariables } from '@/lib/fonts-c';
+import { missingPageFonts } from '@/lib/fonts-cyrillic-404';
 import { Footer, Header, HOME, TextLink } from '@/components/concepts/Chrome';
 import { localePath } from '@/lib/i18n';
 import { siteMetadata } from '@/lib/seo';
@@ -12,7 +13,7 @@ export const metadata: Metadata = { ...siteMetadata('Страница не на�
 
 // One page answers every missing address, Russian or English, so it says its line in both languages.
 export default function GlobalNotFound() {
-  return <RootDocument locale="ru">
+  return <RootDocument locale="ru" fonts={missingPageFonts}>
     <div className={fontVariables}>
       <div className="cc-page">
         <Header locale="ru" alternate={localePath('en', HOME)}/>

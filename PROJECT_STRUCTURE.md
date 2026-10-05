@@ -26,6 +26,7 @@ VELMREN portfolio: Next.js 16 (App Router), TypeScript, static export to `out/`.
 │   │   ├── concepts/          styles of the current design: concepts.css (live previews), c/concept-c.css (home, header,
 │   │   │                      footer, buttons), c/case.css (case pages)
 │   │   ├── globals.css, editorial.css  styles of the classic case layout
+│   │   ├── fonts.css          each site font family put together from its faces, with fallbacks of matching metrics
 │   │   ├── global-not-found.tsx  404 page for any missing address, in both languages
 │   │   ├── robots.txt/route.ts   robots.txt as plain text (with Clean-param for Yandex)
 │   │   └── sitemap.ts         pages in both languages with their language versions, then the service pages written
@@ -50,6 +51,8 @@ VELMREN portfolio: Next.js 16 (App Router), TypeScript, static export to `out/`.
 │   │   ├── services.json      service pages: texts shared by a language, then each service with its language, search
 │   │   │                      title, heading, what the client gets, the works and clips shown as examples, questions
 │   │   └── projects/*.json    case page data, one file per slug
+│   ├── fonts/             site fonts cut down to the characters of the site (scripts/subset-fonts.py), charset.json
+│   │                      lists those characters, OFL licences; source/ holds the Google Fonts script files
 │   └── lib/
 │       ├── schema.ts          Zod schema of case pages
 │       ├── projects.ts        reads and validates src/content/projects/
@@ -71,7 +74,9 @@ VELMREN portfolio: Next.js 16 (App Router), TypeScript, static export to `out/`.
 │       │                      a screenshot (the sizes of its picture)
 │       ├── social.ts          social preview images
 │       ├── color.ts           main button colour of a case page and its text contrast
-│       ├── fonts-c.ts         display fonts (Tektur, Sofia Sans Condensed)
+│       ├── fonts-c.ts         the site fonts from src/fonts/: Latin faces of Tektur, Sofia Sans Condensed and Golos Text
+│       ├── fonts-cyrillic.ts  their Cyrillic faces, loaded by the Russian layout only (fonts-cyrillic-404.ts: the same
+│       │                      for the page of missing addresses, without preloading)
 │       └── concepts/          WebGL mosaic of the home page hero
 ├── public/
 │   ├── assets/
@@ -123,6 +128,7 @@ VELMREN portfolio: Next.js 16 (App Router), TypeScript, static export to `out/`.
 │   ├── prepare-videos.mjs     prepares web video, poster, link preview and hover fragment of a clip; --check verifies
 │   │                          the files before a release
 │   ├── build-category-spark-web.mjs  builds the Category Spark browser version from its source ZIP (GODOT=<path to Godot 4.7.2>)
+│   ├── subset-fonts.py    cuts the site fonts down to the characters found in src/ (needs fonttools and brotli)
 │   └── build-candidate.sh     builds a release candidate from one pinned commit in a clean copy (RELEASE_OUT, default
 │                              C:/AstraTmp/portfolio-release), adding the Category Spark build and the gallery films
 ├── tests/
@@ -135,7 +141,8 @@ VELMREN portfolio: Next.js 16 (App Router), TypeScript, static export to `out/`.
 │   ├── videos.test.ts         gallery data, schema, row layout and filter
 │   ├── services.test.ts       service pages: examples exist, headings speak about the result, unique search titles,
 │   │                          no prices or deadlines in the texts
-│   └── shots.test.ts          reduced copies of screenshots: the rule of widths, every copy on disk, valid sizes
+│   ├── shots.test.ts          reduced copies of screenshots: the rule of widths, every copy on disk, valid sizes
+│   └── fonts.test.ts          every character of the site text is in the cut-down fonts
 └── docs/
     └── THIRD-PARTY.md         third-party assets, fonts and licences
 ```

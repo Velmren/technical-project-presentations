@@ -14,7 +14,7 @@ All fonts below are licensed under the SIL Open Font License 1.1.
 
 | Font | Location | Licence text |
 | --- | --- | --- |
-| Golos Text, Tektur, Sofia Sans Condensed | downloaded from Google Fonts at build time by `next/font` | not stored in the repository |
+| Golos Text, Tektur, Sofia Sans Condensed (subsets) | `src/fonts/`; Google Fonts script files in `src/fonts/source/`, cut down to the characters of the site by `scripts/subset-fonts.py` | `Golos-Text-OFL.txt`, `Tektur-OFL.txt`, `Sofia-Sans-OFL.txt` in `src/fonts/` |
 | Onest | `demos/forma/assets/` | `demos/forma/assets/OFL-Onest.txt` |
 | IBM Plex Sans, IBM Plex Mono | `public/projects/dev-utilities/fonts/` | `OFL-IBMPlexSans.txt`, `OFL-IBMPlexMono.txt` in the same folder; sources in `new-projects/dev-utilities/src/fonts/` |
 | Inter, Caveat | `public/projects/admin-dashboard/assets/` | `OFL-Inter.txt`, `OFL-Caveat.txt` in the same folder; sources in `new-projects/admin-dashboard/static/assets/` |
