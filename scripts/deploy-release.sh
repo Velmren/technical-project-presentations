@@ -75,3 +75,5 @@ for page in / /en/ /forma/live/ /assets/godot/web/index.html; do
   printf 'local check %s: OK\n' "$page"
 done
 rm -f "$archive" "$manifest"
+# The staging copy is only needed until the release is copied into place: left behind, it costs about 1 GB per release.
+sudo rm -rf "${base:?}/tmp/deploy/${version:?}"
