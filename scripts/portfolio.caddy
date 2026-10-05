@@ -31,9 +31,10 @@ velmren.com {
 	header @immutable Cache-Control "public, max-age=31536000, immutable"
 	# Pages and their data payloads are revalidated so a new release shows up at once.
 	# no-transform keeps Cloudflare from rewriting the pages: its Email Obfuscation would replace the published
-	# address with a decode script and a /cdn-cgi/ link that crawlers see as a 404. Caddy compresses them itself.
+	# address with a decode script and a /cdn-cgi/ link that crawlers see as a 404. The header is deferred (>)
+	# because encode skips a response that already says no-transform, and the pages must leave here compressed.
 	@pages path / */ *.html *.txt
-	header @pages Cache-Control "no-cache, no-transform"
+	header @pages >Cache-Control "no-cache, no-transform"
 	# Other static files keep their names between releases: cache for an hour only.
 	@static path *.js *.css *.json *.wasm *.pck *.webp *.avif *.png *.jpg *.jpeg *.svg *.ico *.woff *.woff2 *.mp4 *.webm *.zip *.jar
 	header @static ?Cache-Control "public, max-age=3600"
