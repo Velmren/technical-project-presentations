@@ -6,6 +6,15 @@
   background: #000; color: #fff; container-type: inline-size; -webkit-tap-highlight-color: transparent;
 }
 .vp video { display: block; width: 100%; height: 100%; object-fit: contain; background: #000; }
+/* Where scripts run, the browser's own controls stay out of sight until ours take their place. Shown first and
+   replaced a moment later they blink; and a browser that cannot decode the picture of a film redraws them as a
+   sound player once the film answers, which a speed measurement counts as a shift of the whole frame (0.25 on a
+   wide screen). If our scripts have not come in six seconds, the browser controls appear after all and the film
+   can be played. Without scripts they are there from the start. */
+@media (scripting: enabled) {
+  .vp:not([data-enhanced='true']) video::-webkit-media-controls { visibility: hidden; animation: vp-browser-controls 0s 6s forwards; }
+}
+@keyframes vp-browser-controls { to { visibility: visible; } }
 .vp[data-enhanced='true'] video { cursor: pointer; }
 .vp[data-enhanced='true'][data-shown='false'] { cursor: none; }
 .vp[data-enhanced='true'][data-shown='false'] video { cursor: none; }

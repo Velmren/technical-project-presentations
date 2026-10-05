@@ -30,8 +30,9 @@ const share = (event: React.PointerEvent<HTMLElement>) => {
 
 type NativeFullscreenVideo = HTMLVideoElement & { webkitEnterFullscreen?: () => void };
 
-// One player for the whole site. Before scripts run it is a plain video with the browser controls;
-// after that the controls are ours. Sound never starts by itself: playback begins only on a press.
+// One player for the whole site. Without scripts it is a plain video with the browser controls; with them
+// the controls are ours, and until they are ready the browser ones are kept out of sight (see player.css).
+// Sound never starts by itself: playback begins only on a press.
 // startAt opens the clip paused at a moment; pageKeys lets the main player of a page hear the keys
 // even when nothing on the page has focus. The page of one clip preloads its index for a quick start;
 // where several players share a page they pass preload="none" and load nothing before a press.
