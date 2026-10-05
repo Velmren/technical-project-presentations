@@ -183,3 +183,9 @@
   .ct-first { padding: 36px 0 12px; }
   .ct-first ul { font-size: 16px; }
 }
+
+/* On a phone the kind of work always stands under the name: a row that only just fits on one line would break
+   into two when the web font arrives a few pixels wider than the fallback, and move the whole first screen. */
+@media (max-width: 600px) {
+  .cs-name span { flex-basis: 100%; }
+}
