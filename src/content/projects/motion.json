@@ -175,7 +175,7 @@
       "layers": [
         {
           "image": {
-            "src": "/assets/motion/reel-poster.webp",
+            "src": "/assets/motion/reel-poster-kalder.webp",
             "alt": "Шоурил VELMREN: часы KALDER и название ролика",
             "width": 1280,
             "height": 720
@@ -350,7 +350,7 @@
       "/assets/motion/khrum-end-ru.webp": "/assets/motion/khrum-end-en.webp",
       "/assets/motion/sono-promo-poster-ru.webp": "/assets/motion/sono-promo-poster-en.webp",
       "/assets/motion/khrum-poster-ru.webp": "/assets/motion/khrum-poster-en.webp",
-      "/assets/motion/reel-poster.webp": "/assets/motion/reel-poster-en.webp"
+      "/assets/motion/orbit-promo-poster.webp": "/assets/motion/orbit-promo-poster-en.webp"
     },
     "sections": [
       {

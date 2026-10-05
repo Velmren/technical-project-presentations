@@ -23,9 +23,10 @@ button svg{width:34%;height:34%;margin-left:6%}
 </div>
 <script>
 var en=new URLSearchParams(location.search).get('lang')==='en',b=document.getElementById('b'),v=document.getElementById('v'),s=document.getElementById('s'),p=document.getElementById('p');
-// The poster and the clip follow the page language; the poster is set after the load listener, so an English page never fetches the Russian one.
+// The poster carries only the brand name, so both languages share it (the caption of the frame is painted out,
+// it stood where the button is); the clip follows the page language.
 p.addEventListener('load',function(){try{if(parent!==window)parent.postMessage({live:location.pathname},location.origin)}catch(e){}});
-p.src=en?"../reel-poster-en.webp":"../reel-poster.webp";
+p.src="../reel-poster-kalder.webp";
 b.setAttribute('aria-label',en?"Play the showreel":"Смотреть шоурил");
 b.onclick=function(){v.src=en?"/assets/video/showreel/showreel-en.mp4":"/assets/video/showreel/showreel-ru.mp4";v.hidden=false;s.className='stage on';v.play().catch(function(){});};
 </script>

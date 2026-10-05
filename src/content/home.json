@@ -761,7 +761,7 @@
           "/assets/home/card-motion.webp",
           "/assets/motion/hero-khrum.webp",
           "/assets/motion/hatch-success.webp",
-          "/assets/motion/reel-poster.webp"
+          "/assets/motion/reel-poster-kalder.webp"
         ]
       },
       "facts": [
@@ -783,9 +783,6 @@
         "action": "See it live",
         "alt": "Khrum runs, a chick hatches from an egg in confetti, a vertical screen with a logo",
         "overlayAlt": "A vertical screen with a partner logo",
-        "media": {
-          "/assets/motion/reel-poster.webp": "/assets/motion/reel-poster-en.webp"
-        },
         "facts": [
           {
             "value": "28 KB",

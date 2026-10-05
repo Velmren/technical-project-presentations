@@ -17,15 +17,15 @@ button svg{width:34%;height:34%;margin-left:6%}
 .on img,.on button{display:none}
 </style>
 <div class="stage" id="s">
-<img id="p" src="../orbit-promo-poster.webp" alt="">
+<img id="p" alt="">
 <video id="v" playsinline preload="none" controls hidden></video>
 <button id="b" type="button" aria-label="Смотреть промо"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6 3.5v17l14-8.5z"/></svg></button>
 </div>
 <script>
 var en=new URLSearchParams(location.search).get('lang')==='en',b=document.getElementById('b'),v=document.getElementById('v'),s=document.getElementById('s'),p=document.getElementById('p');
-if(en)p.src="../orbit-promo-poster-en.webp";
+// The poster and the clip follow the page language; the poster is set after the load listener, so an English page never fetches the Russian one.
+p.addEventListener('load',function(){try{if(parent!==window)parent.postMessage({live:location.pathname},location.origin)}catch(e){}});
+p.src=en?"../orbit-promo-poster-en.webp":"../orbit-promo-poster.webp";
 b.setAttribute('aria-label',en?"Play the promo":"Смотреть промо");
 b.onclick=function(){v.src=en?"../video/orbit-promo-en.mp4":"../video/orbit-promo.mp4";v.hidden=false;s.className='stage on';v.play().catch(function(){});};
-p.addEventListener('load',function(){try{if(parent!==window)parent.postMessage({live:location.pathname},location.origin)}catch(e){}});
-if(p.complete){try{if(parent!==window)parent.postMessage({live:location.pathname},location.origin)}catch(e){}}
 </script>
