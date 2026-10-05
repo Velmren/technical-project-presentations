@@ -29,7 +29,12 @@
       },
       "details": "/electronics-store/",
       "live": {
-        "scroll": "/assets/electronics-store/home-full-desktop.webp",
+        "scroll": {
+          "src": "/assets/electronics-store/home-full-desktop.webp",
+          "small": "/assets/electronics-store/home-full-desktop-720.webp",
+          "width": 1440,
+          "height": 2821
+        },
         "slides": [
           "/assets/electronics-store/hero-desktop.webp",
           "/assets/electronics-store/category-filters-desktop.webp",
@@ -363,7 +368,12 @@
       },
       "details": "/sono/",
       "live": {
-        "scroll": "/assets/sono/landing-full-desktop.webp",
+        "scroll": {
+          "src": "/assets/sono/landing-full-desktop.webp",
+          "small": "/assets/sono/landing-full-desktop-720.webp",
+          "width": 1440,
+          "height": 3630
+        },
         "slides": [
           "/assets/sono/hero-desktop.webp",
           "/assets/sono/models-comparison-desktop.webp",
@@ -445,7 +455,12 @@
       },
       "details": "/tilda-interior/",
       "live": {
-        "scroll": "/assets/home/live-tilda-full.webp"
+        "scroll": {
+          "src": "/assets/home/live-tilda-full.webp",
+          "small": "/assets/home/live-tilda-full-720.webp",
+          "width": 1440,
+          "height": 4941
+        }
       },
       "en": {
         "type": "Studio website",
@@ -665,7 +680,12 @@
       },
       "details": "/tilda-tour/",
       "live": {
-        "scroll": "/assets/home/live-tilda-tour-full.webp"
+        "scroll": {
+          "src": "/assets/home/live-tilda-tour-full.webp",
+          "small": "/assets/home/live-tilda-tour-full-720.webp",
+          "width": 1440,
+          "height": 7500
+        }
       },
       "en": {
         "type": "Tour club website",
@@ -800,7 +820,12 @@
       },
       "details": "/tilda-dental/",
       "live": {
-        "scroll": "/assets/home/live-dental-full.webp"
+        "scroll": {
+          "src": "/assets/home/live-dental-full.webp",
+          "small": "/assets/home/live-dental-full-720.webp",
+          "width": 1440,
+          "height": 7632
+        }
       },
       "en": {
         "type": "Clinic website",
@@ -901,7 +926,12 @@
       },
       "details": "/tilda-webinar/",
       "live": {
-        "scroll": "/assets/home/live-tilda-webinar-full.webp"
+        "scroll": {
+          "src": "/assets/home/live-tilda-webinar-full.webp",
+          "small": "/assets/home/live-tilda-webinar-full-720.webp",
+          "width": 1440,
+          "height": 6182
+        }
       },
       "en": {
         "type": "Lesson landing page",

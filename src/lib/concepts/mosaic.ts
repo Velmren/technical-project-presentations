@@ -15,7 +15,8 @@ export type Mosaic = {
   reset(): void;
   dispose(): void;
 };
-type Options = { sources: MosaicSource[]; cols: number; rows: number; reduced: boolean; maxRatio: number; onFirstFrame?: () => void; onLost?: () => void };
+// first: the work on screen when the board starts; onFirstFrame gets the work it was drawn with.
+type Options = { sources: MosaicSource[]; cols: number; rows: number; reduced: boolean; maxRatio: number; first?: number; onFirstFrame?: (shown: number) => void; onLost?: () => void };
 
 const BOARD_W = 1.6;
 
@@ -128,9 +129,11 @@ async function decode(src: string) {
   });
 }
 
-export async function mountMosaic(canvas: HTMLCanvasElement, { sources, cols, rows, reduced, maxRatio, onFirstFrame, onLost }: Options): Promise<Mosaic> {
-  const gl2 = canvas.getContext('webgl2', { alpha: true, antialias: true, premultipliedAlpha: true, powerPreference: 'high-performance' });
-  const gl = (gl2 ?? canvas.getContext('webgl', { alpha: true, antialias: true, premultipliedAlpha: true })) as WebGLRenderingContext | null;
+export async function mountMosaic(canvas: HTMLCanvasElement, { sources, cols, rows, reduced, maxRatio, first = 0, onFirstFrame, onLost }: Options): Promise<Mosaic> {
+  // Without a graphics card the board would be drawn by the processor and hold up the page for seconds;
+  // there the browser refuses the context and the still image stays.
+  const gl2 = canvas.getContext('webgl2', { alpha: true, antialias: true, premultipliedAlpha: true, powerPreference: 'high-performance', failIfMajorPerformanceCaveat: true });
+  const gl = (gl2 ?? canvas.getContext('webgl', { alpha: true, antialias: true, premultipliedAlpha: true, failIfMajorPerformanceCaveat: true })) as WebGLRenderingContext | null;
   if (!gl) throw new Error('WebGL is not available');
   const context = gl;
   const instancing = gl2 ? null : context.getExtension('ANGLE_instanced_arrays');
@@ -244,7 +247,7 @@ export async function mountMosaic(canvas: HTMLCanvasElement, { sources, cols, ro
   const rest = reduced ? { yaw: 0, pitch: 0 } : { yaw: -0.26, pitch: 0.1 };
   const view = { yaw: rest.yaw, pitch: rest.pitch, vyaw: 0, vpitch: 0, dragging: false };
   const lens = { x: -1e4, y: -1e4, strength: 0, target: 0 };
-  let current = 0, next = 0, flipStart = -1, flipOrigin: [number, number] = [-0.8, 0], structureOn = 0, structureValue = 0;
+  let current = first, next = first, flipStart = -1, flipOrigin: [number, number] = [-0.8, 0], structureOn = 0, structureValue = 0;
   let introStart = -1, last = performance.now();
   const FLIP = reduced ? 0.45 : 1.25, INTRO = 2.1;
   const frameTimes: number[] = [];
@@ -314,7 +317,7 @@ export async function mountMosaic(canvas: HTMLCanvasElement, { sources, cols, ro
     context.uniform1f(U.structure, structureValue);
     context.viewport(0, 0, canvas.width, canvas.height);
     gl2 ? gl2.drawArraysInstanced(context.TRIANGLES, 0, 6, count) : instancing!.drawArraysInstancedANGLE(context.TRIANGLES, 0, 6, count);
-    if (!firstFrame) { firstFrame = true; onFirstFrame?.(); }
+    if (!firstFrame) { firstFrame = true; onFirstFrame?.(current); }
     if (animating(now)) frameId = requestAnimationFrame(render);
   }
   function wake() {
@@ -322,24 +325,28 @@ export async function mountMosaic(canvas: HTMLCanvasElement, { sources, cols, ro
   }
   document.addEventListener('visibilitychange', wake);
 
-  loadColor(0).then(() => {
+  // A switch before the first frame only changes the work the board starts on (see show).
+  const begin = (index: number): Promise<void> => loadColor(index).then(() => {
     if (disposed) return;
-    bind(0, 0);
+    if (current !== index) return begin(current);
+    bind(current, current);
     ready = true;
     introStart = performance.now();
     wake();
     // Preload the rest in idle time, one per idle slot, so no upload lands inside an animation.
     const idle = (window as Window & { requestIdleCallback?: (cb: () => void, o?: { timeout: number }) => number }).requestIdleCallback ?? ((cb: () => void) => setTimeout(cb, 400));
-    const queue = sources.map((_, i) => i).slice(1);
+    const queue = sources.map((_, i) => i).filter(i => i !== current);
     const step = () => { const i = queue.shift(); if (i === undefined || disposed) return; loadColor(i).then(() => idle(step, { timeout: 2500 })); };
     setTimeout(() => idle(step, { timeout: 2500 }), (INTRO + 0.4) * 1000);
   });
+  begin(current);
 
   const toBoard = (x: number, y: number): [number, number] => [clamp((x - rect.x - rect.width / 2) / rect.height, -0.8, 0.8), clamp((y - rect.y - rect.height / 2) / rect.height, -0.5, 0.5)];
 
   return {
     show(index, direction, origin) {
-      if (!ready || index === current && flipStart < 0) return;
+      if (!ready) { if (!firstFrame) current = next = index; return; }
+      if (index === current && flipStart < 0) return;
       if (flipStart >= 0) { current = next; bind(current, current); }
       next = index;
       loadColor(index).then(() => {

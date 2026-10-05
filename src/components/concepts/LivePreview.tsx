@@ -25,9 +25,13 @@ function useReducedMotion() {
   return reduced;
 }
 
+type TallPage = NonNullable<NonNullable<HomeWork['live']>['scroll']>;
+// Width of the preview: the full column below 1100px, two thirds of the row above.
+const PREVIEW_SIZES = '(max-width: 1100px) 92vw, 62vw';
+
 // A tall page scrolling inside a fixed frame. The scroll distance depends on the frame height in pixels,
 // so the frame measures itself; the page image loads only when the frame comes near the screen.
-export function ScrollFrame({ src, alt, playing, className = '' }: { src: string; alt: string; playing: boolean; className?: string }) {
+export function ScrollFrame({ page, alt, playing, className = '' }: { page: TallPage; alt: string; playing: boolean; className?: string }) {
   const box = useRef<HTMLDivElement>(null);
   const [near, setNear] = useState(false);
   useEffect(() => {
@@ -40,7 +44,8 @@ export function ScrollFrame({ src, alt, playing, className = '' }: { src: string
     return () => { size.disconnect(); io.disconnect(); };
   }, []);
   return <div ref={box} className={'live live-scroll ' + className} data-playing={playing}>
-    {near && <img src={src} alt={alt} decoding="async"/>}
+    {near && <img src={page.src} srcSet={page.small && `${page.small} 720w, ${page.src} ${page.width}w`} sizes={page.small && PREVIEW_SIZES}
+      width={page.width} height={page.height} alt={alt} decoding="async"/>}
   </div>;
 }
 
@@ -82,7 +87,7 @@ export function LivePreview({ work, mode, active, interval = 2400, className = '
     </div>;
   }
   if (mode === 'scroll' && work.live?.scroll) {
-    return <ScrollFrame src={work.live.scroll} alt={alt} playing={playing} className={className}/>;
+    return <ScrollFrame page={work.live.scroll} alt={alt} playing={playing} className={className}/>;
   }
   if (mode === 'slides' && slides.length) {
     return <div ref={box} className={'live live-slides ' + className} data-playing={playing} style={{ '--live-interval': interval + 'ms' } as React.CSSProperties}>

@@ -9,7 +9,7 @@ const clone = (): HomeData => structuredClone(home);
 
 test('home data is valid and every accepted work points to real files', () => {
   for (const work of home.works.filter(w => w.status === 'accepted')) {
-    const live = work.live ? [work.live.video?.src, work.live.video?.poster, work.live.scroll, ...(work.live.slides ?? [])] : [];
+    const live = work.live ? [work.live.video?.src, work.live.video?.poster, work.live.scroll?.src, work.live.scroll?.small, ...(work.live.slides ?? [])] : [];
     for (const src of [work.preview?.src, work.preview?.overlay?.src, ...live, ...(work.en?.slides ?? []), work.en?.overlay, ...Object.values(work.en?.media ?? {})]) if (src) assert.ok(existsSync('public' + src), `${work.slug}: missing ${src}`);
   }
   assert.throws(() => homeSchema.parse({ ...home, works: [...home.works, { ...home.works[0] }] }), 'duplicate slug');

@@ -47,6 +47,8 @@ function Hero({ works, t, locale }: { works: HomeWork[]; t: Dictionary; locale: 
   const suppressClick = useRef(false);
   const [index, setIndex] = useState(0), [ready, setReady] = useState(false), [structure, setStructure] = useState(false);
   const [playing, setPlaying] = useState(true), [hold, setHold] = useState(false), [announce, setAnnounce] = useState('');
+  const [drawn, setDrawn] = useState(0);
+  const shownIndex = useRef(0);
   const work = boardWorks[index];
 
   useEffect(() => {
@@ -59,18 +61,18 @@ function Hero({ works, t, locale }: { works: HomeWork[]; t: Dictionary; locale: 
       structure: boardPath(w.slug, locale, suffix, '-structure'),
       accent: rgb(BOARDS[w.slug].accent),
     }));
-    let cancelled = false;
+    let cancelled = false, started = false, idleId = 0;
     const place = () => {
       const c = canvas.current?.getBoundingClientRect(), f = frame.current?.getBoundingClientRect();
       if (c && f) scene.current?.frame({ x: f.left - c.left, y: f.top - c.top, width: f.width, height: f.height });
     };
     const observer = new ResizeObserver(place);
-    import('@/lib/concepts/mosaic').then(async ({ mountMosaic }) => {
+    const mount = () => import('@/lib/concepts/mosaic').then(async ({ mountMosaic }) => {
       if (cancelled || !canvas.current) return;
       try {
         const instance = await mountMosaic(canvas.current, {
-          sources, cols: small ? 40 : 64, rows: small ? 25 : 40, reduced, maxRatio: small ? 1.5 : 2,
-          onFirstFrame: () => setReady(true), onLost: () => setReady(false),
+          sources, cols: small ? 40 : 64, rows: small ? 25 : 40, reduced, maxRatio: small ? 1.5 : 2, first: shownIndex.current,
+          onFirstFrame: shown => { setDrawn(shown); setReady(true); }, onLost: () => setReady(false),
         });
         if (cancelled) { instance.dispose(); return; }
         scene.current = instance;
@@ -78,11 +80,32 @@ function Hero({ works, t, locale }: { works: HomeWork[]; t: Dictionary; locale: 
         if (board.current) observer.observe(board.current);
       } catch { setReady(false); }
     });
-    return () => { cancelled = true; observer.disconnect(); scene.current?.dispose(); scene.current = null; };
+    // The board starts once the page has loaded and the browser is idle, or at the first touch, key or wheel,
+    // so setting it up never competes with the first screen; until then the still image shows the same frame.
+    const triggers = ['pointerdown', 'keydown', 'wheel', 'touchstart'] as const;
+    const hasIdle = 'requestIdleCallback' in window;
+    const start = () => {
+      if (started) return;
+      started = true;
+      triggers.forEach(type => removeEventListener(type, start));
+      removeEventListener('load', afterLoad);
+      mount();
+    };
+    const afterLoad = () => { idleId = hasIdle ? requestIdleCallback(start, { timeout: 2000 }) : window.setTimeout(start, 300); };
+    triggers.forEach(type => addEventListener(type, start, { passive: true }));
+    if (document.readyState === 'complete') afterLoad(); else addEventListener('load', afterLoad);
+    return () => {
+      cancelled = true;
+      if (hasIdle) cancelIdleCallback(idleId); else clearTimeout(idleId);
+      triggers.forEach(type => removeEventListener(type, start));
+      removeEventListener('load', afterLoad);
+      observer.disconnect(); scene.current?.dispose(); scene.current = null;
+    };
   }, [boardWorks, locale]);
 
   const go = useCallback((next: number, direction: 1 | -1, origin?: [number, number], byUser = false) => {
     const target = (next + boardWorks.length) % boardWorks.length;
+    shownIndex.current = target;
     setIndex(target);
     scene.current?.show(target, direction, origin);
     if (byUser) setAnnounce(t.nowShowing + boardWorks[target].title);
@@ -140,7 +163,7 @@ function Hero({ works, t, locale }: { works: HomeWork[]; t: Dictionary; locale: 
   const paused = !playing || hold;
   // The still under the canvas only matters until the scene draws (or if it is lost); freezing it avoids
   // decoding a new full-size image on every switch.
-  const still = (ready ? boardWorks[0] : work).slug;
+  const still = (ready ? boardWorks[drawn] : work).slug;
   return <section className="cc-hero" aria-labelledby="cc-title" style={{ '--accent': BOARDS[work.slug].accent } as React.CSSProperties}>
     <div className="cc-hero-copy">
       <h1 id="cc-title">{t.heroTitle}</h1>

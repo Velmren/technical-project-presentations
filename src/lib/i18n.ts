@@ -75,7 +75,7 @@ export function localizeWork(work: HomeWork, locale: Locale): HomeWork {
   const live = work.live && {
     ...work.live,
     video: work.live.video && { src: swap(work.live.video.src), poster: swap(work.live.video.poster) },
-    scroll: work.live.scroll && swap(work.live.scroll),
+    scroll: work.live.scroll && { ...work.live.scroll, src: swap(work.live.scroll.src), small: work.live.scroll.small && swap(work.live.scroll.small) },
     slides: en.slides ?? work.live.slides?.map(swap),
   };
   return {

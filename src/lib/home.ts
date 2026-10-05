@@ -5,7 +5,8 @@ const picture = z.object({ src: z.string().startsWith('/'), alt: z.string().min(
 // Motion material for live previews: a looping video, a tall page to scroll through, or a set of screens.
 const live = z.object({
   video: z.object({ src: z.string().startsWith('/'), poster: z.string().startsWith('/') }).optional(),
-  scroll: z.string().startsWith('/').optional(),
+  // The tall page: the full file with its size (reserves the height) and a narrow copy for phones.
+  scroll: z.object({ src: z.string().startsWith('/'), small: z.string().startsWith('/').optional(), width: z.number().int().positive(), height: z.number().int().positive() }).optional(),
   slides: z.array(z.string().startsWith('/')).min(2).optional(),
 });
 
