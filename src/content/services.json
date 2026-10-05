@@ -28,7 +28,7 @@
       "hub": {
         "seo": {
           "title": "Services: Shopify, WooCommerce, game UI, Minecraft plugins",
-          "description": "Shopify theme customization, WooCommerce development, game UI and Godot builds, Minecraft plugin development. Every service comes with examples you can open."
+          "description": "Shopify and WooCommerce development, game UI, Minecraft plugins, 3D product animation and 3D websites. Every service comes with examples you can open."
         },
         "title": "What you can order",
         "lead": "Every service comes with working examples. Open them, try them, then write what you need."
@@ -299,6 +299,31 @@
         { "q": "Do I need a 3D model?", "a": "No. I build it from photos or drawings. If you already have one, I start from it." },
         { "q": "What do you need from me?", "a": "Photos or drawings of the product, the logo as a vector file and a few words on where the video will run. I suggest the script." },
         { "q": "What files do I get?", "a": "MP4 for the platforms you name. For a website, also a light file and a first frame." }
+      ]
+    },
+    {
+      "slug": "3d-web",
+      "locale": "en",
+      "seo": {
+        "title": "3D website design and product configurators",
+        "description": "3D websites and product configurators: a scene that builds as you scroll, a live model in the interface, a configurator with a price. Open the demos."
+      },
+      "name": "3D websites and configurators",
+      "title": "A website that lets people explore what you sell",
+      "lead": "A residential quarter goes up as the page scrolls. A ship stands on its bench as a live model while the pilot fits it out. A notebook changes with every option the customer picks. Each scene is part of a working site that leads to an enquiry or an order.",
+      "ask": "Need 3D on your website?",
+      "gets": [
+        { "title": "A scene tied to the scroll", "text": "The model builds, opens or turns as the visitor scrolls, in step with the text beside it." },
+        { "title": "A working site under it", "text": "The scene is part of the page that sells: a unit picker with floor plans, a masterplan, a product page, an enquiry form." },
+        { "title": "A configurator with a live preview", "text": "The customer picks size, colour and options and sees the result and the price at once. The choice goes into the order as it was made." },
+        { "title": "Something to see while it loads", "text": "A finished view shows first, so the visitor never looks at an empty frame." }
+      ],
+      "works": ["assembly", "game-concept", "shopify"],
+      "faq": [
+        { "q": "How much does it cost?", "a": "It depends on the model, on the number of scenes and on what the page does under them. I quote a price and a timeline after a short description of the task, and we agree on how you pay." },
+        { "q": "Do you make the 3D model too?", "a": "Yes, from drawings, plans or photos. If you already have a model, I start from it." },
+        { "q": "Can it go into the site I already have?", "a": "Yes. A scene or a configurator can be a block inside your current site or store. The notebook configurator below is a section of a store theme." },
+        { "q": "What do you need from me?", "a": "Drawings, plans or photos of the object, your brand materials and a few words on what the page should lead to: an enquiry, a booking or an order." }
       ]
     }
   ]
