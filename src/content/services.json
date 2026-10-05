@@ -248,6 +248,32 @@
         { "q": "Can you change an existing plugin?", "a": "If its source code is available and its licence allows it. Otherwise I write a separate plugin that works next to it." },
         { "q": "How do I test it?", "a": "You get a jar for a test server and a short list of commands to run through the scenario." }
       ]
+    },
+    {
+      "slug": "3d-product-animation",
+      "locale": "en",
+      "seo": {
+        "title": "3D product animation and product promo videos",
+        "description": "3D product animation for ads, stores and marketplaces: exploded views, macro shots, promo videos with sound. Watch the examples. Priced per task."
+      },
+      "name": "3D product animation",
+      "title": "A product video that shows what a\u00a0camera can't",
+      "lead": "The product comes apart into its parts, turns in the light and goes back together. I build the 3D model from your photos or drawings, animate it, add sound and deliver the cuts for the places where the video will run.",
+      "ask": "Need a product video?",
+      "gets": [
+        { "title": "The product in close-up", "text": "A 3D model built from your photos or drawings: exploded views, macro shots, light that suits the material. The shots that are hard or costly to film." },
+        { "title": "A promo that explains", "text": "Sizes, numbers and features appear on screen as they come up. For an app or a service, the real interface runs on the devices in the shot." },
+        { "title": "A cut for every placement", "text": "Wide, square and vertical versions of the same video, with captions where people watch without sound." },
+        { "title": "Sound included", "text": "Music, effects and accents timed to the motion. Music licences are listed." }
+      ],
+      "works": ["motion"],
+      "clips": ["kalder", "sono-promo", "orbit-promo"],
+      "faq": [
+        { "q": "How much does a product video cost?", "a": "It depends on the length, on whether a 3D model exists or has to be built, and on the number of cuts. I quote a price and a timeline after a short description of the task, and we agree on how you pay." },
+        { "q": "Do I need a 3D model?", "a": "No. I build it from photos or drawings. If you already have one, I start from it." },
+        { "q": "What do you need from me?", "a": "Photos or drawings of the product, the logo as a vector file and a few words on where the video will run. I suggest the script." },
+        { "q": "What files do I get?", "a": "MP4 for the platforms you name. For a website, also a light file and a first frame." }
+      ]
     }
   ]
 }

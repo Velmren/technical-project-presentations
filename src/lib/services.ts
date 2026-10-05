@@ -4,7 +4,8 @@
 import { z } from 'zod';
 import type { Locale } from './i18n';
 
-const slug = z.string().regex(/^[a-z][a-z0-9-]*$/);
+// A slug may open with a digit: "3d-web".
+const slug = z.string().regex(/^[a-z0-9][a-z0-9-]*$/);
 const pair = z.object({ title: z.string().min(1), text: z.string().min(1) });
 // What a search result says: the query first. The page itself speaks about the result for the client.
 const seo = z.object({ title: z.string().min(1).max(60), description: z.string().min(70).max(165) });
