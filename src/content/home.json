@@ -119,7 +119,7 @@
         }
       ],
       "action": {
-        "label": "Открыть демо",
+        "label": "Открыть конфигуратор",
         "href": "/projects/shopify/"
       },
       "details": "/shopify/",
@@ -133,7 +133,7 @@
         "title": "Sheaf",
         "type": "Shopify",
         "description": "A product configurator in a Shopify theme: a Liquid section, a delivery estimate block and a Node server.",
-        "action": "Open the demo",
+        "action": "Open the configurator",
         "alt": "Product page: a green notebook with a red band and a monogram, options beside it",
         "overlayAlt": "The configurator on a phone",
         "facts": [
@@ -311,8 +311,8 @@
       "facts": [
         {
           "value": "14 000",
-          "label": "заказов в демо-магазине",
-          "name": "Заказы в демо"
+          "label": "заказов в панели",
+          "name": "Заказы в панели"
         }
       ],
       "action": {
@@ -328,8 +328,8 @@
         "overlayAlt": "Order NL-23786 on a phone",
         "facts": [
           {
-            "label": "orders in the demo store",
-            "name": "Demo orders",
+            "label": "orders in the panel",
+            "name": "Orders in the panel",
             "value": "14,000"
           }
         ],
@@ -624,9 +624,9 @@
       },
       "facts": [
         {
-          "value": "Демо",
-          "label": "демо",
-          "name": "Версия"
+          "value": "Первый район",
+          "label": "острова открыт",
+          "name": "Доступно"
         }
       ],
       "action": {
@@ -642,9 +642,9 @@
         "alt": "Lumi outside Rhea's house",
         "facts": [
           {
-            "value": "Demo",
-            "label": "demo",
-            "name": "Version"
+            "value": "First area",
+            "label": "of the island is open",
+            "name": "Playable"
           }
         ],
         "details": "/en/mobile-game/",
