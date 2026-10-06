@@ -5,15 +5,15 @@
   "eyebrow": "Сайт и магазин на WordPress",
   "year": 2026,
   "lead": "Сайт мастерской, который сам считает заказ",
-  "summary": "Багетная мастерская: услуги, калькулятор рамы и магазин на WooCommerce. Своя тема и свои плагины.",
+  "summary": "Багетная мастерская: услуги, калькулятор рамы и магазин на WooCommerce с оплатой, доставкой, складом и CRM. Своя тема и свои плагины.",
   "story": {
-    "task": "Мастерская делает рамы под размер, и цену обычно узнают по телефону или уже на месте. Нужен сайт, где клиент сам получает цену и оформляет заказ.",
-    "solution": "Калькулятор рамы стоит на странице как блок: размер, багет, паспарту и стекло меняют раму на экране и сумму. Цену считает сервер, расчёт уходит в корзину как обычный товар. Рядом магазин готовых рам.",
-    "result": "Сайт работает по своему адресу: 12 товаров с 78 вариациями, две языковые версии, заказы и заявки видны в админке. На телефоне Lighthouse даёт 95-100 на шести страницах. Цены и багет владелец меняет сам."
+    "task": "Мастерская делает рамы под размер, и цену обычно узнают по телефону или уже на месте. Нужен сайт, где клиент сам получает цену, оформляет заказ, выбирает доставку и платит.",
+    "solution": "Калькулятор рамы стоит на странице как блок: размер, багет, паспарту и стекло меняют раму на экране и сумму. Цену считает сервер, расчёт уходит в корзину как обычный товар. Рядом магазин готовых рам: оплату принимает ЮKassa, доставку считает СДЭК, остатки ведёт МойСклад, а заказы попадают в Bitrix24 сделками.",
+    "result": "Сайт работает по своему адресу: цены в рублях, продажа в Россию, Беларусь и Казахстан, 12 товаров с 78 вариациями, две языковые версии, заказы и заявки видны в админке. На телефоне Lighthouse даёт 95-100 на шести страницах. Цены и багет владелец меняет сам."
   },
   "seo": {
-    "title": "Сайт на WordPress и WooCommerce с калькулятором заказа",
-    "description": "Сайт багетной мастерской на WordPress: услуги, калькулятор рамы и магазин на WooCommerce. Своя тема и свои плагины."
+    "title": "Магазин на WooCommerce: калькулятор, ЮKassa, СДЭК",
+    "description": "Сайт багетной мастерской на WordPress: услуги, калькулятор рамы и магазин на WooCommerce с ЮKassa, СДЭК, МойСклад и Bitrix24. Своя тема и плагины."
   },
   "note": "Демо-режим",
   "category": "Веб-сайты",
@@ -22,7 +22,11 @@
     "WooCommerce",
     "PHP",
     "Gutenberg",
-    "JavaScript"
+    "JavaScript",
+    "YooKassa",
+    "CDEK",
+    "MoySklad",
+    "Bitrix24"
   ],
   "order": 65,
   "tone": "cool",
@@ -77,7 +81,7 @@
         {
           "image": {
             "src": "/assets/falz/calculator-total-ru.webp",
-            "alt": "Разбивка цены: багет, стекло, паспарту, сборка, итого 122 €",
+            "alt": "Разбивка цены: багет, стекло, паспарту, сборка, итого 12 186 ₽",
             "width": 677,
             "height": 298
           },
@@ -110,7 +114,7 @@
             "src": "/assets/falz/cart-line-ru.webp",
             "alt": "Строка корзины: работа 40 × 50 см, орех, паспарту 8 см, антибликовое стекло",
             "width": 820,
-            "height": 258
+            "height": 281
           },
           "x": 0.64,
           "y": 0,
@@ -122,7 +126,7 @@
     {
       "kind": "benefit",
       "title": "Готовые рамы покупают в два касания",
-      "text": "У каждого размера и отделки своя цена и своё фото.",
+      "text": "У каждого размера и отделки своя цена, своё фото и остаток из МойСклад.",
       "figure": {
         "value": "78",
         "label": "вариаций у 12 товаров"
@@ -143,9 +147,71 @@
         {
           "image": {
             "src": "/assets/falz/product-variants-ru.webp",
-            "alt": "Выбор размера и отделки, цена 32 €",
+            "alt": "Выбор размера и отделки, цена 3 200 ₽ и остаток в наличии",
             "width": 564,
-            "height": 379
+            "height": 394
+          },
+          "x": 0.66,
+          "y": 0,
+          "w": 0.34,
+          "front": true
+        }
+      ]
+    },
+    {
+      "kind": "benefit",
+      "title": "Доставку и оплату покупатель выбирает сам",
+      "text": "Город подсказывается, СДЭК считает стоимость и срок до пункта выдачи или двери, а оплата идёт через ЮKassa картой или СБП.",
+      "layers": [
+        {
+          "image": {
+            "src": "/assets/falz/checkout-ru.webp",
+            "alt": "Оформление заказа: данные покупателя, доставка СДЭК с пунктом выдачи, итог и способы оплаты",
+            "width": 1920,
+            "height": 1080
+          },
+          "x": 0,
+          "y": 0.05,
+          "w": 0.6,
+          "url": "wp.velmren.com/checkout"
+        },
+        {
+          "image": {
+            "src": "/assets/falz/delivery-ru.webp",
+            "alt": "Доставка: самовывоз, СДЭК до пункта выдачи или курьером, список пунктов выдачи с часами работы",
+            "width": 531,
+            "height": 358
+          },
+          "x": 0.64,
+          "y": 0,
+          "w": 0.36,
+          "front": true
+        }
+      ]
+    },
+    {
+      "kind": "benefit",
+      "title": "Заказ сам получает трек-номер СДЭК",
+      "text": "После оплаты заказ уходит в МойСклад и Bitrix24, а покупатель видит трек-номер на странице заказа.",
+      "layers": [
+        {
+          "image": {
+            "src": "/assets/falz/order-ru.webp",
+            "alt": "Страница принятого заказа: товар, доставка СДЭК, способ оплаты и трек-номер",
+            "width": 1920,
+            "height": 1080
+          },
+          "x": 0,
+          "y": 0.05,
+          "w": 0.6,
+          "url": "wp.velmren.com/checkout/order-received"
+        },
+        {
+          "image": {
+            "src": "/assets/falz/tracking-ru.webp",
+            "alt": "Итоги заказа и трек-номер СДЭК",
+            "width": 600,
+            "height": 326
           },
           "x": 0.66,
           "y": 0,
@@ -189,7 +255,7 @@
     {
       "kind": "benefit",
       "title": "Заказы и заявки собираются в одном месте",
-      "text": "Заказ с параметрами рамы виден в админке, уведомления о заказах можно получать в Telegram.",
+      "text": "Заказ с параметрами рамы виден в админке вместе с отправлением СДЭК, заказом в МойСклад и сделкой в Bitrix24, а уведомления можно получать в Telegram.",
       "layers": [
         {
           "image": {
@@ -198,10 +264,22 @@
             "width": 1920,
             "height": 1080
           },
-          "x": 0.1,
-          "y": 0,
-          "w": 0.8,
+          "x": 0,
+          "y": 0.05,
+          "w": 0.66,
           "url": "wp.velmren.com/wp-admin"
+        },
+        {
+          "image": {
+            "src": "/assets/falz/integrations-ru.webp",
+            "alt": "Блок «Интеграции» в заказе: отправление СДЭК с трек-номером, заказ в МойСклад, сделка в Bitrix24",
+            "width": 306,
+            "height": 350
+          },
+          "x": 0.7,
+          "y": 0,
+          "w": 0.3,
+          "front": true
         }
       ]
     },
@@ -244,11 +322,12 @@
     {
       "kind": "features",
       "title": "Как устроено",
-      "text": "Своя тема и два плагина. WooCommerce не правится: всё через хуки и три шаблона.",
+      "text": "Своя тема и три плагина. WooCommerce не правится: всё через хуки и три шаблона.",
       "items": [
         "Стек",
         "Калькулятор",
         "Заявки",
+        "Интеграции",
         "Два языка",
         "Скорость",
         "Перенос"
@@ -257,6 +336,7 @@
         "WordPress, WooCommerce, PHP, MariaDB, nginx, Docker.",
         "Блок Gutenberg: рама рисуется на Canvas в масштабе, цена пересчитывается на сервере.",
         "Форма с подписанным токеном, ловушкой для ботов и ограничением частоты, без сторонних сервисов.",
+        "Отдельный плагин: ЮKassa, СДЭК, МойСклад и Bitrix24. Заказ уходит в сервисы после ответа страницы и повторяется при сбое, каждое обращение пишется в журнал.",
         "Русская и английская версии на одном наборе товаров, без платных плагинов.",
         "Кэш страниц, свои шрифты, WebP. Стандартная тема на тех же данных даёт 73–78, эта 98.",
         "Скрипты переноса базы и файлов с заменой адреса, проверены на втором экземпляре."
@@ -269,15 +349,15 @@
     "title": "Falz",
     "eyebrow": "WordPress site and shop",
     "lead": "A workshop site that prices the order itself",
-    "summary": "A framing workshop: services, a frame calculator and a WooCommerce shop, with its own theme and plugins.",
+    "summary": "A framing workshop: services, a frame calculator and a WooCommerce shop with payment, delivery, stock and CRM, on its own theme and plugins.",
     "story": {
-      "task": "A workshop makes frames to size, and the price is usually given over the phone or at the counter. It needs a site where the customer gets the price and places the order without a call.",
-      "solution": "A frame calculator sits on the page as a block: size, moulding, mat and glass change the frame on screen and the total. The server prices the choice, and the quote goes to the cart like any product. A shop of ready-made frames stands beside it.",
-      "result": "The site runs at its own address: 12 products with 78 variations, two languages, orders and enquiries in the admin. On a phone Lighthouse scores 95-100 across six pages. The owner changes prices and mouldings without a developer."
+      "task": "A workshop makes frames to size, and the price is usually given over the phone or at the counter. It needs a site where the customer gets the price, places the order, picks delivery and pays without a call.",
+      "solution": "A frame calculator sits on the page as a block: size, moulding, mat and glass change the frame on screen and the total. The server prices the choice, and the quote goes to the cart like any product. A shop of ready-made frames stands beside it: YooKassa takes the payment, CDEK prices the delivery, MoySklad keeps the stock, and orders reach Bitrix24 as deals.",
+      "result": "The site runs at its own address: prices in roubles, shipping to Russia, Belarus and Kazakhstan, 12 products with 78 variations, two languages, orders and enquiries in the admin. On a phone Lighthouse scores 95-100 across six pages. The owner changes prices and mouldings without a developer."
     },
     "seo": {
-      "title": "WordPress and WooCommerce site with a price calculator",
-      "description": "A framing workshop site on WordPress: services, a frame price calculator and a WooCommerce shop. Custom theme and plugins."
+      "title": "WooCommerce shop with a calculator, CDEK, YooKassa",
+      "description": "A framing workshop site on WordPress: services, a frame price calculator and a WooCommerce shop with YooKassa, CDEK, MoySklad and Bitrix24. Custom theme and plugins."
     },
     "note": "Demo mode",
     "closing": "See the site in action",
@@ -301,7 +381,12 @@
       "/assets/falz/calculator-total-ru.webp": "/assets/falz/calculator-total-en.webp",
       "/assets/falz/cart-line-ru.webp": "/assets/falz/cart-line-en.webp",
       "/assets/falz/product-variants-ru.webp": "/assets/falz/product-variants-en.webp",
-      "/assets/falz/admin-rates-ru.webp": "/assets/falz/admin-rates-en.webp"
+      "/assets/falz/admin-rates-ru.webp": "/assets/falz/admin-rates-en.webp",
+      "/assets/falz/checkout-ru.webp": "/assets/falz/checkout-en.webp",
+      "/assets/falz/delivery-ru.webp": "/assets/falz/delivery-en.webp",
+      "/assets/falz/order-ru.webp": "/assets/falz/order-en.webp",
+      "/assets/falz/tracking-ru.webp": "/assets/falz/tracking-en.webp",
+      "/assets/falz/integrations-ru.webp": "/assets/falz/integrations-en.webp"
     },
     "sections": [
       {
@@ -309,7 +394,7 @@
         "text": "Size, moulding, mat and glass change the frame on screen and the total at once.",
         "alts": [
           "Calculator: a walnut frame with a mat on a blue wall, options on the right",
-          "Price breakdown: moulding, glass, mat, assembly, total 122 €"
+          "Price breakdown: moulding, glass, mat, assembly, total 12 186 ₽"
         ]
       },
       {
@@ -322,14 +407,30 @@
       },
       {
         "title": "Ready-made frames take two taps",
-        "text": "Each size and finish has its own price and picture.",
+        "text": "Each size and finish has its own price, picture and stock level from MoySklad.",
         "figure": {
           "value": "78",
           "label": "variations across 12 products"
         },
         "alts": [
           "Nord frame page: the frame on the wall and the purchase panel",
-          "Size and finish choice, 32 €"
+          "Size and finish choice, 3 200 ₽ and the stock level"
+        ]
+      },
+      {
+        "title": "The customer chooses delivery and payment alone",
+        "text": "The city is suggested, CDEK prices the delivery to a pick-up point or the door, and payment goes through YooKassa by card or SBP.",
+        "alts": [
+          "Checkout: customer details, CDEK delivery with a pick-up point, the total and payment methods",
+          "Delivery: workshop pick-up, CDEK to a pick-up point or to the door, a list of pick-up points with opening hours"
+        ]
+      },
+      {
+        "title": "The order gets its CDEK tracking number by itself",
+        "text": "After payment the order goes to MoySklad and Bitrix24, and the customer sees the tracking number on the order page.",
+        "alts": [
+          "Order page: the item, CDEK delivery, payment method and the tracking number",
+          "Order totals and the CDEK tracking number"
         ]
       },
       {
@@ -342,9 +443,10 @@
       },
       {
         "title": "Orders and enquiries arrive in one place",
-        "text": "An order with the frame options shows in the admin, and order notifications can be sent to Telegram.",
+        "text": "An order shows in the admin with the frame options, the CDEK shipment, the MoySklad order and the Bitrix24 deal, and notifications can be sent to Telegram.",
         "alts": [
-          "Orders list in the WooCommerce admin"
+          "Orders list in the WooCommerce admin",
+          "Integrations box in an order: the CDEK shipment with its tracking number, the MoySklad order, the Bitrix24 deal"
         ]
       },
       {
@@ -361,11 +463,12 @@
       },
       {
         "title": "How it is built",
-        "text": "A custom theme and two plugins. WooCommerce is not edited: hooks and three templates do the work.",
+        "text": "A custom theme and three plugins. WooCommerce is not edited: hooks and three templates do the work.",
         "items": [
           "Stack",
           "Calculator",
           "Enquiries",
+          "Integrations",
           "Two languages",
           "Speed",
           "Migration"
@@ -374,6 +477,7 @@
           "WordPress, WooCommerce, PHP, MariaDB, nginx, Docker.",
           "A Gutenberg block: the frame is drawn to scale on Canvas, the price is recalculated on the server.",
           "A form with a signed token, a bot trap and rate limiting, with no third-party service.",
+          "A separate plugin: YooKassa, CDEK, MoySklad and Bitrix24. An order goes to the services after the page is sent and is retried on a failure; every request is written to a log.",
           "Russian and English on one set of products, with no paid plugins.",
           "Page cache, self-hosted fonts, WebP. The stock theme scores 73–78 on the same data, this one 98.",
           "Scripts move the database and files and replace the address, rehearsed on a second instance."

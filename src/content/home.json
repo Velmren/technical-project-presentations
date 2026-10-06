@@ -203,7 +203,7 @@
       "placement": "main",
       "title": "Фальц",
       "type": "Сайт и магазин",
-      "description": "Сайт багетной мастерской на WordPress: калькулятор рамы, услуги и магазин.",
+      "description": "Сайт багетной мастерской на WordPress: калькулятор рамы и магазин с оплатой и доставкой.",
       "category": "Веб",
       "tags": [
         "Веб"
@@ -251,7 +251,7 @@
       "en": {
         "title": "Falz",
         "type": "Site and shop",
-        "description": "A framing workshop site on WordPress: frame calculator, services and a shop.",
+        "description": "A framing workshop site on WordPress: frame calculator and a shop with payment and delivery.",
         "action": "Open the site",
         "details": "/en/falz/",
         "alt": "Falz home page: frames on a blue wall",
