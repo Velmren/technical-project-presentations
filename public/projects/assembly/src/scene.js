@@ -122,10 +122,8 @@ function showSchedule(p) {
     const house = HOUSES[id];
     bars[id].firstElementChild.style.transform = `scaleX(${Math.min(1, time / house.due).toFixed(4)})`;
     const done = p >= house.lit;
-    if (statuses[id].classList.contains('done') !== done || !statuses[id].textContent) {
-      statuses[id].classList.toggle('done', done);
-      statuses[id].textContent = done ? t('gantt.done') : t('gantt.due', {q: quarterLabel(quarter(house.due))});
-    }
+    statuses[id].classList.toggle('done', done);
+    setText(statuses[id], done ? t('gantt.done') : t('gantt.due', {q: quarterLabel(quarter(house.due))}));
     tags[id].classList.toggle('on', done && !isMobile());
   }
 }

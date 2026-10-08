@@ -104,7 +104,10 @@ function initForm() {
   form.addEventListener('submit', (event) => {
     event.preventDefault();
     const filled = form.name.value.trim() && form.phone.value.trim() && form.agree.checked;
-    form.querySelector('[data-form-note]').textContent = t(filled ? 'office.done' : 'office.empty');
+    // The key stays on the note, so the language switch translates it with the rest of the markup.
+    const note = form.querySelector('[data-form-note]');
+    note.dataset.i18n = filled ? 'office.done' : 'office.empty';
+    note.textContent = t(note.dataset.i18n);
     if (filled) {
       form.reset();
       refreshSelects();

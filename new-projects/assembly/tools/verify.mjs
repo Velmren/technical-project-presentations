@@ -3,8 +3,9 @@
 // For each screen size and several scroll positions: no element of the first screen covers another,
 // no text sits on the rendered quarter, nothing overflows sideways; along the whole scroll the label of the
 // current quarter leaves the quarter names and the schedule title readable. Then the sections at 1920 and 390,
-// the English version, scroll smoothness (frame intervals during a scripted scroll), the fallback when
-// frames are unavailable and the Russian text in the markup against the dictionary.
+// the English version, the language switch without a reload, scroll smoothness (frame intervals during a
+// scripted scroll), the fallback when frames are unavailable and the Russian text in the markup against
+// the dictionary.
 // Playwright is a development-only dependency: install `playwright` locally or point PLAYWRIGHT_CORE
 // at an existing playwright-core directory.
 import {spawn} from 'node:child_process';
@@ -148,6 +149,42 @@ async function sweepMarker(page, name) {
   }
 }
 
+// Every text and label of the page in document order, shown or not.
+const pageTexts = (page) => page.evaluate(() => {
+  const out = [document.title];
+  const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_ELEMENT | NodeFilter.SHOW_TEXT);
+  for (let node = walker.nextNode(); node; node = walker.nextNode()) {
+    if (node.nodeType === Node.TEXT_NODE) {
+      const text = node.textContent.replace(/\s+/g, ' ').trim();
+      if (text && !node.parentElement.closest('script, style')) out.push(text);
+    } else {
+      for (const name of ['aria-label', 'alt', 'placeholder', 'title']) {
+        if (node.hasAttribute(name)) out.push(`${name}: ${node.getAttribute(name)}`);
+      }
+    }
+  }
+  return out;
+});
+
+// The viewing form answers with a note under it; the note is one of the texts the switch must translate.
+const sendForm = (page) => page.evaluate(() => {
+  const form = document.querySelector('[data-form]');
+  form.elements.name.value = 'Test';
+  form.elements.phone.value = '+7 000 000-00-00';
+  form.elements.agree.checked = true;
+  form.requestSubmit();
+});
+
+// A click on the switch as a visitor makes it: on narrow screens the switch is inside the menu.
+async function switchLang(page) {
+  const button = page.locator('[data-lang-switch]');
+  const inMenu = !(await button.isVisible());
+  if (inMenu) await page.locator('[data-menu-toggle]').click();
+  await button.click();
+  if (inMenu) await page.locator('[data-menu-toggle]').click();
+  await page.waitForTimeout(600);
+}
+
 const report = {checked: new Date().toISOString(), screens: {}, problems: []};
 const fail = (text) => report.problems.push(text);
 
@@ -224,6 +261,50 @@ try {
     const overflow = await page.evaluate(() => document.documentElement.scrollWidth - innerWidth);
     if (overflow > 0) fail(`390 ${lang}: horizontal overflow ${overflow}px`);
     if (errors.length) fail(`390 ${lang}: ${errors.join(' | ')}`);
+    await context.close();
+  }
+
+  // Language switch without a reload: after a click every text of the page is what a fresh load in that
+  // language shows, with the houses under construction and handed over, and the same after switching back.
+  for (const [name, options] of [['1920', {viewport: {width: 1920, height: 1080}}], ['390', {viewport: {width: 390, height: 844}, deviceScaleFactor: 2, isMobile: true, hasTouch: true}]]) {
+    const context = await browser.newContext(options);
+    const open = async (lang) => {
+      const page = await context.newPage();
+      await page.goto(`${base}?lang=${lang}`);
+      await ready(page);
+      await sendForm(page);
+      return page;
+    };
+    const textsAt = async (page, p) => {
+      await scrollTo(page, p);
+      await page.waitForTimeout(900);
+      return pageTexts(page);
+    };
+    const fresh = {};
+    for (const lang of ['ru', 'en']) {
+      const page = await open(lang);
+      fresh[lang] = {0: await textsAt(page, 0), 1: await textsAt(page, 1)};
+      await page.close();
+    }
+    const compare = (step, expected, got) => {
+      const differ = [];
+      for (let i = 0; i < Math.max(expected.length, got.length); i += 1) {
+        if (expected[i] !== got[i]) differ.push(`"${got[i]}" instead of "${expected[i]}"`);
+      }
+      if (differ.length) fail(`language switch ${name}, ${step}: ${differ.slice(0, 6).join(', ')}${differ.length > 6 ? ` and ${differ.length - 6} more` : ''}`);
+    };
+    for (const [from, to] of [['ru', 'en'], ['en', 'ru']]) {
+      for (const [p, other] of [[0, 1], [1, 0]]) {
+        const page = await open(from);
+        await textsAt(page, p);
+        await switchLang(page);
+        compare(`${from} to ${to} at ${p}`, fresh[to][p], await pageTexts(page));
+        compare(`${from} to ${to} at ${p}, then scrolled to ${other}`, fresh[to][other], await textsAt(page, other));
+        await switchLang(page);
+        compare(`${from} to ${to} at ${p} and back at ${other}`, fresh[from][other], await pageTexts(page));
+        await page.close();
+      }
+    }
     await context.close();
   }
 

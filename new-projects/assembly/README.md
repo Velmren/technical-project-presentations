@@ -48,7 +48,7 @@ All figures come from `src/data.js`: three buildings, 16 layouts, 126 apartments
 | `fonts/` | Jost, Cyrillic and Latin subset with the rouble sign, and its licence |
 | `tools/encode-frames.mjs` | Rendered PNG frames to the WebP sets, posters and `frames/manifest.json` |
 | `tools/build.mjs` | Copies the page to `public/projects/assembly/` |
-| `tools/verify.mjs` | Browser check: overlaps and text over the scene at 1920, 1440, 1366, 1280, 1024 and 390, sections, English, scroll smoothness, fallback, markup against the dictionary |
+| `tools/verify.mjs` | Browser check: overlaps and text over the scene at 1920, 1440, 1366, 1280, 1024 and 390, sections, English, the language switch without a reload, scroll smoothness, fallback, markup against the dictionary |
 | `tools/capture.mjs` | Images and the scroll clip that present the work in the portfolio (`public/assets/assembly/case/`) |
 | `serve.mjs` | Local preview server |
 
@@ -86,7 +86,7 @@ Measured on 3 October 2026 with `tools/verify.mjs` (Chromium, local server witho
 
 The scroll was also compared with the previous version of the page in the same conditions, three runs each: the share of frames longer than 20 ms is the same within the spread between runs.
 
-`tools/verify.mjs` needs Playwright: install `playwright` in this folder or set `PLAYWRIGHT_CORE` to an existing `playwright-core` directory. It exits with an error if elements of the first screen overlap, the label of the current quarter covers a quarter name or the schedule title anywhere along the scroll, text lies on the rendered quarter, a size overflows horizontally, the console has errors, the page does not return to the top, the fallback video does not play or the Russian markup differs from the dictionary.
+`tools/verify.mjs` needs Playwright: install `playwright` in this folder or set `PLAYWRIGHT_CORE` to an existing `playwright-core` directory. It exits with an error if elements of the first screen overlap, the label of the current quarter covers a quarter name or the schedule title anywhere along the scroll, text lies on the rendered quarter, a size overflows horizontally, the console has errors, a text keeps the previous language after the switch, the page does not return to the top, the fallback video does not play or the Russian markup differs from the dictionary.
 
 ## Build
 
