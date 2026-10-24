@@ -804,6 +804,59 @@
           }
         }
       ]
+    },
+    {
+      "slug": "hot-bomb",
+      "status": "accepted",
+      "title": {
+        "ru": "HOT BOMB",
+        "en": "HOT BOMB"
+      },
+      "kind": {
+        "ru": "Игра на Roblox, VFX",
+        "en": "Roblox game, VFX"
+      },
+      "text": {
+        "ru": "Раунд вечеринки на Roblox: бомба переходит из рук в руки, три способности и набор эффектов (взрыв, молния, всплеск, щит, рывок). Игра, эффекты, камера и звук сделаны с нуля.",
+        "en": "A Roblox party round: a bomb passed from hand to hand, three abilities and an effects pack (explosion, lightning, splash, shield, dash). The game, the effects, the camera and the sound were made from scratch."
+      },
+      "searchTitle": {
+        "ru": "Игра на Roblox с VFX: HOT BOMB",
+        "en": "Roblox game with VFX: HOT BOMB"
+      },
+      "sections": [
+        "games"
+      ],
+      "date": "2026-10-24",
+      "sound": {
+        "ru": "Velmren",
+        "en": "Velmren"
+      },
+      "cuts": [
+        {
+          "width": 1920,
+          "height": 1080,
+          "duration": 42.4,
+          "src": {
+            "ru": "/assets/video/hot-bomb/hot-bomb.mp4"
+          },
+          "poster": {
+            "ru": "/assets/video/hot-bomb/hot-bomb-poster.webp"
+          },
+          "posterWidths": [
+            480,
+            720,
+            960,
+            1280,
+            1920
+          ],
+          "share": {
+            "ru": "/assets/video/hot-bomb/hot-bomb-share.jpg"
+          },
+          "lightPoster": true,
+          "preview": "/assets/video/hot-bomb/hot-bomb-hover.mp4"
+        }
+      ]
     }
   ],
   "collections": []
