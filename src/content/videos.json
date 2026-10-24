@@ -857,6 +857,59 @@
           "preview": "/assets/video/hot-bomb/hot-bomb-hover.mp4"
         }
       ]
+    },
+    {
+      "slug": "iron-dunes",
+      "status": "accepted",
+      "title": {
+        "ru": "IRON DUNES",
+        "en": "IRON DUNES"
+      },
+      "kind": {
+        "ru": "Unity, VFX",
+        "en": "Unity, VFX"
+      },
+      "text": {
+        "ru": "Пустыня на Unity в реальном времени (Built-in Render Pipeline): песчаная буря, пыль из-под колёс багги, червь, который вырывается из песка, шагающий мех с пушкой, попадания по металлу и песку, взрыв машины. Частицы Shuriken и свои шейдеры, сцена и все текстуры сделаны с нуля.",
+        "en": "A real-time desert in Unity (Built-in Render Pipeline): a sandstorm, dust trails from a buggy, a sandworm breaching the dunes, a walking mech with a cannon, metal and sand impacts and a vehicle explosion. Shuriken particles and hand-written shaders; the scene and every texture were made from scratch."
+      },
+      "searchTitle": {
+        "ru": "VFX на Unity: IRON DUNES",
+        "en": "Unity VFX: IRON DUNES"
+      },
+      "sections": [
+        "games"
+      ],
+      "date": "2026-10-24",
+      "sound": {
+        "ru": "Velmren",
+        "en": "Velmren"
+      },
+      "cuts": [
+        {
+          "width": 1920,
+          "height": 1080,
+          "duration": 42,
+          "src": {
+            "ru": "/assets/video/iron-dunes/iron-dunes.mp4"
+          },
+          "poster": {
+            "ru": "/assets/video/iron-dunes/iron-dunes-poster.webp"
+          },
+          "posterWidths": [
+            480,
+            720,
+            960,
+            1280,
+            1920
+          ],
+          "share": {
+            "ru": "/assets/video/iron-dunes/iron-dunes-share.jpg"
+          },
+          "lightPoster": true,
+          "preview": "/assets/video/iron-dunes/iron-dunes-hover.mp4"
+        }
+      ]
     }
   ],
   "collections": []
